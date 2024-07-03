@@ -1,0 +1,24 @@
+﻿CHARACTERS = {
+	c:TIB ?= {
+		create_character = {
+			# 10th Dalai Lama
+			first_name = "Tsultrim"
+			last_name = "Gyatso"
+			historical = yes
+			ruler = yes
+			age = 20
+			interest_group = ig_devout
+			ideology = ideology_theocrat
+			traits = {
+				cautious
+			}
+			on_created = {
+				set_variable = is_dalai_lama
+				set_global_variable = {
+					name = dalai_lama_no
+					value = 10
+				}
+			}
+		}
+	}
+}

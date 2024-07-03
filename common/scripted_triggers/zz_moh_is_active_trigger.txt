@@ -1,0 +1,22 @@
+﻿#######################################
+# ECCHI REDUX CHECK SCRPITED TRIGGERS #
+#######################################
+
+# You can use this trigger to see if Mandate of Heaven is active for in a playset.
+# This is useful if you want your mod to interact with Ecchi Redux.
+
+# You can use it by adding a scripted_trigger_file in your mod.
+# The File name should start with "00_", so that it gets loaded before this file.
+# Add this to your file (without the "#" obviously):
+
+#mandate_o_h_is_active = {
+#	always = no
+#}
+
+# Now you can use the trigger like this: "mandate_o_h_is_active = yes".
+# If Ecchi Redux is active the Trigger here will take priority and it will result in a "yes".
+# If Ecchi Redux is not active your Trigger will be used and the Trigger will return "no".
+
+mandate_o_h_is_active = {
+	always = yes
+}

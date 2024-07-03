@@ -1,0 +1,64 @@
+﻿namespace = keju
+
+# Abolish keju
+keju.1 = {
+	type = country_event
+	placement = root
+
+	title = keju.1.t
+	desc = keju.1.d
+	flavor = keju.1.f
+
+	event_image = {
+		video = "asia_confucianism_shinto"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	trigger = {
+		# Fired by journal entry
+	}
+
+	option = {
+		name = keju.1.a
+		default_option = yes
+	}
+}
+
+# Replace keju
+keju.2 = {
+	type = country_event
+	placement = root
+
+	title = keju.2.t
+	desc = keju.2.d
+	flavor = keju.2.f
+
+	event_image = {
+		video = "asia_confucianism_shinto"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	duration = 3
+
+	trigger = {
+		# Fired by journal entry
+	}
+
+	option = {
+		name = keju.2.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_abolish_keju
+			months = long_modifier_time
+			is_decaying = yes
+		}
+	}
+}

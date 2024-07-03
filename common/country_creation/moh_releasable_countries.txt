@@ -1,0 +1,7 @@
+﻿FUJ = {
+	states = {
+		STATE_FUJIAN
+	}
+
+	ai_will_do = { always = no }
+}

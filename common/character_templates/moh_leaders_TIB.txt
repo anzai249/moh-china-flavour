@@ -1,0 +1,99 @@
+﻿# Tibet - Dalai Lama
+# MOH 适配版
+
+ecchi_tib_11_dalai_lama_character_template = {
+    first_name = ecchi_Khedrup
+    last_name = Gyatso
+    historical = yes
+    culture = cu:tibetan
+    female = no
+    religion = rel:gelugpa
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+	dna = ecchi_dna_khedrup_gyatso
+    age = 4
+    traits = { reserved romantic }
+	on_created = {
+		set_variable = is_dalai_lama
+	}
+}
+
+ecchi_tib_12_dalai_lama_character_template = {
+    first_name = ecchi_Trinley
+    last_name = Gyatso
+    historical = yes
+    culture = cu:tibetan
+    female = no
+    religion = rel:gelugpa
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+	dna = ecchi_dna_trinley_gyatso
+    age = 6
+    traits = { basic_diplomat cancer }
+	on_created = {
+		set_variable = is_dalai_lama
+	}
+}
+
+ecchi_tib_13_dalai_lama_character_template = {
+    first_name = ecchi_Thubten
+    last_name = Gyatso
+    historical = yes
+    culture = cu:tibetan
+    female = no
+    religion = rel:gelugpa
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+	dna = ecchi_dna_thubten_gyatso
+    age = 3
+    traits = { masterful_diplomat innovative wrathful }
+	on_created = {
+		set_variable = is_dalai_lama
+	}
+}
+
+ecchi_tib_14_dalai_lama_character_template = {
+    first_name = moh_Tenzin
+    last_name = Gyatso
+    historical = yes
+    culture = cu:tibetan
+    female = no 
+    religion = rel:gelugpa
+    ideology = ideology_liberal_leader
+    interest_group = ig_devout
+    age = 5
+    traits = { brave persistent hedonist }
+	on_created = {
+		set_variable = is_dalai_lama
+	}
+}
+
+ecchi_tib_dorzhiev_character_template = {
+    first_name = ecchi_Agvan
+    last_name = ecchi_Dorzhiev
+    historical = yes
+    culture = cu:siberian	#Buryat
+    female = no
+    religion = rel:gelugpa
+    ideology = ideology_theocrat
+    interest_group = ig_intelligentsia
+	dna = ecchi_dna_agvan_dorzhiev
+    birth_date = 1854.4.15
+    traits = { experienced_diplomat surveyor pious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:TIB
+            this = c:TIB
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            OR = {
+                is_interest_group_type = ig_intelligentsia
+                is_interest_group_type = ig_landowners
+            }
+        }
+        earliest_usage_date = 1900.1.1
+        latest_usage_date = 1938.1.29
+        chance = 65
+    }
+}

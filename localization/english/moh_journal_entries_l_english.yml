@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ je_keju: "科举制"
+ je_keju_reason: "自隋文帝开创科举制以来，中国各朝各代都在采用该制度进行官员选拔。明清两代科举主要考四书五经，考生必须采用死板的八股文，不许违背经注，不能自由发挥。\n\n这种选官体制虽培养了中国人刻苦读书的习惯，但它扼杀了读书人的创意和自由意志，使国家疏于创新。"
+ notification_je_keju_complete_name: "新式学校"
+ notification_je_keju_complete_desc: "新式学校已取代科举制。"
+ notification_je_keju_complete_tooltip: "新式学校已取代科举制，获得$modifier_abolish_keju$修正。"
+ notification_je_keju_name: "废除科举制"
+ notification_je_keju_desc: "科举制已被废除。"
+ notification_je_keju_tooltip: "科举制已被废除。"
+ je_keju.tt.1: "若完成此项，则废除科举制，兴办新式学堂"
+ je_keju.tt.2: "若完成此项，则只会废除科举制"

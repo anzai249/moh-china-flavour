@@ -1,0 +1,37 @@
+﻿je_keju = {
+	icon = "gfx/interface/icons/pops_icons/bureaucrats.dds"
+	
+	group = je_group_historical_content
+
+	modifiers_while_active = {
+		modifier_chi_keju
+	}
+
+	complete = {
+		institution_investment_level = {
+			institution = institution_schools
+			value >= 2
+		}
+	}
+	
+	fail = {
+		NOT = { has_law = law_type:law_appointed_bureaucrats }
+	}
+
+	on_complete = {
+		custom_tooltip = je_keju.tt.1
+		trigger_event = {
+			id = keju.2
+		}
+	}
+	
+	on_fail = {
+		custom_tooltip = je_keju.tt.2
+		trigger_event = {
+			id = keju.1
+		}
+	}
+
+	weight = 100
+	should_be_pinned_by_default = yes
+}

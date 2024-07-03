@@ -1,0 +1,11 @@
+﻿FUJ = { # Fujian
+	color = { 183  63  63 }
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { min hakka }
+	
+	capital = STATE_FUJIAN
+	is_named_from_capital = yes
+}

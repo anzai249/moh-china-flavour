@@ -1,0 +1,148 @@
+﻿namespace = dalai
+dalai.1 = {
+	# Death of the Dalai Lama
+	type = country_event
+	placement = ROOT
+	title = dalai.1.t
+	desc = dalai.1.d
+	flavor = dalai.1.f
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/ig_icons/devout.dds"
+	duration = 3
+	trigger = {
+		c:TIB ?= this
+		NOT = {
+			has_variable = dalai_lama_death
+		}
+		OR = {
+			ROOT.ruler = {
+				NOT = {
+					has_variable = is_dalai_lama
+				}
+			}
+			ruler = {
+				NOT = {
+					has_variable = is_dalai_lama
+				}
+			}
+		}
+	}
+	immediate = {
+		set_variable = dalai_lama_death
+	}
+	option = {
+		name = dalai.1.a
+		default_option = yes
+		add_journal_entry = {
+			type = je_moh_tibet_look_for_new_dalai_lama
+		}
+		set_variable = {
+			name = look_for_new_dalai_lama_progress
+			value = 0
+		}
+	}
+}
+
+dalai.2 = {
+	# New Dalai Lama
+	type = country_event
+	placement = ROOT
+	title = dalai.2.t
+	desc = dalai.2.d
+	flavor = dalai.2.f
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/ig_icons/devout.dds"
+	duration = 3
+	trigger = {
+	}
+	immediate = {
+		remove_variable = dalai_lama_death
+	}
+	option = {
+		name = dalai.2.a
+		default_option = yes
+		custom_tooltip = dalai.2.tt
+		hidden_effect = {
+			if = {
+				limit = {
+					global_var:dalai_lama_no = 10
+				}
+				create_character = {
+					template = ecchi_tib_11_dalai_lama_character_template
+					ruler = yes
+				}
+				set_global_variable = {
+					name = dalai_lama_no
+					value = 11
+				}
+			}
+			if = {
+				limit = {
+					global_var:dalai_lama_no = 11
+				}
+				create_character = {
+					template = ecchi_tib_12_dalai_lama_character_template
+					ruler = yes
+				}
+				set_global_variable = {
+					name = dalai_lama_no
+					value = 12
+				}
+			}
+			if = {
+				limit = {
+					global_var:dalai_lama_no = 12
+				}
+				create_character = {
+					template = ecchi_tib_13_dalai_lama_character_template
+					ruler = yes
+				}
+				set_global_variable = {
+					name = dalai_lama_no
+					value = 13
+				}
+			}
+			if = {
+				limit = {
+					global_var:dalai_lama_no = 13
+				}
+				create_character = {
+					template = ecchi_tib_14_dalai_lama_character_template
+					ruler = yes
+				}
+				set_global_variable = {
+					name = dalai_lama_no
+					value = 14
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						global_var:dalai_lama_no > 14
+						global_var:dalai_lama_no < 10
+					}
+				}
+				create_character = {
+					last_name = "Gyatso"
+					age = 5
+					ruler = yes
+					interest_group = ig_devout
+					ideology = ideology_theocrat
+					on_created = {
+						set_variable = is_dalai_lama
+					}
+				}
+				set_global_variable = {
+					name = dalai_lama_no
+					value = 15
+				}
+			}
+		}
+	}
+}
