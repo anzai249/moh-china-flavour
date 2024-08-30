@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
   gov_dalai_lama_moh: "噶厦"
-  gov_dalai_lama_moh_desc: "这种[concept_government_type]下，[concept_country]由[Concept('concept_ruler', '$concept_rulers$')]统治。\n\n$TRANSFER_OF_POWER_NAME_DESC$"\
+  gov_dalai_lama_moh_desc: "这种[concept_government_type]下，[concept_country]由[Concept('concept_ruler', '$RULER_TITLE_DALAI_LAMA$')]统治。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
   gov_dalai_lama_regent: "噶厦"
-  gov_dalai_lama_regent_desc: "由于达赖喇嘛转世仍未找到，所以[concept_country]由[Concept('concept_ruler', '$concept_rulers$')]统治。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+  gov_dalai_lama_regent_desc: "由于[Concept('concept_ruler', '$RULER_TITLE_DALAI_LAMA$')]转世仍未找到，所以[concept_country]由[Concept('concept_ruler', '$RULER_TITLE_DALAI_LAMA_REGENT$')]统治。\n\n$TRANSFER_OF_POWER_NAME_DESC$"
   RULER_TITLE_DALAI_LAMA_REGENT: "摄政"

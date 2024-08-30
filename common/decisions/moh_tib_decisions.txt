@@ -1,0 +1,34 @@
+﻿moh_tibet_look_for_new_dalai_lama = {
+	is_shown = {
+		exists = c:TIB
+		c:TIB = ROOT
+	}
+	possible = {
+		exists = c:TIB
+		c:TIB = ROOT
+		custom_tooltip = {
+			text= je_moh_tibet_look_for_new_dalai_lama.1.tt
+			NOT = {
+				any_scope_character = {
+					has_variable = is_dalai_lama
+				}
+			}
+		}
+		custom_tooltip = {
+			text= je_moh_tibet_look_for_new_dalai_lama.2.tt
+			NOT = {
+				has_variable = dalai_lama_death
+			}
+		}
+	}
+	when_taken = {
+		trigger_event = {
+			id = dalai.1
+			popup = yes
+		}
+	}
+
+	ai_chance = {
+		base = 1000	
+	}
+}

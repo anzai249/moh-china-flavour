@@ -1,77 +1,35 @@
 ﻿je_moh_tibet_look_for_new_dalai_lama = {
 	icon = "gfx/interface/icons/ig_icons/devout.dds"
 	group = je_group_historical_content
-	on_monthly_pulse = {
-		effect = {
-			if = {
-				limit = {
-					any_state = {
-						owner = ROOT
-						turmoil >= 0.1
-					}
-				}
-				change_variable = {
-					name = look_for_new_dalai_lama_progress
-					add = 1
-				}
-			}
-			else = {
-				change_variable = {
-					name = look_for_new_dalai_lama_progress
-					add = 2
-				}
-			}
-		}
-	}
-	complete = {
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-	}
-	fail = {
-		NOT = {
-			has_law = law_type:law_theocracy
-		}
-	}
-	on_complete = {
-		trigger_event = {
-			id = dalai.2
-		}
-	}
-	on_fail = {
-	}
-	current_value = {
-		value = root.var:look_for_new_dalai_lama_progress
-	}
-	goal_add_value = {
-		add = 60
-	}
-	weight = 100
-	progressbar = yes
-	should_be_pinned_by_default = yes
-}
 
-je_moh_tib_debug = {
-	icon = "gfx/interface/icons/ig_icons/devout.dds"
-	group = je_group_historical_content
+	immediate = {
+		set_variable = dalai_lama_death
+		set_variable = {
+			name = look_for_new_dalai_lama_progress
+			value = 0
+		}
+	}
 	on_monthly_pulse = {
 		effect = {
 			if = {
 				limit = {
-					any_state = {
-						owner = ROOT
-						turmoil >= 0.1
+					OR = {
+						any_state = {
+							owner = ROOT
+							turmoil >= 0.1
+						}
+						is_at_war = yes
 					}
 				}
 				change_variable = {
 					name = look_for_new_dalai_lama_progress
-					add = 1
+					add = 0.5
 				}
 			}
 			else = {
 				change_variable = {
 					name = look_for_new_dalai_lama_progress
-					add = 2
+					add = 1
 				}
 			}
 		}
@@ -79,9 +37,6 @@ je_moh_tib_debug = {
 	complete = {
 		scope:journal_entry = {
 			is_goal_complete = yes
-		}
-		ruler = {
-			has_variable = is_dalai_lama
 		}
 	}
 	fail = {
@@ -97,10 +52,10 @@ je_moh_tib_debug = {
 	on_fail = {
 	}
 	current_value = {
-		value = root.var:look_for_new_dalai_lama_progress
+		value = var:look_for_new_dalai_lama_progress
 	}
 	goal_add_value = {
-		add = 60
+		value = 60
 	}
 	weight = 100
 	progressbar = yes

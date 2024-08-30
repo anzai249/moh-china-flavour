@@ -6,8 +6,14 @@
 		has_law = law_type:law_theocracy
 		exists = c:TIB
 		c:TIB = ROOT
-		NOT = {
-			has_variable = dalai_lama_death
+		OR = {
+			any_scope_character = {
+				has_variable = is_dalai_lama
+			}
+			AND = {
+				year = 1836
+				month = 0
+			}
 		}
 	}
 	on_government_type_change = {
@@ -17,6 +23,7 @@
 		post_change_to_dictatorial = yes
 	}
 }
+
 gov_dalai_lama_regent = {
 	transfer_of_power = dictatorial
 	male_ruler = "RULER_TITLE_DALAI_LAMA_REGENT"
@@ -25,7 +32,11 @@ gov_dalai_lama_regent = {
 		has_law = law_type:law_theocracy
 		exists = c:TIB
 		c:TIB = ROOT
-		has_variable = dalai_lama_death
+		NOT = {
+			any_scope_character = {
+				has_variable = is_dalai_lama
+			}
+		}
 	}
 	on_government_type_change = {
 		change_to_dictatorial = yes

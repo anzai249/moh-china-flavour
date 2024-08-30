@@ -1,10 +1,10 @@
 ﻿namespace = dalai
-dalai.1 = {
-	# Death of the Dalai Lama
+
+dalai.1 = { # Death of the Dalai Lama
 	type = country_event
-	placement = ROOT
 	title = dalai.1.t
 	desc = dalai.1.d
+	placement = root
 	flavor = dalai.1.f
 	event_image = {
 		video = "unspecific_signed_contract"
@@ -13,22 +13,16 @@ dalai.1 = {
 	icon = "gfx/interface/icons/ig_icons/devout.dds"
 	duration = 3
 	trigger = {
-		c:TIB ?= this
-		NOT = {
-			has_variable = dalai_lama_death
-		}
-		OR = {
-			ROOT.ruler = {
-				NOT = {
-					has_variable = is_dalai_lama
-				}
-			}
-			ruler = {
-				NOT = {
-					has_variable = is_dalai_lama
-				}
-			}
-		}
+		# exists = c:TIB
+		# this = c:TIB
+		# NOT = {
+		# 	has_variable = dalai_lama_death
+		# }
+		# NOT = {
+		# 	any_scope_character = {
+		# 		has_variable = is_dalai_lama
+		# 	}
+		# }
 	}
 	immediate = {
 		set_variable = dalai_lama_death
@@ -49,7 +43,6 @@ dalai.1 = {
 dalai.2 = {
 	# New Dalai Lama
 	type = country_event
-	placement = ROOT
 	title = dalai.2.t
 	desc = dalai.2.d
 	flavor = dalai.2.f
@@ -67,6 +60,10 @@ dalai.2 = {
 	option = {
 		name = dalai.2.a
 		default_option = yes
+		add_loyalists = {
+			value = 0.2
+			interest_group = ig:ig_devout
+		}
 		custom_tooltip = dalai.2.tt
 		hidden_effect = {
 			if = {
@@ -76,55 +73,67 @@ dalai.2 = {
 				create_character = {
 					template = ecchi_tib_11_dalai_lama_character_template
 					ruler = yes
+					on_created = {
+						set_variable = is_dalai_lama
+					}
 				}
 				set_global_variable = {
 					name = dalai_lama_no
 					value = 11
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					global_var:dalai_lama_no = 11
 				}
 				create_character = {
 					template = ecchi_tib_12_dalai_lama_character_template
 					ruler = yes
+					on_created = {
+						set_variable = is_dalai_lama
+					}
 				}
 				set_global_variable = {
 					name = dalai_lama_no
 					value = 12
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					global_var:dalai_lama_no = 12
 				}
 				create_character = {
 					template = ecchi_tib_13_dalai_lama_character_template
 					ruler = yes
+					on_created = {
+						set_variable = is_dalai_lama
+					}
 				}
 				set_global_variable = {
 					name = dalai_lama_no
 					value = 13
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					global_var:dalai_lama_no = 13
 				}
 				create_character = {
 					template = ecchi_tib_14_dalai_lama_character_template
 					ruler = yes
+					on_created = {
+						set_variable = is_dalai_lama
+					}
 				}
 				set_global_variable = {
 					name = dalai_lama_no
 					value = 14
 				}
 			}
-			if = {
+			else_if = {
 				limit = {
 					OR = {
-						global_var:dalai_lama_no > 14
+						global_var:dalai_lama_no > 13
 						global_var:dalai_lama_no < 10
 					}
 				}
