@@ -1,5 +1,4 @@
 ﻿l_simp_chinese:
-  # family names
   moh_Ouyang:0 "欧阳"
   moh_Linghu:0 "令狐"
   moh_Huangfu:0 "皇甫"
@@ -26,8 +25,10 @@
   moh_Chiang:0 "蒋"
   moh_Han:0 "韩"
   moh_Kong:0 "孔"
+  moh_Song:0 "宋"
   Qi:0 "齐"
-  # given names
+  moh_Weng:0 "翁"
+
   moh_Hao:0 "昊"
   moh_Jian:0 "健"
   moh_Ying:0 "英"
@@ -37,8 +38,18 @@
   moh_Long:0 "龙"
   moh_Yi:0 "义"
   moh_Wenxiong:0 "文雄"
-  # dalai lama names
+  moh_Yong:0 "勇"
+  moh_Yongzheng:0 "永正"
+
   ecchi_Khedrup:0 "凯珠"
   ecchi_Trinley:0 "成烈"
   ecchi_Thubten:0 "图登"
   moh_Tenzin:0 "丹增"
+
+  moh_Zaifeng:0 "载沣"
+  moh_Jiaoren:0 "教仁"
+  moh_Minning:0 "旻宁"
+  moh_zaichun:0 "载淳"
+  moh_Zaitian:0 "载湉"
+  moh_Puyi:0 "溥仪"
+  moh_Tonghe:0 "同龢"

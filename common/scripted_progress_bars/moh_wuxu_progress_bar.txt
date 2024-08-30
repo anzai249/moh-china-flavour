@@ -1,0 +1,32 @@
+﻿wuxu_progress_bar = {
+ 	name = "wuxu_progress_bar_name"
+ 	desc = "wuxu_progress_bar_reformers_desc"
+ 	second_desc = "wuxu_progress_bar_conservatives_desc"
+
+ 	double_sided_bad = yes
+
+ 	weekly_progress = {
+		if = {
+			limit = {
+				value < 50
+			}
+			add = {
+			   desc = "wuxu_progress_bar_weekly_decrease"
+			   value = -0.1
+		    }
+		}
+		if = {
+			limit = {
+				value > 150
+			}
+			add = {
+			   desc = "wuxu_progress_bar_weekly_increase"
+			   value = 0.1
+		    }
+		}
+ 	}
+
+ 	start_value = 100
+ 	min_value = 0
+ 	max_value = 200
+}

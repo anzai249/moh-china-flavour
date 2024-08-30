@@ -1,0 +1,111 @@
+﻿namespace = moh_agitators
+
+moh_agitators.1 = { #Wuxu
+	type = country_event
+	placement = scope:youwei_state
+
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:historic_agitator_scope
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	title = moh_agitators.1.t
+	desc = moh_agitators.1.d
+	flavor = moh_agitators.1.f
+
+	duration = 3
+
+	trigger = {
+		empty_agitator_slots >= 1
+		has_law = law_type:law_monarchy
+		has_law = law_type:law_autocracy
+		OR = {	
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+		}
+		game_date > 1880.1.1
+		game_date < 1927.3.31
+		any_scope_state = {
+			any_neighbouring_state = {
+				is_treaty_port = yes
+			}
+		}
+		has_variable = lost_opium_wars
+		NOT = { has_global_variable = youwei_spawn }
+	}
+
+	immediate = {
+		create_character = {
+			template = ecchi_chi_kang_youwei_character_template
+			on_created = {
+				set_variable = youwei_var		
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = youwei_var
+			}
+			save_scope_as = historic_agitator_scope
+		}
+		ruler = {
+			save_scope_as = monarch_scope
+		}
+		set_global_variable = youwei_spawn
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					is_treaty_port = yes
+				}
+			}
+			save_scope_as = youwei_state
+		}
+	}
+
+	option = {
+		name = moh_agitators.1.a
+		default_option = yes
+		scope:historic_agitator_scope = {
+			exile_character_with_martyrdom = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = moh_agitators.1.b
+		show_as_tooltip = {
+			create_character = {
+				template = ecchi_chi_kang_youwei_character_template
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = {
+		name = moh_agitators.1.c
+
+		add_journal_entry = {
+			type = je_wuxu
+		}
+		custom_tooltip = {
+			text = moh_agitators.1.c.tt
+			set_variable = wuxu_reform_support
+		}
+
+		ai_chance = {
+			base = 15
+			modifier = {
+				add = 75
+				trigger = {
+					c:CHI = {
+						NOT = { owns_entire_state_region = STATE_FORMOSA }
+					}
+				}
+			}
+		}
+	}
+}

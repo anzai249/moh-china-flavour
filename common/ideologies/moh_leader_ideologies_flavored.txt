@@ -55,6 +55,11 @@
 					}
 					OR = {
 						has_variable = lost_opium_wars
+						any_scope_state = {
+							any_neighbouring_state = {
+								is_treaty_port = yes
+							}
+						}
 						AND = {
 							has_technology_researched = political_agitation
 							any_state = {
@@ -63,7 +68,7 @@
 							}
 						}
 					}
-					has_law = law_type:law_monarchy
+					game_date > 1875.1.1
 				}
 				AND = {
 					exists = c:CHI
@@ -71,6 +76,11 @@
 					c:CHI = {
 						OR = {
 							has_variable = lost_opium_wars
+							any_scope_state = {
+								any_neighbouring_state = {
+									is_treaty_port = yes
+								}
+							}
 							AND = {
 								has_technology_researched = political_agitation
 								any_state = {
@@ -79,8 +89,8 @@
 								}
 							}
 						}
-						has_law = law_type:law_monarchy
 					}
+					game_date > 1875.1.1
 				}
 			}
 		}
@@ -110,7 +120,13 @@
 	}
 
 	leader_weight = {
-		value = 100
+		value = 90
+		if = {
+			limit = {
+				has_variable = lost_opium_wars
+			}
+			add = 20
+		}
 		if = {
 			limit = {
 				scope:interest_group = {
@@ -271,7 +287,13 @@ ideology_moh_revolutionary = {
 	}
 
 	leader_weight = {
-		value = 100
+		value = 95
+		if = {
+			limit = {
+				has_variable = lost_opium_wars
+			}
+			add = 20
+		}
 		if = {
 			limit = {
 				scope:interest_group = {
@@ -304,4 +326,11 @@ ideology_moh_revolutionary = {
 			add = 75
 		}
 	}
+}
+
+ideology_moh_right_kmt = {
+	# 右派国民党
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_moh_revolutionary_kmt.png"
+	character_ideology = yes
+	
 }

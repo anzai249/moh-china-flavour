@@ -70,6 +70,8 @@
 		moh_Yi
 		Zhiming
 		moh_Wenxiong
+		moh_Yong
+		moh_Yongzheng
 	}
 	female_common_first_names = {
 		Akew
@@ -158,6 +160,7 @@
 		moh_Chiang
 		moh_Han
 		moh_Kong
+		moh_Song
 	}
 	common_last_names={
 		Cui
@@ -223,6 +226,7 @@
 		moh_Kong
 		Guan
 		Fu
+		moh_Song
 	}
 	ethnicities = {
 		1 = asian
@@ -299,6 +303,8 @@ min={
 		moh_Yi
 		Zhiming
 		moh_Wenxiong
+		moh_Yong
+		moh_Yongzheng
 	}
 	female_common_first_names = {
 		Akew
@@ -387,6 +393,7 @@ min={
 		moh_Chiang
 		moh_Han
 		moh_Kong
+		moh_Song
 	}
 	common_last_names={
 		Cui
@@ -452,6 +459,7 @@ min={
 		moh_Kong
 		Guan
 		Fu
+		moh_Song
 	}
 	ethnicities = {
 		1 = asian
@@ -528,6 +536,8 @@ yue={
 		moh_Yi
 		Zhiming
 		moh_Wenxiong
+		moh_Yong
+		moh_Yongzheng
 	}
 	female_common_first_names = {
 		Akew
@@ -616,6 +626,7 @@ yue={
 		moh_Chiang
 		moh_Han
 		moh_Kong
+		moh_Song
 	}
 	common_last_names={
 		Cui
@@ -681,6 +692,7 @@ yue={
 		moh_Kong
 		Guan
 		Fu
+		moh_Song
 	}
 	ethnicities = {
 		1 = asian
@@ -758,6 +770,8 @@ hakka={
 		moh_Yi
 		Zhiming
 		moh_Wenxiong
+		moh_Yong
+		moh_Yongzheng
 	}
 	female_common_first_names = {
 		Akew
@@ -846,6 +860,7 @@ hakka={
 		moh_Chiang
 		moh_Han
 		moh_Kong
+		moh_Song
 	}
 	common_last_names={
 		Cui
@@ -911,6 +926,7 @@ hakka={
 		moh_Kong
 		Guan
 		Fu
+		moh_Song
 	}
 	ethnicities = {
 		1 = asian
@@ -941,6 +957,8 @@ manchu={
 		moh_Jinlong
 		moh_Long
 		moh_Yi
+		moh_Yong
+		moh_Yongzheng
 	}
 	female_common_first_names = {
 		Abahai
@@ -957,6 +975,9 @@ manchu={
 		moh_Irgen_Gioro
 		Aisin_Gioro
 		Yehe_Nara
+		moh_Niohuru
+		moh_Sumuru
+		moh_Guwalgiya
 	}
 	common_last_names={
 		Aisin_Gioro
@@ -968,6 +989,8 @@ manchu={
 		moh_Ula_Nara
 		moh_Hada_Nara
 		moh_Guwalgiya
+		moh_Niohuru
+		moh_Sumuru
 		Wanggiya
 		Nalan
 		An

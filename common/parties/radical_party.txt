@@ -301,6 +301,7 @@ radical_party = {
 				has_ideology = ideology:ideology_legitimist
 				has_ideology = ideology:ideology_theocrat
 				has_ideology = ideology:ideology_slaver
+				has_ideology = ideology:ideology_moh_reformer
 			}
 		}
 	}
@@ -345,7 +346,10 @@ radical_party = {
 		if = { # radicals love radicalism
 			limit = {
 				leader = {
-					has_ideology = ideology:ideology_radical
+					OR = {
+						has_ideology = ideology:ideology_moh_revolutionary
+						has_ideology = ideology:ideology_radical
+					}
 				}
 			}
 			add = {
@@ -357,7 +361,10 @@ radical_party = {
 			limit = {
 				is_powerful = yes
 				leader = {
-					has_ideology = ideology:ideology_radical
+					OR = {
+						has_ideology = ideology:ideology_moh_revolutionary
+						has_ideology = ideology:ideology_radical
+					}
 				}
 			}
 			add = {
@@ -368,7 +375,10 @@ radical_party = {
 		if = { # radicals will fall in line behind stronger liberals
 			limit = {
 				leader = {
-					has_ideology = ideology:ideology_radical
+					OR = {
+						has_ideology = ideology:ideology_moh_revolutionary
+						has_ideology = ideology:ideology_radical
+					}
 				}
 				is_powerful = no
 				owner = {
@@ -397,7 +407,10 @@ radical_party = {
 					any_interest_group = {
 						is_powerful = yes
 						leader = {
-							has_ideology = ideology:ideology_radical
+							OR = {
+								has_ideology = ideology:ideology_moh_revolutionary
+								has_ideology = ideology:ideology_radical
+							}
 						}
 					}
 				}
@@ -422,7 +435,10 @@ radical_party = {
 					any_interest_group = {
 						is_powerful = yes
 						leader = {
-							has_ideology = ideology:ideology_radical
+							OR = {
+								has_ideology = ideology:ideology_moh_revolutionary
+								has_ideology = ideology:ideology_radical
+							}
 						}
 					}
 				}
@@ -462,6 +478,7 @@ radical_party = {
 							has_ideology = ideology:ideology_atheist
 							has_ideology = ideology:ideology_republican_leader
 							has_ideology = ideology:ideology_radical
+							has_ideology = ideology:ideology_moh_revolutionary
 						}
 					}
 				}
@@ -516,6 +533,7 @@ radical_party = {
 							has_ideology = ideology:ideology_radical
 							has_ideology = ideology:ideology_social_democrat
 							has_ideology = ideology:ideology_humanitarian
+							has_ideology = ideology:ideology_moh_revolutionary
 						}
 					}
 				}
@@ -624,6 +642,7 @@ radical_party = {
 						has_ideology = ideology:ideology_abolitionist
 						has_ideology = ideology:ideology_social_democrat
 						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_moh_revolutionary
 					}
 				}
 			}

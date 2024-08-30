@@ -356,6 +356,7 @@ liberal_party = {
 				has_ideology = ideology:ideology_communist
 				has_ideology = ideology:ideology_vanguardist
 				has_ideology = ideology:ideology_anarchist
+				has_ideology = ideology:ideology_moh_revolutionary
 			}
 		}
 	}
@@ -375,6 +376,7 @@ liberal_party = {
 						has_ideology = ideology:ideology_radical
 						has_ideology = ideology:ideology_reformer
 						has_ideology = ideology:ideology_market_liberal
+						has_ideology = ideology:ideology_moh_reformer
 					}
 				}
 			}
@@ -600,6 +602,7 @@ liberal_party = {
 							has_ideology = ideology:ideology_atheist
 							has_ideology = ideology:ideology_republican_leader
 							has_ideology = ideology:ideology_radical
+							has_ideology = ideology:ideology_moh_revolutionary
 						}
 					}
 				}
@@ -667,6 +670,7 @@ liberal_party = {
 						has_ideology = ideology:ideology_abolitionist
 						has_ideology = ideology:ideology_social_democrat
 						has_ideology = ideology:ideology_communist
+						has_ideology = ideology:ideology_moh_revolutionary
 					}
 				}
 			}

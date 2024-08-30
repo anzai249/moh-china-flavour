@@ -159,13 +159,115 @@ YUN = { # Yunnan
 	}
 }
 
+ZHI = { # ZHILI
+	flag_definition = {
+		coa = ZHI
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = ZHI_subject
+		priority = 1
+	}
+}
+
+XIB = {
+	flag_definition = {
+		coa = XIB
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = XIB_subject
+		priority = 1
+	}
+}
+
+SHA = {
+	flag_definition = {
+		coa = SHA
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = SHA_subject
+		priority = 1
+	}
+}
+
+AHU = {
+	flag_definition = {
+		coa = AHU
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = AHU_subject
+		priority = 1
+	}
+}
+
+YUE = {
+	flag_definition = {
+		coa = YUE
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = YUE_subject
+		priority = 1
+	}
+}
+
+HNA = {
+	flag_definition = {
+		coa = HNA
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = HNA_subject
+		priority = 1
+	}
+}
+
+GNG = {
+	flag_definition = {
+		coa = GNG
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GNG_subject
+		priority = 1
+	}
+}
+
+SIH = {
+	flag_definition = {
+		coa = SIH
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = SIH_subject
+		priority = 1
+	}
+}
+
+GUI = {
+	flag_definition = {
+		coa = GUI
+		subject_canton = CHI_shibaxing
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GUI_subject
+		priority = 1
+	}
+}
+
 MCH = { # Manchu
+	flag_definition = {
+		coa = MCH
+		subject_canton = MCH
+		priority = 1
+	}
+	
 	flag_definition = {
 		coa = MCH
 		subject_canton = MCH
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = MCH_subject
 		priority = 1
+		trigger = { 
+			exists = c:CHI
+			scope:actor ?= {
+				is_subject_of = c:CHI
+			}
+		}
 	}
 }
 

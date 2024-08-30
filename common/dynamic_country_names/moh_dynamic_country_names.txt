@@ -77,4 +77,87 @@ CHI = { # China
 			coa_def_communist_flag_trigger = yes
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_c_upc
+		adjective = dyn_c_roc_adj
+		
+		is_main_tag_only = yes
+		priority = 0
+		
+		trigger = {
+			moh_coa_def_nihilist_flag_trigger = yes
+		}
+	}
+}
+
+
+GNG = {
+	dynamic_country_name = {
+		name = dyn_c_guangxi_clique
+		adjective = GNG_ADJ
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			has_global_variable = china_shatters
+			scope:actor ?= {
+				has_government_type = gov_warlord_state
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_guangxi_clique
+		adjective = GNG_ADJ
+
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			# exists = c:CHI
+			scope:actor ?= {
+				subject_type = subject_type:subject
+			}
+		}
+	}
+}
+
+MGL = {
+	dynamic_country_name = {
+		name = dyn_c_mongol_region
+		adjective = MGL_ADJ
+
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			exists = c:CHI
+			scope:actor ?= {
+				is_subject_of = c:CHI
+			}
+			c:CHI = {
+				coa_def_republic_flag_trigger = yes
+			}
+		}
+	}
+}
+
+TIB = {
+	dynamic_country_name = {
+		name = dyn_c_tibet_region
+		adjective = TIB_ADJ
+
+		is_main_tag_only = yes
+		priority = 100
+		
+		trigger = {
+			exists = c:CHI
+			scope:actor ?= {
+				is_subject_of = c:CHI
+			}
+			c:CHI = {
+				coa_def_republic_flag_trigger = yes
+			}
+		}
+	}
 }

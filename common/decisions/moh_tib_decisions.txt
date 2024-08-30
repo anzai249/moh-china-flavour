@@ -6,6 +6,9 @@
 	possible = {
 		exists = c:TIB
 		c:TIB = ROOT
+		root = {
+			has_law = law_type:law_theocracy
+		}
 		custom_tooltip = {
 			text= je_moh_tibet_look_for_new_dalai_lama.1.tt
 			NOT = {

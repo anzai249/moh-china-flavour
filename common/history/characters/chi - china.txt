@@ -1,7 +1,7 @@
 ﻿CHARACTERS = {
 	c:CHI ?= {
 		create_character = {
-			template = chi_daoguang_template
+			template = moh_chi_daoguang_template
 		}
 
 		create_character = {
@@ -66,7 +66,7 @@
 			culture = cu:han
 			ig_leader = yes
 			interest_group = ig_intelligentsia
-			ideology = ideology_moh_revolutionary
+			ideology = ideology_moderate
 			traits = {
 				meticulous
 			}
@@ -80,7 +80,7 @@
 			culture = cu:han
 			ig_leader = yes
 			interest_group = ig_industrialists
-			ideology = ideology_moh_reformer
+			ideology = ideology_moderate
 			traits = {
 				meticulous
 			}
@@ -122,6 +122,7 @@
 			first_name = Yijing
 			last_name = Aisin_Gioro
 			culture = cu:manchu
+			historical = yes
 			interest_group = ig_landowners
 			ideology = ideology_royalist
 			birth_date = 1793.6.6 # exact date unknown

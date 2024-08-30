@@ -230,15 +230,6 @@ FRS = { # Taiwan
 		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
 	}
 }
-FRS_subject = {
-	pattern = "pattern_solid.tga"
-	color1 = "blue"
-	
-	textured_emblem = {
-		texture = "te_coa_taiwan.png"
-		instance = { position = { 0.75 0.5 } scale = { 0.6 0.6 } }
-	}
-}
 
 TPG = { # Heavenly Kingdom
 	pattern = "pattern_solid.tga"
@@ -271,6 +262,137 @@ GNG = { # Dacheng
 	}
 }
 
+SHN = { 
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+		
+	colored_emblem = {
+		texture = "ce_taoism.png"
+		color1 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+	}
+}
+
+YUN = { 
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_zhong.png"
+		color1 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.5 1.5 } }
+	}
+}
+
+YUE = { 
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+	
+	colored_emblem = {
+		texture = "ce_whitesun.dds"
+		color1 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
+	}
+}
+
+GUI = { 
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	
+	colored_emblem = {
+		texture = "ce_guizhou.png"
+		color1 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
+	}
+}
+
+SIH = { 
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	
+	colored_emblem = {
+		texture = "ce_sichuan.png"
+		color1 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
+	}
+}
+
+XIB = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_crescent_star_05_rotated.dds"
+		color1 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 0.75 0.75 } }
+	}
+}
+
+HNA = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	textured_emblem = {
+		texture = "te_coa_18_star.dds"
+		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
+	}
+}
+
+SHA = {
+	pattern = "pattern_solid.tga"
+	color1 = "brown"
+	
+	colored_emblem = {
+		texture = "ce_shanxi.png"
+		color1 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
+	}
+}
+
+AHU = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+	
+	colored_emblem = {
+		texture = "ce_anhui.png"
+		color1 = "grey"
+		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
+	}
+}
+
+ZHI = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_zhili.png"
+		color1 = "yellow"
+		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
+	}
+}
+
+ZHI_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_zhili.png"
+		color1 = "black"
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+	}
+}
+
+MCH_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_manchu_subject.png"
+		color1 = "black"
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+	}
+}
+
 SHN_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
@@ -293,58 +415,88 @@ YUN_subject = {
 	}
 }
 
-SHN = { 
+FRS_subject = {
 	pattern = "pattern_solid.tga"
-	color1 = "white"
-		
-	colored_emblem = {
-		texture = "ce_taoism.png"
-		color1 = "black"
-		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+	color1 = "blue"
+	
+	textured_emblem = {
+		texture = "te_coa_taiwan.png"
+		instance = { position = { 0.75 0.5 } scale = { 0.6 0.6 } }
 	}
 }
 
-YUN = { 
+SHA_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_shandong.png"
+		color1 = "black"
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+	}
+}
+
+AHU_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	
 	colored_emblem = {
-		texture = "ce_solid.dds"
-		color1 = "yellow"
-		color2 = "yellow"
-		instance = { scale = { 1.0 0.2 } position = { 0.5 0.3 } }			
-	}	
-	colored_emblem = {
-		texture = "ce_solid.dds"
-		color1 = "blue"
-		color2 = "blue"
-		instance = { scale = { 1.0 0.2 } position = { 0.5 0.5 } }			
-	}	
-	colored_emblem = {
-		texture = "ce_solid.dds"
-		color1 = "white"
-		color2 = "white"
-		instance = { scale = { 1.0 0.2 } position = { 0.5 0.7 } }			
-	}		
-	colored_emblem = {
-		texture = "ce_solid.dds"
+		texture = "ce_anhui.png"
 		color1 = "black"
-		color2 = "black"
-		instance = { scale = { 1.0 0.2 } position = { 0.5 0.9 } }			
-	}		
-	colored_emblem = {
-		texture = "ce_yunnan.png"
-		color1 = "black"
-		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
 	}
 }
 
-MCH_subject = {
+YUE_subject = {
 	pattern = "pattern_solid.tga"
-	color1 = "yellow"
-
+	color1 = "red"
+	
 	colored_emblem = {
-		texture = "ce_manchu_subject.png"
+		texture = "ce_guangdong.png"
+		color1 = "black"
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+	}
+}
+
+HNA_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_hunan.png"
+		color1 = "black"
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+	}
+}
+
+GNG_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_guangxi.png"
+		color1 = "black"
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+	}
+}
+
+SIH_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_sichuan.png"
+		color1 = "black"
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+	}
+}
+
+GUI_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_guizhou.png"
 		color1 = "black"
 		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
 	}

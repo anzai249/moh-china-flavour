@@ -20,4 +20,11 @@
   moh_tibet_look_for_new_dalai_lama: "寻找达赖喇嘛转世"
   moh_tibet_look_for_new_dalai_lama_desc: "若达赖喇嘛圆寂，我们寻找新的达赖喇嘛转世。"
   moh_tibet_look_for_new_dalai_lama_tooltip: "寻找达赖喇嘛转世"
-
+  # 康有为出现
+  moh_agitators.1.t: "公车上书"
+  moh_agitators.1.d: "一名名叫[SCOPE.sCharacter('historic_agitator_scope').GetFullName]的学者上书给[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')]，他认为[COUNTRY.GetName]如今孱弱是因为社会制度落后于世界，他主张开展维新变法运动。"
+  moh_agitators.1.f: "“窃以为弃台民之事小，散天下民之事大；割地之事小，亡国之事大；社稷安危，在此一举，举人等栋折榱坏，同受倾压，故不避斧钺之诛，犯冒越之罪，统筹大局，为我皇上陈之。”"
+  moh_agitators.1.a: "祖宗之法不可变，让他去日本冷静冷静"
+  moh_agitators.1.b: "不给予支持，我们静观其变"
+  moh_agitators.1.c: "“变法图强！”"
+  moh_agitators.1.c.tt: "维新派将会更加活跃……"

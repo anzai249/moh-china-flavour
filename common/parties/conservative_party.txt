@@ -251,6 +251,18 @@ conservative_party = {
 				}
 			}
 			triggered_desc = {
+				desc = party_right_kmt
+				trigger = {
+					exists = c:CHI
+					THIS = c:CHI
+					NOT = {
+						has_law = law_type:law_monarchy
+						has_law = law_type:law_council_republic
+					}
+					has_law = law_type:law_single_party_state
+				}
+			}
+			triggered_desc = {
 				desc = party_imperial_rule_party
 				trigger = {
 					exists = c:JAP
@@ -385,6 +397,7 @@ conservative_party = {
 						has_ideology = ideology:ideology_social_democrat
 						has_ideology = ideology:ideology_radical
 						has_ideology = ideology:ideology_atheist
+						has_ideology = ideology:ideology_moh_revolutionary
 					}
 				}
 			}
@@ -659,6 +672,9 @@ conservative_party = {
 				OR = {
 					has_ideology = ideology:ideology_moralist
 					has_ideology = ideology:ideology_paternalistic
+					leader = {
+						has_ideology = ideology:ideology_moh_revolutionary
+					}
 				}
 				owner = {
 					NOR = {
