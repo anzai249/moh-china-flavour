@@ -144,6 +144,38 @@
 				value = -1.5
 			}
 		}
+		if = {
+			limit = {
+				var:wuxu_random_event_add > 0
+			}
+			add = {
+				desc = "wuxu_progress_bar_random_event"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				var:wuxu_random_event_subtract > 0
+			}
+			add = {
+				desc = "wuxu_progress_bar_random_event"
+				value = -1
+			}
+		}
+		if = {
+			limit = {
+				capital = {
+					has_building = building_university
+				}
+			}
+			add = {
+				desc = "wuxu_progress_bar_university"
+				value = {
+					value = capital.b:building_university.level
+					multiply = 0.1
+				}
+			}
+		}
 	}
 	start_value = 150
 	min_value = 0

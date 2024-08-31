@@ -22,6 +22,14 @@
 			name = wuxu_reformers_support_days
 			value = 0
 		}
+		set_variable = {
+			name = wuxu_random_event_add
+			value = 0
+		}
+		set_variable = {
+			name = wuxu_random_event_subtract
+			value = 0
+		}
 		add_modifier = {
 			name = modifier_chi_wuxu
 		}
@@ -115,6 +123,50 @@
 				change_variable = {
 					name = wuxu_reformers_support_days
 					value = 0
+				}
+			}
+			if = {
+				limit = {
+					var:wuxu_random_event_add > 0
+				}
+				change_variable = {
+					name = wuxu_random_event_subtract
+					add = -1
+				}
+			}
+			if = {
+				limit = {
+					var:wuxu_random_event_subtract > 0
+				}
+				change_variable = {
+					name = wuxu_random_event_subtract
+					add = -1
+				}
+			}
+		}
+	}
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = wuxu.3
+			10 = wuxu.4
+			10 = wuxu.6
+		}
+		effect = {
+			random_list = {
+				200 = {
+				}
+				5 = {
+					if = {
+						limit = {
+							any_scope_state = {
+								has_building = building_university
+							}
+						}
+						trigger_event = {
+							id = wuxu.5
+						}
+					}
 				}
 			}
 		}

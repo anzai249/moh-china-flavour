@@ -1,14 +1,12 @@
 ﻿namespace = wuxu
-
 wuxu.1 = {
+	# 失败
 	type = country_event
 	placement = root
 	duration = 3
-
 	title = wuxu.1.t
 	desc = wuxu.1.d
 	flavor = wuxu.1.f
-
 	option = {
 		name = wuxu.1.a
 		if = {
@@ -41,5 +39,280 @@ wuxu.1 = {
 }
 
 wuxu.2 = {
+	# 成功
+}
 
+wuxu.3 = {
+	# 举人反对
+	type = country_event
+	placement = scope:literati_state
+	title = wuxu.3.t
+	desc = wuxu.3.d
+	flavor = wuxu.3.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+	duration = 3
+	event_image = {
+		video = "asia_union_leader"
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:han
+				}
+			}
+			save_scope_as = literati_state
+		}
+		ig:ig_landowners = {
+			save_scope_as = wuxu_landowners_ig
+		}
+	}
+	option = {
+		name = wuxu.3.a
+		default_option = yes
+		random_list = {
+			70 = {
+				custom_tooltip = {
+					text = wuxu.random.add.less
+					change_variable = {
+						name = wuxu_random_event_add
+						add = 3
+					}
+				}
+			}
+			30 = {
+				custom_tooltip = {
+					text = wuxu.random.subtract.more
+					change_variable = {
+						name = wuxu_random_event_subtract
+						add = 9
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_conservative_agenda
+				}
+				add = -10
+			}
+		}
+	}
+	option = {
+		name = wuxu.3.b
+		random_list = {
+			30 = {
+				custom_tooltip = {
+					text = wuxu.random.add.more
+					change_variable = {
+						name = wuxu_random_event_add
+						add = 9
+					}
+				}
+			}
+			70 = {
+				custom_tooltip = {
+					text = wuxu.random.subtract.less
+					change_variable = {
+						name = wuxu_random_event_subtract
+						add = 3
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+wuxu.4 = {
+	# 冗官被革职
+	type = country_event
+	placement = root
+	title = wuxu.4.t
+	desc = wuxu.4.d
+	flavor = wuxu.4.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	event_image = {
+		video = "votp_agitator_speaking"
+	}
+	option = {
+		name = wuxu.4.a
+		default_option = yes
+		custom_tooltip = {
+			text = wuxu.random.add.less
+			change_variable = {
+				name = wuxu_random_event_add
+				add = 3
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = bureaucrats
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+	option = {
+		name = wuxu.4.b
+		custom_tooltip = {
+			text = wuxu.random.subtract.less
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 3
+			}
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_conservative_agenda
+				}
+				add = 5
+			}
+		}
+	}
+}
+
+wuxu.5 = {
+	# 学生支持变法
+	type = country_event
+	placement = scope:wuxu_university_state
+	title = wuxu.5.t
+	desc = wuxu.5.d
+	flavor = wuxu.5.f
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	event_image = {
+		video = "africa_public_protest"
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_building = building_university
+			}
+			save_scope_as = wuxu_university_state
+		}
+	}
+
+	option = {
+		name = wuxu.5.a
+		default_option = yes
+		custom_tooltip = {
+			text = wuxu.random.add.less
+			change_variable = {
+				name = wuxu_random_event_add
+				add = 3
+			}
+		}
+		add_modifier = {
+			name = modifier_movement_student_protests
+			months = 6
+			is_decaying = yes
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	option = {
+		name = wuxu.5.b
+		default_option = yes
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_conservative_agenda
+				}
+				add = 5
+			}
+		}
+	}
+}
+
+wuxu.6 = {
+	# 译书局缺乏资金
+	type = country_event
+	placement = scope:wuxu_book_state
+	title = wuxu.6.t
+	desc = wuxu.6.d
+	flavor = wuxu.6.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	event_image = {
+		video = "southamerica_election"
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = {
+					OR = {
+						is_homeland = cu:han
+						is_homeland = cu:manchu
+						is_homeland = cu:yue
+						is_homeland = cu:hakka
+						is_homeland = cu:min
+					}
+				}
+			}
+			save_scope_as = wuxu_book_state
+		}
+	}
+
+	option = {
+		name = wuxu.6.a
+		custom_tooltip = {
+			text = wuxu.random.add.less
+			change_variable = {
+				name = wuxu_random_event_add
+				add = 3
+			}
+		}
+		add_modifier = {
+			name = book_campaign_modifier
+			months = 6
+			multiplier = money_amount_multiplier_small
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	option = {
+		name = wuxu.6.b
+		default_option = yes
+		custom_tooltip = {
+			text = wuxu.random.subtract.less
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 3
+			}
+		}
+		add_modifier = {
+			name = modifier_wuxu_experienced_teacher
+			months = 24
+			is_decaying = yes
+		}
+
+		ai_chance = {
+			base = 15
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_conservative_agenda
+				}
+				add = 5
+			}
+		}
+	}
 }
