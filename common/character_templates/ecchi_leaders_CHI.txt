@@ -439,6 +439,7 @@ ecchi_chi_liang_qichao_character_template = {
     historical = yes
     culture = cu:han
     female = no
+    is_agitator = yes
     ideology = ideology_moh_reformer
     interest_group = ig_intelligentsia
 	dna = ecchi_dna_liang_qichao

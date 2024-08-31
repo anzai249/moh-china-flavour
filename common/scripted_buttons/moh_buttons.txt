@@ -1,18 +1,15 @@
 ﻿print_reformer_newspaper_button = {
 	name = "print_reformer_newspaper"
 	desc = "print_reformer_newspaper_desc"
-
-	visible = { 
+	visible = {
 		has_journal_entry = je_wuxu
 	}
-
 	possible = {
 		custom_tooltip = {
 			text = print_reformer_newspaper_button.tt.1
 			var:wuxu_newspaper_time >= 20
 		}
 	}
-
 	effect = {
 		custom_tooltip = {
 			text = print_reformer_newspaper_button.tt.2
@@ -21,44 +18,56 @@
 				value = 0
 			}
 		}
+		add_modifier = {
+			name = newspaper_campaign_modifier
+			months = 3
+			multiplier = money_amount_multiplier_small
+		}
 	}
-
 	ai_chance = {
-        base = 0
+		base = 15
 		modifier = {
 			trigger = {
-				OR = {
-					has_strategy = ai_strategy_conservative_agenda
-					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
-				}
+				has_strategy = ai_strategy_conservative_agenda
+			}
+			add = -10
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_maintain_mandate_of_heaven
 			}
 			add = 10
-		}		 
-    }
+		}
+	}
 }
 
 steady_advancement_button = {
 	name = "steady_advancement"
 	desc = "steady_advancement_desc"
-
-	visible = { 
+	visible = {
 		has_journal_entry = je_wuxu
 	}
-
 	possible = {
-		always = no
-	}
-
-	effect = {
-		add_banned_goods = g:opium
-		add_modifier = {
-			name = opium_ban_authority
+		has_modifier = modifier_chi_wuxu
+		custom_tooltip = {
+			text = steady_advancement.tt.1
+			scope:journal_entry = {
+				"scripted_bar_progress(wuxu_progress_bar)" >= 180
+			}
+			var:wuxu_reformers_support_days >= 15
 		}
 	}
-
+	effect = {
+		remove_modifier = modifier_chi_wuxu
+		add_modifier = {
+			name = modifier_chi_wuxu_stable
+		}
+		ruler = {
+			set_ideology = ideology:ideology_moh_reformer
+		}
+	}
 	ai_chance = {
-        base = 0
+		base = 0
 		modifier = {
 			trigger = {
 				OR = {
@@ -68,36 +77,49 @@ steady_advancement_button = {
 				}
 			}
 			add = 10
-		}		 
-    }
+		}
+	}
 }
 
 dismissed_officials_petition_button = {
 	name = "dismissed_officials_petition"
 	desc = "dismissed_officials_petition_desc"
-
-	visible = { 
+	visible = {
 		has_journal_entry = je_wuxu
 	}
-
 	possible = {
-		always = no
+		custom_tooltip = {
+			text = dismissed_officials_petition.tt.1
+			NOT = {
+				has_variable = dismissed_officials_petition
+			}
+		}
 	}
-
 	effect = {
-	}
-
-	ai_chance = {
-        base = 0
-		modifier = {
-			trigger = {
-				OR = {
-					has_strategy = ai_strategy_conservative_agenda
-					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
+		custom_tooltip = {
+			text = dismissed_officials_petition.tt.2
+			set_variable = dismissed_officials_petition
+			scope:journal_entry = {
+				add_progress = {
+					value = -25
+					name = wuxu_progress_bar
 				}
 			}
+		}
+	}
+	ai_chance = {
+		base = 15
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_conservative_agenda
+			}
 			add = 10
-		}		 
-    }
+		}
+		modifier = {
+			trigger = {
+				has_strategy = ai_strategy_maintain_mandate_of_heaven
+			}
+			add = -5
+		}
+	}
 }

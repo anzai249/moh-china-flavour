@@ -5,7 +5,7 @@
 
 	lawgroup_distribution_of_power = {
 		law_anarchy = strongly_disapprove
-		law_universal_suffrage = approve
+		law_universal_suffrage = neutral
 		law_census_voting = approve
 		law_wealth_voting = strongly_approve
 		law_landed_voting = strongly_approve
@@ -18,7 +18,7 @@
 	lawgroup_trade_policy = {		
 		law_isolationism = disapprove
 		law_mercantilism = strongly_approve
-		law_protectionism = approve
+		law_protectionism = strongly_approve
 		law_free_trade = approve
 	}
 	
@@ -40,7 +40,7 @@
 	lawgroup_education_system = {
 		law_public_schools = approve
 		law_religious_schools = neutral
-		law_private_schools = approve
+		law_private_schools = strongly_approve
 		law_no_schools = disapprove
 	}
 
@@ -151,7 +151,7 @@
 					is_interest_group_type = ig_landowners
 				}
 			}
-			add = -80
+			add = -100
 		}
 		
 		if = {
@@ -165,7 +165,7 @@
 			limit = {
 				owner = { has_variable = wuxu_reform_support }
 			}
-			add = 100
+			add = 500
 		}
 		
 		if = {
@@ -198,11 +198,11 @@ ideology_moh_revolutionary = {
 	}
 	
 	lawgroup_citizenship = {
-		law_multicultural = disapprove	
+		law_multicultural = neutral	
 		law_ethnostate = neutral
 		law_national_supremacy = approve
-		law_racial_segregation = neutral
-		law_cultural_exclusion = neutral
+		law_racial_segregation = disapprove
+		law_cultural_exclusion = disapprove
 	}
 	
 	lawgroup_welfare = {
@@ -217,7 +217,7 @@ ideology_moh_revolutionary = {
 		law_tenant_farmers = neutral
 		law_homesteading = approve
 		law_collectivized_agriculture = strongly_disapprove
-		law_commercialized_agriculture = approve
+		law_commercialized_agriculture = neutral
 	}
 
 	possible = {

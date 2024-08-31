@@ -18,8 +18,17 @@ modifier_abolish_keju = {
 modifier_chi_wuxu = {
 	desc = "modifier_chi_wuxu_desc"
 	icon = gfx/interface/icons/timed_modifier_icons/wuxu.png
-	country_tech_research_speed_mult = 0.1
+	country_tech_research_speed_mult = 0.15
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.05
 	country_law_enactment_time_mult = -0.5
 	interest_group_ig_landowners_approval_add = -2
+}
+
+# Wuxu reform stable
+modifier_chi_wuxu_stable = {
+	desc = "modifier_chi_wuxu_stable_desc"
+	icon = gfx/interface/icons/timed_modifier_icons/wuxu.png
+	country_tech_research_speed_mult = 0.1
+	interest_group_ig_intelligentsia_pop_attraction_mult = 0.05
+	country_law_enactment_time_mult = -0.25
 }

@@ -1,32 +1,151 @@
 ﻿wuxu_progress_bar = {
- 	name = "wuxu_progress_bar_name"
- 	desc = "wuxu_progress_bar_reformers_desc"
- 	second_desc = "wuxu_progress_bar_conservatives_desc"
-
- 	double_sided_bad = yes
-
- 	weekly_progress = {
+	name = "wuxu_progress_bar_name"
+	desc = "wuxu_progress_bar_reformers_desc"
+	second_desc = "wuxu_progress_bar_conservatives_desc"
+	double_sided_bad = yes
+	weekly_progress = {
 		if = {
 			limit = {
-				value < 50
+				scope:journal_entry = {
+					"scripted_bar_progress(wuxu_progress_bar)" < 50
+				}
 			}
 			add = {
-			   desc = "wuxu_progress_bar_weekly_decrease"
-			   value = -0.1
-		    }
+				desc = "wuxu_progress_bar_weekly_decrease"
+				value = -0.5
+			}
 		}
 		if = {
 			limit = {
-				value > 150
+				var:wuxu_newspaper_time < 3
 			}
 			add = {
-			   desc = "wuxu_progress_bar_weekly_increase"
-			   value = 0.1
-		    }
+				desc = "wuxu_progress_bar_newspaper"
+				value = 1
+			}
 		}
- 	}
-
- 	start_value = 100
- 	min_value = 0
- 	max_value = 200
+		if = {
+			limit = {
+				OR = {
+					has_law = law_type:law_landed_voting
+					has_law = law_type:law_wealth_voting
+					has_law = law_type:law_universal_suffrage
+					has_law = law_type:law_census_voting
+				}
+			}
+			add = {
+				desc = "wuxu_progress_bar_voting"
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				any_interest_group = {
+					is_in_government = yes
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_moh_reformer
+							has_ideology = ideology:ideology_liberal_leader
+						}
+					}
+				}
+			}
+			add = {
+				desc = "wuxu_progress_bar_in_government"
+				value = {
+					value = 0.5
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				ig:ig_landowners = {
+					is_powerful = yes
+					is_in_government = yes
+					leader = {
+						NOT = {
+							OR = {
+								has_ideology = ideology:ideology_moh_reformer
+								has_ideology = ideology:ideology_liberal_leader
+							}
+						}
+					}
+				}
+			}
+			subtract = {
+				desc = "wuxu_progress_bar_landowner_powerful"
+				value = {
+					value = ig:ig_landowners.ig_clout
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				ig:ig_landowners = {
+					is_powerful = yes
+					is_in_government = yes
+					leader = {
+						OR = {
+							has_ideology = ideology:ideology_moh_reformer
+							has_ideology = ideology:ideology_liberal_leader
+						}
+					}
+				}
+			}
+			add = {
+				desc = "wuxu_progress_bar_landowner_powerful"
+				value = {
+					value = ig:ig_landowners.ig_clout
+					multiply = 2
+				}
+			}
+		}
+		if = {
+			limit = {
+				ruler = {
+					OR = {
+						has_ideology = ideology:ideology_moh_reformer
+						has_ideology = ideology:ideology_liberal_leader
+					}
+				}
+			}
+			add = {
+				desc = "[GetPlayer.GetRuler.GetFullNameWithTitle]"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = chi_cixi_template
+					has_role = politician
+				}
+			}
+			add = {
+				desc = "$Cixi$"
+				value = -1.5
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_scope_character = {
+						OR = {
+							has_ideology = ideology:ideology_moh_reformer
+							has_ideology = ideology:ideology_liberal_leader
+						}
+					}
+				}
+			}
+			add = {
+				desc = "wuxu_progress_bar_no_reformers"
+				value = -1.5
+			}
+		}
+	}
+	start_value = 150
+	min_value = 0
+	max_value = 300
 }

@@ -1,28 +1,22 @@
 ﻿namespace = moh_agitators
-
-moh_agitators.1 = { #Wuxu
+moh_agitators.1 = {
+	#Wuxu
 	type = country_event
 	placement = scope:youwei_state
-
 	gui_window = event_window_1char_tabloid
 	left_icon = scope:historic_agitator_scope
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
-
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
-
 	title = moh_agitators.1.t
 	desc = moh_agitators.1.d
 	flavor = moh_agitators.1.f
-
 	duration = 3
-
 	trigger = {
 		empty_agitator_slots >= 1
 		has_law = law_type:law_monarchy
 		has_law = law_type:law_autocracy
-		OR = {	
+		OR = {
 			country_has_primary_culture = cu:han
 			country_has_primary_culture = cu:manchu
 		}
@@ -34,14 +28,15 @@ moh_agitators.1 = { #Wuxu
 			}
 		}
 		has_variable = lost_opium_wars
-		NOT = { has_global_variable = youwei_spawn }
+		NOT = {
+			has_global_variable = youwei_spawn
+		}
 	}
-
 	immediate = {
 		create_character = {
 			template = ecchi_chi_kang_youwei_character_template
 			on_created = {
-				set_variable = youwei_var		
+				set_variable = youwei_var
 			}
 		}
 		random_scope_character = {
@@ -63,7 +58,6 @@ moh_agitators.1 = { #Wuxu
 			save_scope_as = youwei_state
 		}
 	}
-
 	option = {
 		name = moh_agitators.1.a
 		default_option = yes
@@ -87,7 +81,6 @@ moh_agitators.1 = { #Wuxu
 	}
 	option = {
 		name = moh_agitators.1.c
-
 		add_journal_entry = {
 			type = je_wuxu
 		}
@@ -95,14 +88,52 @@ moh_agitators.1 = { #Wuxu
 			text = moh_agitators.1.c.tt
 			set_variable = wuxu_reform_support
 		}
-
 		ai_chance = {
 			base = 15
 			modifier = {
 				add = 75
 				trigger = {
 					c:CHI = {
-						NOT = { owns_entire_state_region = STATE_FORMOSA }
+						NOT = {
+							owns_entire_state_region = STATE_FORMOSA
+						}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = moh_agitators.1.e
+		trigger = {
+			game_date > 1886.1.1
+		} 
+		add_journal_entry = {
+			type = je_wuxu
+		}
+		custom_tooltip = {
+			text = moh_agitators.1.c.tt
+			set_variable = wuxu_reform_support
+		}
+		custom_tooltip = {
+		text = moh_agitators.1.e.tt
+			scope:historic_agitator_scope = {
+				remove_character_role = agitator
+				add_character_role = politician
+				set_as_interest_group_leader = yes
+			}
+		}
+		create_character = {
+			template = ecchi_chi_liang_qichao_character_template
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				add = 75
+				trigger = {
+					c:CHI = {
+						NOT = {
+							owns_entire_state_region = STATE_FORMOSA
+						}
 					}
 				}
 			}

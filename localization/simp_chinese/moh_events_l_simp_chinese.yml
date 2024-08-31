@@ -28,3 +28,7 @@
   moh_agitators.1.b: "不给予支持，我们静观其变"
   moh_agitators.1.c: "“变法图强！”"
   moh_agitators.1.c.tt: "维新派将会更加活跃……"
+  moh_agitators.1.e: "他的徒弟看起来蛮聪明……"
+  moh_agitators.1.e.tt: "[SCOPE.sCharacter('historic_agitator_scope').GetFullName]成为[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant]领袖"
+  # 戊戌变法
+  wuxu.1.t: "戊戌政变"

@@ -1,1 +1,45 @@
-﻿
+﻿namespace = wuxu
+
+wuxu.1 = {
+	type = country_event
+	placement = root
+	duration = 3
+
+	title = wuxu.1.t
+	desc = wuxu.1.d
+	flavor = wuxu.1.f
+
+	option = {
+		name = wuxu.1.a
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = ecchi_chi_kang_youwei_character_template
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = ecchi_chi_kang_youwei_character_template
+				}
+				exile_character_with_martyrdom = yes
+			}
+		}
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = ecchi_chi_liang_qichao_character_template
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = ecchi_chi_liang_qichao_character_template
+				}
+				exile_character_with_martyrdom = yes
+			}
+		}
+	}
+}
+
+wuxu.2 = {
+
+}
