@@ -7,8 +7,33 @@ wuxu.1 = {
 	title = wuxu.1.t
 	desc = wuxu.1.d
 	flavor = wuxu.1.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	event_image = {
+		video = "unspecific_devastation"
+	}
+	immediate = {
+		ig:ig_landowners = {
+			save_scope_as = wuxu_landowners_ig
+		}
+	}
 	option = {
 		name = wuxu.1.a
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			OR = {
+				any_scope_character = {
+					has_template = ecchi_chi_kang_youwei_character_template
+				}
+				any_scope_character = {
+					has_template = ecchi_chi_liang_qichao_character_template
+				}
+				any_scope_character = {
+					has_template = ecchi_chi_tan_sitong_character_template
+				}
+			}
+		}
 		if = {
 			limit = {
 				any_scope_character = {
@@ -34,6 +59,123 @@ wuxu.1 = {
 				}
 				exile_character_with_martyrdom = yes
 			}
+		}
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = ecchi_chi_tan_sitong_character_template
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = ecchi_chi_tan_sitong_character_template
+				}
+				exile_character_with_martyrdom = yes
+			}
+		}
+	}
+	option = {
+		name = wuxu.1.b
+		ai_chance = {
+			base = 15
+		}
+		trigger = {
+			OR = {
+				any_scope_character = {
+					has_template = ecchi_chi_kang_youwei_character_template
+				}
+				any_scope_character = {
+					has_template = ecchi_chi_liang_qichao_character_template
+				}
+				any_scope_character = {
+					has_template = ecchi_chi_tan_sitong_character_template
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = ecchi_chi_kang_youwei_character_template
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = ecchi_chi_kang_youwei_character_template
+				}
+				random_list = {
+					60 = {
+						exile_character_with_martyrdom = yes
+					}
+					40 = {
+						kill_character = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = ecchi_chi_liang_qichao_character_template
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = ecchi_chi_liang_qichao_character_template
+				}
+				random_list = {
+					60 = {
+						exile_character_with_martyrdom = yes
+					}
+					40 = {
+						kill_character = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = ecchi_chi_tan_sitong_character_template
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = ecchi_chi_tan_sitong_character_template
+				}
+				random_list = {
+					20 = {
+						exile_character_with_martyrdom = yes
+					}
+					80 = {
+						kill_character = yes
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = wuxu.1.c
+		ai_chance = {
+			base = 10
+		}
+		trigger = {
+			NOT = {
+				OR = {
+					any_scope_character = {
+						has_template = ecchi_chi_kang_youwei_character_template
+					}
+					any_scope_character = {
+						has_template = ecchi_chi_liang_qichao_character_template
+					}
+					any_scope_character = {
+						has_template = ecchi_chi_tan_sitong_character_template
+					}
+				}
+			}
+		}
+		add_loyalists = {
+			value = medium_radicals
+			interest_group = ig:ig_landowners
 		}
 	}
 }
@@ -201,7 +343,6 @@ wuxu.5 = {
 			save_scope_as = wuxu_university_state
 		}
 	}
-
 	option = {
 		name = wuxu.5.a
 		default_option = yes
@@ -221,7 +362,6 @@ wuxu.5 = {
 			base = 15
 		}
 	}
-
 	option = {
 		name = wuxu.5.b
 		default_option = yes
@@ -269,7 +409,6 @@ wuxu.6 = {
 			save_scope_as = wuxu_book_state
 		}
 	}
-
 	option = {
 		name = wuxu.6.a
 		custom_tooltip = {
@@ -288,7 +427,6 @@ wuxu.6 = {
 			base = 15
 		}
 	}
-
 	option = {
 		name = wuxu.6.b
 		default_option = yes
@@ -304,7 +442,6 @@ wuxu.6 = {
 			months = 24
 			is_decaying = yes
 		}
-
 		ai_chance = {
 			base = 15
 			modifier = {
@@ -313,6 +450,100 @@ wuxu.6 = {
 				}
 				add = 5
 			}
+		}
+	}
+}
+
+wuxu.7 = {
+	# 地方官员被杀
+	type = country_event
+	placement = scope:wuxu_bureaucrat_murder_state
+	title = wuxu.7.t
+	desc = wuxu.7.d
+	flavor = wuxu.7.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+	immediate = {
+		random_scope_state = {
+			save_scope_as = wuxu_bureaucrat_murder_state
+		}
+	}
+	option = {
+		name = wuxu.7.a
+		custom_tooltip = {
+			text = wuxu.random.subtract.less
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 3
+			}
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = bureaucrats
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+	option = {
+		name = wuxu.7.b
+		trigger = {
+			NOT = {
+				has_law = law_type:law_no_police
+			}
+		}
+		custom_tooltip = {
+			text = wuxu.random.subtract.more
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 9
+			}
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				trigger = {
+					has_strategy = ai_strategy_conservative_agenda
+				}
+				add = 5
+			}
+		}
+	}
+}
+
+wuxu.8 = {
+	# 新式学堂草案
+	type = country_event
+	placement = root
+	title = wuxu.8.t
+	desc = wuxu.8.d
+	flavor = wuxu.8.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	event_image = {
+		video = "unspecific_politicians_arguing"
+	}
+	option = {
+		name = wuxu.8.a
+		activate_law = law_type:law_private_schools
+		ai_chance = {
+			base = 15
+		}
+	}
+	option = {
+		name = wuxu.8.b
+		custom_tooltip = {
+			text = wuxu.random.add.more
+			change_variable = {
+				name = wuxu_random_event_add
+				add = 9
+			}
+		}
+		ai_chance = {
+			base = 15
 		}
 	}
 }

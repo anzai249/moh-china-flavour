@@ -151,6 +151,7 @@
 			10 = wuxu.3
 			10 = wuxu.4
 			10 = wuxu.6
+			10 = wuxu.7
 		}
 		effect = {
 			random_list = {
@@ -165,6 +166,16 @@
 						}
 						trigger_event = {
 							id = wuxu.5
+						}
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							has_law = law_type:law_no_schools
+						}
+						trigger_event = {
+							id = wuxu.8
 						}
 					}
 				}

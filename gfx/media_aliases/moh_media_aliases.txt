@@ -1,0 +1,6 @@
+﻿asia_protest = {
+	video = "gfx/event_pictures/asia_protest.bik"
+	audio = "event:/SFX/DLC/1.3_ip1/Events/unspecific/agitator_speaking"
+
+	# fallback = ep1_donghak_rebellion
+}
