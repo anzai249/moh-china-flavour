@@ -54,7 +54,7 @@
 				desc = "wuxu_progress_bar_in_government"
 				value = {
 					value = 0.5
-					multiply = 2
+					multiply = 1.5
 				}
 			}
 		}

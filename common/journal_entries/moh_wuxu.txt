@@ -147,15 +147,18 @@
 	}
 	on_monthly_pulse = {
 		random_events = {
-			100 = 0
+			150 = 0
 			10 = wuxu.3
 			10 = wuxu.4
 			10 = wuxu.6
 			10 = wuxu.7
+			9 = wuxu.9
+			9 = character_events.2
+			10 = wuxu.10
 		}
 		effect = {
 			random_list = {
-				200 = {
+				250 = {
 				}
 				5 = {
 					if = {
@@ -176,6 +179,20 @@
 						}
 						trigger_event = {
 							id = wuxu.8
+						}
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							empty_agitator_slots >= 1
+							NOT = {
+								has_global_variable = sitong_spawn
+							}
+							has_state_in_state_region = STATE_HUNAN
+						}
+						trigger_event = {
+							id = moh_agitators.2
 						}
 					}
 				}

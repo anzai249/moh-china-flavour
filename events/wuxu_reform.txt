@@ -547,3 +547,120 @@ wuxu.8 = {
 		}
 	}
 }
+
+wuxu.9 = {
+	# 民间谣言四起
+	type = country_event
+	placement = scope:wuxu_whisper_state
+	title = wuxu.9.t
+	desc = wuxu.9.d
+	flavor = wuxu.9.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	event_image = {
+		video = "asia_union_leader"
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = {
+					is_homeland = cu:han
+				}
+			}
+			save_scope_as = wuxu_whisper_state
+		}
+	}
+	option = {
+		name = wuxu.9.a
+		custom_tooltip = {
+			text = wuxu.random.subtract.less
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 3
+			}
+		}
+		scope:wuxu_whisper_state = {
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+	option = {
+		name = wuxu.9.b
+		custom_tooltip = {
+			text = wuxu.random.subtract.more
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 9
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+wuxu.10 = {
+	# 海外华人支持
+	type = country_event
+	placement = root
+	title = wuxu.10.t
+	desc = wuxu.10.d
+	flavor = wuxu.10.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	event_image = {
+		video = "votp_agitator_speaking"
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				NOT = {
+					this = ROOT
+				}
+				any_scope_pop = {
+					OR = {
+						culture = cu:han
+						culture = cu:yue
+						culture = cu:hakka
+						culture = cu:min
+					}
+				}
+			}
+			save_scope_as = wuxu_overseas_support_country
+		}
+	}
+	option = {
+		name = wuxu.10.a
+		add_modifier = {
+			name = modifier_support_overseas_chinese
+			months = 6
+			multiplier = money_amount_multiplier_small
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				trigger = {
+					scaled_debt > 0
+				}
+				multiply = 2
+			}
+		}
+	}
+	option = {
+		name = wuxu.10.b
+		custom_tooltip = {
+			text = wuxu.random.add.less
+			change_variable = {
+				name = wuxu_random_event_add
+				add = 3
+			}
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+}

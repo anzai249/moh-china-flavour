@@ -1567,6 +1567,9 @@ ecchi_chi_tan_sitong_character_template = {
         latest_usage_date = 1898.9.28
         chance = 20
     }
+    on_created = {
+        set_global_variable = sitong_spawn
+    }
 }
 
 ## Lin Heier

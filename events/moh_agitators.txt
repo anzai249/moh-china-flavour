@@ -140,3 +140,81 @@ moh_agitators.1 = {
 		}
 	}
 }
+
+moh_agitators.2 = {
+	#Tan Sitong
+	type = country_event
+	placement = scope:sitong_state
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:historic_agitator_scope
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	title = moh_agitators.2.t
+	desc = moh_agitators.2.d
+	flavor = moh_agitators.2.f
+	duration = 3
+	trigger = {
+		# empty_agitator_slots >= 1
+		# has_law = law_type:law_monarchy
+		# has_law = law_type:law_autocracy
+		# OR = {
+		# 	country_has_primary_culture = cu:han
+		# 	country_has_primary_culture = cu:manchu
+		# }
+		# game_date > 1880.1.1
+		# game_date < 1900.1.1
+		# any_scope_state = {
+		# 	any_neighbouring_state = {
+		# 		is_treaty_port = yes
+		# 	}
+		# }
+		# has_variable = lost_opium_wars
+		# NOT = {
+		# 	has_global_variable = sitong_spawn
+		# }
+		# has_state_in_state_region = STATE_HUNAN
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_HUNAN
+			}
+			save_scope_as = sitong_state
+		}
+		create_character = {
+			template = ecchi_chi_tan_sitong_character_template
+			on_created = {
+				set_variable = sitong_var
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = sitong_var
+			}
+			save_scope_as = historic_agitator_scope
+		}
+		set_global_variable = sitong_spawn
+	}
+	option = {
+		name = moh_agitators.2.a
+		default_option = yes
+		scope:historic_agitator_scope = {
+			exile_character_with_martyrdom = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = moh_agitators.2.b
+		show_as_tooltip = {
+			create_character = {
+				template = ecchi_chi_tan_sitong_character_template
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}

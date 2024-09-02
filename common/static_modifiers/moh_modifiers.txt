@@ -44,3 +44,9 @@ modifier_wuxu_experienced_teacher = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
 	building_university_throughput_add = 0.05
 }
+
+# support overseas chinese
+modifier_support_overseas_chinese = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_tax_income_add = 2
+} 
