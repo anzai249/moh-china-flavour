@@ -316,7 +316,7 @@ ideology_moh_revolutionary = {
 			limit = {
 				owner = { has_variable = wuxu_reform_failed }
 			}
-			multiply = 2
+			multiply = 5
 		}
 		
 		if = {

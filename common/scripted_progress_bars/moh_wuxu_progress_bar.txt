@@ -176,6 +176,24 @@
 				}
 			}
 		}
+		if = {
+			limit = {
+				var:wuxu_random_event_add_strong > 0
+			}
+			add = {
+				desc = "wuxu_progress_bar_random_event_heavy"
+				value = 5
+			}
+		}
+		if = {
+			limit = {
+				var:wuxu_random_event_subtract_strong > 0
+			}
+			add = {
+				desc = "wuxu_progress_bar_random_event_heavy"
+				value = -5
+			}
+		}
 	}
 	start_value = 150
 	min_value = 0

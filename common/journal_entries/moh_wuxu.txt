@@ -7,11 +7,11 @@
 	scripted_button = dismissed_officials_petition_button
 	immediate = {
 		set_variable = {
-			name = wuxu_conservatives
-			value = 100
+			name = wuxu_random_event_add_strong
+			value = 0
 		}
 		set_variable = {
-			name = wuxu_balance_passive_var
+			name = wuxu_random_event_subtract_strong
 			value = 0
 		}
 		set_variable = {
@@ -72,22 +72,31 @@
 		}
 	}
 	on_complete = {
-		custom_tooltip = je_wuxu.tt.2
 		trigger_event = {
 			id = wuxu.2
+		}
+		chi_remove_1_fragile_unity = yes
+		custom_tooltip = {
+			text = je_wuxu.tt.2
+			set_variable = {
+				name = wuxu_reform_complete_var
+			}
 		}
 	}
 	on_fail = {
 		trigger_event = {
 			id = wuxu.1
 		}
+		custom_tooltip = {
+			text = je_wuxu.tt.5
+			set_variable = {
+				name = wuxu_reform_failed
+			}
+		}
 		hidden_effect = {
 			remove_modifier = modifier_chi_wuxu
 			remove_modifier = modifier_chi_wuxu_stable
 			remove_variable = wuxu_reform_support
-			set_variable = {
-				name = wuxu_reform_failed
-			}
 		}
 	}
 	on_weekly_pulse = {
@@ -120,7 +129,7 @@
 				}
 			}
 			else = {
-				change_variable = {
+				set_variable = {
 					name = wuxu_reformers_support_days
 					value = 0
 				}
@@ -143,11 +152,29 @@
 					add = -1
 				}
 			}
+			if = {
+				limit = {
+					var:wuxu_random_event_add_strong > 0
+				}
+				change_variable = {
+					name = wuxu_random_event_add_strong
+					add = -1
+				}
+			}
+			if = {
+				limit = {
+					var:wuxu_random_event_subtract_strong > 0
+				}
+				change_variable = {
+					name = wuxu_random_event_subtract_strong
+					add = -1
+				}
+			}
 		}
 	}
 	on_monthly_pulse = {
 		random_events = {
-			150 = 0
+			175 = 0
 			10 = wuxu.3
 			10 = wuxu.4
 			10 = wuxu.6
@@ -155,6 +182,7 @@
 			9 = wuxu.9
 			9 = character_events.2
 			10 = wuxu.10
+			10 = wuxu.13
 		}
 		effect = {
 			random_list = {
@@ -182,7 +210,7 @@
 						}
 					}
 				}
-				5 = {
+				2 = {
 					if = {
 						limit = {
 							empty_agitator_slots >= 1
@@ -190,9 +218,50 @@
 								has_global_variable = sitong_spawn
 							}
 							has_state_in_state_region = STATE_HUNAN
+							game_date >= 1885.2.1
 						}
 						trigger_event = {
 							id = moh_agitators.2
+						}
+					}
+				}
+				5 = {
+					if = {
+						limit = {
+							any_country = {
+								NOT = {
+									this = ROOT
+								}
+								country_rank >= rank_value:great_power
+								OR = {
+									relations:root <= relations_threshold:neutral
+									has_attitude = {
+										who = root
+										attitude = belligerent
+									}
+								}
+							}
+						}
+						trigger_event = {
+							id = wuxu.11
+						}
+					}
+				}
+				2 = {
+					if = {
+						limit = {
+							any_scope_character = {
+								has_role = general
+								NOT = {
+									OR = {
+										has_ideology = ideology:ideology_moh_reformer
+										has_ideology = ideology:ideology_liberal_leader
+									}
+								}
+							}
+						}
+						trigger_event = {
+							id = wuxu.12
 						}
 					}
 				}

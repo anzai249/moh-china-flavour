@@ -182,6 +182,7 @@ wuxu.1 = {
 
 wuxu.2 = {
 	# 成功
+	title = wuxu.2.t
 }
 
 wuxu.3 = {
@@ -652,6 +653,185 @@ wuxu.10 = {
 	}
 	option = {
 		name = wuxu.10.b
+		custom_tooltip = {
+			text = wuxu.random.add.less
+			change_variable = {
+				name = wuxu_random_event_add
+				add = 3
+			}
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+wuxu.11 = {
+	# 外敌入侵传闻
+	type = country_event
+	placement = root
+	title = wuxu.11.t
+	desc = wuxu.11.d
+	flavor = wuxu.11.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	event_image = {
+		video = "unspecific_naval_battle"
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				NOT = {
+					this = ROOT
+				}
+				country_rank >= rank_value:great_power
+				OR = {
+					relations:root <= relations_threshold:neutral
+					has_attitude = {
+						who = root
+						attitude = belligerent
+					}
+				}
+			}
+			save_scope_as = wuxu_foreign_invasion_country
+		}
+	}
+	option = {
+		name = wuxu.11.a
+		custom_tooltip = {
+			text = wuxu.random.add.more
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 9
+			}
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				add = 10
+				trigger = {
+					has_strategy = ai_strategy_progressive_agenda
+				}
+			}
+		}
+	}
+	option = {
+		name = wuxu.11.b
+		custom_tooltip = {
+			text = wuxu.random.subtract.more
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 9
+			}
+		}
+		add_modifier = {
+			name = battle_army_average_morale_damage
+			years = 1
+			multiplier = 0.1
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+wuxu.12 = {
+	# 军官反对
+	type = country_event
+	placement = root
+	title = wuxu.12.t
+	desc = wuxu.12.d
+	flavor = wuxu.12.f
+	left_icon = scope:wuxu_general
+	gui_window = event_window_1char_tabloid
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_role = general
+				NOT = {
+					OR = {
+						has_ideology = ideology:ideology_moh_reformer
+						has_ideology = ideology:ideology_liberal_leader
+					}
+				}
+			}
+			save_scope_as = wuxu_general
+		}
+	}
+	option = {
+		name = wuxu.12.a
+		scope:wuxu_general = {
+			remove_character_role = general
+		}
+		add_radicals = {
+			value = medium_radicals
+			pop_type = officers
+		}
+		ai_chance = {
+			base = 15
+			modifier = {
+				add = 10
+				trigger = {
+					has_strategy = ai_strategy_progressive_agenda
+				}
+			}
+		}
+	}
+	option = {
+		name = wuxu.12.b
+		custom_tooltip = {
+			text = wuxu.random.subtract.more
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 9
+			}
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+}
+
+wuxu.13 = {
+	# 皇帝发布密诏
+	type = country_event
+	placement = root
+	title = wuxu.13.t
+	desc = wuxu.13.d
+	flavor = wuxu.13.f
+	left_icon = ruler
+	gui_window = event_window_1char_tabloid
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	duration = 3
+	immediate = {
+		ruler = {
+			save_scope_as = wuxu_ruler
+		}
+	}
+	option = {
+		name = wuxu.13.a
+		trigger = {
+			has_law = law_type:law_autocracy
+		}
+		custom_tooltip = {
+			text = wuxu.random.add.strong
+			change_variable = {
+				name = wuxu_random_event_add_strong
+				add = 3
+			}
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+	option = {
+		name = wuxu.13.b
 		custom_tooltip = {
 			text = wuxu.random.add.less
 			change_variable = {

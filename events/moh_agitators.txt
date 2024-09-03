@@ -125,6 +125,7 @@ moh_agitators.1 = {
 		create_character = {
 			template = ecchi_chi_liang_qichao_character_template
 		}
+		set_strategy = ai_strategy_progressive_agenda
 		ai_chance = {
 			base = 15
 			modifier = {
@@ -192,6 +193,7 @@ moh_agitators.2 = {
 			limit = {
 				has_variable = sitong_var
 			}
+			add_character_role = agitator
 			save_scope_as = historic_agitator_scope
 		}
 		set_global_variable = sitong_spawn

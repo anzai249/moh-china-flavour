@@ -1,0 +1,18 @@
+﻿achievement_wuxu_reform = {
+    possible = {
+		exists = c:CHI
+		THIS = c:CHI
+		NOT = {
+			has_variable = wuxu_reform_failed
+		}
+    }
+    happened = {
+		exists = c:CHI
+		THIS = c:CHI
+		has_law = law_type:law_monarchy
+		custom_tooltip = {
+			text = achievement_wuxu_reform_tt
+			has_variable = wuxu_reform_complete_var
+		}
+    }
+}

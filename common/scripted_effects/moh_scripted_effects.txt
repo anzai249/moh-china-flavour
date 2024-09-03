@@ -1,4 +1,4 @@
-moh_create_taiping_characters = {
+﻿moh_create_taiping_characters = {
 	if = {
 		limit = {
 			game_date < 1890.1.1
