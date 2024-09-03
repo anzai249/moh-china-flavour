@@ -171,101 +171,25 @@
 				}
 			}
 		}
+		
 	}
 	on_monthly_pulse = {
 		random_events = {
-			175 = 0
+			chance_of_no_event = 65
+			5 = 0
 			10 = wuxu.3
 			10 = wuxu.4
+			10 = wuxu.5
 			10 = wuxu.6
-			10 = wuxu.7
+			3 = wuxu.7
+			8 = wuxu.8
 			9 = wuxu.9
-			9 = character_events.2
+			5 = wuxu.14
 			10 = wuxu.10
+			5 = wuxu.11
 			10 = wuxu.13
-		}
-		effect = {
-			random_list = {
-				250 = {
-				}
-				5 = {
-					if = {
-						limit = {
-							any_scope_state = {
-								has_building = building_university
-							}
-						}
-						trigger_event = {
-							id = wuxu.5
-						}
-					}
-				}
-				5 = {
-					if = {
-						limit = {
-							has_law = law_type:law_no_schools
-						}
-						trigger_event = {
-							id = wuxu.8
-						}
-					}
-				}
-				2 = {
-					if = {
-						limit = {
-							empty_agitator_slots >= 1
-							NOT = {
-								has_global_variable = sitong_spawn
-							}
-							has_state_in_state_region = STATE_HUNAN
-							game_date >= 1885.2.1
-						}
-						trigger_event = {
-							id = moh_agitators.2
-						}
-					}
-				}
-				5 = {
-					if = {
-						limit = {
-							any_country = {
-								NOT = {
-									this = ROOT
-								}
-								country_rank >= rank_value:great_power
-								OR = {
-									relations:root <= relations_threshold:neutral
-									has_attitude = {
-										who = root
-										attitude = belligerent
-									}
-								}
-							}
-						}
-						trigger_event = {
-							id = wuxu.11
-						}
-					}
-				}
-				2 = {
-					if = {
-						limit = {
-							any_scope_character = {
-								has_role = general
-								NOT = {
-									OR = {
-										has_ideology = ideology:ideology_moh_reformer
-										has_ideology = ideology:ideology_liberal_leader
-									}
-								}
-							}
-						}
-						trigger_event = {
-							id = wuxu.12
-						}
-					}
-				}
-			}
+			5 = moh_agitators.2
+			2 = wuxu.12
 		}
 	}
 	weight = 100

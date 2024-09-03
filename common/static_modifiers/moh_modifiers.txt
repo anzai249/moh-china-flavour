@@ -20,7 +20,7 @@ modifier_chi_wuxu = {
 	icon = gfx/interface/icons/timed_modifier_icons/wuxu.png
 	country_tech_research_speed_mult = 0.15
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.05
-	country_law_enactment_time_mult = -0.5
+	country_law_enactment_time_mult = -0.15
 	interest_group_ig_landowners_approval_add = -2
 }
 
@@ -30,7 +30,7 @@ modifier_chi_wuxu_stable = {
 	icon = gfx/interface/icons/timed_modifier_icons/wuxu.png
 	country_tech_research_speed_mult = 0.1
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.05
-	country_law_enactment_time_mult = -0.25
+	country_law_enactment_time_mult = -0.1
 }
 
 # Book campaign

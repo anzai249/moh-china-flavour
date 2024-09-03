@@ -344,6 +344,11 @@ wuxu.5 = {
 			save_scope_as = wuxu_university_state
 		}
 	}
+	trigger = {
+		any_scope_state = {
+			has_building = building_university
+		}
+	}
 	option = {
 		name = wuxu.5.a
 		default_option = yes
@@ -527,6 +532,9 @@ wuxu.8 = {
 	event_image = {
 		video = "unspecific_politicians_arguing"
 	}
+	trigger = {
+		has_law = law_type:law_no_schools
+	}
 	option = {
 		name = wuxu.8.a
 		activate_law = law_type:law_private_schools
@@ -701,7 +709,7 @@ wuxu.11 = {
 		custom_tooltip = {
 			text = wuxu.random.add.more
 			change_variable = {
-				name = wuxu_random_event_subtract
+				name = wuxu_random_event_add
 				add = 9
 			}
 		}
@@ -819,6 +827,7 @@ wuxu.13 = {
 		trigger = {
 			has_law = law_type:law_autocracy
 		}
+		highlighted_option = yes
 		custom_tooltip = {
 			text = wuxu.random.add.strong
 			change_variable = {
@@ -841,6 +850,83 @@ wuxu.13 = {
 		}
 		ai_chance = {
 			base = 15
+		}
+	}
+}
+
+wuxu.14 = { #Rich industrialist wants to build a university
+	type = country_event
+	placement = scope:university_state
+
+	title = character_events.2.t
+	desc = character_events.2.d
+	flavor = character_events.2.f
+
+	duration = 3
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:university_benefactor
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		has_technology_researched = academia
+		any_scope_state = {
+			is_incorporated = yes
+			has_building = building_urban_center
+			NOT = {
+				has_building = building_university
+			}
+		}
+	}
+
+	immediate = {
+		ig:ig_industrialists = {
+			leader = { 
+				save_scope_as = university_benefactor
+			}
+		}
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				has_building = building_urban_center
+				NOT = {
+					has_building = building_university
+				}
+			}
+			save_scope_as = university_state
+		}
+	}
+
+	option = {
+		default_option = yes
+		name = character_events.2.a
+		scope:university_state = {
+			create_building={
+ 				building="building_university"
+ 				level=1
+ 				reserves=1
+ 			}
+		}
+		scope:university_benefactor.interest_group = {
+			add_modifier = {
+				name = modifier_university_built
+				months = normal_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = character_events.2.b
+		scope:university_benefactor.interest_group = {
+			add_modifier = {
+				name = modifier_blocked_building_university
+				months = normal_modifier_time
+			}
 		}
 	}
 }

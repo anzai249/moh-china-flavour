@@ -309,7 +309,7 @@ ideology_moh_revolutionary = {
 					ig_approval > happy
 				}
 			}
-			add = -50
+			add = -25
 		}
 		
 		if = {
@@ -324,6 +324,13 @@ ideology_moh_revolutionary = {
 				owner = { NOT = { owns_entire_state_region = STATE_FORMOSA } }
 			}
 			add = 75
+		}
+
+		if = {
+			limit = {
+				owner = { has_variable = wuxu_reform_complete_var }
+			}
+			add = -150
 		}
 	}
 }
