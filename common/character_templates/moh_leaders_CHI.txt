@@ -1668,6 +1668,20 @@ chi_tongzhi_template = {
     }
 }
 
+chi_zaiyi_template = {
+    first_name = moh_Zaiyi
+    last_name = "Aisin_Gioro"
+    historical = yes
+    heir = yes
+    birth_date = 1856.8.26
+    culture = cu:manchu
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+    traits = {
+        brave
+    }
+}
+
 chi_guangxu_template = {
     first_name = moh_Zaitian
     last_name = "Aisin_Gioro"

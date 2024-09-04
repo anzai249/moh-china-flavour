@@ -94,3 +94,56 @@ qing_monarchy.2 = {
 		default_option = yes
 	}
 }
+
+qing_monarchy.3 = {
+	# 同治病重
+	type = country_event
+	placement = root
+	title = qing_monarchy.3.t
+	desc = qing_monarchy.3.d
+	flavor = qing_monarchy.3.f
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:qing_emperor_scope
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	trigger = {
+		c:CHI ?= this
+		ruler ?= {
+			has_template = chi_tongzhi_template
+		}
+		game_date >= 1875.1.12
+	}
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = chi_tongzhi_template
+			}
+			save_scope_as = qing_emperor_scope
+		}
+	}
+	option = {
+		name = qing_monarchy.3.a
+		default_option = yes
+		create_character = {
+			template = chi_guangxu_template
+		}
+		scope:qing_emperor_scope = {
+			kill_character = yes
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		name = qing_monarchy.3.b
+		create_character = {
+			template = chi_zaiyi_template
+		}
+		scope:qing_emperor_scope = {
+			kill_character = yes
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}

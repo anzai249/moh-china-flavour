@@ -12,5 +12,6 @@ qing_monarchy_yearly_events = {
 		chance_of_no_event = 50
 		25 = qing_monarchy.1
 		25 = qing_monarchy.2
+		25 = qing_monarchy.3
 	}
 }

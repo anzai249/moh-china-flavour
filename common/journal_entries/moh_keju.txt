@@ -7,10 +7,6 @@
 		modifier_chi_keju
 	}
 
-	immediate = {
-		set_variable = wuxu_reform_complete_var
-	}
-
 	complete = {
 		institution_investment_level = {
 			institution = institution_schools
