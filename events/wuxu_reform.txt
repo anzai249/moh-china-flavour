@@ -76,6 +76,7 @@ wuxu.1 = {
 	}
 	option = {
 		name = wuxu.1.b
+		default_option = yes
 		ai_chance = {
 			base = 15
 		}
@@ -479,6 +480,7 @@ wuxu.7 = {
 	}
 	option = {
 		name = wuxu.7.a
+		default_option = yes
 		custom_tooltip = {
 			text = wuxu.random.subtract.less
 			change_variable = {
@@ -537,6 +539,7 @@ wuxu.8 = {
 	}
 	option = {
 		name = wuxu.8.a
+		default_option = yes
 		activate_law = law_type:law_private_schools
 		ai_chance = {
 			base = 15
@@ -581,6 +584,7 @@ wuxu.9 = {
 	}
 	option = {
 		name = wuxu.9.a
+		default_option = yes
 		custom_tooltip = {
 			text = wuxu.random.subtract.less
 			change_variable = {
@@ -644,6 +648,7 @@ wuxu.10 = {
 	}
 	option = {
 		name = wuxu.10.a
+		default_option = yes
 		add_modifier = {
 			name = modifier_support_overseas_chinese
 			months = 6
@@ -655,7 +660,7 @@ wuxu.10 = {
 				trigger = {
 					scaled_debt > 0
 				}
-				multiply = 2
+				add = 15
 			}
 		}
 	}
@@ -706,6 +711,7 @@ wuxu.11 = {
 	}
 	option = {
 		name = wuxu.11.a
+		default_option = yes
 		custom_tooltip = {
 			text = wuxu.random.add.more
 			change_variable = {
@@ -772,6 +778,7 @@ wuxu.12 = {
 	}
 	option = {
 		name = wuxu.12.a
+		default_option = yes
 		scope:wuxu_general = {
 			remove_character_role = general
 		}
@@ -824,6 +831,7 @@ wuxu.13 = {
 	}
 	option = {
 		name = wuxu.13.a
+		default_option = yes
 		trigger = {
 			has_law = law_type:law_autocracy
 		}

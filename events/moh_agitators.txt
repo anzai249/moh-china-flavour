@@ -159,25 +159,25 @@ moh_agitators.2 = {
 	flavor = moh_agitators.2.f
 	duration = 3
 	trigger = {
-		# empty_agitator_slots >= 1
-		# has_law = law_type:law_monarchy
-		# has_law = law_type:law_autocracy
-		# OR = {
-		# 	country_has_primary_culture = cu:han
-		# 	country_has_primary_culture = cu:manchu
-		# }
-		# game_date > 1880.1.1
-		# game_date < 1900.1.1
-		# any_scope_state = {
-		# 	any_neighbouring_state = {
-		# 		is_treaty_port = yes
-		# 	}
-		# }
-		# has_variable = lost_opium_wars
-		# NOT = {
-		# 	has_global_variable = sitong_spawn
-		# }
-		# has_state_in_state_region = STATE_HUNAN
+		empty_agitator_slots >= 1
+		has_law = law_type:law_monarchy
+		has_law = law_type:law_autocracy
+		OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+		}
+		game_date > 1880.1.1
+		game_date < 1900.1.1
+		any_scope_state = {
+			any_neighbouring_state = {
+				is_treaty_port = yes
+			}
+		}
+		has_variable = lost_opium_wars
+		NOT = {
+			has_global_variable = sitong_spawn
+		}
+		has_state_in_state_region = STATE_HUNAN
 	}
 	immediate = {
 		random_scope_state = {

@@ -1,0 +1,82 @@
+﻿namespace = moh_taiwan
+moh_taiwan.1 = {
+	type = country_event
+	placement = root
+	title = moh_taiwan.1.t
+	desc = moh_taiwan.1.d
+	flavor = moh_taiwan.1.f
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	event_image = {
+		video = "asia_sepoy_mutiny"
+	}
+	trigger = {
+		exists = c:CHI
+		c:CHI = {
+			NOT = {
+				owns_entire_state_region = STATE_FORMOSA
+			}
+		}
+		NOT = {
+			exists = c:FRS
+			exists = c:YUZ
+		}
+		NOT = {
+			has_global_variable = taiwan_war_var
+		}
+		has_state_in_state_region = STATE_FORMOSA
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_FORMOSA
+			}
+			save_scope_as = taiwan_state_scope
+		}
+		random_country = {
+			limit = {
+				has_state_in_state_region = STATE_FORMOSA
+			}
+			save_scope_as = taiwan_war_target
+		}
+		c:CHI = {
+			save_scope_as = taiwan_war_from
+		}
+		create_country = {
+			tag = FRS
+			origin = this
+			state = scope:taiwan_state_scope
+			on_created = {
+				activate_law = law_type:law_presidential_republic
+				activate_law = law_type:law_oligarchy
+			}
+		}
+		set_global_variable = taiwan_war_var
+	}
+	option = {
+		name = moh_taiwan.1.a
+		default_option = yes
+		ai_chance = {
+			factor = 50
+		}
+		create_diplomatic_play = {
+			type = dp_annex_war
+			war = no
+			target_country = c:FRS
+		}
+	}
+	option = {
+		name = moh_taiwan.1.b
+		ai_chance = {
+			factor = 10
+		}
+		change_relations = {
+			country = c:FRS
+			value = 25
+		}
+		change_relations = {
+			country = c:CHI
+			value = 25
+		}
+	}
+}

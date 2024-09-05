@@ -194,6 +194,18 @@
 				value = -5
 			}
 		}
+		if = {
+			limit = {
+				any_company = {
+					type = company_type:company_peking_university
+					prosperity >= 100
+				}
+			}
+			add = {
+				desc = "company_peking_university"
+				value = 0.5
+			}
+		}
 	}
 	start_value = 150
 	min_value = 0

@@ -50,3 +50,10 @@ modifier_support_overseas_chinese = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_tax_income_add = 2
 } 
+
+# great_assembly
+modifier_great_assembly = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	interest_group_ig_trade_unions_pop_attraction_mult = 0.1
+	interest_group_ig_trade_unions_pol_str_mult = 0.1
+}

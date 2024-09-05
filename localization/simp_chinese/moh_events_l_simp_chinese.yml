@@ -122,3 +122,15 @@
   qing_monarchy.3.f: "[SCOPE.sCharacter('qing_emperor_scope').GetFirstName]于养心殿病逝。朝廷宣布皇帝死于#bold 天花#!，可是民间传言他死于#bold 梅毒#!。恐怕他真正的死因只有太医知道了。\n\n皇帝英年早逝，无子嗣，需要尽早挑选合适人选继承大统。"
   qing_monarchy.3.a: "#bold 载湉#!看起来很听话"
   qing_monarchy.3.b: "#bold 载漪#!更有经验"
+  # 台湾
+  moh_taiwan.1.t: "台湾起义"
+  moh_taiwan.1.d: "我们刚刚接管的[SCOPE.sState('taiwan_state_scope').GetName]发生了一场反对我们的起义。"
+  moh_taiwan.1.f: "叛乱分子在[SCOPE.sState('taiwan_state_scope').GetName]发动了一场起义，他们打算将我们赶出[SCOPE.sState('taiwan_state_scope').GetName]。他们将我们新派过去的官员绑了在街上游行，嘴里还念念有词：\n\n“我[SCOPE.sState('taiwan_state_scope').GetName]隶[SCOPE.sCountry('taiwan_war_from').GetName]版图二百余年。近改行省，风会大开，俨然雄峙东南矣。乃上年[SCOPE.sCountry('taiwan_war_target').GetName]肇衅，遂至失和……愿人人战死而失台，决不愿拱手而让台。”"
+  moh_taiwan.1.a: "镇压叛乱"
+  moh_taiwan.1.b: "看来我们的决定欠妥，撤回官员"
+  # historical tiny
+  moh_historical.1.t: "学生请愿"
+  moh_historical.1.d: "[ROOT.GetCountry.GetCapital.GetName]的学生走上了街头抗议[SCOPE.sCountry('target_treaty_port_controller').GetName]"
+  moh_historical.1.f: "“誓死力争，还我[SCOPE.sState('target_treaty_port').GetName]！”\n\n[ROOT.GetCountry.GetCapital.GetName]城内发生了一场大规模学生示威活动，他们挥舞标语，散发传单，希望[SCOPE.sCountry('target_treaty_port_controller').GetName]归还[SCOPE.sState('target_treaty_port').GetName]，并呼吁清理政府中亲[SCOPE.sCountry('target_treaty_port_controller').GetName]的官员，拒绝承认不平等条约。\n\n随着局势升级，抗议活动迅速扩展至其他地区，[ROOT.GetCountry.GetCapital.GetName]的工人、商人也逐渐加入，许多学者与知识分子纷纷声援。"
+  moh_historical.1.a: "尝试与[SCOPE.sCountry('target_treaty_port_controller').GetName]交涉"
+  moh_historical.1.b: "我们打不过[SCOPE.sCountry('target_treaty_port_controller').GetName]"

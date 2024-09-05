@@ -1,0 +1,166 @@
+﻿# Peking University
+company_peking_university = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/peking_university.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	flavored_company = yes
+	building_types = {
+		building_university
+		building_paper_mills
+	}
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_BEIJING
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_university
+				level >= 2
+			}
+		}
+		has_technology_researched = academia
+	}
+	prosperity_modifier = {
+		country_tech_research_speed_mult = 0.1
+	}
+	ai_weight = {
+		value = 3
+	}
+}
+
+# machine_weaving_bureau
+company_machine_weaving_bureau = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/machine_weaving_bureau.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	flavored_company = yes
+	building_types = {
+		building_cotton_plantation
+		building_textile_mills
+		building_silk_plantation
+	}
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_SUZHOU
+			}
+		}
+	}
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_SUZHOU
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mills
+				level >= 3
+			}
+		}
+	}
+	prosperity_modifier = {
+		state_poor_standard_of_living_add = 1
+	}
+	ai_weight = {
+		value = 3
+	}
+}
+
+# state grid
+company_state_grid = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/state_grid.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	flavored_company = yes
+	building_types = {
+		building_power_plant
+		building_electrics_industry
+	}
+	attainable = {
+		hidden_trigger = {
+			this = c:CHI
+		}
+	}
+	possible = {
+		this = c:CHI
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_power_plant
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_power_plant_throughput_add = 0.1
+	}
+	ai_weight = {
+		value = 3
+	}
+}
+
+# china Aviation 
+company_china_aviation = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/china_aviation.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	flavored_company = yes
+	building_types = {
+		building_war_machine_industry
+	}
+	attainable = {
+		hidden_trigger = {
+			this = c:CHI
+		}
+	}
+	possible = {
+		this = c:CHI
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_war_machine_industry
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		state_infrastructure_add = 2
+	}
+	ai_weight = {
+		value = 3
+	}
+}
+
+# 3 xin
+company_sanxin = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/sanxin.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_plantation.dds"
+	flavored_company = yes
+	building_types = {
+		building_opium_plantation
+	}
+	attainable = {
+		hidden_trigger = {
+			this = c:CHI
+		}
+	}
+	possible = {
+		this = c:CHI
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_opium_plantation
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		goods_output_services_add = 5
+	}
+	ai_weight = {
+		value = 3
+	}
+}

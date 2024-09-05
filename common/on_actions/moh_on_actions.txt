@@ -1,0 +1,15 @@
+﻿# Root = Country
+on_monthly_pulse_country = {
+	events = {
+		moh_taiwan.1
+		moh_historical.1
+	}
+}
+
+on_yearly_pulse_country = {
+	on_actions = {
+		historical_agitators_yearly_events_moh
+		delay = { days = 60 }
+		qing_monarchy_yearly_events
+	}
+}

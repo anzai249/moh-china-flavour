@@ -97,3 +97,51 @@ ecchi_tib_dorzhiev_character_template = {
         chance = 65
     }
 }
+
+# Shatra Wangpug Gyalpo
+moh_shatra_wangpug_gyalpo_character_template = {
+    first_name = moh_Shatra
+    last_name = moh_Wangpug_Gyalpo
+    historical = yes
+    culture = cu:tibetan
+    religion = rel:gelugpa
+    ideology = ideology_theocrat
+    interest_group = ig_landowners
+    birth_date = 1797.1.1
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:TIB
+            this = c:TIB
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1864.9.25
+        chance = 65
+    }
+}
+
+# Khyenrab Wangchug
+moh_lobsang_khyenrab_wangchug_character_template = {
+    first_name = moh_Khyenrab
+    last_name = moh_Wangchug
+    historical = yes
+    culture = cu:tibetan
+    religion = rel:gelugpa
+    ideology = ideology_theocrat
+    interest_group = ig_devout
+    birth_date = 1799.1.1
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:TIB
+            this = c:TIB
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1854.1.1
+        latest_usage_date = 1872.1.1
+        chance = 65
+    }
+}

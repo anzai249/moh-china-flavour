@@ -1,0 +1,96 @@
+﻿namespace = moh_historical
+moh_historical.1 = {
+	# may 4 movement
+	type = country_event
+	placement = root
+	title = moh_historical.1.t
+	desc = moh_historical.1.d
+	flavor = moh_historical.1.f
+	event_image = {
+		video = "asia_protest"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	trigger = {
+		OR = {
+			country_has_primary_culture = cu:han
+			country_has_primary_culture = cu:manchu
+			country_has_primary_culture = cu:min
+			country_has_primary_culture = cu:hakka
+			country_has_primary_culture = cu:yue
+		}
+		any_scope_state = {
+			any_neighbouring_state = {
+				is_treaty_port = yes
+			}
+		}
+		has_technology_researched = socialism
+		has_law = law_type:law_right_of_assembly
+		NOT = {
+			has_global_variable = may_4_movement_var
+		}
+	}
+	immediate = {
+		every_scope_state = {
+			random_neighbouring_state = {
+				limit = {
+					is_treaty_port = yes
+				}
+				save_scope_as = target_treaty_port
+			}
+		}
+		scope:target_treaty_port = {
+			controller = {
+				save_scope_as = target_treaty_port_controller
+			}
+		}
+		set_global_variable = may_4_movement_var
+		add_modifier = {
+			name = modifier_great_assembly
+			years = 1.5
+			is_decaying = yes
+		}
+	}
+	option = {
+		name = moh_historical.1.a
+		scope:target_treaty_port_controller = {
+			trigger_event = moh_historical.2
+		}
+		change_relations = {
+			country = scope:target_treaty_port_controller
+			value = -25
+		}
+		show_as_tooltip = {
+			add_modifier = {
+				name = modifier_great_assembly
+				years = 1.5
+				is_decaying = yes
+			}
+		}
+		ai_chance = {
+			base = 25
+		}
+	}
+	option = {
+		name = moh_historical.1.b
+		default_option = yes
+		change_relations = {
+			country = scope:target_treaty_port_controller
+			value = 25
+		}
+		show_as_tooltip = {
+			add_modifier = {
+				name = modifier_great_assembly
+				years = 1.5
+				is_decaying = yes
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+moh_historical.2 = {
+}
