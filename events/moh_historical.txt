@@ -46,6 +46,7 @@ moh_historical.1 = {
 			}
 		}
 		set_global_variable = may_4_movement_var
+		set_variable = may_4_movement_target
 		add_modifier = {
 			name = modifier_great_assembly
 			years = 1.5
@@ -55,7 +56,9 @@ moh_historical.1 = {
 	option = {
 		name = moh_historical.1.a
 		scope:target_treaty_port_controller = {
-			trigger_event = moh_historical.2
+			trigger_event = {
+				id = moh_historical.2
+			}
 		}
 		change_relations = {
 			country = scope:target_treaty_port_controller
@@ -93,4 +96,122 @@ moh_historical.1 = {
 }
 
 moh_historical.2 = {
+	type = country_event
+	placement = root
+	title = moh_historical.2.t
+	desc = moh_historical.2.d
+	flavor = moh_historical.2.f
+	event_image = {
+		video = "asia_protest"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	trigger = {
+		has_global_variable = may_4_movement_var
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = may_4_movement_target
+			}
+			save_scope_as = target_country
+		}
+	}
+	option = {
+		name = moh_historical.2.a
+		scope:target_treaty_port = {
+			set_state_owner = scope:target_country
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 20
+				trigger = {
+					scope:target_country.army_power_projection >= root.army_power_projection
+				}
+			}
+			modifier = {
+				add = 20
+				trigger = {
+					scope:target_country.country_rank = rank_value:great_power
+				}
+			}
+		}
+	}
+	option = {
+		name = moh_historical.2.b
+		default_option = yes
+		scope:target_country = {
+			trigger_event = {
+				id = moh_historical.3
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+moh_historical.3 = {
+	type = country_event
+	placement = root
+	title = moh_historical.3.t
+	desc = moh_historical.3.d
+	flavor = moh_historical.3.f
+	event_image = {
+		video = "europenorthamerica_before_the_battle"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	trigger = {
+		has_global_variable = may_4_movement_var
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = may_4_movement_target
+			}
+			save_scope_as = target_country
+		}
+	}
+	option = {
+		name = moh_historical.3.a
+		create_diplomatic_play = {
+			target_country = scope:target_treaty_port_controller
+			target_state = scope:target_treaty_port
+			type = dp_take_treaty_port
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 20
+				trigger = {
+					scope:target_country.army_power_projection >= root.army_power_projection
+				}
+			}
+			modifier = {
+				add = 20
+				trigger = {
+					scope:target_country.country_rank = rank_value:great_power
+				}
+			}
+		}
+	}
+	option = {
+		name = moh_historical.3.b
+		default_option = yes
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = laborers
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
 }
