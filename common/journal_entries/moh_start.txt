@@ -1,0 +1,13 @@
+je_moh_start = {
+	group = je_group_historical_content
+
+	complete = {
+		always = yes
+	}
+	on_complete = {
+		trigger_event = {
+			id = moh_official.1
+		}
+	}
+	weight = 10
+}

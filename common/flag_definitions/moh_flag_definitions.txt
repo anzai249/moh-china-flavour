@@ -35,9 +35,12 @@ CHI = { # China
 		coa = CHI_republic
 		subject_canton = CHI_republic
 		allow_overlord_canton = yes
-		priority = 10
+		priority = 5
 		trigger = { 
 			coa_def_republic_flag_trigger = yes
+			NOT = {
+				has_global_variable = china_shatters
+			}
 		}
 	}	
 	flag_definition = {
@@ -127,6 +130,18 @@ CHI = { # China
 			coa_def_republic_flag_trigger = yes
 		}
 	}
+}
+
+BEI = {
+	flag_definition = {
+		coa = CHI_republic
+		subject_canton = CHI_republic
+		allow_overlord_canton = yes
+		priority = 5
+		trigger = { 
+			coa_def_republic_flag_trigger = yes
+		}
+	}	
 }
 
 FRS = { # Taiwan

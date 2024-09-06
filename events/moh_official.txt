@@ -1,0 +1,36 @@
+﻿namespace = moh_official
+
+moh_official.1 = {
+	# welcome
+	type = country_event
+	placement = root
+	title = moh_official.1.t
+	desc = moh_official.1.d
+	flavor = moh_official.1.f
+	duration = 3
+	dlc = dlc0moh
+
+	event_image = {
+		video = "unspecific_world_fair"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	trigger = {
+		root = {
+			is_player = yes
+		}
+	}
+	immediate = {
+		set_global_variable = is_welcome_event
+	}
+	option = {
+		name = moh_official.1.a
+		custom_tooltip = moh_official.1.a_tt
+	}
+	option = {
+		name = moh_official.1.b
+		default_option = yes
+		custom_tooltip = moh_official.1.b_tt
+	}
+	
+}

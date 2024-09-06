@@ -6,6 +6,8 @@ dalai.1 = { # Death of the Dalai Lama
 	desc = dalai.1.d
 	placement = root
 	flavor = dalai.1.f
+	dlc = dlc0moh
+
 	event_image = {
 		video = "unspecific_signed_contract"
 	}
@@ -46,6 +48,8 @@ dalai.2 = {
 	title = dalai.2.t
 	desc = dalai.2.d
 	flavor = dalai.2.f
+	dlc = dlc0moh
+
 	event_image = {
 		video = "unspecific_signed_contract"
 	}

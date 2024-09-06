@@ -8,6 +8,8 @@ wuxu.1 = {
 	desc = wuxu.1.d
 	flavor = wuxu.1.f
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	dlc = dlc0moh
+
 	event_image = {
 		video = "unspecific_devastation"
 	}
@@ -196,6 +198,8 @@ wuxu.3 = {
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "asia_union_leader"
 	}
@@ -282,6 +286,8 @@ wuxu.4 = {
 	flavor = wuxu.4.f
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "votp_agitator_speaking"
 	}
@@ -334,6 +340,8 @@ wuxu.5 = {
 	icon = "gfx/interface/icons/event_icons/event_protest.dds"
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "africa_public_protest"
 	}
@@ -397,6 +405,8 @@ wuxu.6 = {
 	flavor = wuxu.6.f
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "southamerica_election"
 	}
@@ -470,6 +480,8 @@ wuxu.7 = {
 	flavor = wuxu.7.f
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "southamerica_public_figure_assassination"
 	}
@@ -531,6 +543,8 @@ wuxu.8 = {
 	flavor = wuxu.8.f
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "unspecific_politicians_arguing"
 	}
@@ -569,6 +583,8 @@ wuxu.9 = {
 	flavor = wuxu.9.f
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "asia_union_leader"
 	}
@@ -625,6 +641,8 @@ wuxu.10 = {
 	flavor = wuxu.10.f
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "votp_agitator_speaking"
 	}
@@ -688,6 +706,8 @@ wuxu.11 = {
 	flavor = wuxu.11.f
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "unspecific_naval_battle"
 	}

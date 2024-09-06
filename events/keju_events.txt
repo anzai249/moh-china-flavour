@@ -9,6 +9,8 @@ keju.1 = {
 	desc = keju.1.d
 	flavor = keju.1.f
 
+	dlc = dlc0moh
+
 	event_image = {
 		video = "asia_confucianism_shinto"
 	}
@@ -37,6 +39,8 @@ keju.2 = {
 	title = keju.2.t
 	desc = keju.2.d
 	flavor = keju.2.f
+
+	dlc = dlc0moh
 
 	event_image = {
 		video = "asia_confucianism_shinto"

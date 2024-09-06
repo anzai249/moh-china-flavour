@@ -101,6 +101,13 @@ agrarian_party = {
 				}
 			}
 			triggered_desc = {
+				desc = party_divide_land_party
+				trigger = {
+					exists = c:CHI
+					THIS = c:CHI
+				}
+			}
+			triggered_desc = {
 				desc = party_patrons_of_industry
 				trigger = {
 					country_has_primary_culture = cu:anglo_canadian

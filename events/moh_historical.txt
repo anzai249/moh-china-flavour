@@ -6,6 +6,8 @@ moh_historical.1 = {
 	title = moh_historical.1.t
 	desc = moh_historical.1.d
 	flavor = moh_historical.1.f
+	dlc = dlc0moh
+
 	event_image = {
 		video = "asia_protest"
 	}
@@ -101,6 +103,8 @@ moh_historical.2 = {
 	title = moh_historical.2.t
 	desc = moh_historical.2.d
 	flavor = moh_historical.2.f
+	dlc = dlc0moh
+
 	event_image = {
 		video = "asia_protest"
 	}
@@ -159,6 +163,8 @@ moh_historical.3 = {
 	title = moh_historical.3.t
 	desc = moh_historical.3.d
 	flavor = moh_historical.3.f
+	dlc = dlc0moh
+
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
 	}

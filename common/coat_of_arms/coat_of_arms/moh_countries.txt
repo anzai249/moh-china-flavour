@@ -343,7 +343,7 @@ SHA = {
 	color1 = "brown"
 	
 	colored_emblem = {
-		texture = "ce_shanxi.png"
+		texture = "ce_shandong.png"
 		color1 = "yellow"
 		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
 	}
@@ -417,7 +417,7 @@ YUN_subject = {
 
 FRS_subject = {
 	pattern = "pattern_solid.tga"
-	color1 = "blue"
+	color1 = "blue_light"
 	
 	textured_emblem = {
 		texture = "te_coa_taiwan.png"

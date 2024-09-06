@@ -7,6 +7,8 @@ moh_taiwan.1 = {
 	flavor = moh_taiwan.1.f
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 	duration = 3
+	dlc = dlc0moh
+
 	event_image = {
 		video = "asia_sepoy_mutiny"
 	}

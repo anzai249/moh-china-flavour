@@ -1,0 +1,7 @@
+﻿dlc0moh = {
+	name = "Mandate of Heaven"
+	steam_id = "0"
+	type = minor
+	priority = 0
+	theme_provider = no
+}
