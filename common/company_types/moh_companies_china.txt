@@ -153,12 +153,85 @@ company_sanxin = {
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_opium_plantation
-				level >= 5
+				level >= 3
 			}
 		}
 	}
 	prosperity_modifier = {
 		goods_output_services_add = 5
+	}
+	ai_weight = {
+		value = 3
+	}
+}
+
+# changyu
+company_changyu = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/changyu.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	flavored_company = yes
+	building_types = {
+		building_vineyard_plantation
+	}
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_SHANDONG
+			}
+		}
+	}
+	possible = {
+		this = c:CHI
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_vineyard_plantation
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_vineyard_plantation_throughput_add = 0.1
+		country_prestige_add = 25
+	}
+	ai_weight = {
+		value = 3
+	}
+}
+
+# tongrentang
+company_tongrentang = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/tongrentang.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+	flavored_company = yes
+	building_types = {
+		building_opium_plantation
+	}
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
+		}
+	}
+	possible = {
+		this = c:CHI
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_opium_plantation
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		building_opium_plantation_throughput_add = 0.1
+		state_mortality_mult = -0.05
+		state_standard_of_living_add = 0.5
 	}
 	ai_weight = {
 		value = 3
