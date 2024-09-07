@@ -1,8 +1,8 @@
-﻿l_simp_english:
+﻿l_english:
   # official
   moh_official.1.t: "#P Thanks for playing!#!"
-  moh_official.1.d: "Your fame is widely known from Ireland to Khitan."
-  moh_official.1.f: "Hi there, this is the author #BOLD;blue anzai249#!, I very appreciate that you are playing my mod, have a good time! If you found any bugs you can post them to the Steam workshop page.\n\nTell you a secret, if you are playing Great Qing, and you want to play more flavoured contents from this mod, I advice you to #BOLD;p lose the opium war#!. If you are successfully saved China, there are very rare interesting storylines after. \n\nAnyways, have a great time!"
+  moh_official.1.d: "Your renown stretches from Ireland to the Khitans, known and revered by all."
+  moh_official.1.f: "Hi there, this is the author #BOLD;blue anzai249#!, I very much appreciate that you are playing my mod, have a good time! If you find any bugs you can post them to the Steam workshop page.\n\nTell you a secret, if you are playing Great Qing, and you want to play more flavoured contents from this mod, I advise you to #BOLD;p lose the Opium War#!. If you successfully saved China, there's hardly any interesting storylines left. \n\nAnyway, have a great time playing this!"
   moh_official.1.a: "Shut the fuck up! Let's do it!"
   moh_official.1.a_tt: "“苟利国家生死以，岂因祸福避趋之。”"
   moh_official.1.b: "Okay."

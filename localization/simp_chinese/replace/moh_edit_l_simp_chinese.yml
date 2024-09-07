@@ -1,0 +1,3 @@
+﻿l_simp_chinese:
+ je_warlord_china_special_tooltip_advance: "以下条件会#bold 推进#!#bold 进度条#!：\n•赢得#BOLD 鸦片战争#!\n•不再是[concept_unrecognized_power]\n•完成#BOLD 消灭君主制#![concept_journal_entry]\n•完成#BOLD 维新变法#![concept_journal_entry]"
+ je_warlord_china_special_tooltip_deplete: "以下条件会#bold 减少#!#bold 进度条#!：\n•输掉#BOLD 鸦片战争#!\n•未能阻止#BOLD 太平天国#!出现\n•未能重新占领#BOLD 太平天国#!\n•#BOLD 义和团运动#!失败\n•负债并借取[concept_loans]\n•爆发[concept_civil_war]\n•成为另一国家的[concept_subject]国\n•废除[GetLawType('law_monarchy').GetName]\n•未完全控制#BOLD 台湾#!"
