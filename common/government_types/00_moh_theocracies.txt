@@ -45,3 +45,21 @@ gov_dalai_lama_regent = {
 		post_change_to_dictatorial = yes
 	}
 }
+
+gov_dalai_lama = {
+	transfer_of_power = dictatorial
+	
+	male_ruler = "RULER_TITLE_DALAI_LAMA"
+	female_ruler = "" # Empty on purpose
+	
+	possible = {
+		always = no
+	}	
+
+	on_government_type_change = {
+		change_to_dictatorial = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_dictatorial = yes
+	}
+}

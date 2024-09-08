@@ -75,7 +75,7 @@
 		trigger_event = {
 			id = wuxu.2
 		}
-		chi_remove_1_fragile_unity = yes
+		chi_add_1_fragile_unity = yes
 		custom_tooltip = {
 			text = je_wuxu.tt.2
 			set_variable = {
