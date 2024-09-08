@@ -20,9 +20,6 @@ moh_official.1 = {
 			is_player = yes
 		}
 	}
-	immediate = {
-		set_global_variable = is_welcome_event
-	}
 	option = {
 		name = moh_official.1.a
 		custom_tooltip = moh_official.1.a_tt

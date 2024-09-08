@@ -1,0 +1,37 @@
+﻿namespace = self_strengthening
+
+self_strengthening.1 = {
+	type = country_event
+	placement = root
+
+	title = self_strengthening.1.t
+	desc = self_strengthening.1.d
+	flavor = self_strengthening.1.f
+
+	dlc = dlc0moh
+
+	event_image = {
+		video = "middleeast_middleclass_cafe"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	duration = 3
+
+	trigger = {
+		exists = c:CHI
+		this = c:CHI
+		NOT = {
+			has_variable = self_strengthening_started
+			has_variable = self_strengthening_end
+		}
+		any_scope_character = {
+			has_variable = self_strengthening_character
+		}
+		OR = {
+			has_variable = lost_opium_wars
+			country_rank = rank_value:unrecognized_power
+			country_rank = rank_value:unrecognized_major_power
+			country_rank = rank_value:unrecognized_regional_power
+		}
+	}
+}

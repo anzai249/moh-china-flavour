@@ -7,7 +7,6 @@ moh_historical.1 = {
 	desc = moh_historical.1.d
 	flavor = moh_historical.1.f
 	dlc = dlc0moh
-
 	event_image = {
 		video = "asia_protest"
 	}
@@ -104,7 +103,6 @@ moh_historical.2 = {
 	desc = moh_historical.2.d
 	flavor = moh_historical.2.f
 	dlc = dlc0moh
-
 	event_image = {
 		video = "asia_protest"
 	}
@@ -164,7 +162,6 @@ moh_historical.3 = {
 	desc = moh_historical.3.d
 	flavor = moh_historical.3.f
 	dlc = dlc0moh
-
 	event_image = {
 		video = "europenorthamerica_before_the_battle"
 	}
@@ -219,5 +216,362 @@ moh_historical.3 = {
 		ai_chance = {
 			base = 10
 		}
+	}
+}
+
+moh_historical.4 = {
+	# Arrow Incident
+	type = country_event
+	placement = root
+	title = moh_historical.4.t
+	desc = moh_historical.4.d
+	flavor = moh_historical.4.f
+	dlc = dlc0moh
+	event_image = {
+		video = "asia_westerners_arriving"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/formation_order_icons/station_fleet.dds"
+	duration = 3
+	trigger = {
+		OR = {
+			has_variable = lost_opium_wars
+			AND = {
+				has_variable = china_warlord_explosion
+				var:china_warlord_explosion <= 4
+			}
+		}
+		any_scope_state = {
+			any_neighbouring_state = {
+				is_treaty_port = yes
+				controller = c:GBR
+			}
+		}
+		NOT = {
+			has_law = law_type:law_isolationism
+		}
+		NOT = {
+			has_truce_with = c:GBR
+		}
+		NOT = {
+			has_war_with = c:GBR
+		}
+		NOT = {
+			has_variable = arrow_incident_begins
+		}
+		NOT = {
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:CHI
+					type = foreign_investment_rights
+				}
+			}
+		}
+	}
+	immediate = {
+		every_scope_state = {
+			random_neighbouring_state = {
+				limit = {
+					is_treaty_port = yes
+					controller = c:GBR
+				}
+				save_scope_as = target_treaty_port
+			}
+		}
+		c:GBR = {
+			save_scope_as = arrow_country
+		}
+		set_variable = arrow_incident_begins
+	}
+	option = {
+		name = moh_historical.4.a
+		
+		c:GBR = {
+			trigger_event = {
+				id = moh_historical.5
+			}
+		}
+		custom_tooltip = moh_historical.4.a_tt
+		set_variable = arrow_war_target
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = moh_historical.4.b
+		default_option = yes
+		activate_law = law_type:law_migration_controls
+		custom_tooltip = {
+			text = moh_historical.4.b_tt
+			c:GBR = {
+				create_diplomatic_pact = {
+					country = c:CHI
+					type = foreign_investment_rights
+				}
+			}
+		}
+		set_variable = arrow_incident_failed
+		add_modifier = {
+			name = flood_of_pirates
+			months = 24
+			is_decaying = yes
+		}
+		if = {
+			limit = {
+				scope:arrow_country = {
+					relations:root <= relations_threshold:poor
+				}
+			}
+			change_relations = {
+				country = c:GBR
+				value = 50
+			}
+		} else_if = {
+			limit = { 
+				scope:arrow_country = {
+					relations:root > relations_threshold:poor
+				}
+			}
+			change_relations = {
+				country = c:GBR
+				value = 25
+			}
+		} else = {
+			change_relations = {
+				country = c:GBR
+				value = 5
+			}
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 20
+				trigger = {
+					c:GBR.army_power_projection >= root.army_power_projection
+				}
+			}
+		}
+	}
+}
+
+moh_historical.5 = {
+	# Arrow Incident British
+	type = country_event
+	placement = root
+	title = moh_historical.5.t
+	desc = moh_historical.5.d
+	flavor = moh_historical.5.f
+	dlc = dlc0moh
+	event_image = {
+		video = "asia_westerners_arriving"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/formation_order_icons/station_fleet.dds"
+	duration = 3
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = arrow_war_target
+			}
+			save_scope_as = arrow_target_country
+		}
+	}
+	option = {
+		name = moh_historical.5.a
+		scope:arrow_target_country = {
+			set_secret_goal = {
+				country = root
+				secret_goal = antagonize
+			}
+		}
+		set_secret_goal = {
+			country = scope:arrow_target_country
+			secret_goal = conquer
+		}
+		# create_diplomatic_play = {
+		# 	type = dp_give_foreign_investment_rights
+		# 	target_country = scope:arrow_target_country
+		# 	is_war = no
+		# }
+		hidden_effect = {
+			c:FRA = {
+				trigger_event = {
+					id = moh_historical.7
+				}
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = moh_historical.5.b
+		default_option = yes
+		scope:arrow_target_country = {
+			remove_variable = arrow_war_target
+		}
+		change_relations = {
+			country = scope:arrow_target_country
+			value = 25
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+moh_historical.6 = {
+	# arrow incident failure
+	type = country_event
+	placement = root
+	title = moh_historical.6.t
+	desc = moh_historical.6.d
+	flavor = moh_historical.6.f
+	dlc = dlc0moh
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/formation_order_icons/station_fleet.dds"
+	duration = 3
+	trigger = {
+		NOT = {
+			has_variable = arrow_incident_failed
+		}
+		has_variable = arrow_war_target
+		OR = {
+			c:GBR = {
+				has_diplomatic_pact = {
+					who = c:CHI
+					type = foreign_investment_rights
+				}
+			}
+			c:FRA = {
+				has_diplomatic_pact = {
+					who = c:CHI
+					type = foreign_investment_rights
+				}
+			}
+		}
+	}
+	immediate = {
+		remove_variable = arrow_war_target
+		set_variable = arrow_incident_failed
+		if = {
+			limit = {
+				c:FRA = {
+					has_diplomatic_pact = {
+						who = c:CHI
+						type = foreign_investment_rights
+					}
+				}
+			}
+			c:FRA = {
+				save_scope_as = arrow_country
+			}
+		}
+		if = {
+			limit = {
+				c:GBR = {
+					has_diplomatic_pact = {
+						who = c:CHI
+						type = foreign_investment_rights
+					}
+				}
+			}
+			c:GBR = {
+				save_scope_as = arrow_country
+			}
+		}
+	}
+	option = {
+		name = moh_historical.6.a
+		default_option = yes
+		activate_law = law_type:law_migration_controls
+		ai_chance = {
+			base = 50
+		}
+	}
+}
+
+moh_historical.7 = {
+	# Arrow Incident French
+	type = country_event
+	placement = root
+	title = moh_historical.7.t
+	desc = moh_historical.7.d
+	flavor = moh_historical.7.f
+	dlc = dlc0moh
+	event_image = {
+		video = "asia_westerners_arriving"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/formation_order_icons/station_fleet.dds"
+	duration = 3
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = arrow_war_target
+			}
+			save_scope_as = arrow_target_country
+		}
+		c:GBR = {
+			save_scope_as = arrow_country
+		}
+	}
+	option = {
+		name = moh_historical.7.a
+		scope:arrow_target_country = {
+			set_secret_goal = {
+				country = root
+				secret_goal = antagonize
+			}
+		}
+		set_secret_goal = {
+			country = scope:arrow_target_country
+			secret_goal = conquer
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+	option = {
+		name = moh_historical.7.b
+		default_option = yes
+		change_relations = {
+			country = scope:arrow_target_country
+			value = 25
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 50
+				trigger = {
+					relations:root >= relations_threshold:friendly
+				}
+			}
+		}
+	}
+}
+
+moh_historical.8 = {
+	# old summer palace
+	type = country_event
+	placement = root
+	title = moh_historical.8.t
+	desc = moh_historical.8.d
+	flavor = moh_historical.8.f
+	dlc = dlc0moh
+	event_image = {
+		video = "unspecific_devastation"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds"
+	duration = 3
+	trigger = {
+		# has_variable = old_summer_palace
+		# s:STATE_BEIJING = {
+		# 	OccupationPiechartData.GetOccupationFraction
+		# }
 	}
 }

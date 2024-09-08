@@ -57,3 +57,10 @@ modifier_great_assembly = {
 	interest_group_ig_trade_unions_pop_attraction_mult = 0.1
 	interest_group_ig_trade_unions_pol_str_mult = 0.1
 }
+
+# flood of pirates
+flood_of_pirates = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_weapons_negative.dds
+	tariff_import_add = -0.1
+	tariff_export_add = -0.1
+}
