@@ -10,7 +10,7 @@
 		
 		activate_law = law_type:law_monarchy
 		activate_law = law_type:law_autocracy 
-		activate_law = law_type:law_serfdom
+		activate_law = law_type:law_tenant_farmers
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_appointed_bureaucrats
 		activate_law = law_type:law_cultural_exclusion
@@ -19,6 +19,7 @@
 		activate_law = law_type:law_poor_laws
 		activate_law = law_type:law_closed_borders
 		activate_law = law_type:law_freedom_of_conscience
+		
 		
 		set_government_wage_level = high
 		set_tax_level = low
@@ -29,8 +30,5 @@
 		}
 		add_journal_entry = { type = je_warlord_china }
 		add_journal_entry = { type = je_keju }
-		add_journal_entry = {
-			type = je_moh_start
-		}
 	}
 }

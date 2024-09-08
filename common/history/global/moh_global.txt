@@ -1,4 +1,12 @@
 ﻿GLOBAL = {
+	every_country = {
+		limit = {
+			is_player = yes
+		}
+		add_journal_entry = {
+			type = je_moh_start
+		}
+	}
 	c:CHI ?= {
 		set_variable = {
 			name = china_warlord_explosion

@@ -128,7 +128,7 @@
 						has_variable = china_warlord_explosion_taiwan
 					}
 					NOT = {
-						owns_entire_state_region = scope:taiwan_scope
+						owns_entire_state_region = STATE_FORMOSA
 					}
 				}
 				chi_remove_1_fragile_unity = yes
