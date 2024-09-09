@@ -1,0 +1,15 @@
+﻿game_object_locator={
+	name="forbidden_city_locator"
+	clamp_to_water_level=no
+	render_under_water=no
+	generated_content=no
+	layer="static"
+	instances={
+		{
+			id=1
+			position={ 6752.501562 0.000000 2482.173340 }
+			rotation={ 0.000000 0.350000 0.000000 -0.720000 }
+			scale={ 1.500000 1.500000 1.500000 }
+		}
+	}
+}

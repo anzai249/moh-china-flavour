@@ -28,10 +28,25 @@
 			}
 		}
 		OR = {
-			NOT = {
-				any_scope_state = {
-					any_neighbouring_state = {
-						is_treaty_port = yes
+			custom_tooltip = {
+				text = china_treaty_ports_tt
+				OR = {
+					NOT = {
+						any_scope_state = {
+							any_neighbouring_state = {
+								is_treaty_port = yes
+							}
+						}
+					}
+					NOT = {
+						any_state = {
+							state_region = {
+								is_homeland = cu:han
+							}
+							NOT = {
+								owner = ROOT
+							}
+						}
 					}
 				}
 			}

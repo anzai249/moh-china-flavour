@@ -48,3 +48,4 @@
   dismissed_officials_petition.tt.1: "仅可启用一次"
   dismissed_officials_petition.tt.2: "保守派势力获得#N 25#!点推进"
   china_wuxu_tt: "成功完成#bold 维新变法#!日志条目"
+  china_treaty_ports_tt: "收回所有[concept_treaty_port]"
