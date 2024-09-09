@@ -1,6 +1,7 @@
 ﻿l_simp_chinese:
   ideology_moh_revolutionary: "革命派"
   ideology_moh_revolutionary_desc: "#lore 这个领袖是革命派，主张驱除鞑虏，恢复中华；创立民国，平均地权。#!"
+  ideology_moh_revolutionaries: "革命派"
   ideology_moh_reformer: "维新派"
   ideology_moh_reformer_desc: "#lore 这个领袖是一个主张君主立宪的维新派。#!"
   ideology_moh_right_kmt: "国民党右派"

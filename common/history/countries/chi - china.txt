@@ -30,6 +30,9 @@
 		}
 		set_variable = old_summer_palace
 		add_journal_entry = { type = je_warlord_china }
+		add_journal_entry = {
+			type = je_8_flags
+		}
 		add_journal_entry = { type = je_keju }
 	}
 }

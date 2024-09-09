@@ -1,0 +1,34 @@
+﻿je_8_flags = {
+	icon = "gfx/interface/icons/event_icons/8_flags.dds"
+	group = je_group_historical_content
+	immediate = {
+	}
+	modifiers_while_active = {
+		modifier_8_flags
+	}
+	complete = {
+		has_law = law_type:law_professional_army
+		custom_tooltip = {
+			text = 8_flags_complete_tt
+			NOT = {
+				any_military_formation = {
+					is_army = yes
+					NOT = {
+						formation_army_unit_type_fraction = {
+							target = unit_type:combat_unit_type_trench_infantry
+							value >= 0.25
+						}
+					}
+				}
+			}
+		}
+	}
+	on_complete = {
+		custom_tooltip = 8_flags_on_complete_tt_1
+		custom_tooltip = 8_flags_on_complete_tt_2
+	}
+	fail = {
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+}

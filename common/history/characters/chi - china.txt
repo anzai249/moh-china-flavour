@@ -1,7 +1,7 @@
 ﻿CHARACTERS = {
 	c:CHI ?= {
 		create_character = {
-			template = moh_chi_daoguang_template
+			template = chi_daoguang_template
 		}
 
 		create_character = {

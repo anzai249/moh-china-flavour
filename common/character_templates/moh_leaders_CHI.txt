@@ -1637,7 +1637,7 @@ ecchi_chi_lin_huiyin_character_template = {
 
 
 
-moh_chi_daoguang_template = {
+chi_daoguang_template = {
     # The Daoguang Emperor
     first_name = moh_Minning
     last_name = "Aisin_Gioro" # Not used by the emperor himself but there's got to be something here

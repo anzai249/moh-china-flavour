@@ -64,3 +64,10 @@ flood_of_pirates = {
 	tariff_import_add = -0.1
 	tariff_export_add = -0.1
 }
+
+# 8 flags
+modifier_8_flags = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_negative.dds
+	unit_offense_mult = -0.15
+	unit_defense_mult = -0.15
+}

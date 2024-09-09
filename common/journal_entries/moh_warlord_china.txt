@@ -1,5 +1,5 @@
 ﻿je_warlord_china = {
-	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	icon = "gfx/interface/icons/event_icons/fragile_unity.dds"
 	group = je_group_historical_content
 	immediate = {
 		random_law = {
@@ -30,23 +30,24 @@
 		OR = {
 			custom_tooltip = {
 				text = china_treaty_ports_tt
-				OR = {
-					NOT = {
-						any_scope_state = {
-							any_neighbouring_state = {
-								is_treaty_port = yes
-							}
+				# OR = {
+				# 	NOT = {
+				# 		any_scope_state = {
+				# 			any_neighbouring_state = {
+				# 				is_treaty_port = yes
+				# 			}
+				# 		}
+				# 	}
+				# }
+				any_state = {
+					percent = 0					# or percent = 0? they tooltip differently
+					filter = {
+						state_region = {
+							is_homeland = cu:han
 						}
 					}
 					NOT = {
-						any_state = {
-							state_region = {
-								is_homeland = cu:han
-							}
-							NOT = {
-								owner = ROOT
-							}
-						}
+						owner = ROOT
 					}
 				}
 			}

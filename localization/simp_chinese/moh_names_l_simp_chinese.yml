@@ -1,4 +1,5 @@
 ﻿l_simp_chinese:
+  # 汉姓
   moh_Ouyang: "欧阳"
   moh_Linghu: "令狐"
   moh_Huangfu: "皇甫"
@@ -9,15 +10,6 @@
   moh_Ximen: "西门"
   moh_Nangong: "南宫"
   moh_Zhou: "周"
-  moh_Tunggiya: "佟佳"
-  moh_Magiya: "马佳"
-  moh_Cigiya: "齐佳"
-  moh_Guwalgiya: "瓜尔佳"
-  moh_Niohuru: "钮祜禄"
-  moh_Sumuru: "舒穆禄"
-  moh_Irgen_Gioro: "伊尔根觉罗"
-  moh_Ula_Nara: "乌拉那拉"
-  moh_Hada_Nara: "哈达那拉"
   moh_Qian: "钱"
   moh_Zheng: "郑"
   moh_Feng: "冯"
@@ -28,12 +20,33 @@
   moh_Song: "宋"
   Qi: "齐"
   moh_Weng: "翁"
+  moh_Wei: "卫"
+  moh_Zhu: "朱"
+  moh_Qin: "秦"
+  moh_You: "尤"
+  moh_Xu: "许"
+  moh_He: "何"
+  moh_Lyu: "吕"
+  moh_Shi: "施"
+  moh_Li: "李"
+  moh_Jin: "金"
+  moh_Yang: "杨"
+  moh_Tao: "陶"
 
+  # 满姓
+  moh_Tunggiya: "佟佳"
+  moh_Magiya: "马佳"
+  moh_Cigiya: "齐佳"
+  moh_Guwalgiya: "瓜尔佳"
+  moh_Niohuru: "钮祜禄"
+  moh_Sumuru: "舒穆禄"
+  moh_Irgen_Gioro: "伊尔根觉罗"
+  moh_Ula_Nara: "乌拉那拉"
+  moh_Hada_Nara: "哈达那拉"
+
+  # 男名
   moh_Hao: "昊"
   moh_Jian: "健"
-  moh_Ying: "英"
-  moh_Yu: "玉"
-  moh_Zhao: "昭"
   moh_Jinlong: "金龙"
   moh_Long: "龙"
   moh_Yi: "义"
@@ -42,6 +55,13 @@
   moh_Yongzheng: "永正"
   moh_Fu: "复"
 
+  # 女名
+  moh_Ying: "英"
+  moh_Yu: "玉"
+  moh_Zhao: "昭"
+  moh_Li_1: "丽"
+
+  # 历史名字
   ecchi_Khedrup: "凯珠"
   ecchi_Trinley: "成烈"
   ecchi_Thubten: "图登"
@@ -50,6 +70,8 @@
   moh_Wangpug_Gyalpo: "旺曲杰布"
   moh_Khyenrab: "罗布藏青饶"
   moh_Wangchug: "汪曲"
+  moh_Sengge_Rinchen: "僧格林沁"
+
 
   moh_Zaifeng: "载沣"
   moh_Zaiyi: "载漪"

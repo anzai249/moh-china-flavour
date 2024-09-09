@@ -1,4 +1,11 @@
-﻿l_simp_chinese:
- modifier_chi_keju: "科举制"
- modifier_abolish_keju: "废除科举制"
- 
+﻿l_english:
+  modifier_chi_keju: "The Imperial Examination System"
+  modifier_abolish_keju: "Abolished the Imperial Examination System"
+  modifier_chi_wuxu: "Result-driven and impatient reform"
+  modifier_chi_wuxu_stable: "Steady advancement of reform"
+  book_campaign_modifier: "Funded bookstore"
+  modifier_wuxu_experienced_teacher: "Experienced teacher"
+  modifier_support_overseas_chinese: "Support from overseas Chinese"
+  modifier_great_assembly: "Grand assembly"
+  flood_of_pirates: "Pirates rampant"
+  modifier_8_flags: "Eight Banners"
