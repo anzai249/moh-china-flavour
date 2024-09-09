@@ -28,6 +28,7 @@
 			name = china_warlord_explosion
 			value = 0
 		}
+		set_variable = old_summer_palace
 		add_journal_entry = { type = je_warlord_china }
 		add_journal_entry = { type = je_keju }
 	}

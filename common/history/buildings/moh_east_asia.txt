@@ -1,0 +1,10 @@
+BUILDINGS = {
+	s:STATE_BEIJING = {
+		region_state:CHI = {
+			create_building = {
+				building = "building_old_summer_palace"
+				level = 1
+			}
+		}
+	}
+}

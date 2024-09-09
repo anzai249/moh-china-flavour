@@ -175,4 +175,10 @@
   moh_historical.7.f: "据说[SCOPE.sCountry('arrow_country').GetName]的商船在[SCOPE.sCountry('arrow_target_country').GetName]的港口被搜查，这引起了[SCOPE.sCountry('arrow_country').GetNameNoFlag]的不满。\n\n这是一个很好的机会，我们可以趁机要求[SCOPE.sCountry('arrow_target_country').GetName]做出让步来巩固我们在该地区的影响力。"
   moh_historical.7.a: "他们的市场貌似很有吸引力"
   moh_historical.7.b: "多管闲事"
-  
+  moh_historical.8.t: "火烧[SCOPE.sBuilding('old_summer_palace_scope').GetName]"
+  moh_historical.8.d: "[SCOPE.sBuilding('old_summer_palace_scope').GetName]遭劫焚毁"
+  moh_historical.8.f: "这天深夜，位于[SCOPE.sState('old_summer_palace_state_scope').GetName]的[SCOPE.sBuilding('old_summer_palace_scope').GetName]突遭大火，园内诸多殿宇、亭台及珍贵文物皆毁于烈焰。此园素为京师名胜，如今蒙受此难，实为前所未有之巨劫。\n\n大火三日三夜未熄，火势略小后人们发现其中大多宝物都已不知去向，剩下的只有残垣断壁。\n\n[SCOPE.sState('old_summer_palace_state_scope').GetName]各界对此事深感悲痛，究竟谁为始作俑者仍无从定论。外夷虽有劫掠行为，但园内火起之因，究竟始于何人何时，现已难以追溯，真相扑朔迷离，时局混乱，已难辨凶手。"
+  moh_historical.8.a: "这是一场灾难"
+  moh_historical.8.a_tt: "[SCOPE.sBuilding('old_summer_palace_scope').GetName]被焚毁"
+  moh_historical.8.a_tt_emperor: "[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')][SCOPE.sCharacter('xianfeng_character').GetFirstName]勃然大怒"
+  moh_historical.8.a_tt_heir: "[Concept('concept_heir','$RULER_TITLE_PRINCE$')][SCOPE.sCharacter('xianfeng_character').GetFirstName]勃然大怒"

@@ -1,0 +1,31 @@
+﻿building_old_summer_palace = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/forbidden_city.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	# locator = "forbidden_city_locator"
+	entity_not_constructed = {
+	}
+	# entity_under_construction = { "building_construction_3x3_entity" }
+	# entity_constructed = { "wonder_forbidden_city_01_entity"}
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	production_method_groups = {
+		pmg_base_building_old_summer_palace
+	}
+	possible = {
+		state_region = s:STATE_BEIJING
+		custom_tooltip = {
+			text = "tooltip_building_old_summer_palace"
+			owner = {
+				has_variable = old_summer_palace
+			}
+		}
+	}
+	required_construction = construction_cost_monument
+	background = "gfx/interface/icons/building_icons/backgrounds/building_panel_bg_monuments.dds"
+}

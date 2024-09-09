@@ -285,7 +285,6 @@ moh_historical.4 = {
 	}
 	option = {
 		name = moh_historical.4.a
-		
 		c:GBR = {
 			trigger_event = {
 				id = moh_historical.5
@@ -326,8 +325,9 @@ moh_historical.4 = {
 				country = c:GBR
 				value = 50
 			}
-		} else_if = {
-			limit = { 
+		}
+		else_if = {
+			limit = {
 				scope:arrow_country = {
 					relations:root > relations_threshold:poor
 				}
@@ -336,7 +336,8 @@ moh_historical.4 = {
 				country = c:GBR
 				value = 25
 			}
-		} else = {
+		}
+		else = {
 			change_relations = {
 				country = c:GBR
 				value = 5
@@ -569,9 +570,70 @@ moh_historical.8 = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds"
 	duration = 3
 	trigger = {
-		# has_variable = old_summer_palace
-		# s:STATE_BEIJING = {
-		# 	OccupationPiechartData.GetOccupationFraction
-		# }
+		has_variable = old_summer_palace
+		has_variable = arrow_war_target
+		OR = {
+			s:STATE_BEIJING.region_state:CHI.controller = c:FRA
+			s:STATE_BEIJING.region_state:CHI.controller = c:GBR
+		}
+		is_at_war = yes
+	}
+	immediate = {
+		remove_variable = old_summer_palace
+		s:STATE_BEIJING.region_state:CHI = {
+			save_scope_as = old_summer_palace_state_scope
+			random_scope_building = {
+				limit = {
+					is_building_type = building_old_summer_palace
+				}
+				save_scope_as = old_summer_palace_scope
+			}
+			if = {
+				limit = {
+					has_building = building_old_summer_palace
+				}
+				remove_building = building_old_summer_palace
+			}
+		}
+		if = {
+			limit = {
+				any_scope_character = {
+					has_template = chi_xianfeng_template
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_template = chi_xianfeng_template
+				}
+				save_scope_as = xianfeng_character
+			}
+		}
+	}
+	option = {
+		name = moh_historical.8.a
+		default_option = yes
+		custom_tooltip = moh_historical.8.a_tt
+		s:STATE_BEIJING = {
+			add_devastation = 5
+		}
+		if = {
+			limit = {
+				ruler = {
+					has_template = chi_xianfeng_template
+				}
+			}
+			custom_tooltip = moh_historical.8.a_tt_emperor
+		}
+		if = {
+			limit = {
+				heir = {
+					has_template = chi_xianfeng_template
+				}
+			}
+			custom_tooltip = moh_historical.8.a_tt_heir
+		}
+		ai_chance = {
+			base = 50
+		}
 	}
 }
