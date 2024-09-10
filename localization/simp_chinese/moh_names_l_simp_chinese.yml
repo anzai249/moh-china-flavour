@@ -32,6 +32,7 @@
   moh_Jin: "金"
   moh_Yang: "杨"
   moh_Tao: "陶"
+  moh_Yan_1: "颜"
 
   # 满姓
   moh_Tunggiya: "佟佳"
@@ -71,7 +72,8 @@
   moh_Khyenrab: "罗布藏青饶"
   moh_Wangchug: "汪曲"
   moh_Sengge_Rinchen: "僧格林沁"
-
+  moh_Botao: "伯焘"
+  moh_Chaofa: "朝发"
 
   moh_Zaifeng: "载沣"
   moh_Zaiyi: "载漪"

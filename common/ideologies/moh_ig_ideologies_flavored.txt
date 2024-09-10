@@ -1,0 +1,16 @@
+﻿ideology_eight_legged = {
+	icon = "gfx/interface/icons/ideology_icons/eight_legged.dds"
+	
+	lawgroup_church_and_state = {
+		law_state_religion = approve
+		law_freedom_of_conscience = approve
+		law_total_separation = disapprove
+		law_state_atheism = strongly_disapprove
+	}
+
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = strongly_disapprove
+		law_appointed_bureaucrats = approve
+		law_elected_bureaucrats = disapprove
+	}
+}

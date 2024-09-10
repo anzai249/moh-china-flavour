@@ -1485,27 +1485,27 @@ ecchi_chi_gu_hongming_character_template = {
 
 ## Zheng Yi Sao
 
-ecchi_chi_zheng_yi_sao_character_template = {
-    first_name = ecchi_Yi_Sao
-    last_name = Zheng
-    historical = yes
-    culture = cu:yue
-    female = yes
-    ideology = ideology_authoritarian
-    interest_group = ig_rural_folk
-    commander_rank = default
-    birth_date = 1775.1.1
-    commander_usage = {
-        country_trigger = {
-            exists = c:CHI
-            this = c:CHI
-        }
-        role = admiral
-        earliest_usage_date = 1807.1.1
-        latest_usage_date = 1845.1.1
-        chance = 25
-    }
-}
+# ecchi_chi_zheng_yi_sao_character_template = {
+#     first_name = ecchi_Yi_Sao
+#     last_name = Zheng
+#     historical = yes
+#     culture = cu:yue
+#     female = yes
+#     ideology = ideology_authoritarian
+#     interest_group = ig_rural_folk
+#     commander_rank = default
+#     birth_date = 1775.1.1
+#     commander_usage = {
+#         country_trigger = {
+#             exists = c:CHI
+#             this = c:CHI
+#         }
+#         role = admiral
+#         earliest_usage_date = 1807.1.1
+#         latest_usage_date = 1845.1.1
+#         chance = 25
+#     }
+# }
 
 ## Qi Baishi
 
@@ -1864,5 +1864,61 @@ chi_yan_fu_template = {
         earliest_usage_date = 1880.1.1
         latest_usage_date = 1921.10.27
         chance = 50
+    }
+}
+
+# Yan Botao
+
+chi_yan_botao_template = {
+    first_name = moh_Botao
+    last_name = moh_Yan_1
+    historical = yes
+    culture = cu:yue
+    ideology = ideology_moderate
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1792.1.1
+    traits = { charismatic popular_commander expensive_tastes }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                cu:yue = {
+                    culture_is_discriminated_in = root
+                }
+            }
+            has_state_in_state_region = STATE_GUANGDONG
+        }
+        role = general
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1855.1.1
+        chance = 80
+    }
+}
+
+# Zhang Chaofa
+
+chi_zhang_chaofa_template = {
+    first_name = moh_Chaofa
+    last_name = Zhang
+    historical = yes
+    culture = cu:min
+    ideology = ideology_moderate
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1800.1.1
+    traits = { brave }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                cu:min = {
+                    culture_is_discriminated_in = root
+                }
+            }
+            has_state_in_state_region = STATE_FUJIAN
+        }
+        role = admiral
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1855.1.1
+        chance = 80
     }
 }
