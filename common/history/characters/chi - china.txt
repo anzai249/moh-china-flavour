@@ -39,6 +39,9 @@
 				pious
 				master_bureaucrat
 			}
+			on_created = {
+				set_variable = is_linzexu
+			}
 		}
 
 		create_character = {

@@ -182,3 +182,8 @@
   moh_historical.8.a_tt: "[SCOPE.sBuilding('old_summer_palace_scope').GetName]被焚毁"
   moh_historical.8.a_tt_emperor: "[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')][SCOPE.sCharacter('xianfeng_character').GetFirstName]勃然大怒"
   moh_historical.8.a_tt_heir: "[Concept('concept_heir','$RULER_TITLE_PRINCE$')][SCOPE.sCharacter('xianfeng_character').GetFirstName]勃然大怒"
+  moh_historical.9.t: "虎门销烟"
+  moh_historical.9.d: "[SCOPE.sCharacter('linzexu_character').GetFullName]在虎门指挥销烟"
+  moh_historical.9.f: "钦差大臣[SCOPE.sCharacter('linzexu_character').GetFullName]奉朝廷之命，坚决查禁[GetGoods('opium').GetName]，遂于虎门海滩公开焚烧缴获的夷商[GetGoods('opium').GetName]，总计两万余箱，历时多日，方才尽数销毁。自此，[ROOT.GetCountry.GetName]禁烟之决心昭告天下，远近皆知。\n\n坊间多有赞誉，认为此举有助于挽救黎民于水火，振兴国本。然而，亦有少数人士担忧，夷商或借此事挑衅，激化中外冲突。[SCOPE.sCharacter('linzexu_character').GetLastName]大臣对此不以为然，言及：\n\n“若[GetGoods('opium').GetName]一日未绝，本大臣一日不回。”"
+  moh_historical.9.a: "这是一场胜利"
+  moh_historical.9.a_tt: "虎门滩水中烟雾弥漫"

@@ -637,3 +637,53 @@ moh_historical.8 = {
 		}
 	}
 }
+
+moh_historical.9 = {
+	# Destruction of opium at Humen
+	type = country_event
+	placement = scope:guangdong_state_scope
+	title = moh_historical.9.t
+	desc = moh_historical.9.d
+	flavor = moh_historical.9.f
+	dlc = dlc0moh
+	event_image = {
+		video = "unspecific_temperance_movement"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/qing_hat.dds"
+	duration = 3
+	trigger = {
+		NOT = {
+			has_variable = destruction_of_opium
+		}
+		any_scope_character = {
+			has_variable = is_linzexu
+		}
+		has_state_in_state_region = STATE_GUANGDONG
+	}
+	immediate = {
+		set_variable = destruction_of_opium
+		random_scope_character = {
+			limit = {
+				has_variable = is_linzexu
+			}
+			save_scope_as = linzexu_character
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_GUANGDONG
+			}
+			save_scope_as = guangdong_state_scope
+		}
+	}
+	option = {
+		name = moh_historical.9.a
+		default_option = yes
+		custom_tooltip = moh_historical.9.a_tt
+		change_relations = {
+			country = c:GBR
+			value = -25
+		}
+	}
+}

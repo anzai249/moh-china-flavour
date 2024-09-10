@@ -29,6 +29,7 @@ self_strengthening.1 = {
 		}
 		OR = {
 			has_variable = lost_opium_wars
+			has_variable = arrow_incident_failed
 			country_rank = rank_value:unrecognized_power
 			country_rank = rank_value:unrecognized_major_power
 			country_rank = rank_value:unrecognized_regional_power
