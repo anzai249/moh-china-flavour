@@ -378,3 +378,8 @@ ideology_moh_kmt = {
 		law_commercialized_agriculture = neutral
 	}
 }
+
+ideology_yang_du = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_yang_du.dds"
+	character_ideology = yes
+}

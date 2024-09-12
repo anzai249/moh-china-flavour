@@ -526,7 +526,19 @@ ai_strategy_default = {
 			 	}
 			}
 			add = {
-				value = 100
+				value = 75
+				desc = "alignment_politics"
+			}
+		}
+		if = {
+			limit = {
+				scope:enemy_country = {
+					has_variable = lost_opium_wars
+				}
+
+			}
+			add = {
+				value = 25
 				desc = "alignment_politics"
 			}
 		}
@@ -1114,7 +1126,7 @@ ai_strategy_default = {
 					has_journal_entry = je_boxer_rebellion
 					scope:target_state.state_region = { is_homeland = cu:han }
 				}
-				add = 50
+				add = 25
 			}
 
 			if = {
@@ -1424,43 +1436,47 @@ ai_strategy_default = {
 				multiply = 0
 			}
 			
-			if = { #Do Not Take Chinese States In Full, unless another power has already done so
+			if = {
+				limit = {
+					scope:target_state = { 
+						state_region = s:STATE_FORMOSA
+					}
+				}
+				add = 50
+			}
+
+			if = { #Do Not Take Chinese States In Full
 				limit = {
 					country_rank >= rank_value:major_power
 					scope:target_state = {
-						owner = { has_journal_entry = je_warlord_china }
+						owner = {
+							OR = {
+								has_journal_entry = je_warlord_china
+								country_has_primary_culture = cu:han
+								country_has_primary_culture = cu:tibetan
+
+							}
+						}
 						OR = {
 							region = sr:region_north_china
 							region = sr:region_south_china
 							region = sr:region_manchuria
+							region = sr:region_himalayas
+							region = sr:region_central_asia
 						}
 					}				
 					OR = {
 						country_is_in_north_america = yes
 						country_is_in_europe = yes
 						country_is_in_south_america = yes
-					}					
+					}
 					NOT = {
-						any_country = {
-							NOT = { THIS = ROOT }
-							country_rank >= rank_value:major_power
-							OR = {
-								country_is_in_north_america = yes
-								country_is_in_europe = yes
-								country_is_in_south_america = yes
-							}
-							any_scope_state = {
-								NOT = { is_treaty_port = yes }
-								OR = {
-									region = sr:region_north_china
-									region = sr:region_south_china
-									region = sr:region_manchuria
-								}
-							}
-						}					
+						scope:target_state = { 
+							state_region = s:STATE_FORMOSA
+						}
 					}
 				}
-				multiply = 0
+				multiply = 0.1
 			}
 		}
 		
@@ -1584,6 +1600,19 @@ ai_strategy_default = {
 				}					
 			}
 			add = 100
+		}
+
+		if = {
+			limit = {
+				OR = {
+					c:GER ?= THIS
+					c:PRU ?= THIS
+				}
+				scope:target_state = {
+					state_region = s:STATE_SHANDONG
+				}					
+			}
+			add = 75
 		}
 
 		if = { #Carving up China
@@ -1946,6 +1975,15 @@ ai_strategy_default = {
 		else = {
 			min = 0
 			max = 200
+		}
+
+		if = {
+			limit = {
+				scope:target_country = { 
+					c:TIB ?= this
+				}
+			}
+			add = 50
 		}
 	}
 
@@ -3369,6 +3407,14 @@ ai_strategy_default = {
 			multiply = cached_ai_incorporated_coastal_population
 			divide = 3000
 		}			
+
+		# self strengthening movement
+		if = {
+			limit = {
+				has_journal_entry = je_self_strengthing
+			}
+			multiply = 3
+		}
 		
 		# More advanced navies are expensive and should be smaller relative to population
 		if = {
@@ -4111,6 +4157,19 @@ ai_strategy_default = {
 					navy_size >= 25
 				}
 				add = 50
+			}
+			if = {
+				limit = {
+					exists = c:CHI
+					OR = {
+						c:GBR ?= this
+						c:FRA ?= this
+					}
+					c:CHI = {
+						has_variable = arrow_war_target
+					}
+				}
+				add = 500
 			}
 		}
 		region_pacific_coast = {

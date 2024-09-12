@@ -45,6 +45,7 @@ je_father_of_the_republic = {
 	}
 	possible = {
 		has_journal_entry = je_reunify_china
+		year > 1886
 	}
 	complete = {
 		custom_tooltip = {

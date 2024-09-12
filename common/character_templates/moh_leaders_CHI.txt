@@ -2015,7 +2015,7 @@ chi_moh_sun_yat_sen_character_template = {
     # is_agitator = yes
 	interest_group = ig_petty_bourgeoisie
 	ideology = ideology_moh_kmt
-	birth_date = 1800.11.12
+	birth_date = 1866.11.12
 	dna = dna_sun_yat_sen
 	traits = {
 		erudite
@@ -2039,4 +2039,33 @@ chi_moh_sun_yat_sen_character_template = {
 
 chi_sun_character_template = {
     # p社是不是有问题，有俩孙中山
+}
+
+chi_yang_du_character_template = {
+    first_name = moh_Du
+    last_name = moh_Yang
+    historical = yes
+    culture = cu:han
+    religion = rel:mahayana
+    ideology = ideology_yang_du
+    interest_group = ig_intelligentsia
+    birth_date = 1875.1.15
+    traits = { erudite romantic  }
+    is_agitator = yes
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                cu:han = {
+                    culture_is_discriminated_in = root
+                }
+            }
+            has_state_in_state_region = STATE_HUNAN
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1893.1.1
+        latest_usage_date = 1931.9.17
+        chance = 20
+    }
 }
