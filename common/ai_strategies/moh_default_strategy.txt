@@ -1272,6 +1272,7 @@ ai_strategy_default = {
 					has_journal_entry = je_the_eastern_border
 					scope:target_state = {
 						OR = {
+							state_region = s:STATE_AMUR
 							state_region = s:STATE_OUTER_MANCHURIA
 							state_region = s:STATE_JETISY
 							state_region = s:STATE_TOMSK
@@ -2693,6 +2694,7 @@ ai_strategy_default = {
 				scope:target_country = {
 					any_scope_state = {
 						OR = {
+							state_region = s:STATE_AMUR
 							state_region = s:STATE_OUTER_MANCHURIA
 							state_region = s:STATE_JETISY
 							state_region = s:STATE_TOMSK
@@ -2745,7 +2747,10 @@ ai_strategy_default = {
 			limit = {
 				country_has_primary_culture = cu:russian
 				any_scope_state = {
-					state_region = s:STATE_OUTER_MANCHURIA
+					OR = {
+						state_region = s:STATE_OUTER_MANCHURIA
+						state_region = s:STATE_AMUR
+					}
 					is_incorporated = yes
 				}
 				scope:target_country = {
@@ -4070,6 +4075,7 @@ ai_strategy_default = {
 			}
 			if = {
 				limit = {
+					exists = c:CHI
 					OR = {
 						c:GBR ?= this
 						c:FRA ?= this

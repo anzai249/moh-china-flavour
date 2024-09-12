@@ -6,6 +6,89 @@ on_monthly_pulse_country = {
 		moh_historical.4
 		moh_historical.6
 	}
+	effect = {
+		if = {
+			limit = {
+				country_rank = 1
+			}
+			if = {
+				limit = {
+					any_country = {
+						sun_yatsen_trigger_30 = yes
+					}
+				}
+				random_country = {
+					limit = {
+						sun_yatsen_trigger_30 = yes
+					}
+					sun_yatsen_goto = yes
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						sun_yatsen_trigger_25 = yes
+					}
+				}
+				random_country = {
+					limit = {
+						sun_yatsen_trigger_25 = yes
+					}
+					sun_yatsen_goto = yes
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						sun_yatsen_trigger_20 = yes
+					}
+				}
+				random_country = {
+					limit = {
+						sun_yatsen_trigger_20 = yes
+					}
+					sun_yatsen_goto = yes
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						sun_yatsen_trigger_15 = yes
+					}
+				}
+				random_country = {
+					limit = {
+						sun_yatsen_trigger_15 = yes
+					}
+					sun_yatsen_goto = yes
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						sun_yatsen_trigger_10 = yes
+					}
+				}
+				random_country = {
+					limit = {
+						sun_yatsen_trigger_10 = yes
+					}
+					sun_yatsen_goto = yes
+				}
+			}
+			else = {
+				random_country = {
+					limit = {
+						country_rank = rank_value:great_power
+						NOT = {
+							has_law = law_type:law_monarchy
+						}
+					}
+					sun_yatsen_goto = yes
+				}
+			}
+		}
+	}
 }
 
 on_yearly_pulse_country = {

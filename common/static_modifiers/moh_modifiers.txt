@@ -86,3 +86,31 @@ modifier_western_incorporation_failed = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	country_secession_progress_mult = 0.25
 }
+
+# 官员贪腐
+modifier_official_corruption = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
+	country_authority_mult = -0.10
+	country_tax_income_add = -2500
+}
+
+# self_strengthing
+modifier_self_strengthing = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_military_tech_research_speed_mult = 0.1
+	building_construction_sector_throughput_add = 0.1
+	building_naval_base_throughput_add = 0.05
+	unit_navy_offense_mult = 0.1
+	unit_navy_defense_mult = 0.1
+	country_tax_income_add = -1000
+}
+
+# father
+modifier_father = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	unit_offense_mult = 0.25
+	country_law_enactment_time_mult = -0.1
+	country_authority_mult = 0.25
+	country_prestige_add = 50
+	country_infamy_decay_mult = 0.5
+}

@@ -1,0 +1,13 @@
+﻿je_self_strengthing = {
+	group = je_group_historical_content
+	icon = "gfx/interface/icons/invention_icons/battleship_tech.dds"
+	modifiers_while_active = {
+		modifier_self_strengthing
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+	timeout = 10950
+	on_timeout = {
+		set_variable = self_strengthening_end
+	}
+}

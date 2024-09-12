@@ -203,6 +203,10 @@ wuxu.3 = {
 	event_image = {
 		video = "asia_union_leader"
 	}
+	trigger = {
+		has_journal_entry = je_keju
+	}
+
 	immediate = {
 		random_scope_state = {
 			limit = {
@@ -955,6 +959,54 @@ wuxu.14 = { #Rich industrialist wants to build a university
 				name = modifier_blocked_building_university
 				months = normal_modifier_time
 			}
+		}
+	}
+}
+
+wuxu.15 = {
+	# 官员贪腐案
+	type = country_event
+	placement = root
+	title = wuxu.15.t
+	desc = wuxu.15.d
+	flavor = wuxu.15.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	duration = 3
+	dlc = dlc0moh
+
+	event_image = {
+		video = "africa_leader_arguing"
+	}
+
+	option = {
+		name = wuxu.15.a
+		custom_tooltip = {
+			text = wuxu.random.subtract.strong
+			change_variable = {
+				name = wuxu_random_event_subtract_strong
+				add = 3
+			}
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	option = {
+		name = wuxu.15.b
+		custom_tooltip = {
+			text = wuxu.random.subtract.less
+			change_variable = {
+				name = wuxu_random_event_subtract
+				add = 3
+			}
+			add_modifier = {
+				name = modifier_official_corruption
+				months = 6
+			}
+		}
+		ai_chance = {
+			base = 15
 		}
 	}
 }

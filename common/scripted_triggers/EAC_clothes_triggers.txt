@@ -1,0 +1,2005 @@
+﻿japanese_imperial_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+		exists = home_country
+     	home_country = {
+     		has_law = law_type:law_monarchy
+			has_variable = meiji_var
+     	}
+		OR = {
+			AND = {
+				culture = {
+					has_discrimination_trait = yamato
+				}
+				OR = {
+					NOT = {
+						exists = c:JAP
+					}
+					AND = {
+						exists = c:JAP
+						NOT = { owner = c:JAP }
+					}
+				}
+			}
+			AND = {
+				exists = c:JAP
+				home_country = {
+					this = c:JAP
+					NOT = { has_variable = meiji_restoration_complete }
+				}
+			}
+		}
+	}
+}
+
+japanese_taishi_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_heir = yes
+		exists = home_country
+     	home_country = {
+     		has_law = law_type:law_monarchy
+			has_variable = meiji_var
+     	}
+		OR = {
+			AND = {
+				culture = {
+					has_discrimination_trait = yamato
+				}
+				OR = {
+					NOT = {
+						exists = c:JAP
+					}
+					AND = {
+						exists = c:JAP
+						NOT = { owner = c:JAP }
+					}
+				}
+			}
+			AND = {
+				exists = c:JAP
+				home_country = {
+					this = c:JAP
+					NOT = { has_variable = meiji_restoration_complete }
+				}
+			}
+		}
+	}
+}
+
+japanese_shogun_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+		exists = home_country
+     	home_country = {
+     		has_law = law_type:law_monarchy
+			NOT = { has_variable = meiji_var }
+     	}
+		OR = {
+			AND = {
+				culture = {
+					has_discrimination_trait = yamato
+				}
+				OR = {
+					NOT = {
+						exists = c:JAP
+					}
+					AND = {
+						exists = c:JAP
+						NOT = { owner = c:JAP }
+					}
+				}
+			}
+			AND = {
+				exists = c:JAP
+				home_country = {
+					this = c:JAP
+					NOT = { has_variable = meiji_restoration_complete }
+				}
+			}
+		}
+	}
+}
+
+chinese_manchu_queue_hairstyle_character_trigger = { # hairsyle for Manchu characters not living living under discriminatory Han rule, and Han characters living under discriminatory Manchu rule
+	exists = scope:character
+	scope:character = {
+		OR = {
+			AND = {
+				owner = { 
+					ruler = { 
+						has_culture = cu:manchu 
+					}
+					has_law = law_type:law_monarchy
+					NOT = { 
+						has_law = law_type:law_multicultural
+					}
+				}
+#				culture = {
+#					OR = {
+#						has_discrimination_trait = east_asian_heritage
+#						has_discrimination_trait = north_asian_heritage
+#					}
+#					NOT = {
+#						this = cu:japanese
+#						this = cu:korean
+#						this = cu:vietnamese
+#					}
+#				}
+			}
+			AND = {
+				NOT = {
+					owner = { 
+						ruler = { 
+							culture = { 
+								has_discrimination_trait = han_chinese 
+							}
+						}
+						cu:manchu = {
+							NOT = { 
+								culture_is_discriminated_in = scope:character.owner 
+							}
+						}
+					}
+				}
+				culture = cu:manchu
+			}
+		}
+	}
+}
+
+chinese_manchu_queue_hairstyle_pops_trigger = { # hairsyle for Manchu pops not living living under discriminatory Han rule, and Han pops living under discriminatory Manchu rule
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			AND = {
+				owner = {
+					ruler = {
+						has_culture = cu:manchu
+					}
+					has_law = law_type:law_monarchy
+					NOT = { 
+						has_law = law_type:law_multicultural
+					}
+				}
+				culture = {
+					OR = {
+						has_discrimination_trait = east_asian_heritage
+						has_discrimination_trait = north_asian_heritage
+					}
+					NOT = {
+						this = cu:japanese
+						this = cu:korean
+						this = cu:vietnamese
+					}
+				}
+				NOT = {
+					AND = {
+						is_pop_type = clergymen
+						religion = {
+							has_discrimination_trait = buddhist
+							NOT = {
+								this = rel:mahayana
+							}
+						}
+					}
+				}
+			}
+			AND = {
+				NOT = {
+					owner = { 
+						ruler = { 
+							culture = { 
+								has_discrimination_trait = han_chinese 
+							}
+						}
+						cu:manchu = {
+							NOT = { 
+								culture_is_discriminated_in = scope:pop.owner 
+							}
+						}
+					}
+				}
+				culture = cu:manchu
+			}
+			AND = {
+				exists = c:CHI
+				c:CHI = {
+					ruler = {
+						has_culture = cu:manchu
+					}
+					has_law = law_type:law_monarchy
+					NOT = { 
+						has_law = law_type:law_multicultural
+					}
+				}
+				owner = {
+					ruler = {
+						culture = {
+							has_discrimination_trait = east_asian_heritage
+						}
+					}
+					has_law = law_type:law_monarchy
+					has_law = law_type:law_autocracy
+					NOT = {
+						has_law = law_type:law_multicultural
+					}
+				}
+				culture = {
+					OR = {
+						has_discrimination_trait = east_asian_heritage
+						has_discrimination_trait = north_asian_heritage
+					}
+					NOT = {
+						this = cu:japanese
+						this = cu:korean
+						this = cu:vietnamese
+						this = cu:ainu
+					}
+				}
+			}
+		}
+	}
+}
+
+chinese_court_clothes_trigger = {
+	always = no
+#	exists = scope:character
+#	scope:character = {
+#		NOT = {
+#			AND = {
+#				is_ruler = yes
+#				culture = {
+#					has_discrimination_trait = tai
+#					has_discrimination_trait = southeast_asian_heritage
+#				}
+#		     	owner = {
+#		     		OR = {
+#			     		has_law = law_type:law_monarchy
+#			     		has_law = law_type:law_theocracy
+#			     	}
+#		     	}			
+#			}
+#		}
+#		culture = {
+#			NOT = { this = cu:kalmyk }
+#			OR = {
+#				has_discrimination_trait = sinosphere
+#				has_discrimination_trait = han_chinese
+#				has_discrimination_trait = tibetan_language
+#				has_discrimination_trait = mongol_language
+#				has_discrimination_trait = tai
+#				has_discrimination_trait = hmong_mien_language
+#			}
+#		}
+#	}	
+}
+
+chinese_court_clothes_pop_trigger = {
+	always = no
+#	exists = scope:pop
+#	scope:pop = {
+#		culture = {
+#			OR = {
+#				has_discrimination_trait = sinosphere
+#				has_discrimination_trait = han_chinese
+#				has_discrimination_trait = tibetan_language
+#				has_discrimination_trait = mongol_language
+#				has_discrimination_trait = tai
+#				has_discrimination_trait = hmong_mien_language
+#			}
+#		}
+#	}	
+}
+
+east_asian_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			has_discrimination_trait = east_asian_heritage
+		}
+	}
+}
+
+siamese_clothes_trigger = { #Pretty sure this is actual burmese
+	exists = scope:character
+	scope:character = {
+		culture = {
+			has_discrimination_trait = southeast_asian_heritage
+			NOT = {
+				this = cu:vietnamese
+			}
+		}
+	}
+}
+
+south_east_asia_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			has_discrimination_trait = southeast_asian_heritage
+		}
+		NOT = {
+			has_pop_culture = vietnamese
+		}
+	}
+}
+
+confucianism_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			OR = {
+				has_discrimination_trait = east_asian_heritage
+				this = cu:manchu
+				this = cu:vietnamese
+			}
+		}
+		religion = rel:mahayana
+		NOT = {
+			has_pop_culture = japanese
+		}
+#		OR = {
+#			religion = rel:confucianism
+#			religion = rel:taoism
+#		}
+	}
+}
+
+
+## New Code
+chinese_imperial_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			is_ruler = yes
+			is_heir = yes
+		}
+		culture = {
+			has_discrimination_trait = north_asian_heritage
+		}
+		NOT = { 
+			has_culture = cu:yakut 
+			has_culture = cu:siberian
+			has_culture = cu:ainu
+		}
+     	owner = {
+     		has_law = law_type:law_monarchy
+     	}
+	}
+}
+
+#eastasian_imperial_clothes_trigger = {
+#	exists = scope:character
+#	scope:character = {
+#		is_ruler = yes
+#		AND = {
+#			culture = {
+#				has_discrimination_trait = east_asian_heritage
+#			}
+#            NOT = {
+#				has_culture = cu:japanese
+#            }
+#		}
+#	}
+#}
+
+north_asian_court_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		owner = {
+			ruler = {
+				culture = {
+					has_discrimination_trait = north_asian_heritage
+				}
+				NOT = { 
+					has_culture = cu:yakut 
+					has_culture = cu:siberian
+					has_culture = cu:manchu
+					has_culture = cu:ainu
+				}
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_official_trigger_01 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = yes
+			is_powerful = yes
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:manchu
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_official_trigger_02 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = yes
+			is_powerful = no
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:manchu
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_official_trigger_03 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = no
+			is_powerful = yes
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:manchu
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_official_trigger_04 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = no
+			is_powerful = no
+			is_marginal = no
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:manchu
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_official_trigger_05 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_marginal = yes
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:manchu
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_general_trigger_01 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		OR = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		OR = {
+			commander_rank = 5
+			commander_rank = 4
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = yes
+				}
+			}
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:manchu
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_general_trigger_02 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		OR = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		OR = {
+			commander_rank = 3
+			commander_rank = 2
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = no
+					is_marginal = no
+				}
+			}
+		}
+		NOT = {
+			commander_rank = 5
+			commander_rank = 4
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:manchu
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_general_trigger_03 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		OR = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		OR = {
+			commander_rank = 1
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_marginal = yes
+				}
+			}
+		}
+		NOT = {
+			commander_rank = 5
+			commander_rank = 4
+			commander_rank = 3
+			commander_rank = 2
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:manchu
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+chinese_court_clothes_official_ming_trigger_01 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = yes
+			is_powerful = yes
+		}
+		owner = {
+			ruler = {
+				NOT = {
+					has_culture = cu:manchu
+					has_culture = cu:japanese
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+					has_culture = cu:tibetan
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+		}
+	}	
+}
+
+chinese_court_clothes_official_ming_trigger_02 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = yes
+			is_powerful = no
+		}
+		owner = {
+			ruler = {
+				NOT = {
+					has_culture = cu:manchu
+					has_culture = cu:japanese
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+					has_culture = cu:tibetan
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+		}
+	}	
+}
+
+chinese_court_clothes_official_ming_trigger_03 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = no
+			is_powerful = yes
+		}
+		owner = {
+			ruler = {
+				NOT = {
+					has_culture = cu:manchu
+					has_culture = cu:japanese
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+					has_culture = cu:tibetan
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+		}
+	}	
+}
+
+chinese_court_clothes_official_ming_trigger_04 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = no
+			is_powerful = no
+			is_marginal = no
+		}
+		owner = {
+			ruler = {
+				NOT = {
+					has_culture = cu:manchu
+					has_culture = cu:japanese
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+					has_culture = cu:tibetan
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+		}
+	}	
+}
+
+chinese_court_clothes_official_ming_trigger_05 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_marginal = yes
+		}
+		owner = {
+			ruler = {
+				NOT = {
+					has_culture = cu:manchu
+					has_culture = cu:japanese
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+					has_culture = cu:tibetan
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+		}
+	}	
+}
+
+chinese_court_clothes_general_ming_trigger_00 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		OR = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		OR = {
+			commander_rank = 5
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = yes
+					is_powerful = yes
+				}
+			}
+		}
+		owner = {
+			ruler = {
+				NOT = {
+					has_culture = cu:manchu
+					has_culture = cu:japanese
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+					has_culture = cu:tibetan
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+		}
+	}	
+}
+
+chinese_court_clothes_general_ming_trigger_0102 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		OR = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		OR = {
+			commander_rank = 5
+			commander_rank = 4
+			commander_rank = 3
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = yes
+				}
+			}
+		}
+		NOT = {
+			commander_rank = 5
+		}
+		owner = {
+			ruler = {
+				NOT = {
+					has_culture = cu:manchu
+					has_culture = cu:japanese
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+					has_culture = cu:tibetan
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+		}
+	}	
+}
+
+chinese_court_clothes_general_ming_trigger_0304 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		OR = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		OR = {
+			commander_rank = 2
+			commander_rank = 1
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = no
+				}
+			}
+		}
+		NOT = {
+			commander_rank = 5
+			commander_rank = 4
+			commander_rank = 3
+		}
+		owner = {
+			ruler = {
+				NOT = {
+					has_culture = cu:manchu
+					has_culture = cu:japanese
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+					has_culture = cu:tibetan
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+			OR = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+		}
+	}	
+}
+
+vietnamese_court_clothes_official_trigger_01 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = yes
+			is_powerful = yes
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:vietnamese
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+vietnamese_court_clothes_official_trigger_02 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = yes
+			is_powerful = no
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:vietnamese
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+vietnamese_court_clothes_official_trigger_03 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = no
+			is_powerful = yes
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:vietnamese
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+vietnamese_court_clothes_official_trigger_04 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_in_government = no
+			is_powerful = no
+			is_marginal = no
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:vietnamese
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+vietnamese_court_clothes_official_trigger_05 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		interest_group = {
+			is_marginal = yes
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:vietnamese
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+vietnamese_court_clothes_general_trigger_0102 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		OR = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		OR = {
+			commander_rank = 5
+			commander_rank = 4
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = yes
+				}
+			}
+			AND = {
+				has_role = politician
+				NOT = { interest_group = { is_interest_group_type = ig_armed_forces } }
+				interest_group = {
+					is_marginal = yes
+				}
+			}
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:vietnamese
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+vietnamese_court_clothes_general_trigger_0304 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		OR = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral
+		}
+		OR = {
+			commander_rank = 3
+			commander_rank = 2
+			commander_rank = 1
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = no
+				}
+			}
+			AND = {
+				has_role = politician
+				NOT = { interest_group = { is_interest_group_type = ig_armed_forces } }
+				interest_group = {
+					is_marginal = yes
+				}
+			}
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:vietnamese
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+tibetan_character_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		owner = {
+			ruler = {
+				has_culture = cu:tibetan
+			}
+			NOT = { has_law = law_type:law_theocracy }
+		}
+		has_culture = cu:tibetan
+	}	
+}
+
+chinese_court_clothes_republic_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		owner = {
+			NOT = { has_law = law_type:law_monarchy }
+		}
+		NOT = {
+			has_culture = cu:yakut 
+			has_culture = cu:siberian
+			has_culture = cu:ainu
+			has_culture = cu:japanese
+			has_culture = cu:korean
+			has_culture = cu:vietnamese
+		}
+		culture = {
+			OR = {
+				has_discrimination_trait = east_asian_heritage
+				has_discrimination_trait = north_asian_heritage
+			}
+		}
+	}	
+}
+
+chinese_imperial_clothes_ming_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+     	owner = {
+			OR = {
+				has_law = law_type:law_monarchy
+				AND = {
+					has_law = law_type:law_theocracy
+					NOT = {
+						ruler = {
+							religion = {
+								has_discrimination_trait = buddhist
+							}
+						}
+					}
+				}
+			}
+			is_subject = no
+			NOT = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+     		}
+     	}
+		AND = {
+			culture = {
+				has_discrimination_trait = east_asian_heritage
+			}
+            NOT = {
+				has_culture = cu:japanese
+				has_culture = cu:korean
+				has_culture = cu:manchu
+				has_culture = cu:tibetan
+				has_culture = cu:vietnamese
+            }
+		}
+	}
+}
+
+chinese_prince_clothes_ming_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_heir = yes
+     	owner = {
+     		has_law = law_type:law_monarchy
+     	}
+		AND = {
+			OR = {
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+				has_culture = cu:vietnamese
+			}
+            NOT = {
+				has_culture = cu:japanese
+				has_culture = cu:korean
+				has_culture = cu:manchu
+            }
+		}
+	}
+}
+
+chinese_king_clothes_ming_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+     	owner = {
+			OR = {
+				has_law = law_type:law_monarchy
+				AND = {
+					has_law = law_type:law_theocracy
+					NOT = {
+						ruler = {
+							religion = {
+								has_discrimination_trait = buddhist
+							}
+						}
+					}
+				}
+			}
+			is_subject = yes
+			OR = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+     		}
+     	}
+		AND = {
+			culture = {
+				has_discrimination_trait = east_asian_heritage
+			}
+            NOT = {
+				has_culture = cu:japanese
+				has_culture = cu:korean
+				has_culture = cu:manchu
+				has_culture = cu:tibetan
+				has_culture = cu:vietnamese
+            }
+		}
+	}
+}
+
+vietnamese_imperial_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+     	owner = {
+     		has_law = law_type:law_monarchy
+     	}
+		has_culture = cu:vietnamese
+	}
+}
+
+korean_imperial_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+     	owner = {
+     		has_law = law_type:law_monarchy
+			is_subject = no
+     	}
+		has_culture = cu:korean
+	}
+}
+
+korean_king_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			AND = {
+				is_ruler = yes
+     			owner = {
+     				has_law = law_type:law_monarchy
+					is_subject = yes
+     			}
+			}
+			AND = {
+				is_heir = yes
+     			owner = {
+     				has_law = law_type:law_monarchy
+					is_subject = no
+     			}
+			}
+		}
+		has_culture = cu:korean
+	}
+}
+
+korean_prince_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_heir = yes
+     	owner = {
+     		has_law = law_type:law_monarchy
+			is_subject = yes
+     	}
+		has_culture = cu:korean
+	}
+}
+
+chinese_imperial_clothes_republic_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+     	owner = {
+     		NOT = {
+     			has_law = law_type:law_theocracy
+				has_law = law_type:law_monarchy
+     		}
+     	}
+		AND = {
+			culture = {
+				OR = {
+					has_discrimination_trait = east_asian_heritage
+					has_discrimination_trait = north_asian_heritage
+				}
+			}
+			NOT = { 
+				has_culture = cu:yakut 
+				has_culture = cu:siberian
+				has_culture = cu:ainu
+				has_culture = cu:japanese
+				has_culture = cu:vietnamese
+				has_culture = cu:korean
+            }
+		}
+	}
+}
+
+republic_of_china_trigger = {
+	exists = c:CHI
+	c:CHI = {
+		NOT = { has_law = law_type:law_monarchy }
+	}
+}
+
+EAC_republic_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		owner = {
+			NOT = { has_law = law_type:law_monarchy}
+		}
+	}
+}
+
+empire_of_china_trigger = {
+	exists = c:CHI
+	c:CHI = {
+		has_law = law_type:law_monarchy
+		ruler = { 
+			culture = {
+				has_discrimination_trait = han_chinese
+			}
+		}
+	}
+}
+
+dynasty_of_qing_trigger = {
+	exists = c:CHI
+	c:CHI = {
+		has_law = law_type:law_monarchy
+		ruler = { 
+			culture = {
+				has_discrimination_trait = north_asian_heritage
+			}
+		}
+	}
+}
+
+no_china_exist_trigger = {
+	NOT = { 
+		exists = c:CHI
+	}
+}
+
+overseas_eastasian_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		NOT = {
+			owner = {
+				ruler = { 
+					culture = {
+						has_discrimination_trait = east_asian_heritage
+					}
+				}
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_autocracy
+				NOT = {
+					has_law = law_type:law_multicultural
+				}
+			}
+		}
+		OR = {
+			AND = {
+				OR = {
+					culture = {
+						has_discrimination_trait = han_chinese
+					}
+					has_pop_culture = manchu
+					has_pop_culture = mongol
+				}
+				owner = {
+					exists = c:CHI
+					NOT = {
+						c:CHI = this
+						is_subject_of = c:CHI
+					}
+				}
+			}
+			AND = {
+				has_pop_culture = vietnamese
+				owner = {
+					exists = c:DAI
+					NOT = {
+						c:DAI = this
+						is_subject_of = c:DAI
+					}
+				}
+			}	
+			AND = {
+				has_pop_culture = korean
+				owner = {
+					exists = c:KOR
+					NOT = {
+						c:KOR = this
+						is_subject_of = c:KOR
+					}
+				}
+			}	
+			AND = {
+				has_pop_culture = japanese
+				owner = {
+					exists = c:JAP
+					NOT = {
+						c:JAP = this
+						is_subject_of = c:JAP
+					}
+				}
+			}
+		}
+	}	
+}
+
+korean_court_clothes_trigger_01 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral									
+		}
+		interest_group = {
+			is_in_government = yes
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:korean
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+korean_court_clothes_trigger_02 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		OR = {
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = yes
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			commander_rank = 5
+			commander_rank = 4
+			commander_rank = 3
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:korean
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+korean_court_clothes_trigger_03 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		NOT = {
+			interest_group = { is_interest_group_type = ig_armed_forces }
+			has_role = general
+			has_role = admiral									
+		}
+		interest_group = {
+			is_in_government = no
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:korean
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+korean_court_clothes_trigger_04 = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = no
+		is_heir = no
+		OR = {
+			AND = {
+				has_role = politician
+				interest_group = {
+					is_in_government = no
+					is_interest_group_type = ig_armed_forces
+				}
+			}
+			commander_rank = 2
+			commander_rank = 1
+		}
+		owner = {
+			ruler = {
+				has_culture = cu:korean
+			}
+			has_law = law_type:law_monarchy
+		}
+	}	
+}
+
+#chinese_clothes_pop_trigger = {
+#	exists = scope:pop
+#	scope:pop = {
+#		OR = {
+#			culture = { 
+#				has_discrimination_trait = han_chinese
+#			}
+#			has_pop_culture = manchu
+#			has_pop_culture = mongol
+#		}
+#		owner = {
+#			exists = c:CHI
+#			CHI = {
+#				ruler = {
+#					has_culture = cu:manchu
+#					is_monarch = yes
+#				}
+#			}
+#			OR = {
+#				c:LAN = this
+#				c:CHI = this
+#				NOT = {
+#					country_has_primary_culture = cu:han
+#				}
+#			}
+#		}
+#	}	
+#}
+
+chinese_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			culture = {
+				has_discrimination_trait = east_asian_heritage
+			}
+		}
+		NOT = {
+			has_pop_culture = japanese
+			has_pop_culture = korean
+			has_pop_culture = vietnamese
+		}
+	}
+}
+
+chinese_han_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			has_discrimination_trait = han_chinese
+		}
+	}
+}
+
+korean_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		has_pop_culture = korean
+	}
+}
+
+manchu_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		has_pop_culture = manchu
+	}
+}
+
+mongol_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		has_pop_culture = mongol
+	}
+}
+
+north_asian_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			has_discrimination_trait = north_asian_heritage
+		}
+		NOT = { 
+			culture = cu:yakut 
+			culture = cu:siberian
+			culture = cu:ainu
+		}
+	}
+}
+
+vietnamese_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+        has_pop_culture = vietnamese
+	}	
+}
+
+japanese_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		has_pop_culture = japanese
+	}
+}
+
+korean_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+        has_culture = cu:korean
+	}	
+}
+
+vietnamese_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+        has_culture = cu:vietnamese
+	}	
+}
+
+cold_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			has_pop_culture = inuit
+			has_pop_culture = athabaskan
+			has_pop_culture = siberian
+			has_pop_culture = ainu
+		}
+	}
+}
+
+circumpolar_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			culture = cu:inuit
+			culture = cu:ainu
+			culture = {
+				has_discrimination_trait = siberian_culture_group
+			}
+		}
+		NOT = { is_pop_type = slaves }
+	}
+}
+
+topknot_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			has_pop_culture = korean
+			has_pop_culture = vietnamese
+			AND = {
+				owner = {
+					ruler = {
+						culture = {
+							has_discrimination_trait = han_chinese
+						}
+					}
+					has_law = law_type:law_monarchy
+				}
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+				NOT = {
+					has_pop_culture = japanese
+				}
+			}
+			AND = {
+				owner = {
+					ruler = {
+						OR = {
+							culture = {
+								has_discrimination_trait = han_chinese
+							}
+							has_culture = cu:korean
+							has_culture = cu:vietnamese
+						}
+					}
+					has_law = law_type:law_monarchy
+				}
+				OR = {
+					is_pop_type = bureaucrats
+					is_pop_type = officers
+					is_pop_type = soldiers
+				}
+			}
+		}
+	}
+}
+
+topknot_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			AND = {
+				OR = {
+					has_culture = cu:korean
+					has_culture = cu:vietnamese
+				}
+				NOT = {
+					owner = {
+						ruler = {
+							culture = {
+								has_discrimination_trait = north_asian_heritage
+							}
+						}
+						has_law = law_type:law_monarchy
+					}
+				}
+			}
+			AND = {
+				owner = {
+					ruler = {
+						OR = {
+							culture = {
+								has_discrimination_trait = han_chinese
+							}
+							has_culture = cu:korean
+							has_culture = cu:vietnamese
+						}
+					}
+					has_law = law_type:law_monarchy
+				}
+			}
+		}
+	}	
+}
+
+chinese_qing_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		owner = {
+			ruler = {
+				culture = {
+					has_discrimination_trait = north_asian_heritage
+				}
+				NOT = { 
+					has_culture = cu:yakut 
+					has_culture = cu:siberian
+					has_culture = cu:ainu
+				}
+			}
+			has_law = law_type:law_monarchy
+		}
+	}
+}
+
+chinese_ming_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		owner = {
+			ruler = {
+				culture = {
+					has_discrimination_trait = han_chinese
+				}
+			}
+			has_law = law_type:law_monarchy
+		}
+	}
+}
+
+korean_ri_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		owner = {
+			ruler = {
+				has_culture = cu:korean
+			}
+			has_law = law_type:law_monarchy
+		}
+	}
+}
+
+vietnamese_nguyen_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		owner = {
+			ruler = {
+				has_culture = cu:vietnamese
+			}
+			has_law = law_type:law_monarchy
+		}
+	}
+}
+
+ming_subject_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+		owner = {
+			OR = {
+				NOT = {
+					has_law = law_type:law_monarchy
+				}
+				NOT = {
+					country_tier = hegemony
+					country_tier = empire
+					country_tier = kingdom
+				}
+			}
+			NOT = {
+				has_law = law_type:law_theocracy
+			}
+			is_subject = yes
+			OR = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+			}
+			top_overlord = {
+				ruler = {
+					culture = {
+						has_discrimination_trait = han_chinese
+					}
+				}
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
+
+ming_subject_monarch_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+		owner = {
+			OR = {
+				country_tier = hegemony
+				country_tier = empire
+				country_tier = kingdom
+			}
+			has_law = law_type:law_monarchy
+			NOT = {
+				has_law = law_type:law_theocracy
+			}
+			is_subject = yes
+			OR = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+			}
+			top_overlord = {
+				ruler = {
+					culture = {
+						has_discrimination_trait = han_chinese
+					}
+				}
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
+
+qing_subject_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		is_ruler = yes
+		owner = {
+			NOT = {
+				has_law = law_type:law_theocracy
+			}
+			is_subject = yes
+			OR = {
+				is_subject_type = subject_type_dominion
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+			}
+			top_overlord = {
+				ruler = {
+					has_culture = cu:manchu
+				}
+				has_law = law_type:law_monarchy
+			}
+		}
+	}
+}
+
+korean_yangban_clothes_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = cu:korean
+     	OR = {
+			is_pop_type = aristocrats
+			is_pop_type = capitalists
+			is_pop_type = academics
+			is_pop_type = clerks
+			is_pop_type = shopkeepers
+			is_pop_type = engineers
+			is_pop_type = bureaucrats
+			is_pop_type = clergymen
+     	}		
+	}
+}
+
+korean_soldier_clothes_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = cu:korean
+		is_pop_type = soldiers
+	}
+}
+
+korean_general_clothes_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		culture = cu:korean
+     	is_pop_type = officers
+	}
+}
+
+nougyou_clothes_trigger = {
+	exists = scope:pop
+	scope:pop = {
+       	OR = {
+			is_pop_type = farmers
+			is_pop_type = peasants
+       	}
+	}
+}
+
+kougyou_clothes_trigger = {
+	exists = scope:pop
+	scope:pop = {
+       	OR = {
+			is_pop_type = laborers
+			is_pop_type = machinists
+       	}
+	}
+}
+
+monarch_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		owner = {
+			has_law = law_type:law_monarchy
+		}
+	}
+}
+
+east_asian_county_clothes_pop_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		owner = {
+			ruler = {
+				culture = {
+					has_discrimination_trait = east_asian_heritage
+				}
+			}
+		}
+	}
+}
+
+chinese_beard_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = {
+			has_discrimination_trait = east_asian_heritage
+		}
+		NOT = {
+			has_culture = cu:japanese
+		}
+	}	
+}
+
+test = {
+	exists = scope:character
+	scope:character = {}
+	interest_group = { is_interest_group_type = POLITICALLY_UNALIGNED_TITLE_NO_FORMATTING }
+}

@@ -2,5 +2,6 @@
 	random_events = {
 		100 = moh_taiwan.1
 		100 = moh_historical.1
+		100 = self_strengthening.1
 	}
 }

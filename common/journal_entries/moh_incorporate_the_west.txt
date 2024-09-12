@@ -2,21 +2,20 @@
 	icon = "gfx/interface/icons/lens_toolbar_icons/incorporate_state.dds"
 	group = je_group_historical_content
 	is_shown_when_inactive = {
+		exists = c:CHI
 		c:CHI = root
 	}
 	possible = {
+		exists = c:CHI
 		this ?= c:CHI
 		has_technology_researched = colonization
 	}
 	complete = {
 		NOT = {
 			any_scope_state = {
-				filter = {
-					controller = root
-					NOT = {
-						state_region = s:STATE_AMUR
-						state_region = s:STATE_OUTER_MANCHURIA
-					}
+				NOR = {
+					state_region = s:STATE_AMUR
+					state_region = s:STATE_OUTER_MANCHURIA
 				}
 				is_incorporated = NO
 			}

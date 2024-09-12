@@ -1,0 +1,82 @@
+je_father_of_the_republic = {
+	icon = "gfx/interface/icons/event_icons/white_sun.dds"
+	group = je_group_historical_content
+	is_shown_when_inactive = {
+		has_journal_entry = je_reunify_china
+	}
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = father_of_the_republic_status_1
+				trigger = {
+					global_var:sun_yatsen_in = {
+						NOT = {
+							has_journal_entry = je_reunify_china
+						}
+					}
+				}
+			}
+			triggered_desc = {
+				desc = father_of_the_republic_status_2
+				trigger = {
+					global_var:sun_yatsen_in = {
+						has_journal_entry = je_reunify_china
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_global_variable = sun_yatsen
+				}
+				this ?= c:BEI
+			}
+			create_character = {
+				template = chi_sun_yat_sen_character_template
+			}
+			set_global_variable = {
+				name = sun_yatsen_in
+				value = c:BEI
+			}
+		}
+	}
+	possible = {
+		has_journal_entry = je_reunify_china
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_father_of_the_republic.tt.complete
+			always = no
+		}
+	}
+	on_complete = {
+		custom_tooltip = je_father_of_the_republic.tt.on.complete
+	}
+	fail = {
+		custom_tooltip = {
+			text = je_father_of_the_republic.tt.fail
+			always = no
+		}
+	}
+	on_weekly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						any_character = {
+							has_variable = sun_yatsen_character
+						}
+					}
+				}
+				create_character = {
+					template = chi_sun_yat_sen_character_template
+				}
+			}
+		}
+	}
+	weight = 500
+	should_be_pinned_by_default = yes
+}

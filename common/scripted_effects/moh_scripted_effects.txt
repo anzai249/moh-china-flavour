@@ -2,7 +2,8 @@
 	if = {
 		limit = {
 			game_date < 1890.1.1
-			NOT = { #If you exiled Hong and he got recruited somewhere else, he doesn't get to be here.
+			NOT = {
+				#If you exiled Hong and he got recruited somewhere else, he doesn't get to be here.
 				any_country = {
 					NOT = {
 						this = c:CHI
@@ -51,12 +52,13 @@
 				heir = yes
 				ideology = ideology_moderate
 				traits = {
-					reserved 
+					reserved
 				}
 			}
 		}
 	}
-	else = { #Fallback chars if Hong is unavailable.
+	else = {
+		#Fallback chars if Hong is unavailable.
 		create_character = {
 			religion = rel:protestant
 			interest_group = ig_devout
@@ -74,7 +76,6 @@
 				}
 			}
 		}
-
 		create_character = {
 			first_name = Tianguifu
 			religion = rel:protestant
@@ -83,7 +84,6 @@
 			ideology = ideology_moderate
 		}
 	}
-
 	if = {
 		limit = {
 			game_date > 1841.1.1
@@ -157,4 +157,17 @@
 			}
 		}
 	}
+}
+
+sun_yatsen_goto = {
+	set_global_variable = {
+		name = sun_yatsen_in
+		value = this
+	}
+	# random_character = {
+	# 	limit = {
+	# 		has_variable = sun_yatsen_character
+	# 	}
+	# 	transfer_character = root
+	# }
 }

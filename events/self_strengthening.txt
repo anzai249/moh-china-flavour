@@ -1,22 +1,17 @@
 ﻿namespace = self_strengthening
-
 self_strengthening.1 = {
 	type = country_event
 	placement = root
-
 	title = self_strengthening.1.t
 	desc = self_strengthening.1.d
 	flavor = self_strengthening.1.f
-
 	dlc = dlc0moh
-
 	event_image = {
 		video = "middleeast_middleclass_cafe"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+	icon = "gfx/interface/icons/invention_icons/battleship_tech.dds"
 	duration = 3
-
 	trigger = {
 		exists = c:CHI
 		this = c:CHI
@@ -33,6 +28,22 @@ self_strengthening.1 = {
 			country_rank = rank_value:unrecognized_power
 			country_rank = rank_value:unrecognized_major_power
 			country_rank = rank_value:unrecognized_regional_power
+		}
+	}
+	immediate = {
+		set_variable = self_strengthening_started
+		random_scope_character = {
+			limit = {
+				has_variable = self_strengthening_character
+			}
+			save_scope_as = self_strengthening_character
+		}
+	}
+	option = {
+		name = self_strengthening.1.a
+		default_option = yes
+		add_journal_entry = {
+			type = je_self_strengthing
 		}
 	}
 }

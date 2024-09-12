@@ -35,6 +35,9 @@ ecchi_chi_li_hongzhang_character_template = {
         latest_usage_date = 1901.11.7
         chance = 65
     }
+    on_created = {
+        set_variable = self_strengthening_character
+    }
 }
 
 ecchi_chi_yikuang_character_template = {
@@ -94,6 +97,9 @@ ecchi_chi_zhang_zhidong_character_template = {
         earliest_usage_date = 1880.1.1
         latest_usage_date = 1909.10.5
         chance = 65
+    }
+    on_created = {
+        set_variable = self_strengthening_character
     }
 }
 
@@ -241,6 +247,9 @@ ecchi_chi_wenxiang_character_template = {
         latest_usage_date = 1876.1.1
         chance = 65
     }
+    on_created = {
+        set_variable = self_strengthening_character
+    }
 }
 
 
@@ -271,6 +280,9 @@ ecchi_chi_zuo_zongtang_character_template = {
         earliest_usage_date = 1860.1.1
         latest_usage_date = 1885.9.5
         chance = 65
+    }
+    on_created = {
+        set_variable = self_strengthening_character
     }
 }
 
@@ -1921,4 +1933,110 @@ chi_zhang_chaofa_template = {
         latest_usage_date = 1855.1.1
         chance = 80
     }
+}
+
+
+chi_gong_character_template = {
+    first_name = Prince_Gong
+    last_name = Aisin_Gioro
+    historical = yes
+    culture = cu:manchu
+    female = no
+    ideology = ideology_royalist
+    interest_group = ig_landowners
+    birth_date = 1833.1.11
+    traits = {
+        experienced_diplomat
+        expensive_tastes
+    }   
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:CHI
+            this = c:CHI
+            c:CHI = { has_law = law_type:law_monarchy }
+        }
+        interest_group_trigger = {
+            is_marginal = no
+            is_interest_group_type = ig_landowners
+            NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+        }
+        earliest_usage_date = 1853.1.1
+        latest_usage_date = 1898.1.1
+        chance = 50
+    }
+    on_created = {
+        set_variable = self_strengthening_character
+    }
+}
+
+# weiyuan
+
+chi_weiyuan_character_template = {
+    first_name = moh_Yuan
+    last_name = moh_Wei_1
+    historical = yes
+    culture = cu:han
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+    birth_date = 1794.4.23
+    traits = { literacy innovative}
+    is_agitator = yes
+    agitator_usage = {
+        country_trigger = {
+            NOT = {
+                cu:han = {
+                    culture_is_discriminated_in = root
+                }
+            }
+            has_state_in_state_region = STATE_HUNAN
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1820.1.1
+        latest_usage_date = 1857.3.26
+        chance = 50
+    }
+}
+
+chi_sun_yat_sen_character_template = {
+    first_name = Yat_Sen
+	last_name = Sun
+	historical = yes
+	culture = cu:han
+	religion = rel:protestant
+	female = no
+    # is_agitator = yes
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_republican_leader
+	birth_date = 1800.11.12
+	dna = dna_moh_sun_yat_sen
+	traits = {
+		erudite
+        persistent
+        ambitious
+	}
+    on_created = {
+        set_variable = sun_yatsen_character
+        save_scope_as = father_scope
+        owner = {
+            set_global_variable = {
+                name = sun_yatsen
+                value = scope:father_scope
+            }
+        }
+        set_immortal = yes
+        place_character_in_void = 1200
+        set_interest_group = ig_petty_bourgeoisie
+    }
+}
+
+chi_sun_character_template = {
+    # p社是不是有问题，有俩孙中山
 }

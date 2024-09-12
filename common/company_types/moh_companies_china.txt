@@ -85,6 +85,7 @@ company_state_grid = {
 	}
 	attainable = {
 		hidden_trigger = {
+			exists = c:CHI
 			this = c:CHI
 		}
 	}
@@ -115,6 +116,7 @@ company_china_aviation = {
 	}
 	attainable = {
 		hidden_trigger = {
+			exists = c:CHI
 			this = c:CHI
 		}
 	}
@@ -145,6 +147,7 @@ company_sanxin = {
 	}
 	attainable = {
 		hidden_trigger = {
+			exists = c:CHI
 			this = c:CHI
 		}
 	}

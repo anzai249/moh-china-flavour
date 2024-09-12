@@ -7,3 +7,198 @@ moh_coa_def_nihilist_flag_trigger = {
 	exists = scope:actor
 	scope:actor ?= { moh_coa_parliamentary_republic_trigger = yes }
 }
+
+sun_yatsen_trigger_30 = {
+	has_journal_entry = je_reunify_china
+	weighted_calc_true_if = {
+		amount = 30
+		5 = {
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
+			}
+		}
+		5 = {
+			has_law = law_type:law_homesteading
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_wealth_voting
+				has_law = law_type:law_census_voting
+				has_law = law_type:law_universal_suffrage
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_womens_rights
+			}
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_right_of_assembly
+				has_law = law_type:law_protected_speech
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_health_system
+			}
+		}
+	}
+}
+
+sun_yatsen_trigger_25 = {
+	has_journal_entry = je_reunify_china
+	weighted_calc_true_if = {
+		amount = 25
+		5 = {
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
+			}
+		}
+		5 = {
+			has_law = law_type:law_homesteading
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_wealth_voting
+				has_law = law_type:law_census_voting
+				has_law = law_type:law_universal_suffrage
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_womens_rights
+			}
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_right_of_assembly
+				has_law = law_type:law_protected_speech
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_health_system
+			}
+		}
+	}
+}
+
+sun_yatsen_trigger_20 = {
+	has_journal_entry = je_reunify_china
+	weighted_calc_true_if = {
+		amount = 20
+		5 = {
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
+			}
+		}
+		5 = {
+			has_law = law_type:law_homesteading
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_wealth_voting
+				has_law = law_type:law_census_voting
+				has_law = law_type:law_universal_suffrage
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_womens_rights
+			}
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_right_of_assembly
+				has_law = law_type:law_protected_speech
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_health_system
+			}
+		}
+	}
+}
+
+sun_yatsen_trigger_15 = {
+	has_journal_entry = je_reunify_china
+	weighted_calc_true_if = {
+		amount = 15
+		5 = {
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
+			}
+		}
+		5 = {
+			has_law = law_type:law_homesteading
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_wealth_voting
+				has_law = law_type:law_census_voting
+				has_law = law_type:law_universal_suffrage
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_womens_rights
+			}
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_right_of_assembly
+				has_law = law_type:law_protected_speech
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_health_system
+			}
+		}
+	}
+}
+
+sun_yatsen_trigger_10 = {
+	has_journal_entry = je_reunify_china
+	weighted_calc_true_if = {
+		amount = 10
+		5 = {
+			OR = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_parliamentary_republic
+			}
+		}
+		5 = {
+			has_law = law_type:law_homesteading
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_wealth_voting
+				has_law = law_type:law_census_voting
+				has_law = law_type:law_universal_suffrage
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_womens_rights
+			}
+		}
+		5 = {
+			OR = {
+				has_law = law_type:law_right_of_assembly
+				has_law = law_type:law_protected_speech
+			}
+		}
+		5 = {
+			NOT = {
+				has_law = law_type:law_no_health_system
+			}
+		}
+	}
+}

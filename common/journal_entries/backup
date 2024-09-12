@@ -1,0 +1,40 @@
+if = {
+					limit = {
+						weighted_calc_true_if = {
+							amount = 30
+							5 = {
+								OR = {
+									has_law = law_type:law_presidential_republic
+									has_law = law_type:law_parliamentary_republic
+								}
+							}
+							5 = {
+								has_law = law_type:law_homesteading
+							}
+							5 = {
+								OR = {
+									has_law = law_type:law_wealth_voting
+									has_law = law_type:law_census_voting
+									has_law = law_type:law_universal_suffrage
+								}
+							}
+							5 = {
+								NOT = {
+									has_law = law_type:law_no_womens_rights
+								}
+							}
+							5 = {
+								OR = {
+									has_law = law_type:law_right_of_assembly
+									has_law = law_type:law_protected_speech
+								}
+							}
+							5 = {
+								NOT = {
+									has_law = law_type:law_no_health_system
+								}
+							}
+						}
+					}
+					sun_yatsen_goto = yes
+				}

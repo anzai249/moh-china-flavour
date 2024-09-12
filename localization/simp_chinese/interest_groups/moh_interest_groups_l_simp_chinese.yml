@@ -7,3 +7,4 @@
   ig_eight_banners_desc: "清军入关时，满洲人设立的八旗制度，是清朝的基本军事组织形式，但在这个时代，八旗已经不再只是军事组织，而是一个特权阶层。"
   ig_farmers: "农民"
   ig_farmers_desc: "在自然经济的基础上，中国的农民基本上是农业经济与家庭手工业的结合为主体的生产者，他们是中国社会的基础。"
+  moh_ig_rural_folk_tt: "$ig_farmers$将改名为$ig_rural_folk$"

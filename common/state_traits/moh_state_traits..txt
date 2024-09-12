@@ -1,0 +1,16 @@
+﻿state_trait_great_wall = {
+	icon = "gfx/interface/icons/state_trait_icons/great_wall.dds"
+	
+	modifier = {
+		state_infrastructure_add = 5
+		unit_defense_mult = 0.10
+		state_migration_pull_mult = 0.05
+	}
+}
+state_trait_black_soil = {
+	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
+	
+	modifier = {
+		building_group_bg_agriculture_throughput_add = 0.15
+	}
+}

@@ -13,14 +13,14 @@ qing_monarchy.1 = {
 	trigger = {
 		c:CHI ?= this
 		ruler ?= {
-			has_template = moh_chi_daoguang_template
+			has_template = chi_daoguang_template
 		}
 		game_date >= 1850.1.1
 	}
 	immediate = {
 		random_scope_character = {
 			limit = {
-				has_template = moh_chi_daoguang_template
+				has_template = chi_daoguang_template
 			}
 			save_scope_as = qing_emperor_scope
 		}
