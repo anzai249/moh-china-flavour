@@ -2005,7 +2005,7 @@ chi_weiyuan_character_template = {
     }
 }
 
-chi_sun_yat_sen_character_template = {
+chi_moh_sun_yat_sen_character_template = {
     first_name = Yat_Sen
 	last_name = Sun
 	historical = yes
@@ -2014,9 +2014,9 @@ chi_sun_yat_sen_character_template = {
 	female = no
     # is_agitator = yes
 	interest_group = ig_petty_bourgeoisie
-	ideology = ideology_republican_leader
+	ideology = ideology_moh_kmt
 	birth_date = 1800.11.12
-	dna = dna_moh_sun_yat_sen
+	dna = dna_sun_yat_sen
 	traits = {
 		erudite
         persistent
@@ -2031,7 +2031,7 @@ chi_sun_yat_sen_character_template = {
                 value = scope:father_scope
             }
         }
-        set_immortal = yes
+        set_character_immortal = yes
         place_character_in_void = 1200
         set_interest_group = ig_petty_bourgeoisie
     }

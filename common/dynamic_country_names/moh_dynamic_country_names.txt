@@ -161,3 +161,20 @@ TIB = {
 		}
 	}
 }
+
+# DEFAULT = {
+# 	dynamic_country_name = {
+# 		# name = dyn_c_nra
+# 		# adjective = dyn_c_nra_adj
+
+# 		is_main_tag_only = yes
+# 		priority = 100
+		
+# 		trigger = {
+# 			exists = scope:actor
+# 			scope:actor ?= {
+# 				has_modifier = modifier_father
+# 			}
+# 		}
+# 	}
+# }

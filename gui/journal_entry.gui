@@ -85,12 +85,12 @@ types journal_entry_panel_types
 						visible = "[EqualTo_string(JournalEntry.GetName, Localize('je_father_of_the_republic'))]"
 						background = {
 							using = fade_right_simple
-							margin_right = 10
+							margin_left = 10
 						}
 						margin = { 10 10 }
 						text = "father_now_at"
 						parentanchor = left
-						position = { 0 -5 }
+						position = { 0 -7 }
 						autoresize = yes
 						max_width = 256
 					}

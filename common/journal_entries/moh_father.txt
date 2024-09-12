@@ -35,7 +35,7 @@ je_father_of_the_republic = {
 				this ?= c:BEI
 			}
 			create_character = {
-				template = chi_sun_yat_sen_character_template
+				template = chi_moh_sun_yat_sen_character_template
 			}
 			set_global_variable = {
 				name = sun_yatsen_in
@@ -49,17 +49,36 @@ je_father_of_the_republic = {
 	complete = {
 		custom_tooltip = {
 			text = je_father_of_the_republic.tt.complete
-			always = no
+			NOT = {
+				has_journal_entry = je_reunify_china
+			}
 		}
 	}
 	on_complete = {
-		custom_tooltip = je_father_of_the_republic.tt.on.complete
+		custom_tooltip = {
+			text = je_father_of_the_republic.tt.on.complete
+			global_var:sun_yatsen = {
+				kill_character = yes
+			}
+			create_character = {
+				template = chi_moh_sun_yat_sen_character_template
+				ig_leader = yes
+				on_created = {
+					set_character_as_ruler = yes
+					set_character_immortal = no
+				}
+			}
+		}
+		remove_modifier = modifier_father
 	}
 	fail = {
 		custom_tooltip = {
 			text = je_father_of_the_republic.tt.fail
-			always = no
+			has_global_variable = sun_yatsen_dead
 		}
+	}
+	on_fail = {
+		remove_modifier = modifier_father
 	}
 	on_weekly_pulse = {
 		effect = {
@@ -70,11 +89,43 @@ je_father_of_the_republic = {
 							has_variable = sun_yatsen_character
 						}
 					}
+					NOT = {
+						has_global_variable = sun_yatsen_dead
+					}
 				}
 				create_character = {
-					template = chi_sun_yat_sen_character_template
+					template = chi_moh_sun_yat_sen_character_template
 				}
 			}
+			global_var:sun_yatsen_in = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = modifier_father
+						}
+						has_journal_entry = je_reunify_china
+					}
+					add_modifier = {
+						name = modifier_father
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					has_modifier = modifier_father
+					has_journal_entry = je_reunify_china
+					NOT = {
+						this = global_var:sun_yatsen_in
+					}
+				}
+				remove_modifier = modifier_father
+			}
+		}
+	}
+	on_monthly_pulse = {
+		random_events = {
+			10 = 0
+			5 = moh_historical.1
 		}
 	}
 	weight = 500

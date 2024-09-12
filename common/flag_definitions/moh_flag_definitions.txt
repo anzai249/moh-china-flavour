@@ -1,15 +1,17 @@
 ﻿@coa_width = 768
 @coa_height = 512
-
-CHI = { # China
+CHI = {
+	# China
 	flag_definition = {
 		coa = CHI_han_empire
 		subject_canton = CHI_han_empire
 		coa_with_overlord_canton = CHI_han_empire
 		priority = 5
-		trigger = { 
+		trigger = {
 			scope:actor = {
-				NOT = { country_has_primary_culture = cu:manchu }
+				NOT = {
+					country_has_primary_culture = cu:manchu
+				}
 				has_law = law_type:law_monarchy
 			}
 		}
@@ -18,31 +20,31 @@ CHI = { # China
 		coa = CHI
 		subject_canton = CHI
 		coa_with_overlord_canton = CHI_subject
-		allow_overlord_canton = yes		
+		allow_overlord_canton = yes
 		priority = 1
 	}
 	flag_definition = {
 		coa = CHI_absolute_monarchy
 		subject_canton = CHI_absolute_monarchy
 		coa_with_overlord_canton = CHI_subject
-		allow_overlord_canton = yes				
+		allow_overlord_canton = yes
 		priority = 20
-		trigger = { 
+		trigger = {
 			coa_def_absolute_monarchy_flag_trigger = yes
 		}
-	}	
+	}
 	flag_definition = {
 		coa = CHI_republic
 		subject_canton = CHI_republic
 		allow_overlord_canton = yes
 		priority = 5
-		trigger = { 
+		trigger = {
 			coa_def_republic_flag_trigger = yes
 			NOT = {
 				has_global_variable = china_shatters
 			}
 		}
-	}	
+	}
 	flag_definition = {
 		coa = CHI_shibaxing
 		subject_canton = CHI_shibaxing
@@ -54,40 +56,41 @@ CHI = { # China
 			}
 			coa_def_secessionist_or_revolutionary_trigger = yes
 		}
-	}	
+	}
 	flag_definition = {
 		coa = CHI_theocracy
 		subject_canton = CHI_theocracy
 		subject_canton = CHI_absolute_monarchy
 		priority = 20
-		trigger = { 
+		trigger = {
 			coa_def_theocracy_flag_trigger = yes
 		}
-	}	
+	}
 	flag_definition = {
 		coa = CHI_communist
 		subject_canton = sub_CHI_communist
 		priority = 1500
-		trigger = { 
+		trigger = {
 			coa_def_communist_flag_trigger = yes
 		}
-	}		
+	}
 	flag_definition = {
 		coa = CHI_minguo
 		subject_canton = CHI_kmt
 		priority = 5
-		trigger = { 
+		trigger = {
 			coa_def_republic_flag_trigger = yes
-			
 		}
 	}
 	flag_definition = {
 		coa = CHI_liansheng
 		subject_canton = CHI_liansheng_jing
 		priority = 5
-		trigger = { 
+		trigger = {
 			moh_coa_def_nihilist_flag_trigger = yes
-			NOT = { has_law = law_type:law_monarchy }
+			NOT = {
+				has_law = law_type:law_monarchy
+			}
 		}
 	}
 	flag_definition = {
@@ -102,7 +105,7 @@ CHI = { # China
 		coa = CHI_fujian
 		subject_canton = CHI_fujian
 		priority = 5
-		trigger = { 
+		trigger = {
 			coa_def_republic_flag_trigger = yes
 		}
 	}
@@ -110,7 +113,7 @@ CHI = { # China
 		coa = CHI_shibaxing
 		subject_canton = CHI_shibaxing
 		priority = 5
-		trigger = { 
+		trigger = {
 			coa_def_republic_flag_trigger = yes
 		}
 	}
@@ -118,7 +121,7 @@ CHI = { # China
 		coa = CHI_guojun
 		subject_canton = CHI_guojun
 		priority = 5
-		trigger = { 
+		trigger = {
 			coa_def_republic_flag_trigger = yes
 		}
 	}
@@ -126,13 +129,14 @@ CHI = { # China
 		coa = CHI_anguo
 		subject_canton = CHI_anguo
 		priority = 5
-		trigger = { 
+		trigger = {
 			coa_def_republic_flag_trigger = yes
 		}
 	}
 }
 
-FRS = { # Taiwan
+FRS = {
+	# Taiwan
 	flag_definition = {
 		coa = FRS
 		subject_canton = FRS
@@ -142,7 +146,8 @@ FRS = { # Taiwan
 	}
 }
 
-SHN = { # Shanxi
+SHN = {
+	# Shanxi
 	flag_definition = {
 		coa = SHN
 		subject_canton = CHI_shibaxing
@@ -152,7 +157,8 @@ SHN = { # Shanxi
 	}
 }
 
-YUN = { # Yunnan
+YUN = {
+	# Yunnan
 	flag_definition = {
 		coa = YUN
 		subject_canton = CHI_shibaxing
@@ -162,7 +168,8 @@ YUN = { # Yunnan
 	}
 }
 
-ZHI = { # ZHILI
+ZHI = {
+	# ZHILI
 	flag_definition = {
 		coa = ZHI
 		subject_canton = CHI_shibaxing
@@ -252,20 +259,20 @@ GUI = {
 	}
 }
 
-MCH = { # Manchu
+MCH = {
+	# Manchu
 	flag_definition = {
 		coa = MCH
 		subject_canton = MCH
 		priority = 1
 	}
-	
 	flag_definition = {
 		coa = MCH
 		subject_canton = MCH
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = MCH_subject
 		priority = 1
-		trigger = { 
+		trigger = {
 			exists = c:CHI
 			scope:actor ?= {
 				is_subject_of = c:CHI
@@ -274,12 +281,29 @@ MCH = { # Manchu
 	}
 }
 
-FUJ = { #Fujian
+FUJ = {
+	#Fujian
 	flag_definition = {
 		coa = CHI_fujian
 		subject_canton = CHI_fujian
 		allow_overlord_canton = yes
 		coa_with_overlord_canton = CHI_fujian
 		priority = 1
+	}
+}
+
+DEFAULT = {
+	flag_definition = {
+		coa = CHI_guojun
+		priority = 1000
+		trigger = {
+			exists = scope:actor
+			NOT = {
+				scope:actor = c:CHI
+			}
+			scope:actor ?= {
+				has_modifier = modifier_father
+			}
+		}
 	}
 }

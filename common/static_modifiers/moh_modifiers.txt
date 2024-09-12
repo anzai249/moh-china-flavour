@@ -108,7 +108,9 @@ modifier_self_strengthing = {
 # father
 modifier_father = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
-	unit_offense_mult = 0.25
+	unit_offense_mult = 0.05
+	unit_morale_loss_mult = -0.25
+	unit_morale_recovery_mult = 0.10
 	country_law_enactment_time_mult = -0.1
 	country_authority_mult = 0.25
 	country_prestige_add = 50

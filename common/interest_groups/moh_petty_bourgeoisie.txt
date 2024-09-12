@@ -72,7 +72,9 @@
 		}
 		if = {
 			limit = {
-				owner = { c:CHI ?= this }
+				any_primary_culture = {
+					has_discrimination_trait = han_chinese
+				}
 			}
 			ig:ig_petty_bourgeoisie = { 
 				set_interest_group_name = ig_national_bourgeoisie

@@ -6,6 +6,19 @@ on_monthly_pulse_country = {
 		moh_historical.4
 		moh_historical.6
 	}
+}
+
+on_yearly_pulse_country = {
+	on_actions = {
+		historical_agitators_yearly_events_moh
+		delay = {
+			days = 60
+		}
+		qing_monarchy_yearly_events
+	}
+}
+
+on_half_yearly_pulse_country = {
 	effect = {
 		if = {
 			limit = {
@@ -88,15 +101,5 @@ on_monthly_pulse_country = {
 				}
 			}
 		}
-	}
-}
-
-on_yearly_pulse_country = {
-	on_actions = {
-		historical_agitators_yearly_events_moh
-		delay = {
-			days = 60
-		}
-		qing_monarchy_yearly_events
 	}
 }

@@ -1,4 +1,4 @@
-﻿dna_moh_sun_yat_sen = {
+﻿dna_sun_yat_sen = {
 	portrait_info = {
 	genes={ 		hair_color={ 30 229 30 229 }
  		skin_color={ 223 87 51 76 }
@@ -101,7 +101,7 @@
  		gene_eyebrows_shape={ "avg_spacing_high_thickness" 127 "far_spacing_high_thickness" 127 }
  		gene_eyebrows_fullness={ "layer_2_lowest_thickness" 255 "layer_2_low_thickness" 127 }
  		hairstyles={ "east_asian_hairstyles" 85 "east_asian_hairstyles" 148 }
- 		beards={ "no_beard" 147 "no_beard" 147 }
+ 		beards={ "no_beard" 0 "no_beard" 0 }
  		mustaches={ "asian_mustaches" 196 "no_mustache" 39 }
  		props={ "no_prop" 0 "no_prop" 0 }
  		eye_accessory={ "normal_eyes" 0 "normal_eyes" 0 }

@@ -82,9 +82,7 @@
 		# Literati
 		else_if = {
 			limit = {
-				any_primary_culture = {
-					has_discrimination_trait = han_chinese
-				}
+				c:CHI ?= THIS
 			}
 			ig:ig_intelligentsia = { 
 				set_interest_group_name = ig_literati

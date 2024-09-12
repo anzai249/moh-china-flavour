@@ -196,3 +196,8 @@
   self_strengthening.1.d: "[SCOPE.sCharacter('self_strengthening_character').GetFullName]上书主张置办洋务"
   self_strengthening.1.f: "[SCOPE.sCharacter('self_strengthening_character').GetFullName]等数位大臣联名上书，建议朝廷借鉴西洋诸国之法，以振兴国力、富强兵甲，保卫我[ROOT.GetCountry.GetName]国土。该上书言及，夷人船坚炮利，屡次犯我海疆，实为外忧，而我兵器不利、军备陈旧，恐难以御敌。\n\n上书者称，西洋诸国在兵工、矿业、航运等方面颇有长处，若我[ROOT.GetCountry.GetNameNoFlag]采其所长，建立自强之法，必能改变当前局面。尤以洋务为重，建议设立兵工厂、引进外夷技师以图自强，同时购置西洋机器，改进现有兵船火器。"
   self_strengthening.1.a: "“师夷长技以制夷”"
+  moh_historical.10.t: "国父去世"
+  moh_historical.10.d: "[SCOPE.sCharacter('sun_yatsen_dead_scope').GetFullName]死于肝胆癌"
+  moh_historical.10.f: "我们敬爱的国父[SCOPE.sCharacter('sun_yatsen_dead_scope').GetFullName]逝世，终年[SCOPE.sCharacter('sun_yatsen_dead_scope').GetAge]岁。\n\n“中国数十年来为主义而奋斗者，中山先生一人而已。中国政界中之人格，不屈不变、始终如一者，中山先生一人而已。中山先生真爱国者也！于为国之外，无其他杂念，可谓纯洁之爱国者。中山先生真实行者也！不顾成败，不问毁誉，可谓勇往之实行者。”\n\n我们将永远怀念他的贡献。"
+  moh_historical.10.a: "#bold “革命尚未成功，同志仍须努力。”#!"
+  sun_yatsen_dead_tt: "我们都很尊重他"

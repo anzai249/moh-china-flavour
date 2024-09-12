@@ -687,3 +687,53 @@ moh_historical.9 = {
 		}
 	}
 }
+
+moh_historical.10 = {
+	# death of sun yat-sen
+	type = country_event
+	placement = root
+	title = moh_historical.10.t
+	desc = moh_historical.10.d
+	flavor = moh_historical.10.f
+	dlc = dlc0moh
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:sun_yatsen_dead_scope
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+
+	duration = 3
+
+	trigger = {
+		has_global_variable = sun_yatsen
+		NOT = {
+			has_global_variable = sun_yatsen_dead
+		}
+		year >= 1924
+	}
+
+	immediate = {
+		global_var:sun_yatsen = {
+			save_scope_as = sun_yatsen_dead_scope
+		}
+		set_global_variable = sun_yatsen_dead
+	}
+
+	option = {
+		name = moh_historical.10.a
+		default_option = yes
+		highlighted_option = yes
+		trigger = {
+			custom_tooltip = {
+				text = sun_yatsen_dead_tt
+			}
+		}
+		scope:sun_yatsen_dead_scope = {
+			kill_character = yes
+		}
+		remove_global_variable = sun_yatsen
+		ai_chance = {
+			base = 10
+		}
+	}
+}
