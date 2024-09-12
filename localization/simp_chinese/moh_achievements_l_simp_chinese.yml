@@ -1,4 +1,6 @@
 ﻿l_simp_chinese:
- ACHIEVEMENT_achievement_wuxu_reform: "戊戌变法"
- ACHIEVEMENT_DESC_achievement_wuxu_reform: "作为大清，在保留君主制的情况下完成日志条目“维新变法”"
- achievement_wuxu_reform_tt: "完成“维新变法”日志条目"
+  ACHIEVEMENT_achievement_wuxu_reform: "戊戌变法"
+  ACHIEVEMENT_DESC_achievement_wuxu_reform: "作为大清，在保留君主制的情况下完成日志条目“维新变法”"
+  achievement_wuxu_reform_tt: "完成“维新变法”日志条目"
+  ACHIEVEMENT_achievement_white_sun: "白日照耀中华"
+  ACHIEVEMENT_DESC_achievement_white_sun: "成功将青天白日满地红旗用作国旗"

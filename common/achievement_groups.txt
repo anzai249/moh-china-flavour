@@ -103,6 +103,7 @@ group = {
 		"achievement_devils_railroad"
 		"achievement_iranzamin"
 		"achievement_cant_touch_this"
+		"achievement_white_sun"
 	}	
 }
 

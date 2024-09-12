@@ -1,12 +1,12 @@
 ﻿achievement_wuxu_reform = {
-    possible = {
+	possible = {
 		exists = c:CHI
 		THIS = c:CHI
 		NOT = {
 			has_variable = wuxu_reform_failed
 		}
-    }
-    happened = {
+	}
+	happened = {
 		exists = c:CHI
 		THIS = c:CHI
 		has_law = law_type:law_monarchy
@@ -14,5 +14,23 @@
 			text = achievement_wuxu_reform_tt
 			has_variable = wuxu_reform_complete_var
 		}
-    }
+	}
+}
+
+achievement_white_sun = {
+	possible = {
+		OR = {
+			AND = {
+				exists = c:CHI
+				THIS = c:CHI
+			}
+			has_journal_entry = je_reunify_china
+		}
+	}
+	happened = {
+		exists = c:CHI
+		THIS = c:CHI
+		has_global_variable = china_shatters
+		coa_republic_trigger = yes
+	}
 }
