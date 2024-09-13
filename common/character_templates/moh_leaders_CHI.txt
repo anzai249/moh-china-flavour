@@ -1663,6 +1663,16 @@ chi_daoguang_template = {
     traits = {
         cautious
     }
+    on_created = {
+        set_variable = daoguang_character
+        save_scope_as = daoguang_scope
+        owner = {
+            set_variable = {
+                name = daoguang
+                value = scope:daoguang_scope
+            }
+        }
+    }
 }
 
 chi_tongzhi_template = {

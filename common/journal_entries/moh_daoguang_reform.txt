@@ -61,7 +61,7 @@
 }
 
 je_daoguang_reform_grain = {
-	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	icon = "gfx/interface/icons/goods_icons/grain.dds"
 	group = je_group_historical_content
 	complete = {
 		capital = {
@@ -98,7 +98,7 @@ je_daoguang_reform_grain = {
 }
 
 je_daoguang_reform_mine = {
-	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	icon = "gfx/interface/icons/goods_icons/iron.dds"
 	group = je_group_historical_content
 	complete = {
 		any_scope_building = {
@@ -146,7 +146,7 @@ je_daoguang_reform_mine = {
 }
 
 je_daoguang_reform_opium = {
-	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	icon = "gfx/interface/icons/goods_icons/opium.dds"
 	group = je_group_historical_content
 	immediate = {
 		ig:ig_petty_bourgeoisie = {
