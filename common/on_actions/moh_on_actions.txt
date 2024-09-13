@@ -104,3 +104,24 @@ on_half_yearly_pulse_country = {
 		}
 	}
 }
+
+on_heir_born = {
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					ruler = {
+						OR = {
+							has_template = chi_tongzhi_template
+							has_template = chi_guangxu_template
+						}
+					}
+				}
+			}
+            kill_character = {
+                value  = yes
+                hidden = yes
+            }
+		}
+	}
+}

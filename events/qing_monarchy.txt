@@ -147,3 +147,46 @@ qing_monarchy.3 = {
 		}
 	}
 }
+
+qing_monarchy.4 = {
+	# 光绪驾崩
+	type = country_event
+	placement = root
+	title = qing_monarchy.4.t
+	desc = qing_monarchy.4.d
+	flavor = qing_monarchy.4.f
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:qing_emperor_scope
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	trigger = {
+		c:CHI ?= this
+		ruler ?= {
+			has_template = chi_guangxu_template
+		}
+		game_date >= 1908.11.14
+	}
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_template = chi_guangxu_template
+			}
+			save_scope_as = qing_emperor_scope
+		}
+	}
+	option = {
+		name = qing_monarchy.4.a
+		default_option = yes
+		scope:qing_emperor_scope = {
+			kill_character = yes
+		}
+		if = {
+			limit = {
+				game_date >= 1912.2.12
+			}
+			create_character = {
+				template = chi_puyi_template
+			}
+		}
+	}
+}

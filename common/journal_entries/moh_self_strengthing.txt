@@ -7,6 +7,9 @@
 	modifiers_while_active = {
 		modifier_self_strengthing
 	}
+	possible = {
+		always = no
+	}
 	weight = 100
 	should_be_pinned_by_default = yes
 	timeout = 10950

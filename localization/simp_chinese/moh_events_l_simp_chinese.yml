@@ -137,6 +137,10 @@
   qing_monarchy.3.f: "[SCOPE.sCharacter('qing_emperor_scope').GetFirstName]于养心殿病逝。朝廷宣布皇帝死于#bold 天花#!，可是民间传言他死于#bold 梅毒#!。恐怕他真正的死因只有太医知道了。\n\n皇帝英年早逝，无子嗣，需要尽早挑选合适人选继承大统。"
   qing_monarchy.3.a: "#bold 载湉#!看起来很听话"
   qing_monarchy.3.b: "#bold 载漪#!更有经验"
+  qing_monarchy.4.t: "皇帝驾崩"
+  qing_monarchy.4.d: "[SCOPE.sCharacter('qing_emperor_scope').GetFullName]驾崩"
+  qing_monarchy.4.f: "[SCOPE.sCharacter('qing_emperor_scope').GetFullName]驾崩"
+  qing_monarchy.4.a: "置办丧事"
   # 台湾
   moh_taiwan.1.t: "台湾起义"
   moh_taiwan.1.d: "我们刚刚接管的[SCOPE.sState('taiwan_state_scope').GetName]发生了一场反对我们的起义。"

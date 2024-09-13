@@ -1,4 +1,4 @@
-BUILDINGS = {
+﻿BUILDINGS = {
 	s:STATE_BEIJING = {
 		region_state:CHI = {
 			create_building = {
