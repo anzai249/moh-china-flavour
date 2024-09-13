@@ -171,3 +171,22 @@ sun_yatsen_goto = {
 	# 	transfer_character = root
 	# }
 }
+
+
+chi_add_1_fragile_unity = {
+	custom_tooltip = chi_remove_1_fragile_unity_tt
+	post_notification = warlord_china_explosion_point_add
+	change_variable = {
+		name = china_warlord_explosion
+		add = 1
+	}
+}
+
+chi_remove_1_fragile_unity = {
+	custom_tooltip = chi_add_1_fragile_unity_tt
+	post_notification = warlord_china_explosion_point_remove
+	change_variable = {
+		name = china_warlord_explosion
+		subtract = 1
+	}
+}

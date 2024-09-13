@@ -1,0 +1,179 @@
+﻿opium_wars.1 = {
+	type = country_event
+	placement = ROOT
+
+	title = opium_wars.1.t
+	desc = opium_wars.1.d
+	flavor = opium_wars.1.f
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_opium_smoker"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		NOT = { has_variable = opium_wars_start_var }
+		any_primary_culture = {
+			has_cultural_obsession = opium
+		}
+		is_country_type = unrecognized
+		total_population > 5000000
+		NOT = {
+			any_country = {
+				has_variable = opium_wars_target
+			}
+		}
+		any_scope_state = {
+			any_scope_building = {
+				is_building_type = building_port
+			}
+		}
+		is_subject = no
+		NOT = { has_law = law_type:law_free_trade }
+		any_market = {
+			owner = ROOT
+			any_trade_route = {
+				goods = g:opium
+				importer.owner = ROOT
+				NOT = { actor_market.owner = root }
+				actor_market.owner = {
+					country_rank >= rank_value:major_power
+					# Exclude countries that already have a treaty port e.g. Portugal at game start
+					NOT = {
+						any_scope_state = {
+							market = {
+								owner = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		NOT = {
+			has_modifier = opium_wars_addiction_modifier
+		}
+	}
+
+	immediate = {
+		set_variable = opium_wars_start_var
+		random_primary_culture = {
+			limit = {
+				has_cultural_obsession = opium
+			}
+			save_scope_as = addicted_culture
+		}
+		random_market = {
+			limit = {
+				owner = ROOT
+				any_trade_route = {
+					goods = g:opium
+					importer.owner = ROOT
+					NOT = { actor_market.owner = root }
+					actor_market.owner = {
+						country_rank >= rank_value:major_power
+						NOT = {
+							any_scope_state = {
+								market = {
+									owner = ROOT
+								}
+							}
+						}
+					}
+				}
+			}
+			random_trade_route = {
+				limit = {
+					goods = g:opium
+					importer.owner = ROOT
+					NOT = { actor_market.owner = root }
+					actor_market.owner = {
+						country_rank >= rank_value:major_power
+					}
+				}
+				actor_market.owner = {
+					save_scope_as = opium_importer
+				}
+			}
+		}
+	}
+
+	option = {
+		name = opium_wars.1.a
+		default_option = yes
+		set_variable = opium_wars_target
+		set_variable = {
+			name = opium_wars_completion_tracker
+			value = 0
+		}
+		add_journal_entry = {
+			type = je_opium_obsession
+		}
+		# send events to all applicable powers
+			# can't just use the scope because we want to catch multiple countries if we can
+		random_market = {
+			limit = {
+				owner = ROOT
+				any_trade_route = {
+					goods = g:opium
+					importer.owner = ROOT
+					NOT = { actor_market.owner = root }
+					actor_market.owner = {
+						country_rank >= rank_value:major_power
+					}
+				}
+			}
+			every_trade_route = {
+				limit = {
+					goods = g:opium
+					importer.owner = ROOT
+					NOT = { actor_market.owner = root }
+					actor_market.owner = {
+						country_rank >= rank_value:major_power
+					}
+				}
+				actor_market.owner = {
+					trigger_event = {
+						id = opium_wars.2
+					}
+				}
+			}
+		}
+		add_modifier = {
+			name = opium_wars_addiction_modifier
+			months = long_modifier_time
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = opium_wars.1.b
+		add_modifier = {
+			name = opium_wars_addiction_modifier
+			months = very_long_modifier_time
+		}
+		add_radicals = {
+			value = medium_radicals
+		}		
+		if = {
+			limit = { has_journal_entry = je_warlord_china }
+			chi_remove_1_fragile_unity = yes
+		}
+		set_variable = lost_opium_wars	
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+
+historical_agitators.21 = {
+	trigger = {
+		always = no
+	}
+}

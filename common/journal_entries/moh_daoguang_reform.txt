@@ -1,0 +1,194 @@
+﻿je_daoguang_reform_main = {
+	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	group = je_group_historical_content
+	is_shown_when_inactive = {
+		this ?= c:CHI
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_daoguang_reform_main_complete_tt
+			var:daoguang_reform_progress >= 3
+		}
+	}
+	on_complete = {
+		add_modifier = {
+			name = modifier_daoguang
+			years = 10
+			is_decaying = yes
+		}
+	}
+	fail = {
+		custom_tooltip = {
+			text = je_daoguang_reform_main_fail_tt
+			NOT = {
+				any_scope_character = {
+					has_template = chi_daoguang_template
+				}
+			}
+		}
+	}
+	on_fail = {
+		add_modifier = {
+			name = modifier_daoguang_failed
+			years = 10
+			is_decaying = yes
+		}
+	}
+	immediate = {
+		set_variable = {
+			name = daoguang_reform_progress
+			value = 0
+		}
+		add_journal_entry = {
+			type = je_daoguang_reform_grain
+		}
+		add_journal_entry = {
+			type = je_daoguang_reform_opium
+		}
+		add_journal_entry = {
+			type = je_daoguang_reform_mine
+		}
+	}
+	current_value = {
+		value = var:daoguang_reform_progress
+	}
+	goal_add_value = {
+		add = 3
+	}
+	progressbar = yes
+	weight = 250
+	should_be_pinned_by_default = yes
+}
+
+je_daoguang_reform_grain = {
+	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	group = je_group_historical_content
+	complete = {
+		capital = {
+			sg:grain = {
+				state_goods_cheaper > 0.05
+			}
+			any_scope_building = {
+				is_building_type = building_port
+				level >= 2
+			}
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = je_daoguang_reform_opium_on_complete_tt
+			change_variable = {
+				name = daoguang_reform_progress
+				add = 1
+			}
+		}
+	}
+	fail = {
+		custom_tooltip = {
+			text = je_daoguang_reform_main_fail_tt
+			NOT = {
+				any_scope_character = {
+					has_template = chi_daoguang_template
+				}
+			}
+		}
+	}
+	weight = 200
+	should_be_pinned_by_default = yes
+}
+
+je_daoguang_reform_mine = {
+	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	group = je_group_historical_content
+	complete = {
+		any_scope_building = {
+			is_building_type = building_iron_mine
+			level >= 15
+		}
+		any_scope_building = {
+			is_building_type = building_coal_mine
+			level >= 15
+		}
+		OR = {
+			any_scope_building = {
+				is_building_type = building_iron_mine
+				level >= 5
+				private_ownership_fraction > 0.75
+			}
+			any_scope_building = {
+				is_building_type = building_coal_mine
+				level >= 5
+				private_ownership_fraction > 0.75
+			}
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = je_daoguang_reform_opium_on_complete_tt
+			change_variable = {
+				name = daoguang_reform_progress
+				add = 1
+			}
+		}
+	}
+	fail = {
+		custom_tooltip = {
+			text = je_daoguang_reform_main_fail_tt
+			NOT = {
+				any_scope_character = {
+					has_template = chi_daoguang_template
+				}
+			}
+		}
+	}
+	weight = 200
+	should_be_pinned_by_default = yes
+}
+
+je_daoguang_reform_opium = {
+	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	group = je_group_historical_content
+	immediate = {
+		ig:ig_petty_bourgeoisie = {
+			save_scope_as = petty_bourgeoisie_ig
+		}
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_daoguang_reform_opium_complete_tt
+			has_variable = destruction_of_opium
+		}
+		has_consumption_tax = g:opium
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = je_daoguang_reform_opium_on_complete_tt
+			change_variable = {
+				name = daoguang_reform_progress
+				add = 1
+			}
+		}
+	}
+	fail = {
+		OR = {
+			custom_tooltip = {
+				text = je_daoguang_reform_main_fail_lin_tt
+				NOT = {
+					any_scope_character = {
+						has_variable = is_linzexu
+					}
+				}
+			}
+			custom_tooltip = {
+				text = je_daoguang_reform_main_fail_tt
+				NOT = {
+					any_scope_character = {
+						has_template = chi_daoguang_template
+					}
+				}
+			}
+		}
+	}
+	weight = 200
+	should_be_pinned_by_default = yes
+}

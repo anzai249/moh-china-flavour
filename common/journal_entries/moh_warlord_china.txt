@@ -150,6 +150,21 @@
 				chi_remove_1_fragile_unity = yes
 				set_variable = china_warlord_explosion_taiwan
 			}
+			if = {
+				limit = {
+					NOT = {
+						has_variable = china_warlord_explosion_restore_monarchy
+					}
+					NOT = {
+						has_law = law_type:law_monarchy
+					}
+					currently_enacting_law = {
+						type = law_type:law_monarchy
+					}
+				}
+				chi_remove_1_fragile_unity = yes
+				set_variable = china_warlord_explosion_restore_monarchy
+			}
 		}
 	}
 	weight = 10000

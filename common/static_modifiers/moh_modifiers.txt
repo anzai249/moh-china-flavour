@@ -116,3 +116,18 @@ modifier_father = {
 	country_prestige_add = 50
 	country_infamy_decay_mult = 0.5
 }
+
+# Daoguang Restoration
+modifier_daoguang = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_positive.dds
+	country_authority_mult = 0.15
+	country_bureaucracy_mult = 0.15
+	state_standard_of_living_add = 0.5
+}
+
+# Daoguang Restoration failed
+modifier_daoguang_failed = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
+	country_authority_mult = -0.15
+	country_bureaucracy_mult = -0.15
+}

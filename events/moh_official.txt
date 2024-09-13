@@ -31,9 +31,3 @@ moh_official.1 = {
 	}
 	
 }
-
-historical_agitators.21 = {
-	trigger = {
-		always = no
-	}
-}

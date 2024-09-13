@@ -27,6 +27,7 @@
 			years = 5
 			is_decaying = yes
 		}
+		chi_add_1_fragile_unity = yes
 	}
 	timeout = 3650
 	on_timeout = {
