@@ -1952,12 +1952,13 @@ chi_gong_character_template = {
     historical = yes
     culture = cu:manchu
     female = no
+    dna = moh_dna_chi_yixin
     ideology = ideology_royalist
     interest_group = ig_landowners
-    birth_date = 1833.1.11
+    birth_date = 1800.1.11
     traits = {
         experienced_diplomat
-        expensive_tastes
+        reserved
     }   
     interest_group_leader_usage = {
         country_trigger = {
@@ -1982,6 +1983,7 @@ chi_gong_character_template = {
     }
     on_created = {
         set_variable = self_strengthening_character
+        set_variable = is_gong
     }
 }
 

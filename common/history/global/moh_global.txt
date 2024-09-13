@@ -12,5 +12,9 @@
 			name = china_warlord_explosion
 			value = 6
 		}
+		set_variable = {
+			name = prince_gong_progress
+			value = 0
+		}
 	}
 }

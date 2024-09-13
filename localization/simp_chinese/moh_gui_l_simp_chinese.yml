@@ -3,3 +3,4 @@
   father_now_at: "国父目前在：[GetGlobalVariable('sun_yatsen_in').GetCountry.GetName]"
   father_attitude: "国父对你态度是："
   daoguang_name: "道光皇帝 #bold [GetPlayer.GetRuler.GetFirstName]#! "
+  gong_name: "恭亲王 #bold [GetPlayer.MakeScope.Var('yixin').GetCharacter.GetFirstName]#! "

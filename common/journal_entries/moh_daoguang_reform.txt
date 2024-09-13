@@ -3,6 +3,7 @@
 	group = je_group_historical_content
 	is_shown_when_inactive = {
 		this ?= c:CHI
+		has_law = law_type:law_monarchy
 	}
 	complete = {
 		custom_tooltip = {
@@ -192,3 +193,5 @@ je_daoguang_reform_opium = {
 	weight = 200
 	should_be_pinned_by_default = yes
 }
+
+je_

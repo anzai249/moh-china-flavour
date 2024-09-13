@@ -1,0 +1,17 @@
+﻿gong_progress_bar = {
+	name = "gong_progress_bar"
+	desc = "gong_progress_bar_desc"
+	default_green = yes
+	start_value = 50
+	min_value = 0
+	max_value = 100
+	weekly_progress = {
+		add = {
+			desc = "prince_gong_popularity"
+			value = {
+				base = scope:gong_scope.popularity
+				multiply = 0.1
+			}
+		}
+	}
+}

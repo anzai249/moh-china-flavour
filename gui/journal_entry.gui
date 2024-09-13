@@ -121,13 +121,10 @@ types journal_entry_panel_types
 				}
 
 				widget = {
-					# Whether the character portrait is visible or not
-					# depends on the name of the journal entry.
-					visible = "[Or(EqualTo_string(JournalEntry.GetName, Localize('je_daoguang_reform_main')), EqualTo_string(JournalEntry.GetName, Localize('je_daoguang_reform_main')))]"
+					visible = "[EqualTo_string(JournalEntry.GetName, Localize('je_daoguang_reform_main'))]"
 					
 					size = { @panel_width_plus_20 290 }
 					parentanchor = hcenter
-					# character var
 					datacontext = "[GetPlayer.GetRuler]"
 					
 					character_portrait_large_torso = {
@@ -138,7 +135,6 @@ types journal_entry_panel_types
 						blockoverride "portrait_icons" {}
 						blockoverride "portrait_button" {}
 					}
-					# textbox below the character portrait
 					default_header_clean_faded = {
 						visible = "[EqualTo_string(JournalEntry.GetName, Localize('je_daoguang_reform_main'))]"
 						size = { 250 40 }
@@ -157,9 +153,42 @@ types journal_entry_panel_types
 					}
 				}
 
+				widget = {
+					visible = "[EqualTo_string(JournalEntry.GetName, Localize('je_prince_gong'))]"
+					
+					size = { @panel_width_plus_20 290 }
+					parentanchor = hcenter
+					datacontext = "[GetPlayer.MakeScope.Var('yixin').GetCharacter]"
+					
+					character_portrait_large_torso = {
+						position = { 0 0 }
+						parentanchor = hcenter
+						blockoverride "show_hat" {}
+						blockoverride "tooltip" {}
+						blockoverride "portrait_icons" {}
+						blockoverride "portrait_button" {}
+					}
+					default_header_clean_faded = {
+						visible = "[EqualTo_string(JournalEntry.GetName, Localize('je_prince_gong'))]"
+						size = { 250 40 }
+						position = { 0 258 }
+						blockoverride "text" {}
+						parentanchor = hcenter
+						margin = { 10 10 }
+						textbox = {
+							text = "gong_name"
+							parentanchor = vcenter|hcenter
+							position = { 0 -3 }
+							autoresize = yes
+							max_width = 256
+							using = fontsize_large
+						}
+					}
+				}
+
 				widget  = {
 					size = { @panel_width_plus_20 120 }
-					visible = "[Not(Or(EqualTo_string(JournalEntry.GetName, Localize('je_father_of_the_republic')), EqualTo_string(JournalEntry.GetName, Localize('je_daoguang_reform_main'))))]"
+					visible = "[Not(Or(EqualTo_string(JournalEntry.GetName, Localize('je_prince_gong')), Or(EqualTo_string(JournalEntry.GetName, Localize('je_father_of_the_republic')), EqualTo_string(JournalEntry.GetName, Localize('je_daoguang_reform_main')))))]"
 					
 					parentanchor = hcenter
 

@@ -75,6 +75,7 @@ group = {
 		"achievement_diplomatic_victory"
 		"achievement_cult_of_reason"
 		"achievement_wuxu_reform"
+		"achievement_different_routes"
 	}	
 }
 
