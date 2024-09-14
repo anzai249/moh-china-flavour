@@ -194,4 +194,61 @@ je_daoguang_reform_opium = {
 	should_be_pinned_by_default = yes
 }
 
-# je_
+je_xianfeng = {
+	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
+	group = je_group_historical_content
+	is_shown_when_inactive = {
+		this ?= c:CHI
+		has_law = law_type:law_monarchy
+	}
+	possible = {
+		this ?= c:CHI
+		has_law = law_type:law_monarchy
+		ruler = {
+			has_template = chi_xianfeng_template
+		}
+	}
+	# immediate = {
+	# 	set_variable = {
+	# 		name = xianfeng_progress
+	# 		value = 0
+	# 	}
+	# }
+	complete = {
+		custom_tooltip = {
+			text = je_xianfeng_complete_tt
+			NOT = {
+				any_scope_character = {
+					has_template = chi_xianfeng_template
+				}
+			}
+		}
+	}
+	fail = {
+		custom_tooltip = {
+			text = je_xianfeng_fail_tt
+			scope:journal_entry = {
+				"scripted_bar_progress(xianfeng_progress_bar)" >= 100
+			}
+		}
+	}
+	on_fail = {
+		custom_tooltip = {
+			text = je_xianfeng_on_fail_tt
+			random_scope_character = {
+				limit = {
+					has_template = chi_xianfeng_template
+				}
+				kill_character = yes
+			}
+		}
+		add_modifier = {
+			name = modifier_xianfeng_failed
+			years = 25
+			is_decaying = yes
+		}
+	}
+	scripted_progress_bar = xianfeng_progress_bar
+	should_be_pinned_by_default = yes
+	weight = 250
+}

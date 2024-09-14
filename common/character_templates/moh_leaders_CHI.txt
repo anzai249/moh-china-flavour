@@ -1979,7 +1979,7 @@ chi_gong_character_template = {
         }
         earliest_usage_date = 1853.1.1
         latest_usage_date = 1898.1.1
-        chance = 50
+        chance = 80
     }
     on_created = {
         set_variable = self_strengthening_character

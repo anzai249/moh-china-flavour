@@ -27,12 +27,38 @@ moh_agitators.1 = {
 				is_treaty_port = yes
 			}
 		}
-		OR = {
-			has_variable = lost_opium_wars
-			has_variable = arrow_incident_failed
-			country_rank = rank_value:unrecognized_power
-			country_rank = rank_value:unrecognized_major_power
-			country_rank = rank_value:unrecognized_regional_power
+		weighted_calc_true_if = {
+			amount = 10
+			8 = {
+				has_variable = lost_opium_wars
+			}
+			7 = {
+				has_variable = arrow_incident_failed
+			}
+			2 = {
+				country_rank = rank_value:unrecognized_power
+			}
+			2 = {
+				country_rank = rank_value:unrecognized_major_power
+			}
+			2 = {
+				country_rank = rank_value:unrecognized_regional_power
+			}
+			8 = {
+				NOT = {
+					owns_entire_state_region = STATE_AMUR
+				}
+			}
+			8 = {
+				NOT = {
+					owns_entire_state_region = STATE_OUTER_MANCHURIA
+				}
+			}
+			5 = {
+				NOT = {
+					has_variable = old_summer_palace
+				}
+			}
 		}
 		NOR = {
 			has_global_variable = youwei_spawn

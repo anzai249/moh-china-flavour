@@ -1,0 +1,87 @@
+﻿xianfeng_progress_bar = {
+	name = "xianfeng_progress_bar"
+	desc = "xianfeng_progress_bar_desc"
+	default_bad = yes
+	start_value = 0
+	min_value = 0
+	max_value = 100
+	weekly_progress = {
+		if = {
+			limit = {
+				is_at_war = yes
+			}
+			add = {
+				desc = "xianfeng_progress_bar_war_desc"
+				value = 0.1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = old_summer_palace
+				}
+			}
+			add = {
+				desc = "xianfeng_progress_bar_old_summer_palace_desc"
+				value = 1.25
+			}
+		}
+		if = {
+			limit = {
+				has_variable = recently_lost_war
+			}
+			add = {
+				desc = "xianfeng_progress_bar_lost_war_desc"
+				value = 0.5
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					turmoil >= 0.25
+				}
+			}
+			add = {
+				desc = "xianfeng_progress_bar_turmoil_desc"
+				value = 0.25
+			}
+		}
+		if = {
+			limit = {
+				country_rank = rank_value:great_power
+			}
+			add = {
+				desc = "xianfeng_progress_bar_great_power_desc"
+				value = -0.5
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					any_scope_pop = {
+						standard_of_living <= 11
+					}
+				}
+			}
+			add = {
+				desc = "xianfeng_progress_bar_standard_living_desc"
+				value = -0.1
+			}
+		}
+		if = {
+			limit = {
+				has_variable = recently_won_war
+			}
+			add = {
+				desc = "xianfeng_progress_bar_won_war_desc"
+				value = -0.5
+			}
+		}
+	}
+	monthly_progress = {
+		add = {
+			desc = "xianfeng_progress_bar_monthly_desc"
+			value = 0.4
+		}
+	}
+}

@@ -1,14 +1,39 @@
 ﻿je_self_strengthing = {
 	group = je_group_historical_content
 	icon = "gfx/interface/icons/invention_icons/battleship_tech.dds"
-	is_shown_when_inactive = {
-		this ?= c:CHI
-	}
 	modifiers_while_active = {
 		modifier_self_strengthing
 	}
-	possible = {
-		always = no
+	complete = {
+		custom_tooltip = {
+			text = je_self_strengthing.tt.complete.world
+			any_country = {
+				naval_power_projection > root.naval_power_projection
+				count < 3
+			}
+		}
+		custom_tooltip = {
+			text = je_self_strengthing.tt.complete.asia
+			any_country = {
+				naval_power_projection > root.naval_power_projection
+				count < 1
+				country_is_in_east_asia = yes
+			}
+		}
+		NOT = {
+			any_scope_state = {
+				percent < 0.5
+				has_building = building_railway
+			}
+		}
+	}
+	fail = {
+		NOT = {
+			owns_entire_state_region = STATE_FORMOSA
+			c:DAI = {
+				is_subject_of = c:CHI
+			}
+		}
 	}
 	weight = 100
 	should_be_pinned_by_default = yes

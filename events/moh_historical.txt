@@ -564,7 +564,7 @@ moh_historical.8 = {
 	flavor = moh_historical.8.f
 	dlc = dlc0moh
 	event_image = {
-		video = "unspecific_devastation"
+		video = "unspecific_fire"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fire_negative.dds"

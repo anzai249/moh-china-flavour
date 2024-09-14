@@ -1,0 +1,29 @@
+﻿je_jingzhang_railway = {
+	icon = "gfx/interface/icons/invention_icons/railways.dds"
+	group = je_group_technology
+	is_shown_when_inactive = {
+		exists = c:CHI
+		c:CHI = root
+	}
+	possible = {
+		exists = c:CHI
+		c:CHI = root
+		has_technology_researched = railways
+	}
+	complete = {
+		any_scope_state = {
+			state_region = s:STATE_BEIJING
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 2
+			}
+		}
+	}
+	on_complete = {
+		add_technology_progress = { progress = 2000 technology = steel_railway_cars }
+	}
+	timeout = 730
+
+	should_be_pinned_by_default = yes
+	weight = 100
+}
