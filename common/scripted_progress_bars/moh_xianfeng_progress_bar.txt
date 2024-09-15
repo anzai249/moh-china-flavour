@@ -81,7 +81,7 @@
 	monthly_progress = {
 		add = {
 			desc = "xianfeng_progress_bar_monthly_desc"
-			value = 0.4
+			value = 0.25
 		}
 	}
 }

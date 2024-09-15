@@ -13,5 +13,6 @@ qing_monarchy_yearly_events = {
 		25 = qing_monarchy.1
 		25 = qing_monarchy.2
 		25 = qing_monarchy.3
+		25 = qing_monarchy.4
 	}
 }

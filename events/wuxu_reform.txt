@@ -185,7 +185,41 @@ wuxu.1 = {
 
 wuxu.2 = {
 	# 成功
+	type = country_event
+	placement = root
+	duration = 3
 	title = wuxu.2.t
+	desc = wuxu.2.d
+	flavor = wuxu.2.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	dlc = dlc0moh
+
+	event_image = {
+		video = "europenorthamerica_political_extremism"
+	}
+
+	option = {
+		name = wuxu.2.a
+		default_option = yes
+		
+		add_loyalists = {
+			value = medium_radicals
+		}
+
+		ai_chance = {
+			base = 15
+		}
+	}
+	option = {
+		name = wuxu.2.b
+		custom_tooltip = {
+			text = wuxu.2.b.tt
+			set_variable = wuxu_xinhai_rebellion
+		}
+		ai_chance = {
+			base = 16
+		}
+	}
 }
 
 wuxu.3 = {

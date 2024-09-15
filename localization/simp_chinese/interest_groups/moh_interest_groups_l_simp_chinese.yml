@@ -8,3 +8,5 @@
   ig_farmers: "农民"
   ig_farmers_desc: "在自然经济的基础上，中国的农民基本上是农业经济与家庭手工业的结合为主体的生产者，他们是中国社会的基础。"
   moh_ig_rural_folk_tt: "$ig_farmers$将改名为$ig_rural_folk$"
+  ig_new_armed_forces: "新军"
+  ig_new_armed_forces_desc: "随着中国的近代化，新式军队也被组建。"

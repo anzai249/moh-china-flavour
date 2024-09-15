@@ -526,6 +526,18 @@ ai_strategy_default = {
 			 	}
 			}
 			add = {
+				value = 75
+				desc = "alignment_politics"
+			}
+		}
+		if = {
+			limit = {
+				scope:enemy_country = {
+					has_variable = lost_opium_wars
+				}
+
+			}
+			add = {
 				value = 25
 				desc = "alignment_politics"
 			}
@@ -1402,14 +1414,14 @@ ai_strategy_default = {
 			}
 
 			# Arrow War
-			# if = {
-			# 	limit = {
-			# 		scope:target_country = {
-			# 			has_variable = arrow_war_target
-			# 		}
-			# 	}
-			# 	multiply = 0
-			# }
+			if = {
+				limit = {
+					scope:target_country = {
+						has_variable = arrow_war_target
+					}
+				}
+				multiply = 0
+			}
 			
 			if = {
 				limit = { 
@@ -1426,90 +1438,48 @@ ai_strategy_default = {
 			
 			# if = {
 			# 	limit = {
-			# 		scope:target_country = {
-			# 			NOT = {
-			# 				has_variable = opium_wars_target
-			# 			}
-			# 		}
 			# 		scope:target_state = { 
 			# 			state_region = s:STATE_FORMOSA
 			# 		}
 			# 	}
-			# 	add = 25
+			# 	add = 50
 			# }
-			
-			# if = { #Do Not Take Chinese States In Full
-			# 	limit = {
-			# 		country_rank >= rank_value:major_power
-			# 		NOT = {
-			# 			has_journal_entry = je_reunify_china
-			# 		}
-			# 		scope:target_state = {
-			# 			owner = {
-			# 				OR = {
-			# 					has_journal_entry = je_reunify_china
-			# 					country_has_primary_culture = cu:han
-			# 					country_has_primary_culture = cu:tibetan
-			# 				}
-			# 			}
-			# 			OR = {
-			# 				region = sr:region_north_china
-			# 				region = sr:region_south_china
-			# 				region = sr:region_manchuria
-			# 				region = sr:region_himalayas
-			# 				region = sr:region_central_asia
-			# 			}
-			# 		}				
-			# 		OR = {
-			# 			country_is_in_north_america = yes
-			# 			country_is_in_europe = yes
-			# 			country_is_in_south_america = yes
-			# 		}
-			# 		NOT = {
-			# 			scope:target_state = { 
-			# 				state_region = s:STATE_FORMOSA
-			# 			}
-			# 		}
-			# 	}
-			# 	multiply = 0.1
-			# }
-			if = { #Do Not Take Chinese States In Full, unless another power has already done so
+
+			if = { #Do Not Take Chinese States In Full
 				limit = {
 					country_rank >= rank_value:major_power
+					NOT = {
+						has_journal_entry = je_reunify_china
+					}
 					scope:target_state = {
-						owner = { has_journal_entry = je_warlord_china }
+						owner = {
+							OR = {
+								has_journal_entry = je_warlord_china
+								country_has_primary_culture = cu:han
+								country_has_primary_culture = cu:tibetan
+							}
+							NOT = {has_variable = opium_wars_target}
+						}
 						OR = {
 							region = sr:region_north_china
 							region = sr:region_south_china
 							region = sr:region_manchuria
+							region = sr:region_himalayas
+							region = sr:region_central_asia
 						}
 					}				
 					OR = {
 						country_is_in_north_america = yes
 						country_is_in_europe = yes
 						country_is_in_south_america = yes
-					}					
-					NOT = {
-						any_country = {
-							NOT = { THIS = ROOT }
-							country_rank >= rank_value:major_power
-							OR = {
-								country_is_in_north_america = yes
-								country_is_in_europe = yes
-								country_is_in_south_america = yes
-							}
-							any_scope_state = {
-								NOT = { is_treaty_port = yes }
-								OR = {
-									region = sr:region_north_china
-									region = sr:region_south_china
-									region = sr:region_manchuria
-								}
-							}
-						}					
 					}
+					# NOT = {
+					# 	scope:target_state = { 
+					# 		state_region = s:STATE_FORMOSA
+					# 	}
+					# }
 				}
-				multiply = 0
+				multiply = 0.1
 			}
 		}
 		
@@ -1632,7 +1602,7 @@ ai_strategy_default = {
 					NOT = { state_region = s:STATE_FORMOSA }
 				}					
 			}
-			add = 100
+			add = 200
 		}
 
 		if = {
@@ -2010,14 +1980,14 @@ ai_strategy_default = {
 			max = 200
 		}
 
-		# if = {
-		# 	limit = {
-		# 		scope:target_country = { 
-		# 			c:TIB ?= this
-		# 		}
-		# 	}
-		# 	add = 50
-		# }
+		if = {
+			limit = {
+				scope:target_country = { 
+					c:TIB ?= this
+				}
+			}
+			add = 50
+		}
 	}
 
 	# How much does the AI desire becoming another country's subject
@@ -2243,7 +2213,7 @@ ai_strategy_default = {
 					is_banning_goods = g:opium
 				}
 			}
-			add = 1
+			add = 2
 		}
 		
 		if = {
@@ -2266,16 +2236,6 @@ ai_strategy_default = {
 				}
 				scope:target_country = {
 					has_variable = arrow_war_target
-				}
-			}
-			add = 1
-		}
-
-		if = {
-			limit = {
-				has_journal_entry = je_reunify_china
-				scope:target_country = {
-					has_journal_entry = je_reunify_china
 				}
 			}
 			add = 1
@@ -2563,21 +2523,21 @@ ai_strategy_default = {
 					is_banning_goods = g:opium
 				}
 			}
-			add = 100
+			add = 200
 		}
 		
-		# if = {
-		# 	limit = {
-		# 		OR = {
-		# 			c:GBR ?= this
-		# 			c:FRA ?= this
-		# 		}
-		# 		scope:target_country = {
-		# 			has_variable = arrow_war_target
-		# 		}
-		# 	}
-		# 	add = 100
-		# }
+		if = {
+			limit = {
+				OR = {
+					c:GBR ?= this
+					c:FRA ?= this
+				}
+				scope:target_country = {
+					has_variable = arrow_war_target
+				}
+			}
+			add = 200
+		}
 		
 		# Greek Nationalism
 		if = {
@@ -3449,7 +3409,7 @@ ai_strategy_default = {
 			divide = cached_ai_incorporated_population
 			multiply = cached_ai_incorporated_coastal_population
 			divide = 3000
-		}			
+		}
 
 		# self strengthening movement
 		if = {
@@ -4201,19 +4161,19 @@ ai_strategy_default = {
 				}
 				add = 50
 			}
-			# if = {
-			# 	limit = {
-			# 		exists = c:CHI
-			# 		OR = {
-			# 			c:GBR ?= this
-			# 			c:FRA ?= this
-			# 		}
-			# 		c:CHI = {
-			# 			has_variable = arrow_war_target
-			# 		}
-			# 	}
-			# 	add = 500
-			# }
+			if = {
+				limit = {
+					exists = c:CHI
+					OR = {
+						c:GBR ?= this
+						c:FRA ?= this
+					}
+					c:CHI = {
+						has_variable = arrow_war_target
+					}
+				}
+				add = 500
+			}
 		}
 		region_pacific_coast = {
 			if = {
@@ -5739,15 +5699,15 @@ ai_strategy_default = {
 				add = scope:target_state.ai_state_value:root
 			}			
 
-			# if = {
-			# 	limit = {
-			# 		has_global_variable = sino_japanese_war
-			# 		scope:target_state = {
-			# 			state_region = s:STATE_FORMOSA
-			# 		}	
-			# 	}
-			# 	add = scope:target_state.ai_state_value:root
-			# }
+			if = {
+				limit = {
+					has_global_variable = sino_japanese_war
+					scope:target_state = {
+						state_region = s:STATE_FORMOSA
+					}	
+				}
+				add = scope:target_state.ai_state_value:root
+			}
 
 			min = 0
 			max = 100				
@@ -5789,16 +5749,16 @@ ai_strategy_default = {
 				add = 1000
 			}
 			
-			# if = {
-			# 	OR = {
-			# 		c:GBR ?= this
-			# 		c:FRA ?= this
-			# 	}
-			# 	scope:target_country = {
-			# 		has_variable = arrow_war_target
-			# 	}
-			# 	multiply = 0
-			# }
+			if = {
+				OR = {
+					c:GBR ?= this
+					c:FRA ?= this
+				}
+				scope:target_country = {
+					has_variable = arrow_war_target
+				}
+				multiply = 0
+			}
 		}
 		
 		transfer_subject = {
@@ -5823,15 +5783,15 @@ ai_strategy_default = {
 				add = 100
 			}
 
-			# if = {
-			# 	limit = {
-			# 		c:GBR ?= this
-			# 		scope:target_country = {
-			# 			has_variable = arrow_war_target
-			# 		}
-			# 	}
-			# 	multiply = 0
-			# }
+			if = {
+				limit = {
+					c:GBR ?= this
+					scope:target_country = {
+						has_variable = arrow_war_target
+					}
+				}
+				multiply = 0
+			}
 
 			min = 0
 			max = 100			
@@ -5975,25 +5935,25 @@ ai_strategy_default = {
 				add = 50
 			}
 
-			# if = {
-			# 	limit = {
-			# 		OR = {
-			# 			c:GBR ?= this
-			# 			c:FRA ?= this
-			# 		}
-			# 		scope:target_country = {
-			# 			has_variable = arrow_war_target
-			# 		}
-			# 	}
-			# 	add = 50
-			# }	
+			if = {
+				limit = {
+					OR = {
+						c:GBR ?= this
+						c:FRA ?= this
+					}
+					scope:target_country = {
+						has_variable = arrow_war_target
+					}
+				}
+				add = 50
+			}	
 
-			# if = {
-			# 	limit = {
-			# 		has_variable = arrow_war_target
-			# 	}
-			# 	add = 50
-			# }	
+			if = {
+				limit = {
+					has_variable = arrow_war_target
+				}
+				add = 50
+			}	
 
 
 			min = 0
@@ -6203,18 +6163,18 @@ ai_strategy_default = {
 			}				
 
 			# Arrow War
-			# if = {
-			# 	limit = {
-			# 		OR = {
-			# 			c:GBR ?= this
-			# 			c:FRA ?= this
-			# 		}
-			# 		scope:target_country = {
-			# 			has_variable = arrow_war_target
-			# 		}
-			# 	}
-			# 	add = 500
-			# }			
+			if = {
+				limit = {
+					OR = {
+						c:GBR ?= this
+						c:FRA ?= this
+					}
+					scope:target_country = {
+						has_variable = arrow_war_target
+					}
+				}
+				add = 500
+			}			
 		}	
 		
 		ban_slavery = {

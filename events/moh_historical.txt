@@ -258,6 +258,7 @@ moh_historical.4 = {
 		}
 		NOT = {
 			has_variable = arrow_incident_begins
+			has_variable = recently_lost_war
 		}
 		NOT = {
 			c:GBR = {
@@ -571,7 +572,10 @@ moh_historical.8 = {
 	duration = 3
 	trigger = {
 		has_variable = old_summer_palace
-		has_variable = arrow_war_target
+		NOT = {
+			has_variable = opium_wars_target
+		}
+		# has_variable = arrow_war_target
 		OR = {
 			s:STATE_BEIJING.region_state:CHI.controller = c:FRA
 			s:STATE_BEIJING.region_state:CHI.controller = c:GBR

@@ -99,6 +99,7 @@ moh_agitators.1 = {
 		scope:historic_agitator_scope = {
 			exile_character_with_martyrdom = yes
 		}
+		set_variable = no_wuxu
 		ai_chance = {
 			base = 10
 		}
@@ -110,6 +111,7 @@ moh_agitators.1 = {
 				template = ecchi_chi_kang_youwei_character_template
 			}
 		}
+		set_variable = no_wuxu
 		ai_chance = {
 			base = 20
 		}

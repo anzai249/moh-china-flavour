@@ -570,7 +570,7 @@ ecchi_chi_huang_xing_character_template = {
     culture = cu:han
     female = no
     ideology = ideology_moh_revolutionary
-    interest_group = ig_intelligentsia
+    interest_group = ig_petty_bourgeoisie
 	dna = ecchi_dna_huang_xing
     birth_date = 1874.10.25
     traits = { brave direct }
@@ -581,11 +581,11 @@ ecchi_chi_huang_xing_character_template = {
             this = c:CHI
         }
         interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
+            is_interest_group_type = ig_petty_bourgeoisie
         }
         earliest_usage_date = 1903.1.1
         latest_usage_date = 1916.10.31
-        chance = 50
+        # chance = 50
     }
 }
 

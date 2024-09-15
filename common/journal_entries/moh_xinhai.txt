@@ -1,0 +1,49 @@
+je_xinhai = {
+	icon = "gfx/interface/icons/event_icons/1911_revolution.dds"
+	group = je_group_historical_content
+	modifiers_while_active = {
+		modifier_chi_xinhai
+	}
+	is_shown_when_inactive = {
+		has_global_variable = youwei_spawn
+		this ?= c:CHI
+		has_law = law_type:law_monarchy
+	}
+	possible = {
+		has_law = law_type:law_monarchy
+		has_technology_researched = egalitarianism
+		OR = {
+			has_variable = wuxu_reform_failed
+			has_variable = wuxu_xinhai_rebellion
+			has_variable = no_wuxu
+			AND = {
+				year >= 1900
+				has_journal_entry = je_warlord_china
+			}
+		}
+	}
+	immediate = {
+		set_variable = {
+			name = xinhai_progress
+			value = 0
+		}
+		create_character = {
+			template = ecchi_chi_huang_xing_character_template
+			ig_leader = yes
+		}
+	}
+	complete = {
+		NOT = {
+			has_law = law_type:law_monarchy
+		}
+	}
+	fail = {
+		custom_tooltip = {
+			text = je_xinhai_fail_tt
+			var:xinhai_progress >= 100
+		}
+	}
+	on_fail = {
+		
+	}
+}

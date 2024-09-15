@@ -54,6 +54,11 @@
   wuxu.1.b: "追捕逆贼"
   wuxu.1.c: "国内已经找不到维新派头目，他们可能跑了，也可能死了"
   wuxu.2.t: "宪法"
+  wuxu.2.d: "[GetIdeology('ideology_moh_reformer').GetName]向[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')]呈上了宪法草案，[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')]显然也很喜欢这份方案。"
+  wuxu.2.f: "“[GetIdeology('ideology_moh_reformer').GetName]的宪法草案已经通过，这是[ROOT.GetCountry.GetName]的第一部宪法。”\n\n宪法规定了国家的基本法律，明确了国家的政治体制、国家机构的职责、公民的权利和义务等。宪法的颁布标志着[ROOT.GetCountry.GetName]的维新变法圆满完成！"
+  wuxu.2.a: "皇上万岁！"
+  wuxu.2.b: "把这段时间骂皇上的人全抓起来"
+  wuxu.2.b.tt: "这将会再次激怒[GetIdeology('ideology_moh_revolutionary').GetName]"
   # 戊戌变法随机事件
   wuxu.3.t: "举人上书"
   wuxu.3.d: "一位来自[SCOPE.sState('literati_state').GetName]的举人上书[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')]，要求铲除[GetIdeology('ideology_moh_reformer').GetName]。"
