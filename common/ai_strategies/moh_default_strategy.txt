@@ -1990,7 +1990,17 @@ ai_strategy_default = {
 					c:TIB ?= this
 				}
 			}
-			add = 25
+			add = 10
+		}
+		
+		if = {
+			limit = {
+				this ?= c:FRA
+				scope:target_country = { 
+					c:DAI ?= this
+				}
+			}
+			add = 10
 		}
 	}
 
@@ -2528,6 +2538,22 @@ ai_strategy_default = {
 				}
 			}
 			add = 100
+		}
+
+		if = {
+			limit = {
+				c:FRA ?= this
+				scope:target_country = {
+					exists = c:CHI
+					this ?= c:DAI
+					is_subject_of = c:CHI
+					c:CHI = {
+						is_country_type = unrecognized
+						var:china_warlord_explosion <= 4
+					}
+				}
+			}
+			add = 50
 		}
 		
 		if = {
@@ -5804,12 +5830,28 @@ ai_strategy_default = {
 
 			if = {
 				limit = {
-					# c:GBR ?= this
+					c:GBR ?= this
 					scope:target_country = {
 						has_variable = arrow_war_target
 					}
 				}
 				multiply = 0
+			}
+
+			if = {
+				limit = {
+					c:FRA ?= this
+					scope:target_country = {
+						exists = c:CHI
+						this ?= c:DAI
+						is_subject_of = c:CHI
+						c:CHI = {
+							is_country_type = unrecognized
+							var:china_warlord_explosion <= 5
+						}
+					}
+				}
+				add = 100
 			}
 
 			min = 0
