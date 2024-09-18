@@ -117,5 +117,6 @@ group = {
 		"achievement_not_yet_lost"
 		"achievement_duran_duran"
 		"achievement_honor_and_life"
+		"achievement_dream"
 	}	
 }

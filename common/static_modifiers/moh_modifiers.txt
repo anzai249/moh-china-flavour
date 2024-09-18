@@ -68,7 +68,7 @@ flood_of_pirates = {
 # 8 flags
 modifier_8_flags = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_officer_negative.dds
-	unit_offense_mult = -0.15
+	unit_offense_mult = -0.2
 	unit_morale_loss_mult = 0.20
 	battle_casualties_mult = 0.05
 	unit_kill_rate_add = -0.30
@@ -146,6 +146,33 @@ modifier_xianfeng_failed = {
 modifier_chi_xinhai = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	interest_group_ig_petty_bourgeoisie_pop_attraction_mult = 0.5
-	interest_group_ig_petty_bourgeoisie_approval_add = -5
+	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.5
+	interest_group_ig_petty_bourgeoisie_approval_add = -10
 	political_movement_radicalism_mult = 0.5
+}
+
+# 剧团
+modifier_opera = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_middle_standard_of_living_add = 1
+	state_loyalists_from_sol_change_mult = 0.5
+}
+
+# 剧团
+modifier_opera_expensive = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	state_loyalists_from_sol_change_mult = 0.5
+	country_tax_income_add = 15000
+}
+
+# 宫廷书画展工坊
+modifier_imperial_art_studio = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_weekly_innovation_add = 3
+}
+
+# 宫廷书画展
+modifier_imperial_art_show = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_prestige_add = 50
 }

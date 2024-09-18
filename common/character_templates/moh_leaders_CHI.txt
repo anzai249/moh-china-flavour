@@ -1625,7 +1625,7 @@ ecchi_chi_lin_huiyin_character_template = {
     interest_group = ig_intelligentsia
     dna = ecchi_dna_lin_huiyin
     birth_date = 1904.6.10
-    traits = { romantic innovative engineer literacy }
+    traits = { romantic innovative engineer literary }
     agitator_usage ={
         country_trigger = {
             NOT = {
@@ -1997,7 +1997,7 @@ chi_weiyuan_character_template = {
     ideology = ideology_reformer
     interest_group = ig_intelligentsia
     birth_date = 1794.4.23
-    traits = { literacy innovative}
+    traits = { literary innovative}
     is_agitator = yes
     agitator_usage = {
         country_trigger = {
@@ -2080,4 +2080,35 @@ chi_yang_du_character_template = {
         latest_usage_date = 1931.9.17
         chance = 20
     }
+}
+
+chi_qiu_jin_character_template = {
+    first_name = moh_Jin_1
+    last_name = moh_Qiu
+    historical = yes
+    female = yes
+    dna = moh_dna_chi_qiujin
+    culture = cu:han
+    religion = rel:protestant
+    ideology = ideology_moh_revolutionary
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1875.11.8
+    traits = { literary romantic persistent }
+    is_agitator = yes
+    # agitator_usage = {
+    #     country_trigger = {
+    #         NOT = {
+    #             cu:han = {
+    #                 culture_is_discriminated_in = root
+    #             }
+    #         }
+    #         has_state_in_state_region = STATE_ZHEJIANG
+    #     }
+    #     interest_group_trigger = {
+    #         is_interest_group_type = ig_petty_bourgeoisie
+    #     }
+    #     earliest_usage_date = 1893.1.1
+    #     latest_usage_date = 1912.7.15
+    #     chance = 20
+    # }
 }

@@ -112,4 +112,4 @@
   xianfeng_progress_bar_desc: "咸丰皇帝驾崩"
   je_xinhai: "革命党？"
   je_xinhai_reason: "朝廷近期抓到几个自称[GetIdeology('ideology_moh_revolutionary').GetName]的人，他们的目标居然是推翻[GetLawType('law_monarchy').GetName]，搞什么所谓的共和。\n\n目前我们已派人关注此事，希望在此期间各地不要再爆发#bold 起义#!了。"
-  je_xinhai_fail_tt: "进度条到达#variable 100#!"
+  je_xinhai_fail_tt: "爆发革命"

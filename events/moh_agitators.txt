@@ -257,3 +257,60 @@ moh_agitators.2 = {
 		}
 	}
 }
+
+moh_agitators.3 = {
+	# Huangxing
+	type = country_event
+	placement = root
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:historic_agitator_scope
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	title = moh_agitators.3.t
+	desc = moh_agitators.3.d
+	flavor = moh_agitators.3.f
+	duration = 3
+
+	trigger = {
+		has_journal_entry = je_xinhai
+		any_scope_character = {
+			NOT = {
+				has_template = chi_qiu_jin_character_template
+			}
+		}
+		NOT = {
+			has_global_variable = huangxing_spawn
+		}
+	}
+
+	immediate = {
+		set_global_variable = huangxing_spawn
+		create_character = {
+			template = ecchi_chi_huangxing_character_template
+			on_created = {
+				set_variable = huangxing_var
+			}
+		}
+		random_scope_character = {
+			limit = {
+				has_variable = huangxing_var
+			}
+			add_character_role = agitator
+			save_scope_as = historic_agitator_scope
+		}
+	}
+
+	option = {
+		name = moh_agitators.3.a
+		default_option = yes
+		show_as_tooltip = {
+			create_character = {
+				template = ecchi_chi_huangxing_character_template
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}

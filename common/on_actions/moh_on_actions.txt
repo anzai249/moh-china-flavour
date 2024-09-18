@@ -2,6 +2,7 @@
 on_monthly_pulse_country = {
 	on_actions = {
 		moh_monthly_events
+		moh_agitator_monthly_events
 	}
 	events = {
 		moh_taiwan.1
@@ -19,6 +20,7 @@ on_yearly_pulse_country = {
 			days = 60
 		}
 		qing_monarchy_yearly_events
+		moh_random_yearly_events
 	}
 }
 

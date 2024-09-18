@@ -28,8 +28,11 @@ je_xinhai = {
 			value = 0
 		}
 		create_character = {
-			template = ecchi_chi_huang_xing_character_template
-			ig_leader = yes
+			template = chi_qiu_jin_character_template
+			is_agitator = yes
+			on_created = {
+				add_character_role = agitator
+			}
 		}
 	}
 	complete = {
@@ -38,12 +41,45 @@ je_xinhai = {
 		}
 	}
 	fail = {
+		# custom_tooltip = {
+		# 	text = je_xinhai_fail_tt
+		# 	var:xinhai_progress >= 100
+		# }
+		OR = {
+			has_revolution_over_law_type = law_type:law_presidential_republic
+			has_revolution_over_law_type = law_type:law_parliamentary_republic
+		}
 		custom_tooltip = {
 			text = je_xinhai_fail_tt
-			var:xinhai_progress >= 100
+			any_country = {
+				is_revolutionary = yes
+				country_definition = root.country_definition
+			}
 		}
 	}
 	on_fail = {
 		
 	}
+	on_monthly_pulse = {
+		effect = {
+			change_variable = {
+				name = xinhai_progress
+				add = 1
+			}
+		}
+		random_events = {
+			100 = 0
+			10 = xinhai.3
+			# 10 = xinhai.1
+			# 10 = xinhai.2
+		}
+	}
+	should_be_pinned_by_default = yes
+	# progressbar = yes
+	# current_value = {
+	# 	value = var:xinhai_progress
+	# }
+	# goal_add_value = {
+	# 	add = 100
+	# }
 }

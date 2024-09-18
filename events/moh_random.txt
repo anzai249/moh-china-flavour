@@ -1,0 +1,183 @@
+namespace = moh_random
+
+moh_random.1 = {
+	# 黄河决堤
+	type = country_event
+	placement = scope:yellow_river_state
+	title = moh_random.1.t
+	desc = moh_random.1.d
+	flavor = moh_random.1.f
+	duration = 3
+	dlc = dlc0moh
+
+	event_image = {
+		video = "unspecific_devastation"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	trigger = {
+		any_scope_state = {
+			has_state_trait = state_trait_yellow_river
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				has_state_trait = state_trait_yellow_river
+			}
+			save_scope_as = yellow_river_state
+		}
+	}
+
+	option = {
+		name = moh_random.1.a
+		default_option = yes
+		scope:yellow_river_state = {
+			add_devastation = 20
+			add_modifier = {
+				name = decree_agricultural_throughput
+				multiplier = -1
+				is_decaying = yes
+			}
+		}
+		custom_tooltip = natural_disaster_variable_tt
+		hidden_effect = {
+			random_list = {
+				20 = {
+					random_scope_state = {
+						limit = {
+							is_incorporated = yes
+						}
+						set_variable = {
+							name = natural_disaster_variable
+							months = short_modifier_time
+							months = short_modifier_time
+						}
+					}
+				}
+				80 = {
+				}
+			}
+		}
+	}
+
+	option = {
+		name = moh_random.1.b
+		scope:yellow_river_state = {
+			add_devastation = 10
+			add_modifier = {
+				name = decree_agricultural_throughput
+				multiplier = -1
+				months = short_modifier_time
+				is_decaying = yes
+			}
+		}
+		add_modifier = {
+			name = modifier_flood_relief
+			multiplier = money_amount_multiplier_medium
+			months = short_modifier_time
+		}
+	}
+}
+
+moh_random.2 = {
+	# 民间剧团演出
+	type = country_event
+	placement = scope:opera_state
+	title = moh_random.2.t
+	desc = moh_random.2.d
+	flavor = moh_random.2.f
+	duration = 3
+	dlc = dlc0moh
+
+	event_image = {
+		video = "europenorthamerica_art_gallery"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		country_has_primary_culture = cu:han
+	}
+	
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+			}
+			save_scope_as = opera_state
+		}
+		moh_random_opera_name = yes
+	}
+
+	option = {
+		name = moh_random.2.a
+		default_option = yes
+		scope:opera_state = {
+			add_modifier = {
+				name = modifier_opera
+				months = short_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = moh_random.2.b
+		scope:opera_state = {
+			add_modifier = {
+				name = modifier_opera_expensive
+				months = short_modifier_time
+			}
+		}
+	}
+}
+
+moh_random.3 = {
+	# 宫廷书画展
+	type = country_event
+	placement = capital
+	title = moh_random.3.t
+	desc = moh_random.3.d
+	flavor = moh_random.3.f
+	duration = 3
+	dlc = dlc0moh
+
+	event_image = {
+		video = "europenorthamerica_art_gallery"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		country_has_primary_culture = cu:han
+		has_law = law_type:law_monarchy
+	}
+
+	immediate = {
+		moh_random_opera_name = yes
+	}
+
+	option = {
+		name = moh_random.3.a
+		default_option = yes
+		add_modifier = {
+			name = modifier_imperial_art_studio
+			months = 12
+			is_decaying = yes
+		}
+	}
+
+	option = {
+		name = moh_random.3.b
+		add_modifier = {
+			name = modifier_imperial_art_show
+			months = 12
+			is_decaying = yes
+		}
+	}
+}

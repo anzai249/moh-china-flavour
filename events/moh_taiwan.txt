@@ -8,15 +8,22 @@ moh_taiwan.1 = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 	duration = 3
 	dlc = dlc0moh
-
 	event_image = {
 		video = "asia_sepoy_mutiny"
 	}
 	trigger = {
-		exists = c:CHI
-		c:CHI = {
+		any_state = {
+			state_region = s:STATE_FORMOSA
 			NOT = {
-				owns_entire_state_region = STATE_FORMOSA
+				owner = {
+					OR = {
+						country_has_primary_culture = cu:han
+						country_has_primary_culture = cu:manchu
+						country_has_primary_culture = cu:min
+						country_has_primary_culture = cu:hakka
+						country_has_primary_culture = cu:yuanzhumin
+					}
+				}
 			}
 		}
 		NOT = {

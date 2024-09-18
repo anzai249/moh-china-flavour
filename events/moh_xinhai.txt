@@ -1,0 +1,285 @@
+﻿namespace = xinhai
+xinhai.1 = {
+	# 保路
+	type = country_event
+	title = xinhai.1.t
+	desc = xinhai.1.d
+	placement = scope:baolu_state
+	flavor = xinhai.1.f
+	dlc = dlc0moh
+	event_image = {
+		video = "unspecific_trains"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	trigger = {
+		NOT = {
+			has_variable = baolu
+		}
+		var:xinhai_progress >= 80
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_EASTERN_HUBEI
+				state_region = s:STATE_WESTERN_HUBEI
+				state_region = s:STATE_CHONGQING
+			}
+			any_neighbouring_state = {
+				owner = ROOT
+				NOT = {
+					state_region = s:STATE_EASTERN_HUBEI
+					state_region = s:STATE_WESTERN_HUBEI
+					state_region = s:STATE_CHONGQING
+				}
+				has_building = building_railway
+			}
+		}
+	}
+	immediate = {
+		set_variable = baolu
+		random_scope_state = {
+			limit = {
+				any_neighbouring_state = {
+					owner = ROOT
+					OR = {
+						state_region = s:STATE_EASTERN_HUBEI
+						state_region = s:STATE_WESTERN_HUBEI
+						state_region = s:STATE_CHONGQING
+					}
+				}
+				owner = ROOT
+				has_building = building_railway
+			}
+			save_scope_as = baolu_state
+		}
+	}
+	option = {
+		name = xinhai.1.a
+		default_option = yes
+		random_state = {
+			limit = {
+				state_region = s:STATE_EASTERN_HUBEI
+			}
+			save_scope_as = xinhai_place
+		}
+		set_variable = {
+			name = xinhai_place
+			value = scope:xinhai_place
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = xinhai.1.b
+		set_variable = {
+			name = xinhai_place
+			value = scope:baolu_state
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+xinhai.2 = {
+	# 武昌起义
+	type = country_event
+	title = xinhai.2.t
+	desc = xinhai.2.d
+	placement = scope:wuchang_state
+	flavor = xinhai.2.f
+	dlc = dlc0moh
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds"
+	duration = 3
+	trigger = {
+		NOT = {
+			has_variable = wuchang
+		}
+		has_variable = xinhai_place
+	}
+	immediate = {
+		set_variable = wuchang
+		var:xinhai_place = {
+			every_neighbouring_state = {
+				set_variable = uprising_state
+			}
+			save_scope_as = wuchang_state
+		}
+	}
+	option = {
+		name = xinhai.2.a
+		trigger = {
+			is_player = yes
+		}
+		create_dynamic_country = {
+			origin = root
+			culture = cu:han
+			capital = scope:wuchang_state
+			tier = principality
+			color = { 175 50 50 }
+			cede_state_trigger = {
+				owner = c:CHI
+				OR = {
+					has_variable = uprising_state
+					radical_fraction = {
+						value >= 0.15
+					}
+				}
+			}
+			on_created = {
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_homesteading
+						}
+					}
+					activate_law = law_type:law_homesteading
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_presidential_republic
+						}
+					}
+					activate_law = law_type:law_presidential_republic
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_poor_laws
+						}
+					}
+					activate_law = law_type:law_poor_laws
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_women_own_property
+						}
+					}
+					activate_law = law_type:law_women_own_property
+				}
+				create_diplomatic_play = {
+					type = dp_revolution
+					target_country = c:CHI
+					handle_annexation_as_civil_war = yes
+					# add_war_goal = {
+					# 	holder = THIS
+					# 	type = annex_country
+					# }
+				}
+				play_as = this
+			}
+		}
+	}
+	option = {
+		name = xinhai.2.b
+		default_option = yes
+		ai_chance = {
+			factor = 5
+		}
+		create_dynamic_country = {
+			origin = root
+			culture = cu:han
+			capital = scope:wuchang_state
+			tier = principality
+			cede_state_trigger = {
+				owner = c:CHI
+				OR = {
+					has_variable = uprising_state
+					radical_fraction = {
+						value >= 0.15
+					}
+				}
+			}
+			on_created = {
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_homesteading
+						}
+					}
+					activate_law = law_type:law_homesteading
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_presidential_republic
+						}
+					}
+					activate_law = law_type:law_presidential_republic
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_poor_laws
+						}
+					}
+					activate_law = law_type:law_poor_laws
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_women_own_property
+						}
+					}
+					activate_law = law_type:law_women_own_property
+				}
+				create_diplomatic_play = {
+					type = dp_revolution
+					target_country = c:CHI
+					handle_annexation_as_civil_war = yes
+					# add_war_goal = {
+					# 	holder = THIS
+					# 	type = annex_country
+					# }
+				}
+			}
+		}
+	}
+}
+
+xinhai.3 = {
+	# 起义
+	type = country_event
+	title = xinhai.3.t
+	desc = xinhai.3.d
+	placement = scope:revolt_place
+	flavor = xinhai.3.f
+	dlc = dlc0moh
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds"
+	duration = 3
+	trigger = {
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				is_capital = no
+			}
+			save_scope_as = revolt_place
+		}
+	}
+	option = {
+		name = xinhai.3.a
+		default_option = yes
+		change_variable = {
+			name = xinhai_progress
+			value = 5
+		}
+		scope:revolt_place = {
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+		}
+	}
+}
