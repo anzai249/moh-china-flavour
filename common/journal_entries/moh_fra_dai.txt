@@ -41,6 +41,20 @@ je_fra_dai = {
 			}
 		}
 	}
+	immediate = {
+		set_secret_goal = {
+			country = c:DAI
+			secret_goal = dominate
+		}
+		change_relations = {
+			country = c:DAI
+			value = -30
+		}
+		change_relations = {
+			country = c:CHI
+			value = -30
+		}
+	}
 	timeout = 3650
 	complete = {
 		OR = {

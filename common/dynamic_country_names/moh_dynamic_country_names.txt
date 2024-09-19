@@ -162,23 +162,21 @@ TIB = {
 	}
 }
 
-# DEFAULT = {
-# 	dynamic_country_name = {
-# 		# name = dyn_c_nra
-# 		# adjective = dyn_c_nra_adj
+YUN = {
+	dynamic_country_name = {
+		name = dyn_c_yun_sunni
+		adjective = dyn_c_yun_sunni_adj
 
-# 		is_main_tag_only = yes
-# 		priority = 100
+		is_main_tag_only = yes
+		priority = 100
 		
-# 		trigger = {
-# 			exists = scope:actor
-# 			scope:actor ?= {
-# 				has_modifier = modifier_father
-# 			}
-# 		}
-# 	}
-# }
-
+		trigger = {
+			scope:actor ?= {
+				country_has_state_religion = rel:sunni
+			}
+		}
+	}
+}
 
 DAI = {
 	dynamic_country_name = {

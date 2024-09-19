@@ -215,6 +215,11 @@
   moh_historical.10.f: "我们敬爱的国父[SCOPE.sCharacter('sun_yatsen_dead_scope').GetFullName]逝世，终年[SCOPE.sCharacter('sun_yatsen_dead_scope').GetAge]岁。\n\n“中国数十年来为主义而奋斗者，中山先生一人而已。中国政界中之人格，不屈不变、始终如一者，中山先生一人而已。中山先生真爱国者也！于为国之外，无其他杂念，可谓纯洁之爱国者。中山先生真实行者也！不顾成败，不问毁誉，可谓勇往之实行者。”\n\n我们将永远怀念他的贡献。"
   moh_historical.10.a: "#bold “革命尚未成功，同志仍须努力。”#!"
   sun_yatsen_dead_tt: "我们都很尊重他"
+  moh_historical.11.t: "械斗！"
+  moh_historical.11.d: "[SCOPE.sState('yunnan_state_scope').GetName]的一场械斗引发了一场大规模动乱"
+  moh_historical.11.f: "[SCOPE.sState('yunnan_state_scope').GetName]的一位[GetReligion('sunni').GetName]信徒与[GetReligion('confucian').GetName]信徒因地亩、水源争端而起械斗，双方互不相让，最终演变成了一场大规模动乱。双方都有人员伤亡，局势迅速恶化。\n\n[SCOPE.sState('yunnan_state_scope').GetName]巡抚本想简单调停平息此事，竟造成更大的[GetReligion('sunni').GetName]暴动，今已无力遏制此乱，局势一触即发！朝廷方面亦高度关注此事，已有数道谕旨责令[SCOPE.sState('yunnan_state_scope').GetName]督抚严查起事缘由，查明主谋，迅速擒拿问罪。朝中诸大臣皆忧虑此乱若不速剿，恐致地方愈乱，形成燎原之势。"
+  moh_historical.11.a: "速速派兵"
+  moh_historical.11.a_tt: "叛乱爆发"
   # xinhai
   xinhai.1.t: "[SCOPE.sState('baolu_state').GetName]保路"
   xinhai.1.d: "[SCOPE.sState('baolu_state').GetName]爆发保路运动"

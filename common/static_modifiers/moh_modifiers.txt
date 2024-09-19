@@ -176,3 +176,11 @@ modifier_imperial_art_show = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_prestige_add = 50
 }
+
+# 回变
+modifier_panthay = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	state_conversion_mult = 0.1
+	unit_offense_mult = 0.2
+	unit_defense_mult = 0.2
+}

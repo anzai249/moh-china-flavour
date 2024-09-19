@@ -1,0 +1,22 @@
+﻿je_panthay_rebellion = {
+	icon = "gfx/interface/icons/religion_icons/sunni.dds"
+	group = je_group_historical_content
+	possible = {
+		has_variable = yunnan_rebellion
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_panthay_rebellion_complete_tt
+			NOT = {
+				exists = c:YUN
+			}
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = je_panthay_rebellion_on_complete_tt
+			set_variable = yunnan_rebellion_complete
+		}
+	}
+	should_be_pinned_by_default = yes
+}

@@ -116,3 +116,7 @@
   je_xinhai_fail_tt: "爆发革命"
   je_fra_dai: "印度支那的利益"
   je_fra_dai_reason: "印度支那是我们的利益所在，我们必须保护这片土地。"
+  je_panthay_rebellion: "镇压回乱"
+  je_panthay_rebellion_reason: "镇压这场由械斗引发的[GetReligion('sunni').GetName]信徒的叛乱。"
+  je_panthay_rebellion_complete_tt: "成功镇压叛乱"
+  je_panthay_rebellion_on_complete_tt: "这么多人聚在一起，总会有些意料外的事情发生……"

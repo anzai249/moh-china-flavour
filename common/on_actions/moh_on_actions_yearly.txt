@@ -20,8 +20,9 @@ qing_monarchy_yearly_events = {
 moh_random_yearly_events = {
 	random_events = {
 		100 = 0
-		25 = moh_random.1
+		20 = moh_random.1
 		25 = moh_random.2
 		2 = moh_random.3
+		15 = moh_historical.11
 	}
 }
