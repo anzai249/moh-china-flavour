@@ -1990,17 +1990,18 @@ ai_strategy_default = {
 					c:TIB ?= this
 				}
 			}
-			add = 10
+			divide = 2
 		}
 		
 		if = {
 			limit = {
 				this ?= c:FRA
+				has_journal_entry = je_fra_dai
 				scope:target_country = { 
 					c:DAI ?= this
 				}
 			}
-			add = 10
+			add = 100
 		}
 	}
 
@@ -2543,17 +2544,12 @@ ai_strategy_default = {
 		if = {
 			limit = {
 				c:FRA ?= this
+				has_journal_entry = je_fra_dai
 				scope:target_country = {
-					exists = c:CHI
 					this ?= c:DAI
-					is_subject_of = c:CHI
-					c:CHI = {
-						is_country_type = unrecognized
-						var:china_warlord_explosion <= 4
-					}
 				}
 			}
-			add = 50
+			add = 75
 		}
 		
 		if = {
@@ -2573,7 +2569,10 @@ ai_strategy_default = {
 			limit = {
 				country_rank = rank_value:great_power
 				NOT = {
-					c:FRA ?= this
+					OR = {
+						c:FRA ?= this
+						c:CHI ?= this
+					}
 				}
 				scope:target_country = {
 					c:DAI ?= this
@@ -4305,7 +4304,15 @@ ai_strategy_default = {
 				}
 				add = 100
 			}			
-		}		
+		}
+		region_indonesia = {
+			if = {
+				limit = {
+					has_journal_entry = je_fra_dai
+				}
+				add = 100
+			}
+		}
 	}
 	
 	# How likely should the AI be to have a particular strategic desire towards another country
@@ -5421,7 +5428,17 @@ ai_strategy_default = {
 					}				
 				}
 				multiply = 0
-			}		
+			}
+			
+			if = {
+				limit = {
+					has_journal_entry = je_fra_dai
+					scope:target_country = {
+						this ?= c:DAI
+					}
+				}
+				add = 100
+			}
 		}		
 		dominate = {
 			value = 0
@@ -5715,7 +5732,18 @@ ai_strategy_default = {
 					}				
 				}
 				multiply = 0
-			}			
+			}
+			
+			
+			if = {
+				limit = {
+					has_journal_entry = je_fra_dai
+					scope:target_country = {
+						this ?= c:DAI
+					}
+				}
+				add = 100
+			}
 		}			
 	}
 	
@@ -5841,14 +5869,9 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					c:FRA ?= this
+					has_journal_entry = je_fra_dai
 					scope:target_country = {
-						exists = c:CHI
 						this ?= c:DAI
-						is_subject_of = c:CHI
-						c:CHI = {
-							is_country_type = unrecognized
-							var:china_warlord_explosion <= 5
-						}
 					}
 				}
 				add = 100
@@ -5908,6 +5931,17 @@ ai_strategy_default = {
 			
 				add = scope:target_country.ai_subject_value:root			
 			}	
+
+			if = {
+				limit = {
+					c:FRA ?= this
+					has_journal_entry = je_fra_dai
+					scope:target_country = {
+						this ?= c:DAI
+					}
+				}
+				add = 100
+			}
 
 			min = 0
 			max = 100				

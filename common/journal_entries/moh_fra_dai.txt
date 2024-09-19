@@ -1,0 +1,74 @@
+je_fra_dai = {
+	icon = "gfx/interface/icons/generic_icons/state.dds"
+	group = je_group_historical_content
+	is_shown_when_inactive = {
+		this ?= c:FRA
+	}
+	possible = {
+		year > 1875
+		this ?= c:FRA
+		exists = c:DAI
+		# c:CHI ?= {
+		# 	OR = {
+		# 		country_rank = rank_value:unrecognized_power
+		# 		country_rank = rank_value:unrecognized_major_power
+		# 		country_rank = rank_value:unrecognized_regional_power
+		# 	}
+		# 	OR = {
+		# 		has_diplomatic_pact = {
+		# 			who = c:DAI
+		# 			type = tributary
+		# 		}
+		# 		has_diplomatic_pact = {
+		# 			who = c:DAI
+		# 			type = vassal
+		# 		}
+		# 	}
+		# }
+		c:DAI = {
+			OR = {
+				AND = {
+					is_subject = yes
+					overlord ?= {
+						OR = {
+							country_rank = rank_value:unrecognized_power
+							country_rank = rank_value:unrecognized_major_power
+							country_rank = rank_value:unrecognized_regional_power
+						}
+					}
+				}
+				is_subject = no
+			}
+		}
+	}
+	timeout = 3650
+	complete = {
+		OR = {
+			AND = {
+				owns_entire_state_region = STATE_TONKIN
+				owns_entire_state_region = STATE_ANNAM
+				owns_entire_state_region = STATE_MEKONG
+			}
+			OR = {
+				has_diplomatic_pact = {
+					who = c:DAI
+					type = vassal
+				}
+				has_diplomatic_pact = {
+					who = c:DAI
+					type = puppet
+				}
+				has_diplomatic_pact = {
+					who = c:DAI
+					type = dominion
+				}
+				has_diplomatic_pact = {
+					who = c:DAI
+					type = protectorate
+				}
+
+			}
+		}
+	}
+	should_be_pinned_by_default = yes
+}

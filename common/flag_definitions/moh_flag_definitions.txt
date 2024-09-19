@@ -292,6 +292,17 @@ FUJ = {
 	}
 }
 
+DAI = {
+	# Dai Viet
+	flag_definition = {
+		coa = DAI
+		subject_canton = DAI_subject
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = DAI_subject
+		priority = 1
+	}
+}
+
 DEFAULT = {
 	flag_definition = {
 		coa = CHI_guojun
