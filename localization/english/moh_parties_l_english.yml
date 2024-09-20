@@ -1,6 +1,12 @@
-﻿l_simp_chinese:
- party_kuomintang: "中国国民党"
- party_fengtian: "奉系"
- party_cdl: "中国民主同盟"
- party_zhigong: "中国致公党"
- party_ycp: "中国青年党"
+﻿l_english:
+ party_kuomintang: "Kuomintang"
+ party_fengtian: "Fengtian Clique"
+ party_cdl: "China Democratic League"
+ party_zhigong: "China Zhi Gong Party"
+ party_ycp: "Young China Party"
+ party_mchca: "Concordia Association"
+ party_nbis: "National Bureau of Investigation and Statistics"
+ party_left_kmt: "Left Kuomintang"
+ party_right_kmt: "Right Kuomintang"
+ party_up: "Unity Party"
+ party_divide_land_party: "Divide Land Party"

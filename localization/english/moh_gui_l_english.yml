@@ -1,4 +1,6 @@
 ﻿l_english:
-  father_of_the_republic_name: "Father of the Nation #bold [GetGlobalVariable('sun_yatsen').GetCharacter.GetFullName]#! "
-  father_now_at: "[GetGlobalVariable('sun_yatsen').GetCharacter.GetLastName] is currently in [GetGlobalVariable('sun_yatsen_in').GetCountry.GetName]"
-  father_attitude: "[GetGlobalVariable('sun_yatsen').GetCharacter.GetLastName]'s attitude towards you is:"
+ father_of_the_republic_name: "Father of the Nation #bold [GetGlobalVariable('sun_yatsen').GetCharacter.GetFullName]#! "
+ father_now_at: "[GetGlobalVariable('sun_yatsen').GetCharacter.GetLastName] is currently in [GetGlobalVariable('sun_yatsen_in').GetCountry.GetName]"
+ father_attitude: "[GetGlobalVariable('sun_yatsen').GetCharacter.GetLastName]'s attitude towards you is:"
+ daoguang_name: "Emperor Daoguang #bold [GetPlayer.GetRuler.GetFirstName]#!"
+ gong_name: "Prince Gong #bold [GetPlayer.MakeScope.Var('yixin').GetCharacter.GetFirstName]#!"
