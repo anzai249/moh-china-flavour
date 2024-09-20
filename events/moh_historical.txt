@@ -781,6 +781,9 @@ moh_historical.11 = {
 		add_journal_entry = {
 			type = je_panthay_rebellion
 		}
+		ai_chance = {
+			base = 10
+		}
 		custom_tooltip = {
 			text = moh_historical.11.a_tt
 			create_country = {
@@ -848,12 +851,290 @@ moh_historical.11 = {
 							value = 0.05
 						}
 					}
-
 					add_modifier = {
 						name = modifier_panthay
 					}
 				}
 			}
+		}
+	}
+}
+
+moh_historical.12 = {
+	# 鼠疫
+	type = country_event
+	placement = scope:yunnan_state_scope
+	title = moh_historical.12.t
+	desc = moh_historical.12.d
+	flavor = moh_historical.12.f
+	dlc = dlc0moh
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	trigger = {
+		has_variable = yunnan_rebellion_complete
+		has_state_in_state_region = STATE_YUNNAN
+		NOT = {
+			has_journal_entry = je_plague_pandemic
+			has_variable = plague_pandemic_complete
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_YUNNAN
+			}
+			save_scope_as = yunnan_state_scope
+			add_modifier = {
+				name = modifier_plague_pandemic
+				months = 24
+				is_decaying = yes
+			}
+		}
+		add_journal_entry = {
+			type = je_plague_pandemic
+		}
+	}
+	option = {
+		name = moh_historical.12.a
+		default_option = yes
+		show_as_tooltip = {
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_YUNNAN
+				}
+				save_scope_as = yunnan_state_scope
+				add_modifier = {
+					name = modifier_plague_pandemic
+					months = 24
+					is_decaying = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		name = moh_historical.12.b
+		show_as_tooltip = {
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_YUNNAN
+				}
+				save_scope_as = yunnan_state_scope
+				add_modifier = {
+					name = modifier_plague_pandemic
+					months = 24
+					is_decaying = yes
+				}
+			}
+		}
+		add_modifier = {
+			name = modifier_plague_relief
+			multiplier = money_amount_multiplier_small
+			months = short_modifier_time
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+moh_historical.13 = {
+	# 条约港有鼠疫
+	type = country_event
+	placement = scope:target_treaty_port
+	title = moh_historical.13.t
+	desc = moh_historical.13.d
+	flavor = moh_historical.13.f
+	dlc = dlc0moh
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	trigger = {
+		# je
+	}
+	immediate = {
+		random_state = {
+			limit = {
+				is_treaty_port = yes
+				any_neighbouring_state = {
+					owner = root
+				}
+				has_modifier = modifier_plague_pandemic
+				NOT = {
+					has_variable = plague_pandemic_treaty_port
+				}
+			}
+			save_scope_as = target_treaty_port
+			set_variable = plague_pandemic_treaty_port
+		}
+	}
+	option = {
+		name = moh_historical.13.a
+		default_option = yes
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+moh_historical.14 = {
+	# 鼠疫传播到某省份
+	type = state_event
+	placement = scope:target_state
+	title = moh_historical.14.t
+	desc = moh_historical.14.d
+	flavor = moh_historical.14.f
+	dlc = dlc0moh
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	trigger = {
+		NOT = {
+			has_modifier = modifier_plague_pandemic
+		}
+		NOT = {
+			has_modifier = modifier_plague_lockdown
+		}
+		any_neighbouring_state = {
+			has_modifier = modifier_plague_pandemic
+		}
+	}
+	immediate = {
+		save_scope_as = target_state
+		add_modifier = {
+			name = modifier_plague_pandemic
+			months = 6
+			is_decaying = yes
+		}
+	}
+	option = {
+		name = moh_historical.14.a
+		default_option = yes
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+moh_historical.15 = {
+	# 省份隔离
+	type = state_event
+	placement = scope:target_lockdown_state
+	title = moh_historical.15.t
+	desc = moh_historical.15.d
+	flavor = moh_historical.15.f
+	dlc = dlc0moh
+	event_image = {
+		video = "unspecific_sick_in_hospital"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	trigger = {
+		NOT = {
+			has_modifier = modifier_plague_pandemic
+			has_modifier = modifier_plague_lockdown
+		}
+		any_neighbouring_state = {
+			has_modifier = modifier_plague_pandemic
+		}
+	}
+	immediate = {
+		save_scope_as = target_lockdown_state
+		add_modifier = {
+			name = modifier_plague_lockdown
+			months = 6
+			is_decaying = yes
+		}
+	}
+	option = {
+		name = moh_historical.15.a
+		default_option = yes
+		custom_tooltip = {
+			text = moh_historical.15.a_tt
+			owner = {
+				change_variable = {
+					name = plague_pandemic
+					add = 5
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}
+
+moh_historical.16 = {
+	# 鼠疫传播到某外国省份
+	type = country_event
+	placement = scope:target_state
+	title = moh_historical.16.t
+	desc = moh_historical.16.d
+	flavor = moh_historical.16.f
+	dlc = dlc0moh
+	event_image = {
+		video = "southamerica_war_civilians"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	duration = 3
+	trigger = {
+		any_state = {
+			is_treaty_port = yes
+			has_modifier = modifier_plague_pandemic
+			any_neighbouring_state = {
+				owner = {
+					has_journal_entry = je_plague_pandemic
+				}
+			}
+		}
+		scope:target_state = {
+			owner = root
+		}
+	}
+	immediate = {
+		random_state = {
+			limit = {
+				NOT = {
+					has_modifier = modifier_plague_pandemic
+				}
+				NOT = {
+					has_modifier = modifier_plague_lockdown
+				}
+				is_sea_adjacent = yes
+			}
+			save_scope_as = target_state
+			add_modifier = {
+				name = modifier_plague_pandemic
+				months = 6
+				is_decaying = yes
+			}
+		}
+		random_country = {
+			limit = {
+				has_journal_entry = je_plague_pandemic
+			}
+			save_scope_as = pandemic_country
+		}
+	}
+	option = {
+		name = moh_historical.14.a
+		default_option = yes
+		ai_chance = {
+			base = 5
 		}
 	}
 }

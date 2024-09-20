@@ -2569,16 +2569,14 @@ ai_strategy_default = {
 			limit = {
 				country_rank = rank_value:great_power
 				NOT = {
-					OR = {
-						c:FRA ?= this
-						c:CHI ?= this
-					}
+					c:FRA ?= this
+					c:CHI ?= this
 				}
 				scope:target_country = {
 					c:DAI ?= this
 				}
 			}
-			multiply = 0.1
+			multiply = 0
 		}
 		
 		# Greek Nationalism

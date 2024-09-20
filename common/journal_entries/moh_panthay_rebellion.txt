@@ -19,4 +19,151 @@
 		}
 	}
 	should_be_pinned_by_default = yes
+	weight = 100
+}
+
+je_plague_pandemic = {
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	group = je_group_historical_content
+	# possible = {
+	# 	has_variable = yunnan_rebellion_complete
+	# }
+	immediate = {
+		set_variable = {
+			name = plague_pandemic
+			value = 0
+		}
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_plague_pandemic_complete_tt
+			var:plague_pandemic >= 100
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = je_plague_pandemic_on_complete_tt
+			every_scope_state = {
+				remove_modifier = modifier_plague_pandemic
+			}
+		}
+	}
+	on_weekly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					any_scope_state = {
+						has_modifier = modifier_plague_pandemic
+					}
+				}
+				random_scope_state = {
+					limit = {
+						has_modifier = modifier_plague_pandemic
+					}
+					random_neighbouring_state = {
+						limit = {
+							NOT = {
+								has_modifier = modifier_plague_pandemic
+								has_modifier = modifier_plague_lockdown
+							}
+							OR = {
+								owner = root
+								is_treaty_port = yes
+							}
+						}
+						random_list = {
+							0 = {
+							}
+							25 = {
+								trigger_event = moh_historical.14
+							}
+							0 = {
+								trigger_event = moh_historical.15
+							}
+						}
+					}
+				}
+				change_variable = {
+					name = plague_pandemic
+					add = -1
+				}
+			}
+			if = {
+				limit = {
+					institution_investment_level = {
+						institution = institution_health_system
+						value >= 4
+					}
+				}
+				change_variable = {
+					name = plague_pandemic
+					add = 0.5
+				}
+			}
+			if = {
+				limit = {
+					has_technology_researched = antibiotics
+				}
+				change_variable = {
+					name = plague_pandemic
+					add = 5
+				}
+			}
+			if = {
+				limit = {
+					has_modifier = modifier_plague_relief
+				}
+				change_variable = {
+					name = plague_pandemic
+					add = 0.5
+				}
+			}
+			if = {
+				limit = {
+					any_state = {
+						is_treaty_port = yes
+						any_neighbouring_state = {
+							owner = root
+						}
+						has_modifier = modifier_plague_pandemic
+						NOT = {
+							has_variable = plague_pandemic_treaty_port
+						}
+					}
+				}
+				trigger_event = moh_historical.13
+			}
+			if = {
+				limit = {
+					var:plague_pandemic < 0
+				}
+				set_variable = {
+					name = plague_pandemic
+					value = 0
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_state = {
+							has_modifier = modifier_plague_pandemic
+						}
+					}
+				}
+				change_variable = {
+					name = plague_pandemic
+					add = 1
+				}
+			}
+		}
+	}
+	should_be_pinned_by_default = yes
+	weight = 100
+	progressbar = yes
+	current_value = {
+		value = var:plague_pandemic
+	}
+	goal_add_value = {
+		add = 100
+	}
 }

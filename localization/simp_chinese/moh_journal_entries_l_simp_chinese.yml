@@ -120,3 +120,7 @@
   je_panthay_rebellion_reason: "镇压这场由械斗引发的[GetReligion('sunni').GetName]信徒的叛乱。"
   je_panthay_rebellion_complete_tt: "成功镇压叛乱"
   je_panthay_rebellion_on_complete_tt: "这么多人聚在一起，总会有些意料外的事情发生……"
+  je_plague_pandemic: "鼠疫"
+  je_plague_pandemic_reason: "鼠疫在[ROOT.GetCountry.GetName]爆发，我们必须尽快采取措施，防止疫情蔓延。\n\n我们可以通过增加[GetInstitutionType('institution_health_system').GetName|l]投入至#variable 4#!级以上，或者通过研发#bold $antibiotics$#!科技来增加进度条进度，随机触发的#bold 事件#!也可能会对进度有影响。\n\n请尽量阻止疫情蔓延，如果鼠疫蔓延至一座[concept_treaty_port]，将可能导致#bold 全球鼠疫大流行#!。"
+  je_plague_pandemic_on_complete_tt: "[ROOT.GetCountry.GetName]所有地区失去#bold 鼠疫#!"
+  je_plague_pandemic_complete_tt: "进度条到达#variable 100%#!"

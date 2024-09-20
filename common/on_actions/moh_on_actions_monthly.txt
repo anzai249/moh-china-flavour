@@ -3,6 +3,8 @@
 		50 = 0
 		10 = self_strengthening.1
 		20 = moh_historical.10
+		20 = moh_historical.12
+		25 = moh_historical.16
 	}
 } 
 
