@@ -1,11 +1,6 @@
-﻿moh_coa_parliamentary_republic_trigger = {
-	has_law = law_type:law_parliamentary_republic
-}
-
-
-moh_coa_def_nihilist_flag_trigger = {
+﻿moh_coa_def_nihilist_flag_trigger = {
 	exists = scope:actor
-	scope:actor ?= { moh_coa_parliamentary_republic_trigger = yes }
+	scope:actor ?= { coa_anarchy_trigger = yes }
 }
 
 sun_yatsen_trigger_30 = {

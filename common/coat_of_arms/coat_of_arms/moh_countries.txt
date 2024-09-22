@@ -505,6 +505,17 @@ GUI_subject = {
 	}
 }
 
+XIB_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_crescent_star_05_rotated.dds"
+		color1 = "white"
+		instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }
+	}
+}
+
 DAI_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
