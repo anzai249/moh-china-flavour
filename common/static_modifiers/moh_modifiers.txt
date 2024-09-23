@@ -198,3 +198,9 @@ modifier_plague_lockdown = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_expenses_add = 100
 }
+
+modifier_wuxu_authority = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_authority_negative.dds
+	country_authority_mult = -0.25
+	country_bureaucracy_mult = -0.25
+}

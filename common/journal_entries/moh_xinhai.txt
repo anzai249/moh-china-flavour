@@ -68,8 +68,9 @@ je_xinhai = {
 			}
 		}
 		random_events = {
-			100 = 0
+			200 = 0
 			10 = xinhai.3
+			2 = xinhai.4
 			# 10 = xinhai.1
 			# 10 = xinhai.2
 		}

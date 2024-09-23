@@ -198,6 +198,7 @@
 			5 = moh_agitators.2
 			2 = wuxu.12
 			10 = wuxu.15
+			10 = wuxu.16
 		}
 	}
 	weight = 100

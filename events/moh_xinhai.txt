@@ -233,7 +233,7 @@ xinhai.2 = {
 				create_diplomatic_play = {
 					type = dp_revolution
 					target_country = c:CHI
-					handle_annexation_as_civil_war = yes
+					annex_as_civil_war = yes
 					# add_war_goal = {
 					# 	holder = THIS
 					# 	type = annex_country
@@ -279,6 +279,54 @@ xinhai.3 = {
 		scope:revolt_place = {
 			add_radicals_in_state = {
 				value = small_radicals
+			}
+		}
+	}
+}
+
+xinhai.4 = {
+	# 炸弹袭击
+	type = country_event
+	title = xinhai.4.t
+	desc = xinhai.4.d
+	placement = scope:bombing_place
+	flavor = xinhai.4.f
+	dlc = dlc0moh
+	event_image = {
+		video = "unspecific_vandalized_storefront"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	duration = 3
+	trigger = {
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				is_capital = no
+			}
+			save_scope_as = bombing_place
+		}
+	}
+	option = {
+		name = xinhai.4.a
+		default_option = yes
+		change_variable = {
+			name = xinhai_progress
+			value = 5
+		}
+	}
+	option = {
+		name = xinhai.4.b
+		change_variable = {
+			name = xinhai_progress
+			value = -5
+		}
+		scope:bombing_place = {
+			add_radicals_in_state = {
+				value = medium_radicals
 			}
 		}
 	}

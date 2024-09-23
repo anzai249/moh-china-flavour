@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
-  father_of_the_republic_name: "国父 #bold [GetGlobalVariable('sun_yatsen').GetCharacter.GetFullName]#! "
+  father_of_the_republic_name: "国父 #bold [GetGlobalVariable('sun_yatsen').GetCharacter.GetCustom('GetUniversalFullName')]#! "
   father_now_at: "国父目前在：[GetGlobalVariable('sun_yatsen_in').GetCountry.GetName]"
   father_attitude: "国父对你态度是："
   daoguang_name: "道光皇帝 #bold [GetPlayer.GetRuler.GetFirstName]#! "
