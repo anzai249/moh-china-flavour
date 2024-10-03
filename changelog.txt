@@ -1,0 +1,5 @@
+beta-0.2
+
+Fixes:
+- Incorporate the Western Territories timeout set to 30 years.
+- Fixed the issue that the event "moh_agitators.2" (Wuxu Reform) could not be triggered.
