@@ -14,10 +14,12 @@
 		any_scope_state = {
 			percent = 100
 			filter = {
+				OR = {
 				state_region = s:STATE_ALXA
 				state_region = s:STATE_QINGHAI
 				state_region = s:STATE_DZUNGARIA
 				state_region = s:STATE_TIANSHAN
+			}
 			}
 			is_incorporated = yes
 		}

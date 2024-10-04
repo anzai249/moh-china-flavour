@@ -2,7 +2,7 @@
   "name" : "Mandate of Heaven",
 	"id" : "",
   "version" : "",
-  "supported_game_version" : "",
+  "supported_game_version" : "1.7.*",
   "short_description" : "",
   "tags" : [],
   "relationships" : [],
