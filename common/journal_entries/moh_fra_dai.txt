@@ -2,11 +2,11 @@ je_fra_dai = {
 	icon = "gfx/interface/icons/generic_icons/state.dds"
 	group = je_group_historical_content
 	is_shown_when_inactive = {
-		this ?= c:FRA
+		c:FRA ?= this
 	}
 	possible = {
 		year > 1875
-		this ?= c:FRA
+		c:FRA ?= this
 		exists = c:DAI
 		# c:CHI ?= {
 		# 	OR = {

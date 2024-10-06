@@ -20,7 +20,7 @@ moh_agitators.1 = {
 		# 	country_has_primary_culture = cu:han
 		# 	country_has_primary_culture = cu:manchu
 		# }
-		this ?= c:CHI
+		c:CHI ?= this
 		game_date > 1880.1.1
 		game_date < 1927.3.31
 		NOR = {

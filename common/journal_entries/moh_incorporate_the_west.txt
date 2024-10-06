@@ -7,12 +7,12 @@
 	}
 	possible = {
 		exists = c:CHI
-		this ?= c:CHI
+		c:CHI ?= this
 		has_technology_researched = colonization
 	}
 	complete = {
 		any_scope_state = {
-			percent = 100
+			percent = 1
 			filter = {
 				OR = {
 				state_region = s:STATE_ALXA

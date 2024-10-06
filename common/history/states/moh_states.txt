@@ -1,0 +1,23 @@
+﻿STATES = {
+	s:STATE_HINGGAN = {
+		add_state_trait = state_trait_great_wall
+	}
+	s:STATE_BEIJING = {
+		add_state_trait = state_trait_great_wall
+	}
+	s:STATE_SHENGJING = {
+		add_state_trait = state_trait_great_wall
+	}
+	s:STATE_SHANXI = {
+		add_state_trait = state_trait_great_wall
+	}
+	s:STATE_NINGXIA = {
+		add_state_trait = state_trait_great_wall
+	}
+	s:STATE_GANSU = {
+		add_state_trait = state_trait_great_wall
+	}
+	s:STATE_XIAN = {
+		add_state_trait = state_trait_great_wall
+	}
+}
