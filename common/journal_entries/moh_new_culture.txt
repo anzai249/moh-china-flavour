@@ -1,0 +1,57 @@
+﻿je_new_culture = {
+	icon = "gfx/interface/icons/event_icons/new_culture.dds"
+	group = je_group_historical_content
+	is_shown_when_inactive = {
+		exists = c:CHI
+		c:CHI = root
+		NOT = {
+			has_law = law_type:law_monarchy
+		}
+		NOT = {
+			has_variable = new_culture
+		}
+	}
+	possible = {
+		exists = c:CHI
+		c:CHI ?= this
+		has_law = law_type:law_monarchy
+		OR = {
+			has_law = law_type:law_right_of_assembly
+			has_law = law_type:law_protected_speech
+		}
+		always = no
+	}
+	immediate = {
+		set_variable = new_culture
+	}
+	scripted_progress_bar = new_culture_communist_progress_bar
+	scripted_progress_bar = new_culture_united_provinces_progress_bar
+	scripted_progress_bar = new_culture_monarchy_progress_bar
+	scripted_progress_bar = new_culture_anarchist_progress_bar
+	scripted_progress_bar = new_culture_presidential_autocracy_progress_bar
+	complete = {
+		custom_tooltip = {
+			text = new_culture_complete_tt
+			always = no
+		}
+	}
+	timeout = 1825
+	on_timeout = {
+		add_modifier = {
+			name = modifier_conservatism_grow
+			years = 5
+		}
+	}
+	fail = {
+		always = no
+		OR = {
+			has_law = law_type:law_council_republic
+			has_law = law_type:law_monarchy
+			has_law = law_type:law_anarchy
+			AND = {
+				has_law = law_type:law_presidential_republic
+				has_law = law_type:law_autocracy
+			}
+		}
+	}
+}

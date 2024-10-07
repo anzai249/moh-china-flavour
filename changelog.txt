@@ -15,3 +15,11 @@ Fixes:
 - Compatibility with historical population growth and resources.
 - Fixed tons of errors triggered by c:CHI ?= this.
 - Incorporate the Western Territories percentage error.
+
+beta-0.3.1
+
+Fixes:
+- Temporarily removed Prince Gong.
+
+Changes:
+- Xinhai JE new triggers.

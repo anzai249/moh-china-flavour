@@ -1,0 +1,70 @@
+﻿new_culture_communist_progress_bar = {
+	name = new_culture_communist_progress_bar
+	desc = "new_culture_communist_progress_bar_desc"
+	min_value = 0
+	max_value = 100
+	start_value = 50
+	default_bad = yes
+	monthly_progress = {
+		if = {
+			limit = {
+				NOT = {
+					has_technology_researched = socialism
+				}
+			}
+			add = {
+				desc = "new_culture_communist_progress_bar_tech_decrease"
+				value = -10
+			}
+		}
+	}
+}
+
+new_culture_united_provinces_progress_bar = {
+	name = new_culture_united_provinces_progress_bar
+	desc = "new_culture_united_provinces_progress_bar_desc"
+	min_value = 0
+	max_value = 100
+	start_value = 50
+	default = yes
+}
+
+new_culture_monarchy_progress_bar = {
+	name = new_culture_monarchy_progress_bar
+	desc = "new_culture_monarchy_progress_bar_desc"
+	min_value = 0
+	max_value = 100
+	start_value = 50
+	default_green = yes
+}
+
+new_culture_anarchist_progress_bar = {
+	name = new_culture_anarchist_progress_bar
+	desc = "new_culture_anarchist_progress_bar_desc"
+	min_value = 0
+	max_value = 100
+	start_value = 50
+	white = yes
+	monthly_progress = {
+		if = {
+			limit = {
+				NOT = {
+					has_technology_researched = anarchism
+				}
+			}
+			add = {
+				desc = "new_culture_anarchist_progress_bar_tech_decrease"
+				value = -10
+			}
+		}
+	}
+}
+
+new_culture_presidential_autocracy_progress_bar = {
+	name = new_culture_presidential_autocracy_progress_bar
+	desc = "new_culture_presidential_autocracy_progress_bar_desc"
+	min_value = 0
+	max_value = 100
+	start_value = 50
+	gold = yes
+}

@@ -4,7 +4,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing
-Current version: beta-0.2
+Current version: beta-0.3
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]50+ new historical or non-historical events.
@@ -40,15 +40,20 @@ Not Sure:
 [*]?Han primary culture removal
 
 [img]https://i.imgur.com/DU4EZjG.png[/img]
-[b]↑ - Load the mod above MOH
+
+[b]
+↑ - Load the mod above MOH
 ↓ - Load the mod blow MOH
-🀄 - Load in any order[/b]
+🀄 - Load in any order
+[/b]
+
 Compatible:
 [*]↑[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3261096208]ECCHI Redux[/url]
 [*]↓[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2952672441]East Asian Clothes Patch[/url]
 [*]↓[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880875193]Universal Names[/url]
 [*]↓[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880117699]中文人名补充[/url] (Only Simplified Chinese)
 [*]🀄[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3304655670]Chinese Style Map[/url]
+[*]↓[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2881364019]Historical Population Growth & Resources[/url]
 
 Not Compatible:
 [*]Any other flavour pack, RA, EAFP

@@ -400,6 +400,48 @@ types journal_entry_panel_types
 								}
 							}
 
+							#### White
+							white_progressbar_horizontal = {
+								visible = "[EqualTo_string(ScriptedProgressBar.GetName, Localize('new_culture_anarchist_progress_bar')))]"
+								block "progressbar_size" {
+									size = { 504 30 }
+								}
+								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
+								blockoverride "values" {
+									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
+									min = 0
+									max = 1
+								}
+								textbox = {
+									text = "[ScriptedProgressBar.GetDesc]"
+									autoresize = yes
+									align = nobaseline
+									margin_left = 10
+									parentanchor = vcenter
+								}
+							}
+
+							#### Gold
+							gold_progressbar_horizontal = {
+								visible = "[EqualTo_string(ScriptedProgressBar.GetName, Localize('new_culture_presidential_autocracy_progress_bar')))]"
+								block "progressbar_size" {
+									size = { 504 30 }
+								}
+								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
+								blockoverride "values" {
+									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
+									min = 0
+									max = 1
+								}
+								textbox = {
+									text = "[ScriptedProgressBar.GetDesc]"
+									autoresize = yes
+									align = nobaseline
+									margin_left = 10
+									parentanchor = vcenter
+								}
+							}
+
 							# double sided bad
 							default_progressbar_horizontal = {
 								visible = "[ScriptedProgressBar.IsDoubleSidedBad]"
