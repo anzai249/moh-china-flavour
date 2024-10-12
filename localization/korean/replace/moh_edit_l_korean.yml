@@ -1,0 +1,3 @@
+﻿l_korean:
+ je_warlord_china_special_tooltip_advance: "다음 조건들이 #bold 진행도#!를 #bold 증가#!시킵니다:\n• #BOLD 아편 전쟁#!에서 승리\n• 더 이상 [concept_unrecognized_power]이 아님\n• #BOLD 군주제 폐지#! [concept_journal_entry] 완료\n• #BOLD 변법자강운동#! [concept_journal_entry] 완료\n• #BOLD 서부 영토 통합#! [concept_journal_entry] 완료"
+ je_warlord_china_special_tooltip_deplete: "다음 조건들이 #bold 진척도#!를 #bold 감소#!시킵니다:\n• #BOLD 아편 전쟁#!에서 패배\n• #BOLD 태평천국#!의 출현을 막지 못함\n• #BOLD 태평천국#!을 재점령하지 못함\n• #BOLD 의화단 운동#! 실패\n• [concept_loans]을 빌리며 부채 발생\n• [concept_civil_war]이 발생\n• 다른 나라의 [concept_subject]이 됨\n• [GetLawType('law_monarchy').GetName]를 폐지함\n• #BOLD 대만#!을 완전히 통제하지 못함\n• 공화국을 설립한 후 [GetLawType('law_monarchy').GetName] 복귀를 시도함\""

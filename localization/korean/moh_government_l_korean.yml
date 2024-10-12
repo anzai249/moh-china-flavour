@@ -1,0 +1,6 @@
+﻿l_korean:
+ gov_dalai_lama_moh: "카샤그"
+ gov_dalai_lama_moh_desc: "이는 [concept_country]가 성직자의 수장에 의해 통치되는 [concept_government_type]입니다.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ gov_dalai_lama_regent: "카샤그"
+ gov_dalai_lama_regent_desc: "[Concept('concept_ruler', '$RULER_TITLE_DALAI_LAMA$')]의 환생이 아직 발견되지 않았기 때문에, [concept_country]는 [Concept('concept_ruler', '$RULER_TITLE_DALAI_LAMA_REGENT$')]에 의해 통치되고 있습니다.\n\n$TRANSFER_OF_POWER_NAME_DESC$"
+ RULER_TITLE_DALAI_LAMA_REGENT: "섭정"

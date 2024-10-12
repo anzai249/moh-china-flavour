@@ -1,0 +1,6 @@
+﻿l_korean:
+ father_of_the_republic_name: "국가의 아버지 #bold [GetGlobalVariable('sun_yatsen').GetCharacter.GetCustom('GetUniversalFullName')]#!"
+ father_now_at: "[GetGlobalVariable('sun_yatsen').GetCharacter.GetLastName]은 현재 [GetGlobalVariable('sun_yatsen_in').GetCountry.GetName]에 있습니다."
+ father_attitude: "[GetGlobalVariable('sun_yatsen').GetCharacter.GetLastName]의 당신에 대한 태도는 다음과 같습니다:"
+ daoguang_name: "도광제 #bold [GetPlayer.GetRuler.GetFirstName]#!"
+ gong_name: "애신각라 혁흔 #bold [GetPlayer.MakeScope.Var('yixin').GetCharacter.GetFirstName]#!"

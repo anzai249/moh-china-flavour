@@ -1,0 +1,12 @@
+﻿l_korean:
+ ig_former_scholar_officials: "전직 사대부"
+ ig_former_scholar_officials_desc: "군주제가 폐지되면서, 전직 사대부들의 신분 또한 사라지게 되었다."
+ ig_national_bourgeoisie: "민족 부르주아"
+ ig_national_bourgeoisie_desc: "기업가들과 달리, 국민 부르주아는 자본력에서 상대적으로 약하지만, 그들의 사상과 입장은 더욱 진보적이다."
+ ig_eight_banners: "팔기군"
+ ig_eight_banners_desc: "청군이 산해관에 들어섰을 때, 만주족은 청나라의 기본 군사 조직인 팔기군을 설립하였지만, 이 시기에 팔기제는 더 이상 단순한 군사 조직이 아니라 특권 계급으로 자리 잡고 말았습니다."
+ ig_farmers: "농민"
+ ig_farmers_desc: "자연 경제에 기반하여, 중국의 농민들은 대부분 농업 경제와 가내 수공업을 결합한 생산자입니다. 그들은 중국 사회의 기초를 이루는 중요한 존재입니다."
+ moh_ig_rural_folk_tt: "$ig_farmers$는 $ig_rural_folk$로 불리게 될 것입니다."
+ ig_new_armed_forces: "신군"
+ ig_new_armed_forces_desc: "중국이 근대화하면서 새로운 유형의 군대가 창설되었습니다."

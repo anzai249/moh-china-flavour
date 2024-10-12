@@ -1,0 +1,4 @@
+﻿l_korean:
+ MOH_MOD_DLC_BUTTON_TOOLTIP: "#T [Dlc.GetName]#!\n[Dlc.GetDesc]\n\n#low;emphasis @information! #blue;bold 천명#!#!은 현재 활성화 되었습니다!"
+ dlc0moh: "천명"
+ dlc0moh_desc: "이 낭만적인 시대에 황하와 장강 사이 오래된 제국의 문이 서서히 서양의 침략자들에 의해 열리고 있습니다. 침략자로부터 저항하고 독립을 유지할 것인지, 외세에 의해 삼켜지게 될 것인지? 아니면 전통을 버리고 새로운 시대를 받아드리게 될까요?"

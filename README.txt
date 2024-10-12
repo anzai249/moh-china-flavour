@@ -4,7 +4,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing
-Current version: beta-0.3
+Current version: beta-0.3.2
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]50+ new historical or non-historical events.
@@ -23,6 +23,7 @@ All contents in this mod are based on Wikipedia, however, this is a game and I n
 Languages supported:
 [*]English
 [*]简体中文
+[*]한국어 - by manchikim & Winterboy
 
 Feel free to contact me if you find any translation errors or if you can help with the translation.
 
