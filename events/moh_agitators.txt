@@ -16,50 +16,13 @@ moh_agitators.1 = {
 		empty_agitator_slots >= 1
 		has_law = law_type:law_monarchy
 		has_law = law_type:law_autocracy
-		OR = {
-			country_has_primary_culture = cu:han
-			country_has_primary_culture = cu:manchu
-		}
+		# OR = {
+		# 	country_has_primary_culture = cu:han
+		# 	country_has_primary_culture = cu:manchu
+		# }
+		c:CHI ?= this
 		game_date > 1880.1.1
 		game_date < 1927.3.31
-		any_scope_state = {
-			any_neighbouring_state = {
-				is_treaty_port = yes
-			}
-		}
-		weighted_calc_true_if = {
-			amount = 10
-			8 = {
-				has_variable = lost_opium_wars
-			}
-			7 = {
-				has_variable = arrow_incident_failed
-			}
-			2 = {
-				country_rank = rank_value:unrecognized_power
-			}
-			2 = {
-				country_rank = rank_value:unrecognized_major_power
-			}
-			2 = {
-				country_rank = rank_value:unrecognized_regional_power
-			}
-			8 = {
-				NOT = {
-					owns_entire_state_region = STATE_AMUR
-				}
-			}
-			8 = {
-				NOT = {
-					owns_entire_state_region = STATE_OUTER_MANCHURIA
-				}
-			}
-			5 = {
-				NOT = {
-					has_variable = old_summer_palace
-				}
-			}
-		}
 		NOR = {
 			has_global_variable = youwei_spawn
 			has_variable = wuxu_reform_support

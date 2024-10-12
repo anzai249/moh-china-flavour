@@ -7,18 +7,21 @@
 	}
 	possible = {
 		exists = c:CHI
-		this ?= c:CHI
+		c:CHI ?= this
 		has_technology_researched = colonization
 	}
 	complete = {
-		NOT = {
-			any_scope_state = {
-				NOR = {
-					state_region = s:STATE_AMUR
-					state_region = s:STATE_OUTER_MANCHURIA
-				}
-				is_incorporated = NO
+		any_scope_state = {
+			percent = 1
+			filter = {
+				OR = {
+				state_region = s:STATE_ALXA
+				state_region = s:STATE_QINGHAI
+				state_region = s:STATE_DZUNGARIA
+				state_region = s:STATE_TIANSHAN
 			}
+			}
+			is_incorporated = yes
 		}
 	}
 	on_complete = {
@@ -29,7 +32,7 @@
 		}
 		chi_add_1_fragile_unity = yes
 	}
-	timeout = 3650
+	timeout = 10950
 	on_timeout = {
 		add_modifier = {
 			name = modifier_western_incorporation_failed

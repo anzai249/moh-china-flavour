@@ -2,9 +2,9 @@
   "name" : "Mandate of Heaven",
 	"id" : "",
   "version" : "",
-  "supported_game_version" : "",
+  "supported_game_version" : "1.7.*",
   "short_description" : "",
-  "tags" : [],
+  "tags" : ["Cultures and Religions", "Events", "Expansion", "Flags", "Historical", "Journal Entries"],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true

@@ -204,3 +204,9 @@ modifier_wuxu_authority = {
 	country_authority_mult = -0.25
 	country_bureaucracy_mult = -0.25
 }
+
+# 保守主义抬头
+modifier_conservatism_grow = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_law_enactment_time_mult = 0.25
+}

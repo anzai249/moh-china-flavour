@@ -26,8 +26,9 @@
 		}
 	}
 	is_shown_when_inactive = {
-		this ?= c:CHI
+		c:CHI ?= this
 		has_law = law_type:law_monarchy
+		always = no
 	}
 	status_desc = {
 		first_valid = {
@@ -53,12 +54,12 @@
 		}
 	}
 	possible = {
-		this ?= c:CHI
+		c:CHI ?= this
 		any_scope_character = {
 			has_variable = is_gong
 		}
 		has_law = law_type:law_monarchy
-		# always = no
+		always = no
 	}
 	complete = {
 		custom_tooltip = {

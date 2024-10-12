@@ -5,9 +5,12 @@ je_xinhai = {
 		modifier_chi_xinhai
 	}
 	is_shown_when_inactive = {
-		has_global_variable = youwei_spawn
-		this ?= c:CHI
+		c:CHI ?= this
 		has_law = law_type:law_monarchy
+		OR = {
+			has_global_variable = youwei_spawn
+			has_technology_researched = egalitarianism
+		}
 	}
 	possible = {
 		has_law = law_type:law_monarchy

@@ -51,7 +51,7 @@ je_urbanization_events_1 = {
 		}
 		if = {
 			limit = {
-				this ?= c:CHI
+				c:CHI ?= this
 			}
 			ig:ig_rural_folk = {
 				custom_tooltip = moh_ig_rural_folk_tt

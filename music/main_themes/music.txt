@@ -1,10 +1,10 @@
 ﻿main_theme_track = {
-	music = "file:/music/qie_golden_snakes_furiously_dancing.ogg"
+	music = "file:/music/chi_three_principles_of_the_people.ogg"
 	can_be_interrupted = yes
 }
 
 main_theme_track_2 = {
-	music = "file:/music/qie_golden_snakes_furiously_dancing.ogg"
+	music = "file:/music/chi_three_principles_of_the_people.ogg"
 	can_be_interrupted = yes
     dlc = "Melodies for the Masses"
 }

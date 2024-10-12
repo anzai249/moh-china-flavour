@@ -1995,7 +1995,7 @@ ai_strategy_default = {
 		
 		if = {
 			limit = {
-				this ?= c:FRA
+				c:FRA ?= this
 				has_journal_entry = je_fra_dai
 				scope:target_country = { 
 					c:DAI ?= this
@@ -2546,7 +2546,7 @@ ai_strategy_default = {
 				c:FRA ?= this
 				has_journal_entry = je_fra_dai
 				scope:target_country = {
-					this ?= c:DAI
+					c:DAI ?= this
 				}
 			}
 			add = 75
@@ -5432,7 +5432,7 @@ ai_strategy_default = {
 				limit = {
 					has_journal_entry = je_fra_dai
 					scope:target_country = {
-						this ?= c:DAI
+						c:DAI ?= this
 					}
 				}
 				add = 100
@@ -5737,7 +5737,7 @@ ai_strategy_default = {
 				limit = {
 					has_journal_entry = je_fra_dai
 					scope:target_country = {
-						this ?= c:DAI
+						c:DAI ?= this
 					}
 				}
 				add = 100
@@ -5869,7 +5869,7 @@ ai_strategy_default = {
 					c:FRA ?= this
 					has_journal_entry = je_fra_dai
 					scope:target_country = {
-						this ?= c:DAI
+						c:DAI ?= this
 					}
 				}
 				add = 100
@@ -5935,7 +5935,7 @@ ai_strategy_default = {
 					c:FRA ?= this
 					has_journal_entry = je_fra_dai
 					scope:target_country = {
-						this ?= c:DAI
+						c:DAI ?= this
 					}
 				}
 				add = 100
