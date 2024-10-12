@@ -29,3 +29,8 @@ beta-0.3.2
 Changes:
 - Korean translation by manchikim & Winterboy.
 - Xianfeng JE now has description for the way of reducing the pressure of the Emperor.
+
+beta-0.3.3
+
+Fixes:
+- Localization dupulication.
