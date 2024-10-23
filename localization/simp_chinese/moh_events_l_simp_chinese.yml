@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
-  # official
+  #official
   moh_official.1.t: "#P 欢迎游玩！#!"
   moh_official.1.d: "你的威名从爱尔兰到契丹，无人不知无人不晓"
   moh_official.1.f: "您好啊，这里是作者#BOLD;blue anzai249#!，我对您游玩此模组表示衷心的感谢，祝您游玩顺利！游玩过程中如果有任何bug都可以来创意工坊页面反馈，我在此恭迎。\n\n偷偷告诉你，如果你玩的是大清，想体验本模组的大部分有趣的风味内容而非极小部分，那么我建议你#BOLD;p 输掉鸦片战争#!。如果你救国成功了，后面的救国行动就不会尝试了。不过其实你也可以多开几盘，获取最完整的体验。\n\n玩得开心。"
@@ -8,7 +8,7 @@
   moh_official.1.b: "知道了。"
   moh_official.1.b_tt: "“我劝天公重抖擞，不拘一格降人材。”"
   je_moh_start: "欢迎游玩"
-  # 科举
+  #科举
   keju.1.t: "科举制被废除"
   keju.1.d: "科举制终于被废除"
   keju.1.f: "在我们的努力下，科举制终于被废除，旧时代的选官制度终于落下帷幕。\n\n“所有乡会试一律停止。各省岁科考试亦即停止。”"
@@ -17,7 +17,7 @@
   keju.2.d: "科举制被新式学堂取代"
   keju.2.f: "在我们的努力下，科举制终于被废除，取而代之的是学习西方思想的新式学堂。\n\n“科举一日不废，即学校一日不能大兴；将士子永远无实在之学问，国家永远无救时之人才；中国永远不能进于富强，即永远不能争衡于各国。”"
   keju.2.a: "旧时代的终结，新时代的开始"
-  # Dalai Lama
+  #Dalai Lama
   dalai.1.t: "达赖喇嘛圆寂"
   dalai.1.d: "达赖喇嘛圆寂"
   dalai.1.f: "第[GetGlobalVariable('dalai_lama_no')]世达赖喇嘛在[ROOT.GetCountry.GetCapital.GetName]圆寂，这一消息迅速传遍[ROOT.GetCountry.GetName]，民众纷纷陷入深切的哀悼之中。"
@@ -30,7 +30,7 @@
   moh_tibet_look_for_new_dalai_lama: "寻找达赖喇嘛转世"
   moh_tibet_look_for_new_dalai_lama_desc: "若达赖喇嘛圆寂，我们将可以寻找新的达赖喇嘛转世。"
   moh_tibet_look_for_new_dalai_lama_tooltip: "寻找达赖喇嘛转世"
-  # 康有为出现
+  #康有为出现
   moh_agitators.1.t: "公车上书"
   moh_agitators.1.d: "一名名叫[SCOPE.sCharacter('historic_agitator_scope').GetCustom('GetUniversalFullName')]的学者上书给[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')]，他认为[COUNTRY.GetName]如今孱弱是因为社会制度落后于世界，他主张开展维新变法运动。"
   moh_agitators.1.f: "“窃以为弃台民之事小，散天下民之事大；割地之事小，亡国之事大；社稷安危，在此一举，举人等栋折榱坏，同受倾压，故不避斧钺之诛，犯冒越之罪，统筹大局，为我皇上陈之。”"
@@ -40,7 +40,7 @@
   moh_agitators.1.c.tt: "维新派将会更加活跃……"
   moh_agitators.1.e: "他的徒弟看起来蛮聪明……"
   moh_agitators.1.e.tt: "[SCOPE.sCharacter('historic_agitator_scope').GetCustom('GetUniversalFullName')]成为[GetInterestGroupVariant('ig_intelligentsia',GetPlayer).GetNameWithCountryVariant]领袖"
-  # 谭嗣同出现
+  #谭嗣同出现
   moh_agitators.2.t: "一位出身地主的维新派"
   moh_agitators.2.d: "一位名叫[SCOPE.sCharacter('historic_agitator_scope').GetCustom('GetUniversalFullName')]的维新派在[SCOPE.sState('sitong_state').GetName]的演讲吸引了不少群众围观。"
   moh_agitators.2.f: "传闻[SCOPE.sCharacter('historic_agitator_scope').GetCustom('GetUniversalFullName')]出身地主家庭，围观群众都在对这位看起来与其身份“不符”的演讲者议论纷纷。"
@@ -50,7 +50,7 @@
   moh_agitators.3.d: "怎么这么多！"
   moh_agitators.3.f: "[SCOPE.sCharacter('historic_agitator_scope').GetCustom('GetUniversalFullName')]，一名[GetIdeology('ideology_moh_revolutionary').GetName]领袖在某场起义中活了下来并逃跑，他现在正藏匿于我国的某个角落。\n\n我们刚刚才处理掉上一个[GetIdeology('ideology_moh_revolutionary').GetName]领袖，目前无力处理他，只能在暂时任由他宣传自己的思想。不过值得注意的是，他们到底有多少人才会在真么短的时间内出现这么多？"
   moh_agitators.3.a: "密切关注他"
-  # 戊戌变法
+  #戊戌变法
   wuxu.1.t: "戊戌政变"
   wuxu.1.d: "[GetIdeology('ideology_moh_reformer').GetName]在朝廷已完全失势，看来他们终究还是过于弱小。"
   wuxu.1.f: "“维新派的势力已经被完全削弱，他们的努力最终还是无法改变国家的命运。”\n\n[SCOPE.gsInterestGroup('wuxu_landowners_ig').GetLeader.GetFirstName]在[ROOT.GetCountry.GetCapital.GetName]宣布训政，维新变法运动落下帷幕。接下来需要处置的就是维新派头目。"
@@ -63,7 +63,7 @@
   wuxu.2.a: "皇上万岁！"
   wuxu.2.b: "把这段时间骂皇上的人全抓起来"
   wuxu.2.b.tt: "这将会再次激怒[GetIdeology('ideology_moh_revolutionary').GetName]"
-  # 戊戌变法随机事件
+  #戊戌变法随机事件
   wuxu.3.t: "举人上书"
   wuxu.3.d: "一位来自[SCOPE.sState('literati_state').GetName]的举人上书[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')]，要求铲除[GetIdeology('ideology_moh_reformer').GetName]。"
   wuxu.3.f: "远远望去[SCOPE.gsInterestGroup('wuxu_landowners_ig').GetLeader.GetCustom('GetUniversalFullName')]正急匆匆从外面走来，翻开手中的上书便要读给[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')]听：\n\n“臣等谨以此奏，今……愿皇上早除维新派，以保[COUNTRY.GetName]安宁……”"
@@ -135,7 +135,7 @@
   wuxu.16.f: "一名[GetIdeology('ideology_moh_reformer').GetName]官员仗势滥用职权，他在变法运动中利用职权谋取私利，引起了民众的不满。\n\n这一消息迅速传遍全国，引起了不少人的关注。"
   wuxu.16.a: "速速查明"
   wuxu.16.b: "不要影响变法进程"
-  # 清朝皇室
+  #清朝皇室
   qing_monarchy.1.t: "道光皇帝病重"
   qing_monarchy.1.d: "[SCOPE.sCharacter('qing_emperor_scope').GetCustom('GetUniversalFullName')]坚持为其继母#bold 恭慈皇太后#!守灵，以致生病。"
   qing_monarchy.1.f: "“朕蒙皇考仁宗睿皇帝覆载隆恩。付畀神器。临御天下。盈三十年……#bold 立皇四子奕詝为皇太子。#!……丧服仍依旧制二十七日而除。布告天下。咸使闻知。"
@@ -155,13 +155,13 @@
   qing_monarchy.4.d: "[SCOPE.sCharacter('qing_emperor_scope').GetCustom('GetUniversalFullName')]驾崩"
   qing_monarchy.4.f: "[SCOPE.sCharacter('qing_emperor_scope').GetCustom('GetUniversalFullName')]驾崩"
   qing_monarchy.4.a: "置办丧事"
-  # 台湾
+  #台湾
   moh_taiwan.1.t: "台湾起义"
   moh_taiwan.1.d: "我们刚刚接管的[SCOPE.sState('taiwan_state_scope').GetName]发生了一场反对我们的起义。"
   moh_taiwan.1.f: "叛乱分子在[SCOPE.sState('taiwan_state_scope').GetName]发动了一场起义，他们打算将我们赶出[SCOPE.sState('taiwan_state_scope').GetName]。他们将我们新派过去的官员绑了在街上游行，嘴里还念念有词：\n\n“我[SCOPE.sState('taiwan_state_scope').GetName]隶[SCOPE.sCountry('taiwan_war_from').GetName]版图二百余年。近改行省，风会大开，俨然雄峙东南矣。乃上年[SCOPE.sCountry('taiwan_war_target').GetName]肇衅，遂至失和……愿人人战死而失台，决不愿拱手而让台。”"
   moh_taiwan.1.a: "镇压叛乱"
   moh_taiwan.1.b: "看来我们的决定欠妥，撤回官员"
-  # historical tiny
+  #historical tiny
   moh_historical.1.t: "学生请愿"
   moh_historical.1.d: "[ROOT.GetCountry.GetCapital.GetName]的学生走上了街头抗议[SCOPE.sCountry('target_treaty_port_controller').GetName]"
   moh_historical.1.f: "“誓死力争，还我[SCOPE.sState('target_treaty_port').GetName]！”\n\n[ROOT.GetCountry.GetCapital.GetName]城内发生了一场大规模学生示威活动，他们挥舞标语，散发传单，希望[SCOPE.sCountry('target_treaty_port_controller').GetName]归还[SCOPE.sState('target_treaty_port').GetName]，并呼吁清理政府中亲[SCOPE.sCountry('target_treaty_port_controller').GetName]的官员，拒绝承认不平等条约。\n\n随着局势升级，抗议活动迅速扩展至其他地区，[ROOT.GetCountry.GetCapital.GetName]的工人、商人也逐渐加入，许多学者与知识分子纷纷声援。"
@@ -246,7 +246,7 @@
   moh_historical.16.t: "鼠疫传播到[SCOPE.sState('target_state').GetName]"
   moh_historical.16.d: "鼠疫传播到[SCOPE.sState('target_state').GetName]"
   moh_historical.16.f: "来自[SCOPE.sCountry('pandemic_country').GetName]的鼠疫目前已通过港口传播到[SCOPE.sState('target_state').GetName]，[SCOPE.sState('target_state').GetName]的当地政府已经采取了一系列措施，包括隔离疫区、清理垃圾、消毒等，希望疫情得到控制。\n\n我们也应该谨防从[concept_treaty_port]通过海路传播的疫情。"
-  # xinhai
+  #xinhai
   xinhai.1.t: "[SCOPE.sState('baolu_state').GetName]保路"
   xinhai.1.d: "[SCOPE.sState('baolu_state').GetName]爆发保路运动"
   xinhai.1.f: "近日，[SCOPE.sState('baolu_state').GetName]各地民众因政府颁布的《铁路干线国有政策》引发强烈反对，纷纷集会抗议，要求朝廷收回成命，保全地方集资修路的权益。此事件迅速蔓延，形成一场声势浩大的保路运动，现已扩展至[SCOPE.sState('baolu_state').GetCityHubName]、[SCOPE.sState('baolu_state').GetFarmHubName]等地，参与者众多，局势日趋紧张。\n\n然今年，朝廷突然宣布铁路收归国有，并将地方筹资部分作为国家赔款借款的担保，引起[SCOPE.sState('baolu_state').GetName]民众普遍不满，认为朝廷此举乃剥夺[SCOPE.sState('baolu_state').GetName]民众的财产和权益。与此同时，绅商组织自发成立“保路同志会”，意图通过合法途径维护集资修路的权利。"
@@ -266,7 +266,7 @@
   xinhai.4.f: "革命党人[SCOPE.sState('bombing_state').GetCityHubName]用炸弹袭击了我们的官员，造成了数十人伤亡。\n\n如果不尽快解决革命党之事，可能会造成严重后果。"
   xinhai.4.a: "安抚受难者家属"
   xinhai.4.b: "专注处理革命党"
-  # 随机
+  #随机
   moh_random.1.t: "黄河决堤"
   moh_random.1.d: "黄河决堤，水淹[SCOPE.sState('yellow_river_state').GetName]"
   moh_random.1.f: "黄河决堤，洪水泛滥，[SCOPE.sState('yellow_river_state').GetName]一带水深一丈，民房农田尽毁，百姓无家可归，灾情十分严重。"
@@ -298,3 +298,7 @@
   moh_art_name_6: "韩熙载夜宴图"
   moh_art_name_7: "墨兰图"
   moh_art_name_8: "游春图"
+  warlord_china_events.400.t: "天朝上国的崩解"
+  warlord_china_events.400.d: "两千年来的天朝上国体系走向终结"
+  warlord_china_events.400.f: "随着[ROOT.GetCountry.GetName]的权威逐渐削弱，个朝贡国与藩属也逐渐脱离中央控制。[ROOT.GetCountry.GetName]的美梦破碎，朝贡体系正式崩溃，两千年来的天朝上国体系走向终结。"
+  warlord_china_events.400.a: "我们无能为力"
