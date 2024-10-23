@@ -210,3 +210,9 @@ modifier_conservatism_grow = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
 	country_law_enactment_time_mult = 0.25
 }
+
+# 天朝上国
+modifier_mandate_of_heaven = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_hat_negative.dds
+	country_diplomatic_play_maneuvers_add = -25
+}

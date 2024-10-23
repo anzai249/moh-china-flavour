@@ -34,3 +34,9 @@ beta-0.3.3
 
 Fixes:
 - Localization dupulication.
+
+beta-0.3.4
+
+Changes:
+- New Fragile Unity JE.
+- If you failed Xinhai Revolution JE, China will shattered into warlords.

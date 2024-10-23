@@ -31,6 +31,7 @@
 			is_decaying = yes
 		}
 		chi_add_1_fragile_unity = yes
+		set_variable = china_incorporated_west
 	}
 	timeout = 10950
 	on_timeout = {

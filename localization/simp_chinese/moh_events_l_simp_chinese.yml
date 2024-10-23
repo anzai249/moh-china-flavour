@@ -298,3 +298,7 @@
   moh_art_name_6: "韩熙载夜宴图"
   moh_art_name_7: "墨兰图"
   moh_art_name_8: "游春图"
+  warlord_china_events.400.t: "天朝上国的崩解"
+  warlord_china_events.400.d: "两千年来的天朝上国体系走向终结"
+  warlord_china_events.400.f: "随着[ROOT.GetCountry.GetName]的权威逐渐削弱，个朝贡国与藩属也逐渐脱离中央控制。[ROOT.GetCountry.GetName]的美梦破碎，朝贡体系正式崩溃，两千年来的天朝上国体系走向终结。"
+  warlord_china_events.400.a: "我们无能为力"

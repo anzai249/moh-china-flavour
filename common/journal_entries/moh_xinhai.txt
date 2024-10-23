@@ -59,6 +59,9 @@ je_xinhai = {
 				country_definition = root.country_definition
 			}
 		}
+		trigger_event = {
+			id = warlord_china_events.100
+		}
 	}
 	on_fail = {
 		

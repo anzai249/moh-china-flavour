@@ -997,3 +997,111 @@ warlord_china_events.301 = {
 		}
 	}
 }
+
+warlord_china_events.400 = {
+	type = country_event
+	placement = root
+	duration = 3
+	title = warlord_china_events.400.t
+	desc = warlord_china_events.400.d
+	flavor = warlord_china_events.400.f
+	event_image = {
+		video = "unspecific_armored_train"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	trigger = {
+		exists = c:CHI
+		this = c:CHI
+	}
+	immediate = {
+		if = {
+			limit = {
+				exists = s:STATE_TIANSHAN.region_state:CHI
+				NOT = {
+					has_variable = china_incorporated_west
+				}
+			}
+			create_country = {
+				tag = XIN
+				origin = this
+				state = s:STATE_TIANSHAN.region_state:CHI
+				on_created = {
+					random_state = {
+						limit = {
+							state_region = s:STATE_DZUNGARIA
+							c:CHI ?= owner
+						}
+						set_state_owner = c:XIN
+					}
+					random_state = {
+						limit = {
+							state_region = s:STATE_JETISY
+							c:CHI ?= owner
+						}
+						set_state_owner = c:XIN
+					}
+					random_state = {
+						limit = {
+							state_region = s:STATE_KIRGHIZIA
+							c:CHI ?= owner
+						}
+						set_state_owner = c:XIN
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = s:STATE_ULIASTAI.region_state:CHI
+			}
+			create_country = {
+				tag = MGL
+				origin = this
+				state = s:STATE_ULIASTAI.region_state:CHI
+				on_created = {
+					random_state = {
+						limit = {
+							state_region = s:STATE_URGA
+							c:CHI ?= owner
+						}
+						set_state_owner = c:MGL
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = s:STATE_TUVA.region_state:CHI
+			}
+			create_country = {
+				tag = TUV
+				origin = this
+				state = s:STATE_TUVA.region_state:CHI
+			}
+		}
+		if = {
+			limit = {
+				exists = s:STATE_ALTAI.region_state:CHI
+				NOT = {
+					has_variable = china_incorporated_west
+				}
+			}
+			create_country = {
+				tag = ALI
+				origin = this
+				state = s:STATE_ALTAI.region_state:CHI
+			}
+		}
+		every_subject_or_below = {
+			make_independent = yes
+		}
+	}
+	option = {
+		name = warlord_china_events.400.a
+		default_option = yes
+		ai_chance = {
+			base = 10
+		}
+	}
+}

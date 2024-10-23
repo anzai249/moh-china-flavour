@@ -10,7 +10,7 @@
 	c:CHI ?= {
 		set_variable = {
 			name = china_warlord_explosion
-			value = 6
+			value = 5
 		}
 		set_variable = {
 			name = prince_gong_progress
