@@ -67,7 +67,7 @@ xinhai.1 = {
 			value = scope:xinhai_place
 		}
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 	}
 	option = {
@@ -77,7 +77,7 @@ xinhai.1 = {
 			value = scope:baolu_state
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 }
@@ -181,7 +181,7 @@ xinhai.2 = {
 		name = xinhai.2.b
 		default_option = yes
 		ai_chance = {
-			factor = 5
+			base = 5
 		}
 		create_dynamic_country = {
 			origin = root
@@ -281,6 +281,32 @@ xinhai.3 = {
 				value = small_radicals
 			}
 		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		name = xinhai.4.c
+		trigger = {
+			NOT = {
+				has_global_variable = huangxing_dead
+			}
+			has_law = law_type:law_professional_army
+			NOT = {
+				has_journal_entry = je_8_flags
+			}
+		}
+		highlighted_option = yes
+		custom_tooltip = {
+			text = xinhai.5.c.tt
+			set_global_variable = {
+				name = huangxing_dead
+				value = 1
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
 	}
 }
 
@@ -317,6 +343,14 @@ xinhai.4 = {
 			name = xinhai_progress
 			value = 5
 		}
+		scope:bombing_place = {
+			add_loyalists_in_state = {
+				value = small_radicals
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
 	}
 	option = {
 		name = xinhai.4.b
@@ -328,6 +362,143 @@ xinhai.4 = {
 			add_radicals_in_state = {
 				value = medium_radicals
 			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		name = xinhai.4.c
+		trigger = {
+			NOT = {
+				has_global_variable = wangjingwei_dead
+			}
+			OR = {
+				has_law = law_type:law_secret_police
+				institution_investment_level = {
+					institution = institution_police
+					value >= 3
+				}
+			}
+		}
+		highlighted_option = yes
+		custom_tooltip = {
+			text = xinhai.4.c.tt
+			set_global_variable = {
+				name = wangjingwei_dead
+				value = 1
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+xinhai.5 = {
+	# 发现秋瑾的证据
+	type = country_event
+	title = xinhai.5.t
+	desc = xinhai.5.d
+	placement = scope:qiujin_state
+	flavor = xinhai.5.f
+	dlc = dlc0moh
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	duration = 3
+	trigger = {
+		any_scope_character = {
+			has_template = chi_qiu_jin_character_template
+		}
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				is_capital = no
+			}
+			save_scope_as = qiujin_state
+		}
+		random_scope_character = {
+			limit = {
+				has_template = chi_qiu_jin_character_template
+			}
+			save_scope_as = qiujin_character
+		}
+	}
+	option = {
+		name = xinhai.5.a
+		default_option = yes
+		scope:qiujin_character = {
+			kill_character = yes
+		}
+		set_global_variable = {
+			name = qiujin_dead
+			value = 1
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		name = xinhai.5.b
+		add_loyalists = {
+			value = 0.05
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+xinhai.6 = {
+	# 孙文归案
+	type = country_event
+	title = xinhai.6.t
+	desc = xinhai.6.d
+	placement = scope:sunwen_state
+	flavor = xinhai.6.f
+	dlc = dlc0moh
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+	duration = 3
+	trigger = {
+		NOT = {
+			has_global_variable = sun_yatsen_dead
+		}
+		year > 1908
+		has_global_variable = qiujin_dead
+		has_global_variable = huangxing_dead
+		has_global_variable = wangjingwei_dead
+		taking_loans = yes
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+				is_capital = no
+			}
+			save_scope_as = sunwen_state
+		}
+	}
+	option = {
+		name = xinhai.6.a
+		default_option = yes
+		custom_tooltip = {
+			text = xinhai.6.a.tt
+			set_global_variable = {
+				name = sun_yatsen_dead
+				value = 1
+			}
+		}
+		ai_chance = {
+			base = 5
 		}
 	}
 }

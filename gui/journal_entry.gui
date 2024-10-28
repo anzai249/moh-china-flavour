@@ -276,6 +276,72 @@ types journal_entry_panel_types
 					}
 				}
 
+				# xinhai characters
+				flowcontainer = {
+					visible = "[EqualTo_string(JournalEntry.GetName, Localize('je_xinhai'))]"
+					size = { @panel_width_plus_20 120 }
+					direction = horizontal
+					using = default_list_position
+					spacing = 0	
+					parentanchor = hcenter
+					widget = {
+						size = { 120 120 }
+						icon = {
+							size = { 120 120 }
+							texture = "gfx/interface/icons/event_icons/xinhai_huangxing.dds"
+							tooltip = "je_xinhai_huangxing_tt"
+						}
+						icon  = {
+							size = { 120 120 }
+							visible = "[EqualTo_CFixedPoint( GetGlobalVariable('huangxing_dead').GetValue, '(CFixedPoint)1' )]"
+							texture = "gfx/interface/icons/event_icons/xinhai_huangxing_d.dds"
+							tooltip = "je_xinhai_huangxing_d_tt"
+						}
+					}
+					widget = {
+						size = { 120 120 }
+						icon = {
+							size = { 120 120 }
+							texture = "gfx/interface/icons/event_icons/xinhai_qiujin.dds"
+							tooltip = "je_xinhai_qiujin_tt"
+						}
+						icon  = {
+							size = { 120 120 }
+							visible = "[EqualTo_CFixedPoint( GetGlobalVariable('qiujin_dead').GetValue, '(CFixedPoint)1' )]"
+							texture = "gfx/interface/icons/event_icons/xinhai_qiujin_d.dds"
+							tooltip = "je_xinhai_qiujin_d_tt"
+						}
+					}
+					widget = {
+						size = { 120 120 }
+						icon = {
+							size = { 120 120 }
+							texture = "gfx/interface/icons/event_icons/xinhai_sunyatsen.dds"
+							tooltip = "je_xinhai_sunyatsen_tt"
+						}
+						icon  = {
+							size = { 120 120 }
+							visible = "[EqualTo_CFixedPoint( GetGlobalVariable('sun_yatsen_dead').GetValue, '(CFixedPoint)1' )]"
+							texture = "gfx/interface/icons/event_icons/xinhai_sunyatsen_d.dds"
+							tooltip = "je_xinhai_sunyatsen_d_tt"
+						}
+					}
+					widget = {
+						size = { 120 120 }
+						icon = {
+							size = { 120 120 }
+							texture = "gfx/interface/icons/event_icons/xinhai_wangjingwei.dds"
+							tooltip = "je_xinhai_wangjingwei_tt"
+						}
+						icon  = {
+							size = { 120 120 }
+							visible = "[EqualTo_CFixedPoint( GetGlobalVariable('wangjingwei_dead').GetValue, '(CFixedPoint)1' )]"
+							texture = "gfx/interface/icons/event_icons/xinhai_wangjingwei_d.dds"
+							tooltip = "je_xinhai_wangjingwei_d_tt"
+						}
+					}
+				}
+
 				textbox = {
 					visible = "[Not(StringIsEmpty(JournalEntry.GetStatusDesc))]"
 					text = "[JournalEntry.GetStatusDesc]"

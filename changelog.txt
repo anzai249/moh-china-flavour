@@ -40,3 +40,10 @@ beta-0.3.4
 Changes:
 - New Fragile Unity JE.
 - If you failed Xinhai Revolution JE, China will shattered into warlords.
+
+beta-0.4
+
+Changes:
+- Let Lin Zexu no longer die easily.
+- New Xinhai Revolution JE.
+[img]https://i.imgur.com/CAABFis.png[/img]

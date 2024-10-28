@@ -716,7 +716,10 @@ moh_historical.10 = {
 		global_var:sun_yatsen = {
 			save_scope_as = sun_yatsen_dead_scope
 		}
-		set_global_variable = sun_yatsen_dead
+		set_global_variable = {
+			name = sun_yatsen_dead
+			value = 1
+		}
 	}
 	option = {
 		name = moh_historical.10.a

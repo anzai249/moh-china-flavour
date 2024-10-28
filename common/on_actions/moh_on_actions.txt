@@ -131,3 +131,35 @@ on_heir_born = {
 		}
 	}
 }
+
+on_character_death = {
+	effect = {
+		if = {
+			limit = {
+				has_template = chi_qiu_jin_character_template
+			}
+			set_global_variable = {
+				name = qiujin_dead
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_template = ecchi_chi_huangxing_character_template
+			}
+			set_global_variable = {
+				name = huangxing_dead
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				has_template = ecchi_chi_wang_jingwei_character_template
+			}
+			set_global_variable = {
+				name = wangjingwei_dead
+				value = 1
+			}
+		}
+	}
+}

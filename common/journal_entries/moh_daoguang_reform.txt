@@ -190,6 +190,29 @@ je_daoguang_reform_opium = {
 			}
 		}
 	}
+	on_fail = {
+		random_scope_character = {
+			limit = {
+				has_variable = is_linzexu
+			}
+			set_character_immortal = no
+		}
+	}
+	on_yearly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					year >= 1842
+				}
+				random_scope_character = {
+					limit = {
+						has_variable = is_linzexu
+					}
+					set_character_immortal = no
+				}
+			}
+		}
+	}
 	weight = 200
 	should_be_pinned_by_default = yes
 }

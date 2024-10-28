@@ -1390,6 +1390,9 @@ ecchi_chi_wang_jingwei_character_template = {
                     this = c:YUE
                 }
             }
+            NOT = {
+                has_variable = wangjingwei_d
+            }
         }
         interest_group_trigger = {
             is_marginal = no

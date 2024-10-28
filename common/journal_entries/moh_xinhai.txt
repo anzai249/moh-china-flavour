@@ -39,8 +39,20 @@ je_xinhai = {
 		}
 	}
 	complete = {
-		NOT = {
-			has_law = law_type:law_monarchy
+		OR = {
+			NOT = {
+				has_law = law_type:law_monarchy
+				has_law = law_type:law_theocracy
+			}
+			custom_tooltip = {
+				text = je_xinhai_kill_all_tt
+				AND = {
+					has_global_variable = sun_yatsen_dead
+					has_global_variable = huangxing_dead
+					has_global_variable = qiujin_dead
+					has_global_variable = wangjingwei_dead
+				}
+			}
 		}
 	}
 	fail = {
@@ -59,12 +71,11 @@ je_xinhai = {
 				country_definition = root.country_definition
 			}
 		}
+	}
+	on_fail = {
 		trigger_event = {
 			id = warlord_china_events.100
 		}
-	}
-	on_fail = {
-		
 	}
 	on_monthly_pulse = {
 		effect = {
@@ -76,7 +87,9 @@ je_xinhai = {
 		random_events = {
 			200 = 0
 			10 = xinhai.3
-			2 = xinhai.4
+			3 = xinhai.4
+			5 = xinhai.5
+			20 = xinhai.6
 			# 10 = xinhai.1
 			# 10 = xinhai.2
 		}
