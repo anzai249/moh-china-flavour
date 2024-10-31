@@ -1141,3 +1141,133 @@ moh_historical.16 = {
 		}
 	}
 }
+
+opium_wars_moh.1 = {
+	# 拦腰一棍
+	type = country_event
+	placement = root
+	title = opium_wars_moh.1.t
+	desc = opium_wars_moh.1.d
+	flavor = opium_wars_moh.1.f
+	dlc = dlc0moh
+	event_image = {
+		video = "europenorthamerica_opium_smoker"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	trigger = {
+		is_banning_goods = opium
+	}
+	option = {
+		name = opium_wars_moh.1.a
+		default_option = yes
+		change_variable = {
+			name = opium_communism_progress
+			add = 10
+		}
+		add_radicals = {
+			value = small_radicals
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		name = opium_wars_moh.1.b
+		change_variable = {
+			name = opium_communism_progress
+			add = -5
+		}
+		add_loyalists = {
+			value = 0.1
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+
+# Addiction recovery
+opium_wars_moh.2 = {
+	type = country_event
+	placement = scope:recovry_state
+
+	title = opium_wars.7.t
+	desc = opium_wars.7.d
+	flavor = opium_wars.7.f
+
+	duration = 3
+
+	event_image = {
+		video = "europenorthamerica_opium_smoker"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		is_banning_goods = opium
+		any_scope_state = {
+			NOR = {
+				has_modifier = opium_health_focus
+				has_modifier = opium_loyalty_focus
+			}
+			any_scope_pop = {
+				culture = {
+					has_cultural_obsession = opium
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				NOR = {
+					has_modifier = opium_health_focus
+					has_modifier = opium_loyalty_focus
+				}
+				any_scope_pop = {
+					culture = {
+						has_cultural_obsession = opium
+					}
+				}
+			}
+			save_scope_as = recovry_state
+			random_scope_pop = {
+				limit = {
+					culture = {
+						has_cultural_obsession = opium
+					}
+				}
+				save_scope_as = recovery_pop
+			}
+		}
+	}
+
+	option = {
+		name = opium_wars.7.a
+		default_option = yes
+		scope:recovry_state = {
+			add_modifier = {
+				name = opium_health_focus
+				months = short_modifier_time
+			}
+		}
+	}
+
+	option = {
+		name = opium_wars.7.b
+		scope:recovry_state = {
+			add_loyalists_in_state = {
+				value = 0.3
+			}
+			add_modifier = {
+				name = opium_loyalty_focus
+				months = short_modifier_time
+			}
+		}
+	}
+}

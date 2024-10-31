@@ -1,0 +1,71 @@
+﻿je_opium_communism = {
+	icon = "gfx/interface/icons/goods_icons/opium.dds"
+	group = je_group_historical_content
+	scripted_button = ban_opium_button
+	scripted_button = unban_opium_button
+	should_be_pinned_by_default = yes
+	progressbar = yes
+	timeout = 3650
+	weight = 100
+	is_shown_when_inactive = {
+		c:CHI ?= this
+		has_law = law_type:law_council_republic
+		any_primary_culture = {
+			has_cultural_obsession = opium
+		}
+	}
+	possible = {
+		c:CHI ?= this
+		has_law = law_type:law_council_republic
+		any_primary_culture = {
+			has_cultural_obsession = opium
+		}
+		is_revolutionary = no
+	}
+	immediate = {
+		set_variable = {
+			name = opium_communism_progress
+			value = 0
+		}
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_opium_communism_complete_tt
+			var:opium_communism_progress >= 100
+		}
+	}
+	on_complete = {
+		every_primary_culture = {
+			remove_cultural_obsession = opium
+		}
+		add_modifier = {
+			name = modifier_ban_opium_communism
+			years = 10
+		}
+		remove_banned_goods = g:opium
+	}
+	goal_add_value = {
+		add = 100
+	}
+	current_value = {
+		value = var:opium_communism_progress
+	}
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			5 = opium_wars_moh.2
+			5 = opium_wars_moh.1
+		}
+		effect = {
+			if = {
+				limit = {
+					is_banning_goods = opium
+				}
+				change_variable = {
+					name = opium_communism_progress
+					add = 1
+				}
+			}
+		}
+	}
+}

@@ -3,14 +3,20 @@
 	desc = "ban_opium_desc"
 
 	visible = { 
-		has_journal_entry = je_opium_obsession
+		OR = {
+			has_journal_entry = je_opium_obsession
+			has_journal_entry = je_opium_communism
+		}
 		exists = market
 		market.owner = root
 		NOT = { is_banning_goods = g:opium }
 	}
 
 	possible = {
-		has_journal_entry = je_opium_obsession
+		OR = {
+			has_journal_entry = je_opium_obsession
+			has_journal_entry = je_opium_communism
+		}
 		NOT = { has_law = law_type:law_free_trade }
 		custom_tooltip = {
 			text = not_lost_opium_wars_tt
@@ -21,9 +27,16 @@
 
 	effect = {
 		add_banned_goods = g:opium
-		trigger_event = {
-			id = moh_historical.9
-			popup = yes
+		if = {
+			limit = {
+				NOT = {
+					has_law = law_type:law_council_republic
+				}
+			}
+			trigger_event = {
+				id = moh_historical.9
+				popup = yes
+			}
 		}
 		add_modifier = {
 			name = opium_ban_authority
@@ -43,4 +56,38 @@
 			add = 10
 		}		 
     }
+}
+
+unban_opium_button = {
+	name = "remove_opium_ban"
+	desc = "remove_opium_ban_desc"
+
+	visible = { 
+		OR = {
+			has_journal_entry = je_opium_obsession
+			has_journal_entry = je_opium_communism
+		}
+		is_banning_goods = g:opium
+		exists = market
+		market.owner = root
+	}
+
+	possible = {
+		always = yes
+	}
+
+	effect = {
+		remove_banned_goods = g:opium
+		remove_modifier = opium_ban_authority
+	}
+
+	ai_chance = {
+		base = 0
+		  modifier = {
+			  trigger = {
+				  has_strategy = ai_strategy_progressive_agenda
+			  }
+			  add = 10
+		  }		 
+	 }	
 }

@@ -304,3 +304,8 @@
   xinhai.6.f: "[ROOT.GetCountry.GetName] The current financial situation is so dire that we are forced to take out loans from foreign banks. However, our officials accidentally found a familiar face among the crowd when they received the foreign bank's envoys, and it turned out to be [GetIdeology('ideology_moh_revolutionary').GetName] leader Sun Wen. \n\nHe's the only [GetIdeology('ideology_moh_revolutionary').GetName] leader left, and his existence has kept [ROOT.GetCountry.GetName] at bay for a hundred days, so we can finally put an end to all this."
   xinhai.6.a: "Execute him!"
   xinhai.6.a.tt: "Sun Yat-sen will be excuted."
+  opium_wars_moh.1.t: "Blow to the Waist"
+  opium_wars_moh.1.d: "The government issued a opium ban."
+  opium_wars_moh.1.f: "After the anti-drug directive was issued, all levels of government swiftly established anti-drug committees and launched major operations. [ROOT.GetCountry.GetName] mobilized the public, emphasizing reporting drug traffickers.\n\nThe strategy focused on 'persuading users and cutting off suppliers,' encouraging users to quit while eradicating cultivators and targeting distribution networks. This made it difficult for poppy growers to sell their products and for users to obtain drugs, leading to a nationwide ban on cultivation, except in some remote areas."
+  opium_wars_moh.1.a: "'His family is also hiding opium!'"
+  opium_wars_moh.1.b: "The economy needs to keep up too."

@@ -149,3 +149,6 @@
   je_xinhai_huangxing_d_tt: "#bold 黄兴#!\n@green_checkmark!已处决"
   je_xinhai_wangjingwei_d_tt: "#bold 汪兆铭#!\n@green_checkmark!已处决"
   je_xinhai_qiujin_d_tt: "#bold 秋瑾#!\n@green_checkmark!已处决"
+  je_opium_communism: "禁绝鸦片"
+  je_opium_communism_reason: "鸦片是[ROOT.GetCountry.GetName]的耻辱。清末以来，鸦片战争、鸦片贸易等事件让我们的国家蒙羞，饱受外国列强的欺凌。\n\n如今我们有了一个强有力的政府，我们必须禁绝鸦片，让我们的国家摆脱这种耻辱。"
+  je_opium_communism_complete_tt: "进度条到达#variable 100%#!"
