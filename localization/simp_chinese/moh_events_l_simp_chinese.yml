@@ -315,3 +315,8 @@
   xinhai.6.f: "[ROOT.GetCountry.GetName]目前财政状况堪忧，不得不向外国银行贷款。不过我们的官员在接见外国银行来使时意外发现人群当中熟悉的面孔，原来那是[GetIdeology('ideology_moh_revolutionary').GetName]头目孙文。\n\n他已经是仅剩的[GetIdeology('ideology_moh_revolutionary').GetName]领袖了，他的存在让[ROOT.GetCountry.GetName]百日不得安宁，我们终于可以结束这一切了。"
   xinhai.6.a: "斩首示众"
   xinhai.6.a.tt: "孙文被处决"
+  opium_wars_moh.1.t: "拦腰一棍"
+  opium_wars_moh.1.d: "政府下达了禁烟令。"
+  opium_wars_moh.1.f: "在禁毒通令发布后，各级政府迅速响应，纷纷成立禁烟禁毒委员会，展开了大规模的禁毒行动。[ROOT.GetCountry.GetName]广泛动员群众，特别强调对贩毒人员的检举与揭发。针对毒品的种植、运输、制造、贩卖和吸食等环节，政府采取了“力劝两头，断斩中间”的策略，劝导吸毒者停止吸食，强制铲除种植者，同时重点打击流通环节。\n\n这使得罂粟种植者难以出售，吸毒者也难以购买，除了边疆少数民族地区和偏远山区仍有零星种植外，全国大部分地区逐渐实现了禁种。"
+  opium_wars_moh.1.a: "“他家也藏有鸦片！”"
+  opium_wars_moh.1.b: "经济也要跟上"
