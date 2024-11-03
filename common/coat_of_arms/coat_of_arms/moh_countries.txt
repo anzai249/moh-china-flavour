@@ -536,3 +536,73 @@ YUN_muslim = {
 		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
 	}
 }
+
+CHI_ming = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_ming.dds"
+		color1 = "black"
+		color2 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+	}
+}
+
+CHI_ming_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_ming.dds"
+		color1 = "black"
+		color2 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
+	}
+}
+
+CHI_shun = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"
+
+	colored_emblem = {
+		texture = "ce_shun.dds"
+		color1 = "white"
+		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+	}
+}
+
+CHI_shun_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"
+
+	colored_emblem = {
+		texture = "ce_shun.dds"
+		color1 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
+	}
+}
+
+CHI_han = {
+	pattern = "pattern_border_west_africa_04.tga"
+	color1 = "yellow_light"
+	color2 = "red"
+	color3 = "white"
+
+	colored_emblem = {
+		texture = "ce_han.dds"
+		color1 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+	}
+}
+
+CHI_han_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow_light"
+
+	colored_emblem = {
+		texture = "ce_han.dds"
+		color1 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
+	}
+}

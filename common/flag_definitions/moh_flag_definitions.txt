@@ -133,6 +133,42 @@ CHI = {
 			coa_def_republic_flag_trigger = yes
 		}
 	}
+	flag_definition = {
+		coa = CHI_ming
+		subject_canton = CHI_ming
+		coa_with_overlord_canton = CHI_ming_subject
+		priority = 5
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_variable = china_ming
+			}
+		}
+	}
+	flag_definition = {
+		coa = CHI_shun
+		subject_canton = CHI_shun
+		coa_with_overlord_canton = CHI_shun_subject
+		priority = 5
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_variable = china_shun
+			}
+		}
+	}
+	flag_definition = {
+		coa = CHI_han
+		subject_canton = CHI_han
+		coa_with_overlord_canton = CHI_han_subject
+		priority = 5
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= { 
+				has_variable = china_han
+			}
+		}
+	}
 }
 
 FRS = {
@@ -330,3 +366,4 @@ DEFAULT = {
 		}
 	}
 }
+
