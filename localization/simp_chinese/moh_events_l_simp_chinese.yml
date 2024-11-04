@@ -302,6 +302,7 @@
   warlord_china_events.400.d: "两千年来的天朝上国体系走向终结"
   warlord_china_events.400.f: "随着[ROOT.GetCountry.GetName]的权威逐渐削弱，个朝贡国与藩属也逐渐脱离中央控制。[ROOT.GetCountry.GetName]的美梦破碎，朝贡体系正式崩溃，两千年来的天朝上国体系走向终结。"
   warlord_china_events.400.a: "我们无能为力"
+  warlord_china_events.400.b: 等等，你是不是刚刚说了大元？"
   xinhai.5.t: "叛国证据确凿"
   xinhai.5.d: "已发现[SCOPE.sCharacter('qiujin_character').GetCustom('GetUniversalFullName')]叛国的确凿证据"
   xinhai.5.f: "我们已经发现了[SCOPE.sCharacter('qiujin_character').GetCustom('GetUniversalFullName')]叛国的确凿证据，她已经被逮捕。\n\n我们应该如何处理这个问题？"

@@ -152,3 +152,6 @@
   je_opium_communism: "禁绝鸦片"
   je_opium_communism_reason: "鸦片是[ROOT.GetCountry.GetName]的耻辱。清末以来，鸦片战争、鸦片贸易等事件让我们的国家蒙羞，饱受外国列强的欺凌。\n\n如今我们有了一个强有力的政府，我们必须禁绝鸦片，让我们的国家摆脱这种耻辱。"
   je_opium_communism_complete_tt: "进度条到达#variable 100%#!"
+  je_great_yuan: "大汗的荣光"
+  mongol_yuan_tt: "成立#bold 大元#!"
+  je_great_yuan_reason: "大汗的国家终于获得独立，我们应不失时机，重现大汗的荣光。"

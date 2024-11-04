@@ -173,3 +173,42 @@
 	weight = 10000
 	should_be_pinned_by_default = yes
 }
+
+je_great_yuan = {
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+	group = je_group_historical_content
+	modifiers_while_active = {
+		modifier_mongol_yuan
+	}
+	complete = {
+		owns_entire_state_region = STATE_HINGGAN
+		owns_entire_state_region = STATE_ALXA
+		owns_entire_state_region = STATE_BEIJING
+		has_law = law_type:law_monarchy
+		any_scope_state = {
+			percent = 1
+			filter = {
+				OR = {
+				state_region = s:STATE_HINGGAN
+				state_region = s:STATE_ALXA
+				state_region = s:STATE_BEIJING
+			}
+			}
+			is_incorporated = yes
+		}
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = mongol_yuan_tt
+			set_variable = mongol_yuan_empire
+		}
+		every_state_region = {
+			limit = {
+				is_homeland = cu:han
+			}
+			add_claim = ROOT
+		}
+	}
+	weight = 10
+	should_be_pinned_by_default = yes
+}

@@ -1,11 +1,10 @@
-﻿MCH = { # MANCHU
+﻿MCH = {
+	# MANCHU
 	dynamic_country_name = {
 		name = dyn_c_dongbei_army
 		adjective = dyn_c_dongbei_army_adj
-
 		is_main_tag_only = yes
 		priority = 100
-		
 		trigger = {
 			exists = c:CHI
 			scope:actor ?= {
@@ -15,14 +14,13 @@
 	}
 }
 
-CHI = { # China
+CHI = {
+	# China
 	dynamic_country_name = {
 		name = dyn_c_great_qing
 		adjective = dyn_c_great_qing_adj
-		
 		is_main_tag_only = yes
 		priority = 0
-		
 		trigger = {
 			coa_def_monarchy_flag_trigger = yes
 			scope:actor ?= {
@@ -31,15 +29,51 @@ CHI = { # China
 		}
 	}
 	dynamic_country_name = {
+		name = dyn_c_great_han
+		adjective = dyn_c_great_han_adj
+		is_main_tag_only = yes
+		priority = 1
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = china_han
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_great_ming
+		adjective = dyn_c_great_ming_adj
+		is_main_tag_only = yes
+		priority = 1
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = china_ming
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_great_shun
+		adjective = dyn_c_great_shun_adj
+		is_main_tag_only = yes
+		priority = 1
+		trigger = {
+			coa_def_monarchy_flag_trigger = yes
+			scope:actor ?= {
+				has_variable = china_shun
+			}
+		}
+	}
+	dynamic_country_name = {
 		name = dyn_c_empire_of_china
 		adjective = dyn_c_empire_of_china_adj
-		
 		is_main_tag_only = yes
 		priority = 0
-		
 		trigger = {
 			scope:actor ?= {
-				NOT = { country_has_primary_culture = cu:manchu }
+				NOT = {
+					country_has_primary_culture = cu:manchu
+				}
 				has_law = law_type:law_monarchy
 			}
 		}
@@ -47,10 +81,8 @@ CHI = { # China
 	dynamic_country_name = {
 		name = dyn_c_peoples_republic_of_china
 		adjective = CHI_ADJ
-		
 		is_main_tag_only = yes
 		priority = 0
-		
 		trigger = {
 			coa_def_communist_flag_trigger = yes
 		}
@@ -58,10 +90,8 @@ CHI = { # China
 	dynamic_country_name = {
 		name = dyn_c_roc
 		adjective = dyn_c_roc_adj
-
 		is_main_tag_only = yes
 		priority = 0
-		
 		trigger = {
 			coa_def_republic_flag_trigger = yes
 		}
@@ -69,10 +99,8 @@ CHI = { # China
 	dynamic_country_name = {
 		name = dyn_c_soviet_china
 		adjective = dyn_c_soviet_china_adj
-		
 		is_revolutionary = yes
 		priority = 0
-		
 		trigger = {
 			coa_def_communist_flag_trigger = yes
 		}
@@ -80,25 +108,20 @@ CHI = { # China
 	dynamic_country_name = {
 		name = dyn_c_upc
 		adjective = dyn_c_roc_adj
-		
 		is_main_tag_only = yes
 		priority = 1
-		
 		trigger = {
 			moh_coa_def_nihilist_flag_trigger = yes
 		}
 	}
 }
 
-
 GNG = {
 	dynamic_country_name = {
 		name = dyn_c_guangxi_clique
 		adjective = GNG_ADJ
-
 		is_main_tag_only = yes
 		priority = 1
-
 		trigger = {
 			has_global_variable = china_shatters
 			scope:actor ?= {
@@ -109,10 +132,8 @@ GNG = {
 	dynamic_country_name = {
 		name = dyn_c_guangxi_clique
 		adjective = GNG_ADJ
-
 		is_main_tag_only = yes
 		priority = 100
-		
 		trigger = {
 			# exists = c:CHI
 			scope:actor ?= {
@@ -126,10 +147,8 @@ MGL = {
 	dynamic_country_name = {
 		name = dyn_c_mongol_region
 		adjective = MGL_ADJ
-
 		is_main_tag_only = yes
-		priority = 100
-		
+		priority = 120
 		trigger = {
 			exists = c:CHI
 			scope:actor ?= {
@@ -140,16 +159,25 @@ MGL = {
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_c_mongol_yuan
+		adjective = dyn_c_mongol_yuan_adj
+		is_main_tag_only = yes
+		priority = 100
+		trigger = {
+			scope:actor ?= {
+				has_variable = mongol_yuan_empire
+			}
+		}
+	}
 }
 
 TIB = {
 	dynamic_country_name = {
 		name = dyn_c_tibet_region
 		adjective = TIB_ADJ
-
 		is_main_tag_only = yes
 		priority = 100
-		
 		trigger = {
 			exists = c:CHI
 			scope:actor ?= {
@@ -166,10 +194,8 @@ YUN = {
 	dynamic_country_name = {
 		name = dyn_c_yun_sunni
 		adjective = dyn_c_yun_sunni_adj
-
 		is_main_tag_only = yes
 		priority = 100
-		
 		trigger = {
 			scope:actor ?= {
 				country_has_state_religion = rel:sunni
@@ -183,10 +209,8 @@ DAI = {
 		name = dyn_c_fra_indochina
 		adjective = dyn_c_fra_indochina_adj
 		use_overlord_prefix = yes
-
 		is_main_tag_only = yes
 		priority = 0
-		
 		trigger = {
 			exists = c:FRA
 			c:DAI = {
@@ -198,10 +222,8 @@ DAI = {
 	# 	name = dyn_c_fra_indochina
 	# 	adjective = dyn_c_fra_indochina_adj
 	# 	use_overlord_prefix = yes
-
 	# 	is_main_tag_only = yes
 	# 	priority = 0
-		
 	# 	trigger = {
 	# 		coa_def_subject_trigger = yes
 	# 		NOT = {

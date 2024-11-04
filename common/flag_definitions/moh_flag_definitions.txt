@@ -137,36 +137,39 @@ CHI = {
 		coa = CHI_ming
 		subject_canton = CHI_ming
 		coa_with_overlord_canton = CHI_ming_subject
-		priority = 5
+		priority = 200
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= { 
 				has_variable = china_ming
 			}
+			coa_def_absolute_monarchy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
 		coa = CHI_shun
 		subject_canton = CHI_shun
 		coa_with_overlord_canton = CHI_shun_subject
-		priority = 5
+		priority = 200
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= { 
 				has_variable = china_shun
 			}
+			coa_def_absolute_monarchy_flag_trigger = yes
 		}
 	}
 	flag_definition = {
 		coa = CHI_han
 		subject_canton = CHI_han
 		coa_with_overlord_canton = CHI_han_subject
-		priority = 5
+		priority = 200
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= { 
 				has_variable = china_han
 			}
+			coa_def_absolute_monarchy_flag_trigger = yes
 		}
 	}
 }
@@ -367,3 +370,19 @@ DEFAULT = {
 	}
 }
 
+MGL = {
+	# Mongolia
+	flag_definition = {
+		coa = MGL_yuan
+		subject_canton = MGL_yuan
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MGL_yuan_subject
+		priority = 5
+		trigger = {
+			exists = c:MGL
+			scope:actor ?= {
+				has_variable = mongol_yuan_empire
+			}
+		}
+	}
+}

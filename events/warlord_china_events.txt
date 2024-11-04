@@ -1067,6 +1067,63 @@ warlord_china_events.400 = {
 						}
 						set_state_owner = c:MGL
 					}
+					add_journal_entry = {
+						type = je_great_yuan
+					}
+					this = {
+						if = {
+							limit = {
+								year <= 1841
+							}
+							create_character = {
+								last_name = moh_Jebtsundamba
+								first_name = moh_Luvsanchultimjigmed
+								historical = yes
+								interest_group = ig:ig_devout
+								ruler = yes
+								birth_date = 1815.6.14
+							}
+						}
+						else_if = {
+							limit = {
+								year <= 1848
+							}
+							create_character = {
+								last_name = moh_Jebtsundamba
+								first_name = moh_Luvsantuvdenchoyjijaltsan
+								historical = yes
+								interest_group = ig:ig_devout
+								ruler = yes
+								birth_date = 1843.2.21
+							}
+						}
+						else_if = {
+							limit = {
+								year <= 1868
+							}
+							create_character = {
+								last_name = moh_Jebtsundamba
+								first_name = moh_Agvaanchoyjivanchugperenlaijamts
+								historical = yes
+								interest_group = ig:ig_devout
+								ruler = yes
+								birth_date = 1850.1.1
+							}
+						}
+						else_if = {
+							limit = {
+								year <= 1924
+							}
+							create_character = {
+								last_name = moh_Jebtsundamba
+								first_name = moh_Agvaanluvsanchoyjindanzanvaanchigbalsambuu
+								historical = yes
+								interest_group = ig:ig_devout
+								ruler = yes
+								birth_date = 1869.10.13
+							}
+						}
+					}
 				}
 			}
 		}
@@ -1103,5 +1160,9 @@ warlord_china_events.400 = {
 		ai_chance = {
 			base = 10
 		}
+	}
+	option = {
+		name = warlord_china_events.400.b
+		play_as = c:MGL
 	}
 }

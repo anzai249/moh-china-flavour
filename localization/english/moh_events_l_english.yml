@@ -291,6 +291,7 @@
   warlord_china_events.400.d: "The collapse of the tribute system"
   warlord_china_events.400.f: "As [ROOT.GetCountry.GetName]'s authority gradually weakened, the tribute system began to collapse, with the vassal states gradually breaking away from central control. [ROOT.GetCountry.GetName]'s dream was shattered, and the tribute system officially collapsed, bringing an end to the two-thousand-year-old celestial empire system."
   warlord_china_events.400.a: "We are powerless."
+  warlord_china_events.400.b: "What? Did you say the Great Yuan?"
   xinhai.5.t: "Treason Discovered"
   xinhai.5.d: "[SCOPE.sCharacter('qiujin_character').GetCustom('GetUniversalFullName')] has been discovered to have committed treason."
   xinhai.5.f: "We have found conclusive evidence of [SCOPE.sCharacter('qiujin_character').GetCustom('GetUniversalFullName')] treason and she has been arrested. \n\nWhat should we do about this?"

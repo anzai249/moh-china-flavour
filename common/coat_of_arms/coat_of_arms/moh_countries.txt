@@ -545,7 +545,7 @@ CHI_ming = {
 		texture = "ce_ming.dds"
 		color1 = "black"
 		color2 = "white"
-		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+		instance = { position = { 0.5 0.5 } scale = { 1.2 1.2 } }
 	}
 }
 
@@ -584,7 +584,7 @@ CHI_shun_subject = {
 }
 
 CHI_han = {
-	pattern = "pattern_border_west_africa_04.tga"
+	pattern = "pattern_border_west_africa_04.dds"
 	color1 = "yellow_light"
 	color2 = "red"
 	color3 = "white"
@@ -603,6 +603,29 @@ CHI_han_subject = {
 	colored_emblem = {
 		texture = "ce_han.dds"
 		color1 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
+	}
+}
+
+MGL_yuan = {
+	pattern = "pattern_border_of_4.dds"
+	color1 = "white"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_yuan.dds"
+		color1 = "red"
+		instance = { position = { 0.5 0.5 } scale = { 0.9 0.9 } }
+	}
+}
+
+MGL_yuan_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_yuan.dds"
+		color1 = "red"
 		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
 	}
 }

@@ -151,3 +151,6 @@
   je_opium_communism: "Root Out Opium"
   je_opium_communism_reason: "Opium is a shame for [ROOT.GetCountry.GetName]. Since the late Qing Dynasty, events like the Opium Wars and the opium trade have brought disgrace to our nation and subjected us to foreign powers' bullying.\n\nNow that we have a strong government, we must eradicate opium and free our country from this shame."
   je_opium_communism_complete_tt: "The progress bar has reached #variable 100%#!"
+  je_great_yuan: "Glory of the Great Khan"
+  mongol_yuan_tt: "#bold Great Yuan#! will be established"
+  je_great_yuan_reason: "The Great Khan's country has finally gained its independence, and we should lose no time in recreating the glory of the Khan."
