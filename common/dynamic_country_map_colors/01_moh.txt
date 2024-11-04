@@ -14,9 +14,27 @@
 		}
 		has_law = law_type:law_monarchy
 		OR = {
-			has_variable = china_shun
 			has_variable = china_ming
 			has_variable = china_han
 		}
+	}
+}
+
+moh_shun_imperial_china = {
+	color = "kartli_grey"
+
+	possible = {
+		OR = {
+			AND = {
+				exists = c:CHI
+				THIS = c:CHI
+			}
+			AND = {
+				exists = c:BEI
+				THIS = c:BEI
+			}
+		}
+		has_law = law_type:law_monarchy
+		has_variable = china_shun
 	}
 }
