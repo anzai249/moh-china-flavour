@@ -1,5 +1,5 @@
 ﻿l_simp_chinese:
-  # 汉姓
+  #汉姓
   moh_Ouyang: "欧阳"
   moh_Linghu: "令狐"
   moh_Huangfu: "皇甫"
@@ -35,8 +35,7 @@
   moh_Yan_1: "颜"
   moh_Wei_1: "魏"
   moh_Qiu: "秋"
-
-  # 满姓
+  #满姓
   moh_Tunggiya: "佟佳"
   moh_Magiya: "马佳"
   moh_Cigiya: "齐佳"
@@ -46,8 +45,7 @@
   moh_Irgen_Gioro: "伊尔根觉罗"
   moh_Ula_Nara: "乌拉那拉"
   moh_Hada_Nara: "哈达那拉"
-
-  # 男名
+  #男名
   moh_Hao: "昊"
   moh_Jian: "健"
   moh_Jinlong: "金龙"
@@ -59,14 +57,12 @@
   moh_Fu: "复"
   moh_Yuan: "源"
   moh_Du: "度"
-
-  # 女名
+  #女名
   moh_Ying: "英"
   moh_Yu: "玉"
   moh_Zhao: "昭"
   moh_Li_1: "丽"
-
-  # 历史名字
+  #历史名字
   ecchi_Khedrup: "凯珠"
   ecchi_Trinley: "成烈"
   ecchi_Thubten: "图登"
@@ -80,7 +76,6 @@
   moh_Jin_1: "瑾"
   moh_Wenxiu: "文秀"
   moh_Shenglin: "圣鳞"
-
   moh_Zaifeng: "载沣"
   moh_Zaiyi: "载漪"
   moh_Jiaoren: "教仁"
@@ -91,3 +86,8 @@
   moh_Pujie: "溥杰"
   moh_Tonghe: "同龢"
   Prince_Gong: "奕訢"
+  moh_Jebtsundamba: "哲布尊丹巴"
+  moh_Luvsanchultimjigmed: "罗布藏楚都木济克默特" #5th
+  moh_Luvsantuvdenchoyjijaltsan: "罗桑图旦却吉坚赞" #6th
+  moh_Agvaanchoyjivanchugperenlaijamts: "阿旺曲吉旺楚钦列嘉错" #7th
+  moh_Agvaanluvsanchoyjindanzanvaanchigbalsambuu: "阿旺垂济尼玛丹彬旺舒克" #8th
