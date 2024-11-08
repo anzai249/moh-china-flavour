@@ -629,3 +629,25 @@ MGL_yuan_subject = {
 		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
 	}
 }
+
+CHI_later_jin = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_manchu.dds"
+		color1 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1 1 } }
+	}
+}
+
+CHI_later_jin_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_manchu.dds"
+		color1 = "white"
+		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
+	}
+}
