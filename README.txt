@@ -4,10 +4,10 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing
-Current version: beta-0.4.1
+Current version: beta-0.5
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
-[*]50+ new historical or non-historical events.
+[*]60+ new historical or non-historical events.
 [*]15+ new historical or non-historical journal entries.
 [*]Minor changes to interest groups
 [*]New historical characters.
@@ -15,9 +15,6 @@ Current version: beta-0.4.1
 [*]New flavour textures.
 [*]New achievements.
 [*]Overhauled some vanilla journal entries.
-
-New Xinhai Revolution JE:
-[img]https://i.imgur.com/CAABFis.png[/img]
 
 [b]Note[/b]: Some of the contents in this mod require you to [b]make appropriate trade-offs[/b] at turning points in order to trigger them.
 

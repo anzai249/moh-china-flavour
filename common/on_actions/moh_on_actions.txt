@@ -133,6 +133,12 @@ on_heir_born = {
 }
 
 on_character_death = {
+	on_actions = {
+		moh_on_character_death
+	}
+}
+
+moh_on_character_death = {
 	effect = {
 		if = {
 			limit = {
@@ -159,6 +165,36 @@ on_character_death = {
 			set_global_variable = {
 				name = wangjingwei_dead
 				value = 1
+			}
+		}
+	}
+}
+
+on_revolution_start = {
+	on_actions = {
+		moh_on_revolution_start
+	}
+}
+
+moh_on_revolution_start = {
+	effect = {
+		if = {
+			limit = {
+				c:CHI ?= ROOT
+				scope:target = {
+					has_law = law_type:law_monarchy
+					NOT = {
+						has_journal_entry = je_new_dynasty
+						has_variable = china_ming
+						has_variable = china_shun
+						has_variable = china_later_jin
+						has_variable = china_han
+						has_variable = china_qing
+					}
+				}
+			}
+			scope:target = {
+				trigger_event = warlord_china_events.500
 			}
 		}
 	}

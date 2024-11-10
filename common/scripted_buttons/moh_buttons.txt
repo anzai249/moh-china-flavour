@@ -123,3 +123,208 @@ dismissed_officials_petition_button = {
 		}
 	}
 }
+
+# A new dynasty
+china_ming_button = {
+	name = "china_ming"
+	desc = "china_ming_desc"
+	visible = {
+		has_journal_entry = je_new_dynasty
+	}
+	possible = {
+		NOT = {
+			has_variable = china_ming
+		}
+		country_has_primary_culture = cu:han
+		ruler = {
+			has_culture = cu:han
+		}
+	}
+	effect = {
+		set_variable = china_ming
+		show_as_tooltip = {
+			create_character = {
+				
+			}
+		}
+		hidden_effect = {
+			heir = {
+				kill_character = yes
+			}
+			if = {
+				limit = {
+					year < 1869
+				}
+				create_character = {
+					last_name = Zhu
+					first_name = Shugui
+					culture = cu:han
+					ruler = yes
+					historical = yes
+				}
+			}
+			else_if = {
+				limit = {
+					year < 1891
+				}
+				create_character = {
+					last_name = Zhu
+					first_name = Chengduan
+					culture = cu:han
+					ruler = yes
+					historical = yes
+				}
+			}
+			else = {
+				create_character = {
+					last_name = Zhu
+					first_name = Yuxun
+					culture = cu:han
+					ruler = yes
+					historical = yes
+				}
+			}
+			
+		}
+	}
+	ai_chance = {
+		base = 1
+	}
+}
+
+china_shun_button = {
+	name = "china_shun"
+	desc = "china_shun_desc"
+	visible = {
+		has_journal_entry = je_new_dynasty
+	}
+	possible = {
+		NOT = {
+			has_variable = china_shun
+		}
+		country_has_primary_culture = cu:han
+		ruler = {
+			has_culture = cu:han
+		}
+	}
+	effect = {
+		set_variable = china_shun
+		show_as_tooltip = {
+			create_character = {
+				
+			}
+		}
+		hidden_effect = {
+			heir = {
+				kill_character = yes
+			}
+			create_character = {
+				last_name = Li
+				culture = cu:han
+				ruler = yes
+			}
+		}
+	}
+	ai_chance = {
+		base = 1
+	}
+}
+
+china_later_jin_button = {
+	name = "china_later_jin"
+	desc = "china_later_jin_desc"
+	visible = {
+		has_journal_entry = je_new_dynasty
+	}
+	possible = {
+		NOT = {
+			has_variable = china_later_jin
+		}
+		country_has_primary_culture = cu:manchu
+		ruler = {
+			has_culture = cu:manchu
+		}
+	}
+	effect = {
+		set_variable = china_later_jin
+	}
+	ai_chance = {
+		base = 1
+	}
+}
+
+china_han_button = {
+	name = "china_han"
+	desc = "china_han_desc"
+	visible = {
+		has_journal_entry = je_new_dynasty
+	}
+	possible = {
+		NOT = {
+			has_variable = china_han
+		}
+		country_has_primary_culture = cu:han
+		ruler = {
+			has_culture = cu:han
+		}
+	}	
+	effect = {
+		set_variable = china_han
+		show_as_tooltip = {
+			create_character = {
+				
+			}
+		}
+		hidden_effect = {
+			heir = {
+				kill_character = yes
+			}
+			create_character = {
+				last_name = Liu
+				culture = cu:han
+				ruler = yes
+			}
+		}
+	}
+	ai_chance = {
+		base = 1
+	}
+}
+
+china_qing_button = {
+	name = "china_qing"
+	desc = "china_qing_desc"
+	visible = {
+		has_journal_entry = je_new_dynasty
+	}
+	possible = {
+		NOT = {
+			has_variable = china_qing
+		}
+		country_has_primary_culture = cu:manchu
+		ruler = {
+			has_culture = cu:manchu
+		}
+	}
+	effect = {
+		set_variable = china_qing
+		show_as_tooltip = {
+			create_character = {
+				
+			}
+		}
+		hidden_effect = {
+			heir = {
+				kill_character = yes
+			}
+			create_character = {
+				last_name = Aisin_Gioro
+				culture = cu:manchu
+				ruler = yes
+			}
+		}
+	}
+	ai_chance = {
+		base = 1
+	}
+}

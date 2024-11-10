@@ -1166,3 +1166,40 @@ warlord_china_events.400 = {
 		play_as = c:MGL
 	}
 }
+
+# a new dynasty
+warlord_china_events.500 = {
+	type = country_event
+	placement = root
+	duration = 3
+	title = warlord_china_events.500.t
+	desc = warlord_china_events.500.d
+	flavor = warlord_china_events.500.f
+	event_image = {
+		video = "asia_farmers_market"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/ming.dds"
+	trigger = {
+		# has_law = law_type:law_monarchy
+		# is_revolutionary = yes
+		# NOT = {
+		# 	has_journal_entry = je_new_dynasty
+		# 	has_variable = china_ming
+		# 	has_variable = china_shun
+		# 	has_variable = china_later_jin
+		# 	has_variable = china_han
+		# 	has_variable = china_qing
+		# }
+	}
+	option = {
+		default_option = yes
+		name = warlord_china_events.500.a
+		add_journal_entry = {
+			type = je_new_dynasty
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}

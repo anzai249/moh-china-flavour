@@ -310,3 +310,7 @@
   opium_wars_moh.1.f: "After the anti-drug directive was issued, all levels of government swiftly established anti-drug committees and launched major operations. [ROOT.GetCountry.GetName] mobilized the public, emphasizing reporting drug traffickers.\n\nThe strategy focused on 'persuading users and cutting off suppliers,' encouraging users to quit while eradicating cultivators and targeting distribution networks. This made it difficult for poppy growers to sell their products and for users to obtain drugs, leading to a nationwide ban on cultivation, except in some remote areas."
   opium_wars_moh.1.a: "'His family is also hiding opium!'"
   opium_wars_moh.1.b: "The economy needs to keep up too."
+  warlord_china_events.500.t: "The Uprising"
+  warlord_china_events.500.d: "We've revolted, and there's a lot of business to take care of next."
+  warlord_china_events.500.f: "The [ROOT.GetCountry.GetName] that has risen up has succeeded in seizing a lot of land and is now taking shape, should we overthrow the corrupt old dynasty or just fulfill our demands?"
+  warlord_china_events.500.a: "Choose a new name for the country."
