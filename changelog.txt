@@ -59,3 +59,10 @@ Changes:
 - A new dynasty name can be chosen in the civil war (monarchy).
 - Mongolia can become Great Yuan.
 - Changed some province and city names.
+
+beta-0.5.1
+
+Fixes:
+- Made Transportation of Grain by Sea easier to complete.
+- Wuxu Reform attempts to trigger every month.
+- Localization.

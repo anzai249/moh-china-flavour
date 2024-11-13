@@ -15,10 +15,7 @@ on_monthly_pulse_country = {
 
 on_yearly_pulse_country = {
 	on_actions = {
-		historical_agitators_yearly_events_moh
-		delay = {
-			days = 60
-		}
+		# historical_agitators_yearly_events_moh
 		qing_monarchy_yearly_events
 		moh_random_yearly_events
 	}

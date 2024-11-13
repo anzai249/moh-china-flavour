@@ -12,5 +12,6 @@ moh_agitator_monthly_events = {
 	random_events = {
 		10 = 0
 		10 = moh_agitators.3
+		80 = moh_agitators.1
 	}
 }

@@ -67,7 +67,7 @@ je_daoguang_reform_grain = {
 	complete = {
 		capital = {
 			sg:grain = {
-				state_goods_cheaper > 0.05
+				state_goods_pricier < 0.05
 			}
 			any_scope_building = {
 				is_building_type = building_port
