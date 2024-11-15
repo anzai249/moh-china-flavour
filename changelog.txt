@@ -66,3 +66,8 @@ Fixes:
 - Made Transportation of Grain by Sea easier to complete.
 - Wuxu Reform attempts to trigger every month.
 - Localization.
+
+beta-0.5.2
+
+Fixes:
+- Blow to the waist event trigger.
