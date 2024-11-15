@@ -1157,7 +1157,7 @@ opium_wars_moh.1 = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 	duration = 3
 	trigger = {
-		# is_banning_goods = opium
+		is_banning_goods = opium
 		has_journal_entry = je_opium_communism
 	}
 	option = {
