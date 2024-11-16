@@ -53,8 +53,8 @@
 	on_monthly_pulse = {
 		random_events = {
 			100 = 0
-			5 = opium_wars_moh.2
-			5 = opium_wars_moh.1
+			5 = moh_historical.202
+			5 = moh_historical.201
 		}
 		effect = {
 			if = {

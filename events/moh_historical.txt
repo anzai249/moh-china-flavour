@@ -1142,8 +1142,8 @@ moh_historical.16 = {
 	}
 }
 
-opium_wars_moh.1 = {
-	# 拦腰一棍
+moh_historical.201 = {
+	# 拦腰一棍 Communist China Opium
 	type = country_event
 	placement = root
 	title = opium_wars_moh.1.t
@@ -1190,7 +1190,7 @@ opium_wars_moh.1 = {
 }
 
 # Addiction recovery
-opium_wars_moh.2 = {
+moh_historical.202 = {
 	type = country_event
 	placement = scope:recovry_state
 
