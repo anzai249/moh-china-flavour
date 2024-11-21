@@ -148,7 +148,7 @@ moh_on_character_death = {
 		}
 		if = {
 			limit = {
-				has_template = ecchi_chi_huangxing_character_template
+				has_template = ecchi_chi_huang_xing_character_template
 			}
 			set_global_variable = {
 				name = huangxing_dead

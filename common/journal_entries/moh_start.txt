@@ -1,4 +1,4 @@
-je_moh_start = {
+﻿je_moh_start = {
 	group = je_group_historical_content
 	complete = {
 		always = yes

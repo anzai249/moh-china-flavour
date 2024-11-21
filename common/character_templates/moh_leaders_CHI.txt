@@ -15,9 +15,7 @@ ecchi_chi_li_hongzhang_character_template = {
         country_trigger = {
             hga_is_active = no
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             OR = {
                 has_state_in_state_region = STATE_NORTHERN_ANHUI
@@ -79,9 +77,7 @@ ecchi_chi_zhang_zhidong_character_template = {
         country_trigger = {
             AND = {
                 NOT = {
-                    cu:han = {
-                        culture_is_discriminated_in = root
-                    }
+                    cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
                 }
                 has_state_in_state_region = STATE_GUIZHOU
             }
@@ -147,9 +143,7 @@ ecchi_chi_zhang_jian_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_JIANGSU
         }
@@ -205,9 +199,7 @@ ecchi_chi_zhao_sanduo_character_template = {
     agitator_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_ZHILI
         }
@@ -270,9 +262,7 @@ ecchi_chi_zuo_zongtang_character_template = {
     commander_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_HUNAN
         }
@@ -302,9 +292,7 @@ ecchi_chi_zhang_decheng_character_template = {
     commander_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_BEIJING
         }
@@ -424,9 +412,7 @@ ecchi_chi_wang_zebang_character_template = {
         country_trigger = {
             AND = {
                 NOT = {
-                    cu:yue = {
-                        culture_is_discriminated_in = root
-                    }
+                    cultural_acceptance_base = { target = cu:yue value < acceptance_status_4 }
                 }
                 OR = {
                     has_state_in_state_region = STATE_GUANGDONG
@@ -461,9 +447,7 @@ ecchi_chi_liang_qichao_character_template = {
         country_trigger = {
             AND = {
                 NOT = {
-                    cu:han = {
-                        culture_is_discriminated_in = root
-                    }
+                    cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
                 }
                 OR = {
                     has_state_in_state_region = STATE_GUANGDONG
@@ -509,9 +493,7 @@ ecchi_chi_chen_jiongming_character_template = {
         country_trigger = {
             AND = {
                 NOT = {
-                    cu:hakka = {
-                        culture_is_discriminated_in = root
-                    }
+                    cultural_acceptance_base = { target = cu:hakka value < acceptance_status_4 }
                 }
                 OR = {
                     has_state_in_state_region = STATE_GUANGDONG
@@ -547,9 +529,7 @@ ecchi_chi_cai_yuanpei_character_template = {
         country_trigger = {
             AND = {
                 NOT = {
-                    cu:han = {
-                        culture_is_discriminated_in = root
-                    }
+                    cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
                 }
                 has_state_in_state_region = STATE_ZHEJIANG
             }
@@ -725,9 +705,7 @@ ecchi_chi_yan_xishan_character_template = {
         country_trigger = {
             AND = {
                 NOT = {
-                    cu:han = {
-                        culture_is_discriminated_in = root
-                    }
+                    cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
                 }
                 has_state_in_state_region = STATE_SHANXI
             }
@@ -1284,9 +1262,7 @@ ecchi_chi_du_yuesheng_character_template = {
         country_trigger = {
             OR = {
                 NOT = {
-                    cu:han = {
-                        culture_is_discriminated_in = root
-                    }
+                    cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
                 }
                 has_state_in_state_region = STATE_SUZHOU
             }
@@ -1391,7 +1367,7 @@ ecchi_chi_wang_jingwei_character_template = {
                 }
             }
             NOT = {
-                has_variable = wangjingwei_d
+                has_variable = wangjingwei_dead
             }
         }
         interest_group_trigger = {
@@ -1422,9 +1398,7 @@ ecchi_chi_lu_xun_character_template = {
 		country_trigger = {
             morgenrote_is_active = no
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
         }
         interest_group_trigger = {
@@ -1450,9 +1424,7 @@ ecchi_chi_lu_zhengxiang_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_JIANGSU
         }
@@ -1481,9 +1453,7 @@ ecchi_chi_gu_hongming_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_BEIJING
         }
@@ -1538,9 +1508,7 @@ ecchi_chi_qi_baishi_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_BEIJING
         }
@@ -1570,9 +1538,7 @@ ecchi_chi_tan_sitong_character_template = {
     agitator_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_HUNAN
         }
@@ -1601,9 +1567,7 @@ ecchi_chi_lin_heier_character_template = {
     agitator_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_BEIJING
         }
@@ -1632,9 +1596,7 @@ ecchi_chi_lin_huiyin_character_template = {
     agitator_usage ={
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             OR = {
                 owns_entire_state_region = STATE_ZHEJIANG
@@ -1753,9 +1715,7 @@ chi_zaifeng_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
-                cu:manchu = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:manchu value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_BEIJING
         }
@@ -1784,9 +1744,7 @@ chi_song_jiaoren_character_template = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_HUNAN
         }
@@ -1818,9 +1776,7 @@ chi_pujie_template = {
     commander_usage = {
         country_trigger = {
             NOT = {
-                cu:manchu = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:manchu value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_SHENGJING
         }
@@ -1846,9 +1802,7 @@ chi_wengtonghe_template = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_GUANGDONG
         }
@@ -1876,9 +1830,7 @@ chi_yan_fu_template = {
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_FUJIAN
             has_variable = wuxu_reform_support
@@ -1907,9 +1859,7 @@ chi_yan_botao_template = {
     commander_usage = {
         country_trigger = {
             NOT = {
-                cu:yue = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:yue value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_GUANGDONG
         }
@@ -1935,9 +1885,7 @@ chi_zhang_chaofa_template = {
     commander_usage = {
         country_trigger = {
             NOT = {
-                cu:min = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:min value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_FUJIAN
         }
@@ -2005,9 +1953,7 @@ chi_weiyuan_character_template = {
     agitator_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_HUNAN
         }
@@ -2070,9 +2016,7 @@ chi_yang_du_character_template = {
     agitator_usage = {
         country_trigger = {
             NOT = {
-                cu:han = {
-                    culture_is_discriminated_in = root
-                }
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_HUNAN
         }

@@ -1,6 +1,6 @@
 ﻿building_old_summer_palace = {
 	building_group = bg_monuments
-	texture = "gfx/interface/icons/building_icons/old_summer_palace.dds"
+	icon = "gfx/interface/icons/building_icons/old_summer_palace.dds"
 	expandable = no
 	buildable = no
 	downsizeable = no
@@ -32,7 +32,7 @@
 
 building_forbidden_city = {
 	building_group = bg_monuments
-	texture = "gfx/interface/icons/building_icons/forbidden_city.dds"
+	icon = "gfx/interface/icons/building_icons/forbidden_city.dds"
 	expandable = no
 	buildable = no
 	downsizeable = no

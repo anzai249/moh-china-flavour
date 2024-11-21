@@ -250,7 +250,7 @@ moh_agitators.3 = {
 	immediate = {
 		set_global_variable = huangxing_spawn
 		create_character = {
-			template = ecchi_chi_huangxing_character_template
+			template = ecchi_chi_huang_xing_character_template
 			on_created = {
 				set_variable = huangxing_var
 			}
@@ -269,7 +269,7 @@ moh_agitators.3 = {
 		default_option = yes
 		show_as_tooltip = {
 			create_character = {
-				template = ecchi_chi_huangxing_character_template
+				template = ecchi_chi_huang_xing_character_template
 			}
 		}
 		ai_chance = {

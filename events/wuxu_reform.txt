@@ -1014,6 +1014,7 @@ wuxu.15 = {
 
 	option = {
 		name = wuxu.15.a
+		default_option = yes
 		custom_tooltip = {
 			text = wuxu.random.subtract.strong
 			change_variable = {
@@ -1068,6 +1069,7 @@ wuxu.16 = {
 
 	option = {
 		name = wuxu.16.a
+		default_option = yes
 		custom_tooltip = {
 			text = wuxu.random.subtract.strong
 			change_variable = {

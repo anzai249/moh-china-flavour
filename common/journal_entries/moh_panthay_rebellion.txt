@@ -46,6 +46,7 @@ je_plague_pandemic = {
 			every_scope_state = {
 				remove_modifier = modifier_plague_pandemic
 			}
+			set_variable = plague_pandemic_complete
 		}
 	}
 	on_weekly_pulse = {

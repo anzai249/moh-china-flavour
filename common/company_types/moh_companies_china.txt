@@ -67,7 +67,7 @@ company_machine_weaving_bureau = {
 		}
 	}
 	prosperity_modifier = {
-		state_poor_standard_of_living_add = 1
+		state_lower_strata_standard_of_living_add = 1
 	}
 	ai_weight = {
 		value = 3

@@ -21,16 +21,16 @@ warlord_china_events.100 = {
 	}
 	immediate = {
 		set_global_variable = china_shatters
-		create_power_bloc = {
-			name = CHI
-			map_color = {
-				255
-				232
-				80
-			}
-			identity = identity_trade_league
-			principle = principle_internal_trade_1
-		}
+		# create_power_bloc = {
+		# 	name = CHI
+		# 	map_color = {
+		# 		255
+		# 		232
+		# 		80
+		# 	}
+		# 	identity = identity_trade_league
+		# 	principle = principle_internal_trade_1
+		# }
 		if = {
 			limit = {
 				exists = s:STATE_HUNAN.region_state:CHI

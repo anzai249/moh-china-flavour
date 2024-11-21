@@ -473,7 +473,7 @@ types journal
 
 							#White
 							white_progressbar_horizontal = {
-								visible = "[EqualTo_string(ScriptedProgressBar.GetName, Localize('new_culture_anarchist_progress_bar')))]"
+								visible = "[EqualTo_string(ScriptedProgressBar.GetName, Localize('new_culture_anarchist_progress_bar'))]"
 								block "progressbar_size" {
 									size = { 420 6 }
 								}
@@ -488,7 +488,7 @@ types journal
 
 							#Gold
 							gold_progressbar_horizontal = {
-								visible = "[EqualTo_string(ScriptedProgressBar.GetName, Localize('new_culture_presidential_autocracy_progress_bar')))]"
+								visible = "[EqualTo_string(ScriptedProgressBar.GetName, Localize('new_culture_presidential_autocracy_progress_bar'))]"
 								block "progressbar_size" {
 									size = { 420 6 }
 								}

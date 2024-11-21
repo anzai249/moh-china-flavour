@@ -167,7 +167,7 @@ xinhai.2 = {
 				create_diplomatic_play = {
 					type = dp_revolution
 					target_country = c:CHI
-					handle_annexation_as_civil_war = yes
+					# handle_annexation_as_civil_war = yes
 					# add_war_goal = {
 					# 	holder = THIS
 					# 	type = annex_country
@@ -274,7 +274,7 @@ xinhai.3 = {
 		default_option = yes
 		change_variable = {
 			name = xinhai_progress
-			value = 5
+			add = 5
 		}
 		scope:revolt_place = {
 			add_radicals_in_state = {
@@ -341,7 +341,7 @@ xinhai.4 = {
 		default_option = yes
 		change_variable = {
 			name = xinhai_progress
-			value = 5
+			add = 5
 		}
 		scope:bombing_place = {
 			add_loyalists_in_state = {
@@ -356,7 +356,7 @@ xinhai.4 = {
 		name = xinhai.4.b
 		change_variable = {
 			name = xinhai_progress
-			value = -5
+			add = -5
 		}
 		scope:bombing_place = {
 			add_radicals_in_state = {

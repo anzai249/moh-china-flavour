@@ -71,3 +71,14 @@ beta-0.5.2
 
 Fixes:
 - Blow to the waist event trigger.
+
+
+beta-0.6
+
+Changes:
+- Game version 1.8 compatibility.
+
+Fixes:
+- File encoding.
+- Huang Xing's character template names.
+- Other bug fixes.

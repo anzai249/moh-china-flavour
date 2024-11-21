@@ -28,6 +28,7 @@
 		law_presidential_republic = disapprove
 		law_parliamentary_republic = disapprove
 		law_council_republic = strongly_disapprove
+		law_corporate_state = disapprove
 	}
 	
 	lawgroup_army_model = {
@@ -44,15 +45,35 @@
 		law_no_schools = disapprove
 	}
 
-	possible = {
-		owner = {
-			OR = {
-				AND = {
-					exists = c:CHI
-					OR = {
-						c:CHI = this
-						civil_war_origin_country = c:CHI
+	country_trigger = {
+		OR = {
+			AND = {
+				exists = c:CHI
+				OR = {
+					c:CHI = this
+					civil_war_origin_country ?= c:CHI
+				}
+				OR = {
+					has_variable = lost_opium_wars
+					any_scope_state = {
+						any_neighbouring_state = {
+							is_treaty_port = yes
+						}
 					}
+					AND = {
+						has_technology_researched = political_agitation
+						any_state = {
+							state_region = { is_homeland = cu:han }
+							NOT = { owner = ROOT }
+						}
+					}
+				}
+				game_date > 1870.1.1
+			}
+			AND = {
+				exists = c:CHI
+				is_subject_of = c:CHI
+				c:CHI = {
 					OR = {
 						has_variable = lost_opium_wars
 						any_scope_state = {
@@ -68,62 +89,45 @@
 							}
 						}
 					}
-					game_date > 1875.1.1
 				}
-				AND = {
-					exists = c:CHI
-					is_subject_of = c:CHI
-					c:CHI = {
-						OR = {
-							has_variable = lost_opium_wars
-							any_scope_state = {
-								any_neighbouring_state = {
-									is_treaty_port = yes
-								}
-							}
-							AND = {
-								has_technology_researched = political_agitation
-								any_state = {
-									state_region = { is_homeland = cu:han }
-									NOT = { owner = ROOT }
-								}
-							}
-						}
+				game_date > 1870.1.1
+			}
+		}	
+	}
+
+	interest_group_leader_trigger = {
+		ideology_moh_reformer_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		ideology_moh_reformer_valid_trigger = yes
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
 					}
-					game_date > 1875.1.1
 				}
 			}
-		}
-		# trade unions should always go vanguardist instead if available
-		NAND = {
-			owner = { has_technology_researched = socialism }
-			is_interest_group_type = ig_trade_unions
-		}
-		scope:interest_group = { 
-			OR = {
-				is_interest_group_type = ig_trade_unions
-				is_interest_group_type = ig_petty_bourgeoisie
-				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_armed_forces
-				is_interest_group_type = ig_industrialists
-				is_interest_group_type = ig_landowners
-			}
-		}
-		scope:interest_group = {
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
-			}
+			multiply = 0.1
 		}
 	}
 
-	leader_weight = {
-		value = 90
+	interest_group_leader_weight = {
+		value = 100
 		if = {
 			limit = {
-				has_variable = lost_opium_wars
+				owner = { has_variable = lost_opium_wars }
 			}
 			add = 20
 		}
@@ -172,6 +176,13 @@
 			limit = {
 				owner = { has_variable = wuxu_reform_failed }
 			}
+			add = -100
+		}
+
+		if = {
+			limit = {
+				owner = { year > 1911 }
+			}
 			add = -90
 		}
 	}
@@ -188,6 +199,7 @@ ideology_moh_revolutionary = {
 		law_presidential_republic = strongly_approve
 		law_parliamentary_republic = strongly_approve
 		law_council_republic = strongly_disapprove
+		law_corporate_state = neutral
 	}
 	
 	lawgroup_rights_of_women = {
@@ -220,15 +232,39 @@ ideology_moh_revolutionary = {
 		law_commercialized_agriculture = neutral
 	}
 
-	possible = {
-		owner = {
-			OR = {
-				AND = {
-					exists = c:CHI
-					OR = {
-						c:CHI = this
-						civil_war_origin_country = c:CHI
+	interest_group_leader_trigger = {
+		ideology_moh_revolutionary_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		ideology_moh_revolutionary_valid_trigger = yes
+	}
+
+	country_trigger = {
+		OR = {
+			AND = {
+				exists = c:CHI
+				OR = {
+					c:CHI = this
+					civil_war_origin_country ?= c:CHI
+				}
+				OR = {
+					has_variable = lost_opium_wars
+					AND = {
+						has_technology_researched = political_agitation
+						any_state = {
+							state_region = { is_homeland = cu:han }
+							NOT = { owner = ROOT }
+						}
 					}
+				}
+				has_technology_researched = pan-nationalism
+				has_law = law_type:law_monarchy
+			}
+			AND = {
+				exists = c:CHI
+				is_subject_of = c:CHI
+				c:CHI = {
 					OR = {
 						has_variable = lost_opium_wars
 						AND = {
@@ -242,55 +278,15 @@ ideology_moh_revolutionary = {
 					has_technology_researched = pan-nationalism
 					has_law = law_type:law_monarchy
 				}
-				AND = {
-					exists = c:CHI
-					is_subject_of = c:CHI
-					c:CHI = {
-						OR = {
-							has_variable = lost_opium_wars
-							AND = {
-								has_technology_researched = political_agitation
-								any_state = {
-									state_region = { is_homeland = cu:han }
-									NOT = { owner = ROOT }
-								}
-							}
-						}
-						has_technology_researched = pan-nationalism
-						has_law = law_type:law_monarchy
-					}
-				}
-			}
-		}
-		# trade unions should always go vanguardist instead if available
-		NAND = {
-			owner = { has_technology_researched = socialism }
-			is_interest_group_type = ig_trade_unions
-		}
-		scope:interest_group = { 
-			OR = {
-				is_interest_group_type = ig_trade_unions
-				is_interest_group_type = ig_petty_bourgeoisie
-				is_interest_group_type = ig_intelligentsia
-				is_interest_group_type = ig_armed_forces
-				is_interest_group_type = ig_industrialists
-			}
-		}
-		scope:interest_group = {
-			NOR = {
-				has_variable = communist_ig_var
-				has_variable = chose_vanguardism
-				has_variable = chose_fascism
-				has_variable = chose_conservatism
 			}
 		}
 	}
 
-	leader_weight = {
+	interest_group_leader_weight = {
 		value = 95
 		if = {
 			limit = {
-				has_variable = lost_opium_wars
+				owner = { has_variable = lost_opium_wars }
 			}
 			add = 20
 		}
@@ -333,6 +329,26 @@ ideology_moh_revolutionary = {
 			add = -150
 		}
 	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}
 }
 
 ideology_moh_kmt = {
@@ -346,6 +362,7 @@ ideology_moh_kmt = {
 		law_presidential_republic = strongly_approve
 		law_parliamentary_republic = strongly_approve
 		law_council_republic = strongly_disapprove
+		law_corporate_state = neutral
 	}
 	
 	lawgroup_rights_of_women = {
@@ -376,6 +393,94 @@ ideology_moh_kmt = {
 		law_homesteading = approve
 		law_collectivized_agriculture = strongly_disapprove
 		law_commercialized_agriculture = neutral
+	}
+	
+	interest_group_leader_trigger = {
+		ideology_moh_revolutionary_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		ideology_moh_revolutionary_valid_trigger = yes
+	}
+
+	country_trigger = {
+		OR = {
+			AND = {
+				exists = c:CHI
+				OR = {
+					c:CHI = this
+					civil_war_origin_country ?= c:CHI
+				}
+				has_technology_researched = pan-nationalism
+				NOT = {
+					has_law = law_type:law_monarchy
+					has_variable = kmt_divided
+				}
+			}
+			AND = {
+				exists = c:CHI
+				is_subject_of = c:CHI
+				c:CHI = {
+					has_technology_researched = pan-nationalism
+					NOT = {
+						has_law = law_type:law_monarchy
+						has_variable = kmt_divided
+					}
+				}
+			}
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner = { has_variable = lost_opium_wars }
+			}
+			add = 20
+		}
+		if = {
+			limit = {
+				scope:interest_group = {
+					is_in_government = no
+				}
+			}
+			add = 20
+		}
+		
+		if = {
+			limit = {
+				owner = { has_law = law_type:law_presidential_republic }
+			}
+			multiply = 5
+		}
+		
+		if = {
+			limit = {
+				owner = { NOT = { owns_entire_state_region = STATE_FORMOSA } }
+			}
+			add = 75
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_ethno_nationalism
+						has_variable = chose_conservatism
+						has_variable = chose_fascism
+					}
+				}
+			}
+			multiply = 0.1
+		}
 	}
 }
 

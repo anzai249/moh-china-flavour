@@ -64,13 +64,11 @@ je_xinhai = {
 			has_revolution_over_law_type = law_type:law_presidential_republic
 			has_revolution_over_law_type = law_type:law_parliamentary_republic
 		}
-		custom_tooltip = {
-			text = je_xinhai_fail_tt
-			any_country = {
-				is_revolutionary = yes
-				country_definition = root.country_definition
-			}
+		OR = {
+			has_civil_war_from_movement_type = movement_type:movement_liberal
+			has_civil_war_from_movement_type = movement_type:movement_radical
 		}
+
 	}
 	on_fail = {
 		trigger_event = {
@@ -78,12 +76,12 @@ je_xinhai = {
 		}
 	}
 	on_monthly_pulse = {
-		effect = {
-			change_variable = {
-				name = xinhai_progress
-				add = 1
-			}
-		}
+		# effect = {
+		# 	change_variable = {
+		# 		name = xinhai_progress
+		# 		add = 1
+		# 	}
+		# }
 		random_events = {
 			200 = 0
 			10 = xinhai.3
