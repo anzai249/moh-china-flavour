@@ -325,3 +325,8 @@
   warlord_china_events.500.d: "我们已经起义，接下来还有很多事要处理。"
   warlord_china_events.500.f: "揭竿而起的[ROOT.GetCountry.GetName]已成功夺取很多土地，目前已初具规模，我们应该推翻腐朽的旧王朝，还是只完成我们的诉求？"
   warlord_china_events.500.a: "拟定国号"
+  nian_rebellion.1.t: "捻匪"
+  nian_rebellion.1.d: "有一伙自称捻军的武装分子起义"
+  nian_rebellion.1.f: "其众以游勇散兵、饥民无赖为主，结伙而动，无固定巢穴，时聚时散，转战千里，官军难以追剿。捻众擅长骑射，行动迅捷，沿途劫掠粮饷，焚毁乡里，破坏尤烈；又不拘一地，凡风声稍紧，便即远遁他处。\n\n其势渐大，聚而为乱，更成东南各省之大患，地方官府震惧，措手无策。"
+  nian_rebellion.1.a: "一群土包子"
+  nian_rebellion.1.b: "我们跟他们干了！"

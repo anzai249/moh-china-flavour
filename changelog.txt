@@ -72,7 +72,6 @@ beta-0.5.2
 Fixes:
 - Blow to the waist event trigger.
 
-
 beta-0.6
 
 Changes:
@@ -82,3 +81,13 @@ Fixes:
 - File encoding.
 - Huang Xing's character template names.
 - Other bug fixes.
+
+beta-0.6.1
+
+Changes:
+
+- Adjusted the triggers for the Revolutionaries and Wuxu Reform to make them easier to activate.
+- Added the Nian Rebellion event.
+- Lexing Zhang is no longer the leader of the Rural Folks interest group.
+- The new leader of the Rural Folks interest group is Shu Tao.
+- Added dynamic name for Hong Kong (Xin'an).

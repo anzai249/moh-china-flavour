@@ -314,3 +314,8 @@
   warlord_china_events.500.d: "We've revolted, and there's a lot of business to take care of next."
   warlord_china_events.500.f: "The [ROOT.GetCountry.GetName] that has risen up has succeeded in seizing a lot of land and is now taking shape, should we overthrow the corrupt old dynasty or just fulfill our demands?"
   warlord_china_events.500.a: "Choose a new name for the country."
+  nian_rebellion.1.t: "Nian Rebellion"
+  nian_rebellion.1.d: "There was an uprising by a group of armed men who called themselves the Nian Rebellion Army."
+  nian_rebellion.1.f: "They gathered and dispersed unpredictably, waging campaigns across vast areas, making it difficult for government forces to suppress them. Skilled in mounted archery and known for their swift movements, the Nian forces plundered provisions along their path, destroying villages and wreaking havoc.\n\nThey seldom remained in one place, retreating to distant regions when pressure mounted. As their numbers grew, they became a formidable rebellion, exacerbating the chaos across southeastern provinces. Local officials were alarmed and found themselves at a loss to respond effectively."
+  nian_rebellion.1.a: "Bunch of bumpkins."
+  nian_rebellion.1.b: "We should stand with them."

@@ -8,20 +8,20 @@ je_xinhai = {
 		c:CHI ?= this
 		has_law = law_type:law_monarchy
 		OR = {
+			year >= 1890
 			has_global_variable = youwei_spawn
-			has_technology_researched = egalitarianism
 		}
 	}
 	possible = {
+		c:CHI ?= this
 		has_law = law_type:law_monarchy
-		has_technology_researched = egalitarianism
 		OR = {
 			has_variable = wuxu_reform_failed
 			has_variable = wuxu_xinhai_rebellion
 			has_variable = no_wuxu
 			AND = {
 				year >= 1900
-				has_journal_entry = je_warlord_china
+				has_technology_researched = egalitarianism
 			}
 		}
 	}

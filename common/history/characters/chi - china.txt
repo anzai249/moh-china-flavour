@@ -91,18 +91,17 @@
 		}
 
 		create_character = {
-			first_name = Lexing
-			last_name = Zhang
+			first_name = moh_Shu_1
+			last_name = moh_Tao
 			historical = yes
-			age = 24 # exact birthday unknown
+			birth_date = 1779.1.1
 			culture = cu:han
 			ig_leader = yes
 			interest_group = ig_rural_folk
 			ideology = ideology_traditionalist
 			traits = {
 				ambitious
-				firebrand
-				bandit
+				imposing
 			}
 		}
 

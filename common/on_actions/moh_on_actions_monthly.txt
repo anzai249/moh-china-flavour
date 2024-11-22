@@ -1,10 +1,11 @@
 ﻿moh_monthly_events = {
 	random_events = {
-		50 = 0
-		10 = self_strengthening.1
+		30 = 0
+		50 = self_strengthening.1
 		20 = moh_historical.10
 		20 = moh_historical.12
 		25 = moh_historical.16
+		70 = nian_rebellion.1
 	}
 } 
 

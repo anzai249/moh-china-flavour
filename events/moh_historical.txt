@@ -766,8 +766,9 @@ moh_historical.11 = {
 			any_scope_pop = {
 				religion = rel:sunni
 			}
-			turmoil > 0.15
+			turmoil > 0.1
 		}
+		year > 1840
 	}
 	immediate = {
 		set_variable = yunnan_rebellion

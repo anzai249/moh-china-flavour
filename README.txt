@@ -4,7 +4,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing, 1.8 Compatibility Testing
-Current version: beta-0.6
+Current version: beta-0.6.1
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
@@ -15,6 +15,8 @@ Current version: beta-0.6
 [*]New flavour textures.
 [*]New achievements.
 [*]Overhauled some vanilla journal entries.
+
+[url=https://steamcommunity.com/workshop/filedetails/discussion/3338630543/4631482382562694016/]Full Feature List[/url]
 
 [b]Note[/b]: Some of the contents in this mod require you to [b]make appropriate trade-offs[/b] at turning points in order to trigger them.
 

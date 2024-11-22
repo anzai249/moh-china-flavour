@@ -1,0 +1,105 @@
+﻿namespace = nian_rebellion
+
+nian_rebellion.1 = {
+    type = country_event
+	placement = root
+	title = nian_rebellion.1.t
+	desc = nian_rebellion.1.d
+	flavor = nian_rebellion.1.f
+	dlc = dlc0moh
+	event_image = {
+		video = "asia_sepoy_mutiny"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	trigger = {
+        c:CHI ?= this
+		NOT = {
+			has_variable = nian_rebellion
+		}
+		has_state_in_state_region = STATE_HENAN
+		year > 1845
+        OR = {
+            has_law = law_type:law_land_based_taxation
+            has_law = law_type:law_tenant_farmers
+            has_law = law_type:law_serfdom
+        }
+	}
+	immediate = {
+		set_variable = nian_rebellion
+        create_country = {
+				tag = AHU
+				origin = root
+				state = s:STATE_HENAN.region_state:CHI
+				on_created = {
+                    set_variable = nian_rebellion
+					add_primary_culture = cu:han
+					if = {
+						limit = {
+							NOT = {
+								has_law = law_type:law_homesteading
+							}
+						}
+						activate_law = law_type:law_homesteading
+					}
+					create_character = {
+                        template = chi_lexing_zhang_character_template
+                    }
+					create_character = {
+						first_name = moh_Zongyu
+						last_name = Zhang
+						historical = yes
+						traits = {
+							popular_commander
+							expert_offensive_planner
+						}
+						age = 24
+						is_general = yes
+                        ig_leader = yes
+                        interest_group = ig_armed_forces
+					}
+					create_diplomatic_play = {
+						type = dp_revolution
+						target_country = c:CHI
+					}
+					random_state = {
+                        limit = {
+							any_neighbouring_state = {
+                                state_region = s:STATE_HENAN
+							}
+                            NOT = {
+                                state_region = s:STATE_NORTHERN_ANHUI
+                            }
+                        }
+                        set_state_owner = c:AHU
+					}
+					random_state = {
+                        limit = {
+                            state_region = s:STATE_NORTHERN_ANHUI
+                        }
+                        set_state_owner = c:AHU
+					}
+				}
+			}
+	}
+	option = {
+		name = nian_rebellion.1.a
+		default_option = yes
+		ai_chance = {
+			base = 10
+		}
+	}
+
+    
+	option = {
+		name = nian_rebellion.1.b
+		ai_chance = {
+			base = 10
+		}
+        trigger = {
+            is_player = yes
+        }
+		play_as = c:AHU
+	}
+}
