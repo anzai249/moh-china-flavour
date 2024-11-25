@@ -19,6 +19,8 @@
 		ideology_bonapartist
 		ideology_legitimist
 		ideology_sovereignist_leader
+		ideology_moh_reformer
+		ideology_moh_revolutionary
 	}
 
 	enable = {

@@ -2084,3 +2084,60 @@ chi_lexing_zhang_character_template = {
         set_character_as_ruler = yes
     }
 }
+
+# Deng Shichang
+
+chi_deng_shichang_character_template = {
+    first_name = moh_Shichang
+    last_name = Deng
+    historical = yes
+    culture = cu:han
+    ideology = ideology_moderate
+    interest_group = ig_armed_forces
+    birth_date = 1849.10.4
+    traits = { 
+        experienced_offensive_planner
+        brave
+        ambitious
+    }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GUANGDONG
+        }
+        role = admiral
+        earliest_usage_date = 1875.1.1
+        latest_usage_date = 1894.9.17
+        chance = 75
+    }
+}
+
+# Cheng Biguang
+
+chi_cheng_biguang_character_template = {
+    first_name = moh_Biguang
+    last_name = Cheng
+    historical = yes
+    culture = cu:han
+    ideology = ideology_moh_revolutionary
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1859.1.1
+    traits = { charismatic }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GUANGDONG
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1894.1.1
+        latest_usage_date = 1918.2.26
+        chance = 75
+    }
+}

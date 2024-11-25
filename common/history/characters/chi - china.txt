@@ -98,6 +98,7 @@
 			culture = cu:han
 			ig_leader = yes
 			interest_group = ig_rural_folk
+			dna = moh_dna_chi_tao_shu
 			ideology = ideology_traditionalist
 			traits = {
 				ambitious

@@ -14,5 +14,6 @@ ideology_moh_revolutionary_valid_trigger = {
 		is_interest_group_type = ig_petty_bourgeoisie
 		is_interest_group_type = ig_intelligentsia
 		is_interest_group_type = ig_armed_forces
+		is_interest_group_type = ig_trade_unions
 	}
 }

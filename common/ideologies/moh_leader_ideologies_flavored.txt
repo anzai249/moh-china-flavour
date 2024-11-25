@@ -60,15 +60,8 @@
 							is_treaty_port = yes
 						}
 					}
-					AND = {
-						has_technology_researched = political_agitation
-						any_state = {
-							state_region = { is_homeland = cu:han }
-							NOT = { owner = ROOT }
-						}
-					}
+					has_technology_researched = empiricism
 				}
-				game_date > 1870.1.1
 			}
 			AND = {
 				exists = c:CHI
@@ -81,16 +74,9 @@
 								is_treaty_port = yes
 							}
 						}
-						AND = {
-							has_technology_researched = political_agitation
-							any_state = {
-								state_region = { is_homeland = cu:han }
-								NOT = { owner = ROOT }
-							}
-						}
+						has_technology_researched = empiricism
 					}
 				}
-				game_date > 1870.1.1
 			}
 		}	
 	}
@@ -124,7 +110,7 @@
 	}
 
 	interest_group_leader_weight = {
-		value = 100
+		value = 90
 		if = {
 			limit = {
 				owner = { has_variable = lost_opium_wars }
@@ -133,27 +119,35 @@
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
-					is_in_government = no
-				}
+				game_date > 1870.1.1
+			}
+			multiply = 2
+		}
+		
+		if = {
+			limit = {
+				game_date < 1840.1.1
+			}
+			multiply = 0.1
+		}
+
+		if = {
+			limit = {
+				is_in_government = no
 			}
 			add = 20
 		}
 		
 		if = {
 			limit = {
-				scope:interest_group = {
-					ig_approval > happy
-				}
+				Ig_approval > happy
 			}
 			add = -50
 		}
 		
 		if = {
 			limit = {
-				scope:interest_group = {
-					is_interest_group_type = ig_landowners
-				}
+				is_interest_group_type = ig_landowners
 			}
 			add = -100
 		}
@@ -181,7 +175,7 @@
 
 		if = {
 			limit = {
-				owner = { year > 1911 }
+				owner = { year > 1905 }
 			}
 			add = -90
 		}
@@ -241,41 +235,36 @@ ideology_moh_revolutionary = {
 	}
 
 	country_trigger = {
+		exists = c:CHI
 		OR = {
 			AND = {
-				exists = c:CHI
 				OR = {
 					c:CHI = this
 					civil_war_origin_country ?= c:CHI
 				}
 				OR = {
 					has_variable = lost_opium_wars
-					AND = {
-						has_technology_researched = political_agitation
-						any_state = {
-							state_region = { is_homeland = cu:han }
-							NOT = { owner = ROOT }
-						}
+					any_state = {
+						state_region = { is_homeland = cu:han }
+						NOT = { owner = ROOT }
 					}
+					has_technology_researched = pan-nationalism
 				}
-				has_technology_researched = pan-nationalism
+				has_technology_researched = nationalism
 				has_law = law_type:law_monarchy
 			}
 			AND = {
-				exists = c:CHI
 				is_subject_of = c:CHI
 				c:CHI = {
 					OR = {
 						has_variable = lost_opium_wars
-						AND = {
-							has_technology_researched = political_agitation
-							any_state = {
-								state_region = { is_homeland = cu:han }
-								NOT = { owner = ROOT }
-							}
+						any_state = {
+							state_region = { is_homeland = cu:han }
+							NOT = { owner = ROOT }
 						}
+						has_technology_researched = pan-nationalism
 					}
-					has_technology_researched = pan-nationalism
+					has_technology_researched = nationalism
 					has_law = law_type:law_monarchy
 				}
 			}
@@ -283,27 +272,23 @@ ideology_moh_revolutionary = {
 	}
 
 	interest_group_leader_weight = {
-		value = 95
+		value = 100
 		if = {
 			limit = {
 				owner = { has_variable = lost_opium_wars }
 			}
-			add = 20
+			add = 50
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
-					is_in_government = no
-				}
+				is_in_government = no
 			}
 			add = 20
 		}
 		
 		if = {
 			limit = {
-				scope:interest_group = {
-					ig_approval > happy
-				}
+				ig_approval > happy
 			}
 			add = -25
 		}
@@ -327,6 +312,32 @@ ideology_moh_revolutionary = {
 				owner = { has_variable = wuxu_reform_complete_var }
 			}
 			add = -150
+		}
+
+		if = {
+			limit = {
+				year > 1900
+			}
+			add = 50
+		}
+
+		if = {
+			limit = {
+				is_interest_group_type = ig_petty_bourgeoisie
+			}
+			multiply = 1.5
+		}
+
+		if = {
+			limit = {
+				owner = {
+					any_state = {
+						state_region = { is_homeland = cu:han }
+						NOT = { owner = prev }
+					} 
+				}
+			}
+			add = 25
 		}
 	}
 
@@ -441,9 +452,7 @@ ideology_moh_kmt = {
 		}
 		if = {
 			limit = {
-				scope:interest_group = {
-					is_in_government = no
-				}
+				is_in_government = no
 			}
 			add = 20
 		}

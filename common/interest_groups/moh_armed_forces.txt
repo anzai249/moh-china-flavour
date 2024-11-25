@@ -14,6 +14,8 @@
 		ideology_moderate
 		ideology_orleanist
 		ideology_bonapartist
+		ideology_moh_revolutionary
+		ideology_moh_reformer
 	}
 
 	enable = {

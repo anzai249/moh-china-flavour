@@ -91,3 +91,20 @@ Changes:
 - Lexing Zhang is no longer the leader of the Rural Folks interest group.
 - The new leader of the Rural Folks interest group is Shu Tao.
 - Added dynamic name for Hong Kong (Xin'an).
+
+
+beta-0.6.2
+
+Fixes:
+
+- Formable countries gui.
+
+beta-0.6.3
+
+Fixes:
+
+- Flavoured ideology not able to trigger.
+
+Changes:
+
+- Added more names.
