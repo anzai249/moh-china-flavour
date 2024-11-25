@@ -17,6 +17,8 @@ self_strengthening.1 = {
 		this = c:CHI
 		NOT = {
 			has_variable = self_strengthening_started
+		}
+		NOT = {
 			has_variable = self_strengthening_end
 		}
 		any_scope_character = {

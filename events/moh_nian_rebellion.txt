@@ -37,6 +37,12 @@ nian_rebellion.1 = {
 					add_primary_culture = cu:han
 					if = {
 						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
+					if = {
+						limit = {
 							NOT = {
 								has_law = law_type:law_homesteading
 							}
@@ -62,6 +68,7 @@ nian_rebellion.1 = {
 					create_diplomatic_play = {
 						type = dp_revolution
 						target_country = c:CHI
+						annex_as_civil_war = yes
 					}
 					random_state = {
                         limit = {

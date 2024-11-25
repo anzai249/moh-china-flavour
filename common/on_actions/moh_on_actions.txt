@@ -196,3 +196,45 @@ moh_on_revolution_start = {
 		}
 	}
 }
+
+on_wargoal_enforced = {
+	effect = {
+		if = {
+			limit = {
+				scope:target = {
+					has_journal_entry = je_self_strengthing
+				}
+			}
+			scope:target = {
+				if = {
+					limit = {
+						has_variable = self_strengthening_lost_wars
+					}
+					change_variable = {
+						name = self_strengthening_lost_wars
+						value = 1
+					}
+				}
+			}
+		}
+	}
+}
+
+on_character_creation = {
+	effect = {
+		if = {
+			limit = {
+				owner = {
+					has_journal_entry = je_self_strengthing
+				}
+				is_historical = no
+			}
+			random_list = {
+				75 = 0
+				25 = {
+					set_variable = self_strengthening_character
+				}
+			}
+		}
+	}
+}

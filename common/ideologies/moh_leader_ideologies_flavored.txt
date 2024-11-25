@@ -110,7 +110,7 @@
 	}
 
 	interest_group_leader_weight = {
-		value = 90
+		value = 80
 		if = {
 			limit = {
 				owner = { has_variable = lost_opium_wars }
@@ -126,9 +126,16 @@
 		
 		if = {
 			limit = {
+				game_date < 1845.1.1
+			}
+			multiply = 0.01
+		}
+
+		if = {
+			limit = {
 				game_date < 1840.1.1
 			}
-			multiply = 0.1
+			add = -100
 		}
 
 		if = {
@@ -149,7 +156,7 @@
 			limit = {
 				is_interest_group_type = ig_landowners
 			}
-			add = -100
+			add = -80
 		}
 		
 		if = {

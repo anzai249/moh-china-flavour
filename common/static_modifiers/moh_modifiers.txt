@@ -99,7 +99,8 @@ modifier_self_strengthing = {
 	building_naval_base_throughput_add = 0.05
 	unit_navy_offense_mult = 0.1
 	unit_navy_defense_mult = 0.1
-	country_tax_income_add = -5000
+	country_tax_income_add = -2500
+	country_law_enactment_time_mult = 0.05
 }
 
 # father
@@ -235,4 +236,10 @@ taoism_standard_of_living_modifier_positive = {
 taoism_standard_of_living_modifier_negative = {
 	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
 	state_taoism_standard_of_living_add = 1
+}
+
+modifier_self_strengthing_success = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_tech_spread_mult = 0.1
+	country_prestige_add = 20
 }

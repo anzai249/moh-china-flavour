@@ -1850,7 +1850,7 @@ chi_yan_botao_template = {
     first_name = moh_Botao
     last_name = moh_Yan_1
     historical = yes
-    culture = cu:yue
+    culture = cu:hakka
     ideology = ideology_moderate
     interest_group = ig_petty_bourgeoisie
     birth_date = 1792.1.1
@@ -1859,7 +1859,7 @@ chi_yan_botao_template = {
     commander_usage = {
         country_trigger = {
             NOT = {
-                cultural_acceptance_base = { target = cu:yue value < acceptance_status_4 }
+                cultural_acceptance_base = { target = cu:hakka value < acceptance_status_4 }
             }
             has_state_in_state_region = STATE_GUANGDONG
         }
@@ -1962,7 +1962,7 @@ chi_weiyuan_character_template = {
         }
         earliest_usage_date = 1820.1.1
         latest_usage_date = 1857.3.26
-        chance = 50
+        chance = 15
     }
     on_created = {
         set_variable = self_strengthening_character
@@ -2139,5 +2139,35 @@ chi_cheng_biguang_character_template = {
         earliest_usage_date = 1894.1.1
         latest_usage_date = 1918.2.26
         chance = 75
+    }
+}
+
+# Guiliang
+
+chi_guiliang_character_template = {
+    first_name = moh_Guiliang
+    last_name = moh_Guwalgiya
+    historical = yes
+    culture = cu:manchu
+    ideology = ideology_moderate
+    interest_group = ig_intelligentsia
+    birth_date = 1785.1.1
+    traits = { literary innovative }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:manchu value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_FUJIAN
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1840.1.1
+        latest_usage_date = 1862.1.1
+        chance = 20
+    }
+    on_created = {
+        set_variable = self_strengthening_character
     }
 }

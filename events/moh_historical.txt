@@ -845,6 +845,7 @@ moh_historical.11 = {
 					create_diplomatic_play = {
 						type = dp_revolution
 						target_country = c:CHI
+						annex_as_civil_war = yes
 					}
 					random_scope_state = {
 						limit = {
