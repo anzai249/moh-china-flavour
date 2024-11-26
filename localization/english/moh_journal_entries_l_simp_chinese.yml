@@ -175,7 +175,7 @@
   je_self_strengthing_military_reason: "洋务派大臣见到西方国家的海军都羡慕不已，认为[ROOT.GetCountry.GetName]的海军也应该发展起来。"
   je_self_strengthing_industry: "洋务运动：工业"
   je_self_strengthing_industry_reason: "对于错过工业革命的[ROOT.GetCountry.GetName]，更应加快求富的脚步。"
-  je_self_strengthing_industry_goal: "[concept_gdp]提升#variable 15%#!"
+  je_self_strengthing_industry_goal: "[concept_gdp]提升#variable 25%#!"
   je_self_strengthing_fail_tt: "输掉#variable 2#!场战争，目前#variable [ROOT.GetCountry.MakeScope.Var('self_strengthening_lost_wars').GetValue]#!场"
   je_self_strengthing_education_tt_complete: "完成#bold 建立大学#![concept_journal_entry]"
   je_self_strengthing_education: "洋务运动：教育"
