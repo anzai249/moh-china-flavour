@@ -108,3 +108,15 @@ Fixes:
 Changes:
 
 - Added more names.
+
+beta-0.7
+
+Fixes:
+
+- Hong Kong's state names.
+
+Changes:
+
+- Self-Strengthening movement rework.
+- Trigger of the Nian Rebellion.
+- New characters: Liu Changyou, Guiliang

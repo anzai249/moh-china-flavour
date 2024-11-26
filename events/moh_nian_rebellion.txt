@@ -25,6 +25,16 @@ nian_rebellion.1 = {
             has_law = law_type:law_tenant_farmers
             has_law = law_type:law_serfdom
         }
+		any_scope_state = {
+			any_scope_pop = {
+				OR = {
+					is_pop_type = farmers
+					is_pop_type = peasants
+					standard_of_living < 10
+				}
+				turmoil > 0.2
+			}
+		}
 	}
 	immediate = {
 		set_variable = nian_rebellion

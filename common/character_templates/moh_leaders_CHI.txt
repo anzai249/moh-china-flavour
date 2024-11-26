@@ -2096,7 +2096,7 @@ chi_deng_shichang_character_template = {
     interest_group = ig_armed_forces
     birth_date = 1849.10.4
     traits = { 
-        experienced_offensive_planner
+        experienced_naval_commander
         brave
         ambitious
     }
@@ -2169,5 +2169,45 @@ chi_guiliang_character_template = {
     }
     on_created = {
         set_variable = self_strengthening_character
+    }
+}
+
+# Liu Changyou
+
+chi_liu_changyou_character_template = {
+    first_name = moh_Changyou
+    last_name = Liu
+    historical = yes
+    culture = cu:han
+    ideology = ideology_moderate
+    interest_group = ig_industrialists
+    birth_date = 1818.1.1
+    traits = { brave experienced_offensive_planner }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HUNAN
+        }
+        role = general
+        earliest_usage_date = 1840.1.1
+        latest_usage_date = 1887.1.1
+        chance = 60
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HUNAN
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1840.1.1
+        latest_usage_date = 1887.1.1
+        chance = 70
     }
 }

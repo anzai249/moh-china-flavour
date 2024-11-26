@@ -243,3 +243,15 @@ modifier_self_strengthing_success = {
 	country_tech_spread_mult = 0.1
 	country_prestige_add = 20
 }
+
+# 慷慨的捐赠
+modifier_self_strengthing_donate = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_tax_income_add = 2
+}
+
+# 慷慨的捐赠 人物
+modifier_self_strengthing_donate_character = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	character_popularity_add = 25
+}

@@ -127,6 +127,12 @@ je_self_strengthing_military = {
 			has_journal_entry = je_self_strengthing
 		}
 	}
+	on_yearly_pulse = {
+		random_events = {
+			10 = 0
+			2 = self_strengthening.3
+		}
+	}
 	weight = 100
 	should_be_pinned_by_default = yes
 }
@@ -160,12 +166,18 @@ je_self_strengthing_industry = {
 		}
 	}
 	current_value = {
-		value = var:self_strengthening_gdp
+		value = gdp
 	}
 	goal_add_value = {
 		add = {
 			value = var:self_strengthening_gdp
-			multiply = 0.15
+			multiply = 0.25
+		}
+	}
+	on_yearly_pulse = {
+		random_events = {
+			10 = 0
+			2 = self_strengthening.2
 		}
 	}
 	progressbar = yes

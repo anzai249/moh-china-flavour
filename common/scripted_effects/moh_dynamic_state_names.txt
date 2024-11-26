@@ -236,10 +236,7 @@ STATE_SHAOZHOU_state_name_assign = {
                 }
             }
         }
-		set_state_name = STATE_SHAOZHOU_russian
-        set_hub_name = {
-            type = port
-            name = HUB_NAME_STATE_SHAOZHOU_port_uk
-        }
+		reset_state_name = yes
+        reset_hub_names = yes
     }
 }

@@ -20,4 +20,12 @@
 	s:STATE_XIAN = {
 		add_state_trait = state_trait_great_wall
 	}
+	s:STATE_SHAOZHOU = {
+		random_scope_state = {
+			set_hub_name = {
+				type = port
+				name = HUB_NAME_STATE_SHAOZHOU_port_cn
+			}
+		}
+	}
 }

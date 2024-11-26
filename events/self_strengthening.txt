@@ -1,53 +1,355 @@
 ﻿namespace = self_strengthening
 self_strengthening.1 = {
-	type = country_event
-	placement = root
-	title = self_strengthening.1.t
-	desc = self_strengthening.1.d
-	flavor = self_strengthening.1.f
-	dlc = dlc0moh
-	event_image = {
-		video = "middleeast_middleclass_cafe"
-	}
-	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
-	icon = "gfx/interface/icons/invention_icons/battleship_tech.dds"
-	duration = 3
-	trigger = {
-		exists = c:CHI
-		this = c:CHI
-		NOT = {
-			has_variable = self_strengthening_started
+    type = country_event
+    placement = root
+    title = self_strengthening.1.t
+    desc = self_strengthening.1.d
+    flavor = self_strengthening.1.f
+    dlc = dlc0moh
+    event_image = {
+        video = "middleeast_middleclass_cafe"
+    }
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    icon = "gfx/interface/icons/invention_icons/battleship_tech.dds"
+    duration = 3
+    trigger = {
+        exists = c:CHI
+        this = c:CHI
+        NOT = {
+            has_variable = self_strengthening_started
+        }
+        NOT = {
+            has_variable = self_strengthening_end
+        }
+        any_scope_character = {
+            has_variable = self_strengthening_character
+        }
+    }
+    immediate = {
+        set_variable = self_strengthening_started
+        random_scope_character = {
+            limit = {
+                has_variable = self_strengthening_character
+            }
+            save_scope_as = self_strengthening_character
+        }
+    }
+    option = {
+        name = self_strengthening.1.a
+        ai_chance = {
+            base = 50
+        }
+        add_journal_entry = {
+            type = je_self_strengthing
+        }
+    }
+    option = {
+        name = self_strengthening.1.b
+        default_option = yes
+        ai_chance = {
+            base = 10
+        }
+    }
+}
+
+self_strengthening.2 = {
+    # 捐助
+    type = country_event
+    placement = scope:self_strengthening_donate_state
+    title = self_strengthening.2.t
+    desc = self_strengthening.2.d
+    flavor = self_strengthening.2.f
+    dlc = dlc0moh
+    gui_window = event_window_1char_tabloid
+    left_icon = scope:donate_character_scope
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    duration = 3
+    trigger = {
+        has_journal_entry = je_self_strengthing
+        any_scope_character = {
+            has_variable = self_strengthening_character
+            NOT = {
+                has_modifier = modifier_self_strengthing_donate_character
+            }
+        }
+        any_scope_state = {
+            is_incorporated = yes
+            OR = {
+                can_construct_building = building_coal_mine
+                can_construct_building = building_iron_mine
+                can_construct_building = building_sulfur_mine
+                can_construct_building = building_tooling_workshops
+                can_construct_building = building_lead_mine
+                can_construct_building = building_military_shipyards
+            }
+        }
+    }
+    immediate = {
+        random_scope_character = {
+            limit = {
+                has_variable = self_strengthening_character
+            }
+            save_scope_as = donate_character_scope
+            add_modifier = {
+                name = modifier_self_strengthing_donate_character
+                years = 2
+                is_decaying = yes
+            }
+        }
+        random_scope_state = {
+            limit = {
+                is_incorporated = yes
+                OR = {
+                    can_construct_building = building_coal_mine
+                    can_construct_building = building_iron_mine
+                    can_construct_building = building_sulfur_mine
+                    can_construct_building = building_tooling_workshops
+                    can_construct_building = building_lead_mine
+                    can_construct_building = building_military_shipyards
+                }
+            }
+            save_scope_as = self_strengthening_donate_state
+        }
+    }
+    option = {
+        name = self_strengthening.2.a
+        ai_chance = {
+            base = 5
+        }
+        show_as_tooltip = {
+            scope:donate_character_scope = {
+                add_modifier = {
+                    name = modifier_self_strengthing_donate_character
+                    years = 2
+                    is_decaying = yes
+                }
+            }
+        }
+        scope:self_strengthening_donate_state = {
+            random_list = {
+                20 = {
+                    trigger = {
+                        can_construct_building = building_coal_mine
+                    }
+                    create_building={
+                        building="building_coal_mine"
+                        level=1
+                        reserves=1
+                    }
+                }
+                20 = {
+                    trigger = {
+                        can_construct_building = building_iron_mine
+                    }
+                    create_building={
+                        building="building_iron_mine"
+                        level=1
+                        reserves=1
+                    }
+                }
+                20 = {
+                    trigger = {
+                        can_construct_building = building_sulfur_mine
+                    }
+                    create_building={
+                        building="building_sulfur_mine"
+                        level=1
+                        reserves=1
+                    }
+                }
+                20 = {
+                    trigger = {
+                        can_construct_building = building_tooling_workshops
+                    }
+                    create_building={
+                        building="building_tooling_workshops"
+                        level=1
+                        reserves=1
+                    }
+                }
+                20 = {
+                    trigger = {
+                        can_construct_building = building_lead_mine
+                    }
+                    create_building={
+                        building="building_lead_mine"
+                        level=1
+                        reserves=1
+                    }
+                }
+                20 = {
+                    trigger = {
+                        can_construct_building = building_military_shipyards
+                    }
+                    create_building={
+                        building="building_military_shipyards"
+                        level=2
+                        reserves=1
+                    }
+                }
+            }
+        }
+    }
+    option = {
+        name = self_strengthening.2.b
+        ai_chance = {
+            base = 10
+        }
+        default_option = yes
+        show_as_tooltip = {
+            scope:donate_character_scope = {
+                add_modifier = {
+                    name = modifier_self_strengthing_donate_character
+                    years = 2
+                    is_decaying = yes
+                }
+            }
+        }
+        add_modifier = {
+            name = modifier_self_strengthing_donate
+            years = 1
+            multiplier = money_amount_multiplier_small
+        }
+        scope:self_strengthening_donate_state = {
+            add_radicals_in_state = {
+                value = small_radicals
+            }
+        }
+    }
+}
+
+self_strengthening.3 = {
+    type = country_event
+    placement = scope:self_strengthening_donate_state
+    title = self_strengthening.2.t
+    desc = self_strengthening.2.d
+    flavor = self_strengthening.3.f
+    dlc = dlc0moh
+    gui_window = event_window_1char_tabloid
+    left_icon = scope:donate_character_scope
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+    on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+    duration = 3
+    trigger = {
+        has_journal_entry = je_self_strengthing
+        any_scope_character = {
+            has_variable = self_strengthening_character
+            NOT = {
+                has_modifier = modifier_self_strengthing_donate_character
+            }
+        }
+        scope:self_strengthening_donate_state = {
+            is_incorporated = yes
+            can_construct_building = building_naval_base
+        }
+        NOT = {
+            any_military_formation = {
+                is_fleet = yes
+                has_variable = beiyang_fleet
+            }
+        }
+        has_technology_researched = destroyer
+    }
+    immediate = {
+        random_scope_character = {
+            limit = {
+                has_variable = self_strengthening_character
+            }
+            save_scope_as = donate_character_scope
+            add_modifier = {
+                name = modifier_self_strengthing_donate_character
+                years = 2
+                is_decaying = yes
+            }
+        }
+        s:STATE_SHANDONG.region_state:CHI = {
+            save_scope_as = self_strengthening_donate_state
+        }
+    }
+    option = {
+        name = self_strengthening.2.a
+        ai_chance = {
+            base = 5
+        }
+        if = {
+            limit = {
+                has_technology_researched = ironclad_tech
+            }
+            create_military_formation = {
+                type = fleet
+                hq_region = sr:region_north_china
+                name = Beiyang_Fleet
+                combat_unit = {
+                    type = unit_type:combat_unit_type_destroyer
+                    state_region = s:STATE_SHANDONG
+                    count = 5
+                }
+                combat_unit = {
+                    type = unit_type:combat_unit_type_ironclad
+                    state_region = s:STATE_SHANDONG
+                    count = 5
+                }
+                on_created = {
+                    set_variable = beiyang_fleet
+                }
+            }
+        }
+		else = {
+			create_military_formation = {
+                type = fleet
+                hq_region = sr:region_north_china
+                name = Beiyang_Fleet
+                combat_unit = {
+                    type = unit_type:combat_unit_type_destroyer
+                    state_region = s:STATE_SHANDONG
+                    count = 5
+                }
+                combat_unit = {
+                    type = unit_type:combat_unit_type_man_o_war
+                    state_region = s:STATE_SHANDONG
+                    count = 5
+                }
+                on_created = {
+                    set_variable = beiyang_fleet
+                }
+            }
 		}
-		NOT = {
-			has_variable = self_strengthening_end
-		}
-		any_scope_character = {
-			has_variable = self_strengthening_character
-		}
-	}
-	immediate = {
-		set_variable = self_strengthening_started
-		random_scope_character = {
-			limit = {
-				has_variable = self_strengthening_character
-			}
-			save_scope_as = self_strengthening_character
-		}
-	}
-	option = {
-		name = self_strengthening.1.a
-		ai_chance = {
-			base = 50
-		}
-		add_journal_entry = {
-			type = je_self_strengthing
-		}
-	}
-	option = {
-		name = self_strengthening.1.b
-		default_option = yes
-		ai_chance = {
-			base = 10
-		}
-	}
+
+        show_as_tooltip = {
+            scope:donate_character_scope = {
+                add_modifier = {
+                    name = modifier_self_strengthing_donate_character
+                    years = 2
+                    is_decaying = yes
+                }
+            }
+        }
+    }
+    option = {
+        name = self_strengthening.2.b
+        ai_chance = {
+            base = 10
+        }
+        default_option = yes
+        show_as_tooltip = {
+            scope:donate_character_scope = {
+                add_modifier = {
+                    name = modifier_self_strengthing_donate_character
+                    years = 2
+                    is_decaying = yes
+                }
+            }
+        }
+        add_modifier = {
+            name = modifier_self_strengthing_donate
+            years = 1
+            multiplier = money_amount_multiplier_medium
+        }
+        add_radicals = {
+            value = small_radicals
+        }
+    }
 }
