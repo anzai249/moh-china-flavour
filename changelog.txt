@@ -120,3 +120,13 @@ Changes:
 - Self-Strengthening movement rework.
 - Trigger of the Nian Rebellion.
 - New characters: Liu Changyou, Guiliang
+
+beta-0.7.1
+
+Changes:
+
+- Warlords are not going to all inherite manchu and han primary culture.
+- States of Nian Rebellion are all incorporated.
+- Kuomintang Nationalists are now more likely to appear.
+- Self-Strengthening characters are now more likely to appear.
+- New flags.

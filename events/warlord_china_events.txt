@@ -50,6 +50,12 @@ warlord_china_events.100 = {
 							set_strategy = ai_strategy_unify_china
 						}
 					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:HNA = {
@@ -75,6 +81,12 @@ warlord_china_events.100 = {
 						1 = {
 							set_strategy = ai_strategy_unify_china
 						}
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
 					}
 				}
 			}
@@ -102,6 +114,12 @@ warlord_china_events.100 = {
 							set_strategy = ai_strategy_unify_china
 						}
 					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:AHU = {
@@ -127,6 +145,12 @@ warlord_china_events.100 = {
 						1 = {
 							set_strategy = ai_strategy_unify_china
 						}
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
 					}
 				}
 			}
@@ -180,6 +204,12 @@ warlord_china_events.100 = {
 							set_strategy = ai_strategy_unify_china
 						}
 					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:SHN = {
@@ -205,6 +235,13 @@ warlord_china_events.100 = {
 						1 = {
 							set_strategy = ai_strategy_unify_china
 						}
+					}
+					add_primary_culture = cu:uighur
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
 					}
 				}
 			}
@@ -232,6 +269,12 @@ warlord_china_events.100 = {
 							set_strategy = ai_strategy_unify_china
 						}
 					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:YUN = {
@@ -257,6 +300,12 @@ warlord_china_events.100 = {
 						1 = {
 							set_strategy = ai_strategy_unify_china
 						}
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
 					}
 				}
 			}
@@ -284,6 +333,13 @@ warlord_china_events.100 = {
 							set_strategy = ai_strategy_unify_china
 						}
 					}
+					add_primary_culture = cu:yue
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:YUE = {
@@ -308,6 +364,12 @@ warlord_china_events.100 = {
 						1 = {
 							set_strategy = ai_strategy_unify_china
 						}
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
 					}
 				}
 			}
@@ -334,6 +396,12 @@ warlord_china_events.100 = {
 							set_strategy = ai_strategy_unify_china
 						}
 					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:SHA = {
@@ -359,6 +427,12 @@ warlord_china_events.100 = {
 							set_strategy = ai_strategy_unify_china
 						}
 					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:XIB = {
@@ -383,6 +457,19 @@ warlord_china_events.100 = {
 						}
 						set_state_owner = c:MGL
 					}
+					add_primary_culture = cu:mongol
+					if = {
+						limit = {
+							country_has_primary_culture = cu:han
+						}
+						remove_primary_culture = cu:han
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:MGL = {
@@ -399,6 +486,19 @@ warlord_china_events.100 = {
 				state = s:STATE_TUVA.region_state:CHI
 				on_created = {
 					warlord_setup_effect = yes
+					add_primary_culture = cu:tuvan
+					if = {
+						limit = {
+							country_has_primary_culture = cu:han
+						}
+						remove_primary_culture = cu:han
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:TUV = {
@@ -415,6 +515,19 @@ warlord_china_events.100 = {
 				state = s:STATE_ALTAI.region_state:CHI
 				on_created = {
 					warlord_setup_effect = yes
+					add_primary_culture = cu:mongol
+					if = {
+						limit = {
+							country_has_primary_culture = cu:han
+						}
+						remove_primary_culture = cu:han
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 				}
 			}
 			c:ALI = {
@@ -457,6 +570,13 @@ warlord_china_events.100 = {
 				on_created = {
 					warlord_setup_effect = yes
 					set_variable = warlord_state
+					add_primary_culture = cu:min
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 					random_list = {
 						4 = {
 						}
@@ -1027,6 +1147,19 @@ warlord_china_events.400 = {
 				origin = this
 				state = s:STATE_TIANSHAN.region_state:CHI
 				on_created = {
+					add_primary_culture = cu:uighur
+					if = {
+						limit = {
+							country_has_primary_culture = cu:han
+						}
+						remove_primary_culture = cu:han
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 					random_state = {
 						limit = {
 							state_region = s:STATE_DZUNGARIA
@@ -1060,6 +1193,19 @@ warlord_china_events.400 = {
 				origin = this
 				state = s:STATE_ULIASTAI.region_state:CHI
 				on_created = {
+					add_primary_culture = cu:mongol
+					if = {
+						limit = {
+							country_has_primary_culture = cu:han
+						}
+						remove_primary_culture = cu:han
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
 					random_state = {
 						limit = {
 							state_region = s:STATE_URGA
@@ -1078,6 +1224,7 @@ warlord_china_events.400 = {
 							create_character = {
 								last_name = moh_Jebtsundamba
 								first_name = moh_Luvsanchultimjigmed
+								culture = cu:mongol
 								historical = yes
 								interest_group = ig:ig_devout
 								ruler = yes
@@ -1091,6 +1238,7 @@ warlord_china_events.400 = {
 							create_character = {
 								last_name = moh_Jebtsundamba
 								first_name = moh_Luvsantuvdenchoyjijaltsan
+								culture = cu:mongol
 								historical = yes
 								interest_group = ig:ig_devout
 								ruler = yes
@@ -1104,6 +1252,7 @@ warlord_china_events.400 = {
 							create_character = {
 								last_name = moh_Jebtsundamba
 								first_name = moh_Agvaanchoyjivanchugperenlaijamts
+								culture = cu:mongol
 								historical = yes
 								interest_group = ig:ig_devout
 								ruler = yes
@@ -1117,6 +1266,7 @@ warlord_china_events.400 = {
 							create_character = {
 								last_name = moh_Jebtsundamba
 								first_name = moh_Agvaanluvsanchoyjindanzanvaanchigbalsambuu
+								culture = cu:mongol
 								historical = yes
 								interest_group = ig:ig_devout
 								ruler = yes
@@ -1135,6 +1285,21 @@ warlord_china_events.400 = {
 				tag = TUV
 				origin = this
 				state = s:STATE_TUVA.region_state:CHI
+				on_created = {
+					add_primary_culture = cu:tuvan
+					if = {
+						limit = {
+							country_has_primary_culture = cu:han
+						}
+						remove_primary_culture = cu:han
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
+				}
 			}
 		}
 		if = {
@@ -1148,6 +1313,21 @@ warlord_china_events.400 = {
 				tag = ALI
 				origin = this
 				state = s:STATE_ALTAI.region_state:CHI
+				on_created = {
+					add_primary_culture = cu:mongol
+					if = {
+						limit = {
+							country_has_primary_culture = cu:han
+						}
+						remove_primary_culture = cu:han
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
+				}
 			}
 		}
 		every_subject_or_below = {

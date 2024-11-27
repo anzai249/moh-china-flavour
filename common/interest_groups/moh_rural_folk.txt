@@ -15,6 +15,7 @@
 		ideology_pacifist
 		ideology_bonapartist
 		ideology_legitimist
+		ideology_moh_kmt
 	}
 
 	enable = {

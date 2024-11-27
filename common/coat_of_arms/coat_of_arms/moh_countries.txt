@@ -651,3 +651,48 @@ CHI_later_jin_subject = {
 		instance = { scale = { 0.5 0.5 } position = { 0.75 0.5 } }
 	}
 }
+
+TIB_republic = {
+	pattern = "pattern_gironny_16.dds"
+	color1 = "red"
+	color2 = "blue"
+
+	colored_emblem = {
+		texture = "ce_star_16.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+        instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }				
+	}	
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+        instance = { scale = { 0.35 0.35 } position = { 0.5 0.5 } }				
+	}	
+	colored_emblem = {
+		texture = "ce_rhombus.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_snow_lion.dds"
+		color1 = "white"
+		color2 = "green"
+		color3 = "orange"
+		instance = { scale = { 0.5 0.5 } position = { 0.65 0.82 } rotation = 40 }
+		instance = { scale = { -0.5 0.5 } position = { 0.35 0.82 } rotation = -40 }		
+	}
+	colored_emblem = {
+		texture = "ce_torch.dds"
+		color1 = "white"
+		color2 = "red"
+		instance = { scale = { 0.5 0.5 } position = { 0.5 0.8 } }			
+	}
+	colored_emblem = {
+		texture = "ce_korea_taegeuk.dds"
+		color1 = "orange"
+		color2 = "purple"
+		instance = { scale = { 0.2 0.2 } position = { 0.5 0.8 } }			
+	}
+}

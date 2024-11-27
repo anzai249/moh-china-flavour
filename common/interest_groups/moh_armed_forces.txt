@@ -16,6 +16,7 @@
 		ideology_bonapartist
 		ideology_moh_revolutionary
 		ideology_moh_reformer
+		ideology_moh_kmt
 	}
 
 	enable = {

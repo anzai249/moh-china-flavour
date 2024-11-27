@@ -86,7 +86,12 @@
 	}
 
 	non_interest_group_leader_trigger = {
-		ideology_moh_reformer_valid_trigger = yes
+		NOT = {
+			has_role = agitator
+		}
+		interest_group = {
+			ideology_moh_reformer_valid_trigger = yes
+		}
 	}
 
 	non_interest_group_leader_weight = {
@@ -238,7 +243,12 @@ ideology_moh_revolutionary = {
 	}
 
 	non_interest_group_leader_trigger = {
-		ideology_moh_revolutionary_valid_trigger = yes
+		NOT = {
+			has_role = agitator
+		}
+		interest_group = {
+			ideology_moh_revolutionary_valid_trigger = yes
+		}
 	}
 
 	country_trigger = {
@@ -255,7 +265,7 @@ ideology_moh_revolutionary = {
 						state_region = { is_homeland = cu:han }
 						NOT = { owner = ROOT }
 					}
-					has_technology_researched = pan-nationalism
+					has_technology_researched = egalitarianism
 				}
 				has_technology_researched = nationalism
 				has_law = law_type:law_monarchy
@@ -269,7 +279,7 @@ ideology_moh_revolutionary = {
 							state_region = { is_homeland = cu:han }
 							NOT = { owner = ROOT }
 						}
-						has_technology_researched = pan-nationalism
+						has_technology_researched = egalitarianism
 					}
 					has_technology_researched = nationalism
 					has_law = law_type:law_monarchy
@@ -346,6 +356,17 @@ ideology_moh_revolutionary = {
 			}
 			add = 25
 		}
+
+		if = {
+			limit = {
+				owner = { 
+					NOT = {
+						has_journal_entry = je_xinhai
+					}
+				}
+			}
+			multiply = 0.1
+		}
 	}
 
 	non_interest_group_leader_weight = {
@@ -414,22 +435,30 @@ ideology_moh_kmt = {
 	}
 	
 	interest_group_leader_trigger = {
-		ideology_moh_revolutionary_valid_trigger = yes
+		ideology_moh_kmt_valid_trigger = yes
 	}
 
 	non_interest_group_leader_trigger = {
-		ideology_moh_revolutionary_valid_trigger = yes
+		NOT = {
+			has_role = agitator
+		}
+		interest_group = {
+			ideology_moh_kmt_valid_trigger = yes
+		}
 	}
 
 	country_trigger = {
 		OR = {
 			AND = {
-				exists = c:CHI
 				OR = {
-					c:CHI = this
+					country_has_primary_culture = cu:han
+					country_has_primary_culture = cu:yue
+					country_has_primary_culture = cu:min
+					country_has_primary_culture = cu:manchu
+					country_has_primary_culture = cu:hakka
 					civil_war_origin_country ?= c:CHI
 				}
-				has_technology_researched = pan-nationalism
+				has_technology_researched = egalitarianism
 				NOT = {
 					has_law = law_type:law_monarchy
 					has_variable = kmt_divided
@@ -439,7 +468,7 @@ ideology_moh_kmt = {
 				exists = c:CHI
 				is_subject_of = c:CHI
 				c:CHI = {
-					has_technology_researched = pan-nationalism
+					has_technology_researched = egalitarianism
 					NOT = {
 						has_law = law_type:law_monarchy
 						has_variable = kmt_divided
@@ -457,18 +486,12 @@ ideology_moh_kmt = {
 			}
 			add = 20
 		}
-		if = {
-			limit = {
-				is_in_government = no
-			}
-			add = 20
-		}
 		
 		if = {
 			limit = {
 				owner = { has_law = law_type:law_presidential_republic }
 			}
-			multiply = 5
+			multiply = 2
 		}
 		
 		if = {
@@ -489,9 +512,7 @@ ideology_moh_kmt = {
 						has_variable = chose_vanguardism
 						has_variable = chose_anarchism
 						has_variable = chose_communism
-						has_variable = chose_ethno_nationalism
 						has_variable = chose_conservatism
-						has_variable = chose_fascism
 					}
 				}
 			}

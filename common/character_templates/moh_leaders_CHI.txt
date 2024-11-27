@@ -31,7 +31,7 @@ ecchi_chi_li_hongzhang_character_template = {
         }
         earliest_usage_date = 1868.1.1
         latest_usage_date = 1901.11.7
-        chance = 65
+        chance = 80
     }
     on_created = {
         set_variable = self_strengthening_character

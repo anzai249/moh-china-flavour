@@ -176,6 +176,9 @@ historical_agitators.21 = {
 	trigger = {
 		always = no
 	}
+	option = {
+		default_option = yes
+	}
 }
 
 # Start event for opium importer

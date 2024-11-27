@@ -143,10 +143,7 @@ radical_party = {
 							country_has_primary_culture = cu:yi
 							country_has_primary_culture = cu:yue
 						}
-						has_global_variable = china_shatters
-						NOT = { 
-							has_law = law_type:law_monarchy
-						}
+						has_law = law_type:law_monarchy
 					}
 				}
 			}
@@ -163,7 +160,6 @@ radical_party = {
 							country_has_primary_culture = cu:yi
 							country_has_primary_culture = cu:yue
 						}
-						year >= 1912
 						NOT = { 
 							has_law = law_type:law_monarchy
 						}
@@ -394,6 +390,7 @@ radical_party = {
 					OR = {
 						has_ideology = ideology:ideology_moh_revolutionary
 						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_moh_kmt
 					}
 				}
 			}
@@ -408,6 +405,7 @@ radical_party = {
 					OR = {
 						has_ideology = ideology:ideology_moh_revolutionary
 						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_moh_kmt
 					}
 				}
 				is_powerful = no
@@ -440,6 +438,7 @@ radical_party = {
 							OR = {
 								has_ideology = ideology:ideology_moh_revolutionary
 								has_ideology = ideology:ideology_radical
+								has_ideology = ideology:ideology_moh_kmt
 							}
 						}
 					}
@@ -509,6 +508,7 @@ radical_party = {
 							has_ideology = ideology:ideology_republican_leader
 							has_ideology = ideology:ideology_radical
 							has_ideology = ideology:ideology_moh_revolutionary
+							has_ideology = ideology:ideology_moh_kmt
 						}
 					}
 				}
@@ -564,6 +564,7 @@ radical_party = {
 							has_ideology = ideology:ideology_social_democrat
 							has_ideology = ideology:ideology_humanitarian
 							has_ideology = ideology:ideology_moh_revolutionary
+							has_ideology = ideology:ideology_moh_kmt
 						}
 					}
 				}
@@ -673,6 +674,7 @@ radical_party = {
 						has_ideology = ideology:ideology_social_democrat
 						has_ideology = ideology:ideology_communist
 						has_ideology = ideology:ideology_moh_revolutionary
+						has_ideology = ideology:ideology_moh_kmt
 					}
 				}
 			}
