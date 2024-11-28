@@ -129,4 +129,7 @@ Changes:
 - States of Nian Rebellion are all incorporated.
 - Kuomintang Nationalists are now more likely to appear.
 - Self-Strengthening characters are now more likely to appear.
-- New flags.
+
+Fixes:
+
+- Self-Strengthening diplomacy complete trigger.

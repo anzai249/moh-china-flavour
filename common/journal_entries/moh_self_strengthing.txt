@@ -1,244 +1,249 @@
 ﻿je_self_strengthing = {
-	group = je_group_historical_content
-	icon = "gfx/interface/icons/invention_icons/manufacturies.dds"
-	modifiers_while_active = {
-		modifier_self_strengthing
-	}
-	immediate = {
-		set_variable = {
-			name = self_strengthening_progress
-			value = 0
-		}
-		set_variable = {
-			name = self_strengthening_gdp
-			value = gdp
-		}
-		set_variable = {
-			name = self_strengthening_lost_wars
-			value = 0
-		}
-		add_journal_entry = {
-			type = je_self_strengthing_military
-		}
-		add_journal_entry = {
-			type = je_self_strengthing_industry
-		}
-		add_journal_entry = {
-			type = je_self_strengthing_education
-		}
-		add_journal_entry = {
-			type = je_self_strengthing_diplomacy
-		}
-	}
-	current_value = {
-		value = var:self_strengthening_progress
-	}
-	goal_add_value = {
-		add = 4
-	}
-	progressbar = yes
-	complete = {
-		custom_tooltip = {
-			text = je_self_strengthing_main_complete_tt
-			var:self_strengthening_progress >= 3
-		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_self_strengthing_on_complete_tt
-			if = {
-				limit = {
-					has_journal_entry = je_earn_recognition
-				}
-				je:je_earn_recognition ?= {
-					add_progress = { value = 20 name = earn_recognition_progress_bar }
-				}
-			}
-		}
-		add_modifier = {
-			name = modifier_self_strengthing_success
-			years = 10
-			is_decaying = yes
-		}
-		set_variable = self_strengthening_end
-	}
-	fail = {
-		OR = {
-			NOT = {
-				owns_entire_state_region = STATE_FORMOSA
-				c:DAI = {
-					is_subject_of = c:CHI
-				}
-			}
-			custom_tooltip = {
-				text = je_self_strengthing_fail_tt
-				var:self_strengthening_lost_wars >= 2
-			}
-		}
-	}
-	on_fail = {
-		set_variable = self_strengthening_end
-	}
-	weight = 100
-	should_be_pinned_by_default = yes
-	timeout = 14600
-	on_timeout = {
-		set_variable = self_strengthening_end
-	}
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/invention_icons/manufacturies.dds"
+    modifiers_while_active = {
+        modifier_self_strengthing
+    }
+    immediate = {
+        set_variable = {
+            name = self_strengthening_progress
+            value = 0
+        }
+        set_variable = {
+            name = self_strengthening_gdp
+            value = gdp
+        }
+        set_variable = {
+            name = self_strengthening_lost_wars
+            value = 0
+        }
+        add_journal_entry = {
+            type = je_self_strengthing_military
+        }
+        add_journal_entry = {
+            type = je_self_strengthing_industry
+        }
+        add_journal_entry = {
+            type = je_self_strengthing_education
+        }
+        add_journal_entry = {
+            type = je_self_strengthing_diplomacy
+        }
+    }
+    current_value = {
+        value = var:self_strengthening_progress
+    }
+    goal_add_value = {
+        add = 4
+    }
+    progressbar = yes
+    complete = {
+        custom_tooltip = {
+            text = je_self_strengthing_main_complete_tt
+            var:self_strengthening_progress >= 3
+        }
+    }
+    on_complete = {
+        custom_tooltip = {
+            text = je_self_strengthing_on_complete_tt
+            if = {
+                limit = {
+                    has_journal_entry = je_earn_recognition
+                }
+                je:je_earn_recognition ?= {
+                    add_progress = { value = 20 name = earn_recognition_progress_bar }
+                }
+            }
+        }
+        add_modifier = {
+            name = modifier_self_strengthing_success
+            years = 10
+            is_decaying = yes
+        }
+        set_variable = self_strengthening_end
+    }
+    fail = {
+        OR = {
+            NOT = {
+                owns_entire_state_region = STATE_FORMOSA
+                c:DAI = {
+                    is_subject_of = c:CHI
+                }
+            }
+            custom_tooltip = {
+                text = je_self_strengthing_fail_tt
+                var:self_strengthening_lost_wars >= 2
+            }
+        }
+    }
+    on_fail = {
+        set_variable = self_strengthening_end
+    }
+    weight = 100
+    should_be_pinned_by_default = yes
+    timeout = 14600
+    on_timeout = {
+        set_variable = self_strengthening_end
+    }
 }
 
 je_self_strengthing_military = {
-	group = je_group_historical_content
-	icon = "gfx/interface/icons/invention_icons/battleship_tech.dds"
-	complete = {
-		custom_tooltip = {
-			text = je_self_strengthing.tt.complete.world
-			any_country = {
-				naval_power_projection > root.naval_power_projection
-				count < 3
-			}
-		}
-		custom_tooltip = {
-			text = je_self_strengthing.tt.complete.asia
-			any_country = {
-				naval_power_projection > root.naval_power_projection
-				count < 1
-				OR = {
-					country_is_in_india = yes
-					country_is_in_east_asia = yes
-					country_is_in_southeast_asia = yes
-					country_is_in_central_asia = yes
-					country_is_in_middle_east = yes
-				}
-			}
-		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_self_strengthing_complete_tt
-			change_variable = {
-				name = self_strengthening_progress
-				add = 1
-			}
-		}
-	}
-	fail = {
-		NOT = {
-			has_journal_entry = je_self_strengthing
-		}
-	}
-	on_yearly_pulse = {
-		random_events = {
-			10 = 0
-			2 = self_strengthening.3
-		}
-	}
-	weight = 100
-	should_be_pinned_by_default = yes
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/invention_icons/battleship_tech.dds"
+    complete = {
+        custom_tooltip = {
+            text = je_self_strengthing.tt.complete.world
+            any_country = {
+                naval_power_projection > root.naval_power_projection
+                count < 3
+            }
+        }
+        custom_tooltip = {
+            text = je_self_strengthing.tt.complete.asia
+            any_country = {
+                naval_power_projection > root.naval_power_projection
+                count < 1
+                OR = {
+                    country_is_in_india = yes
+                    country_is_in_east_asia = yes
+                    country_is_in_southeast_asia = yes
+                    country_is_in_central_asia = yes
+                    country_is_in_middle_east = yes
+                }
+            }
+        }
+    }
+    on_complete = {
+        custom_tooltip = {
+            text = je_self_strengthing_complete_tt
+            change_variable = {
+                name = self_strengthening_progress
+                add = 1
+            }
+        }
+    }
+    fail = {
+        NOT = {
+            has_journal_entry = je_self_strengthing
+        }
+    }
+    on_yearly_pulse = {
+        random_events = {
+            10 = 0
+            2 = self_strengthening.3
+        }
+    }
+    weight = 100
+    should_be_pinned_by_default = yes
 }
 
 je_self_strengthing_industry = {
-	group = je_group_historical_content
-	icon = "gfx/interface/icons/invention_icons/railways.dds"
-	complete = {
-		NOT = {
-			any_scope_state = {
-				percent < 0.4
-				has_building = building_railway
-			}
-		}
-		scope:journal_entry = {
-			is_goal_complete = yes
-		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_self_strengthing_complete_tt
-			change_variable = {
-				name = self_strengthening_progress
-				add = 1
-			}
-		}
-	}
-	fail = {
-		NOT = {
-			has_journal_entry = je_self_strengthing
-		}
-	}
-	current_value = {
-		value = gdp
-	}
-	goal_add_value = {
-		add = {
-			value = var:self_strengthening_gdp
-			multiply = 0.25
-		}
-	}
-	on_yearly_pulse = {
-		random_events = {
-			10 = 0
-			2 = self_strengthening.2
-		}
-	}
-	progressbar = yes
-	weight = 100
-	should_be_pinned_by_default = yes
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/invention_icons/railways.dds"
+    complete = {
+        NOT = {
+            any_scope_state = {
+                percent < 0.4
+                has_building = building_railway
+            }
+        }
+        scope:journal_entry = {
+            is_goal_complete = yes
+        }
+    }
+    on_complete = {
+        custom_tooltip = {
+            text = je_self_strengthing_complete_tt
+            change_variable = {
+                name = self_strengthening_progress
+                add = 1
+            }
+        }
+    }
+    fail = {
+        NOT = {
+            has_journal_entry = je_self_strengthing
+        }
+    }
+    current_value = {
+        value = gdp
+    }
+    goal_add_value = {
+        add = {
+            value = var:self_strengthening_gdp
+            multiply = 0.25
+        }
+    }
+    on_yearly_pulse = {
+        random_events = {
+            10 = 0
+            2 = self_strengthening.2
+        }
+    }
+    progressbar = yes
+    weight = 100
+    should_be_pinned_by_default = yes
 }
 
 je_self_strengthing_education = {
-	group = je_group_historical_content
-	icon = "gfx/interface/icons/invention_icons/academia.dds"
-	complete = {
-		custom_tooltip = {
-			text = je_self_strengthing_education_tt_complete
-			has_variable = academia_je_done
-		}
-		NOT = {
-			has_law = law_type:law_closed_borders
-		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_self_strengthing_complete_tt
-			change_variable = {
-				name = self_strengthening_progress
-				add = 1
-			}
-		}
-	}
-	fail = {
-		NOT = {
-			has_journal_entry = je_self_strengthing
-		}
-	}
-	weight = 100
-	should_be_pinned_by_default = yes
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/invention_icons/academia.dds"
+    complete = {
+        custom_tooltip = {
+            text = je_self_strengthing_education_tt_complete
+            has_variable = academia_je_done
+        }
+        NOT = {
+            has_law = law_type:law_closed_borders
+        }
+    }
+    on_complete = {
+        custom_tooltip = {
+            text = je_self_strengthing_complete_tt
+            change_variable = {
+                name = self_strengthening_progress
+                add = 1
+            }
+        }
+    }
+    fail = {
+        NOT = {
+            has_journal_entry = je_self_strengthing
+        }
+    }
+    weight = 100
+    should_be_pinned_by_default = yes
 }
 
 je_self_strengthing_diplomacy = {
-	group = je_group_historical_content
-	icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
-	complete = {
-		any_country = {
-			percent > 0.5
-			country_rank >= rank_value:great_power
-			relations:root >= relations_threshold:cordial
-		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_self_strengthing_complete_tt
-			change_variable = {
-				name = self_strengthening_progress
-				add = 1
-			}
-		}
-	}
-	fail = {
-		NOT = {
-			has_journal_entry = je_self_strengthing
-		}
-	}
-	weight = 100
-	should_be_pinned_by_default = yes
+    group = je_group_historical_content
+    icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
+    complete = {
+        any_country = {
+            filter = {
+                country_rank >= rank_value:great_power
+                NOT = {
+                    this = root
+                }
+            }
+            percent >= 0.5
+            relations:root >= relations_threshold:cordial
+        }
+    }
+    on_complete = {
+        custom_tooltip = {
+            text = je_self_strengthing_complete_tt
+            change_variable = {
+                name = self_strengthening_progress
+                add = 1
+            }
+        }
+    }
+    fail = {
+        NOT = {
+            has_journal_entry = je_self_strengthing
+        }
+    }
+    weight = 100
+    should_be_pinned_by_default = yes
 }
