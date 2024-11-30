@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+  china_communism.1.t: "共产主义者起义"
+  from_ccp_land_revolution_ig: "土地革命"
+  china_communism.2.t: "中山舰事件"
+  china_communism.2.d: "[SCOPE.sState('canton_scope').GetCityHubName]发生一起政治风波，局势紧张"
+  china_communism.2.f: "部分[GetIdeology('ideology_moh_kmt').GetName]认为[ROOT.GetCountry.GetName]有被共产主义赤化风险。为应对可能的叛乱，高层决定对广州实施戒严，并派遣忠诚部队控制海军舰只，逮捕涉嫌密谋的军官，并包围与外部势力相关的党派组织。\n\n此举迅速控制了局势，但也加深了党内的分裂，暴露了政府在容共政策上的矛盾。尽管表面上事件平息，但仍暗流涌动。"
+  china_communism.2.a: "清除共产主义者"
+  china_communism.2.b: "继续与他们合作"
+  china_communism.2.a_tt: "此举将会造成[GetIdeology('ideology_moh_kmt').GetName]内部分裂，共产党人士可能会转向暴力手段……"
+  china_communism.2.b_tt: "国家将来可能有被赤化的风险……"
