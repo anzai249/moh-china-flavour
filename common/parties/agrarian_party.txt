@@ -163,6 +163,9 @@ agrarian_party = {
 		always = yes
 	}
 	available_for_interest_group = {
+		NOT = {
+			has_variable = ccp_land_revolution_ig
+		}
 		owner = {
 			country_has_voting_franchise = yes
 			ig:ig_rural_folk = {

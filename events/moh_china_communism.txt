@@ -1,0 +1,403 @@
+﻿namespace = china_communism
+
+china_communism.1 = {
+	type = country_event
+	placement = root
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	title = china_communism.1.t
+	desc = china_communism.1.d
+	flavor = china_communism.1.f
+
+	duration = 3
+
+    dlc = dlc0moh
+
+	trigger = {
+		#Triggered by JE
+	}
+
+	cooldown = { months = very_long_modifier_time }
+
+	immediate = {
+		set_global_variable = ccp_rise_up_happened
+		set_variable = ccp_rise_up_happened_china
+		create_country = {
+			tag = CCP
+			origin = this
+			province = p:x8143A9
+			on_created = {
+                set_variable = ccp_land_revolution
+                every_interest_group = {
+                    owner = c:CCP
+                    set_variable = ccp_land_revolution_ig
+                }
+				s:STATE_JIANGXI = {
+					set_owner_of_provinces = {
+						country = c:CCP
+						provinces = { 
+                            xCB4590 xDE8D7F x7830B6
+                            xEA426A x66C698 xCA0553 xD0D000 
+                        }
+					}
+				}
+                c:CCP = {
+				    s:STATE_JIANGXI = {
+                        random_scope_state = {
+                            set_state_name = STATE_JIANGXI_soviet
+                        }
+                    }
+                    # if = {
+                    #     limit = { exists = py:communist_party }
+                    #     py:communist_party = {
+                    #         set_ruling_party = yes
+                    #         add_momentum = momentum_medium
+                    #     }				
+                    # }	
+                }
+				change_relations = {
+					country = c:CHI
+					value = -50
+				}
+				set_immune_to_revolutions = yes
+				set_ruling_interest_groups = { ig_trade_unions ig_rural_folk }
+                if = {
+                    limit = {
+                        ROOT = {
+                            any_scope_character = {
+                                has_template = ecchi_chi_mao_zedong_character_template
+                            }
+                        }
+                    }
+                    ROOT = {
+                        random_scope_character = {
+                            limit = {
+                                has_template = ecchi_chi_mao_zedong_character_template
+                            }
+                            transfer_character = c:CCP
+                            set_character_as_ruler = yes
+                        }
+                    }
+                }
+				create_character = {
+                    template = ecchi_chi_mao_zedong_character_template
+                    interest_group = ig_rural_folk
+                    ruler = yes
+                    ig_leader = yes
+                }
+				create_character = {
+                    template = ecchi_chi_zhu_de_character_template
+                    interest_group = ig_armed_forces
+                    age = 30
+                    ig_leader = yes
+                }
+				create_character = {
+                    first_name = moh_Wentian
+                    last_name = Zhang
+                    historical = yes
+                    interest_group = ig_trade_unions
+                    ideology = ideology_communist
+                    ig_leader = yes
+                }
+				create_character = {
+                    first_name = moh_Gu
+                    last_name = moh_Bo
+                    historical = yes
+                    interest_group = ig_intelligentsia
+                    ig_leader = yes
+                }
+                ig:ig_armed_forces = {
+                    set_interest_group_name = ig_red_army
+                    remove_ideology= ideology_loyalist
+                    add_ideology = ideology_proletarian
+                }
+                ig:ig_rural_folk= {
+                    remove_ideology= ideology_agrarian
+                    add_ideology = ideology_proletarian
+                }
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_council_republic
+						}
+					}
+					activate_law = law_type:law_council_republic
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_elected_bureaucrats
+						}
+					}
+					activate_law = law_type:law_elected_bureaucrats
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_universal_suffrage
+						}
+					}
+                    # law_single_party_state
+					activate_law = law_type:law_universal_suffrage
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_women_in_the_workplace
+						}
+					}
+					activate_law = law_type:law_women_in_the_workplace
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_collectivized_agriculture
+						}
+					}
+					activate_law = law_type:law_collectivized_agriculture
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_state_atheism
+						}
+					}
+					activate_law = law_type:law_state_atheism
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_national_militia
+						}
+					}
+					activate_law = law_type:law_national_militia
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_compulsory_primary_school
+						}
+					}
+					activate_law = law_type:law_compulsory_primary_school
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_public_schools
+						}
+					}
+					activate_law = law_type:law_public_schools
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_interventionism
+						}
+					}
+					activate_law = law_type:law_interventionism
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_regulatory_bodies
+						}
+					}
+					activate_law = law_type:law_regulatory_bodies
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_secret_police
+						}
+					}
+					activate_law = law_type:law_secret_police
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_outlawed_dissent
+						}
+					}
+					activate_law = law_type:law_outlawed_dissent
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_law = law_type:law_closed_borders
+						}
+					}
+					activate_law = law_type:law_closed_borders
+				}
+				add_modifier = {
+					name = modifier_paris_commune_politics
+					months = normal_modifier_time
+					is_decaying = yes
+				}
+				add_modifier = {
+					name = modifier_paris_commune_not_dying_economy
+					months = normal_modifier_time
+				}
+			}
+		}
+		c:CCP = {
+			save_scope_as = communist_china_scope
+			ig:ig_trade_unions = {
+				save_scope_as = communist_party_scope
+			}
+			create_bidirectional_truce = {
+				country = c:CHI
+				months = 24
+			}
+		}
+		# set_variable = { name = PRC_recognition_level value = 0 }
+		random_state = {
+			limit = {
+				owner = {
+					this = c:CCP
+				}
+			}
+			save_scope_as = paris_scope
+		}
+		# ruler = {
+		# 	save_scope_as = ruler_scope
+		# }
+		ROOT = {
+			save_scope_as = china_scope
+		}
+	}
+
+	option = {
+		name = paris_commune.1.a
+		default_option = yes
+		add_journal_entry = {
+			type = je_the_paris_commune_france
+		}
+		c:CCP = {
+			hidden_effect = {
+				# add_journal_entry = {
+				# 	type = je_the_paris_commune_communards
+				# }
+				add_loyalists = {
+					value = 0.9
+				}
+				c:CHI = {
+					add_treasury = -100000
+				}
+				add_treasury = 100000	
+			}
+		}
+		custom_tooltip = commune_progress_start_at_40
+		set_variable = paris_commune_fra_perspective
+	}
+	option = {
+		name = paris_commune.1.b
+		add_journal_entry = {
+			type = je_the_paris_commune_france
+		}
+		c:CCP = {
+			hidden_effect = {
+				# add_journal_entry = {
+				# 	type = je_the_paris_commune_communards
+				# }
+				add_loyalists = {
+					value = 0.9
+				}
+				c:CHI = {
+					add_treasury = -100000
+				}
+				add_treasury = 100000	
+			}
+		}
+		custom_tooltip = commune_progress_start_at_60
+		set_variable = paris_commune_prc_perspective
+	}
+}
+
+china_communism.2 = {
+	type = country_event
+	placement = scope:canton_scope
+	event_image = {
+		video = "unspecific_steam_ship"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+	title = china_communism.2.t
+	desc = china_communism.2.d
+	flavor = china_communism.2.f
+
+	duration = 3
+
+	dlc = dlc0moh
+
+	trigger = {
+		c:CHI ?= this
+		has_technology_researched = socialism
+		any_scope_character = {
+			has_ideology = ideology:ideology_moh_kmt
+		}
+		NOT = {
+			any_scope_character = {
+				has_template = chi_moh_sun_yat_sen_character_template
+			}
+		}
+		OR = {
+			any_scope_character = {
+				has_ideology = ideology:ideology_communist
+			}
+			any_scope_character = {
+				has_ideology = ideology:ideology_vanguardist
+			}
+		}
+		NOT = {
+			has_variable = canton_coup_happened
+		}
+	}
+
+	immediate = {
+		set_variable = canton_coup_happened
+		s:STATE_GUANGDONG = {
+			random_scope_state = {
+				save_scope_as = canton_scope
+			}
+		}
+	}
+
+	option = {
+		name = china_communism.2.a
+		default_option = yes
+		custom_tooltip = {
+			text = china_communism.2.a_tt
+			set_variable = canton_coup_anti_communist
+		}
+		divide_kmt = yes
+		c:CHI = {
+			add_loyalists = {
+				value = -0.2
+				pop_type = laborers
+			}
+		}
+	}
+
+	option = {
+		name = china_communism.2.b
+		custom_tooltip = {
+			text = china_communism.2.b_tt
+			set_variable = canton_coup_support_communist
+		}
+		c:CHI = {
+			add_radicals = {
+				value = -0.2
+				pop_type = laborers
+			}
+		}
+	}
+}

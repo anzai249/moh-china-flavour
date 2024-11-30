@@ -696,3 +696,26 @@ TIB_republic = {
 		instance = { scale = { 0.2 0.2 } position = { 0.5 0.8 } }			
 	}
 }
+
+HKG = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_hongkong.dds"
+		color1 = "white"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+
+MAC = {
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	colored_emblem = {
+		texture = "ce_macau.dds"
+		color1 = "white"
+		color2 = "yellow"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}

@@ -269,7 +269,7 @@
 							country_has_primary_culture = cu:yue
 						}
 						any_interest_group = {
-							is_powerful = yes
+							# is_powerful = yes
 							leader = {
 								has_ideology = ideology:ideology_vanguardist
 							}

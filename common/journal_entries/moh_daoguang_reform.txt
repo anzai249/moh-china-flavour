@@ -169,6 +169,14 @@ je_daoguang_reform_opium = {
 				add = 1
 			}
 		}
+		hidden_effect = {
+			random_scope_character = {
+				limit = {
+					has_variable = is_linzexu
+				}
+				set_character_immortal = no
+			}
+		}
 	}
 	fail = {
 		OR = {
@@ -191,11 +199,13 @@ je_daoguang_reform_opium = {
 		}
 	}
 	on_fail = {
-		random_scope_character = {
-			limit = {
-				has_variable = is_linzexu
+		hidden_effect = {
+			random_scope_character = {
+				limit = {
+					has_variable = is_linzexu
+				}
+				set_character_immortal = no
 			}
-			set_character_immortal = no
 		}
 	}
 	on_yearly_pulse = {

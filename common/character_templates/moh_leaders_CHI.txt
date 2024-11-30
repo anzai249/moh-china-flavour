@@ -604,7 +604,7 @@ ecchi_chi_chiang_kai_shek_character_template = {
     culture = cu:han
     female = no
     religion = rel:protestant
-    ideology = ideology_jingoist_leader
+    ideology = ideology_moh_kmt
     interest_group = ig_armed_forces
     dna = ecchi_dna_chiang_kai_shek
     birth_date = 1887.10.31
@@ -616,14 +616,19 @@ ecchi_chi_chiang_kai_shek_character_template = {
         }
         interest_group_trigger = {
             is_marginal = no
-            OR = {
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_armed_forces
-            }
+            is_interest_group_type = ig_armed_forces
         }
         earliest_usage_date = 1924.1.1
         latest_usage_date = 1975.4.5
         chance = 65
+    }
+    on_created = {
+        if = {
+            limit = {
+                has_variable = canton_coup_anti_communist
+            }
+            set_ideology = ideology:ideology_moh_right_kmt
+        }
     }
 }
 
@@ -1045,12 +1050,12 @@ ecchi_chi_mao_zedong_character_template = {
     last_name = Mao
     historical = yes
     culture = cu:han
-    female = no
     ideology = ideology_vanguardist
-    interest_group = ig_rural_folk
+    interest_group = ig_trade_unions
     dna = ecchi_dna_mao_zedong
-    birth_date = 1893.12.26
-    traits = { cruel experienced_political_operator wrathful direct mountain_combat_expert experienced_offensive_planner }
+    # birth_date = 1893.12.26
+    birth_date = 1800.12.26
+    traits = { cruel experienced_political_operator mountain_commander }
     interest_group_leader_usage = {
         country_trigger = {
             OR = {
@@ -1066,11 +1071,7 @@ ecchi_chi_mao_zedong_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
-            OR = {
-                is_interest_group_type = ig_rural_folk
-                is_interest_group_type = ig_trade_unions
-            }
+            is_interest_group_type = ig_trade_unions
         }
         earliest_usage_date = 1925.1.1
         latest_usage_date = 1976.9.9
@@ -1166,7 +1167,7 @@ ecchi_chi_zhu_de_character_template = {
     interest_group = ig_armed_forces
     dna = ecchi_dna_zhu_de
     birth_date = 1886.12.1
-    traits = { opium_addiction defense_in_depth_specialist experienced_offensive_planner }
+    traits = { defense_in_depth_specialist experienced_offensive_planner }
     commander_rank = default
     commander_usage = {
         country_trigger = {
@@ -1348,7 +1349,7 @@ ecchi_chi_wang_jingwei_character_template = {
     historical = yes
     culture = cu:han
     female = no
-    ideology = ideology_moderate
+    ideology = ideology_moh_kmt
     interest_group = ig_petty_bourgeoisie
     dna = ecchi_dna_wang_jingwei
     birth_date = 1883.5.4
@@ -1377,9 +1378,17 @@ ecchi_chi_wang_jingwei_character_template = {
                 is_interest_group_type = ig_intelligentsia
             }
         }
-        earliest_usage_date = 1925.1.1
+        earliest_usage_date = 1920.1.1
         latest_usage_date = 1944.11.10
         chance = 65
+    }
+    on_created = {
+        if = {
+            limit = {
+                has_variable = canton_coup_anti_communist
+            }
+            set_ideology = ideology:ideology_moh_left_kmt
+        }
     }
 }
 
@@ -2069,7 +2078,7 @@ chi_lexing_zhang_character_template = {
     first_name = Lexing
     last_name = Zhang
     historical = yes
-    birth_date = 34
+    age = 34
     culture = cu:han
     ruler = yes
     interest_group = ig_rural_folk
@@ -2209,5 +2218,42 @@ chi_liu_changyou_character_template = {
         earliest_usage_date = 1840.1.1
         latest_usage_date = 1887.1.1
         chance = 70
+    }
+}
+
+# Soong Ching-ling
+
+chi_soong_chingling_character_template = {
+    first_name = moh_Chingling
+    last_name = moh_Soong
+    historical = yes
+    culture = cu:han
+    female = yes
+    religion = rel:protestant
+    ideology = ideology_moh_kmt
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1893.1.27
+    traits = { charismatic honorable expert_political_operator }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_NANJING
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+        }
+        earliest_usage_date = 1915.1.1
+        latest_usage_date = 1981.5.29
+        chance = 75
+    }
+    on_created = {
+        if = {
+            limit = {
+                has_variable = canton_coup_anti_communist
+            }
+            set_ideology = ideology:ideology_moh_left_kmt
+        }
     }
 }

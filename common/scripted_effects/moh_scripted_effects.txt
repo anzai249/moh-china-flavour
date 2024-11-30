@@ -243,3 +243,58 @@ moh_random_opera_name = {
 		}
 	}
 }
+
+divide_kmt = {
+	if = {
+		limit = {
+			any_character = {
+				has_template = ecchi_chi_chiang_kai_shek_character_template
+			}
+		}
+		random_character = {
+			limit = {
+				has_template = ecchi_chi_chiang_kai_shek_character_template
+			}
+			set_ideology = ideology:ideology_moh_right_kmt
+		}
+	}
+	if = {
+		limit = {
+			any_character = {
+				has_template = ecchi_chi_wang_jingwei_character_template
+			}
+		}
+		random_character = {
+			limit = {
+				has_template = ecchi_chi_wang_jingwei_character_template
+			}
+			set_ideology = ideology:ideology_moh_left_kmt
+		}
+	}
+	if = {
+		limit = {
+			any_character = {
+				has_template = chi_soong_chingling_character_template
+			}
+		}
+		random_character = {
+			limit = {
+				has_template = chi_soong_chingling_character_template
+			}
+			set_ideology = ideology:ideology_moh_left_kmt
+		}
+	}
+	every_character = {
+		limit = {
+			has_ideology = ideology:ideology_moh_kmt
+		}
+		random_list = {
+			1 = {
+				set_ideology = ideology:ideology_moh_left_kmt
+			}
+			1 = {
+				set_ideology = ideology:ideology_moh_right_kmt
+			}
+		}
+	}
+}

@@ -400,3 +400,39 @@ MGL = {
 		}
 	}
 }
+
+CCP = {
+	flag_definition = {
+		coa = CHI_zhongsu
+		priority = 1
+		subject_canton = CHI_zhongsu
+	}
+	flag_definition = {
+		coa = CHI_communist
+		priority = 2
+		subject_canton = sub_CHI_communist
+		trigger = { 
+			scope:actor ?= { 
+				has_variable = prc
+			}
+		}
+	}
+}
+
+HKG = {
+	flag_definition = {
+		coa = HKG
+		subject_canton = HKG
+		# allow_overlord_canton = yes
+		priority = 1
+	}
+}
+
+MAC = {
+	flag_definition = {
+		coa = MAC
+		subject_canton = MAC
+		# allow_overlord_canton = yes
+		priority = 1
+	}
+}

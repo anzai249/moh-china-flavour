@@ -77,6 +77,8 @@
   moh_Jin_1: "瑾"
   moh_Wenxiu: "文秀"
   moh_Shenglin: "圣鳞"
+  moh_Chingling: "庆龄"
+  moh_Soong: "宋"
 
   moh_Zaifeng: "载沣"
   moh_Zaiyi: "载漪"
@@ -106,3 +108,7 @@
   moh_Shichang: "世昌"
   moh_Biguang: "壁光"
   moh_Changyou: "长佑"
+
+  # Communists
+  moh_Bo: "博"
+  moh_Gu: "古"

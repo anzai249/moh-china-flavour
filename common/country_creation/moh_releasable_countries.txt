@@ -5,3 +5,15 @@
 
 	ai_will_do = { always = no }
 }
+
+HKG = {
+	provinces = { xB03161 }
+
+	ai_will_do = { always = no }
+}
+
+MAC = {
+	provinces = { xB031E0 }
+
+	ai_will_do = { always = no }
+}
