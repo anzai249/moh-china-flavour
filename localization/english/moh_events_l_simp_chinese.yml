@@ -337,3 +337,8 @@
   self_strengthening.2.b: "这笔钱可以拿来修园子"
   self_strengthening.3.f: "[SCOPE.sCharacter('donate_character_scope').GetFirstName]自掏腰包慷慨解囊，捐赠了大量资金用于国家的洋务事业。\n\n[SCOPE.sCharacter('donate_character_scope').GetFirstName]打算支持水师的建设，我们也可与选择拿这笔钱做更有意义的事。"
   Beiyang_Fleet: "北洋水师"
+  moh_historical.301.t: "[SCOPE.sCharacter('gongzizhen_scope').GetCustom('GetUniversalFullName')]辞官"
+  moh_historical.301.d: "“浩荡离愁白日斜，吟鞭东指即天涯。”"
+  moh_historical.301.f: "我们忠诚的官员[SCOPE.sCharacter('gongzizhen_scope').GetCustom('GetUniversalFullName')]辞去了官职，他表示自己无法继续忍受朝廷的腐败，决定离开官场。\n\n[SCOPE.sCharacter('gongzizhen_scope').GetFirstName]辞官前鞠躬尽瘁，他在文学和儒学方面造诣颇深，他的辞职是我们的一大损失。"
+  moh_historical.301.a: "[ROOT.GetCountry.GetName]的一大损失"
+  moh_historical.301.a_tt: "[SCOPE.sCharacter('gongzizhen_scope').GetCustom('GetUniversalFullName')]辞职。"
