@@ -68,6 +68,9 @@
  moh_Jin_1: "Jin"
  moh_Wenxiu: "Wenxiu"
  moh_Shenglin: "Shenglin"
+ moh_Chingling: "Ching-ling"
+ moh_Soong: "Soong"
+
  moh_Zaifeng: "Zaifeng"
  moh_Zaiyi: "Zaiyi"
  moh_Jiaoren: "Jiaoren"
@@ -93,3 +96,7 @@
  moh_Shu_1: "Shu"
  moh_Zongyu: "Zongyu"
  moh_Changyou: "Changyou"
+
+  # Communists
+ moh_Bo: "Bo"
+ moh_Gu: "Gu"

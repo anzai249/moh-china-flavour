@@ -360,6 +360,7 @@ china_communism.2 = {
 		NOT = {
 			has_variable = canton_coup_happened
 		}
+		always = no
 	}
 
 	immediate = {

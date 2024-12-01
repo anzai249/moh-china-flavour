@@ -60,10 +60,10 @@ je_xinhai = {
 		# 	text = je_xinhai_fail_tt
 		# 	var:xinhai_progress >= 100
 		# }
-		OR = {
-			has_revolution_over_law_type = law_type:law_presidential_republic
-			has_revolution_over_law_type = law_type:law_parliamentary_republic
-		}
+		# OR = {
+		# 	has_revolution_over_law_type = law_type:law_presidential_republic
+		# 	has_revolution_over_law_type = law_type:law_parliamentary_republic
+		# }
 		OR = {
 			has_civil_war_from_movement_type = movement_type:movement_liberal
 			has_civil_war_from_movement_type = movement_type:movement_radical

@@ -133,3 +133,15 @@ Changes:
 Fixes:
 
 - Self-Strengthening diplomacy complete trigger.
+
+beta-0.7.2
+
+Changes:
+
+- New Character: Soong Ching-ling.
+- New political movement: Wuxu Reform movement.
+- MoH ideologies can take parts in political movements.
+
+Fixes:
+
+- Revolutionaries je fail trigger.
