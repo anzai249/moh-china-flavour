@@ -1,6 +1,10 @@
 ﻿je_panthay_rebellion = {
 	icon = "gfx/interface/icons/religion_icons/sunni.dds"
 	group = je_group_historical_content
+	is_shown_when_inactive = {
+		exists = c:CHI
+		c:CHI = root
+	}
 	possible = {
 		has_variable = yunnan_rebellion
 	}

@@ -183,3 +183,4 @@
   je_self_strengthing_diplomacy: "洋务运动：外交"
   je_self_strengthing_diplomacy_reason: "洋务派大臣认为，[ROOT.GetCountry.GetName]应该与西方国家建立良好的外交关系，以便学习他们的先进技术。"
   je_self_strengthing_on_complete_tt: "#bold 赢得认可#![concept_journal_entry]进度条增加#variable 20#!"
+  je_xinhai_possible_tt: "维新变法失败或拒绝公车上书"

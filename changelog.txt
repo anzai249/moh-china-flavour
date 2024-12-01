@@ -145,3 +145,16 @@ Changes:
 Fixes:
 
 - Revolutionaries je fail trigger.
+
+beta-0.7.3
+
+Changes:
+
+- New Character: Deng Tingzhen.
+- Resignation of Gong Zizhen event.
+- More Journal Entries shown when inactive.
+
+Fixes:
+
+- Death of Lin Zexu.
+- Emperor Tongzhi will no longer be created over and over again.

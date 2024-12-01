@@ -326,3 +326,8 @@
   self_strengthening.2.b: "This money can be used to repair the garden."
   self_strengthening.3.f: "[SCOPE.sCharacter('donate_character_scope').GetFirstName] generously donated a large sum of money from their own pocket to support the country's modernization efforts.\n\n[SCOPE.sCharacter('donate_character_scope').GetFirstName] intends to support the construction of the navy, but we may also choose to use this money for more meaningful projects."
   Beiyang_Fleet: "Beiyang Fleet"
+  moh_historical.301.t: "[SCOPE.sCharacter('gongzizhen_scope').GetCustom('GetUniversalFullName')] Resigns"
+  moh_historical.301.d: "#lore The sun is slanting, and the whip is pointing to the east, which is the end of the world.#!"
+  moh_historical.301.f: "Our loyal official [SCOPE.sCharacter('gongzizhen_scope').GetCustom('GetUniversalFullName')] resigned from his official position, stating that he couldn't continue to put up with the corruption of the imperial court and decided to leave it. \n\n[SCOPE.sCharacter('gongzizhen_scope').GetFirstName] bowed out before resigning from his official position, he was highly accomplished in literature and Confucianism."
+  moh_historical.301.a: "A big loss for [ROOT.GetCountry.GetName]."
+  moh_historical.301.a_tt: "[SCOPE.sCharacter('gongzizhen_scope').GetCustom('GetUniversalFullName')] Resigns."

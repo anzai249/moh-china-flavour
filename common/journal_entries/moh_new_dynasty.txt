@@ -10,7 +10,6 @@
 		exists = c:CHI
 		c:CHI = root
 		has_law = law_type:law_monarchy
-		is_revolutionary = yes
 	}
 	possible = {
 		exists = c:CHI

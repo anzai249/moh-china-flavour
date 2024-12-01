@@ -69,8 +69,8 @@ qing_monarchy.2 = {
 			has_template = chi_xianfeng_template
 		}
 		game_date >= 1856.4.27
-		any_scope_character = {
-			NOT = {
+		NOT = {
+			any_scope_character = {
 				has_template = chi_tongzhi_template
 			}
 		}

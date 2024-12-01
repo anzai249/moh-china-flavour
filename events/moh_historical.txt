@@ -1274,3 +1274,61 @@ moh_historical.202 = {
 		}
 	}
 }
+
+# bureaucrats
+
+moh_historical.301 = { # Gong Zizhen retires
+	type = country_event
+	placement = root
+	title = moh_historical.301.t
+	desc = moh_historical.301.d
+	flavor = moh_historical.301.f
+	dlc = dlc0moh
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:gongzizhen_scope
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/qing_hat.dds"
+	duration = 3
+	trigger = {
+		any_scope_character = {
+			has_variable = is_gongzizhen
+		}
+		year >= 1839
+	}
+	immediate = {
+		random_scope_character = {
+			limit = {
+				has_variable = is_gongzizhen
+			}
+			save_scope_as = gongzizhen_scope
+		}
+	}
+	option = {
+		name = moh_historical.301.a
+		default_option = yes
+		custom_tooltip = {
+			text = moh_historical.301.a_tt
+			scope:gongzizhen_scope = {
+				kill_character = {
+					hidden = yes
+				}
+			}
+			create_character = {
+				first_name = moh_Tingzhen
+				last_name = Deng
+				historical = yes
+				culture = cu:han
+				birth_date = 1776.1.1
+				ig_leader = yes
+				interest_group = ig_trade_unions
+				ideology = ideology_moderate
+				traits = {
+					expensive_tastes
+				}
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+}

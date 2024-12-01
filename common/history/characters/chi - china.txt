@@ -59,6 +59,9 @@
 				reckless
 				pious
 			}
+			on_created = {
+				set_variable = is_gongzizhen
+			}
 		}
 
 		create_character = {

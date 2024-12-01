@@ -182,3 +182,4 @@
   je_self_strengthing_diplomacy: "Self-Strengthening Movement: Diplomacy"
   je_self_strengthing_diplomacy_reason: "The Self-Strengthening ministers believe that [ROOT.GetCountry.GetName] should establish good diplomatic relations with Western countries to learn their advanced technologies."
   je_self_strengthing_on_complete_tt: "#bold Earning Recognition#! [concept_journal_entry] progress increases by #variable 20#!"
+  je_xinhai_possible_tt: "Fail or reject the Wuxu Reform."

@@ -19,6 +19,23 @@ on_yearly_pulse_country = {
 		qing_monarchy_yearly_events
 		moh_random_yearly_events
 	}
+	effect = {
+		if = {
+			limit = {
+				year >= 1842
+				any_scope_character = {
+					has_variable = is_linzexu
+					is_immortal = yes
+				}
+			}
+			random_scope_character = {
+				limit = {
+					has_variable = is_linzexu
+				}
+				set_character_immortal = no
+			}
+		}
+	}
 }
 
 on_half_yearly_pulse_country = {
