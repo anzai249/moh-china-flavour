@@ -18,7 +18,11 @@ on_yearly_pulse_country = {
 		# historical_agitators_yearly_events_moh
 		qing_monarchy_yearly_events
 		moh_random_yearly_events
+		moh_linzexu
 	}
+}
+
+moh_linzexu = {
 	effect = {
 		if = {
 			limit = {
@@ -39,6 +43,12 @@ on_yearly_pulse_country = {
 }
 
 on_half_yearly_pulse_country = {
+	on_actions = {
+		moh_sunyatsen_je
+	}
+}
+
+moh_sunyatsen_je = {
 	effect = {
 		if = {
 			limit = {
@@ -126,6 +136,12 @@ on_half_yearly_pulse_country = {
 }
 
 on_heir_born = {
+	on_actions = {
+		moh_qing_monarchy_yearly_events
+	}
+}
+
+moh_qing_monarchy_yearly_events = {
 	effect = {
 		if = {
 			limit = {
@@ -215,6 +231,12 @@ moh_on_revolution_start = {
 }
 
 on_wargoal_enforced = {
+	on_actions = {
+		moh_self_strengthing_war
+	}
+}
+
+moh_self_strengthing_war = {
 	effect = {
 		if = {
 			limit = {
@@ -238,6 +260,12 @@ on_wargoal_enforced = {
 }
 
 on_character_creation = {
+	on_actions = {
+		moh_self_strengthening_character_creation
+	}
+}
+
+moh_self_strengthening_character_creation = {
 	effect = {
 		if = {
 			limit = {

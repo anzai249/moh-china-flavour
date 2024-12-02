@@ -2,10 +2,7 @@ je_father_of_the_republic = {
 	icon = "gfx/interface/icons/event_icons/white_sun.dds"
 	group = je_group_historical_content
 	is_shown_when_inactive = {
-		OR = {
-			c:CHI ?= this
-			has_journal_entry = je_reunify_china
-		}
+		has_journal_entry = je_reunify_china
 	}
 	status_desc = {
 		first_valid = {

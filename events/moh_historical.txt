@@ -755,6 +755,7 @@ moh_historical.11 = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 	duration = 3
 	trigger = {
+		c:CHI ?= this
 		NOT = {
 			has_variable = yunnan_rebellion
 		}

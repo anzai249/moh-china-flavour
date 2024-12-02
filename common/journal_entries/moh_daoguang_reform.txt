@@ -104,23 +104,13 @@ je_daoguang_reform_mine = {
 	complete = {
 		any_scope_building = {
 			is_building_type = building_iron_mine
+			occupancy >= 0.9
 			level >= 15
 		}
 		any_scope_building = {
 			is_building_type = building_coal_mine
+			occupancy >= 0.9
 			level >= 15
-		}
-		OR = {
-			any_scope_building = {
-				is_building_type = building_iron_mine
-				level >= 5
-				private_ownership_fraction > 0.75
-			}
-			any_scope_building = {
-				is_building_type = building_coal_mine
-				level >= 5
-				private_ownership_fraction > 0.75
-			}
 		}
 	}
 	on_complete = {

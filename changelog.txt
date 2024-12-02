@@ -158,3 +158,10 @@ Fixes:
 
 - Death of Lin Zexu.
 - Emperor Tongzhi will no longer be created over and over again.
+
+beta-0.7.4
+
+Fixes:
+
+- Wargoal enforced cannot advance the progress bar in Earn recognition je. 
+- Other bugs ralated to the previous bug.
