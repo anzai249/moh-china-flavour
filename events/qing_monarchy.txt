@@ -124,11 +124,16 @@ qing_monarchy.3 = {
 	option = {
 		name = qing_monarchy.3.a
 		default_option = yes
-		create_character = {
-			template = chi_guangxu_template
-		}
 		scope:qing_emperor_scope = {
 			kill_character = yes
+		}
+		create_character = {
+			template = chi_guangxu_template
+			ruler = yes
+		}
+		
+		create_character = {
+			template = chi_xuantong_template
 		}
 		ai_chance = {
 			base = 10
@@ -136,11 +141,12 @@ qing_monarchy.3 = {
 	}
 	option = {
 		name = qing_monarchy.3.b
-		create_character = {
-			template = chi_zaiyi_template
-		}
 		scope:qing_emperor_scope = {
 			kill_character = yes
+		}
+		create_character = {
+			template = chi_zaiyi_template
+			ruler = yes
 		}
 		ai_chance = {
 			base = 5
@@ -179,14 +185,6 @@ qing_monarchy.4 = {
 		default_option = yes
 		scope:qing_emperor_scope = {
 			kill_character = yes
-		}
-		if = {
-			limit = {
-				game_date >= 1912.2.12
-			}
-			create_character = {
-				template = chi_puyi_template
-			}
 		}
 	}
 }

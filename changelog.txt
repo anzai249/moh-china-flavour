@@ -165,3 +165,10 @@ Fixes:
 
 - Wargoal enforced cannot advance the progress bar in Earn recognition je. 
 - Other bugs ralated to the previous bug.
+
+beta-0.7.5
+
+Fixes:
+
+- Emperor Xuantong not able to be created. 
+- Other bugs ralated to the previous bug.

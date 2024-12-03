@@ -147,10 +147,7 @@ moh_qing_monarchy_yearly_events = {
 			limit = {
 				owner = {
 					ruler = {
-						OR = {
-							has_template = chi_tongzhi_template
-							has_template = chi_guangxu_template
-						}
+						has_template = chi_tongzhi_template
 					}
 				}
 			}
