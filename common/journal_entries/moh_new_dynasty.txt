@@ -42,6 +42,7 @@
 			}
 			remove_variable = china_han
 		}
+		form_new_dynasty = yes
 	}
 	should_be_pinned_by_default = yes
 	weight = 200

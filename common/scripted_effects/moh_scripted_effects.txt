@@ -244,6 +244,30 @@ moh_random_opera_name = {
 	}
 }
 
+form_new_dynasty = {
+	add_journal_entry = {
+		type = je_keju
+	}
+	
+	ig:ig_intelligentsia = { 
+		set_interest_group_name = ig_literati
+		remove_ideology = ideology_anti_clerical
+		remove_ideology = ideology_republican
+		add_ideology = ideology_eight_legged
+	}
+	ig:ig_landowners = { 
+		set_interest_group_name = ig_scholar_officials
+		remove_ideology = ideology_paternalistic
+		add_ideology = ideology_scholar_paternalistic
+	}
+}
+
+remove_8_banners = {
+	ig:ig_armed_forces = {
+		set_interest_group_name = ig_armed_forces
+	}
+}
+
 divide_kmt = {
 	if = {
 		limit = {

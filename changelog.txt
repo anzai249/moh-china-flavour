@@ -172,3 +172,14 @@ Fixes:
 
 - Emperor Xuantong not able to be created. 
 - Other bugs ralated to the previous bug.
+
+beta-0.7.6
+
+Fixes:
+
+- Primary Culture of the new dynasty.
+- Flavoured interest groups of the new dynasty.
+
+Changes:
+
+- New Character: Liu Mingchuan.

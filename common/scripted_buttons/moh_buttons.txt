@@ -147,6 +147,13 @@ china_ming_button = {
 				
 			}
 		}
+		if = {
+			limit = {
+				country_has_primary_culture = cu:manchu
+			}
+			remove_primary_culture = cu:manchu
+		}
+		remove_8_banners = yes
 		hidden_effect = {
 			heir = {
 				kill_character = yes
@@ -214,6 +221,13 @@ china_shun_button = {
 				
 			}
 		}
+		if = {
+			limit = {
+				country_has_primary_culture = cu:manchu
+			}
+			remove_primary_culture = cu:manchu
+		}
+		remove_8_banners = yes
 		hidden_effect = {
 			heir = {
 				kill_character = yes
@@ -247,6 +261,9 @@ china_later_jin_button = {
 	}
 	effect = {
 		set_variable = china_later_jin
+		add_journal_entry = {
+			type = je_8_flags
+		}
 	}
 	ai_chance = {
 		base = 1
@@ -275,6 +292,13 @@ china_han_button = {
 				
 			}
 		}
+		if = {
+			limit = {
+				country_has_primary_culture = cu:manchu
+			}
+			remove_primary_culture = cu:manchu
+		}
+		remove_8_banners = yes
 		hidden_effect = {
 			heir = {
 				kill_character = yes
@@ -322,6 +346,9 @@ china_qing_button = {
 				culture = cu:manchu
 				ruler = yes
 			}
+		}
+		add_journal_entry = {
+			type = je_8_flags
 		}
 	}
 	ai_chance = {
