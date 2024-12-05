@@ -1,357 +1,560 @@
 ﻿print_reformer_newspaper_button = {
-	name = "print_reformer_newspaper"
-	desc = "print_reformer_newspaper_desc"
-	visible = {
-		has_journal_entry = je_wuxu
-	}
-	possible = {
-		custom_tooltip = {
-			text = print_reformer_newspaper_button.tt.1
-			var:wuxu_newspaper_time >= 20
-		}
-	}
-	effect = {
-		custom_tooltip = {
-			text = print_reformer_newspaper_button.tt.2
-			set_variable = {
-				name = wuxu_newspaper_time
-				value = 0
-			}
-		}
-		add_modifier = {
-			name = newspaper_campaign_modifier
-			months = 3
-			multiplier = money_amount_multiplier_small
-		}
-	}
-	ai_chance = {
-		base = 15
-		modifier = {
-			trigger = {
-				has_strategy = ai_strategy_conservative_agenda
-			}
-			add = -10
-		}
-		modifier = {
-			trigger = {
-				has_strategy = ai_strategy_maintain_mandate_of_heaven
-			}
-			add = 10
-		}
-	}
+    name = "print_reformer_newspaper"
+    desc = "print_reformer_newspaper_desc"
+    visible = {
+        has_journal_entry = je_wuxu
+    }
+    possible = {
+        custom_tooltip = {
+            text = print_reformer_newspaper_button.tt.1
+            var:wuxu_newspaper_time >= 20
+        }
+    }
+    effect = {
+        custom_tooltip = {
+            text = print_reformer_newspaper_button.tt.2
+            set_variable = {
+                name = wuxu_newspaper_time
+                value = 0
+            }
+        }
+        add_modifier = {
+            name = newspaper_campaign_modifier
+            months = 3
+            multiplier = money_amount_multiplier_small
+        }
+    }
+    ai_chance = {
+        base = 15
+        modifier = {
+            trigger = {
+                has_strategy = ai_strategy_conservative_agenda
+            }
+            add = -10
+        }
+        modifier = {
+            trigger = {
+                has_strategy = ai_strategy_maintain_mandate_of_heaven
+            }
+            add = 10
+        }
+    }
 }
 
 steady_advancement_button = {
-	name = "steady_advancement"
-	desc = "steady_advancement_desc"
-	visible = {
-		has_journal_entry = je_wuxu
-	}
-	possible = {
-		has_modifier = modifier_chi_wuxu
-		custom_tooltip = {
-			text = steady_advancement.tt.1
-			scope:journal_entry = {
-				"scripted_bar_progress(wuxu_progress_bar)" >= 180
-			}
-			var:wuxu_reformers_support_days >= 15
-		}
-	}
-	effect = {
-		remove_modifier = modifier_chi_wuxu
-		add_modifier = {
-			name = modifier_chi_wuxu_stable
-		}
-		ruler = {
-			set_ideology = ideology:ideology_moh_reformer
-		}
-	}
-	ai_chance = {
-		base = 0
-		modifier = {
-			trigger = {
-				OR = {
-					has_strategy = ai_strategy_conservative_agenda
-					has_strategy = ai_strategy_reactionary_agenda
-					has_strategy = ai_strategy_maintain_mandate_of_heaven
-				}
-			}
-			add = 10
-		}
-	}
+    name = "steady_advancement"
+    desc = "steady_advancement_desc"
+    visible = {
+        has_journal_entry = je_wuxu
+    }
+    possible = {
+        has_modifier = modifier_chi_wuxu
+        custom_tooltip = {
+            text = steady_advancement.tt.1
+            scope:journal_entry = {
+                "scripted_bar_progress(wuxu_progress_bar)" >= 180
+            }
+            var:wuxu_reformers_support_days >= 15
+        }
+    }
+    effect = {
+        remove_modifier = modifier_chi_wuxu
+        add_modifier = {
+            name = modifier_chi_wuxu_stable
+        }
+        ruler = {
+            set_ideology = ideology:ideology_moh_reformer
+        }
+    }
+    ai_chance = {
+        base = 0
+        modifier = {
+            trigger = {
+                OR = {
+                    has_strategy = ai_strategy_conservative_agenda
+                    has_strategy = ai_strategy_reactionary_agenda
+                    has_strategy = ai_strategy_maintain_mandate_of_heaven
+                }
+            }
+            add = 10
+        }
+    }
 }
 
 dismissed_officials_petition_button = {
-	name = "dismissed_officials_petition"
-	desc = "dismissed_officials_petition_desc"
-	visible = {
-		has_journal_entry = je_wuxu
-	}
-	possible = {
-		custom_tooltip = {
-			text = dismissed_officials_petition.tt.1
-			NOT = {
-				has_variable = dismissed_officials_petition
-			}
-		}
-	}
-	effect = {
-		custom_tooltip = {
-			text = dismissed_officials_petition.tt.2
-			set_variable = dismissed_officials_petition
-			scope:journal_entry = {
-				add_progress = {
-					value = -25
-					name = wuxu_progress_bar
-				}
-			}
-		}
-	}
-	ai_chance = {
-		base = 10
-		modifier = {
-			trigger = {
-				has_strategy = ai_strategy_conservative_agenda
-			}
-			add = 10
-		}
-		modifier = {
-			trigger = {
-				has_strategy = ai_strategy_maintain_mandate_of_heaven
-			}
-			add = -5
-		}
-	}
+    name = "dismissed_officials_petition"
+    desc = "dismissed_officials_petition_desc"
+    visible = {
+        has_journal_entry = je_wuxu
+    }
+    possible = {
+        custom_tooltip = {
+            text = dismissed_officials_petition.tt.1
+            NOT = {
+                has_variable = dismissed_officials_petition
+            }
+        }
+    }
+    effect = {
+        custom_tooltip = {
+            text = dismissed_officials_petition.tt.2
+            set_variable = dismissed_officials_petition
+            scope:journal_entry = {
+                add_progress = {
+                    value = -25
+                    name = wuxu_progress_bar
+                }
+            }
+        }
+    }
+    ai_chance = {
+        base = 10
+        modifier = {
+            trigger = {
+                has_strategy = ai_strategy_conservative_agenda
+            }
+            add = 10
+        }
+        modifier = {
+            trigger = {
+                has_strategy = ai_strategy_maintain_mandate_of_heaven
+            }
+            add = -5
+        }
+    }
 }
 
 # A new dynasty
 china_ming_button = {
-	name = "china_ming"
-	desc = "china_ming_desc"
-	visible = {
-		has_journal_entry = je_new_dynasty
-	}
-	possible = {
-		NOT = {
-			has_variable = china_ming
-		}
-		country_has_primary_culture = cu:han
-		ruler = {
-			has_culture = cu:han
-		}
-	}
-	effect = {
-		set_variable = china_ming
-		show_as_tooltip = {
-			create_character = {
-				
-			}
-		}
-		if = {
-			limit = {
-				country_has_primary_culture = cu:manchu
-			}
-			remove_primary_culture = cu:manchu
-		}
-		remove_8_banners = yes
-		hidden_effect = {
-			heir = {
-				kill_character = yes
-			}
-			if = {
-				limit = {
-					year < 1869
-				}
-				create_character = {
-					last_name = Zhu
-					first_name = Shugui
-					culture = cu:han
-					ruler = yes
-					historical = yes
-				}
-			}
-			else_if = {
-				limit = {
-					year < 1891
-				}
-				create_character = {
-					last_name = Zhu
-					first_name = Chengduan
-					culture = cu:han
-					ruler = yes
-					historical = yes
-				}
-			}
-			else = {
-				create_character = {
-					last_name = Zhu
-					first_name = Yuxun
-					culture = cu:han
-					ruler = yes
-					historical = yes
-				}
-			}
-			
-		}
-	}
-	ai_chance = {
-		base = 1
-	}
+    name = "china_ming"
+    desc = "china_ming_desc"
+    visible = {
+        has_journal_entry = je_new_dynasty
+    }
+    possible = {
+        NOT = {
+            has_variable = china_ming
+        }
+        country_has_primary_culture = cu:han
+        ruler = {
+            has_culture = cu:han
+        }
+    }
+    effect = {
+        set_variable = china_ming
+        show_as_tooltip = {
+            create_character = {
+
+            }
+        }
+        if = {
+            limit = {
+                country_has_primary_culture = cu:manchu
+            }
+            remove_primary_culture = cu:manchu
+        }
+        remove_8_banners = yes
+        hidden_effect = {
+            heir = {
+                kill_character = yes
+            }
+            if = {
+                limit = {
+                    year < 1869
+                }
+                create_character = {
+                    last_name = Zhu
+                    first_name = Shugui
+                    culture = cu:han
+                    ruler = yes
+                    historical = yes
+                }
+            }
+            else_if = {
+                limit = {
+                    year < 1891
+                }
+                create_character = {
+                    last_name = Zhu
+                    first_name = Chengduan
+                    culture = cu:han
+                    ruler = yes
+                    historical = yes
+                }
+            }
+            else = {
+                create_character = {
+                    last_name = Zhu
+                    first_name = Yuxun
+                    culture = cu:han
+                    ruler = yes
+                    historical = yes
+                }
+            }
+
+        }
+    }
+    ai_chance = {
+        base = 1
+    }
 }
 
 china_shun_button = {
-	name = "china_shun"
-	desc = "china_shun_desc"
-	visible = {
-		has_journal_entry = je_new_dynasty
-	}
-	possible = {
-		NOT = {
-			has_variable = china_shun
-		}
-		country_has_primary_culture = cu:han
-		ruler = {
-			has_culture = cu:han
-		}
-	}
-	effect = {
-		set_variable = china_shun
-		show_as_tooltip = {
-			create_character = {
-				
-			}
-		}
-		if = {
-			limit = {
-				country_has_primary_culture = cu:manchu
-			}
-			remove_primary_culture = cu:manchu
-		}
-		remove_8_banners = yes
-		hidden_effect = {
-			heir = {
-				kill_character = yes
-			}
-			create_character = {
-				last_name = Li
-				culture = cu:han
-				ruler = yes
-			}
-		}
-	}
-	ai_chance = {
-		base = 1
-	}
+    name = "china_shun"
+    desc = "china_shun_desc"
+    visible = {
+        has_journal_entry = je_new_dynasty
+    }
+    possible = {
+        NOT = {
+            has_variable = china_shun
+        }
+        country_has_primary_culture = cu:han
+        ruler = {
+            has_culture = cu:han
+        }
+    }
+    effect = {
+        set_variable = china_shun
+        show_as_tooltip = {
+            create_character = {
+
+            }
+        }
+        if = {
+            limit = {
+                country_has_primary_culture = cu:manchu
+            }
+            remove_primary_culture = cu:manchu
+        }
+        remove_8_banners = yes
+        hidden_effect = {
+            heir = {
+                kill_character = yes
+            }
+            create_character = {
+                last_name = Li
+                culture = cu:han
+                ruler = yes
+            }
+        }
+    }
+    ai_chance = {
+        base = 1
+    }
 }
 
 china_later_jin_button = {
-	name = "china_later_jin"
-	desc = "china_later_jin_desc"
-	visible = {
-		has_journal_entry = je_new_dynasty
-	}
-	possible = {
-		NOT = {
-			has_variable = china_later_jin
-		}
-		country_has_primary_culture = cu:manchu
-		ruler = {
-			has_culture = cu:manchu
-		}
-	}
-	effect = {
-		set_variable = china_later_jin
-		add_journal_entry = {
-			type = je_8_flags
-		}
-	}
-	ai_chance = {
-		base = 1
-	}
+    name = "china_later_jin"
+    desc = "china_later_jin_desc"
+    visible = {
+        has_journal_entry = je_new_dynasty
+    }
+    possible = {
+        NOT = {
+            has_variable = china_later_jin
+        }
+        country_has_primary_culture = cu:manchu
+        ruler = {
+            has_culture = cu:manchu
+        }
+    }
+    effect = {
+        set_variable = china_later_jin
+        add_journal_entry = {
+            type = je_8_flags
+        }
+    }
+    ai_chance = {
+        base = 1
+    }
 }
 
 china_han_button = {
-	name = "china_han"
-	desc = "china_han_desc"
-	visible = {
-		has_journal_entry = je_new_dynasty
-	}
-	possible = {
-		NOT = {
-			has_variable = china_han
-		}
-		country_has_primary_culture = cu:han
-		ruler = {
-			has_culture = cu:han
-		}
-	}	
-	effect = {
-		set_variable = china_han
-		show_as_tooltip = {
-			create_character = {
-				
-			}
-		}
-		if = {
-			limit = {
-				country_has_primary_culture = cu:manchu
-			}
-			remove_primary_culture = cu:manchu
-		}
-		remove_8_banners = yes
-		hidden_effect = {
-			heir = {
-				kill_character = yes
-			}
-			create_character = {
-				last_name = Liu
-				culture = cu:han
-				ruler = yes
-			}
-		}
-	}
-	ai_chance = {
-		base = 1
-	}
+    name = "china_han"
+    desc = "china_han_desc"
+    visible = {
+        has_journal_entry = je_new_dynasty
+    }
+    possible = {
+        NOT = {
+            has_variable = china_han
+        }
+        country_has_primary_culture = cu:han
+        ruler = {
+            has_culture = cu:han
+        }
+    }
+    effect = {
+        set_variable = china_han
+        show_as_tooltip = {
+            create_character = {
+
+            }
+        }
+        if = {
+            limit = {
+                country_has_primary_culture = cu:manchu
+            }
+            remove_primary_culture = cu:manchu
+        }
+        remove_8_banners = yes
+        hidden_effect = {
+            heir = {
+                kill_character = yes
+            }
+            create_character = {
+                last_name = Liu
+                culture = cu:han
+                ruler = yes
+            }
+        }
+    }
+    ai_chance = {
+        base = 1
+    }
 }
 
 china_qing_button = {
-	name = "china_qing"
-	desc = "china_qing_desc"
-	visible = {
-		has_journal_entry = je_new_dynasty
-	}
-	possible = {
-		NOT = {
-			has_variable = china_qing
-		}
-		country_has_primary_culture = cu:manchu
-		ruler = {
-			has_culture = cu:manchu
-		}
-	}
-	effect = {
-		set_variable = china_qing
-		show_as_tooltip = {
-			create_character = {
-				
-			}
-		}
-		hidden_effect = {
-			heir = {
-				kill_character = yes
-			}
-			create_character = {
-				last_name = Aisin_Gioro
-				culture = cu:manchu
-				ruler = yes
-			}
-		}
-		add_journal_entry = {
-			type = je_8_flags
-		}
-	}
-	ai_chance = {
-		base = 1
-	}
+    name = "china_qing"
+    desc = "china_qing_desc"
+    visible = {
+        has_journal_entry = je_new_dynasty
+    }
+    possible = {
+        NOT = {
+            has_variable = china_qing
+        }
+        country_has_primary_culture = cu:manchu
+        ruler = {
+            has_culture = cu:manchu
+        }
+    }
+    effect = {
+        set_variable = china_qing
+        show_as_tooltip = {
+            create_character = {
+
+            }
+        }
+        hidden_effect = {
+            heir = {
+                kill_character = yes
+            }
+            create_character = {
+                last_name = Aisin_Gioro
+                culture = cu:manchu
+                ruler = yes
+            }
+        }
+        add_journal_entry = {
+            type = je_8_flags
+        }
+    }
+    ai_chance = {
+        base = 1
+    }
+}
+
+# Gaitu Guiliu
+gaitu_guiliu_button_1 = {
+    name = "gaitu_guiliu_button_1"
+    desc = "gaitu_guiliu_button_1_desc"
+
+    visible = { always = yes }
+
+    possible = {
+        NOT = {
+            custom_tooltip = {
+                text = gaitu_guiliu_cooldown_tt
+                has_variable = gaitu_guiliu_cooldown_var
+            }
+        }
+        any_scope_state = {
+            has_state_trait = state_trait_chieftains
+            any_scope_building = {
+                is_building_type = building_urban_center
+                level >= 10
+            }
+            any_scope_building = {
+                is_building_type = building_government_administration
+                level >= 15
+            }
+            NOT = {
+                has_modifier = gaitu_guiliu_cooldown_modifier
+            }
+        }
+    }
+
+    ai_chance = {
+        base = 20
+        modifier = {
+            trigger = {
+                OR = {
+                    is_at_war = yes
+                    has_journal_entry = je_incorporate_the_west
+                }
+            }
+            add = -50
+        }
+    }
+
+    effect = {
+        set_variable = { name = gaitu_guiliu_cooldown_var years = 2 }
+        random_scope_state = {
+            limit = {
+                has_state_trait = state_trait_chieftains
+                any_scope_building = {
+                    is_building_type = building_urban_center
+                    level >= 10
+                }
+                any_scope_building = {
+                    is_building_type = building_government_administration
+                    level >= 15
+                }
+                NOT = {
+                    has_modifier = gaitu_guiliu_cooldown_modifier
+                }
+            }
+            add_modifier = {
+                name = gaitu_guiliu_cooldown_modifier
+            }
+        }
+        show_as_tooltip = {
+            random_scope_state = {
+                limit = {
+                    has_state_trait = state_trait_chieftains
+                    OR = {
+                        any_scope_building = {
+                            is_building_type = building_urban_center
+                            level < 10
+                        }
+                        any_scope_building = {
+                            is_building_type = building_government_administration
+                            level < 15
+                        }
+                    }
+                }
+                add_modifier = {
+                    name = gaitu_guiliu_cooldown_modifier
+                }
+            }
+        }
+    }
+}
+
+gaitu_guiliu_button_2 = {
+    name = "gaitu_guiliu_button_2"
+    desc = "gaitu_guiliu_button_2_desc"
+
+    visible = { always = yes }
+
+    possible = {
+        NOT = {
+            custom_tooltip = {
+                text = gaitu_guiliu_cooldown_tt
+                has_variable = gaitu_guiliu_cooldown_var
+            }
+        }
+        any_scope_state = {
+            has_state_trait = state_trait_chieftains
+            has_modifier = gaitu_guiliu_cooldown_modifier
+            OR = {
+                any_scope_building = {
+                    is_building_type = building_urban_center
+                    level >= 15
+                }
+                any_scope_building = {
+                    is_building_type = building_railway
+                    level >= 1
+                }
+            }
+            any_scope_building = {
+                is_building_type = building_government_administration
+                level >= 20
+            }
+        }
+    }
+
+    ai_chance = {
+        base = 20
+        modifier = {
+            trigger = {
+                OR = {
+                    is_at_war = yes
+                    has_journal_entry = je_incorporate_the_west
+                }
+            }
+            add = -50
+        }
+    }
+
+    effect = {
+        set_variable = { name = gaitu_guiliu_cooldown_var years = 2 }
+        random_scope_state = {
+            limit = {
+                has_state_trait = state_trait_chieftains
+                has_modifier = gaitu_guiliu_cooldown_modifier
+                OR = {
+                    any_scope_building = {
+                        is_building_type = building_urban_center
+                        level >= 15
+                    }
+                    any_scope_building = {
+                        is_building_type = building_railway
+                        level >= 1
+                    }
+                }
+                any_scope_building = {
+                    is_building_type = building_government_administration
+                    level >= 20
+                }
+            }
+            state_region = {
+                remove_state_trait = state_trait_chieftains
+            }
+            remove_modifier = gaitu_guiliu_cooldown_modifier
+            if = {
+                limit = {
+                    this.state_region = s:STATE_SICHUAN
+                }
+                state_region = {
+                    add_state_trait = state_trait_the_red_basin
+                }
+            }
+        }
+        show_as_tooltip = {
+            random_scope_state = {
+                limit = {
+                    has_state_trait = state_trait_chieftains
+                    AND = {
+                        any_scope_building = {
+                            is_building_type = building_urban_center
+                            level < 15
+                        }
+                        any_scope_building = {
+                            is_building_type = building_railway
+                            level < 1
+                        }
+                    }
+                    any_scope_building = {
+                        is_building_type = building_government_administration
+                        level < 20
+                    }
+                }
+                state_region = {
+                    remove_state_trait = state_trait_chieftains
+                }
+                remove_modifier = gaitu_guiliu_cooldown_modifier
+                if = {
+                    limit = {
+                        this.state_region = s:STATE_SICHUAN
+                    }
+                    state_region = {
+                        add_state_trait = state_trait_the_red_basin
+                    }
+                }
+            }
+        }
+    }
 }

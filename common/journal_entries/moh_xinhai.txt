@@ -11,16 +11,16 @@ je_xinhai = {
 	possible = {
 		c:CHI ?= this
 		has_law = law_type:law_monarchy
+		has_technology_researched = egalitarianism
 		OR = {
 			custom_tooltip = {
 				text = je_xinhai_possible_tt
 				has_variable = wuxu_reform_failed
-				has_variable = wuxu_xinhai_rebellion
 				has_variable = no_wuxu
-				AND = {
-					year >= 1900
-					has_technology_researched = egalitarianism
-				}
+			}
+			custom_tooltip = {
+				text = je_xinhai_possible_tt_2
+				has_variable = wuxu_xinhai_rebellion
 			}
 		}
 	}

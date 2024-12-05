@@ -1,0 +1,215 @@
+namespace = gaitu_guiliu
+
+gaitu_guiliu.1 = {
+    type = country_event
+	placement = scope:gaitu_guiliu_scope
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+	title = gaitu_guiliu.1.t
+	desc = gaitu_guiliu.1.d
+	flavor = gaitu_guiliu.1.f
+
+	duration = 3
+
+	dlc = dlc0moh
+
+    trigger = {
+        any_scope_state = {
+            has_state_trait = state_trait_chieftains
+        }
+    }
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                has_state_trait = state_trait_chieftains
+            }
+            save_scope_as = gaitu_guiliu_scope
+        }
+    }
+
+    option = {
+        name = gaitu_guiliu.1.a
+        default_option = yes
+        ai_chance = {
+            base = 10
+        }
+        scope:gaitu_guiliu_scope = {
+                add_radicals_in_state = {
+                    value = medium_radicals
+                    pop_type = laborers
+                }
+        }
+        add_modifier = {
+            name = gaitu_guiliu_building_modifier
+            years = 3
+        }
+    }
+
+    option = {
+        name = gaitu_guiliu.1.b
+        ai_chance = {
+            base = 5
+        }
+        scope:gaitu_guiliu_scope = {
+            add_loyalists_in_state = {
+                value = small_radicals
+                pop_type = laborers
+            }
+            add_radicals_in_state = {
+                value = small_radicals
+                pop_type = aristocrats
+            }
+        }
+    }
+}
+
+gaitu_guiliu.2 = {
+    type = country_event
+    placement = scope:gaitu_guiliu_scope
+    event_image = {
+        video = "southamerica_slaves_night"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_scales.dds"
+
+    title = gaitu_guiliu.2.t
+    desc = gaitu_guiliu.2.d
+    flavor = gaitu_guiliu.2.f
+
+    duration = 3
+
+    dlc = dlc0moh
+
+    trigger = {
+        any_scope_state = {
+            has_state_trait = state_trait_chieftains
+        }
+    }
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                has_state_trait = state_trait_chieftains
+            }
+            save_scope_as = gaitu_guiliu_scope
+        }
+        random_interest_group = {
+            limit = {
+                OR = {
+                    is_interest_group_type = ig_intelligentsia
+                    is_interest_group_type = ig_landowners
+                    is_interest_group_type = ig_devout
+                }
+            }
+            save_scope_as = gaitu_guiliu_interest_group_progressive
+        }
+        random_interest_group = {
+            limit = {
+                is_interest_group_type = ig_rural_folk
+            }
+            save_scope_as = gaitu_guiliu_interest_group_conservative
+        }
+    }
+
+    option = {
+        name = gaitu_guiliu.2.a
+        ai_chance = {
+            base = 10
+        }
+        scope:gaitu_guiliu_interest_group_progressive = {
+            add_modifier = {
+                name = gaitu_guiliu_gov_ig_modifier
+                years = 3
+            }
+        }
+    }
+
+    option = {
+        name = gaitu_guiliu.2.b
+        default_option = yes
+        ai_chance = {
+            base = 15
+        }
+        scope:gaitu_guiliu_interest_group_conservative = {
+            add_modifier = {
+                name = gaitu_guiliu_gov_ig_modifier
+                years = 3
+            }
+        }
+        scope:gaitu_guiliu_scope = {
+                create_building = {
+                    building = building_government_administration
+                    level = 1
+                }
+        }
+    }
+}
+
+gaitu_guiliu.3 = {
+    type = country_event
+    placement = scope:gaitu_guiliu_scope
+    event_image = {
+        video = "southamerica_slaves_night"
+    }
+
+    on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+    icon = "gfx/interface/icons/event_icons/event_fire.dds"
+
+    title = gaitu_guiliu.3.t
+    desc = gaitu_guiliu.3.d
+    flavor = gaitu_guiliu.3.f
+
+    duration = 3
+
+    dlc = dlc0moh
+
+    trigger = {
+        any_scope_state = {
+            has_state_trait = state_trait_chieftains
+        }
+        has_variable = gaitu_guiliu_cooldown_var
+    }
+
+    immediate = {
+        random_scope_state = {
+            limit = {
+                has_state_trait = state_trait_chieftains
+            }
+            save_scope_as = gaitu_guiliu_scope
+        }
+    }
+
+    option = {
+        name = gaitu_guiliu.3.a
+        ai_chance = {
+            base = 10
+        }
+        custom_tooltip = {
+            text = gaitu_guiliu.3.a.tt
+            remove_variable = gaitu_guiliu_cooldown_var
+        }
+    }
+
+    option = {
+        name = gaitu_guiliu.3.b
+        default_option = yes
+        ai_chance = {
+            base = 5
+        }
+        scope:gaitu_guiliu_scope = {
+            add_loyalists_in_state = {
+                value = small_radicals
+            }
+        }
+    }
+}

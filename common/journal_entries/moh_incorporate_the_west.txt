@@ -1,6 +1,6 @@
 ﻿je_incorporate_the_west = {
 	icon = "gfx/interface/icons/lens_toolbar_icons/incorporate_state.dds"
-	group = je_group_historical_content
+	group = je_group_internal_affairs
 	is_shown_when_inactive = {
 		exists = c:CHI
 		c:CHI = root
@@ -39,6 +39,49 @@
 			name = modifier_western_incorporation_failed
 			years = 5
 			is_decaying = yes
+		}
+	}
+	weight = 100
+	should_be_pinned_by_default = yes
+}
+
+je_gaitu_guiliu = {
+	icon = "gfx/interface/icons/event_icons/qing_hat.dds"
+	group = je_group_internal_affairs
+	scripted_button = gaitu_guiliu_button_1
+	scripted_button = gaitu_guiliu_button_2
+	is_shown_when_inactive = {
+		any_scope_state = {
+			has_state_trait = state_trait_chieftains
+		}
+	}
+	possible = {
+		any_scope_state = {
+			has_state_trait = state_trait_chieftains
+		}
+		has_technology_researched = civilizing_mission
+	}
+	complete = {
+		NOT = {
+			any_scope_state = {
+				has_state_trait = state_trait_chieftains
+			}
+		}
+	}
+	on_complete = {
+		set_variable = china_gaitu_guiliu
+		add_modifier = {
+			name = modifier_gaitu_guiliu_success
+			years = 5
+			is_decaying = yes
+		}
+	}
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = gaitu_guiliu.1
+			5 = gaitu_guiliu.2
+			2 = gaitu_guiliu.3
 		}
 	}
 	weight = 100

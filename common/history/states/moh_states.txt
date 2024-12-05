@@ -28,4 +28,20 @@
 			}
 		}
 	}
+	s:STATE_SICHUAN = {
+		remove_state_trait = state_trait_the_red_basin
+		add_state_trait = state_trait_chieftains
+	}
+	s:STATE_QINGHAI = {
+		add_state_trait = state_trait_chieftains
+	}
+	s:STATE_SHENGJING = {
+		add_state_trait = state_trait_black_soil
+	}
+	s:STATE_SOUTHERN_MANCHURIA = {
+		add_state_trait = state_trait_black_soil
+	}
+	s:STATE_NORTHERN_MANCHURIA = {
+		add_state_trait = state_trait_black_soil
+	}
 }

@@ -183,3 +183,10 @@ Fixes:
 Changes:
 
 - New Character: Liu Mingchuan.
+
+beta-0.8
+
+Changes:
+
+- New Journal Entry: Gaitu Guiliu.
+- New Character: Liu Kunyi

@@ -2268,7 +2268,7 @@ chi_liu_mingchuan_character_template = {
     ideology = ideology_reformer
     interest_group = ig_rural_folk
     birth_date = 1836.9.7
-    traits = { experienced_defensive_planner }
+    traits = { experienced_defensive_strategist }
     commander_rank = default
     commander_usage = {
         country_trigger = {
@@ -2280,6 +2280,32 @@ chi_liu_mingchuan_character_template = {
         role = general
         earliest_usage_date = 1860.1.1
         latest_usage_date = 1896.1.12
+        chance = 60
+    }
+}
+
+# Liu Kunyi
+
+chi_liu_kunyi_character_template = {
+    first_name = moh_Kunyi
+    last_name = Liu
+    historical = yes
+    culture = cu:han
+    ideology = ideology_moderate
+    interest_group = ig_landowners
+    birth_date = 1830.1.21
+    traits = { basic_offensive_planner erudite }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HUNAN
+        }
+        role = general
+        earliest_usage_date = 1855.1.1
+        latest_usage_date = 1902.10.6
         chance = 60
     }
 }
