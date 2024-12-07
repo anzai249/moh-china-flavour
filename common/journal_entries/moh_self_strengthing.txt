@@ -189,9 +189,16 @@ je_self_strengthing_education = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/invention_icons/academia.dds"
     complete = {
-        custom_tooltip = {
-            text = je_self_strengthing_education_tt_complete
-            has_variable = academia_je_done
+        OR = {
+            custom_tooltip = {
+                text = je_self_strengthing_education_tt_complete
+                has_variable = academia_je_done
+            }
+            any_scope_building = {
+                is_building_type = building_university
+                occupancy >= 0.9
+                level >= 5
+            }
         }
         NOT = {
             has_law = law_type:law_closed_borders

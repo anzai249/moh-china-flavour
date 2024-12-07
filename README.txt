@@ -4,7 +4,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing, 1.8 Compatibility Testing
-Current version: beta-0.8
+Current version: beta-0.8.1
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
@@ -64,3 +64,19 @@ Not Compatible:
 Contact me if you want to make a compatch together.
 
 GitHub: [url=https://github.com/anzai249/moh-china-flavour]https://github.com/anzai249/moh-china-flavour[/url], feel free to create pull requests.
+
+
+[h3]FAQ[/h3]
+
+Q: How to trigger Wuxu Reform?
+A: You need to have the following conditions:
+[*]Empty agitator slots >= 1
+[*]Has law: Monarchy
+[*]Has law: Autocracy
+[*]Country: CHI
+[*]Game date > 1878.1.1
+[*]Game date < 1928.1.1
+[*]Never triggered Wuxu Reform before
+
+Q: How to adopt the Blue Sky White Sun flag?
+A: You should fail the Revolutionaries JE, this will split China into warlords. Then use any warlord and unite China.

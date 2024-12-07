@@ -190,3 +190,9 @@ Changes:
 
 - New Journal Entry: Gaitu Guiliu.
 - New Character: Liu Kunyi
+
+beta-0.8.1
+
+Changes:
+
+- Self-Strengthening education je now has a new complete trigger instead of only academia je.
