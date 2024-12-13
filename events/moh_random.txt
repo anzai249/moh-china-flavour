@@ -180,3 +180,133 @@ moh_random.3 = {
 		}
 	}
 }
+
+# 科举作弊 - 1
+moh_random.101 = {
+	type = country_event
+	placement = root
+	title = moh_random.101.t
+	desc = moh_random.101.d
+	flavor = moh_random.101.f
+	duration = 3
+	dlc = dlc0moh
+
+	event_image = {
+		video = "asia_union_leader"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		# je
+	}
+
+	option = {
+		name = moh_random.101.a
+		default_option = yes
+		ai_chance = {
+			factor = 1
+		}
+		add_modifier = {
+			name = modifier_keju_cheat_punishment
+			months = 12
+			is_decaying = yes
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = academics
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = bureaucrats
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = aristocrats
+		}
+	}
+}
+
+# 科举作弊 - 2
+moh_random.102 = {
+	type = country_event
+	placement = root
+	title = moh_random.102.t
+	desc = moh_random.102.d
+	flavor = moh_random.102.f
+	duration = 3
+	dlc = dlc0moh
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:cheat_character
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		# je
+	}
+
+	immediate = {
+		random_scope_character = {
+			limit = {
+				OR = {
+					has_role = politician
+					has_role = agitator
+				}
+			}
+			save_scope_as = cheat_character
+		}
+	}
+
+	option = {
+		name = moh_random.102.a
+		default_option = yes
+		ai_chance = {
+			factor = 15
+		}
+		add_modifier = {
+			name = modifier_keju_cheat_punishment
+			months = 12
+			is_decaying = yes
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = academics
+		}
+		add_loyalists = {
+			value = small_radicals
+			pop_type = bureaucrats
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = aristocrats
+		}
+		scope:cheat_character = {
+			kill_character = yes
+		}
+	}
+
+	option = {
+		name = moh_random.102.b
+		ai_chance = {
+			factor = 1
+		}
+		add_modifier = {
+			name = modifier_keju_cheat
+			months = 12
+			is_decaying = yes
+		}
+		add_radicals = {
+			value = small_radicals
+			pop_type = academics
+		}
+		scope:cheat_character = {
+			add_modifier = {
+				name = modifier_keju_cheat_person
+				months = 12
+			}
+		}
+	}
+}

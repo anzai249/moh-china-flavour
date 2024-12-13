@@ -292,7 +292,7 @@ divide_kmt = {
 			limit = {
 				has_template = ecchi_chi_wang_jingwei_character_template
 			}
-			set_ideology = ideology:ideology_moh_left_kmt
+			set_ideology = ideology:ideology_social_democrat
 		}
 	}
 	if = {
@@ -305,7 +305,7 @@ divide_kmt = {
 			limit = {
 				has_template = chi_soong_chingling_character_template
 			}
-			set_ideology = ideology:ideology_moh_left_kmt
+			set_ideology = ideology:ideology_social_democrat
 		}
 	}
 	every_character = {
@@ -314,7 +314,7 @@ divide_kmt = {
 		}
 		random_list = {
 			1 = {
-				set_ideology = ideology:ideology_moh_left_kmt
+				set_ideology = ideology:ideology_social_democrat
 			}
 			1 = {
 				set_ideology = ideology:ideology_moh_right_kmt

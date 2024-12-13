@@ -196,3 +196,15 @@ beta-0.8.1
 Changes:
 
 - Self-Strengthening education je now has a new complete trigger instead of only academia je.
+
+beta-0.8.2
+
+Changes:
+
+- Synchronising AI strategies with game 1.8.6.
+- Kuomintang Nationalists are less likely to appear if have autocracy.
+- Cheating in the Imperial Examination random events.
+
+Fixes:
+
+- Error: turmoil trigger [ Wrong scope for trigger: pop, expected state ] in the Nian Rebellion event.

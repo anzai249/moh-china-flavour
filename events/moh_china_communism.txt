@@ -20,7 +20,11 @@ china_communism.1 = {
     dlc = dlc0moh
 
 	trigger = {
-		#Triggered by JE
+		c:CHI ?= this
+		has_variable = canton_coup_happened
+		NOT = {
+			has_global_variable = ccp_rise_up_happened
+		}
 	}
 
 	cooldown = { months = very_long_modifier_time }
@@ -345,7 +349,12 @@ china_communism.2 = {
 			has_ideology = ideology:ideology_moh_kmt
 		}
 		NOT = {
-			any_scope_character = {
+			any_character = {
+				has_template = chi_moh_sun_yat_sen_character_template
+			}
+		}
+		NOT = {
+			any_character_in_void = {
 				has_template = chi_moh_sun_yat_sen_character_template
 			}
 		}
@@ -359,6 +368,10 @@ china_communism.2 = {
 		}
 		NOT = {
 			has_variable = canton_coup_happened
+		}
+		NOT = {
+			has_law = law_type:law_monarchy
+			has_law = law_type:law_theocracy
 		}
 		always = no
 	}

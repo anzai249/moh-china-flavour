@@ -186,9 +186,29 @@ types journal_entry_panel_types
 					}
 				}
 
+				# Flag 
+				widget = {
+					visible = "[EqualTo_string(JournalEntry.GetName, Localize('je_anti_encirclement'))]"
+					# position = { 5 0 }
+					size = { @panel_width_plus_20 180 }
+					parentanchor = hcenter
+					background = {
+						texture =  "gfx/interface/illustrations/journal/top_illu_journal_entries.dds"
+						using = top_illu_properties
+					}
+					flag_3d_animated = {
+						parentanchor = vcenter|hcenter
+						size = { 550 309 }	# Rendersize
+						scale = 0.5		# Downscale
+						position = { 30 0 }
+						texture =  "gfx/coat_of_arms/textured_emblems/coa_china_red_army_full_flag.dds"
+					}
+				}
+
+				# Vanilla Icon
 				widget  = {
 					size = { @panel_width_plus_20 120 }
-					visible = "[Not(Or(EqualTo_string(JournalEntry.GetName, Localize('je_prince_gong')), Or(EqualTo_string(JournalEntry.GetName, Localize('je_father_of_the_republic')), EqualTo_string(JournalEntry.GetName, Localize('je_daoguang_reform_main')))))]"
+					visible = "[Not(Or(EqualTo_string(JournalEntry.GetName, Localize('je_anti_encirclement')), Or(EqualTo_string(JournalEntry.GetName, Localize('je_father_of_the_republic')), EqualTo_string(JournalEntry.GetName, Localize('je_daoguang_reform_main')))))]"
 					
 					parentanchor = hcenter
 

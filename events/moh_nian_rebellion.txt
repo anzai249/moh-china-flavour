@@ -32,8 +32,8 @@ nian_rebellion.1 = {
 					is_pop_type = peasants
 					standard_of_living < 10
 				}
-				turmoil > 0.2
 			}
+			turmoil > 0.2
 		}
 	}
 	immediate = {

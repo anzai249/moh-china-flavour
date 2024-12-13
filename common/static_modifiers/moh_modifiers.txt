@@ -281,3 +281,20 @@ gaitu_guiliu_gov_ig_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
 	interest_group_approval_add = -2
 }
+
+modifier_keju_cheat_punishment = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_authority_mult = 0.2
+	country_bureaucracy_mult = -0.1
+}
+
+modifier_keju_cheat = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_authority_mult = -0.1
+	country_bureaucracy_mult = 0.05
+}
+
+modifier_keju_cheat_person = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	character_popularity_add = -50
+}

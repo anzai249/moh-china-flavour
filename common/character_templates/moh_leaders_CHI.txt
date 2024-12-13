@@ -1387,7 +1387,7 @@ ecchi_chi_wang_jingwei_character_template = {
             limit = {
                 has_variable = canton_coup_anti_communist
             }
-            set_ideology = ideology:ideology_moh_left_kmt
+            set_ideology = ideology:ideology_social_democrat
         }
     }
 }
@@ -2253,7 +2253,7 @@ chi_soong_chingling_character_template = {
             limit = {
                 has_variable = canton_coup_anti_communist
             }
-            set_ideology = ideology:ideology_moh_left_kmt
+            set_ideology = ideology:ideology_social_democrat
         }
     }
 }

@@ -35,6 +35,13 @@
 			remove_ideology = ideology_eight_legged
 		}
 	}
+	on_yearly_pulse = {
+		random_events = {
+			1000 = 0
+			2 = moh_random.101
+			1 = moh_random.102
+		}
+	}
 	weight = 100
 	should_be_pinned_by_default = yes
 }
