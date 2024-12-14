@@ -1,9 +1,14 @@
 ﻿BUILDINGS = {
 	s:STATE_BEIJING = {
 		region_state:CHI = {
-			create_building = {
-				building = "building_old_summer_palace"
-				level = 1
+			if = {
+				limit = {
+					morgenrote_is_active = no
+				}
+				create_building = {
+					building = "building_old_summer_palace"
+					level = 1
+				}
 			}
 		}
 	}

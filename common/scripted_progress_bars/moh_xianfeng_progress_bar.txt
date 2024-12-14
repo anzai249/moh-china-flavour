@@ -17,8 +17,12 @@
 		}
 		if = {
 			limit = {
-				NOT = {
-					has_variable = old_summer_palace
+				OR = {
+					NOT = {
+						has_variable = old_summer_palace
+					}
+					# morgenrote
+					has_global_variable = gaudi_summer_palace_looted
 				}
 			}
 			add = {

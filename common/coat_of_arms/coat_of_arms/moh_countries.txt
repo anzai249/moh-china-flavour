@@ -263,6 +263,17 @@ GNG = { # Dacheng
 	}
 }
 
+GNG_warlord = { # Dacheng
+	pattern = "pattern_solid.tga"
+	color1 = "grey"
+	
+	colored_emblem = {
+		texture = "ce_guangxi.png"
+		color1 = "black"
+		instance = { position = { 0.5 0.5 } scale = { 1.5 1.5 } }
+	}
+}
+
 SHN = { 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -800,22 +811,22 @@ LEP = {
 		instance = { scale = { 0.4 0.5 } position = { 0.275 0.75 } }				
 	}
 	colored_emblem = {
-		texture = "ce_guangxi.png"
+		texture = "ce_jiangsu.dds"
 		color1 = "black"
 		instance = { scale = { 0.4 0.5 } position = { 0.725 0.75 } }				
 	}
 	colored_emblem = {
-		texture = "ce_guangxi.png"
+		texture = "ce_fujian.dds"
 		color1 = "black"
 		instance = { scale = { 0.4 0.5 } position = { 0.725 0.25 } }				
 	}
 	colored_emblem = {
-		texture = "ce_guangxi.png"
+		texture = "ce_zhejiang.dds"
 		color1 = "black"
 		instance = { scale = { 0.4 0.5 } position = { 0.5 0.15 } }				
 	}
 	colored_emblem = {
-		texture = "ce_guangxi.png"
+		texture = "ce_jiangxi.dds"
 		color1 = "black"
 		instance = { scale = { 0.4 0.5 } position = { 0.225 0.5 } }				
 	}

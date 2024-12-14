@@ -4,7 +4,7 @@
 	
 	tier = principality
 	
-	cultures = { min hakka }
+	cultures = { min hakka han }
 	
 	capital = STATE_FUJIAN
 	is_named_from_capital = yes

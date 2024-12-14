@@ -301,6 +301,18 @@ GNG = {
 		coa_with_overlord_canton = GNG_subject
 		priority = 1
 	}
+	flag_definition = {
+		coa = GNG_warlord
+		subject_canton = GNG_warlord
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = GNG_subject
+		priority = 10
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_warlord_state
+			}
+		}
+	}
 }
 
 SIH = {

@@ -581,6 +581,7 @@ moh_historical.8 = {
 			s:STATE_BEIJING.region_state:CHI.controller = c:GBR
 		}
 		is_at_war = yes
+		morgenrote_is_active = no
 	}
 	immediate = {
 		remove_variable = old_summer_palace
