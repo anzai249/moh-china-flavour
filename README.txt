@@ -4,7 +4,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing, 1.8 Compatibility Testing
-Current version: beta-0.8.3
+Current version: beta-0.8.4
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
@@ -57,9 +57,11 @@ Compatible:
 [*]↓[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2880117699]中文人名补充[/url] (Only Simplified Chinese)
 [*]🀄[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3304655670]Chinese Style Map[/url]
 [*]↓[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2881364019]Historical Population Growth & Resources[/url]
+[*]↑[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2889925770]Morgenröte - Dawn of Flavor[/url] (Has small amounts of unique content, achievements not available, stability testing in progress.)
 
 Not Compatible:
 [*]Any other flavour pack, RA, EAFP
+[*]Daoyu Cheat (Reason unknown)
 
 Contact me if you want to make a compatch together.
 

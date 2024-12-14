@@ -248,7 +248,7 @@ moh_self_strengthing_war = {
 					}
 					change_variable = {
 						name = self_strengthening_lost_wars
-						value = 1
+						add = 1
 					}
 				}
 			}

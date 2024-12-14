@@ -12,6 +12,18 @@
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_c_fengtian_clique
+		adjective = dyn_c_fengtian_adj
+		is_main_tag_only = yes
+		priority = 1
+		trigger = {
+			has_global_variable = china_shatters
+			scope:actor ?= {
+				has_government_type = gov_warlord_state
+			}
+		}
+	}
 }
 
 CHI = {
@@ -263,6 +275,35 @@ AHU = {
 		trigger = {
 			scope:actor ?= {
 				has_variable = nian_rebellion
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_anhui_clique
+		adjective = AHU_ADJ
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			has_global_variable = china_shatters
+			scope:actor ?= {
+				has_government_type = gov_warlord_state
+			}
+		}
+	}
+}
+
+XIN = {
+	dynamic_country_name = {
+		name = dyn_c_xinjiang_clique
+		adjective = dyn_c_xinjiang_adj
+		is_main_tag_only = yes
+		priority = 1
+		trigger = {
+			has_global_variable = china_shatters
+			scope:actor ?= {
+				has_government_type = gov_warlord_state
 			}
 		}
 	}

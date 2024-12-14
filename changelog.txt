@@ -214,3 +214,14 @@ beta-0.8.3
 Fixes:
 
 - State religion of the Heavenly Kingdom.
+
+beta-0.8.4
+
+Fixes:
+
+- Self-Strengthening JE not able to fail (Can't lose wars).
+
+Changes: 
+
+- Warlord Era remake part 1.
+- New Character: Hou Debang. (Testing compatibility with Morgenrote)

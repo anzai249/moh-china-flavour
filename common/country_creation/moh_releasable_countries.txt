@@ -17,3 +17,11 @@ MAC = {
 
 	ai_will_do = { always = no }
 }
+
+HBE = {
+	states = {
+		STATE_EASTERN_HUBEI
+		STATE_WESTERN_HUBEI
+	}
+	ai_will_do = { always = no }
+}

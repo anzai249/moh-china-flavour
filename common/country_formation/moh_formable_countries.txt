@@ -1,0 +1,28 @@
+﻿LEP = {
+	states = {
+		STATE_FUJIAN
+		STATE_GUANGDONG
+		STATE_GUANGXI
+        STATE_JIANGSU
+        STATE_SUZHOU
+        STATE_NANJING
+        STATE_ZHEJIANG
+        STATE_JIANGXI
+        STATE_FUJIAN
+        STATE_SHAOZHOU
+        STATE_HUNAN
+        STATE_NORTHERN_ANHUI
+        STATE_SOUTHERN_ANHUI
+	}
+
+	required_states_fraction = 0.85
+	
+	ai_will_do = { 
+        always = yes
+    }
+	possible = {
+        NOT = {
+            c:CHI ?= this
+        }
+	}
+}

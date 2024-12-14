@@ -210,6 +210,9 @@ je_great_yuan = {
 			add_claim = ROOT
 		}
 	}
+	invalid = {
+		has_global_variable = china_shatters
+	}
 	weight = 10
 	should_be_pinned_by_default = yes
 }

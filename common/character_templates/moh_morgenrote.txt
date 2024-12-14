@@ -1,0 +1,16 @@
+﻿moh_mr_chi_hou_debang_character_template = {
+    first_name = moh_Debang
+    last_name = moh_Hou
+    historical = yes
+    culture = cu:min
+    female = no
+    ideology = ideology_moderate
+    interest_group = ig_intelligentsia
+    # birth_date = 1890.8.9
+    age = 35
+    traits = { 
+		mendelejew_chemist
+		innovative
+		erudite
+    }
+}

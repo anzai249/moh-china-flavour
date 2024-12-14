@@ -31,6 +31,51 @@ warlord_china_events.100 = {
 		# 	identity = identity_trade_league
 		# 	principle = principle_internal_trade_1
 		# }
+		
+		if = {
+			limit = {
+				exists = s:STATE_EASTERN_HUBEI.region_state:CHI
+			}
+			create_country = {
+				#Hunan
+				tag = HBE
+				origin = this
+				state = s:STATE_EASTERN_HUBEI.region_state:CHI
+				on_created = {
+					if = {
+						limit = {
+							exists = s:STATE_WESTERN_HUBEI.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_WESTERN_HUBEI
+							}
+							set_state_owner = c:HBE
+							set_state_type = incorporated
+						}
+					}
+					warlord_setup_effect = yes
+					set_variable = warlord_state
+					random_list = {
+						4 = {
+						}
+						1 = {
+							set_strategy = ai_strategy_unify_china
+						}
+					}
+					if = {
+						limit = {
+							country_has_primary_culture = cu:manchu
+						}
+						remove_primary_culture = cu:manchu
+					}
+				}
+			}
+			c:HBE = {
+				save_scope_as = scope_HBE
+				
+			}
+		}
 		if = {
 			limit = {
 				exists = s:STATE_HUNAN.region_state:CHI
@@ -60,7 +105,7 @@ warlord_china_events.100 = {
 			}
 			c:HNA = {
 				save_scope_as = scope_HNA
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -92,7 +137,7 @@ warlord_china_events.100 = {
 			}
 			c:GNG = {
 				save_scope_as = scope_GNG
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -105,6 +150,18 @@ warlord_china_events.100 = {
 				origin = this
 				state = s:STATE_SOUTHERN_ANHUI.region_state:CHI
 				on_created = {
+					if = {
+						limit = {
+							exists = s:STATE_NORTHERN_ANHUI.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_NORTHERN_ANHUI
+							}
+							set_state_owner = c:AHU
+							set_state_type = incorporated
+						}
+					}
 					warlord_setup_effect = yes
 					set_variable = warlord_state
 					random_list = {
@@ -124,7 +181,6 @@ warlord_china_events.100 = {
 			}
 			c:AHU = {
 				save_scope_as = scope_AHU
-				join_power_bloc = c:CHI
 			}
 		}
 		if = {
@@ -156,7 +212,7 @@ warlord_china_events.100 = {
 			}
 			c:ZHI = {
 				save_scope_as = scope_ZHI
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -169,6 +225,18 @@ warlord_china_events.100 = {
 				origin = this
 				state = s:STATE_SOUTHERN_MANCHURIA.region_state:CHI
 				on_created = {
+					if = {
+						limit = {
+							exists = s:STATE_SHENGJING.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_SHENGJING
+							}
+							set_state_owner = c:MCH
+							set_state_type = incorporated
+						}
+					}
 					warlord_setup_effect = yes
 					set_variable = warlord_state
 					random_list = {
@@ -182,7 +250,6 @@ warlord_china_events.100 = {
 			}
 			c:MCH = {
 				save_scope_as = scope_MCH
-				join_power_bloc = c:CHI
 			}
 		}
 		if = {
@@ -214,7 +281,7 @@ warlord_china_events.100 = {
 			}
 			c:SHN = {
 				save_scope_as = scope_SHN
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -227,6 +294,18 @@ warlord_china_events.100 = {
 				origin = this
 				state = s:STATE_TIANSHAN.region_state:CHI
 				on_created = {
+					if = {
+						limit = {
+							exists = s:STATE_DZUNGARIA.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_DZUNGARIA
+							}
+							set_state_owner = c:XIN
+							set_state_type = incorporated
+						}
+					}
 					warlord_setup_effect = yes
 					set_variable = warlord_state
 					random_list = {
@@ -247,7 +326,7 @@ warlord_china_events.100 = {
 			}
 			c:XIN = {
 				save_scope_as = scope_XIN
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -260,6 +339,18 @@ warlord_china_events.100 = {
 				origin = this
 				state = s:STATE_YUNNAN.region_state:CHI
 				on_created = {
+					if = {
+						limit = {
+							exists = s:STATE_GUIZHOU.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_GUIZHOU
+							}
+							set_state_owner = c:YUN
+							set_state_type = incorporated
+						}
+					}
 					warlord_setup_effect = yes
 					set_variable = warlord_state
 					random_list = {
@@ -279,41 +370,41 @@ warlord_china_events.100 = {
 			}
 			c:YUN = {
 				save_scope_as = scope_YUN
-				join_power_bloc = c:CHI
+				
 			}
 		}
-		if = {
-			limit = {
-				exists = s:STATE_GUIZHOU.region_state:CHI
-			}
-			create_country = {
-				#Guizhou
-				tag = GUI
-				origin = this
-				state = s:STATE_GUIZHOU.region_state:CHI
-				on_created = {
-					warlord_setup_effect = yes
-					set_variable = warlord_state
-					random_list = {
-						4 = {
-						}
-						1 = {
-							set_strategy = ai_strategy_unify_china
-						}
-					}
-					if = {
-						limit = {
-							country_has_primary_culture = cu:manchu
-						}
-						remove_primary_culture = cu:manchu
-					}
-				}
-			}
-			c:GUI = {
-				save_scope_as = scope_GUI
-				join_power_bloc = c:CHI
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		exists = s:STATE_GUIZHOU.region_state:CHI
+		# 	}
+		# 	create_country = {
+		# 		#Guizhou
+		# 		tag = GUI
+		# 		origin = this
+		# 		state = s:STATE_GUIZHOU.region_state:CHI
+		# 		on_created = {
+		# 			warlord_setup_effect = yes
+		# 			set_variable = warlord_state
+		# 			random_list = {
+		# 				4 = {
+		# 				}
+		# 				1 = {
+		# 					set_strategy = ai_strategy_unify_china
+		# 				}
+		# 			}
+		# 			if = {
+		# 				limit = {
+		# 					country_has_primary_culture = cu:manchu
+		# 				}
+		# 				remove_primary_culture = cu:manchu
+		# 			}
+		# 		}
+		# 	}
+		# 	c:GUI = {
+		# 		save_scope_as = scope_GUI
+				
+		# 	}
+		# }
 		if = {
 			limit = {
 				exists = s:STATE_GUANGDONG.region_state:CHI
@@ -324,6 +415,18 @@ warlord_china_events.100 = {
 				origin = this
 				state = s:STATE_GUANGDONG.region_state:CHI
 				on_created = {
+					if = {
+						limit = {
+							exists = s:STATE_SHAOZHOU.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_SHAOZHOU
+							}
+							set_state_owner = c:YUE
+							set_state_type = incorporated
+						}
+					}
 					warlord_setup_effect = yes
 					set_variable = warlord_state
 					random_list = {
@@ -344,7 +447,7 @@ warlord_china_events.100 = {
 			}
 			c:YUE = {
 				save_scope_as = scope_YUE
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -356,6 +459,18 @@ warlord_china_events.100 = {
 				origin = this
 				state = s:STATE_SICHUAN.region_state:CHI
 				on_created = {
+					if = {
+						limit = {
+							exists = s:STATE_CHONGQING.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_CHONGQING
+							}
+							set_state_owner = c:SIH
+							set_state_type = incorporated
+						}
+					}
 					warlord_setup_effect = yes
 					set_variable = warlord_state
 					random_list = {
@@ -375,7 +490,7 @@ warlord_china_events.100 = {
 			}
 			c:SIH = {
 				save_scope_as = scope_SIH
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -406,7 +521,7 @@ warlord_china_events.100 = {
 			}
 			c:SHA = {
 				save_scope_as = scope_SHA
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -418,6 +533,30 @@ warlord_china_events.100 = {
 				origin = this
 				state = s:STATE_NINGXIA.region_state:CHI
 				on_created = {
+					if = {
+						limit = {
+							exists = s:STATE_QINGHAI.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_QINGHAI
+							}
+							set_state_owner = c:XIB
+							set_state_type = incorporated
+						}
+					}
+					if = {
+						limit = {
+							exists = s:STATE_GANSU.region_state:CHI
+						}
+						random_state = {
+							limit = {
+								state_region = s:STATE_GANSU
+							}
+							set_state_owner = c:XIB
+							set_state_type = incorporated
+						}
+					}
 					warlord_setup_effect = yes
 					set_variable = warlord_state
 					random_list = {
@@ -437,7 +576,7 @@ warlord_china_events.100 = {
 			}
 			c:XIB = {
 				save_scope_as = scope_XIB
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -556,7 +695,7 @@ warlord_china_events.100 = {
 			}
 			c:FUJ = {
 				save_scope_as = scope_FUJ
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		if = {
@@ -588,7 +727,7 @@ warlord_china_events.100 = {
 			}
 			c:FRS = {
 				save_scope_as = scope_FRS
-				join_power_bloc = c:CHI
+				
 			}
 		}
 		every_subject_or_below = {
@@ -649,6 +788,7 @@ warlord_china_events.100 = {
 			exists = scope:scope_random_warlord_one
 			is_player = yes
 		}
+		activate_law = law_type:law_presidential_republic
 		custom_tooltip = warlord_china_implosion_tt
 		while = {
 			limit = {
@@ -677,8 +817,12 @@ warlord_china_events.100 = {
 							any_neighbouring_state = {
 								scope:warlord_scope ?= owner
 							}
+							NOT = {
+								state_region = s:STATE_HINGGAN
+							}
 						}
 						set_state_owner = scope:warlord_scope
+						set_state_type = incorporated
 					}
 				}
 			}
@@ -696,6 +840,7 @@ warlord_china_events.100 = {
 			exists = scope:scope_random_warlord_two
 			is_player = yes
 		}
+		activate_law = law_type:law_presidential_republic
 		custom_tooltip = warlord_china_implosion_tt
 		while = {
 			limit = {
@@ -724,8 +869,12 @@ warlord_china_events.100 = {
 							any_neighbouring_state = {
 								scope:warlord_scope ?= owner
 							}
+							NOT = {
+								state_region = s:STATE_HINGGAN
+							}
 						}
 						set_state_owner = scope:warlord_scope
+						set_state_type = incorporated
 					}
 				}
 			}
@@ -743,6 +892,7 @@ warlord_china_events.100 = {
 			exists = scope:scope_random_warlord_three
 			is_player = yes
 		}
+		activate_law = law_type:law_presidential_republic
 		custom_tooltip = warlord_china_implosion_tt
 		while = {
 			limit = {
@@ -771,8 +921,12 @@ warlord_china_events.100 = {
 							any_neighbouring_state = {
 								scope:warlord_scope ?= owner
 							}
+							NOT = {
+								state_region = s:STATE_HINGGAN
+							}
 						}
 						set_state_owner = scope:warlord_scope
+						set_state_type = incorporated
 					}
 				}
 			}
@@ -790,6 +944,7 @@ warlord_china_events.100 = {
 			exists = scope:scope_random_warlord_four
 			is_player = yes
 		}
+		activate_law = law_type:law_presidential_republic
 		custom_tooltip = warlord_china_implosion_tt
 		while = {
 			limit = {
@@ -818,8 +973,12 @@ warlord_china_events.100 = {
 							any_neighbouring_state = {
 								scope:warlord_scope ?= owner
 							}
+							NOT = {
+								state_region = s:STATE_HINGGAN
+							}
 						}
 						set_state_owner = scope:warlord_scope
+						set_state_type = incorporated
 					}
 				}
 			}
@@ -835,6 +994,7 @@ warlord_china_events.100 = {
 		default_option = yes
 		name = warlord_china_events.100.a
 		custom_tooltip = warlord_china_implosion_tt
+		activate_law = law_type:law_presidential_republic
 		while = {
 			limit = {
 				any_scope_state = {
@@ -862,8 +1022,12 @@ warlord_china_events.100 = {
 							any_neighbouring_state = {
 								scope:warlord_scope ?= owner
 							}
+							NOT = {
+								state_region = s:STATE_HINGGAN
+							}
 						}
 						set_state_owner = scope:warlord_scope
+						set_state_type = incorporated
 					}
 				}
 			}
@@ -1148,12 +1312,6 @@ warlord_china_events.400 = {
 				state = s:STATE_TIANSHAN.region_state:CHI
 				on_created = {
 					add_primary_culture = cu:uighur
-					if = {
-						limit = {
-							country_has_primary_culture = cu:han
-						}
-						remove_primary_culture = cu:han
-					}
 					if = {
 						limit = {
 							country_has_primary_culture = cu:manchu

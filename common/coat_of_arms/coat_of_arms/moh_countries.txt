@@ -285,7 +285,7 @@ YUN = {
 	}
 }
 
-YUE = { 
+YUE_kmt = { 
 	pattern = "pattern_solid.tga"
 	color1 = "blue"
 	
@@ -294,6 +294,22 @@ YUE = {
 		color1 = "white"
 		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
 	}
+}
+
+YUE = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_canton.dds"
+		color1 = "blue"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_jing.dds"
+		color1 = "white"
+		instance = { scale = { 1.1 1.1 } position = { 0.25 0.25 } }			
+	}	
 }
 
 GUI = { 
@@ -330,6 +346,17 @@ XIB = {
 }
 
 HNA = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "orange"
+		color2 = "red"
+	}
+}
+
+HBE = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
 	
@@ -467,6 +494,17 @@ HNA_subject = {
 	
 	colored_emblem = {
 		texture = "ce_hunan.png"
+		color1 = "black"
+		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+	}
+}
+
+HBE_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_hubei.dds"
 		color1 = "black"
 		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
 	}
@@ -718,4 +756,114 @@ MAC = {
 		color2 = "yellow"
 		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
 	}
+}
+
+LEP = {
+	pattern = "pattern_solid.tga"
+	color1 = "yellow"
+
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "black"
+        instance = { scale = { 0.51 0.51 } position = { 0.5 0.5 } }				
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "yellow"
+        instance = { scale = { 0.5 0.5 } position = { 0.5 0.5 } }				
+	}
+	colored_emblem = {
+		texture = "ce_dragon_china_circle.dds"
+		color1 = "blue"
+		color2 = "white"
+		color3 = "blue_light"
+		instance = { scale = { 0.525 0.525 } position = { 0.50 0.51 } }			
+	}
+	colored_emblem = {
+		texture = "ce_frame_circle.dds"
+		color1 = "red"
+		instance = { scale = { 0.09 0.09 } position = { 0.505 0.52 } }		
+	}
+	colored_emblem = {
+		texture = "ce_hunan.png"
+		color1 = "black"
+		instance = { scale = { 0.4 0.5 } position = { 0.5 0.85 } }				
+	}
+	colored_emblem = {
+		texture = "ce_anhui.png"
+		color1 = "black"
+		instance = { scale = { 0.4 0.5 } position = { 0.275 0.25 } }				
+	}
+	colored_emblem = {
+		texture = "ce_guangdong.png"
+		color1 = "black"
+		instance = { scale = { 0.4 0.5 } position = { 0.275 0.75 } }				
+	}
+	colored_emblem = {
+		texture = "ce_guangxi.png"
+		color1 = "black"
+		instance = { scale = { 0.4 0.5 } position = { 0.725 0.75 } }				
+	}
+	colored_emblem = {
+		texture = "ce_guangxi.png"
+		color1 = "black"
+		instance = { scale = { 0.4 0.5 } position = { 0.725 0.25 } }				
+	}
+	colored_emblem = {
+		texture = "ce_guangxi.png"
+		color1 = "black"
+		instance = { scale = { 0.4 0.5 } position = { 0.5 0.15 } }				
+	}
+	colored_emblem = {
+		texture = "ce_guangxi.png"
+		color1 = "black"
+		instance = { scale = { 0.4 0.5 } position = { 0.225 0.5 } }				
+	}
+	colored_emblem = {
+		texture = "ce_guangxi.png"
+		color1 = "black"
+		instance = { scale = { 0.4 0.5 } position = { 0.775 0.5 } }				
+	}
+}
+
+XIN_warlord = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_triangle.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.2 0.3 } position = { 0.2 0.25 } }
+		instance = { scale = { 0.2 0.3 } position = { 0.2 0.3 } rotation = 180 }		
+	}
+}
+
+BEI_dictatorship = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.3 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "blue"
+		color2 = "blue"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.5 } }			
+	}	
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.7 } }			
+	}		
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "black"
+		color2 = "black"
+		instance = { scale = { 1.0 0.2 } position = { 0.5 0.9 } }			
+	}	
 }

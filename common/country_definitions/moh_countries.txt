@@ -10,6 +10,79 @@
 	is_named_from_capital = yes
 }
 
+
+HNA = { #Hunan	
+	color = { 126 164 224 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han }
+	capital = STATE_HUNAN
+}
+
+AHU = { #Anhui
+	color = { 187 126 224 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han }
+	capital = STATE_SOUTHERN_ANHUI
+}
+
+ZHI = { #Zhili
+	color = { 207 64 88 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han }
+	capital = STATE_ZHILI
+}
+
+SHN = { #Shanxi
+	color = { 94 209 94 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han }
+	capital = STATE_SHANXI
+}
+
+GUI = { #Guizhou
+	color = { 37 102 37 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han}
+	capital = STATE_GUIZHOU
+}
+
+GNG = { #Guangxi
+	color = { 133 56 8 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han yue zhuang}
+	capital = STATE_GUANGXI
+}
+
+SIH = { #Sichuan
+	color = { 42 189 68 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han }
+	capital = STATE_SICHUAN
+}
+
+SHA = { #Shandong
+	color = { 189 113 42 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han }
+	capital = STATE_SHANDONG
+}
+
+XIB = {
+	color = { 68 144 212 }
+	country_type = unrecognized
+	tier = principality
+	cultures = { han tibetan }
+	capital = STATE_NINGXIA
+}
+
 CCP = { # Communist China
 	color = { 237 41 57 }
 	
@@ -26,7 +99,7 @@ HKG = {
 	color = { 255 255 255 }
 	country_type = unrecognized
 	
-	tier = principality
+	tier = city_state
 	
 	cultures = { yue }
 	
@@ -37,9 +110,31 @@ MAC = {
 	color = { 255 255 255 }
 	country_type = unrecognized
 	
-	tier = principality
+	tier = city_state
 	
 	cultures = { yue }
 	
 	capital = STATE_GUANGDONG
+}
+
+LEP = { # League of Eight Provinces
+	color = { 225 200 55 }
+	country_type = unrecognized
+	
+	tier = kingdom
+	
+	cultures = { han }
+	
+	capital = STATE_NANJING
+}
+
+HBE = { # Hubei
+	color = { 233 35 35 }
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { han }
+	
+	capital = STATE_EASTERN_HUBEI
 }
