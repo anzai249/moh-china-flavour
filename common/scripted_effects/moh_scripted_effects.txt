@@ -22,6 +22,7 @@
 			religion = rel:protestant
 			interest_group = ig_devout
 			ruler = yes
+			dna = ecchi_dna_hong_xiuquan
 			historical = yes
 			ideology = ideology_theocrat
 			traits = {

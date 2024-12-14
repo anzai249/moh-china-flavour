@@ -4,7 +4,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing, 1.8 Compatibility Testing
-Current version: beta-0.8.2
+Current version: beta-0.8.3
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
@@ -80,3 +80,6 @@ A: You need to have the following conditions:
 
 Q: How to adopt the Blue Sky White Sun flag?
 A: You should fail the Revolutionaries JE, this will split China into warlords. Then use any warlord and unite China.
+
+Q: Why not compatible with x?
+A: Working with other mods is a lot of work, I want to focus on the content of this mod first. If you want to make a compatch, please contact me.

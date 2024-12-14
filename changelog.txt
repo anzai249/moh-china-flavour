@@ -208,3 +208,9 @@ Changes:
 Fixes:
 
 - Error: turmoil trigger [ Wrong scope for trigger: pop, expected state ] in the Nian Rebellion event.
+
+beta-0.8.3
+
+Fixes:
+
+- State religion of the Heavenly Kingdom.

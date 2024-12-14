@@ -1193,35 +1193,35 @@ ecchi_chi_zhu_de_character_template = {
 
 # China - rebels and rural leaders
 
-ecchi_tpg_hong_xiuquan_character_template = {
-    first_name = Xiuquan
-    last_name = Hong
-    historical = yes
-    culture = cu:hakka
-    female = no
-    religion = rel:protestant
-    ideology = ideology_theocrat
-    interest_group = ig_devout
-    dna = ecchi_dna_hong_xiuquan
-    birth_date = 1814.1.1
-    traits = { pious romantic popular_commander psychological_affliction }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:TPG
-            this = c:TPG
-        }
-        interest_group_trigger = {
-            is_marginal = no
-            OR = {
-                is_interest_group_type = ig_devout
-                is_interest_group_type = ig_rural_folk
-            }
-        }
-        earliest_usage_date = 1850.1.1
-        latest_usage_date = 1864.6.1
-        chance = 65
-    }
-}
+# ecchi_tpg_hong_xiuquan_character_template = {
+#     first_name = Xiuquan
+#     last_name = Hong
+#     historical = yes
+#     culture = cu:hakka
+#     female = no
+#     religion = rel:protestant
+#     ideology = ideology_theocrat
+#     interest_group = ig_devout
+#     dna = ecchi_dna_hong_xiuquan
+#     birth_date = 1814.1.1
+#     traits = { pious romantic popular_commander psychological_affliction }
+#     interest_group_leader_usage = {
+#         country_trigger = {
+#             exists = c:TPG
+#             this = c:TPG
+#         }
+#         interest_group_trigger = {
+#             is_marginal = no
+#             OR = {
+#                 is_interest_group_type = ig_devout
+#                 is_interest_group_type = ig_rural_folk
+#             }
+#         }
+#         earliest_usage_date = 1850.1.1
+#         latest_usage_date = 1864.6.1
+#         chance = 65
+#     }
+# }
 
 ecchi_chi_cao_futian_character_template = {
     first_name = ecchi_Futian
