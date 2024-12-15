@@ -367,3 +367,8 @@
   moh_random.102.f: "最近一次科举考试中，主考官[SCOPE.sCharacter('cheat_character').GetCustom('GetUniversalFullName')]行为异常，好像异常关注某个考生。经过调查，发现这名考生的家族曾经向主考官行贿，试图通过贿赂来获得高分。\n\n这种行为严重违反了科举考试的规则，也损害了考试的公平性。[SCOPE.sCharacter('cheat_character').GetCustom('GetUniversalFullName')]被立即停职，并将其送交朝廷处理。"
   moh_random.102.a: "[ROOT.GetCountry.GetName]的律法饶不了他"
   moh_random.102.b: "让所有人都知道这个事"
+  warlord_china_events.600.t: "各省独立"
+  warlord_china_events.600.d: "一场反对君主制的革命拉开序幕。"
+  warlord_china_events.600.f: "各省代表纷纷倒戈，宣布独立，反对君主。目前有两种方案摆在我们面前：\n\n一是与对方妥协，共和方将派出一人为代表游说[Concept('concept_ruler', '$RULER_TITLE_EMPEROR$')]退位，不过此人要求我们把大[Concept('concept_ruler', '$RULER_TITLE_PRESIDENT$')]职位让给他。\n\n二是继续战斗，完成我们的共和梦想。"
+  warlord_china_events.600.a: "接受妥协"
+  warlord_china_events.600.b: "战斗到底"
