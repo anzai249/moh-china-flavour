@@ -50,3 +50,15 @@ moh_beiyang_presidential_republic = {
 		has_law = law_type:law_presidential_republic
 	}
 }
+
+moh_beiyang_monarchy = {
+	color = "red_china"
+
+	possible = {
+		AND = {
+			exists = c:BEI
+			THIS = c:BEI
+		}
+		has_law = law_type:law_monarchy
+	}
+}

@@ -1,325 +1,1500 @@
 ﻿moh_create_taiping_characters = {
-	if = {
-		limit = {
-			game_date < 1890.1.1
-			NOT = {
-				#If you exiled Hong and he got recruited somewhere else, he doesn't get to be here.
-				any_country = {
-					NOT = {
-						this = c:CHI
-					}
-					any_scope_character = {
-						has_variable = hong_var
-					}
-				}
-			}
-		}
-		create_character = {
-			first_name = Xiuquan
-			last_name = Hong
-			birth_date = 1814.1.1
-			culture = cu:hakka
-			religion = rel:protestant
-			interest_group = ig_devout
-			ruler = yes
-			dna = ecchi_dna_hong_xiuquan
-			historical = yes
-			ideology = ideology_theocrat
-			traits = {
-				inspirational_orator
-				persistent
-				psychological_affliction
-			}
-			on_created = {
-				set_variable = hong_var
-				add_modifier = {
-					name = modifier_brother_of_christ
-					months = long_modifier_time
-				}
-			}
-		}
-		if = {
-			limit = {
-				game_date > 1847.1.1
-			}
-			create_character = {
-				first_name = Tianguifu
-				last_name = Hong
-				birth_date = 1846.6.6
-				culture = cu:hakka
-				historical = yes
-				religion = rel:protestant
-				interest_group = ig_devout
-				heir = yes
-				ideology = ideology_moderate
-				traits = {
-					reserved
-				}
-			}
-		}
-	}
-	else = {
-		#Fallback chars if Hong is unavailable.
-		create_character = {
-			religion = rel:protestant
-			interest_group = ig_devout
-			ideology = ideology_theocrat
-			ruler = yes
-			traits = {
-				inspirational_orator
-				persistent
-				psychological_affliction
-			}
-			on_created = {
-				add_modifier = {
-					name = modifier_brother_of_christ
-					months = long_modifier_time
-				}
-			}
-		}
-		create_character = {
-			first_name = Tianguifu
-			religion = rel:protestant
-			interest_group = ig_devout
-			heir = yes
-			ideology = ideology_moderate
-		}
-	}
-	if = {
-		limit = {
-			game_date > 1841.1.1
-			game_date < 1890.1.1
-		}
-		create_character = {
-			first_name = Xiuqing
-			last_name = Yang
-			birth_date = 1821.9.23
-			culture = cu:han
-			religion = rel:protestant
-			is_general = yes
-			ig_leader = yes
-			historical = yes
-			interest_group = ig_armed_forces
-			hq = region_south_china
-			ideology = ideology_theocrat
-			commander_rank = commander_rank_3
-			traits = {
-				grifter
-				expert_political_operator
-				ambitious
-				demagogue
-			}
-		}
-	}
-	if = {
-		limit = {
-			game_date > 1840.1.1
-			game_date < 1890.1.1
-		}
-		create_character = {
-			first_name = Chaogui
-			last_name = Xiao
-			birth_date = 1820.1.1
-			culture = cu:hakka
-			religion = rel:protestant
-			is_general = yes
-			ig_leader = yes
-			historical = yes
-			interest_group = ig_devout
-			hq = region_south_china
-			ideology = ideology_theocrat
-			commander_rank = commander_rank_1
-			traits = {
-				reckless
-				charismatic
-				demagogue
-			}
-		}
-	}
-	if = {
-		limit = {
-			game_date > 1842.1.1
-			game_date < 1890.1.1
-		}
-		create_character = {
-			first_name = Rengan
-			last_name = Hong
-			birth_date = 1822.2.18
-			culture = cu:han
-			religion = rel:protestant
-			ig_leader = yes
-			historical = yes
-			interest_group = ig_intelligentsia
-			ideology = ideology_market_liberal
-			traits = {
-				innovative
-				persistent
-				basic_diplomat
-			}
-		}
-	}
+    if = {
+        limit = {
+            game_date < 1890.1.1
+            NOT = {
+                #If you exiled Hong and he got recruited somewhere else, he doesn't get to be here.
+                any_country = {
+                    NOT = {
+                        this = c:CHI
+                    }
+                    any_scope_character = {
+                        has_variable = hong_var
+                    }
+                }
+            }
+        }
+        create_character = {
+            first_name = Xiuquan
+            last_name = Hong
+            birth_date = 1814.1.1
+            culture = cu:hakka
+            religion = rel:protestant
+            interest_group = ig_devout
+            ruler = yes
+            dna = ecchi_dna_hong_xiuquan
+            historical = yes
+            ideology = ideology_theocrat
+            traits = {
+                inspirational_orator
+                persistent
+                psychological_affliction
+            }
+            on_created = {
+                set_variable = hong_var
+                add_modifier = {
+                    name = modifier_brother_of_christ
+                    months = long_modifier_time
+                }
+            }
+        }
+        if = {
+            limit = {
+                game_date > 1847.1.1
+            }
+            create_character = {
+                first_name = Tianguifu
+                last_name = Hong
+                birth_date = 1846.6.6
+                culture = cu:hakka
+                historical = yes
+                religion = rel:protestant
+                interest_group = ig_devout
+                heir = yes
+                ideology = ideology_moderate
+                traits = {
+                    reserved
+                }
+            }
+        }
+    }
+    else = {
+        #Fallback chars if Hong is unavailable.
+        create_character = {
+            religion = rel:protestant
+            interest_group = ig_devout
+            ideology = ideology_theocrat
+            ruler = yes
+            traits = {
+                inspirational_orator
+                persistent
+                psychological_affliction
+            }
+            on_created = {
+                add_modifier = {
+                    name = modifier_brother_of_christ
+                    months = long_modifier_time
+                }
+            }
+        }
+        create_character = {
+            first_name = Tianguifu
+            religion = rel:protestant
+            interest_group = ig_devout
+            heir = yes
+            ideology = ideology_moderate
+        }
+    }
+    if = {
+        limit = {
+            game_date > 1841.1.1
+            game_date < 1890.1.1
+        }
+        create_character = {
+            first_name = Xiuqing
+            last_name = Yang
+            birth_date = 1821.9.23
+            culture = cu:han
+            religion = rel:protestant
+            is_general = yes
+            ig_leader = yes
+            historical = yes
+            interest_group = ig_armed_forces
+            hq = region_south_china
+            ideology = ideology_theocrat
+            commander_rank = commander_rank_3
+            traits = {
+                grifter
+                expert_political_operator
+                ambitious
+                demagogue
+            }
+        }
+    }
+    if = {
+        limit = {
+            game_date > 1840.1.1
+            game_date < 1890.1.1
+        }
+        create_character = {
+            first_name = Chaogui
+            last_name = Xiao
+            birth_date = 1820.1.1
+            culture = cu:hakka
+            religion = rel:protestant
+            is_general = yes
+            ig_leader = yes
+            historical = yes
+            interest_group = ig_devout
+            hq = region_south_china
+            ideology = ideology_theocrat
+            commander_rank = commander_rank_1
+            traits = {
+                reckless
+                charismatic
+                demagogue
+            }
+        }
+    }
+    if = {
+        limit = {
+            game_date > 1842.1.1
+            game_date < 1890.1.1
+        }
+        create_character = {
+            first_name = Rengan
+            last_name = Hong
+            birth_date = 1822.2.18
+            culture = cu:han
+            religion = rel:protestant
+            ig_leader = yes
+            historical = yes
+            interest_group = ig_intelligentsia
+            ideology = ideology_market_liberal
+            traits = {
+                innovative
+                persistent
+                basic_diplomat
+            }
+        }
+    }
 }
 
 sun_yatsen_goto = {
-	set_global_variable = {
-		name = sun_yatsen_in
-		value = this
-	}
-	# random_character = {
-	# 	limit = {
-	# 		has_variable = sun_yatsen_character
-	# 	}
-	# 	transfer_character = root
-	# }
+    set_global_variable = {
+        name = sun_yatsen_in
+        value = this
+    }
+    # random_character = {
+    # 	limit = {
+    # 		has_variable = sun_yatsen_character
+    # 	}
+    # 	transfer_character = root
+    # }
 }
 
 
 chi_add_1_fragile_unity = {
-	custom_tooltip = chi_remove_1_fragile_unity_tt
-	post_notification = warlord_china_explosion_point_add
-	change_variable = {
-		name = china_warlord_explosion
-		add = 1
-	}
+    custom_tooltip = chi_remove_1_fragile_unity_tt
+    post_notification = warlord_china_explosion_point_add
+    change_variable = {
+        name = china_warlord_explosion
+        add = 1
+    }
 }
 
 chi_remove_1_fragile_unity = {
-	custom_tooltip = chi_add_1_fragile_unity_tt
-	post_notification = warlord_china_explosion_point_remove
-	change_variable = {
-		name = china_warlord_explosion
-		subtract = 1
-	}
+    custom_tooltip = chi_add_1_fragile_unity_tt
+    post_notification = warlord_china_explosion_point_remove
+    change_variable = {
+        name = china_warlord_explosion
+        subtract = 1
+    }
 }
 
 moh_random_opera_name = {
-	random_list = {
-		1 = {
-			set_variable = {
-				name = opera_name
-				value = 1
-			}
-		}
-		1 = {
-			set_variable = {
-				name = opera_name
-				value = 2
-			}
-		}
-		1 = {
-			set_variable = {
-				name = opera_name
-				value = 3
-			}
-		}
-		1 = {
-			set_variable = {
-				name = opera_name
-				value = 4
-			}
-		}
-		1 = {
-			set_variable = {
-				name = opera_name
-				value = 5
-			}
-		}
-		1 = {
-			set_variable = {
-				name = opera_name
-				value = 6
-			}
-		}
-		1 = {
-			set_variable = {
-				name = opera_name
-				value = 7
-			}
-		}
-		1 = {
-			set_variable = {
-				name = opera_name
-				value = 8
-			}
-		}
-	}
+    random_list = {
+        1 = {
+            set_variable = {
+                name = opera_name
+                value = 1
+            }
+        }
+        1 = {
+            set_variable = {
+                name = opera_name
+                value = 2
+            }
+        }
+        1 = {
+            set_variable = {
+                name = opera_name
+                value = 3
+            }
+        }
+        1 = {
+            set_variable = {
+                name = opera_name
+                value = 4
+            }
+        }
+        1 = {
+            set_variable = {
+                name = opera_name
+                value = 5
+            }
+        }
+        1 = {
+            set_variable = {
+                name = opera_name
+                value = 6
+            }
+        }
+        1 = {
+            set_variable = {
+                name = opera_name
+                value = 7
+            }
+        }
+        1 = {
+            set_variable = {
+                name = opera_name
+                value = 8
+            }
+        }
+    }
 }
 
 form_new_dynasty = {
-	add_journal_entry = {
-		type = je_keju
-	}
-	
-	ig:ig_intelligentsia = { 
-		set_interest_group_name = ig_literati
-		remove_ideology = ideology_anti_clerical
-		remove_ideology = ideology_republican
-		add_ideology = ideology_eight_legged
-	}
-	ig:ig_landowners = { 
-		set_interest_group_name = ig_scholar_officials
-		remove_ideology = ideology_paternalistic
-		add_ideology = ideology_scholar_paternalistic
-	}
+    add_journal_entry = {
+        type = je_keju
+    }
+
+    ig:ig_intelligentsia = {
+        set_interest_group_name = ig_literati
+        remove_ideology = ideology_anti_clerical
+        remove_ideology = ideology_republican
+        add_ideology = ideology_eight_legged
+    }
+    ig:ig_landowners = {
+        set_interest_group_name = ig_scholar_officials
+        remove_ideology = ideology_paternalistic
+        add_ideology = ideology_scholar_paternalistic
+    }
 }
 
 remove_8_banners = {
-	ig:ig_armed_forces = {
-		set_interest_group_name = ig_armed_forces
-	}
+    ig:ig_armed_forces = {
+        set_interest_group_name = ig_armed_forces
+    }
 }
 
 divide_kmt = {
-	if = {
-		limit = {
-			any_character = {
-				has_template = ecchi_chi_chiang_kai_shek_character_template
-			}
-		}
-		random_character = {
-			limit = {
-				has_template = ecchi_chi_chiang_kai_shek_character_template
-			}
-			set_ideology = ideology:ideology_moh_right_kmt
-		}
-	}
-	if = {
-		limit = {
-			any_character = {
-				has_template = ecchi_chi_wang_jingwei_character_template
-			}
-		}
-		random_character = {
-			limit = {
-				has_template = ecchi_chi_wang_jingwei_character_template
-			}
-			set_ideology = ideology:ideology_social_democrat
-		}
-	}
-	if = {
-		limit = {
-			any_character = {
-				has_template = chi_soong_chingling_character_template
-			}
-		}
-		random_character = {
-			limit = {
-				has_template = chi_soong_chingling_character_template
-			}
-			set_ideology = ideology:ideology_social_democrat
-		}
-	}
-	every_character = {
-		limit = {
-			has_ideology = ideology:ideology_moh_kmt
-		}
-		random_list = {
-			1 = {
-				set_ideology = ideology:ideology_social_democrat
-			}
-			1 = {
-				set_ideology = ideology:ideology_moh_right_kmt
-			}
-		}
-	}
+    if = {
+        limit = {
+            any_character = {
+                has_template = ecchi_chi_chiang_kai_shek_character_template
+            }
+        }
+        random_character = {
+            limit = {
+                has_template = ecchi_chi_chiang_kai_shek_character_template
+            }
+            set_ideology = ideology:ideology_moh_right_kmt
+        }
+    }
+    if = {
+        limit = {
+            any_character = {
+                has_template = ecchi_chi_wang_jingwei_character_template
+            }
+        }
+        random_character = {
+            limit = {
+                has_template = ecchi_chi_wang_jingwei_character_template
+            }
+            set_ideology = ideology:ideology_social_democrat
+        }
+    }
+    if = {
+        limit = {
+            any_character = {
+                has_template = chi_soong_chingling_character_template
+            }
+        }
+        random_character = {
+            limit = {
+                has_template = chi_soong_chingling_character_template
+            }
+            set_ideology = ideology:ideology_social_democrat
+        }
+    }
+    every_character = {
+        limit = {
+            has_ideology = ideology:ideology_moh_kmt
+        }
+        random_list = {
+            1 = {
+                set_ideology = ideology:ideology_social_democrat
+            }
+            1 = {
+                set_ideology = ideology:ideology_moh_right_kmt
+            }
+        }
+    }
+}
+
+warlord_setup_effect_laws = {
+    activate_law = law_type:law_autocracy
+    activate_law = law_type:law_presidential_republic
+    activate_law = law_type:law_peasant_levies
+    if = {
+        limit = {
+            NOR = {
+                c:MGL ?= this
+                c:TUV ?= this
+                c:ALI ?= this
+                c:TIB ?= this
+            }
+        }
+        if = {
+            limit = {
+                NOR = {
+                    country_has_primary_culture = cu:han
+                    country_has_primary_culture = cu:manchu
+                }
+            }
+            add_primary_culture = cu:han
+            if = {
+                limit = {
+                    OR = {
+                        has_law = law_type:law_ethnostate
+                        has_law = law_type:law_national_supremacy
+                    }
+                }
+                remove_primary_culture = cu:uighur
+                remove_primary_culture = cu:tibetan
+                remove_primary_culture = cu:mongol
+            }
+        }
+    }
+
+    every_scope_character = {
+        random_list = {
+            80 =  {
+            }
+
+            20 = {
+                add_trait = bandit
+            }
+        }
+    }
+}
+
+warlord_setup_effect_ruler = {
+    if = {
+        limit = {
+            NOR = {
+                c:MGL ?= this
+                c:TUV ?= this
+                c:ALI ?= this
+                c:TIB ?= this
+            }
+        }
+        random_character = {
+            limit = {
+                c:CHI ?= owner
+                OR = {
+                    has_role = general
+                    AND = {
+                        PREV = {
+                            any_scope_state = {
+                                has_building = building_naval_base
+                            }
+                        }
+                        has_role = admiral
+                    }
+                }
+            }
+            transfer_character = PREV
+            set_character_as_ruler = yes
+        }
+    }
+}
+
+warlord_setup_mongolia = {
+    add_journal_entry = {
+        type = je_great_yuan
+    }
+    this = {
+        if = {
+            limit = {
+                year <= 1841
+            }
+            create_character = {
+                last_name = moh_Jebtsundamba
+                first_name = moh_Luvsanchultimjigmed
+                culture = cu:mongol
+                historical = yes
+                interest_group = ig:ig_devout
+                ruler = yes
+                birth_date = 1815.6.14
+            }
+        }
+        else_if = {
+            limit = {
+                year <= 1848
+            }
+            create_character = {
+                last_name = moh_Jebtsundamba
+                first_name = moh_Luvsantuvdenchoyjijaltsan
+                culture = cu:mongol
+                historical = yes
+                interest_group = ig:ig_devout
+                ruler = yes
+                birth_date = 1843.2.21
+            }
+        }
+        else_if = {
+            limit = {
+                year <= 1868
+            }
+            create_character = {
+                last_name = moh_Jebtsundamba
+                first_name = moh_Agvaanchoyjivanchugperenlaijamts
+                culture = cu:mongol
+                historical = yes
+                interest_group = ig:ig_devout
+                ruler = yes
+                birth_date = 1850.1.1
+            }
+        }
+        else_if = {
+            limit = {
+                year <= 1924
+            }
+            create_character = {
+                last_name = moh_Jebtsundamba
+                first_name = moh_Agvaanluvsanchoyjindanzanvaanchigbalsambuu
+                culture = cu:mongol
+                historical = yes
+                interest_group = ig:ig_devout
+                ruler = yes
+                birth_date = 1869.10.13
+            }
+        }
+    }
+}
+
+warlord_setup_countries = {
+
+    if = {
+        limit = {
+            exists = s:STATE_LHASA.region_state:CHI
+            NOT = {
+                exists = c:TIB
+            }
+        }
+        create_country = {
+            # Tibet
+            tag = TIB
+            origin = this
+            state = s:STATE_LHASA.region_state:CHI
+            on_created = {
+                if = {
+                    limit = {
+                        exists = s:STATE_NGARI.region_state:CHI
+                    }
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_NGARI
+                        }
+                        set_state_owner = c:TIB
+                        set_state_type = incorporated
+                    }
+                }
+                activate_law = law_type:law_theocracy
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:han
+                    }
+                    remove_primary_culture = cu:han
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            country_has_primary_culture = cu:tibetan
+                        }
+                    }
+                    add_primary_culture = cu:tibetan
+                }
+            }
+        }
+    }
+    if = {
+        limit = {
+            c:CHI = {
+                has_state_in_state_region = STATE_GUANGXI
+            }
+        }
+        create_country = {
+            #Guangxi
+            tag = GNG
+            origin = this
+            state = s:STATE_GUANGXI.region_state:CHI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:GNG = {
+            save_scope_as = scope_GNG
+        }
+    }
+    if = {
+        limit = {
+            c:BEI = {
+                has_state_in_state_region = STATE_GUANGXI
+            }
+        }
+        create_country = {
+            #Guangxi
+            tag = GNG
+            origin = this
+            state = s:STATE_GUANGXI.region_state:BEI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:GNG = {
+            save_scope_as = scope_GNG
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_SOUTHERN_ANHUI.region_state:CHI
+        }
+        create_country = {
+            #Anhui Clique
+            tag = AHU
+            origin = this
+            state = s:STATE_SOUTHERN_ANHUI.region_state:CHI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_NORTHERN_ANHUI
+                        }
+                        set_state_owner = c:AHU
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:AHU = {
+            save_scope_as = scope_AHU
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_SOUTHERN_ANHUI.region_state:BEI
+        }
+        create_country = {
+            #Anhui Clique
+            tag = AHU
+            origin = this
+            state = s:STATE_SOUTHERN_ANHUI.region_state:BEI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_NORTHERN_ANHUI
+                        }
+                        set_state_owner = c:AHU
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:AHU = {
+            save_scope_as = scope_AHU
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_SOUTHERN_MANCHURIA.region_state:CHI
+        }
+        create_country = {
+            #Fengtian Clique
+            tag = MCH
+            origin = this
+            state = s:STATE_SOUTHERN_MANCHURIA.region_state:CHI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_SHENGJING
+                        }
+                        set_state_owner = c:MCH
+                        set_state_type = incorporated
+                    }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_character = {
+                                has_template = ecchi_chi_zhang_zuolin_character_template
+                            }
+                        }
+                        year > 1900
+                    }
+                    create_character = {
+                        template = ecchi_chi_zhang_zuolin_character_template
+                        is_ruler = yes
+                    }
+                }
+                else = {
+                    warlord_setup_effect_ruler = yes
+                }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+            }
+        }
+        c:MCH = {
+            save_scope_as = scope_MCH
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_SOUTHERN_MANCHURIA.region_state:BEI
+        }
+        create_country = {
+            #Fengtian Clique
+            tag = MCH
+            origin = this
+            state = s:STATE_SOUTHERN_MANCHURIA.region_state:BEI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_SHENGJING
+                        }
+                        set_state_owner = c:MCH
+                        set_state_type = incorporated
+                    }
+                if = {
+                    limit = {
+                        NOT = {
+                            any_character = {
+                                has_template = ecchi_chi_zhang_zuolin_character_template
+                            }
+                        }
+                        year > 1900
+                    }
+                    create_character = {
+                        template = ecchi_chi_zhang_zuolin_character_template
+                        is_ruler = yes
+                    }
+                }
+                else = {
+                    warlord_setup_effect_ruler = yes
+                }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+            }
+        }
+        c:MCH = {
+            save_scope_as = scope_MCH
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_SHANXI.region_state:CHI
+        }
+        create_country = {
+            #Shanxi
+            tag = SHN
+            origin = this
+            state = s:STATE_SHANXI.region_state:CHI
+            on_created = {
+                if = {
+                    limit = {
+                        NOT = {
+                            any_character = {
+                                has_template = ecchi_chi_yan_xishan_character_template
+                            }
+                        }
+                    }
+                    create_character = {
+                        template = ecchi_chi_yan_xishan_character_template
+                        is_ruler = yes
+                    }
+                }
+                else = {
+                    warlord_setup_effect_ruler = yes
+                }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:SHN = {
+            save_scope_as = scope_SHN
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_SHANXI.region_state:BEI
+        }
+        create_country = {
+            #Shanxi
+            tag = SHN
+            origin = this
+            state = s:STATE_SHANXI.region_state:BEI
+            on_created = {
+                if = {
+                    limit = {
+                        NOT = {
+                            any_character = {
+                                has_template = ecchi_chi_yan_xishan_character_template
+                            }
+                        }
+                    }
+                    create_character = {
+                        template = ecchi_chi_yan_xishan_character_template
+                        is_ruler = yes
+                    }
+                }
+                else = {
+                    warlord_setup_effect_ruler = yes
+                }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:SHN = {
+            save_scope_as = scope_SHN
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_TIANSHAN.region_state:CHI
+        }
+        create_country = {
+            #Xinjiang Clique
+            tag = XIN
+            origin = this
+            state = s:STATE_TIANSHAN.region_state:CHI
+            on_created = {
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_DZUNGARIA
+						OR = {
+							c:CHI ?= owner
+							c:BEI ?= owner
+						}
+                    }
+                    set_state_owner = c:XIN
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_JETISY
+						OR = {
+							c:CHI ?= owner
+							c:BEI ?= owner
+						}
+                    }
+                    set_state_owner = c:XIN
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_KIRGHIZIA
+						OR = {
+							c:CHI ?= owner
+							c:BEI ?= owner
+						}
+                    }
+                    set_state_owner = c:XIN
+                }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:XIN = {
+            save_scope_as = scope_XIN
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_TIANSHAN.region_state:BEI
+        }
+        create_country = {
+            #Xinjiang Clique
+            tag = XIN
+            origin = this
+            state = s:STATE_TIANSHAN.region_state:BEI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_DZUNGARIA
+                        }
+                        set_state_owner = c:XIN
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:XIN = {
+            save_scope_as = scope_XIN
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_YUNNAN.region_state:CHI
+        }
+        create_country = {
+            #Yunnan
+            tag = YUN
+            origin = this
+            state = s:STATE_YUNNAN.region_state:CHI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_GUIZHOU
+                        }
+                        set_state_owner = c:YUN
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:YUN = {
+            save_scope_as = scope_YUN
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_YUNNAN.region_state:BEI
+        }
+        create_country = {
+            #Yunnan
+            tag = YUN
+            origin = this
+            state = s:STATE_YUNNAN.region_state:BEI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_GUIZHOU
+                        }
+                        set_state_owner = c:YUN
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:YUN = {
+            save_scope_as = scope_YUN
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_GUANGDONG.region_state:CHI
+        }
+        create_country = {
+            #Guangdong
+            tag = YUE
+            origin = this
+            state = s:STATE_GUANGDONG.region_state:CHI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_SHAOZHOU
+                        }
+                        set_state_owner = c:YUE
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:YUE = {
+            save_scope_as = scope_YUE
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_GUANGDONG.region_state:BEI
+        }
+        create_country = {
+            #Guangdong
+            tag = YUE
+            origin = this
+            state = s:STATE_GUANGDONG.region_state:BEI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_SHAOZHOU
+                        }
+                        set_state_owner = c:YUE
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:YUE = {
+            save_scope_as = scope_YUE
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_NINGXIA.region_state:CHI
+        }
+        create_country = {
+            tag = XIB
+            origin = this
+            state = s:STATE_NINGXIA.region_state:CHI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_QINGHAI
+                        }
+                        set_state_owner = c:XIB
+                        set_state_type = incorporated
+                    }
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_GANSU
+                        }
+                        set_state_owner = c:XIB
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:XIB = {
+            save_scope_as = scope_XIB
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_NINGXIA.region_state:BEI
+        }
+        create_country = {
+            tag = XIB
+            origin = this
+            state = s:STATE_NINGXIA.region_state:BEI
+            on_created = {
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_QINGHAI
+                        }
+                        set_state_owner = c:XIB
+                        set_state_type = incorporated
+                    }
+                    random_state = {
+                        limit = {
+                            state_region = s:STATE_GANSU
+                        }
+                        set_state_owner = c:XIB
+                        set_state_type = incorporated
+                    }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:XIB = {
+            save_scope_as = scope_XIB
+
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_ULIASTAI.region_state:CHI
+        }
+        create_country = {
+            tag = MGL
+            origin = this
+            state = s:STATE_ULIASTAI.region_state:CHI
+            on_created = {
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_URGA
+						OR = {
+							c:CHI ?= owner
+							c:BEI ?= owner
+						}
+                    }
+                    set_state_owner = c:MGL
+                }
+                warlord_setup_mongolia = yes
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:han
+                    }
+                    remove_primary_culture = cu:han
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:MGL = {
+            save_scope_as = scope_MGL
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_ULIASTAI.region_state:BEI
+        }
+        create_country = {
+            tag = MGL
+            origin = this
+            state = s:STATE_ULIASTAI.region_state:BEI
+            on_created = {
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_URGA
+						OR = {
+							c:CHI ?= owner
+							c:BEI ?= owner
+						}
+                        
+                    }
+                    set_state_owner = c:MGL
+                }
+                warlord_setup_mongolia = yes
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:han
+                    }
+                    remove_primary_culture = cu:han
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:MGL = {
+            save_scope_as = scope_MGL
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_TUVA.region_state:CHI
+        }
+        create_country = {
+            tag = TUV
+            origin = this
+            state = s:STATE_TUVA.region_state:CHI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:han
+                    }
+                    remove_primary_culture = cu:han
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:TUV = {
+            save_scope_as = scope_TUV
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_TUVA.region_state:BEI
+        }
+        create_country = {
+            tag = TUV
+            origin = this
+            state = s:STATE_TUVA.region_state:BEI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:han
+                    }
+                    remove_primary_culture = cu:han
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:TUV = {
+            save_scope_as = scope_TUV
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_ALTAI.region_state:CHI
+        }
+        create_country = {
+            tag = ALI
+            origin = this
+            state = s:STATE_ALTAI.region_state:CHI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:han
+                    }
+                    remove_primary_culture = cu:han
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:ALI = {
+            save_scope_as = scope_ALI
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_ALTAI.region_state:BEI
+        }
+        create_country = {
+            tag = ALI
+            origin = this
+            state = s:STATE_ALTAI.region_state:BEI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:han
+                    }
+                    remove_primary_culture = cu:han
+                }
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+            }
+        }
+        c:ALI = {
+            save_scope_as = scope_ALI
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_FUJIAN.region_state:CHI
+        }
+        create_country = {
+            tag = FUJ
+            origin = this
+            state = s:STATE_FUJIAN.region_state:CHI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+            }
+        }
+        c:FUJ = {
+            save_scope_as = scope_FUJ
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_FUJIAN.region_state:BEI
+        }
+        create_country = {
+            tag = FUJ
+            origin = this
+            state = s:STATE_FUJIAN.region_state:BEI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+            }
+        }
+        c:FUJ = {
+            save_scope_as = scope_FUJ
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_FORMOSA.region_state:CHI
+        }
+        create_country = {
+            tag = FRS
+            origin = this
+            state = s:STATE_FORMOSA.region_state:CHI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+            }
+        }
+        c:FRS = {
+            save_scope_as = scope_FRS
+        }
+    }
+    if = {
+        limit = {
+            exists = s:STATE_FORMOSA.region_state:BEI
+        }
+        create_country = {
+            tag = FRS
+            origin = this
+            state = s:STATE_FORMOSA.region_state:BEI
+            on_created = {
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                if = {
+                    limit = {
+                        country_has_primary_culture = cu:manchu
+                    }
+                    remove_primary_culture = cu:manchu
+                }
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+            }
+        }
+        c:FRS = {
+            save_scope_as = scope_FRS
+        }
+    }
 }

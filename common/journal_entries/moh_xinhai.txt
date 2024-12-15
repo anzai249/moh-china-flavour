@@ -66,12 +66,14 @@ je_xinhai = {
 		OR = {
 			has_civil_war_from_movement_type = movement_type:movement_liberal
 			has_civil_war_from_movement_type = movement_type:movement_radical
+			has_civil_war_from_movement_type = movement_type:movement_royalist_constitutional
+			has_civil_war_from_movement_type = movement_type:movement_royalist_absolutist
 		}
 
 	}
 	on_fail = {
 		trigger_event = {
-			id = warlord_china_events.100
+			id = warlord_china_events.600
 		}
 	}
 	on_monthly_pulse = {

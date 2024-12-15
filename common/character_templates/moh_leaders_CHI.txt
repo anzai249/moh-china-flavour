@@ -663,10 +663,10 @@ ecchi_chi_zhang_zuolin_character_template = {
     culture = cu:han
     female = no
     ideology = ideology_moderate
-    interest_group = ig_rural_folk
+    interest_group = ig_armed_forces
     dna = ecchi_dna_zhang_zuolin
     birth_date = 1875.3.19
-    traits = { ambitious meticulous experienced_diplomat }
+    traits = { ambitious meticulous experienced_diplomat imperious }
     interest_group_leader_usage = {
         country_trigger = {
             hga_is_active = no
@@ -691,7 +691,7 @@ ecchi_chi_zhang_zuolin_character_template = {
         }
         earliest_usage_date = 1920.1.1
         latest_usage_date = 1928.6.4
-        chance = 65
+        chance = 25
     }
 }
 
@@ -717,14 +717,11 @@ ecchi_chi_yan_xishan_character_template = {
         }
         interest_group_trigger = {
             is_marginal = no
-            OR = {
-                is_interest_group_type = ig_armed_forces
-                is_interest_group_type = ig_rural_folk
-            }
+            is_interest_group_type = ig_armed_forces
         }
-        earliest_usage_date = 1915.1.1
+        earliest_usage_date = 1912.1.1
         latest_usage_date = 1960.7.22
-        chance = 65
+        chance = 30
     }
 }
 
@@ -2307,5 +2304,32 @@ chi_liu_kunyi_character_template = {
         earliest_usage_date = 1855.1.1
         latest_usage_date = 1902.10.6
         chance = 60
+    }
+}
+
+# Chang Hsueh-liang
+
+chi_chang_hsueliang_character_template = {
+    first_name = moh_Hsueh_liang
+    last_name = Zhang
+    historical = yes
+    culture = cu:han
+    ideology = ideology_moderate
+    interest_group = ig_armed_forces
+    birth_date = 1901.6.3
+    traits = { honorable wrathful forest_commander }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_SHENGJING
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1919.1.1
+        latest_usage_date = 2001.10.15
+        chance = 80
     }
 }
