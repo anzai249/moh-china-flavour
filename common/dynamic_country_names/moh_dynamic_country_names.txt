@@ -244,25 +244,44 @@ DAI = {
 			}
 		}
 	}
-	# dynamic_country_name = {
-	# 	name = dyn_c_fra_indochina
-	# 	adjective = dyn_c_fra_indochina_adj
-	# 	use_overlord_prefix = yes
-	# 	is_main_tag_only = yes
-	# 	priority = 0
-	# 	trigger = {
-	# 		coa_def_subject_trigger = yes
-	# 		NOT = {
-	# 			c:CHI = {
-	# 				has_diplomatic_pact = {
-	# 					who = c:DAI
-	# 					type = puppet
-	# 					is_initiator = yes
-	# 				}
-	# 			}
-	# 		}
-	# 	}
-	# }
+	dynamic_country_name = {
+		name = dyn_c_giao_chi
+		adjective = dyn_c_giao_chi_adj
+		# use_overlord_prefix = yes
+		is_main_tag_only = yes
+		priority = 0
+		trigger = {
+			coa_def_subject_trigger = yes
+			c:DAI = {
+				is_subject_of = c:CHI
+			}
+			c:CHI = {
+				OR = {
+					has_variable = china_han
+					has_variable = china_shun
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_an_nam
+		adjective = dyn_c_an_nam_adj
+		# use_overlord_prefix = yes
+		is_main_tag_only = yes
+		priority = 0
+		trigger = {
+			coa_def_subject_trigger = yes
+			c:DAI = {
+				is_subject_of = c:CHI
+			}
+			c:CHI = {
+				OR = {
+					has_variable = china_ming
+					has_variable = china_later_jin
+				}
+			}
+		}
+	}
 }
 
 AHU = {
