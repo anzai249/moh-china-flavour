@@ -3,8 +3,8 @@
 [h2]Mandate of Heaven - China Flavour Pack[/h2]
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
-Beta Testing, 1.8 Compatibility Testing
-Current version: beta-0.8.4
+Beta Testing, Morgenrote Compatibility Testing
+Current version: beta-0.8.5
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
@@ -25,7 +25,7 @@ All contents in this mod are based on Wikipedia, however, this is a game and I n
 Languages supported:
 [*]English
 [*]简体中文
-[*]한국어 - by manchikim & Winterboy
+[*]한국어 (Outdated) - by manchikim & Winterboy
 
 Feel free to contact me if you find any translation errors or if you can help with the translation.
 

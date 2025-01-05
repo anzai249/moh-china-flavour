@@ -11,8 +11,7 @@
 @panel_width_plus_30 = 570			# used to be 490
 @panel_width_plus_70 = 610			# used to be 530
 
-types journal_entry_panel_types
-{
+types journal_entry_overwrites {
 	type journal_entry_panel = default_block_window {
 		name = "journal_entry_panel"
 		datacontext = "[JournalEntryPanel.AccessJournalEntry]"
@@ -220,6 +219,7 @@ types journal_entry_panel_types
 					widget = {
 						size = { 250 120 }
 						parentanchor = hcenter
+
 						icon = {
 							parentanchor = hcenter
 							size = { 120 120 }
@@ -231,6 +231,8 @@ types journal_entry_panel_types
 								size = { 100 100 }
 							}
 						}
+						
+						
 						
 						# completion in progress
 						icon = {
@@ -275,13 +277,18 @@ types journal_entry_panel_types
 
 					}
 				}
-						
+
+				###############################
+				### Journal Entry Character ###
+				###############################
+				com_journal_entry_characters = {}
+
 				# time out info
 				flowcontainer = {
 					visible = "[JournalEntry.CanTimeOut]"
 					spacing = 5
 					parentanchor = hcenter
-					tooltip = "[JournalEntry.GetOnTimeoutTooltip]"
+					tooltip = "JOURNAL_ENTRY_ON_TIMEOUT_LONG"
 					
 					icon = {
 						size = { 30 30 }
@@ -295,7 +302,6 @@ types journal_entry_panel_types
 						parentanchor = vcenter
 					}
 				}
-
 				# xinhai characters
 				flowcontainer = {
 					visible = "[EqualTo_string(JournalEntry.GetName, Localize('je_xinhai'))]"
@@ -486,48 +492,6 @@ types journal_entry_panel_types
 								}
 							}
 
-							#### White
-							white_progressbar_horizontal = {
-								visible = "[EqualTo_string(ScriptedProgressBar.GetName, Localize('new_culture_anarchist_progress_bar'))]"
-								block "progressbar_size" {
-									size = { 504 30 }
-								}
-								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
-								blockoverride "values" {
-									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
-									min = 0
-									max = 1
-								}
-								textbox = {
-									text = "[ScriptedProgressBar.GetDesc]"
-									autoresize = yes
-									align = nobaseline
-									margin_left = 10
-									parentanchor = vcenter
-								}
-							}
-
-							#### Gold
-							gold_progressbar_horizontal = {
-								visible = "[EqualTo_string(ScriptedProgressBar.GetName, Localize('new_culture_presidential_autocracy_progress_bar'))]"
-								block "progressbar_size" {
-									size = { 504 30 }
-								}
-								tooltip = "[ScriptedProgressBar.GetPeriodicProgressBreakdown]"
-								blockoverride "values" {
-									value = "[JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)]"
-									min = 0
-									max = 1
-								}
-								textbox = {
-									text = "[ScriptedProgressBar.GetDesc]"
-									autoresize = yes
-									align = nobaseline
-									margin_left = 10
-									parentanchor = vcenter
-								}
-							}
-
 							# double sided bad
 							default_progressbar_horizontal = {
 								visible = "[ScriptedProgressBar.IsDoubleSidedBad]"
@@ -706,22 +670,47 @@ types journal_entry_panel_types
 							min = 0
 							max = 1
 						}
+						
+						container = {
+							visible = "[Not(JournalEntry.ShowProgressbarAsTime)]"
 
-						textbox = {
-							visible = "[EqualTo_CFixedPoint(JournalEntry.GetBaselineValue, '(CFixedPoint)0')]"
-							text = "JOURNAL_ENTRY_PROGRESSBAR_FROM_ZERO"
-							autoresize = yes
-							align = nobaseline
-							margin_left = 10
-							parentanchor = vcenter
+							textbox = {
+								visible = "[EqualTo_CFixedPoint(JournalEntry.GetBaselineValue, '(CFixedPoint)0')]"
+								text = "JOURNAL_ENTRY_PROGRESSBAR_FROM_ZERO"
+								autoresize = yes
+								align = nobaseline
+								margin_left = 10
+								parentanchor = vcenter
+							}
+							textbox = {
+								visible = "[Not(EqualTo_CFixedPoint(JournalEntry.GetBaselineValue, '(CFixedPoint)0'))]"
+								text = "JOURNAL_ENTRY_PROGRESSBAR_FROM_BASE"
+								autoresize = yes
+								align = nobaseline
+								margin_left = 10
+								parentanchor = vcenter
+							}
 						}
-						textbox = {
-							visible = "[Not(EqualTo_CFixedPoint(JournalEntry.GetBaselineValue, '(CFixedPoint)0'))]"
-							text = "JOURNAL_ENTRY_PROGRESSBAR_FROM_BASE"
-							autoresize = yes
-							align = nobaseline
-							margin_left = 10
-							parentanchor = vcenter
+
+						container = {
+							visible = "[JournalEntry.ShowProgressbarAsTime]"
+							
+							textbox = {
+								visible = "[JournalEntry.ShowProgressbarAsMonths]"
+								text = "JOURNAL_ENTRY_PROGRESSBAR_MONTHS"
+								autoresize = yes
+								align = nobaseline
+								margin_left = 10
+								parentanchor = vcenter
+							}
+							textbox = {
+								visible = "[JournalEntry.ShowProgressbarAsWeeks]"
+								text = "JOURNAL_ENTRY_PROGRESSBAR_WEEKS"
+								autoresize = yes
+								align = nobaseline
+								margin_left = 10
+								parentanchor = vcenter
+							}
 						}
 					}
 				}
@@ -926,36 +915,130 @@ types journal_entry_panel_types
 		}
 	}
 
-	type scripted_journal_entry_button = button {
-		using = default_button_action
-		tooltip = "SCRIPTED_ACTION_TOOLTIP"
-		enabled = "[IsValid( ScriptedButton.ExecuteEffect )]"
-		onclick = "[Execute( ScriptedButton.ExecuteEffect )]"
-		size = { 250 50 }
-		margin = { 20 20 }
+	type com_journal_entry_character = widget {
+		block "character_context" {}
+
+		block "character_size" {
+			size = { @panel_width_half 290 }
+		}
 
 		widget = {
-			visible = "[ScriptedButton.IsSelected]"
-			size = { 100% 100% }
+			size = { @panel_width_half 290 }
+			parentanchor = hcenter
 
-			background = {
-				using = paper_bg
+			# Character Tooltip
+			tooltipwidget = {
+				FancyTooltip_Character = {}
+			}
+
+			# Character Portrait
+			character_portrait_large_torso = {
+				position = { 0 0 }
+				parentanchor = hcenter
+				blockoverride "show_hat" {}
+				blockoverride "tooltip" {}
+				blockoverride "portrait_icons" {}
+				blockoverride "portrait_button" {}
+			}
+
+			# Character Name
+			default_header_clean_faded = {
+				size = { 250 40 }
+				position = { 0 256 }
+				blockoverride "text" {}
+				parentanchor = hcenter
+				textbox = {
+					text = "[Character.GetFullNameNoFormatting]"
+					parentanchor = vcenter|hcenter
+					position = { 0 -2 }
+					autoresize = yes
+					max_width = @panel_width_half
+					using = fontsize_large
+				}
+			}
+
+			# Character Opinion
+			flowcontainer = {
+				position = { 180 50 }
+				margin = { 10 10 }
+				tooltipwidget = {
+					RegularTooltip = {
+						blockoverride "text" {
+							text = "[Character.MakeScope.Var('com_opinion').GetFlagName]"
+						}
+					}
+				}
+
+				icon = {
+					size = { 40 40 }
+					texture = "gfx/interface/icons/ai_strategy_icons/progressive_agenda.dds"
+				}
+
+				background = {
+					texture = "gfx/interface/backgrounds/round_button_bg.dds"
+				}
+			}
+		}
+	}
+
+	type com_journal_entry_characters = flowcontainer {
+		direction = vertical
+		visible = "[DataModelHasItems(JournalEntry.MakeScope.GetList('com_journal_characters'))]"
+
+		divider_clean = {}
+
+		flowcontainer = {
+			direction = vertical
+			margin_bottom = 20
+
+			# All elements (Only when even amount of characters)
+			com_journal_entry_character_grid = {
+				blockoverride "grid_visible" {
+					visible = "[IsEven_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('com_journal_characters')))]"
+				}
+			}
+
+			# All elements except last (Only when odd amount of characters)
+			com_journal_entry_character_grid = {
+				blockoverride "datamodel" {
+					datamodel = "[DataModelSkipLast(JournalEntry.MakeScope.GetList('com_journal_characters'), '(int32)1')]"
+				}
+				blockoverride "grid_visible" {
+					visible = "[And(Not(EqualTo_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('com_journal_characters')), '(int32)1')), IsOdd_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('com_journal_characters'))))]"
+				}
+			}
+
+			# Last element (Only when odd amount of characters)
+			com_journal_entry_character_grid = {
+				blockoverride "datamodel" {
+					datamodel = "[DataModelLast(JournalEntry.MakeScope.GetList('com_journal_characters'), '(int32)1')]"
+				}
+				blockoverride "grid_visible" {
+					visible = "[IsOdd_int32(GetDataModelSize(JournalEntry.MakeScope.GetList('com_journal_characters')))]"
+				}
+				blockoverride "character_size" {
+					size = { @panel_width 290 }
+				}
 			}
 		}
 
-		textbox = {
-			parentanchor = center
-			align = nobaseline
-			autoresize = yes
-			max_width = 230
-			elide = right
-			fontsize_min = 14
-			text = "[ScriptedButton.GetName]"
-		}
+		divider_clean = {}
+	}
 
-		icon = {
-			visible = "[ScriptedButton.IsSelected]"
-			using = highlighted_square_selection
+	type com_journal_entry_character_grid = dynamicgridbox {
+		block "datamodel" {
+			datamodel = "[JournalEntry.MakeScope.GetList('com_journal_characters')]"
+		}
+		block "grid_visible" {}
+		flipdirection = yes
+		datamodel_wrap = 2
+
+		item = {
+			com_journal_entry_character = {
+				blockoverride "character_context" {
+					datacontext = "[Scope.GetCharacter]"
+				}
+			}
 		}
 	}
 }

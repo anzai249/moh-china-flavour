@@ -1651,6 +1651,38 @@ warlord_china_events.600 = {
             name = chinese_central_government
             value = c:BEI
         }
+        if = {
+            limit = {
+                any_scope_character = {
+                    has_template = chi_general_yuan_shikai
+                }
+            }
+            random_character = {
+                limit = {
+                    has_template = chi_general_yuan_shikai
+                }
+                set_character_as_ruler = yes
+                set_ideology = ideology:ideology_royalist
+            }
+        }
+        else_if = {
+            limit = {
+                year >= 1884
+                year <= 1916
+            }
+            create_character = {
+                template = chi_general_yuan_shikai
+                ruler = yes
+                ideology = ideology:ideology_royalist
+            }
+        }
+        else = {
+            create_character = {
+                culture = cu:han
+                ruler = yes
+                ideology = ideology:ideology_royalist
+            }
+        }
     }
     option = {
         # civilwar

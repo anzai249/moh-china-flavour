@@ -225,3 +225,18 @@ Changes:
 
 - Warlord Era remake part 1.
 - New Character: Hou Debang. (Testing compatibility with Morgenrote)
+
+beta-0.8.5
+
+Fixes:
+
+- je_daoguang_reform_opium_reason localization issue.
+- Gaitu Guiliu random event modifier set to state instead of country. 
+- Morgenrote summer palace dupulication.
+- League of Eight Provinces flag.
+- UI conflict with Morgenrote.
+
+Changes: 
+
+- Warlord Era remake part 2.
+- Dai Nam dynamic country name.

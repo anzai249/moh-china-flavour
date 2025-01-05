@@ -41,14 +41,14 @@ gaitu_guiliu.1 = {
             base = 10
         }
         scope:gaitu_guiliu_scope = {
-                add_radicals_in_state = {
-                    value = medium_radicals
-                    pop_type = laborers
-                }
-        }
-        add_modifier = {
-            name = gaitu_guiliu_building_modifier
-            years = 3
+            add_radicals_in_state = {
+                value = medium_radicals
+                pop_type = laborers
+            }
+            add_modifier = {
+                name = gaitu_guiliu_building_modifier
+                years = 3
+            }
         }
     }
 
