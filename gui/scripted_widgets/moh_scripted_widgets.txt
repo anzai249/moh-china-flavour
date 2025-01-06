@@ -1,0 +1,10 @@
+﻿#######################
+# MR SCRIPTED WIDGETS #
+#######################
+
+# Original Version By Lord R
+
+#################
+
+
+gui/moh_mr_popups.gui = moh_mr_popups

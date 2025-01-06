@@ -1,10 +1,12 @@
 [img]https://i.imgur.com/NFDaQVr.png[/img]
 
+[h2]Requires the [url=https://steamcommunity.com/workshop/filedetails/?id=3385002128]Community Mod Framework[/url]. Load this mod after the CMF in your load order.[/h2]
+
 [h2]Mandate of Heaven - China Flavour Pack[/h2]
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing, Morgenrote Compatibility Testing
-Current version: beta-0.8.5
+Current version: beta-0.8.6
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
@@ -26,6 +28,7 @@ Languages supported:
 [*]English
 [*]简体中文
 [*]한국어 (Outdated) - by manchikim & Winterboy
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395792339]Русский[/url]
 
 Feel free to contact me if you find any translation errors or if you can help with the translation.
 

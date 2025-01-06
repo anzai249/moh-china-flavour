@@ -1,0 +1,3 @@
+﻿community_framework_is_active = {
+	always = no
+}

@@ -240,3 +240,9 @@ Changes:
 
 - Warlord Era remake part 2.
 - Dai Nam dynamic country name.
+
+beta-0.8.6
+
+Changes: 
+
+- MoH now requires Community Mod Framework.

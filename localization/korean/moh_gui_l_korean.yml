@@ -4,3 +4,7 @@
  father_attitude: "[GetGlobalVariable('sun_yatsen').GetCharacter.GetLastName]의 당신에 대한 태도는 다음과 같습니다:"
  daoguang_name: "도광제 #bold [GetPlayer.GetRuler.GetFirstName]#!"
  gong_name: "애신각라 혁흔 #bold [GetPlayer.MakeScope.Var('yixin').GetCharacter.GetFirstName]#!"
+ 
+ MR_MISSING_CMF_HEADER: "Missing Community Mod Framework"
+ MR_MISSING_CMF_HEADER_LOC: "Mandate of Heaven requires the #V Community Mod Framework#! to work. Please download the Framework either on Steam or the GitHub Page.\n\nIf you can't find #V Community Mod Framework#!, please look into the description of Mandate of Heaven on the Steam Workshop. There will be a link for the Steam version."
+ MR_CLOSE_WINDOW_INACESSIBLE_CMF_TT: "We are sorry, but you #n have to download the Community Mod Framework#!."

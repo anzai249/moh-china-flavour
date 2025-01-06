@@ -1,0 +1,8 @@
+﻿#Warning for missing CMF
+# Orignal Author: LordR
+
+moh_missing_cmf_sgui = {
+	is_shown = {
+		community_framework_is_active = no
+	}
+}
