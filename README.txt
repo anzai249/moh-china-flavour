@@ -6,7 +6,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Beta Testing, Morgenrote Compatibility Testing
-Current version: beta-0.8.6
+Current version: beta-0.8.7
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
@@ -63,8 +63,9 @@ Compatible:
 [*]↑[url=https://steamcommunity.com/sharedfiles/filedetails/?id=2889925770]Morgenröte - Dawn of Flavor[/url] (Has small amounts of unique content, achievements not available, stability testing in progress.)
 
 Not Compatible:
-[*]Any other flavour pack, RA, EAFP
+[*]Any other Asian flavour pack, RA, EAFP
 [*]Daoyu Cheat (Reason unknown)
+[*]This mod edited ai_strategies and interest_groups, so any other mod that edits these files will not be compatible.
 
 Contact me if you want to make a compatch together.
 

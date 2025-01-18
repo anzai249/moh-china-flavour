@@ -246,3 +246,11 @@ beta-0.8.6
 Changes: 
 
 - MoH now requires Community Mod Framework.
+
+beta-0.8.7
+
+Changes: 
+
+- Slightly balanced bureaucracy.
+- Removed Poor Laws. (Community voting result)
+- Trying to fix failing bug of Crackdown on Opium je. (May not take effect)
