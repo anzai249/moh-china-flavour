@@ -911,3 +911,41 @@ MCH_fengtian = {
 		instance = { scale = { 0.3 0.4 } position = { 0.5 0.5 } rotation = 45 }	
 	}		
 }
+
+RYU = {
+	pattern = "pattern_border_west_africa_02.dds"
+	color1 = "white"
+	color2 = "black"
+	color3 = "white"
+	colored_emblem = {
+		texture = "ce_bicolor_right.dds"
+		color1 = "white"
+		instance = { scale = { 1 1 } position = { 0.925 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = "black"
+		instance = { scale = { 1 0.1 } position = { 0.5 0.175 } }
+	}
+	colored_emblem = {
+		texture = "ce_bicolor_top.dds"
+		color1 = "black"
+		instance = { scale = { 1 0.05 } position = { 0.5 0.225 } }
+	}
+	colored_emblem = {
+		texture = "ce_bicolor_bottom.dds"
+		color1 = "white"
+		instance = { scale = { 1 0.25 } position = { 0.5 0.875 } }
+	}
+	colored_emblem = {
+		texture = "ce_triangle.dds"
+		color1 = "black"
+		instance = { scale = { 0.8 0.8 } position = { 0.99 0.8 } }
+	}
+	colored_emblem = {
+		texture = "ce_ryukyu.dds"
+		color1 = "black"
+		instance = { scale = { 0.9 0.9 } position = { 0.5 0.5 } }
+	}
+
+}

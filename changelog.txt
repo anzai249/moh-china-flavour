@@ -253,4 +253,11 @@ Changes:
 
 - Slightly balanced bureaucracy.
 - Removed Poor Laws. (Community voting result)
-- Trying to fix failing bug of Crackdown on Opium je. (May not take effect)
+- Tried to fix failing bug of Crackdown on Opium je. (May not take effect)
+
+
+beta-0.8.8
+
+Changes: 
+
+- New country: Ryukyu.

@@ -1,0 +1,33 @@
+﻿CHARACTERS = {
+	c:RYU ?= {
+		create_character = {
+			first_name = "moh_Iku"
+			last_name = "moh_Sho"
+			historical = yes
+			birth_date = 1813.8.19
+			culture = cu:japanese
+			ig_leader = yes
+			ruler = yes
+			interest_group = ig_landowners
+			ideology = ideology_traditionalist
+			traits = {
+				literary
+				basic_diplomat
+			}
+		}
+		# create_character = {
+		# 	first_name = "moh_Tee"
+		# 	last_name = "moh_Sho"
+		# 	historical = yes
+		# 	birth_date = 1843.8.3
+		# 	culture = cu:japanese
+		# 	heir = yes
+		# 	interest_group = ig_landowners
+		# 	ideology = ideology_traditionalist
+		# 	traits = {
+		# 		literary
+		# 		basic_diplomat
+		# 	}
+		# }
+	}
+}

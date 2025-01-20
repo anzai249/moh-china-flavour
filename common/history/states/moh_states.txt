@@ -44,4 +44,13 @@
 	s:STATE_NORTHERN_MANCHURIA = {
 		add_state_trait = state_trait_black_soil
 	}
+	s:STATE_RYUKYU_ISLANDS = {
+		random_scope_state = {
+			set_state_owner = c:RYU
+		}
+		# create_state = {
+		# 	country = c:RYU
+		# 	owned_provinces = { xf0f061 xf0d080 }
+		# }
+	}
 }
