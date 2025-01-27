@@ -372,3 +372,6 @@
   warlord_china_events.600.f: "各省代表纷纷倒戈，宣布独立，反对君主。目前有两种方案摆在我们面前：\n\n一是与对方妥协，共和方将派出一人为代表游说[Concept('concept_ruler', '$RULER_TITLE_EMPEROR$')]退位，不过此人要求我们把大[Concept('concept_ruler', '$RULER_TITLE_PRESIDENT$')]职位让给他。\n\n二是继续战斗，完成我们的共和梦想。"
   warlord_china_events.600.a: "接受妥协"
   warlord_china_events.600.b: "战斗到底"
+  warlord_china_events.610.t: "护国战争"
+  warlord_china_events.610.d: "各省不满对君主制的复辟，向中央政府宣战。"
+  warlord_china_events.610.f: "[Concept('concept_ruler', '$RULER_TITLE_PRESIDENT$')]强行复辟帝制，引发全国强烈反对。云南率先宣布独立，各省纷纷表示不承认“洪宪帝制”，举兵护国，誓死维护共和制度。\n\n这场关系国家命运的护国战争已全面爆发，局势愈发紧张。"

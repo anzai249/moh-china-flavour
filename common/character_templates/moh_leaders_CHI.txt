@@ -2333,3 +2333,29 @@ chi_chang_hsueliang_character_template = {
         chance = 80
     }
 }
+
+# Sheng Xuanhuai
+chi_sheng_xuanhuai_character_template = {
+    first_name = moh_Xuanhuai
+    last_name = moh_Sheng
+    historical = yes
+    culture = cu:han
+    ideology = ideology_moderate
+    interest_group = ig_industrialists
+    birth_date = 1844.11.4
+    traits = { erudite }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_JIANGSU
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1865.1.1
+        latest_usage_date = 1916.4.27
+        chance = 75
+    }
+}

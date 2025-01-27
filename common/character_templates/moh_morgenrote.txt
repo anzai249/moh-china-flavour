@@ -6,8 +6,8 @@
     female = no
     ideology = ideology_moderate
     interest_group = ig_intelligentsia
-    # birth_date = 1890.8.9
-    age = 35
+    birth_date = 1890.8.9
+    # age = 35
     traits = { 
 		mendelejew_chemist
 		innovative

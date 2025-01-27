@@ -467,7 +467,6 @@ warlord_setup_mongolia = {
 }
 
 warlord_setup_countries = {
-
     if = {
         limit = {
             exists = s:STATE_LHASA.region_state:CHI
@@ -593,13 +592,13 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_SOUTHERN_ANHUI.region_state:CHI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_NORTHERN_ANHUI
-                        }
-                        set_state_owner = c:AHU
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_NORTHERN_ANHUI
                     }
+                    set_state_owner = c:AHU
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -631,13 +630,13 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_SOUTHERN_ANHUI.region_state:BEI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_NORTHERN_ANHUI
-                        }
-                        set_state_owner = c:AHU
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_NORTHERN_ANHUI
                     }
+                    set_state_owner = c:AHU
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -669,13 +668,20 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_SOUTHERN_MANCHURIA.region_state:CHI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_SHENGJING
-                        }
-                        set_state_owner = c:MCH
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_SHENGJING
                     }
+                    set_state_owner = c:MCH
+                    set_state_type = incorporated
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_NORTHERN_MANCHURIA
+                    }
+                    set_state_owner = c:MCH
+                    set_state_type = incorporated
+                }
                 if = {
                     limit = {
                         NOT = {
@@ -718,13 +724,20 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_SOUTHERN_MANCHURIA.region_state:BEI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_SHENGJING
-                        }
-                        set_state_owner = c:MCH
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_SHENGJING
                     }
+                    set_state_owner = c:MCH
+                    set_state_type = incorporated
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_NORTHERN_MANCHURIA
+                    }
+                    set_state_owner = c:MCH
+                    set_state_type = incorporated
+                }
                 if = {
                     limit = {
                         NOT = {
@@ -866,30 +879,30 @@ warlord_setup_countries = {
                 random_state = {
                     limit = {
                         state_region = s:STATE_DZUNGARIA
-						OR = {
-							c:CHI ?= owner
-							c:BEI ?= owner
-						}
+                        OR = {
+                            c:CHI ?= owner
+                            c:BEI ?= owner
+                        }
                     }
                     set_state_owner = c:XIN
                 }
                 random_state = {
                     limit = {
                         state_region = s:STATE_JETISY
-						OR = {
-							c:CHI ?= owner
-							c:BEI ?= owner
-						}
+                        OR = {
+                            c:CHI ?= owner
+                            c:BEI ?= owner
+                        }
                     }
                     set_state_owner = c:XIN
                 }
                 random_state = {
                     limit = {
                         state_region = s:STATE_KIRGHIZIA
-						OR = {
-							c:CHI ?= owner
-							c:BEI ?= owner
-						}
+                        OR = {
+                            c:CHI ?= owner
+                            c:BEI ?= owner
+                        }
                     }
                     set_state_owner = c:XIN
                 }
@@ -925,13 +938,13 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_TIANSHAN.region_state:BEI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_DZUNGARIA
-                        }
-                        set_state_owner = c:XIN
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_DZUNGARIA
                     }
+                    set_state_owner = c:XIN
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -964,13 +977,13 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_YUNNAN.region_state:CHI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_GUIZHOU
-                        }
-                        set_state_owner = c:YUN
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_GUIZHOU
                     }
+                    set_state_owner = c:YUN
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -1003,13 +1016,13 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_YUNNAN.region_state:BEI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_GUIZHOU
-                        }
-                        set_state_owner = c:YUN
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_GUIZHOU
                     }
+                    set_state_owner = c:YUN
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -1042,13 +1055,13 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_GUANGDONG.region_state:CHI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_SHAOZHOU
-                        }
-                        set_state_owner = c:YUE
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_SHAOZHOU
                     }
+                    set_state_owner = c:YUE
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -1081,13 +1094,13 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_GUANGDONG.region_state:BEI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_SHAOZHOU
-                        }
-                        set_state_owner = c:YUE
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_SHAOZHOU
                     }
+                    set_state_owner = c:YUE
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -1119,20 +1132,20 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_NINGXIA.region_state:CHI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_QINGHAI
-                        }
-                        set_state_owner = c:XIB
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_QINGHAI
                     }
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_GANSU
-                        }
-                        set_state_owner = c:XIB
-                        set_state_type = incorporated
+                    set_state_owner = c:XIB
+                    set_state_type = incorporated
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_GANSU
                     }
+                    set_state_owner = c:XIB
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -1164,20 +1177,20 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_NINGXIA.region_state:BEI
             on_created = {
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_QINGHAI
-                        }
-                        set_state_owner = c:XIB
-                        set_state_type = incorporated
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_QINGHAI
                     }
-                    random_state = {
-                        limit = {
-                            state_region = s:STATE_GANSU
-                        }
-                        set_state_owner = c:XIB
-                        set_state_type = incorporated
+                    set_state_owner = c:XIB
+                    set_state_type = incorporated
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_GANSU
                     }
+                    set_state_owner = c:XIB
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
@@ -1212,10 +1225,10 @@ warlord_setup_countries = {
                 random_state = {
                     limit = {
                         state_region = s:STATE_URGA
-						OR = {
-							c:CHI ?= owner
-							c:BEI ?= owner
-						}
+                        OR = {
+                            c:CHI ?= owner
+                            c:BEI ?= owner
+                        }
                     }
                     set_state_owner = c:MGL
                 }
@@ -1250,11 +1263,11 @@ warlord_setup_countries = {
                 random_state = {
                     limit = {
                         state_region = s:STATE_URGA
-						OR = {
-							c:CHI ?= owner
-							c:BEI ?= owner
-						}
-                        
+                        OR = {
+                            c:CHI ?= owner
+                            c:BEI ?= owner
+                        }
+
                     }
                     set_state_owner = c:MGL
                 }
@@ -1495,6 +1508,76 @@ warlord_setup_countries = {
         }
         c:FRS = {
             save_scope_as = scope_FRS
+        }
+    }
+}
+
+warlord_setup_countries_protection = {
+    warlord_setup_countries = yes
+
+    if = {
+        limit = {
+            exists = s:STATE_SHENGJING.region_state:BEI
+        }
+        create_country = {
+            tag = MCH
+            origin = this
+            state = s:STATE_SHENGJING.region_state:BEI
+            on_created = {
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_OUTER_MANCHURIA
+                    }
+                    set_state_owner = c:MCH
+                    set_state_type = incorporated
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_AMUR
+                    }
+                    set_state_owner = c:MCH
+                    set_state_type = incorporated
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_SOUTHERN_MANCHURIA
+                    }
+                    set_state_owner = c:MCH
+                    set_state_type = incorporated
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_NORTHERN_MANCHURIA
+                    }
+                    set_state_owner = c:MCH
+                    set_state_type = incorporated
+                }
+                warlord_setup_effect_laws = yes
+                set_variable = warlord_state
+                random_list = {
+                    4 = {
+                    }
+                    1 = {
+                        set_strategy = ai_strategy_unify_china
+                    }
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            country_has_primary_culture = cu:manchu
+                        }
+                    }
+                    add_primary_culture = cu:manchu
+                }
+                if = {
+                    limit = {
+                        NOT = {
+                            country_has_primary_culture = cu:han
+                        }
+                    }
+                    add_primary_culture = cu:han
+                }
+            }
         }
     }
 }

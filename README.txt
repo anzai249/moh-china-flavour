@@ -5,8 +5,8 @@
 [h2]Mandate of Heaven - China Flavour Pack[/h2]
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
-Beta Testing, Morgenrote Compatibility Testing
-Current version: beta-0.8.7
+Morgenrote Compatibility Testing
+Current version: 1.0 "Snake"
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.

@@ -26,3 +26,17 @@
         }
 	}
 }
+
+CHI = {
+	use_culture_states = yes
+
+	required_states_fraction = 0.6
+	
+	ai_will_do = { always = yes }
+
+	possible = {
+        NOT = {
+            has_journal_entry = je_chinese_republic_monarchy
+        }
+	}
+}
