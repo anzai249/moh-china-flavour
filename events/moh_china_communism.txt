@@ -1,6 +1,7 @@
 ﻿namespace = china_communism
 
 china_communism.1 = {
+	# 清党 土地革命
 	type = country_event
 	placement = root
 	event_image = {
@@ -21,7 +22,7 @@ china_communism.1 = {
 
 	trigger = {
 		c:CHI ?= this
-		has_variable = canton_coup_happened
+		has_global_variable = canton_coup_happened
 		NOT = {
 			has_global_variable = ccp_rise_up_happened
 		}
@@ -324,6 +325,7 @@ china_communism.1 = {
 }
 
 china_communism.2 = {
+	# 中山舰事件事件
 	type = country_event
 	placement = scope:canton_scope
 	event_image = {
@@ -367,17 +369,18 @@ china_communism.2 = {
 			}
 		}
 		NOT = {
-			has_variable = canton_coup_happened
+			has_global_variable = canton_coup_happened
 		}
 		NOT = {
 			has_law = law_type:law_monarchy
 			has_law = law_type:law_theocracy
+			has_law = law_type:law_council_republic
 		}
 		always = no
 	}
 
 	immediate = {
-		set_variable = canton_coup_happened
+		set_global_variable = canton_coup_happened
 		s:STATE_GUANGDONG = {
 			random_scope_state = {
 				save_scope_as = canton_scope
@@ -390,7 +393,7 @@ china_communism.2 = {
 		default_option = yes
 		custom_tooltip = {
 			text = china_communism.2.a_tt
-			set_variable = canton_coup_anti_communist
+			set_global_variable = canton_coup_anti_communist
 		}
 		divide_kmt = yes
 		c:CHI = {
@@ -405,7 +408,7 @@ china_communism.2 = {
 		name = china_communism.2.b
 		custom_tooltip = {
 			text = china_communism.2.b_tt
-			set_variable = canton_coup_support_communist
+			set_global_variable = canton_coup_support_communist
 		}
 		c:CHI = {
 			add_radicals = {
