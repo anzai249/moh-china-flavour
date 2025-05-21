@@ -195,3 +195,5 @@
   je_anti_encirclement: "Anti-Encirclement Campaigns"
   je_chinese_republic_monarchy: "Weak Republicans"
   je_chinese_republic_monarchy_reason: "The compromise made by the republicans in the revolution allowed the old guard to take advantage of the situation, and at the same time allowed local forces to grow."
+  je_13_factories: "Thirteen Hongs"
+  je_13_factories_reason: "The Thirteen Factories are the only window for [ROOT.GetCountry.GetName] to engage in foreign trade, strictly limiting foreign merchants through isolationist policies and only allowing trade in this area."

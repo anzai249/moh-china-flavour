@@ -44,5 +44,6 @@
 			type = je_daoguang_reform_main
 		}
 		add_journal_entry = { type = je_keju }
+		add_journal_entry = { type = je_13_factories }
 	}
 }

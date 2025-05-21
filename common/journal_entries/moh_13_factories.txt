@@ -1,0 +1,20 @@
+﻿je_13_factories = {
+	icon = "gfx/interface/icons/event_icons/13_factories.dds"
+	group = je_group_historical_content
+	immediate = {
+	}
+	modifiers_while_active = {
+		modifier_13_factories
+	}
+	fail = {
+		OR = {
+			has_law = law_type:law_free_trade
+			custom_tooltip = {
+                text = "opium_wars_lost"
+                has_variable = lost_opium_wars
+            }
+		}
+	}
+	weight = 50
+	should_be_pinned_by_default = yes
+}
