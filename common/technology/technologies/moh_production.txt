@@ -1,0 +1,14 @@
+﻿chinese_kiln = {
+	era = era_1
+	texture = "gfx/interface/icons/invention_icons/chinese_kiln.dds"
+	category = production
+	can_research = no
+	
+	modifier = {
+		building_glassworks_throughput_add = 0.15
+	}
+	
+	ai_weight = {
+		value = 1
+	}
+}

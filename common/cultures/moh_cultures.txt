@@ -466,6 +466,9 @@ manchu={
 	color= rgb{ 233 207 84 }
 	religion = confucian
 	traits = { sinosphere north_asian_heritage }
+	obsessions = {
+		porcelain
+	}
 	male_common_first_names={
 		Changlin
 		Hesehn
@@ -509,6 +512,7 @@ manchu={
 		moh_Guwalgiya
 		moh_Niohuru
 		moh_Sumuru
+		moh_Yanggiya
 		Wanggiya
 		Nalan
 		An

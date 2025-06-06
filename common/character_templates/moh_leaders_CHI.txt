@@ -1658,6 +1658,7 @@ chi_tongzhi_template = {
     ideology = ideology_traditionalist
     traits = {
         honorable
+        syphilis
     }
 }
 
@@ -1688,6 +1689,7 @@ chi_guangxu_template = {
     traits = {
         cautious
         innovative
+        inept
     }
 }
 
@@ -1704,6 +1706,7 @@ chi_xuantong_template = {
     traits = {
         cautious
         meticulous
+        inept
     }
 }
 
@@ -2356,6 +2359,129 @@ chi_sheng_xuanhuai_character_template = {
         }
         earliest_usage_date = 1865.1.1
         latest_usage_date = 1916.4.27
+        chance = 75
+    }
+}
+
+chi_sushun_character_template = {
+    first_name = moh_Sushun
+    last_name = "Aisin_Gioro"
+    historical = yes
+    culture = cu:manchu
+    ideology = ideology_traditionalist
+    interest_group = ig_landowners
+    traits = { honorable direct }
+    birth_date = 1816.11.26
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:manchu value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_BEIJING
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_landowners
+        }
+        earliest_usage_date = 1850.1.1
+        latest_usage_date = 1861.11.8
+        chance = 50
+    }
+}
+
+chi_yizhen_character_template = {
+    first_name = moh_Yizhen
+    last_name = moh_Yanggiya
+    historical = yes
+    culture = cu:manchu
+    ideology = ideology_moderate
+    interest_group = ig_intelligentsia
+    birth_date = 1810.1.1
+    traits = { erudite romantic }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:manchu value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_BEIJING
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1839.1.1
+        latest_usage_date = 1881.1.1
+        chance = 75
+    }
+}
+
+chi_lin_hongnian_character_template = {
+    first_name = moh_Hongnian
+    last_name = Lin
+    historical = yes
+    culture = cu:han
+    ideology = ideology_moderate
+    interest_group = ig_intelligentsia
+    birth_date = 1805.1.1
+    traits = { erudite basic_diplomat }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_FUJIAN
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1835.1.1
+        latest_usage_date = 1866.1.1
+        chance = 75
+    }
+}
+
+chi_shantao_character_template = {
+    first_name = moh_Shantao
+    last_name = "Aisin_Gioro"
+    historical = yes
+    culture = cu:manchu
+    interest_group = ig_intelligentsia
+    birth_date = 1817.10.9
+    traits = { erudite cautious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:manchu value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_BEIJING
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1832.1.1
+        latest_usage_date = 1861.2.14
+        chance = 75
+    }
+}
+
+chi_zaiyuan_character_template = {
+    first_name = moh_Zaiyuan
+    last_name = "Aisin_Gioro"
+    historical = yes
+    culture = cu:manchu
+    interest_group = ig_armed_forces
+    birth_date = 1816.10.16
+    traits = { arrogant ambitious ruthless }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:manchu value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_BEIJING
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_armed_forces
+        }
+        earliest_usage_date = 1832.1.1
+        latest_usage_date = 1861.11.8
         chance = 75
     }
 }

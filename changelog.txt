@@ -264,3 +264,15 @@ Changes:
 - New country: Ryukyu.
 - New character: Sheng Xuanhuai.
 - Warlord Era remake.
+
+Release 1.0.1 "Snake"
+
+Changes:
+
+- New characters: Zaiyuan, Shantao, Lin Hongnian, Yizhen, Sushun.
+- New technology: Chinese kiln.
+- Manchu culture now has obsession with porcelain.
+
+Fixes:
+
+- Revolutionaries JE not able to activate.

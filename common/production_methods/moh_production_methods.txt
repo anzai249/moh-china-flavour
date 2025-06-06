@@ -165,3 +165,27 @@
 # 		}
 # 	}
 # }
+
+pm_chinese_kiln = {
+	texture = "gfx/interface/icons/production_method_icons/bone_china.dds"
+	
+	unlocking_technologies = {
+		chinese_kiln
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			# input goods
+			goods_input_dye_add = 6
+			
+			# output goods
+			goods_output_glass_add = -15
+			goods_output_porcelain_add = 20
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_shopkeepers_add = 250
+		}
+	}														
+}
