@@ -2418,7 +2418,7 @@ chi_lin_hongnian_character_template = {
     last_name = Lin
     historical = yes
     culture = cu:han
-    ideology = ideology_moderate
+    ideology = ideology_reformer
     interest_group = ig_intelligentsia
     birth_date = 1805.1.1
     traits = { erudite basic_diplomat }
@@ -2434,7 +2434,7 @@ chi_lin_hongnian_character_template = {
         }
         earliest_usage_date = 1835.1.1
         latest_usage_date = 1866.1.1
-        chance = 75
+        chance = 50
     }
 }
 
@@ -2444,6 +2444,7 @@ chi_shantao_character_template = {
     historical = yes
     culture = cu:manchu
     interest_group = ig_intelligentsia
+    ideology = ideology_moderate
     birth_date = 1817.10.9
     traits = { erudite cautious }
     interest_group_leader_usage = {
@@ -2468,6 +2469,7 @@ chi_zaiyuan_character_template = {
     historical = yes
     culture = cu:manchu
     interest_group = ig_armed_forces
+    ideology = ideology_authoritarian
     birth_date = 1816.10.16
     traits = { arrogant ambitious ruthless }
     interest_group_leader_usage = {
@@ -2483,5 +2485,30 @@ chi_zaiyuan_character_template = {
         earliest_usage_date = 1832.1.1
         latest_usage_date = 1861.11.8
         chance = 75
+    }
+}
+
+chi_kong_fanhao_character_template = {
+    first_name = moh_Fanhao
+    last_name = moh_Kong
+    historical = yes
+    culture = cu:han
+    interest_group = ig_devout
+    ideology = ideology_theocrat
+    birth_date = 1806.3.21
+    traits = { honorable pious }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_BEIJING
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_devout
+        }
+        earliest_usage_date = 1835.1.1
+        latest_usage_date = 1862.11.11
+        chance = 65
     }
 }
