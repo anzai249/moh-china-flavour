@@ -272,6 +272,7 @@ Changes:
 - New characters: Zaiyuan, Shantao, Lin Hongnian, Yizhen, Sushun, Kong Fanhao.
 - New technology: Chinese kiln.
 - Manchu culture now has obsession with porcelain.
+- Added a 3D coin on the desk.
 
 Fixes:
 
