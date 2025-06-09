@@ -34,9 +34,12 @@
  moh_Yan_1: "Yan"
  moh_Wei_1: "Wei"
  moh_Qiu: "Qiu"
+ moh_Hou: "Hou"
+
  moh_Tunggiya: "Tunggiya"
  moh_Magiya: "Magiya"
  moh_Cigiya: "Cigiya"
+ moh_Yanggiya: "Yanggiya"
  moh_Guwalgiya: "Guwalgiya"
  moh_Niohuru: "Niohuru"
  moh_Sumuru: "Sumuru"
@@ -58,7 +61,6 @@
  moh_Yu: "Yu"
  moh_Zhao: "Zhao"
  moh_Li_1: "Li"
- moh_Hou: "Hou"
 
  moh_Tenzin: "Tenzin"
  moh_Shatra: "Shatra"
@@ -91,6 +93,12 @@
  moh_Guiliang: "Guiliang"
  moh_Xuanhuai: "Xuanhuai"
  moh_Sheng: "Sheng"
+ moh_Sushun: "Sushun"
+ moh_Yizhen: "Yizhen"
+ moh_Hongnian: "Hongnian"
+ moh_Shantao: "Shantao"
+ moh_Zaiyuan: "Zaiyuan"
+ moh_Fanhao: "Fanhao"
 
  moh_Jebtsundamba: "Jebtsundamba"
  moh_Luvsanchultimjigmed: "Luvsanchultimjigmed" #5th

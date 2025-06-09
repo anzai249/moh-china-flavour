@@ -5,6 +5,7 @@
 		add_technology_researched = sericulture
 		add_technology_researched = academia
 		add_technology_researched = law_enforcement
+		add_technology_researched = chinese_kiln
 		
 		set_market_capital = STATE_GUANGDONG	
 		
@@ -51,5 +52,6 @@
 			remove_ideology = ideology_republican
 			add_ideology = ideology_eight_legged
 		}
+		# add_journal_entry = { type = je_13_factories }
 	}
 }

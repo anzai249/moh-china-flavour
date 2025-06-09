@@ -9,3 +9,13 @@
 		pm_monument_no_effects
 	}
 }
+
+pmg_luxury_building_glassworks = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_refining.dds"
+	production_methods = {
+		pm_disabled_ceramics
+		pm_ceramics
+		pm_chinese_kiln
+		pm_bone_china
+	}
+}

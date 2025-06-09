@@ -15,8 +15,10 @@ je_xinhai = {
 		OR = {
 			custom_tooltip = {
 				text = je_xinhai_possible_tt
-				has_variable = wuxu_reform_failed
-				has_variable = no_wuxu
+				OR = {
+					has_variable = wuxu_reform_failed
+					has_variable = no_wuxu
+				}
 			}
 			custom_tooltip = {
 				text = je_xinhai_possible_tt_2

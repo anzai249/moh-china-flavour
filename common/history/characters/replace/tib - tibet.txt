@@ -9,6 +9,7 @@
 			age = 20
 			interest_group = ig_devout
 			ideology = ideology_theocrat
+    		culture = cu:tibetan
 			traits = {
 				cautious
 			}

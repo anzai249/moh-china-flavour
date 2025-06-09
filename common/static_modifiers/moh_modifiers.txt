@@ -299,3 +299,9 @@ modifier_keju_cheat_person = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
 	character_popularity_add = -50
 }
+
+# 13 factories
+modifier_13_factories = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_globe_negative.dds
+	country_convoys_capacity_mult = -0.25
+}
