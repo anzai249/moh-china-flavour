@@ -99,7 +99,7 @@
  je_xianfeng_tooltip: "#bold;gold 함풍제가 스트레스를 받을 수 있는 사건#!\n• 전쟁 상태\n• 원명원 방화\n• 최근 전쟁에서의 패배\n• 내란 발생"
  je_xianfeng_tooltip_reduce: "#bold;gold 함풍제의 스트레스를 줄여주는 사건: #!\n• 최근 전쟁에서의 승리\n• 높은 생활수준\n• [concept_great_power]임"
  je_xianfeng_complete_tt: "함풍제가 자연사했습니다."
- je_xianfeng_fail_tt: "진행 바가 #variable 100%#!에 도달했습니다."
+ je_xianfeng_fail_tt: "진행 바가 #variable 0%#!에 도달했습니다."
  je_xianfeng_on_fail_tt: "함풍제는 #bold 과로로 인한 병#!으로 사망할 것이며, 그로 인해 사후 국정 처리에 불합리한 상황이 발생할 것입니다."
  xianfeng_progress_bar_war_desc: "전쟁 상태"
  xianfeng_progress_bar_old_summer_palace_desc: "원명원 방화"

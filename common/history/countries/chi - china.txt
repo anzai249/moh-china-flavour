@@ -44,5 +44,12 @@
 			type = je_daoguang_reform_main
 		}
 		add_journal_entry = { type = je_keju }
+		
+		ig:ig_intelligentsia = { 
+			set_interest_group_name = ig_literati
+			remove_ideology = ideology_anti_clerical
+			remove_ideology = ideology_republican
+			add_ideology = ideology_eight_legged
+		}
 	}
 }

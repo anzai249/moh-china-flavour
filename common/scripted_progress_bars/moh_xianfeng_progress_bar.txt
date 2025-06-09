@@ -2,7 +2,7 @@
 	name = "xianfeng_progress_bar"
 	desc = "xianfeng_progress_bar_desc"
 	default_bad = yes
-	start_value = 0
+	start_value = 100
 	min_value = 0
 	max_value = 100
 	weekly_progress = {
@@ -12,7 +12,7 @@
 			}
 			add = {
 				desc = "xianfeng_progress_bar_war_desc"
-				value = 0.1
+				value = -0.1
 			}
 		}
 		if = {
@@ -27,7 +27,7 @@
 			}
 			add = {
 				desc = "xianfeng_progress_bar_old_summer_palace_desc"
-				value = 1.25
+				value = -1.25
 			}
 		}
 		if = {
@@ -36,7 +36,7 @@
 			}
 			add = {
 				desc = "xianfeng_progress_bar_lost_war_desc"
-				value = 0.5
+				value = -0.5
 			}
 		}
 		if = {
@@ -47,7 +47,7 @@
 			}
 			add = {
 				desc = "xianfeng_progress_bar_turmoil_desc"
-				value = 0.25
+				value = -0.25
 			}
 		}
 		if = {
@@ -56,7 +56,7 @@
 			}
 			add = {
 				desc = "xianfeng_progress_bar_great_power_desc"
-				value = -0.5
+				value = 0.5
 			}
 		}
 		if = {
@@ -69,7 +69,7 @@
 			}
 			add = {
 				desc = "xianfeng_progress_bar_standard_living_desc"
-				value = -0.1
+				value = 0.1
 			}
 		}
 		if = {
@@ -78,14 +78,14 @@
 			}
 			add = {
 				desc = "xianfeng_progress_bar_won_war_desc"
-				value = -0.5
+				value = 0.5
 			}
 		}
 	}
 	monthly_progress = {
 		add = {
 			desc = "xianfeng_progress_bar_monthly_desc"
-			value = 0.3
+			value = -0.3
 		}
 	}
 }

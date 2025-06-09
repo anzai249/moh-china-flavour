@@ -251,7 +251,7 @@ je_xianfeng = {
 		custom_tooltip = {
 			text = je_xianfeng_fail_tt
 			scope:journal_entry = {
-				"scripted_bar_progress(xianfeng_progress_bar)" >= 100
+				"scripted_bar_progress(xianfeng_progress_bar)" <= 0
 			}
 		}
 	}

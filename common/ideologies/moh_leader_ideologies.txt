@@ -238,25 +238,12 @@ ideology_moh_revolutionary = {
 		law_commercialized_agriculture = neutral
 	}
 
-	interest_group_leader_trigger = {
-		ideology_moh_revolutionary_valid_trigger = yes
-	}
-
-	non_interest_group_leader_trigger = {
-		NOT = {
-			has_role = agitator
-		}
-		interest_group = {
-			ideology_moh_revolutionary_valid_trigger = yes
-		}
-	}
-
 	country_trigger = {
 		exists = c:CHI
 		OR = {
 			AND = {
 				OR = {
-					c:CHI = this
+					c:CHI ?= this
 					civil_war_origin_country ?= c:CHI
 				}
 				OR = {
@@ -284,6 +271,31 @@ ideology_moh_revolutionary = {
 					has_technology_researched = nationalism
 					has_law = law_type:law_monarchy
 				}
+			}
+		}
+	}
+	
+	interest_group_leader_trigger = {
+		OR = {
+			is_interest_group_type = ig_industrialists
+			is_interest_group_type = ig_petty_bourgeoisie
+			is_interest_group_type = ig_intelligentsia
+			is_interest_group_type = ig_armed_forces
+			is_interest_group_type = ig_trade_unions
+		}
+	}
+
+	non_interest_group_leader_trigger = {
+		NOT = {
+			has_role = agitator
+		}
+		interest_group = {
+			OR = {
+				is_interest_group_type = ig_industrialists
+				is_interest_group_type = ig_petty_bourgeoisie
+				is_interest_group_type = ig_intelligentsia
+				is_interest_group_type = ig_armed_forces
+				is_interest_group_type = ig_trade_unions
 			}
 		}
 	}
@@ -433,19 +445,6 @@ ideology_moh_kmt = {
 		law_collectivized_agriculture = strongly_disapprove
 		law_commercialized_agriculture = neutral
 	}
-	
-	interest_group_leader_trigger = {
-		ideology_moh_kmt_valid_trigger = yes
-	}
-
-	non_interest_group_leader_trigger = {
-		NOT = {
-			has_role = agitator
-		}
-		interest_group = {
-			ideology_moh_kmt_valid_trigger = yes
-		}
-	}
 
 	country_trigger = {
 		OR = {
@@ -475,6 +474,19 @@ ideology_moh_kmt = {
 					}
 				}
 			}
+		}
+	}
+	
+	interest_group_leader_trigger = {
+		ideology_moh_kmt_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		NOT = {
+			has_role = agitator
+		}
+		interest_group = {
+			ideology_moh_kmt_valid_trigger = yes
 		}
 	}
 
