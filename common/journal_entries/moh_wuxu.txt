@@ -147,7 +147,7 @@
 					var:wuxu_random_event_add > 0
 				}
 				change_variable = {
-					name = wuxu_random_event_subtract
+					name = wuxu_random_event_add
 					add = -1
 				}
 			}

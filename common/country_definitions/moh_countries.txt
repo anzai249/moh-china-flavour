@@ -106,7 +106,7 @@ HKG = {
 	capital = STATE_SHAOZHOU
 }
 
-MAC = {
+MACAU = {
 	color = { 255 255 255 }
 	country_type = unrecognized
 	
@@ -148,4 +148,15 @@ RYU = { # Ryukyu
 	cultures = { japanese }
 	
 	capital = STATE_RYUKYU_ISLANDS
+}
+
+YUZ = { # Yuanzhumin
+	color = { 97 44 96 }
+	
+	country_type = decentralized
+
+	tier = principality
+	
+	cultures = { yuanzhumin }
+	capital = STATE_FORMOSA
 }

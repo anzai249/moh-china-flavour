@@ -757,7 +757,7 @@ HKG = {
 	}
 }
 
-MAC = {
+MACAU = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 

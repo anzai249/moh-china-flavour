@@ -25,6 +25,8 @@ je_xinhai = {
 				has_variable = wuxu_xinhai_rebellion
 			}
 		}
+		# ensure huang xing and qiu jin are not children
+		year >= 1890
 	}
 	immediate = {
 		set_variable = {

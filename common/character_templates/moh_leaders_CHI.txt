@@ -546,6 +546,7 @@ ecchi_chi_cai_yuanpei_character_template = {
 ecchi_chi_huang_xing_character_template = {
     first_name = ecchi_Xing
     last_name = Huang
+    religion = rel:protestant
     historical = yes
     culture = cu:han
     female = no
@@ -2511,4 +2512,16 @@ chi_kong_fanhao_character_template = {
         latest_usage_date = 1862.11.11
         chance = 65
     }
+}
+
+# YUZ - Cuqicuq Garuljigulj
+yuz_cuqicuq_garuljigulj_character_template = {
+    first_name = Cuqicuq
+    last_name = Garuljigulj
+    historical = yes
+    culture = cu:yuanzhumin
+    ideology = ideology_moderate
+    interest_group = ig_landowners
+    birth_date = 1817.1.1
+    traits = { charismatic persistent }
 }

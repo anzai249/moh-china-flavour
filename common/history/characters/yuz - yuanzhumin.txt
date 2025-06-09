@@ -1,0 +1,8 @@
+﻿CHARACTERS = {
+	c:YUZ ?= {
+		create_character = {
+            template = yuz_cuqicuq_garuljigulj_character_template
+			ruler = yes
+		}
+	}
+}

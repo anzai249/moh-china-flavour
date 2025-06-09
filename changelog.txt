@@ -33,7 +33,7 @@ Changes:
 beta-0.3.3
 
 Fixes:
-- Localization dupulication.
+- Localization duplication.
 
 beta-0.3.4
 
@@ -232,7 +232,7 @@ Fixes:
 
 - je_daoguang_reform_opium_reason localization issue.
 - Gaitu Guiliu random event modifier set to state instead of country. 
-- Morgenrote summer palace dupulication.
+- Morgenrote summer palace duplication.
 - League of Eight Provinces flag.
 - UI conflict with Morgenrote.
 
@@ -277,3 +277,20 @@ Changes:
 Fixes:
 
 - Revolutionaries JE not able to activate.
+
+Release 1.0.2 "Snake"
+
+Changes:
+
+- Traditional Chinese translation.
+- Change Huang Xing's religion to protestant.
+- Added Taiwanese indigenous peoples as a decentralized country.
+- Made Xianfeng progress bar to be more balanced.
+
+Fixes:
+Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDrDTNyj7nB7XQQp6z4/edit?usp=sharing
+
+- MOHB-0002
+- Prevent creating Huang Xing and Qiu Jin as child characters.
+- Weak Republicans je not able to activate.
+- Macau and Manchester Tag duplication.

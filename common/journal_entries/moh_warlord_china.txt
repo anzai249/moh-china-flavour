@@ -147,7 +147,7 @@
 						has_variable = china_warlord_explosion_taiwan
 					}
 					NOT = {
-						owns_entire_state_region = STATE_FORMOSA
+						has_state_in_state_region = STATE_FORMOSA
 					}
 				}
 				chi_remove_1_fragile_unity = yes
@@ -231,7 +231,5 @@ je_chinese_republic_monarchy = {
 			id = warlord_china_events.610 
 		}
 	}
-	timeout = {
-		days = 3650
-	}
+	timeout = 3650
 }

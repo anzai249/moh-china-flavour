@@ -1647,7 +1647,9 @@ warlord_china_events.600 = {
             }
         }
         change_tag = BEI
-        add_journal_entry = je_chinese_republic_monarchy
+        add_journal_entry = {
+            type = je_chinese_republic_monarchy
+        }
         set_global_variable = {
             name = chinese_central_government
             value = c:BEI

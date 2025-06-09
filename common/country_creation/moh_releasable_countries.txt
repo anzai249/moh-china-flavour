@@ -12,7 +12,7 @@ HKG = {
 	ai_will_do = { always = no }
 }
 
-MAC = {
+MACAU = {
 	provinces = { xB031E0 }
 
 	ai_will_do = { always = no }

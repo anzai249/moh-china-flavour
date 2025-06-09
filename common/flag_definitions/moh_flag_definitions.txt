@@ -440,10 +440,10 @@ HKG = {
     }
 }
 
-MAC = {
+MACAU = {
     flag_definition = {
-        coa = MAC
-        subject_canton = MAC
+        coa = MACAU
+        subject_canton = MACAU
         # allow_overlord_canton = yes
         priority = 1
     }

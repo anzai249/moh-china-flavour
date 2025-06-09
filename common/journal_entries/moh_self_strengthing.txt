@@ -65,7 +65,7 @@
     fail = {
         OR = {
             NOT = {
-                owns_entire_state_region = STATE_FORMOSA
+                has_state_in_state_region = STATE_FORMOSA
                 c:DAI = {
                     is_subject_of = c:CHI
                 }

@@ -1159,7 +1159,7 @@
 		region_state:CHI = {
 			create_pop = {
 				culture = min
-				size = 1000000
+				size = 990000
 			}
 			create_pop = {
 				culture = min
@@ -1191,7 +1191,17 @@
 			}
 			create_pop = {
 				culture = yuanzhumin
-				size = 600000
+				size = 100000
+			}
+		}
+		region_state:YUZ = {
+			create_pop = {
+				culture = yuanzhumin
+				size = 500000
+			}
+			create_pop = {
+				culture = min
+				size = 10000
 			}
 		}
 	}

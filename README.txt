@@ -6,7 +6,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Morgenrote Compatibility Testing
-Current version: 1.0.1 "Snake"
+Current version: 1.0.2 "Snake"
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
@@ -27,6 +27,7 @@ All contents in this mod are based on Wikipedia, however, this is a game and I n
 Languages supported:
 [*]English
 [*]简体中文
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3496033451]正體中文[/url]
 [*]한국어 (Outdated) - by manchikim & Winterboy
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3395792339]Русский[/url]
 
