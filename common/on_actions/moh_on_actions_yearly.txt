@@ -1,4 +1,4 @@
-historical_agitators_yearly_events_moh = {
+﻿historical_agitators_yearly_events_moh = {
 	random_events = {
 		25 = 0
 		80 = moh_agitators.1

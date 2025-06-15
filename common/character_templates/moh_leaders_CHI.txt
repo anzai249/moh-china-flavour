@@ -2006,8 +2006,8 @@ chi_moh_sun_yat_sen_character_template = {
             }
         }
         set_character_immortal = yes
-        place_character_in_void = 1200
-        set_interest_group = ig_petty_bourgeoisie
+        place_character_in_void = 10000
+        # set_interest_group = PREV.ig:ig_armed_forces
     }
 }
 
@@ -2524,4 +2524,30 @@ yuz_cuqicuq_garuljigulj_character_template = {
     interest_group = ig_landowners
     birth_date = 1817.1.1
     traits = { charismatic persistent }
+}
+
+# Yung Wing
+chi_yung_wing_character_template = {
+    first_name = moh_Wing
+    last_name = moh_Yung
+    historical = yes
+    culture = cu:yue
+    ideology = ideology_reformer
+    interest_group = ig_intelligentsia
+    birth_date = 1828.11.17
+    traits = { erudite }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:yue value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GUANGDONG
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1854.1.1
+        latest_usage_date = 1912.4.21
+        chance = 30
+    }
 }

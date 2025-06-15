@@ -294,3 +294,13 @@ Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDr
 - Prevent creating Huang Xing and Qiu Jin as child characters.
 - Weak Republicans je not able to activate.
 - Macau and Manchester Tag duplication.
+
+Release 1.1 "Knight"
+
+Changes:
+
+- New character: Yung Wing.
+
+Fixes:
+
+- MOHB-0006

@@ -231,9 +231,9 @@ ideology_moh_revolutionary = {
 	}
 	
 	lawgroup_land_reform = {
-		law_serfdom = strongly_disapprove
-		law_tenant_farmers = neutral
-		law_homesteading = approve
+		law_serfdom = disapprove
+		law_tenant_farmers = disapprove
+		law_homesteading = neutral
 		law_collectivized_agriculture = strongly_disapprove
 		law_commercialized_agriculture = neutral
 	}
