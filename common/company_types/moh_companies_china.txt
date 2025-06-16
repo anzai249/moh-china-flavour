@@ -85,12 +85,11 @@ company_state_grid = {
 	}
 	attainable = {
 		hidden_trigger = {
-			exists = c:CHI
-			this = c:CHI
+			c:CHI ?= this
 		}
 	}
 	possible = {
-		this = c:CHI
+		c:CHI ?= this
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_power_plant
@@ -116,12 +115,11 @@ company_china_aviation = {
 	}
 	attainable = {
 		hidden_trigger = {
-			exists = c:CHI
-			this = c:CHI
+			c:CHI ?= this
 		}
 	}
 	possible = {
-		this = c:CHI
+		c:CHI ?= this
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_war_machine_industry
@@ -147,12 +145,11 @@ company_sanxin = {
 	}
 	attainable = {
 		hidden_trigger = {
-			exists = c:CHI
-			this = c:CHI
+			c:CHI ?= this
 		}
 	}
 	possible = {
-		this = c:CHI
+		c:CHI ?= this
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_opium_plantation
@@ -187,7 +184,7 @@ company_changyu = {
 		}
 	}
 	possible = {
-		this = c:CHI
+		c:CHI ?= this
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_vineyard_plantation
@@ -223,7 +220,7 @@ company_tongrentang = {
 		}
 	}
 	possible = {
-		this = c:CHI
+		c:CHI ?= this
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_opium_plantation

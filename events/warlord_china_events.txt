@@ -1627,9 +1627,20 @@ warlord_china_events.600 = {
             }
             save_scope_as = warlord_scope
             ROOT = {
-                create_diplomatic_pact = {
-                    country = scope:warlord_scope
-                    type = vassal
+                if ={
+                    limit = {
+                       is_country_type = unrecognized
+                    }
+                    create_diplomatic_pact = {
+                        country = scope:warlord_scope
+                        type = vassal
+                    }
+                }
+                else = {
+                    create_diplomatic_pact = {
+                        country = scope:warlord_scope
+                        type = puppet
+                    }
                 }
             }
         }
@@ -1753,8 +1764,12 @@ warlord_china_events.610 = {
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
     icon = "gfx/interface/icons/event_icons/waving_flag.dds"
     trigger = {
-        exists = c:CHI
-        this = c:CHI
+        # exists = c:CHI
+        # this = c:CHI
+        OR = {
+            c:CHI ?= this
+            c:BEI ?= this
+        }
         NOT = {
             has_global_variable = china_shatters
         }
@@ -1788,6 +1803,25 @@ warlord_china_events.610 = {
                             set_state_owner = c:TIB
                             set_state_type = incorporated
                         }
+                    }
+                    if = {
+                        limit = {
+                            exists = s:STATE_EASTERN_HIMALAYAS.region_state:CHI
+                        }
+                        # random_state = {
+                        #     limit = {
+                        #         state_region = s:STATE_EASTERN_HIMALAYAS
+                        #     }
+                        #     set_state_owner = c:TIB
+                        #     set_state_type = incorporated
+                        # }
+                        s:STATE_EASTERN_HIMALAYAS = {
+                            region_state:CHI = {
+                                set_state_owner = c:TIB
+                                set_state_type = incorporated
+                            }
+                        }
+                        
                     }
                     activate_law = law_type:law_theocracy
                     if = {

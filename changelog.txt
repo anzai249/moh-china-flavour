@@ -300,7 +300,11 @@ Release 1.1 "Knight"
 Changes:
 
 - New character: Yung Wing.
+- Remake plague pandemic using harvest condition.
 
 Fixes:
 
 - MOHB-0006
+- MOHB-0003
+- MOHB-0004
+- MOHB-0005

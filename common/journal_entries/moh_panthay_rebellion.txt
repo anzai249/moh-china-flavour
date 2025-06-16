@@ -48,7 +48,10 @@ je_plague_pandemic = {
 		custom_tooltip = {
 			text = je_plague_pandemic_on_complete_tt
 			every_scope_state = {
-				remove_modifier = modifier_plague_pandemic
+				# remove_modifier = modifier_plague_pandemic
+				state_region = {
+					finish_harvest_condition = disease_outbreak
+				}
 			}
 			set_variable = plague_pandemic_complete
 		}
@@ -58,17 +61,27 @@ je_plague_pandemic = {
 			if = {
 				limit = {
 					any_scope_state = {
-						has_modifier = modifier_plague_pandemic
+						# has_modifier = modifier_plague_pandemic
+						
+						state_region = {
+							has_harvest_condition = disease_outbreak
+						}
 					}
 				}
 				random_scope_state = {
 					limit = {
-						has_modifier = modifier_plague_pandemic
+						# has_modifier = modifier_plague_pandemic
+							state_region = {
+								has_harvest_condition = disease_outbreak
+							}
 					}
 					random_neighbouring_state = {
 						limit = {
 							NOT = {
-								has_modifier = modifier_plague_pandemic
+								# has_modifier = modifier_plague_pandemic
+								state_region = {
+									has_harvest_condition = disease_outbreak
+								}
 								has_modifier = modifier_plague_lockdown
 							}
 							OR = {
@@ -77,12 +90,12 @@ je_plague_pandemic = {
 							}
 						}
 						random_list = {
-							0 = {
+							75 = {
 							}
-							25 = {
+							15 = {
 								trigger_event = moh_historical.14
 							}
-							0 = {
+							10 = {
 								trigger_event = moh_historical.15
 							}
 						}
@@ -130,7 +143,10 @@ je_plague_pandemic = {
 						any_neighbouring_state = {
 							owner = root
 						}
-						has_modifier = modifier_plague_pandemic
+						# has_modifier = modifier_plague_pandemic
+						state_region = {
+							has_harvest_condition = disease_outbreak
+						}
 						NOT = {
 							has_variable = plague_pandemic_treaty_port
 						}
@@ -151,7 +167,10 @@ je_plague_pandemic = {
 				limit = {
 					NOT = {
 						any_state = {
-							has_modifier = modifier_plague_pandemic
+							# has_modifier = modifier_plague_pandemic
+							state_region = {
+								has_harvest_condition = disease_outbreak
+							}
 						}
 					}
 				}
