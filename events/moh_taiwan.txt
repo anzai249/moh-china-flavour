@@ -28,7 +28,7 @@ moh_taiwan.1 = {
 		}
 		NOT = {
 			exists = c:FRS
-			exists = c:YUZ
+			# exists = c:YUZ
 		}
 		NOT = {
 			has_global_variable = taiwan_war_var

@@ -404,7 +404,7 @@ ideology_moh_revolutionary = {
 
 ideology_moh_kmt = {
 	# 国民党人
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_moh_revolutionary_kmt.png"
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_moh_revolutionary_kmt.dds"
 	character_ideology = yes
 	
 	lawgroup_governance_principles = {

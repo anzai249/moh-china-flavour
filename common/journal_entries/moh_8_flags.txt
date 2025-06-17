@@ -31,6 +31,10 @@
 			}
 			percent >= 0.25
 		}
+		custom_tooltip = {
+			text = 8_flags_complete_tt_channel_force_into_valor
+			has_variable = channel_force_into_valor_complete
+		}
 	}
 	on_complete = {
 		custom_tooltip = 8_flags_on_complete_tt_1
@@ -59,6 +63,36 @@
 				set_interest_group_name = ig_armed_forces
 				# add_ideology = ideology_republican
 			}
+		}
+	}
+	weight = 50
+	should_be_pinned_by_default = yes
+}
+
+je_channel_force_into_valor = {
+	icon = "gfx/interface/icons/event_icons/valor.dds"
+	group = je_group_internal_affairs
+	is_shown_when_inactive = {
+		exists = c:CHI
+		c:CHI = root
+	}
+	immediate = {
+	}
+	possible = {
+		OR = {
+			has_journal_entry = je_xianfeng
+			has_technology_researched = army_reserves
+		}
+	}
+	complete = {
+		has_law = law_type:law_professional_army
+		has_technology_researched = general_staff
+		military_wage_level > medium
+	}
+	on_complete = {
+		custom_tooltip = {
+			text = channel_force_into_valor_on_complete_tt
+			set_variable = channel_force_into_valor_complete
 		}
 	}
 	weight = 50

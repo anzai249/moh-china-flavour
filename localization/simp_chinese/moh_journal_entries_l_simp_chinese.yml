@@ -198,3 +198,6 @@
   je_chinese_republic_monarchy_reason: "由于共和派在革命中的让步，使得守旧派有可乘之机，同时也使得地方势力得以壮大。"
   je_13_factories: "十三行"
   je_13_factories_reason: "十三行是[ROOT.GetCountry.GetName]对外贸易的唯一窗口，通过锁国政策严格限制外国商人，仅允许在此区域进行贸易。"
+  8_flags_complete_tt_channel_force_into_valor: "完成化兵为勇日志条目"
+  je_channel_force_into_valor: "化兵为勇"
+  je_channel_force_into_valor_reason: "化兵为勇是为了响应[ROOT.GetCountry.GetAdjectiveNoFormatting]政府对重组绿营军的需求而产生的，同时也与日益增强的抵御外来侵略的军事力量意识密切相关。"

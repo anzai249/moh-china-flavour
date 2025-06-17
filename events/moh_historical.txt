@@ -262,9 +262,11 @@ moh_historical.4 = {
 		}
 		NOT = {
 			c:GBR = {
-				has_diplomatic_pact = {
-					who = c:CHI
-					type = foreign_investment_rights
+				any_scope_treaty = {
+					binds = c:CHI
+					any_scope_article = {
+						has_type = foreign_investment_rights
+					}
 				}
 			}
 		}
@@ -303,10 +305,33 @@ moh_historical.4 = {
 		activate_law = law_type:law_migration_controls
 		custom_tooltip = {
 			text = moh_historical.4.b_tt
-			c:GBR = {
-				create_diplomatic_pact = {
-					country = c:CHI
-					type = foreign_investment_rights
+			# c:GBR = {
+			# 	create_diplomatic_pact = {
+			# 		country = c:CHI
+			# 		type = foreign_investment_rights
+			# 	}
+			# }
+			create_treaty = {
+				first_country = c:GBR
+				second_country = c:CHI
+				binding_period = {
+					years = 99
+				}
+				is_draft = no
+				articles_to_create = {
+					{
+						article = foreign_investment_rights
+						source_country = c:CHI
+						target_country = c:GBR
+					}
+					{
+						article = money_transfer
+						source_country = c:CHI
+						target_country = c:GBR
+						inputs = {
+							{ quantity = 100 }
+						}
+					}
 				}
 			}
 		}
@@ -443,15 +468,19 @@ moh_historical.6 = {
 		has_variable = arrow_war_target
 		OR = {
 			c:GBR = {
-				has_diplomatic_pact = {
-					who = c:CHI
-					type = foreign_investment_rights
+				any_scope_treaty = {
+					binds = c:CHI
+					any_scope_article = {
+						has_type = foreign_investment_rights
+					}
 				}
 			}
 			c:FRA = {
-				has_diplomatic_pact = {
-					who = c:CHI
-					type = foreign_investment_rights
+				any_scope_treaty = {
+					binds = c:CHI
+					any_scope_article = {
+						has_type = foreign_investment_rights
+					}
 				}
 			}
 		}
@@ -462,9 +491,11 @@ moh_historical.6 = {
 		if = {
 			limit = {
 				c:FRA = {
-					has_diplomatic_pact = {
-						who = c:CHI
-						type = foreign_investment_rights
+					any_scope_treaty = {
+						binds = c:CHI
+						any_scope_article = {
+							has_type = foreign_investment_rights
+						}
 					}
 				}
 			}
@@ -475,9 +506,11 @@ moh_historical.6 = {
 		if = {
 			limit = {
 				c:GBR = {
-					has_diplomatic_pact = {
-						who = c:CHI
-						type = foreign_investment_rights
+					any_scope_treaty = {
+						binds = c:CHI
+						any_scope_article = {
+							has_type = foreign_investment_rights
+						}
 					}
 				}
 			}

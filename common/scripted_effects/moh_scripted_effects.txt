@@ -693,7 +693,7 @@ warlord_setup_countries = {
                     }
                     create_character = {
                         template = ecchi_chi_zhang_zuolin_character_template
-                        is_ruler = yes
+                        ruler = yes
                     }
                 }
                 else = {
@@ -749,7 +749,7 @@ warlord_setup_countries = {
                     }
                     create_character = {
                         template = ecchi_chi_zhang_zuolin_character_template
-                        is_ruler = yes
+                        ruler = yes
                     }
                 }
                 else = {
@@ -790,7 +790,7 @@ warlord_setup_countries = {
                     }
                     create_character = {
                         template = ecchi_chi_yan_xishan_character_template
-                        is_ruler = yes
+                        ruler = yes
                     }
                 }
                 else = {
@@ -838,7 +838,7 @@ warlord_setup_countries = {
                     }
                     create_character = {
                         template = ecchi_chi_yan_xishan_character_template
-                        is_ruler = yes
+                        ruler = yes
                     }
                 }
                 else = {

@@ -296,11 +296,13 @@ Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDr
 - Macau and Manchester Tag duplication.
 
 Release 1.1 "Knight"
+Game version 1.9 compatibility.
 
 Changes:
 
 - New character: Yung Wing.
-- Remake plague pandemic using harvest condition.
+- Remake plague pandemic using harvest condition. (May change at any time)
+- Channel Force into Valor JE.
 
 Fixes:
 

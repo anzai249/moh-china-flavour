@@ -1,4 +1,5 @@
 # COPY-PASTED FOR NOW
+# UPDATE CMF!!!
 @panel_width_minus_30 = 510
 @panel_width_minus_20 = 520			
 @panel_width_minus_10 = 530			# used to be 450
