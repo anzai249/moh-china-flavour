@@ -7,6 +7,10 @@ company_peking_university = {
 		building_university
 		building_paper_mills
 	}
+	extension_building_types = {
+		building_paper_mills
+	}
+	preferred_headquarters = { STATE_BEIJING }
 	potential = {
 		has_interest_marker_in_region = region_north_china
 	}
@@ -46,6 +50,14 @@ company_machine_weaving_bureau = {
 		building_textile_mills
 		building_silk_plantation
 	}
+	extension_building_types = {
+		building_textile_mills
+		building_silk_plantation
+	}
+	possible_prestige_goods = {
+		prestige_good_suzhou_silk
+	}
+	preferred_headquarters = { STATE_SICHUAN STATE_SUZHOU }
 	potential = {
 		has_interest_marker_in_region = region_north_china
 	}
@@ -83,6 +95,10 @@ company_state_grid = {
 		building_power_plant
 		building_electrics_industry
 	}
+	extension_building_types = {
+		building_power_plant
+	}
+	preferred_headquarters = { STATE_BEIJING }
 	attainable = {
 		hidden_trigger = {
 			c:CHI ?= this
@@ -111,6 +127,9 @@ company_china_aviation = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	flavored_company = yes
 	building_types = {
+		building_war_machine_industry
+	}
+	extension_building_types = {
 		building_war_machine_industry
 	}
 	attainable = {
@@ -143,10 +162,17 @@ company_sanxin = {
 	building_types = {
 		building_opium_plantation
 	}
+	extension_building_types = {
+		building_opium_plantation
+	}
+	preferred_headquarters = { STATE_SUZHOU }
 	attainable = {
 		hidden_trigger = {
 			c:CHI ?= this
 		}
+	}
+	possible_prestige_goods = {
+		prestige_good_generic_opium
 	}
 	possible = {
 		c:CHI ?= this
@@ -173,6 +199,10 @@ company_changyu = {
 	building_types = {
 		building_vineyard_plantation
 	}
+	extension_building_types = {
+		building_vineyard_plantation
+	}
+	preferred_headquarters = { STATE_SHANDONG }
 	potential = {
 		has_interest_marker_in_region = region_north_china
 	}
@@ -208,6 +238,11 @@ company_tongrentang = {
 	flavored_company = yes
 	building_types = {
 		building_opium_plantation
+	}
+	preferred_headquarters = { STATE_BEIJING }
+	extension_building_types = {
+		building_opium_plantation
+		building_food_industry
 	}
 	potential = {
 		has_interest_marker_in_region = region_north_china

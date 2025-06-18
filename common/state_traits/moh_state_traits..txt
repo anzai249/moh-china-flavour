@@ -7,13 +7,13 @@
 		state_migration_pull_mult = 0.05
 	}
 }
-state_trait_black_soil = {
-	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
+# state_trait_black_soil = {
+# 	icon = "gfx/interface/icons/state_trait_icons/good_soils.dds"
 	
-	modifier = {
-		building_group_bg_agriculture_throughput_add = 0.15
-	}
-}
+# 	modifier = {
+# 		building_group_bg_agriculture_throughput_add = 0.15
+# 	}
+# }
 state_trait_chieftains = {
 	icon = "gfx/interface/icons/state_trait_icons/fjords.dds"
 	

@@ -305,6 +305,7 @@ Changes:
 - Channel Force into Valor JE.
 
 Fixes:
+Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDrDTNyj7nB7XQQp6z4
 
 - MOHB-0006
 - MOHB-0003

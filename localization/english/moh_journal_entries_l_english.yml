@@ -200,3 +200,4 @@
   8_flags_complete_tt_channel_force_into_valor: "Completed the Channel Force into Valor Journal Entry"
   je_channel_force_into_valor: "Channel Force into Valor"
   je_channel_force_into_valor_reason: "#italic Hua Bing Wei Yong#! was emerged in response to the [ROOT.GetCountry.GetAdjectiveNoFormatting] government's need to reorganize the Green Standard Army and was also closely related to the growing awareness of strengthening the military to resist foreign aggression."
+  channel_force_into_valor_on_complete_tt: "We are one step closer to modernizing the army."

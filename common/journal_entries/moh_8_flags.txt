@@ -8,6 +8,10 @@
 	}
 	complete = {
 		has_law = law_type:law_professional_army
+		custom_tooltip = {
+			text = 8_flags_complete_tt_channel_force_into_valor
+			has_variable = channel_force_into_valor_complete
+		}
 		# custom_tooltip = {
 		# 	text = 8_flags_complete_tt
 		# 	NOT = {
@@ -30,10 +34,6 @@
 				has_unit_type = unit_type:combat_unit_type_trench_infantry
 			}
 			percent >= 0.25
-		}
-		custom_tooltip = {
-			text = 8_flags_complete_tt_channel_force_into_valor
-			has_variable = channel_force_into_valor_complete
 		}
 	}
 	on_complete = {
