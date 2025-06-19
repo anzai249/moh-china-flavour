@@ -254,7 +254,10 @@ moh_random.102 = {
 				OR = {
 					has_role = politician
 					has_role = agitator
+					has_role = executive
 				}
+				is_ruler = no
+				is_heir =  no
 			}
 			save_scope_as = cheat_character
 		}

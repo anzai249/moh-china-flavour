@@ -38,8 +38,8 @@
 	on_yearly_pulse = {
 		random_events = {
 			1000 = 0
-			2 = moh_random.101
-			1 = moh_random.102
+			6 = moh_random.101
+			5 = moh_random.102
 		}
 	}
 	weight = 100

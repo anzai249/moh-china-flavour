@@ -78,8 +78,8 @@ je_gaitu_guiliu = {
 	}
 	on_monthly_pulse = {
 		random_events = {
-			100 = 0
-			10 = gaitu_guiliu.1
+			200 = 0
+			6 = gaitu_guiliu.1
 			5 = gaitu_guiliu.2
 			2 = gaitu_guiliu.3
 		}

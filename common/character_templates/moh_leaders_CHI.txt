@@ -1955,7 +1955,7 @@ chi_weiyuan_character_template = {
     last_name = moh_Wei_1
     historical = yes
     culture = cu:han
-    ideology = ideology_reformer
+    ideology = ideology_modernizer_leader
     interest_group = ig_intelligentsia
     birth_date = 1794.4.23
     traits = { literary innovative}
@@ -1970,7 +1970,7 @@ chi_weiyuan_character_template = {
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
         }
-        earliest_usage_date = 1820.1.1
+        earliest_usage_date = 1842.1.1
         latest_usage_date = 1857.3.26
         chance = 15
     }
@@ -2028,6 +2028,7 @@ chi_yang_du_character_template = {
     is_agitator = yes
     agitator_usage = {
         country_trigger = {
+            always = no
             NOT = {
                 cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
             }

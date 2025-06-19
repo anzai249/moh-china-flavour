@@ -60,6 +60,9 @@
             years = 10
             is_decaying = yes
         }
+        add_modifier = {
+            name = modifier_self_strengthing_success_company
+        }
         set_variable = self_strengthening_end
     }
     fail = {

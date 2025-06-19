@@ -101,6 +101,7 @@ modifier_self_strengthing = {
 	unit_navy_defense_mult = 0.1
 	country_tax_income_add = -2500
 	country_law_enactment_time_mult = 0.05
+	country_max_companies_add = 1
 }
 
 # father
@@ -243,6 +244,11 @@ modifier_self_strengthing_success = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_tech_spread_mult = 0.1
 	country_prestige_add = 20
+}
+
+modifier_self_strengthing_success_company = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
+	country_max_companies_add = 1
 }
 
 # 慷慨的捐赠
