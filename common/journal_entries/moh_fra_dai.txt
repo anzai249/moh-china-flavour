@@ -1,4 +1,4 @@
-je_fra_dai = {
+﻿je_fra_dai = {
 	icon = "gfx/interface/icons/generic_icons/state.dds"
 	group = je_group_historical_content
 	is_shown_when_inactive = {

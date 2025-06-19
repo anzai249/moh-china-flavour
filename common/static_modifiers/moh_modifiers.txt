@@ -305,3 +305,12 @@ modifier_13_factories = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_globe_negative.dds
 	country_convoys_capacity_mult = -0.25
 }
+
+# edit warlord era
+modifier_chinese_warlord_era = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.1
+	interest_group_ig_armed_forces_pol_str_mult = 0.3
+	country_officers_pol_str_mult = 0.75
+	country_infamy_decay_mult = 0.25
+}

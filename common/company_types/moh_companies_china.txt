@@ -98,19 +98,31 @@ company_state_grid = {
 	extension_building_types = {
 		building_power_plant
 	}
+	potential = {
+		has_interest_marker_in_region = region_north_china
+	}
 	preferred_headquarters = { STATE_BEIJING }
 	attainable = {
-		hidden_trigger = {
-			c:CHI ?= this
-		}
+			any_scope_state = {
+				state_region = s:STATE_BEIJING
+			}
 	}
 	possible = {
-		c:CHI ?= this
+		any_scope_state = {
+			state_region = s:STATE_BEIJING
+		}
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_power_plant
 				level >= 5
 			}
+		}
+	}
+	ai_will_do = {
+		has_law = law_type:law_council_republic
+		any_scope_state = {
+			state_region = s:STATE_BEIJING
+			is_incorporated = yes
 		}
 	}
 	prosperity_modifier = {
@@ -121,16 +133,19 @@ company_state_grid = {
 	}
 }
 
-# china Aviation 
+# china Aviation
 company_china_aviation = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/china_aviation.dds"
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
 	flavored_company = yes
 	building_types = {
-		building_war_machine_industry
+		building_automotive_industry
 	}
 	extension_building_types = {
-		building_war_machine_industry
+		building_automotive_industry
+	}
+	potential = {
+		has_interest_marker_in_region = region_south_china
 	}
 	attainable = {
 		hidden_trigger = {
@@ -141,7 +156,7 @@ company_china_aviation = {
 		c:CHI ?= this
 		any_scope_state = {
 			any_scope_building = {
-				is_building_type = building_war_machine_industry
+				is_building_type = building_automotive_industry
 				level >= 5
 			}
 		}
@@ -164,18 +179,25 @@ company_sanxin = {
 	}
 	extension_building_types = {
 		building_opium_plantation
+	}	
+	potential = {
+		has_interest_marker_in_region = region_south_china
 	}
 	preferred_headquarters = { STATE_SUZHOU }
 	attainable = {
-		hidden_trigger = {
-			c:CHI ?= this
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_SUZHOU
+			}
 		}
 	}
 	possible_prestige_goods = {
 		prestige_good_generic_opium
 	}
 	possible = {
-		c:CHI ?= this
+		any_scope_state = {
+			state_region = s:STATE_SUZHOU
+		}
 		any_scope_state = {
 			any_scope_building = {
 				is_building_type = building_opium_plantation

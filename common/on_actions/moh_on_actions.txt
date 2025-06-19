@@ -272,7 +272,7 @@ moh_self_strengthening_character_creation = {
 				is_historical = no
 			}
 			random_list = {
-				75 = 0
+				75 = {}
 				25 = {
 					set_variable = self_strengthening_character
 				}

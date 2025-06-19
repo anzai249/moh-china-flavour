@@ -1,4 +1,4 @@
-je_xinhai = {
+﻿je_xinhai = {
 	icon = "gfx/interface/icons/event_icons/1911_revolution.dds"
 	group = je_group_historical_content
 	modifiers_while_active = {

@@ -158,6 +158,68 @@ ai_strategy_default = {
 				}
 			}
 		}
+
+		### Schleswig War
+		if = {
+			limit = {
+				NOR = {
+					country_has_primary_culture = cu:north_german
+					country_has_primary_culture = cu:south_german
+				}
+				OR = {
+					AND = {
+						scope:country = {
+							is_oppressor_of_schleswig_holstein = yes
+						}
+						scope:enemy_country = {
+							has_journal_entry = je_schleswig_holstein_question
+						}
+					}
+					AND = {
+						scope:enemy_country = {
+							is_oppressor_of_schleswig_holstein = yes
+						}
+						scope:country = {
+							has_journal_entry = je_schleswig_holstein_question
+						}
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					NOR = {
+						any_scope_treaty = {
+							binds = scope:country
+							any_scope_article = {
+								has_type = alliance
+							}
+						}
+						AND = {
+							NOT = { exists = scope:is_initiator }
+							OR = {
+								any_scope_treaty = {
+									binds = scope:country
+									any_scope_article = {
+										has_type = defensive_pact
+									}
+								}
+								any_scope_treaty = {
+									binds = scope:country
+									any_scope_article = {
+										has_type = guarantee_independence
+									}
+								}
+							}
+						}
+					}
+				}
+				add = {
+					value = -100
+					desc = "je_schleswig_holstein_question"
+				}
+			}
+		}
 		
 		### Ottomans vs Egypt - Great Powers pick sides
 		if = {
@@ -549,6 +611,27 @@ ai_strategy_default = {
 				desc = "alignment_politics"
 			}
 		}
+		if = { # Arrow War
+			limit = {
+				OR = {
+					c:GBR ?= this
+					c:FRA ?= this
+				}
+				scope:country = {
+					OR = {
+						c:GBR ?= this
+						c:FRA ?= this
+					}
+				}
+				scope:enemy_country = {
+					has_variable = arrow_war_target
+				}
+			}
+			add = {
+				value = 50
+				desc = "alignment_politics"
+			}
+		}
 	}	
 	
 	# Added to base neutrality in diplomatic plays	
@@ -679,6 +762,18 @@ ai_strategy_default = {
 				}
 				any_country = {
 					is_diplomatic_play_enemy_of = c:RSM
+				}
+			}
+			add = 50
+		}
+
+		# Good luck Denmark
+		if = {
+			limit = {
+				c:DEN ?=this
+				scope:diplomatic_play.target = { c:DEN ?= this }
+				scope:diplomatic_play.initiator = {
+					has_journal_entry = je_schleswig_holstein_question
 				}
 			}
 			add = 50
@@ -1498,7 +1593,7 @@ ai_strategy_default = {
 						}
 					}
 				}
-				add = 25
+				add = 20
 			}
 
 			if = { #Do Not Take Chinese States In Full
@@ -1514,7 +1609,7 @@ ai_strategy_default = {
 								country_has_primary_culture = cu:han
 								country_has_primary_culture = cu:tibetan
 							}
-							NOT = {has_variable = opium_wars_target}
+							# NOT = {has_variable = opium_wars_target}
 						}
 						OR = {
 							region = sr:region_north_china
@@ -1528,6 +1623,50 @@ ai_strategy_default = {
 						country_is_in_north_america = yes
 						country_is_in_europe = yes
 						country_is_in_south_america = yes
+					}
+					NOR = {
+						sr:region_north_china = {
+							any_scope_state = {
+								NOT = { is_treaty_port = yes }
+								owner = {
+									NOT = { THIS = ROOT }
+									country_rank >= rank_value:major_power
+									OR = {
+										country_is_in_north_america = yes
+										country_is_in_europe = yes
+										country_is_in_south_america = yes
+									}
+								}
+							}
+						}
+						sr:region_south_china = {
+							any_scope_state = {
+								NOT = { is_treaty_port = yes }
+								owner = {
+									NOT = { THIS = ROOT }
+									country_rank >= rank_value:major_power
+									OR = {
+										country_is_in_north_america = yes
+										country_is_in_europe = yes
+										country_is_in_south_america = yes
+									}
+								}
+							}
+						}
+						sr:region_manchuria = {
+							any_scope_state = {
+								NOT = { is_treaty_port = yes }
+								owner = {
+									NOT = { THIS = ROOT }
+									country_rank >= rank_value:major_power
+									OR = {
+										country_is_in_north_america = yes
+										country_is_in_europe = yes
+										country_is_in_south_america = yes
+									}
+								}
+							}
+						}
 					}
 					NOT = {
 						scope:target_state = { 
@@ -1657,9 +1796,35 @@ ai_strategy_default = {
 				}
 				scope:target_state = {
 					NOT = { state_region = s:STATE_FORMOSA }
-				}					
+				}
 			}
 			add = 100
+		}	
+		if = {
+			limit = {
+				has_journal_entry = je_opium_wars
+				scope:target_country = {
+					has_variable = opium_wars_target
+				}
+				scope:target_state = {
+					state_region = s:STATE_SHAOZHOU
+				}
+			}
+			multiply = 1.2
+		}
+		
+		## Arrow War
+		if = {
+			limit = {
+				OR = {
+					c:GBR ?= this
+					c:FRA ?= this
+				}
+				scope:target_country = {
+					has_variable = arrow_war_target
+				}
+			}
+			multiply = 0
 		}
 
 		if = {
@@ -1667,6 +1832,7 @@ ai_strategy_default = {
 				OR = {
 					c:GER ?= THIS
 					c:PRU ?= THIS
+					c:NGF ?= THIS
 				}
 				scope:target_state = {
 					state_region = s:STATE_SHANDONG
@@ -1700,8 +1866,8 @@ ai_strategy_default = {
 								OR = {
 									owner = { is_subject_of = ROOT }
 									owner = ROOT
-				}
-			}
+								}
+							}
 						}
 					}
 				}
@@ -2671,7 +2837,7 @@ ai_strategy_default = {
 					is_oppressor_of_schleswig_holstein = yes
 				}
 			}
-			add = 10
+			add = 5
 		}		
 
 		if = { #Carving up China
@@ -2685,7 +2851,6 @@ ai_strategy_default = {
 							region = sr:region_south_china
 							region = sr:region_manchuria
 						}
-						is_treaty_port = yes
 					}					
 				}
 			}
@@ -2908,10 +3073,7 @@ ai_strategy_default = {
 			limit = {
 				country_has_primary_culture = cu:russian
 				any_scope_state = {
-					OR = {
 						state_region = s:STATE_OUTER_MANCHURIA
-						state_region = s:STATE_AMUR
-					}
 					is_incorporated = yes
 				}
 				scope:target_country = {
@@ -6243,6 +6405,7 @@ ai_strategy_default = {
 			}			
 		}		
 		
+		### DEPRECATED
 		take_treaty_port = {
 			add = scope:target_state.ai_treaty_port_value:root	
 			
@@ -6921,6 +7084,16 @@ ai_strategy_default = {
 					}
 					add = 25
 				}
+			}
+
+			if = {
+				limit = {
+					wants_to_solve_schleswig_holstein = yes
+					exists = c:HOL
+					scope:target_country = { this = c:HOL }
+					can_reach_target_country = yes
+				}
+				add = 150
 			}
 
 			if = {

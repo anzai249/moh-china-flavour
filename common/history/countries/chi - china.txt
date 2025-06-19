@@ -19,7 +19,7 @@
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_closed_borders
 		activate_law = law_type:law_freedom_of_conscience
-		
+		activate_law = law_type:law_canton_system
 		
 		set_government_wage_level = high
 		set_tax_level = low
@@ -53,5 +53,9 @@
 			add_ideology = ideology_eight_legged
 		}
 		# add_journal_entry = { type = je_13_factories }
+		set_import_tariff_level = { 
+			goods = g:opium
+			level = no_tariffs_or_subventions
+		}
 	}
 }

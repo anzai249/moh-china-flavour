@@ -25,15 +25,15 @@
         }
     }
     ai_chance = {
-        base = 15
-        modifier = {
-            trigger = {
+        value = 15
+        if = {
+            limit = {
                 has_strategy = ai_strategy_conservative_agenda
             }
             add = -10
         }
-        modifier = {
-            trigger = {
+        if = {
+            limit = {
                 has_strategy = ai_strategy_maintain_mandate_of_heaven
             }
             add = 10
@@ -67,9 +67,9 @@ steady_advancement_button = {
         }
     }
     ai_chance = {
-        base = 0
-        modifier = {
-            trigger = {
+        value = 0
+        if = {
+            limit = {
                 OR = {
                     has_strategy = ai_strategy_conservative_agenda
                     has_strategy = ai_strategy_reactionary_agenda
@@ -108,15 +108,15 @@ dismissed_officials_petition_button = {
         }
     }
     ai_chance = {
-        base = 10
-        modifier = {
-            trigger = {
+        value = 10
+        if = {
+            limit = {
                 has_strategy = ai_strategy_conservative_agenda
             }
             add = 10
         }
-        modifier = {
-            trigger = {
+        if = {
+            limit = {
                 has_strategy = ai_strategy_maintain_mandate_of_heaven
             }
             add = -5
@@ -195,7 +195,7 @@ china_ming_button = {
         }
     }
     ai_chance = {
-        base = 1
+        value = 1
     }
 }
 
@@ -240,7 +240,7 @@ china_shun_button = {
         }
     }
     ai_chance = {
-        base = 1
+        value = 1
     }
 }
 
@@ -266,7 +266,7 @@ china_later_jin_button = {
         }
     }
     ai_chance = {
-        base = 1
+        value = 1
     }
 }
 
@@ -311,7 +311,7 @@ china_han_button = {
         }
     }
     ai_chance = {
-        base = 1
+        value = 1
     }
 }
 
@@ -352,7 +352,7 @@ china_qing_button = {
         }
     }
     ai_chance = {
-        base = 1
+        value = 1
     }
 }
 
@@ -387,9 +387,9 @@ gaitu_guiliu_button_1 = {
     }
 
     ai_chance = {
-        base = 20
-        modifier = {
-            trigger = {
+        value = 20
+        if = {
+            limit = {
                 OR = {
                     is_at_war = yes
                     has_journal_entry = je_incorporate_the_west
@@ -477,9 +477,9 @@ gaitu_guiliu_button_2 = {
     }
 
     ai_chance = {
-        base = 20
-        modifier = {
-            trigger = {
+        value = 20
+        if = {
+            limit = {
                 OR = {
                     is_at_war = yes
                     has_journal_entry = je_incorporate_the_west

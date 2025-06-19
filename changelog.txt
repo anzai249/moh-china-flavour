@@ -311,3 +311,20 @@ Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDr
 - MOHB-0003
 - MOHB-0004
 - MOHB-0005
+
+Release 1.1.1 "Knight"
+
+Changes:
+
+- The infamy will decay faster during the Warlord Era.
+- Optimized default ai strategy.
+- Removed Character: Hou Debang. (Morgenrote updates so fast)
+- Great Britain will open Qing's market during the Opium Wars.
+
+Fixes:
+Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDrDTNyj7nB7XQQp6z4
+
+- MOHB-0007
+- AI values in scripted buttons.
+- Compatibility of companies.
+- Encoding issues.

@@ -6,7 +6,7 @@
 The ancient gate of the empire beside the Yellow River and the Yangtze has been quietly opened by the West in this romantic age. Will it resist the invaders, remain independent, or be swallowed by foreign powers? Or will it abandon tradition and embrace the new age?
 
 Morgenrote Compatibility Testing
-Current version: 1.1 "Knight"
+Current version: 1.1.1 "Knight"
 
 [img]https://i.imgur.com/v4nnIaO.png[/img]
 [*]60+ new historical or non-historical events.
