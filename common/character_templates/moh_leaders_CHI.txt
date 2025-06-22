@@ -2005,8 +2005,8 @@ chi_moh_sun_yat_sen_character_template = {
                 value = scope:father_scope
             }
         }
-        set_character_immortal = yes
-        place_character_in_void = 10000
+        set_character_busy_and_immortal = yes
+        # place_character_in_void = 10000
         # set_interest_group = PREV.ig:ig_armed_forces
     }
 }
