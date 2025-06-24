@@ -1,0 +1,7 @@
+﻿l_simp_chinese:
+  # Scripted gui used by button
+  gui_sidebar_a_vast_country_button: "gui_sidebar_a_vast_country_button"
+  # Name of the button that is shown in the hover popout
+  gui_sidebar_a_vast_country_button_desc: "幅员辽阔的国家"
+  # Tooltip shown when hovering over the button
+  gui_sidebar_a_vast_country_button_tooltip: "测试"
