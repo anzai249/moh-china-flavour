@@ -6,3 +6,22 @@ moh_missing_cmf_sgui = {
 		community_framework_is_active = no
 	}
 }
+
+gui_sidebar_a_vast_country_button = {
+	scope = country
+
+	# This trigger determines whether the button is visible or hidden
+	is_shown = {
+		always = yes
+	}
+
+	# This trigger determines whether the button is enabled or disabled
+	is_valid = {
+		always = yes
+	}
+
+	# This effect is triggered when the button is clicked
+	effect = {
+
+	}
+}
