@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+  ban_boxer_rebellion: "取缔义和团"
+  ban_boxer_rebellion_desc: ""
+  ban_boxer_rebellion_effects_desc: "•两个[Concept('concept_country', '$concept_countries$')]达成协议，其中一个$concept_country$同意禁止义和团活动。"
