@@ -1,0 +1,86 @@
+﻿ban_boxer_rebellion = {
+	kind = directed
+	cost = 5
+
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/ban_boxer_rebellion.dds"
+
+	flags = {
+		can_be_enforced
+	}
+
+	usage_limit = once_per_side
+
+	visible = {
+		NOT = { is_country_type = decentralized }
+		is_revolutionary = no
+		# scope:other_country ?= {
+			has_journal_entry = je_boxer_rebellion
+		# }
+	}
+
+	possible = {
+		NOT = { is_country_type = decentralized }
+		is_revolutionary = no
+		# scope:other_country ?= {
+			has_journal_entry = je_boxer_rebellion
+		# }
+	}
+
+    can_withdraw = { 
+		always = no
+	}
+
+	
+	ai = {
+
+        treaty_categories = {
+			power_bloc
+		}
+
+		article_ai_usage = {
+            request
+        }
+		evaluation_chance = {
+			value = 0.1
+		}
+
+		inherent_accept_score = {
+			value = -100
+		}
+
+		# contextual_accept_score = {
+		# 	value = -50
+		# }
+	}
+
+	wargoal = {
+		execution_priority = 80
+		contestion_type = control_target_country_capital
+
+		maneuvers = {
+			value = 1
+
+			scope:target_country = {
+				multiply = {
+					value = total_population
+					divide = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR
+					multiply = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER
+                    max = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+				}
+			}
+		}
+
+		infamy = {
+			value = 0.01
+
+			scope:target_country = {
+				multiply = {
+					value = total_population
+					divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+					multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+                    max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
+				}
+			}
+		}
+	}
+}
