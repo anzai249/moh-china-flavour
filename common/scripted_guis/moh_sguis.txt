@@ -22,6 +22,9 @@ gui_sidebar_a_vast_country_button = {
 
 	# This effect is triggered when the button is clicked
 	effect = {
-
+		set_variable = {
+			name = com_open_window
+			value = flag:gui_sidebar_a_vast_country_button
+		}
 	}
 }
