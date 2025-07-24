@@ -57,7 +57,7 @@
   moh_Yong: "勇"
   moh_Yongzheng: "永正"
   moh_Fu: "复"
-  moh_Yuan: "源"
+  moh_Yuan: "元" #Ruan Yuan
   moh_Du: "度"
   #女名
   moh_Ying: "英"
@@ -103,6 +103,11 @@
   moh_Fanhao: "繁灏"
   moh_Wing: "闳"
   moh_Yung: "容"
+  moh_Guifen: "桂芬"
+  moh_Bao: "包"
+  moh_Shichen: "世臣"
+  moh_Wu: "伍"
+  moh_Chongyao: "崇曜"
   moh_Jebtsundamba: "哲布尊丹巴"
   moh_Luvsanchultimjigmed: "罗布藏楚都木济克默特" #5th
   moh_Luvsantuvdenchoyjijaltsan: "罗桑图旦却吉坚赞" #6th
