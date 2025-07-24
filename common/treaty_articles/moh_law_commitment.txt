@@ -9,12 +9,10 @@
 
 	flags = {
         is_law_commitment
-		can_be_renegotiated
         can_be_enforced
-		recipient_pays_maintenance
 	}
 
-	usage_limit = once_per_side_with_same_inputs
+	usage_limit = once_per_side
 
 	maintenance_paid_by = target_country
 
@@ -27,13 +25,11 @@
     }
 
 	visible = {
-		NOT = { is_country_type = decentralized }
-		is_revolutionary = no
+
 	}
 
 	possible = {
-		NOT = { is_country_type = decentralized }
-		is_revolutionary = no
+        
         NOT = { is_subject_of = scope:other_country }
         save_temporary_scope_as = target_country
         scope:other_country = {
@@ -71,7 +67,7 @@
             }
         }
         custom_tooltip = {
-            text = DUPLICATE_ARTICLE_SAME_INPUTS
+            text = DUPLICATE_ARTICLE_SAME_INPUTS_TREATY
             trigger_if = {
                 limit = {
                     exists = root.input_law
@@ -96,6 +92,9 @@
 					}
 				}
             }
+        }
+        custom_tooltip = {
+            text = DUPLICATE_ARTICLE_SAME_INPUTS
             scope:treaty ?= {
                 NOT = {
                     any_scope_article_option = {
@@ -125,6 +124,9 @@
                     }
                 }
             }
+        }
+        scope:input = {
+            NOT = { this = law_type:law_traditionalism }
         }
     }
 
@@ -306,6 +308,10 @@
 		inherent_accept_score = {
 			value = 0
 
+            scope:article.input_law = {
+                save_temporary_scope_as = input
+            }
+
             if = {
                 limit = {
                     scope:source_country ?= this
@@ -318,9 +324,101 @@
                     }
                 }
 
+				scope:source_country = {
+					save_temporary_scope_as = target
+				}
+				scope:target_country = {
+					save_temporary_scope_as = actor
+				}
+
                 add = {
                     desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
-                    value = -25
+                    value = -100
+
+                    if = {
+                        limit = {
+                            NOT = { exists = scope:is_treaty_active }
+                            any_scope_treaty = {
+                                any_scope_article = {
+                                    has_type = law_commitment
+                                    source_country = scope:source_country
+                                }
+                            }
+                        }
+                        add = {
+                            value = -300
+                        }
+                    }
+
+                    if = { # Governance Principles
+                        limit = {
+                            scope:article.input_law = {
+                                is_same_law_group_as = law_type:law_monarchy
+                            }
+                        }
+                        add = -100
+                    }
+
+                    if = { # Distribution of Power
+                        limit = {
+                            scope:article.input_law = {
+                                is_same_law_group_as = law_type:law_autocracy
+                            }
+                        }
+                        add = -50
+                    }
+
+                    if = {
+                        limit = {
+                            scope:article.input_law = {
+                                OR = {
+                                    this = law_type:law_traditionalism
+                                    this = law_type:law_peasant_levies
+                                    this = law_type:law_extraction_economy
+                                    this = law_type:law_no_schools
+                                    this = law_type:law_no_health_system
+                                    this = law_type:law_no_home_affairs
+                                    this = law_type:law_serfdom
+                                    this = law_type:law_no_police
+                                    this = law_type:law_debt_slavery
+                                    this = law_type:law_consumption_based_taxation
+                                    this = law_type:law_no_social_security
+                                }
+                            }
+                        }
+                        value = -1000
+                    }
+                }
+
+				if = {
+					limit = {
+						has_law_or_variant = law_type:law_isolationism
+					}
+					add = {
+						desc = "law_isolationism"
+						add = -100
+					}
+				}
+
+				if = {
+					limit = {
+						country_rank >= scope:target_country.country_rank
+					}
+
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+						value = -300
+					}
+				}
+				else = {
+					add = {
+						desc = "DIPLOMATIC_ACCEPTANCE_RANK"
+						add = scope:target_country.country_rank
+						subtract = country_rank
+						multiply = 10
+						min = 0
+						max = 50
+					}
                 }
 
                 add = {
@@ -344,7 +442,7 @@
                     }
                     add = {
                         desc = "DIPLOMATIC_ACCEPTANCE_ANTI_SLAVERY"
-                        value = 15
+                        value = 25
                     }
                 }
 
@@ -355,7 +453,7 @@
                     }
                     add = {
                         desc = "communist_solidarity"
-                        value = 15
+                        value = 25
                     }
                 }
             }
@@ -371,9 +469,16 @@
                     }
                 }
 
+				scope:source_country = {
+					save_temporary_scope_as = actor
+				}
+				scope:target_country = {
+					save_temporary_scope_as = target
+				}
+
                 add = {
                     desc = "DIPLOMATIC_ACCEPTANCE_BASE_ADDITIONAL"
-                    value = -25
+                    value = -30
                 }
 
                 add = {
@@ -403,7 +508,7 @@
                     }
                     add = {
                         desc = "DIPLOMATIC_ACCEPTANCE_ANTI_SLAVERY"
-                        value = 15
+                        value = 25
                     }
                 }
 
@@ -414,7 +519,7 @@
                     }
                     add = {
                         desc = "DIPLOMATIC_ACCEPTANCE_ECONOMIC_IMPERIALISM"
-                        value = 15
+                        value = 25
                     }
                 }
 
@@ -425,7 +530,7 @@
                     }
                     add = {
                         desc = "communist_solidarity"
-                        value = 15
+                        value = 25
                     }
                 }
 
@@ -574,14 +679,20 @@
 	}
 
 	wargoal = {
-		execution_priority = 60
+		execution_priority = 21
 		contestion_type = control_target_country_capital
 
 		maneuvers = {
+			value = 0
+
+			add = {
+				desc = "MANEUVERS_BASE_VALUE"
 			value = 2.5
+			}
 
 			scope:target_country = {
 				multiply = {
+					desc = "MANEUVERS_TARGET_COUNTRY_POPULATION_FACTOR"
 					value = total_population
 					divide = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_FACTOR
 					multiply = define:NDiplomacy|SWAY_OFFER_WARGOAL_MANEUVERS_COST_POPULATION_SCALING_MULTIPLIER
@@ -591,10 +702,16 @@
 		}
 
 		infamy = {
+			value = 0
+
+			add = {
+				desc = "INFAMY_BASE_VALUE"
 			value = 0.5
+			}
 
 			scope:target_country = {
 				multiply = {
+					desc = "INFAMY_TARGET_COUNTRY_POPULATION_FACTOR"
 					value = total_population
 					divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
 					multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER

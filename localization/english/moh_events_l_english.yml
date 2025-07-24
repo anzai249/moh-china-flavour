@@ -364,3 +364,8 @@
   warlord_china_events.610.t: "The National Protection War"
   warlord_china_events.610.d: "The provinces, dissatisfied with the restoration of the monarchy, have declared war on the central government."
   warlord_china_events.610.f: "[Concept('concept_ruler', '$RULER_TITLE_PRESIDENT$')] forcibly restored the monarchy, sparking strong opposition nationwide. Yunnan was the first to declare independence, followed by other provinces refusing to recognize the 'Hongxian Empire.' They have risen in arms to protect the Republic and pledged to defend it at all costs.\n\nThis war, which will determine the nation's fate, has broken out in full force, and the situation is becoming increasingly tense."
+  moh_random.200.t: "The southern Great Wall has collapsed"
+  moh_random.200.f: "Residents of [SCOPE.sState('hunan_scope').GetName] heard a loud noise in the middle of the night, and the next day, a section of the Southern Great Wall was found to have collapsed. Although there were no casualties, this section of the Great Wall had once been the border between the Han Chinese and the barbarian tribes, symbolising the defensive power of the Han Chinese. Its collapse has left people feeling uneasy. \n\n"Hmm, how did the Great Wall collapse? The loud noise last night wasn't thunder after all."\n\n"Now that the wall has collapsed, it leaves me feeling uneasy...""
+  moh_random.200.a: "Rebuild it."
+  moh_random.200.b: "Take this opportunity to finish them off!"
+  moh_random.200.c: "Apartheid is gone forever."

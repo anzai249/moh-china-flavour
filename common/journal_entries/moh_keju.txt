@@ -1,9 +1,9 @@
 ﻿je_keju = {
 	icon = "gfx/interface/icons/pops_icons/bureaucrats.dds"
 	group = je_group_historical_content
-	modifiers_while_active = {
-		modifier_chi_keju
-	}
+	# modifiers_while_active = {
+	# 	modifier_chi_keju
+	# }
 	complete = {
 		institution_investment_level = {
 			institution = institution_schools
@@ -12,7 +12,7 @@
 	}
 	fail = {
 		NOT = {
-			has_law = law_type:law_appointed_bureaucrats
+			has_law = law_type:law_imperial_examinations
 		}
 	}
 	on_complete = {
@@ -24,6 +24,7 @@
 			add_ideology = ideology_republican
 			remove_ideology = ideology_eight_legged
 		}
+		activate_law = law_type:law_appointed_bureaucrats
 	}
 	on_fail = {
 		custom_tooltip = je_keju.tt.2

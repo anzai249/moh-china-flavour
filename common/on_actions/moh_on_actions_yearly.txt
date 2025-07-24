@@ -22,5 +22,6 @@ moh_random_yearly_events = {
 		15 = moh_random.2
 		2 = moh_random.3
 		75 = moh_historical.11
+		20 = moh_random.200
 	}
 }

@@ -2552,3 +2552,84 @@ chi_yung_wing_character_template = {
         chance = 30
     }
 }
+
+chi_feng_guifen_character_template = {
+    first_name = moh_Guifen
+    last_name = Feng
+    historical = yes
+    culture = cu:han
+    birth_date = 1809.1.1
+    ideology = ideology_moderate
+    interest_group = ig_intelligentsia
+    traits = { literary master_bureaucrat }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_SUZHOU
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1853.1.1
+        latest_usage_date = 1874.1.1
+        chance = 45
+    }
+    on_created = {
+        set_variable = self_strengthening_character
+    }
+}
+
+chi_bao_shichen_character_template = {
+    first_name = moh_Shichen
+    last_name = moh_Bao
+    historical = yes
+    culture = cu:han
+    birth_date = 1775.1.1
+    ideology = ideology_land_reformer
+    interest_group = ig_rural_folk
+    traits = { aesthete innovative }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            OR = {
+                has_state_in_state_region = STATE_SOUTHERN_ANHUI
+                has_state_in_state_region = STATE_NORTHERN_ANHUI
+            }
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_rural_folk
+        }
+        earliest_usage_date = 1807.1.1
+        latest_usage_date = 1855.1.1
+        chance = 15
+    }
+}
+
+chi_wu_chongyao_character_template = {
+    first_name = moh_Chongyao
+    last_name = moh_Wu
+    historical = yes
+    culture = cu:yue
+    birth_date = 1810.1.1
+    ideology = ideology_market_liberal
+    interest_group = ig_industrialists
+    traits = { brave tactful }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:yue value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_GUANGDONG
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_industrialists
+        }
+        earliest_usage_date = 1841.1.1
+        latest_usage_date = 1863.1.1
+        chance = 35
+    }
+}

@@ -80,10 +80,10 @@
 		}
 
 		create_character = {
-			first_name = Yuan
+			first_name = moh_Yuan
 			last_name = Ruan
 			historical = yes
-			age = 72 # exact birthday unclear
+			birth_date = 1764.1.1
 			culture = cu:han
 			ig_leader = yes
 			interest_group = ig_industrialists

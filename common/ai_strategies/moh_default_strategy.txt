@@ -153,7 +153,7 @@ ai_strategy_default = {
 				}
 				
 				add = {
-					value = -100
+					value = -200
 					desc = "german_leadership_neutrality"
 				}
 			}
@@ -210,6 +210,31 @@ ai_strategy_default = {
 										has_type = guarantee_independence
 									}
 								}
+							}
+						}
+					}
+
+					scope:enemy_country = {
+						NOR = {
+							play_participant_has_war_goal_of_type_against = {
+								type = conquer_state
+								target = scope:country
+							}
+							play_participant_has_war_goal_of_type_against = {
+								type = make_protectorate
+								target = scope:country
+							}
+							play_participant_has_war_goal_of_type_against = {
+								type = liberate_country
+								target = scope:country
+							}
+							play_participant_has_war_goal_of_type_against = {
+								type = take_treaty_port
+								target = scope:country
+							}
+							play_participant_has_war_goal_of_type_against = {
+								type = enforce_treaty_article
+								target = scope:country
 							}
 						}
 					}
@@ -529,7 +554,7 @@ ai_strategy_default = {
 			limit = {
 				c:JAP ?= this
 				NOT = {
-					has_law = law_type:law_isolationism
+					has_law_or_variant = law_type:law_isolationism
 					has_law = law_type:law_closed_borders
 				}
 				scope:country = {
@@ -644,7 +669,6 @@ ai_strategy_default = {
 			limit = {
 				has_journal_entry = je_sick_man_main
 			}
-			
 			add = 50
 		}
 	}
@@ -679,7 +703,7 @@ ai_strategy_default = {
 			limit = {
 				exists = c:JAP
 				this = c:JAP
-				has_law = law_type:law_isolationism 
+				has_law_or_variant = law_type:law_isolationism
 				scope:diplomatic_play = { 
 						has_play_goal = open_market
 				}
@@ -1094,8 +1118,22 @@ ai_strategy_default = {
 					scope:target_state = { owner = root }
 				}		
 				
-				if = { # Very reluctant to cede incorporate states
-					limit = { scope:target_state = { is_incorporated = yes } }
+				if = {
+					limit = {
+						scope:target_state = { ai_can_incorporate_state = yes }
+					}
+					add = 50
+				}
+
+				if = { # Very reluctant to cede incorporated states
+					limit = {
+						scope:target_state = {
+							OR = {
+								is_incorporated = yes
+								ai_can_incorporate_state = yes
+							}
+						}
+					}
 					
 					if = {
 						limit = {
@@ -1903,6 +1941,7 @@ ai_strategy_default = {
 							binds = root
 							any_scope_article = {
 								has_type = trade_privilege
+								source_country = scope:target_country
 							}
 					}	
 				}
@@ -2193,7 +2232,7 @@ ai_strategy_default = {
 			limit = {
 				has_strategy = ai_strategy_economic_imperialism
 				scope:target_country = { 
-					has_law = law_type:law_isolationism
+					has_law_or_variant = law_type:law_isolationism
 					gdp >= 5000000
 				} 			
 			}
@@ -2553,7 +2592,7 @@ ai_strategy_default = {
 			limit = {
 				has_journal_entry = je_greek_nationalism
 				scope:target_country = {
-					any_state = {
+					any_scope_state = {
 						state_region = { is_homeland = cu:greek }
 						has_claim_by = root
 					}
@@ -2820,7 +2859,7 @@ ai_strategy_default = {
 			limit = {
 				has_journal_entry = je_greek_nationalism
 				scope:target_country = {
-					any_state = {
+					any_scope_state = {
 						state_region = { is_homeland = cu:greek }
 						has_claim_by = root
 					}
@@ -2902,7 +2941,7 @@ ai_strategy_default = {
 				has_variable = haiti_stops_paying_france_aggressor				
 				scope:target_country = {
 					has_variable = haiti_stops_paying_france_target
-					any_state = {
+					any_scope_state = {
 						has_claim_by = root
 					}
 				}				
@@ -3088,7 +3127,7 @@ ai_strategy_default = {
 			limit = {
 				country_has_primary_culture = cu:japanese
 				NOT = {
-					has_law = law_type:law_isolationism
+					has_law_or_variant = law_type:law_isolationism
 					has_law = law_type:law_closed_borders
 				}
 				scope:target_country = {
@@ -4300,7 +4339,7 @@ ai_strategy_default = {
 			if = {
 				limit = {
 					exists = c:JAP
-					c:JAP = { has_law = law_type:law_isolationism }
+					c:JAP = { has_law_or_variant = law_type:law_isolationism }
 					NOT = { country_rank = rank_value:great_power }
 				}
 				add = -50
@@ -4744,7 +4783,7 @@ ai_strategy_default = {
 			# Large isolationist countries should ignore the world
 			if = {
 				limit = {
-					has_law = law_type:law_isolationism
+					has_law_or_variant = law_type:law_isolationism
 					gdp >= 5000000	
 				}
 				add = 10000
@@ -4970,7 +5009,7 @@ ai_strategy_default = {
 			if = {
 				limit = { 	
 					scope:target_country = {
-						has_law = law_type:law_isolationism
+						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000			
 					}
 				}
@@ -5358,7 +5397,7 @@ ai_strategy_default = {
 			if = {
 				limit = { 
 					scope:target_country = {
-						has_law = law_type:law_isolationism
+						has_law_or_variant = law_type:law_isolationism
 						gdp >= 5000000		
 					}
 				}
@@ -6216,6 +6255,7 @@ ai_strategy_default = {
 							binds = scope:target_country
 							any_scope_article = {
 								has_type = trade_privilege
+								source_country = scope:target_country
 							}
 						}			
 					}
@@ -6315,7 +6355,7 @@ ai_strategy_default = {
 		}
 
 		military_defense = {
-			value = 3
+			value = 4
 		}
 
 		ideology = {
@@ -6458,6 +6498,16 @@ ai_strategy_default = {
 					can_reach_target_country = yes
 				}
 				add = 100
+			}
+			
+			if = {
+				limit = {
+					has_journal_entry = je_opium_wars
+					scope:target_country = {
+						has_variable = opium_wars_target
+					}
+				}
+				multiply = 0
 			}
 
 			if = {
@@ -6616,7 +6666,7 @@ ai_strategy_default = {
 			}
 		}		
 
-		war_reparations = {
+		humiliation = {
 			value = 0
 			
 			add = {
@@ -6938,8 +6988,6 @@ ai_strategy_default = {
 						max = 100
 				}
 			}
-			}
-
 			if = {
 				limit = {
 					scope:target_country = {
@@ -6949,6 +6997,7 @@ ai_strategy_default = {
 				add = {
 					value = scope:target_country.num_states
 					multiply = 10
+					}
 			}
 		}		
 

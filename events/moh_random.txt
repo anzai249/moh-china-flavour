@@ -206,7 +206,7 @@ moh_random.101 = {
 		name = moh_random.101.a
 		default_option = yes
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 		add_modifier = {
 			name = modifier_keju_cheat_punishment
@@ -267,7 +267,7 @@ moh_random.102 = {
 		name = moh_random.102.a
 		default_option = yes
 		ai_chance = {
-			factor = 15
+			base = 15
 		}
 		add_modifier = {
 			name = modifier_keju_cheat_punishment
@@ -294,7 +294,7 @@ moh_random.102 = {
 	option = {
 		name = moh_random.102.b
 		ai_chance = {
-			factor = 1
+			base = 1
 		}
 		add_modifier = {
 			name = modifier_keju_cheat
@@ -310,6 +310,95 @@ moh_random.102 = {
 				name = modifier_keju_cheat_person
 				months = 12
 			}
+		}
+	}
+}
+
+moh_random.200 = {
+	# south great wall
+	type = country_event
+	placement = scope:hunan_scope
+	title = moh_random.200.t
+	desc = moh_random.200.d
+	flavor = moh_random.200.f
+	duration = 3
+	dlc = dlc0moh
+	event_image = {
+		video = "unspecific_devastation"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_skull.dds"
+	trigger = {
+		NOT = {
+			has_global_variable = south_great_wall_destroyed
+		}
+		any_scope_state = {
+			state_region = s:STATE_HUNAN
+		}
+		year >= 1860
+	}
+	immediate = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_HUNAN
+			}
+			save_scope_as = hunan_scope
+		}
+		set_global_variable = south_great_wall_destroyed
+	}
+	option = {
+		# fix it
+		name = moh_random.200.a
+		default_option = yes
+		scope:hunan_scope = {
+			add_modifier = {
+				name = modifier_south_great_wall_fixing
+				months = 12
+			}
+			add_acceptance = {
+				target = cu:miao
+				value = -5
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+	option = {
+		# kill them
+		name = moh_random.200.b
+		scope:hunan_scope = {
+			add_radicals_in_state = {
+				value = 0.25
+				culture = cu:miao
+			}
+			state_region = {
+				add_devastation = 20
+			}
+			add_acceptance = {
+				target = cu:miao
+				value = -10
+			}
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	option = {
+		# multicultural
+		name = moh_random.200.c
+		trigger = {
+			has_law = law_type:law_multicultural
+		}
+		highlighted_option = yes
+		scope:hunan_scope = {
+			add_loyalists_in_state = {
+				value = 0.1
+				culture = cu:miao
+			}
+		}
+		ai_chance = {
+			base = 10
 		}
 	}
 }

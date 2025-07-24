@@ -6,7 +6,7 @@
 		20 = moh_historical.12
 		25 = moh_historical.16
 		15 = nian_rebellion.1
-		5 = moh_historical.301
+		10 = moh_historical.301
 	}
 } 
 

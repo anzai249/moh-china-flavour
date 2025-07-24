@@ -320,3 +320,9 @@ modifier_chinese_warlord_era = {
 	country_officers_pol_str_mult = 0.75
 	country_infamy_decay_mult = 0.25
 }
+
+# south great wall fixing
+modifier_south_great_wall_fixing = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	building_construction_sector_throughput_add = -0.25
+}
