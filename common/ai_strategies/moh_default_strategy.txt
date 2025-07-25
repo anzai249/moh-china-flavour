@@ -657,6 +657,19 @@ ai_strategy_default = {
 				desc = "alignment_politics"
 			}
 		}
+		if = {
+			limit = {
+				country_rank >= rank_value:great_power
+				scope:enemy_country = {
+					has_variable = legations_siege
+					has_journal_entry = je_boxer_rebellion
+				}
+			}
+			add = {
+				value = 75
+				desc = "je_boxer_rebellion"
+			}
+		}
 	}	
 	
 	# Added to base neutrality in diplomatic plays	

@@ -30,10 +30,23 @@
     on_complete = {
         trigger_event = { id = boxer_rebellion_events.2 } # The Mandate of Heaven
     }
-    timeout = 1825
+    fail = {
+        any_scope_treaty = {
+            any_scope_article = {
+                has_type = ban_boxer_rebellion
+            }
+        }
+    }
+    timeout = 2555
     on_timeout = {
         trigger_event = { id = boxer_rebellion_events.3 } # The Qing and the Han
     }
     weight = 1000
     should_be_pinned_by_default = yes
+    on_monthly_pulse = {
+        random_events = {
+            100 = 0
+            10 = moh_historical.401 # Legations siege
+        }
+    }
 }

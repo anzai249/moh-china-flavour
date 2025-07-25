@@ -337,6 +337,9 @@ Changes:
 - New treaty article: Ban boxer rebellion.
 - New characters: Feng Guifen, Bao Shichen, Wu Chongyao.
 - New law variants: Imperial Examination System, Night Watchmen.
+- New company: Commercial Press.
+- Boxer Rebellion remake.
+- New country: Shanghai International Settlement.
 
 Fixes:
 Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDrDTNyj7nB7XQQp6z4

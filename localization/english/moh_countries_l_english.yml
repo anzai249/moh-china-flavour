@@ -13,6 +13,8 @@
  HBE_ADJ: "Hubei"
  RYU: "Ryukyu"
  RYU_ADJ: "Ryukyu"
+ SHANGHAI: "$HUB_NAME_STATE_SUZHOU_port$ International Settlement"
+ SHANGHAI_ADJ: "$HUB_NAME_STATE_SUZHOU_port$"
  dyn_c_dongbei_army: "Northeastern Army"
  dyn_c_dongbei_army_adj: "Northeastern Army"
  dyn_c_anguo: "Anguo Army"

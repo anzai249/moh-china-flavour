@@ -160,3 +160,14 @@ YUZ = { # Yuanzhumin
 	cultures = { yuanzhumin }
 	capital = STATE_FORMOSA
 }
+
+SHANGHAI = {
+	color = { 0 81 151 }
+	country_type = unrecognized
+	
+	tier = city_state
+	
+	cultures = { han }
+	
+	capital = STATE_SUZHOU
+}

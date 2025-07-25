@@ -32,3 +32,9 @@ RYU = {
 	}
 	ai_will_do = { always = no }
 }
+
+SHANGHAI = {
+	provinces = { xB01101 }
+
+	ai_will_do = { always = no }
+}

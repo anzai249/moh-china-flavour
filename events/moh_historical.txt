@@ -1421,3 +1421,101 @@ moh_historical.301 = { # Gong Zizhen retires
 		}
 	}
 }
+
+# boxer rebellion
+moh_historical.401 = { # Legations siege
+	type = country_event
+	placement = root
+	title = moh_historical.401.t
+	desc = moh_historical.401.d
+	flavor = moh_historical.401.f
+	dlc = dlc0moh
+	event_image = {
+		video = "votp_agitator_speaking"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+	trigger = {
+		any_scope_treaty = {
+			binds = root
+			any_scope_article = {
+				has_type = offer_embassy
+			}
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				NOT = {
+					this = root
+				}
+				any_scope_treaty = {
+					binds = root
+					any_scope_article = {
+						has_type = offer_embassy
+					}
+				}
+			}
+			save_scope_as = embassy_country_scope
+		}
+	}
+	option = {
+		name = moh_historical.401.a
+		default_option = yes
+		set_variable = {
+			name = legations_siege
+			months = 6
+		}
+		scope:embassy_country_scope = {
+			create_diplomatic_play = {
+				type = dp_default_treaty_article
+				target_country = root
+				add_war_goal = {
+					holder = this
+					target_country = root
+					type = enforce_treaty_article
+					article = {
+						article = ban_boxer_rebellion
+						source_country = root
+						target_country = this
+					}
+				}
+				# add_war_goal = {
+				# 	holder = this
+				# 	target_country = root
+				# 	type = enforce_treaty_article
+				# 	article = {
+				# 		article = money_transfer
+				# 		source_country = root
+				# 		target_country = this
+				# 		inputs = {
+				# 			{ quantity = scope:war_reparations_amount }
+				# 		}
+				# 	}
+				# }
+			}
+		}
+	}
+	option = {
+		name = moh_historical.401.b
+		custom_tooltip = {
+			text = moh_historical.401.b_tt
+			create_treaty = {
+				first_country = root
+				second_country = scope:embassy_country_scope
+				is_draft = no
+				binding_period = { 
+					years = 99
+				}
+				articles_to_create = {
+					{
+						article = ban_boxer_rebellion
+						source_country = root
+						target_country = scope:embassy_country_scope
+					}
+				}
+			}
+		}
+	}
+}
