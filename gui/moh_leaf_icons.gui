@@ -1,0 +1,54 @@
+texticon = {
+	icon = leaf_0
+	iconsize = {
+		texture = "gfx/interface/icons/moh_icons/leaf_territory_0.dds"
+		size = { 75 75 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+texticon = {
+	icon = leaf_1
+	iconsize = {
+		texture = "gfx/interface/icons/moh_icons/leaf_territory_1.dds"
+		size = { 75 75 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+texticon = {
+	icon = leaf_2
+	iconsize = {
+		texture = "gfx/interface/icons/moh_icons/leaf_territory_2.dds"
+		size = { 75 75 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+texticon = {
+	icon = leaf_3
+	iconsize = {
+		texture = "gfx/interface/icons/moh_icons/leaf_territory_3.dds"
+		size = { 75 75 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+texticon = {
+	icon = leaf_4
+	iconsize = {
+		texture = "gfx/interface/icons/moh_icons/leaf_territory_4.dds"
+		size = { 75 75 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}
+texticon = {
+	icon = leaf_5
+	iconsize = {
+		texture = "gfx/interface/icons/moh_icons/leaf_territory_5.dds"
+		size = { 75 75 }
+		offset = { 0 7 }
+		fontsize = 18
+	}
+}

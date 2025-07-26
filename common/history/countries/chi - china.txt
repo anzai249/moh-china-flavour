@@ -57,9 +57,9 @@
 			goods = g:opium
 			level = no_tariffs_or_subventions
 		}
-		add_to_variable_list = {
-			name = custom_button_list_flag
-			target = flag:gui_sidebar_a_vast_country_button
-		}
+		# add_to_variable_list = {
+		# 	name = custom_button_list_flag
+		# 	target = flag:gui_sidebar_a_vast_country_button
+		# }
 	}
 }

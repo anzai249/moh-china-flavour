@@ -17,3 +17,77 @@ moh_agitator_monthly_events = {
 		80 = moh_agitators.1
 	}
 }
+
+moh_savage_land = {
+	effect = {
+		if = {
+			limit = {
+				any_state = {
+					has_state_trait = state_trait_dragon_rise_land
+					controller = {
+						OR = {
+							NOT = {
+								country_has_primary_culture = cu:manchu
+							}
+							NOT = {
+								exists = c:CHI
+								c:CHI = this
+							}
+						}
+					}
+				}
+			}
+			random_state = {
+				limit = {
+					has_state_trait = state_trait_dragon_rise_land
+					controller = {
+						OR = {
+							NOT = {
+								country_has_primary_culture = cu:manchu
+							}
+							NOT = {
+								exists = c:CHI
+								c:CHI = this
+							}
+						}
+					}
+				}
+				state_region = {
+					remove_state_trait = state_trait_dragon_rise_land
+				}
+			}
+		}
+		if = {
+			limit = {
+				any_state = {
+					has_state_trait = state_trait_savage_land
+					controller = {
+						OR = {
+							NOT = {
+								country_has_primary_culture = cu:manchu
+							}
+							NOT = {
+								exists = c:CHI
+								c:CHI = this
+							}
+						}
+					}
+				}
+			}
+			random_state = {
+				limit = {
+					has_state_trait = state_trait_savage_land
+					controller = {
+						NOT = {
+							exists = c:CHI
+							c:CHI = this
+						}
+					}
+				}
+				state_region = {
+					remove_state_trait = state_trait_savage_land
+				}
+			}
+		}
+	}
+}

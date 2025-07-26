@@ -37,12 +37,33 @@
 	}
 	s:STATE_SHENGJING = {
 		add_state_trait = state_trait_black_soil
+		add_state_trait = state_trait_dragon_rise_land
 	}
 	s:STATE_SOUTHERN_MANCHURIA = {
 		add_state_trait = state_trait_black_soil
+		add_state_trait = state_trait_dragon_rise_land
 	}
 	s:STATE_NORTHERN_MANCHURIA = {
 		add_state_trait = state_trait_black_soil
+		add_state_trait = state_trait_dragon_rise_land
+	}
+	s:STATE_OUTER_MANCHURIA = {
+		add_state_trait = state_trait_dragon_rise_land
+	}
+	s:STATE_AMUR = {
+		add_state_trait = state_trait_dragon_rise_land
+	}
+	s:STATE_TIANSHAN = {
+		add_state_trait = state_trait_savage_land
+	}
+	s:STATE_DZUNGARIA = {
+		add_state_trait = state_trait_savage_land
+	}
+	s:STATE_JETISY = {
+		add_state_trait = state_trait_savage_land
+	}
+	s:STATE_ALTAI = {
+		add_state_trait = state_trait_savage_land
 	}
 	s:STATE_RYUKYU_ISLANDS = {
 		random_scope_state = {

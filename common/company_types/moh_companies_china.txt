@@ -300,6 +300,7 @@ company_commercial_press = {
 	flavored_company = yes
 	building_types = {
 		building_paper_mills
+		building_arts_academy
 	}
 	extension_building_types = {
 		building_logging_camp
@@ -326,7 +327,7 @@ company_commercial_press = {
 			is_incorporated = yes
 			any_scope_building = {
 				is_building_type = building_paper_mills
-				level >= 3
+				level >= 5
 			}
 		}
 	}

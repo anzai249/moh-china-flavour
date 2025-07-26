@@ -151,7 +151,7 @@
 		name = opium_wars.1.b
 		add_modifier = {
 			name = opium_wars_addiction_modifier
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 		}
 		add_radicals = {
 			value = medium_radicals
