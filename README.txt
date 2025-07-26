@@ -65,6 +65,7 @@ Compatible:
 
 Not Compatible:
 [*]Any other Asian flavour pack, RA, EAFP
+[*]Better Politics
 [*]Daoyu Cheat (Reason unknown)
 [*]This mod edited ai_strategies and interest_groups, so any other mod that edits these files will not be compatible.
 
