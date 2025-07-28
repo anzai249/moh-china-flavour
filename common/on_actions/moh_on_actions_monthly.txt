@@ -8,7 +8,7 @@
 		15 = nian_rebellion.1
 		10 = moh_historical.301
 	}
-} 
+}
 
 moh_agitator_monthly_events = {
 	random_events = {
@@ -20,73 +20,33 @@ moh_agitator_monthly_events = {
 
 moh_savage_land = {
 	effect = {
-		if = {
+		every_state = {
 			limit = {
-				any_state = {
-					has_state_trait = state_trait_dragon_rise_land
-					controller = {
-						OR = {
-							NOT = {
-								country_has_primary_culture = cu:manchu
-							}
-							NOT = {
-								exists = c:CHI
-								c:CHI = this
-							}
+				has_state_trait = state_trait_dragon_rise_land
+				owner = {
+					OR = {
+						NOT = {
+							country_has_primary_culture = cu:manchu
+						}
+						NOT = {
+							c:CHI ?= this
 						}
 					}
 				}
 			}
-			random_state = {
-				limit = {
-					has_state_trait = state_trait_dragon_rise_land
-					controller = {
-						OR = {
-							NOT = {
-								country_has_primary_culture = cu:manchu
-							}
-							NOT = {
-								exists = c:CHI
-								c:CHI = this
-							}
-						}
-					}
-				}
-				state_region = {
-					remove_state_trait = state_trait_dragon_rise_land
-				}
+			state_region = {
+				remove_state_trait = state_trait_dragon_rise_land
 			}
 		}
-		if = {
+		every_state = {
 			limit = {
-				any_state = {
-					has_state_trait = state_trait_savage_land
-					controller = {
-						OR = {
-							NOT = {
-								country_has_primary_culture = cu:manchu
-							}
-							NOT = {
-								exists = c:CHI
-								c:CHI = this
-							}
-						}
-					}
+				has_state_trait = state_trait_savage_land
+				NOT = {
+					owner ?= c:CHI
 				}
 			}
-			random_state = {
-				limit = {
-					has_state_trait = state_trait_savage_land
-					controller = {
-						NOT = {
-							exists = c:CHI
-							c:CHI = this
-						}
-					}
-				}
-				state_region = {
-					remove_state_trait = state_trait_savage_land
-				}
+			state_region = {
+				remove_state_trait = state_trait_savage_land
 			}
 		}
 	}

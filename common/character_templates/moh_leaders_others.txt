@@ -1,0 +1,13 @@
+﻿# Yakub Beg
+moh_yakub_beg_character_template = {
+	first_name = Muhammad
+	last_name = "Yakub_Beg"
+    historical = yes
+    culture = cu:tajik
+    female = no
+    religion = rel:sunni
+    ideology = ideology_moderate
+    interest_group = ig_armed_forces
+    birth_date = 1820.1.1
+    traits = { pillager expert_offensive_planner ambitious }
+}

@@ -171,3 +171,14 @@ SHANGHAI = {
 	
 	capital = STATE_SUZHOU
 }
+
+YETTESHEHER = {
+	color = { 0 70 14 }
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { kirgiz uzbek }
+	
+	capital = STATE_TIANSHAN
+}

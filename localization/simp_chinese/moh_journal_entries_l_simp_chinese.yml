@@ -202,3 +202,7 @@
   je_channel_force_into_valor: "化兵为勇"
   je_channel_force_into_valor_reason: "化兵为勇是为了响应[ROOT.GetCountry.GetAdjectiveNoFormatting]政府对重组绿营军的需求而产生的，同时也与日益增强的抵御外来侵略的军事力量意识密切相关。"
   channel_force_into_valor_on_complete_tt: "我们距离军队现代化又近了一步。"
+  je_reconquest_of_the_west: "重定新疆"
+  je_reconquest_of_the_west_reason: "...这伙乱军竟然向浩罕求援，若自撤藩篱，则我退寸而寇进尺。"
+  je_reconquest_of_the_west_gansu_hui_rebellion_tt: "甘肃回乱爆发"
+  je_reconquest_of_the_west_yettesheher_destroyed_tt: "[SCOPE.sCountry('yettesheher_scope').GetName]不存在"

@@ -19,7 +19,7 @@
 					state_region = s:STATE_AMUR
 					state_region = s:STATE_OUTER_MANCHURIA
 				}
-				NOT = { controller = c:CHI }
+				NOT = { owner = c:CHI }
 			}
 			any_diplomatic_play = {
 				target_is = root

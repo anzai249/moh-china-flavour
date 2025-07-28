@@ -4,8 +4,10 @@
 	is_shown_when_inactive = {
 		exists = c:CHI
 		c:CHI = root
+		always = no
 	}
 	possible = {
+		always = no
 		exists = c:CHI
 		c:CHI ?= this
 		has_technology_researched = colonization
@@ -86,4 +88,84 @@ je_gaitu_guiliu = {
 	}
 	weight = 100
 	should_be_pinned_by_default = yes
+}
+
+# reconquest of the west
+je_reconquest_of_the_west = {
+	icon = "gfx/interface/icons/map_mode_icons/strategic_regions.dds"
+	group = je_group_internal_affairs
+	weight = 100
+	should_be_pinned_by_default = yes
+	is_shown_when_inactive = {
+		exists = c:CHI
+		c:CHI = root
+	}
+	immediate = {
+		c:YETTESHEHER = {
+			save_scope_as = yettesheher_scope
+		}
+	}
+	possible = {
+		exists = c:CHI
+		c:CHI ?= this
+		has_technology_researched = colonization
+		custom_tooltip = {
+			text = je_reconquest_of_the_west_gansu_hui_rebellion_tt
+			exists = c:YETTESHEHER
+		}
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_reconquest_of_the_west_yettesheher_destroyed_tt
+			NOT = {
+				exists = c:YETTESHEHER
+			}
+		}
+		any_scope_state = {
+			percent = 1
+				filter = {
+					OR = {
+					state_region = s:STATE_ALXA
+					state_region = s:STATE_QINGHAI
+					state_region = s:STATE_DZUNGARIA
+					state_region = s:STATE_TIANSHAN
+				}
+			}
+			is_incorporated = yes
+		}
+	}
+	on_complete = {
+		add_modifier = {
+			name = modifier_western_incorporation
+			years = 5
+			is_decaying = yes
+		}
+		chi_add_1_fragile_unity = yes
+		set_variable = china_incorporated_west
+	}
+	timeout = 12775
+	on_timeout = {
+		add_modifier = {
+			name = modifier_western_incorporation_failed
+			years = 5
+			is_decaying = yes
+		}
+		if = {
+			limit = {
+				exists = c:YETTESHEHER
+			}
+			every_scope_state = {
+				limit = {
+					state_region = {
+						OR = {
+							is_homeland = cu:uighur
+							is_homeland = cu:kirgiz
+							is_homeland = cu:uzbek
+						}
+					}
+				}
+				set_state_owner = c:YETTESHEHER
+			}
+		}
+	}
 }
