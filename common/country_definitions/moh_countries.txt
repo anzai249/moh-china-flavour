@@ -178,7 +178,7 @@ YETTESHEHER = {
 	
 	tier = principality
 	
-	cultures = { kirgiz uzbek }
+	cultures = { kirgiz tajik }
 	
 	capital = STATE_TIANSHAN
 }
