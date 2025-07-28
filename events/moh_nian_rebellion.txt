@@ -26,6 +26,10 @@ nian_rebellion.1 = {
             has_law = law_type:law_serfdom
         }
 		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HENAN
+				state_region = s:STATE_NORTHERN_ANHUI
+			}
 			any_scope_pop = {
 				OR = {
 					is_pop_type = farmers

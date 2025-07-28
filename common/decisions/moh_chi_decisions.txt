@@ -1,0 +1,43 @@
+﻿moh_qing_shanhai_pass = {
+	is_shown = {
+		exists = c:CHI
+		c:CHI = ROOT
+		any_scope_state = {
+			has_state_trait = state_trait_dragon_rise_land
+		}
+	}
+	possible = {
+		exists = c:CHI
+		c:CHI = ROOT
+		any_scope_state = {
+			has_state_trait = state_trait_dragon_rise_land
+		}
+		has_technology_researched = nationalism
+		OR = {
+			any_state = {
+				OR = {
+					state_region = s:STATE_AMUR
+					state_region = s:STATE_OUTER_MANCHURIA
+				}
+				NOT = { controller = c:CHI }
+			}
+			any_diplomatic_play = {
+				target_is = root
+				initiator_is = c:RUS
+			}
+		}
+	}
+	when_taken = {
+		every_scope_state = {
+			limit = {
+				has_state_trait = state_trait_dragon_rise_land
+			}
+			state_region = {
+				remove_state_trait = state_trait_dragon_rise_land
+			}
+		}
+	}
+	ai_chance = {
+		value = 10
+	}
+}

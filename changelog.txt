@@ -349,3 +349,4 @@ Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDr
 - MOHB-0008
 - Ruan Yuan's Chinese localization.
 - Wrong modifier time (very_long_modifier_time)
+- MOHB-0010
