@@ -27,9 +27,6 @@
   dalai.2.f: "在庄严的仪式中，达赖喇嘛坐床典礼在[ROOT.GetCountry.GetCapital.GetName]隆重举行。佛教界与成千上万的信徒共同见证了这一历史性时刻。典礼庄严肃穆，象征着新一代达赖喇嘛的正式继位。\n\n“达赖喇嘛的坐床典礼不仅是一个宗教仪式，更是佛教传承的重要象征。这一仪式的完成标志着达赖喇嘛正式肩负起引领信徒与继续弘扬佛法的重任。”"
   dalai.2.a: "扎西德勒"
   dalai.2.tt: "新的达赖喇嘛将上任……"
-  moh_tibet_look_for_new_dalai_lama: "寻找达赖喇嘛转世"
-  moh_tibet_look_for_new_dalai_lama_desc: "若达赖喇嘛圆寂，我们将可以寻找新的达赖喇嘛转世。"
-  moh_tibet_look_for_new_dalai_lama_tooltip: "寻找达赖喇嘛转世"
   #康有为出现
   moh_agitators.1.t: "公车上书"
   moh_agitators.1.d: "一名名叫[SCOPE.sCharacter('historic_agitator_scope').GetCustom('GetUniversalFullName')]的学者上书给[Concept('concept_ruler','$RULER_TITLE_EMPEROR$')]，他认为[COUNTRY.GetName]如今孱弱是因为社会制度落后于世界，他主张开展维新变法运动。"
