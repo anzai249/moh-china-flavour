@@ -9,7 +9,7 @@
   modifier_great_assembly: "声势浩大的集会"
   flood_of_pirates: "海盗横行"
   modifier_8_flags: "八旗"
-  modifier_western_incorporation: "成功整合西部"
+  modifier_western_incorporation: "新疆省"
   modifier_western_incorporation_failed: "西部整合失败"
   modifier_official_corruption: "官员腐败"
   modifier_self_strengthing: "洋务运动"
@@ -44,3 +44,4 @@
   modifier_self_strengthing_success_company: "洋务运动的成功（公司）"
   modifier_south_great_wall_fixing: "南长城修复"
   modifier_self_strengthing_donate_character: "捐款"
+  focus_on_navy: "专注海军"
