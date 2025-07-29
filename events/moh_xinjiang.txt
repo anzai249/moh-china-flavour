@@ -1,0 +1,110 @@
+﻿namespace = moh_xinjiang
+moh_xinjiang.1 = { # Gansu Hui Revolt
+    type = country_event
+    placement = scope:tianshan_scope
+    title = moh_xinjiang.1.t
+    desc = moh_xinjiang.1.d
+    flavor = moh_xinjiang.1.f
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	duration = 3
+	dlc = dlc0moh
+	event_image = {
+		video = "africa_soldiers_breaking_protest"
+	}
+    trigger = {
+        c:CHI ?= this
+        has_technology_researched = colonization
+        game_date >= 1858.1.1
+        exists = c:KOK
+        has_state_in_state_region = STATE_TIANSHAN
+    }
+    immediate = {
+        random_scope_state = {
+            limit = {
+                state_region = s:STATE_TIANSHAN
+            }
+            set_state_owner = c:KOK
+            save_scope_as = tianshan_scope
+        }
+        c:KOK = {
+            save_scope_as = kok_scope
+        }
+        create_country = {
+            tag = YETTESHEHER
+            origin = c:KOK
+            state = s:STATE_TIANSHAN.region_state:KOK
+            on_created = {
+                create_character = {
+                    template = moh_yakub_beg_character_template
+                    ruler = yes
+                    is_general = yes
+                }
+			    create_bidirectional_truce = { country = root months = 12 }
+            }
+        }
+    }
+    option = {
+        name = moh_xinjiang.1.a
+        default_option = yes
+        ai_chance = {
+            base = 1
+        }
+    }
+}
+
+moh_xinjiang.2 = { # Zuo Zongtang
+    type = country_event
+    placement = root
+    title = moh_xinjiang.2.t
+    desc = moh_xinjiang.2.d
+    flavor = moh_xinjiang.2.f
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:zuo_zongtang_scope
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+    duration = 3
+    trigger = {
+        c:CHI ?= this
+        any_scope_character = {
+            has_template = ecchi_chi_zuo_zongtang_character_template
+        }
+        exists = c:YETTESHEHER
+        has_journal_entry = je_reconquest_of_the_west
+        NOT = {
+            is_at_war = yes
+        }
+    }
+    immediate = {
+        random_scope_character = {
+            limit = {
+                has_template = ecchi_chi_zuo_zongtang_character_template
+            }
+            save_scope_as = zuo_zongtang_scope
+        }
+        c:YETTESHEHER = {
+            save_scope_as = yettesheher_scope
+        }
+    }
+    option = {
+        name = moh_xinjiang.2.a
+        default_option = yes
+        create_diplomatic_play = {
+            type = dp_annex_war
+			target_country = c:YETTESHEHER
+            war = no
+        }
+        ai_chance = {
+            base = 2
+        }
+    }
+    option = {
+        name = moh_xinjiang.2.b
+        default_option = yes
+        add_modifier = {
+            name = moh_zuo_zongtang_modifier
+            years = 2
+        }
+        ai_chance = {
+            base = 1
+        }
+    }
+}

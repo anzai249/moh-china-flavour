@@ -39,10 +39,10 @@ SHANGHAI = {
 	ai_will_do = { always = no }
 }
 
-YETTESHEHER = {
-	states = {
-		STATE_TIANSHAN
-	}
+# YETTESHEHER = {
+# 	states = {
+# 		STATE_TIANSHAN
+# 	}
 
-	ai_will_do = { always = no }
-}
+# 	ai_will_do = { always = no }
+# }

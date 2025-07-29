@@ -203,5 +203,5 @@
   channel_force_into_valor_on_complete_tt: "We are one step closer to modernizing the army."
   je_reconquest_of_the_west: "Reconquest of the West"
   je_reconquest_of_the_west_reason: "...The rebels have even sought help from the Kokand. If we withdraw our defenses, they will only advance further."
-  je_reconquest_of_the_west_gansu_hui_rebellion_tt: "The Gansu Hui Rebellion broke out."
+  je_reconquest_of_the_west_gansu_hui_rebellion_tt: "The Gansu Hui Revolt broke out."
   je_reconquest_of_the_west_yettesheher_destroyed_tt: "[SCOPE.sCountry('yettesheher_scope').GetName] does not exist"

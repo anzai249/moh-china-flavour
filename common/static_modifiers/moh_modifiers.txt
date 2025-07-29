@@ -326,3 +326,10 @@ modifier_south_great_wall_fixing = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
 	building_construction_sector_throughput_add = -0.25
 }
+
+# reject zuo zongtang's advice
+focus_on_navy = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_prestige_from_navy_power_projection_mult = 0.15
+	unit_navy_defense_mult = 0.1
+}

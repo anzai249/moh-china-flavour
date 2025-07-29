@@ -329,7 +329,7 @@ Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDr
 - Compatibility of companies.
 - Encoding issues.
 
-Release 1.1.2 "Knight"
+Release 1.2 "Kangaroo"
 
 Changes:
 
@@ -341,7 +341,7 @@ Changes:
 - Boxer Rebellion remake.
 - New country: Shanghai International Settlement.
 - New state trait: Dragon Rise Land, Savage Land.
-- Reconquest of the west remake.
+- Reconquest of the west remake (Qing reconquest of Xinjiang).
 
 Fixes:
 Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDrDTNyj7nB7XQQp6z4

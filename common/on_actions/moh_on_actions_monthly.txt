@@ -10,6 +10,14 @@
 	}
 }
 
+moh_xinjiang_monthly_events = {
+	random_events = {
+		25 = 0
+		5 = moh_xinjiang.1
+		2 = moh_xinjiang.2
+	}
+}
+
 moh_agitator_monthly_events = {
 	random_events = {
 		10 = 0
