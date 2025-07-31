@@ -15,7 +15,7 @@
         STATE_SOUTHERN_ANHUI
 	}
 
-	required_states_fraction = 0.85
+	required_states_fraction = 0.45
 	
 	ai_will_do = { 
         always = yes

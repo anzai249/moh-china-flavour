@@ -1,0 +1,10 @@
+﻿qing_explode_at_the_beginning = {
+	default = qing_explode_false
+
+	qing_explode_false = {
+	}
+
+	qing_explode_true = {
+		flag = qing_explode_true
+	}
+}

@@ -16,6 +16,12 @@
             name = prince_gong_progress
             value = 0
         }
+        if = {
+            limit = {
+                has_game_rule = qing_explode_true
+            }
+            trigger_event = { id = warlord_china_events.100 }
+        }
     }
     every_country = {
         limit = {

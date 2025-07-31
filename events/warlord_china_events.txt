@@ -326,6 +326,7 @@ warlord_china_events.100 = {
                                     has_template = ecchi_chi_yan_xishan_character_template
                                 }
                             }
+                            year > 1900
                         }
                         create_character = {
                             template = ecchi_chi_yan_xishan_character_template

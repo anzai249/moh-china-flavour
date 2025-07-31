@@ -342,6 +342,7 @@ Changes:
 - New country: Shanghai International Settlement.
 - New state trait: Dragon Rise Land, Savage Land.
 - Reconquest of the west remake (Qing reconquest of Xinjiang).
+- Added a game rule, it will make China explode at the beginning.
 
 Fixes:
 Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDrDTNyj7nB7XQQp6z4
@@ -351,3 +352,4 @@ Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDr
 - Ruan Yuan's Chinese localization.
 - Wrong modifier time (very_long_modifier_time)
 - MOHB-0010
+- Dynamic country name of League of Five Provinces.

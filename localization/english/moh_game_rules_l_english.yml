@@ -1,0 +1,7 @@
+﻿l_english:
+  rule_qing_explode_at_the_beginning: "Great Qing Explodes at the Beginning"
+  setting_qing_explode_at_the_beginning_desc: "If this rule is enabled, the Great Qing will explode at the beginning of the game."
+  setting_qing_explode_true: "Enabled"
+  setting_qing_explode_false: "Disabled"
+  setting_qing_explode_true_desc: "The Great Qing will explode at the beginning of the game."
+  setting_qing_explode_false_desc: "The Great Qing will remain intact at the beginning of the game."
