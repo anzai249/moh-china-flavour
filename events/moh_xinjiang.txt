@@ -17,8 +17,12 @@ moh_xinjiang.1 = { # Gansu Hui Revolt
         game_date >= 1858.1.1
         exists = c:KOK
         has_state_in_state_region = STATE_TIANSHAN
+        NOT = {
+            has_global_variable = gansu_hui_revolt_started
+        }
     }
     immediate = {
+        set_global_variable = gansu_hui_revolt_started
         random_scope_state = {
             limit = {
                 state_region = s:STATE_TIANSHAN
@@ -71,6 +75,9 @@ moh_xinjiang.2 = { # Zuo Zongtang
         has_journal_entry = je_reconquest_of_the_west
         NOT = {
             is_at_war = yes
+            any_diplomatic_play = {
+                target = c:YETTESHEHER
+            }
         }
     }
     immediate = {

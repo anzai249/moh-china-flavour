@@ -115,12 +115,12 @@ je_reconquest_of_the_west = {
 		}
 	}
 	complete = {
-		custom_tooltip = {
-			text = je_reconquest_of_the_west_yettesheher_destroyed_tt
-			NOT = {
-				exists = c:YETTESHEHER
-			}
-		}
+		# custom_tooltip = {
+		# 	text = je_reconquest_of_the_west_yettesheher_destroyed_tt
+		# 	NOT = {
+		# 		exists = c:YETTESHEHER
+		# 	}
+		# }
 		any_scope_state = {
 			percent = 1
 				filter = {

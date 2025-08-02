@@ -354,3 +354,9 @@ Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDr
 - Wrong modifier time (very_long_modifier_time)
 - MOHB-0010
 - Dynamic country name of League of Five Provinces.
+
+Release 1.2-pre2 "Kangaroo"
+
+Fixes:
+
+- MOHB-0013 and related bugs.
