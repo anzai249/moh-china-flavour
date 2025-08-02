@@ -205,3 +205,4 @@
   je_reconquest_of_the_west_reason: "...The rebels have even sought help from the Kokand. If we withdraw our defenses, they will only advance further."
   je_reconquest_of_the_west_gansu_hui_rebellion_tt: "The Gansu Hui Revolt broke out."
   je_reconquest_of_the_west_yettesheher_destroyed_tt: "[SCOPE.sCountry('yettesheher_scope').GetName] does not exist"
+  je_great_yuan_complete_ruler_tt: "We have found the descendants of Genghis Khan."

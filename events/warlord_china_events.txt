@@ -629,6 +629,7 @@ warlord_china_events.100 = {
                 state = s:STATE_ULIASTAI.region_state:CHI
                 on_created = {
                     warlord_setup_effect_laws = yes
+                    warlord_setup_mongolia = yes
                     random_state = {
                         limit = {
                             state_region = s:STATE_URGA

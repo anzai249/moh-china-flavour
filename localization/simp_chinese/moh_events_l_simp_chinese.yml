@@ -393,3 +393,7 @@
   moh_xinjiang.2.f: "[SCOPE.sCharacter('zuo_zongtang_scope').GetCustom('GetUniversalFullName')]中详细描述了镇压甘肃回乱的计划和准备，并请求朝廷派兵前往镇压叛乱。"
   moh_xinjiang.2.a: "备战"
   moh_xinjiang.2.b: "海防要紧"
+  moh_random.201.t: "春节"
+  moh_random.201.d: "瑞雪兆丰年"
+  moh_random.201.f: "[SCOPE.sState('spring_festival_state').GetName]的春节庆典热闹非凡，街头巷尾张灯结彩，家家户户贴上了春联，挂起了红灯笼。人们穿上新衣，走亲访友，互致祝福，共同庆祝这个传统节日。\n\n“瑞雪兆丰年”，今年的春节特别寒冷，但这并没有影响人们的热情。大家都希望在新的一年里能有一个好的开始。"
+  moh_random.201.a: "恭喜发财。"

@@ -402,3 +402,46 @@ moh_random.200 = {
 		}
 	}
 }
+
+moh_random.201 = {
+	# spring festival
+	type = country_event
+	placement = scope:spring_festival_state
+	title = moh_random.201.t
+	desc = moh_random.201.d
+	flavor = moh_random.201.f
+	duration = 3
+	dlc = dlc0moh
+	event_image = {
+		video = "unspecific_iceberg"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	trigger = {
+		country_has_primary_culture = cu:han
+		OR = {
+			month = 1
+			month = 2
+		}
+	}
+
+	immediate = {
+		random_scope_state = {
+			limit = {
+				is_incorporated = yes
+			}
+			save_scope_as = spring_festival_state
+		}
+	}
+
+	option = {
+		name = moh_random.201.a
+		default_option = yes
+		scope:spring_festival_state = {
+			state_region = {
+				start_harvest_condition = moderate_rainfall
+			}
+		}
+	}
+}

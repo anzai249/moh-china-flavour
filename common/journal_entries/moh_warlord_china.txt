@@ -209,10 +209,42 @@ je_great_yuan = {
 			}
 			add_claim = ROOT
 		}
+		custom_tooltip = {
+			text = je_great_yuan_complete_ruler_tt
+			if = {
+				limit = {
+					any_character = {
+						has_template = chi_general_sengge_rinchen
+					}
+				}
+				random_character = {
+					limit = {
+						has_template = chi_general_sengge_rinchen
+					}
+					transfer_character = root
+                	set_character_as_ruler = yes
+				}
+			}
+			else_if = {
+				limit = {
+					year <= 1865
+				}
+				create_character = {
+					template = chi_general_sengge_rinchen
+					ruler = yes
+				}
+			}
+			else = {
+				create_character = {
+					last_name = Borjigin
+					ruler = yes
+				}
+			}
+		}
 	}
-	invalid = {
-		has_global_variable = china_shatters
-	}
+	# invalid = {
+	# 	has_global_variable = china_shatters
+	# }
 	weight = 10
 	should_be_pinned_by_default = yes
 }

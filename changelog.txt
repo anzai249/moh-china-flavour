@@ -329,11 +329,11 @@ Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDr
 - Compatibility of companies.
 - Encoding issues.
 
-Release 1.2 "Kangaroo"
+Release 1.2-pre1 "Kangaroo"
 
 Changes:
 
-- New random event: South Great Wall fixing.
+- New random events: South Great Wall fixing, Spring Festival.
 - New treaty article: Ban boxer rebellion.
 - New characters: Feng Guifen, Bao Shichen, Wu Chongyao, Muhammad Yakub Beg.
 - New law variants: Imperial Examination System, Night Watchmen.
@@ -343,6 +343,7 @@ Changes:
 - New state trait: Dragon Rise Land, Savage Land.
 - Reconquest of the west remake (Qing reconquest of Xinjiang).
 - Added a game rule, it will make China explode at the beginning.
+- Adjusted the ruler of Great Yuan.
 
 Fixes:
 Bug tracker: https://docs.google.com/spreadsheets/d/1DxeDoLNYQ_w6A9lTuLCGRS_YDDrDTNyj7nB7XQQp6z4

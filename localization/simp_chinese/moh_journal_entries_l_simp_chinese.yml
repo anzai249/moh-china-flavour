@@ -206,3 +206,4 @@
   je_reconquest_of_the_west_reason: "...这伙乱军竟然向浩罕求援，若自撤藩篱，则我退寸而寇进尺。"
   je_reconquest_of_the_west_gansu_hui_rebellion_tt: "甘肃回乱爆发"
   je_reconquest_of_the_west_yettesheher_destroyed_tt: "[SCOPE.sCountry('yettesheher_scope').GetName]不存在"
+  je_great_yuan_complete_ruler_tt: "我们找到了成吉思汗近亲的后裔。"
