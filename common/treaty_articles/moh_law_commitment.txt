@@ -149,7 +149,7 @@
                     }
                     add_modifier = {
                         name = modifier_opposes_committed_law_ig
-                        days = normal_modifier_time
+                        
                         is_decaying = yes
                     }
                 }
@@ -202,7 +202,7 @@
                     }
                     add_modifier = {
                         name = modifier_opposes_enforced_law_ig
-                        days = normal_modifier_time
+                        
                         is_decaying = yes
                     }
                 }

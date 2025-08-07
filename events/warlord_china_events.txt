@@ -1124,7 +1124,7 @@ warlord_china_events.101 = {
         }
         add_modifier = {
             name = modifier_end_of_warlord_period
-            months = normal_modifier_time
+            days = normal_modifier_time
         }
     }
 }
@@ -1152,7 +1152,7 @@ warlord_china_events.200 = {
         name = warlord_china_events.200.a
         add_modifier = {
             name = modifier_century_of_triumph_politics
-            months = long_modifier_time
+            days = long_modifier_time
         }
         add_loyalists = {
             value = large_radicals
@@ -1162,7 +1162,7 @@ warlord_china_events.200 = {
         name = warlord_china_events.200.b
         add_modifier = {
             name = modifier_century_of_triumph_technology
-            months = long_modifier_time
+            days = long_modifier_time
         }
         add_loyalists = {
             value = large_radicals
@@ -1213,7 +1213,7 @@ warlord_china_events.110 = {
         name = warlord_china_events.110.b
         add_modifier = {
             name = modifier_prisoner_murder_covered_up
-            months = normal_modifier_time
+            
         }
     }
 }
@@ -1301,7 +1301,7 @@ warlord_china_events.301 = {
                 root = {
                     add_modifier = {
                         name = failed_yan_xishan_thought_mod
-                        months = normal_modifier_time
+                        
                     }
                 }
             }
@@ -1311,7 +1311,7 @@ warlord_china_events.301 = {
         name = warlord_china_events.301.b
         add_modifier = {
             name = warlord_legitimacy
-            months = normal_modifier_time
+            
         }
     }
 }

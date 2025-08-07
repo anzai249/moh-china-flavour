@@ -985,7 +985,7 @@ moh_historical.12 = {
 		add_modifier = {
 			name = modifier_plague_relief
 			multiplier = money_amount_multiplier_small
-			months = short_modifier_time
+			days = short_modifier_time
 		}
 		ai_chance = {
 			base = 10
@@ -1345,7 +1345,7 @@ moh_historical.202 = {
 		scope:recovry_state = {
 			add_modifier = {
 				name = opium_health_focus
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 	}
@@ -1358,7 +1358,7 @@ moh_historical.202 = {
 			}
 			add_modifier = {
 				name = opium_loyalty_focus
-				months = short_modifier_time
+				days = short_modifier_time
 			}
 		}
 	}

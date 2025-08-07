@@ -981,7 +981,7 @@ wuxu.14 = { #Rich industrialist wants to build a university
 		scope:university_benefactor.interest_group = {
 			add_modifier = {
 				name = modifier_university_built
-				months = normal_modifier_time
+				
 			}
 		}
 	}
@@ -991,7 +991,7 @@ wuxu.14 = { #Rich industrialist wants to build a university
 		scope:university_benefactor.interest_group = {
 			add_modifier = {
 				name = modifier_blocked_building_university
-				months = normal_modifier_time
+				
 			}
 		}
 	}

@@ -61,7 +61,7 @@ keju.2 = {
 		default_option = yes
 		add_modifier = {
 			name = modifier_abolish_keju
-			months = long_modifier_time
+			days = long_modifier_time
 			is_decaying = yes
 		}
 	}
