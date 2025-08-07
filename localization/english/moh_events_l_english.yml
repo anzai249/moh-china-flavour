@@ -385,3 +385,8 @@
   moh_random.201.d: "A timely snow promises a good harvest."
   moh_random.201.f: "The Spring Festival celebrations in [SCOPE.sState('spring_festival_state').GetName] are in full swing. Streets and alleys are adorned with festive decorations, red lanterns hang high, and couplets are pasted on every household's door.\n\n'A timely snow promises a good harvest.' This year's Spring Festival is particularly cold, but the chilly weather hasn't dampened anyone's spirits. Everyone is hoping for a fresh start and a prosperous year ahead."
   moh_random.201.a: "Gong Xi Fa Cai!"
+  moh_historical.500.t: "Sixty-Four Villages Massacre"
+  moh_historical.500.d: "Bloody massacre in [SCOPE.sState('sixty_four_villages_state_scope').GetName]"
+  moh_historical.500.f: "In [SCOPE.sState('sixty_four_villages_state_scope').GetName], dozens of villages were besieged, and thousands of people were killed or injured. \n\nThis gang of thugs committed violent crimes, burning and looting at will, sparing neither women, children, nor the elderly. Amidst the raging fires, the once peaceful land was turned into a living hell."
+  moh_historical.500.a: "Barbaric!"
+  moh_historical.500.b: "Outter Manchuria is ours!"

@@ -360,3 +360,13 @@ Release 1.2-pre2 "Kangaroo"
 Fixes:
 
 - MOHB-0013 and related bugs.
+
+Release 1.2-pre3 "Kangaroo"
+
+Changes:
+
+- New event: Amur anti-Chinese pogroms.
+
+Fixes:
+
+- MOHB-0014

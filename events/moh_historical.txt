@@ -1519,3 +1519,158 @@ moh_historical.401 = { # Legations siege
 		}
 	}
 }
+
+moh_historical.500 = { # sixty-four villages
+	type = country_event
+	placement = scope:sixty_four_villages_state_scope
+	title = moh_historical.500.t
+	desc = moh_historical.500.d
+	flavor = moh_historical.500.f
+	dlc = dlc0moh
+	event_image = {
+		video = "southamerica_public_figure_assassination"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	duration = 3
+	trigger = {
+		exists = c:RUS
+		NOT = {
+			this = c:RUS
+		}
+		c:RUS = {
+			has_technology_researched = pan-nationalism
+		}
+		NOT = {
+			has_global_variable = sixty_four_villages
+		}
+		any_scope_state = {
+			owner = root
+			state_region = s:STATE_NORTHERN_MANCHURIA
+			any_neighbouring_state = {
+				owner = c:RUS
+				state_region = s:STATE_AMUR
+			}
+		}
+	}
+	immediate = {
+		set_global_variable = sixty_four_villages
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_NORTHERN_MANCHURIA
+			}
+            kill_population_percent_in_state = {
+				percent = 0.01
+				culture = cu:han
+			}
+			kill_population_percent_in_state = {
+				percent = 0.01
+				culture = cu:manchu
+            }
+			save_scope_as = sixty_four_villages_state_scope
+		}
+		if = {
+			limit = {
+				any_state = {
+					owner = c:RUS
+					state_region = s:STATE_AMUR
+					NOT = {
+						has_claim_by = root
+					}
+				}
+			}
+			s:STATE_AMUR = { add_claim = root }
+		}
+		if = {
+			limit = {
+				any_state = {
+					owner = c:RUS
+					state_region = s:STATE_OUTER_MANCHURIA
+					NOT = {
+						has_claim_by = root
+					}
+				}
+			}
+			s:STATE_OUTER_MANCHURIA = { add_claim = root }
+		}
+	}
+	option = {
+		name = moh_historical.500.a
+		default_option = yes
+		show_as_tooltip = {
+			scope:sixty_four_villages_state_scope = {
+                kill_population_percent_in_state = {
+                    percent = 0.01
+                    culture = cu:han
+                }
+                kill_population_percent_in_state = {
+                    percent = 0.01
+                    culture = cu:manchu
+                }
+			}
+		}
+		change_relations = {
+			country = c:RUS
+			value = -50
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 5
+				trigger = {
+					c:RUS.army_power_projection >= root.army_power_projection
+				}
+			}
+		}
+	}
+	option = {
+		name = moh_historical.500.b
+		show_as_tooltip = {
+			scope:sixty_four_villages_state_scope = {
+                kill_population_percent_in_state = {
+                    percent = 0.01
+                    culture = cu:han
+                }
+                kill_population_percent_in_state = {
+                    percent = 0.01
+                    culture = cu:manchu
+                }
+			}
+		}
+		if = {
+			limit = {
+				any_state = {
+					owner = c:RUS
+					state_region = s:STATE_OUTER_MANCHURIA
+				}
+			}
+			create_diplomatic_play = {
+				type = dp_return_state
+				target_country = c:RUS
+				target_state = s:STATE_OUTER_MANCHURIA.region_state:RUS
+				add_war_goal = {
+					holder = root
+					type = return_state
+					target_state = s:STATE_AMUR.region_state:RUS
+				}
+			}
+		} 
+		else = {
+			create_diplomatic_play = {
+				type = dp_return_state
+				target_country = c:RUS
+				target_state = s:STATE_AMUR.region_state:RUS
+			}
+		}
+
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = 5
+				trigger = {
+					c:RUS.army_power_projection < root.army_power_projection
+				}
+			}
+		}
+	}
+}
