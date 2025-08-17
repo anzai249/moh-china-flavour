@@ -657,16 +657,16 @@
 		region_state:CHI = {
 			create_pop = {
 				culture = yue
-				size = 4008000
+				size = 4000000
 			}
 			create_pop = {
 				culture = yue
-				size = 2874000
+				size = 2800000
 				religion = mahayana
 			}
 			create_pop = {
 				culture = yue
-				size = 2874000
+				size = 2870000
 				religion = taoism
 			}
 			create_pop = {
@@ -757,6 +757,29 @@
 				culture = yue
 				religion = catholic
 				size = 5000
+			}
+		}
+	}
+
+	# 
+	#
+	# Overhaul
+	s:STATE_HAINAN = {
+		region_state:CHI = {
+			create_pop = {
+				culture = yue
+				size = 8000
+			}
+			create_pop = {
+				culture = yue
+				size = 74000
+				religion = mahayana
+			}
+
+			create_pop = {
+				culture = yue
+				size = 4000
+				religion = taoism
 			}
 		}
 	}

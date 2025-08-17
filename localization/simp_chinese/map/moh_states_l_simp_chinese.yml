@@ -1,4 +1,19 @@
 ﻿l_simp_chinese: 
   STATE_XIAN: "陕西"
-  STATE_GUANGDONG: "粤西"
+  STATE_GUANGDONG: "广府"
   STATE_SHAOZHOU: "粤东"
+  # overhaul
+  STATE_HAINAN: "琼州"
+  STATE_WEST_GUANGDONG: "粤西"
+  STATE_HINGGAN: "锡林郭勒"
+  STATE_ULANQAB: "乌兰察布"
+  STATE_JIREM: "哲里木"
+
+  HUB_NAME_STATE_HAINAN_port: "万州"
+  HUB_NAME_STATE_HAINAN_city: "琼山"
+  HUB_NAME_STATE_HAINAN_farm: "文昌"
+  HUB_NAME_STATE_HAINAN_wood: "崖州"
+  HUB_NAME_STATE_WEST_GUANGDONG_port: "广州湾"
+  HUB_NAME_STATE_WEST_GUANGDONG_city: "肇庆"
+  HUB_NAME_STATE_WEST_GUANGDONG_farm: "茂名"
+  HUB_NAME_STATE_WEST_GUANGDONG_wood: "钦州"

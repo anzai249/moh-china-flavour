@@ -1,4 +1,10 @@
 ﻿l_english:
- STATE_XIAN: "Shaanxi"
- STATE_GUANGDONG: "West Guangdong"
- STATE_SHAOZHOU: "East Guangdong"
+  STATE_XIAN: "Shaanxi"
+  STATE_GUANGDONG: "Pearl River Delta"
+  STATE_SHAOZHOU: "East Guangdong"
+  # overhaul
+  STATE_HAINAN: "Hainan"
+  STATE_WEST_GUANGDONG: "West Guangdong"
+  STATE_HINGGAN: "Xilingol"
+  STATE_ULANQAB: "Ulanqab"
+  STATE_JIREM: "Jirem"
