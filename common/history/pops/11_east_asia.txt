@@ -657,16 +657,16 @@
 		region_state:CHI = {
 			create_pop = {
 				culture = yue
-				size = 4000000
+				size = 2000000
 			}
 			create_pop = {
 				culture = yue
-				size = 2800000
+				size = 750000
 				religion = mahayana
 			}
 			create_pop = {
 				culture = yue
-				size = 2870000
+				size = 1435000
 				religion = taoism
 			}
 			create_pop = {
@@ -675,62 +675,44 @@
 			}
 			create_pop = {
 				culture = han				# nanfaren
-				size = 754792
+				size = 654792
 			}
 			create_pop = {
 				culture = han
-				size = 20000
+				size = 10000
 				religion = taoism
 			}
 			create_pop = {
 				culture = min
-				size = 483996
+				size = 241998
 			}
 			create_pop = {
 				culture = min
-				size = 201998
+				size = 100999
 				religion = mahayana
 			}
 			create_pop = {
 				culture = min
-				size = 201998
+				size = 100999
 				religion = taoism
 			}
 			create_pop = {
-				culture = miao
-				size = 356004
-			}
-			create_pop = {
-				culture = miao
-				size = 306004
-				religion = mahayana
-			}
-			create_pop = {
-				culture = zhuang
-				size = 107000
-			}
-			create_pop = {
-				culture = zhuang
-				size = 117000
-				religion = mahayana
-			}
-			create_pop = {
-				culture = han				# nanfaren
+				culture = han
 				religion = animist
-				size = 204400
+				size = 4400
 			}
 			create_pop = {
 				culture = hakka
-				size = 78000
+				size = 34000
 			}
 			create_pop = {
 				culture = hakka
-				size = 40000
+				size = 20000
 				religion = mahayana
 			}
 			create_pop = {
 				culture = hakka
-				size = 30000
+				size = 15000
 				religion = taoism
 			}
 		}
@@ -768,21 +750,104 @@
 		region_state:CHI = {
 			create_pop = {
 				culture = yue
-				size = 8000
+				size = 1008000
 			}
 			create_pop = {
 				culture = yue
-				size = 74000
+				size = 324000
 				religion = mahayana
 			}
-
 			create_pop = {
 				culture = yue
 				size = 4000
 				religion = taoism
 			}
+			create_pop = {
+				culture = han				# nanfaren
+				size = 50000
+			}
+			create_pop = {
+				culture = han
+				religion = animist
+				size = 150000
+			}
 		}
 	}
+
+	s:STATE_WESTERN_GUANGDONG = {
+		region_state:CHI = {
+			create_pop = {
+				culture = han
+				religion = animist
+				size = 50000
+			}
+			create_pop = {
+				culture = yue
+				size = 1000000
+			}
+			create_pop = {
+				culture = yue
+				size = 1800000
+				religion = mahayana
+			}
+			create_pop = {
+				culture = yue
+				size = 1445000
+				religion = taoism
+			}
+			create_pop = {
+				culture = miao
+				size = 356004
+			}
+			create_pop = {
+				culture = miao
+				size = 306004
+				religion = mahayana
+			}
+			create_pop = {
+				culture = zhuang
+				size = 107000
+			}
+			create_pop = {
+				culture = zhuang
+				size = 117000
+				religion = mahayana
+			}
+			create_pop = {
+				culture = han				# nanfaren
+				size = 50000
+			}
+			create_pop = {
+				culture = hakka
+				size = 34000
+			}
+			create_pop = {
+				culture = hakka
+				size = 20000
+				religion = mahayana
+			}
+			create_pop = {
+				culture = hakka
+				size = 15000
+				religion = taoism
+			}
+			create_pop = {
+				culture = min
+				size = 241998
+			}
+			create_pop = {
+				culture = min
+				size = 100999
+				religion = mahayana
+			}
+			create_pop = {
+				culture = min
+				size = 100999
+				religion = taoism
+			}
+		}
+	}
+	##### Vanilla
 	s:STATE_FUJIAN = {
 		region_state:CHI = {
 			create_pop = {

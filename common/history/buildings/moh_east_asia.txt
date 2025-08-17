@@ -53,4 +53,34 @@
 			}
 		}
 	}
+	s:STATE_WESTERN_GUANGDONG = {
+		region_state:CHI = {
+			create_building = {
+				building = "building_rice_farm"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:CHI"
+						levels=1
+						region="STATE_WESTERN_GUANGDONG"
+					}
+				}
+				reserves=1
+				level = 1
+			}
+			create_building = {
+				building = "building_paper_mills"
+				add_ownership={
+					building={
+						type="building_paper_mills"
+						country="c:CHI"
+						levels=1
+						region="STATE_WESTERN_GUANGDONG"
+					}
+				}
+				reserves=1
+				level = 1
+			}
+		}
+	}
 }

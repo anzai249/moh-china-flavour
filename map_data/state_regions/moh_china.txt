@@ -8,7 +8,7 @@ STATE_GUANGDONG = {
     port = "xB031E0" # Macau
     farm = "x2C4C48" # Xinning
     wood = "x489AB0" # Nanhai
-    arable_land = 125
+    arable_land = 175
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 5
@@ -56,7 +56,7 @@ STATE_HAINAN = {
     naval_exit_id = 3056
 }
 # west guangdong 粵西 (new)
-STATE_WEST_GUANGDONG = {
+STATE_WESTERN_GUANGDONG = {
     id = 901
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x260389" "x3131E0" "x477755" "x4E581C" "x7131E0" "x85E0D4" "x9A21B1" "xA9B6D4" "xC77200" "xF0B061" "xFEBFD5" }
@@ -66,7 +66,7 @@ STATE_WEST_GUANGDONG = {
     farm = "xFEBFD5" # Maoming
     # mine = "x30B0E0"
     wood = "x477755" # Qinzhou
-    arable_land = 75
+    arable_land = 125
     arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 8

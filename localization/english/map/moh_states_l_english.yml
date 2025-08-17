@@ -4,7 +4,16 @@
   STATE_SHAOZHOU: "East Guangdong"
   # overhaul
   STATE_HAINAN: "Hainan"
-  STATE_WEST_GUANGDONG: "West Guangdong"
+  STATE_WESTERN_GUANGDONG: "Western Guangdong"
   STATE_HINGGAN: "Xilingol"
   STATE_ULANQAB: "Ulanqab"
   STATE_JIREM: "Jirem"
+
+  HUB_NAME_STATE_HAINAN_port: "Wanzhou"
+  HUB_NAME_STATE_HAINAN_city: "Qiongshan"
+  HUB_NAME_STATE_HAINAN_farm: "Wenchang"
+  HUB_NAME_STATE_HAINAN_wood: "Yazhou"
+  HUB_NAME_STATE_WESTERN_GUANGDONG_port: "Guangzhou Wan"
+  HUB_NAME_STATE_WESTERN_GUANGDONG_city: "Zhaoqing"
+  HUB_NAME_STATE_WESTERN_GUANGDONG_farm: "Maoming"
+  HUB_NAME_STATE_WESTERN_GUANGDONG_wood: "Qinzhou"

@@ -133,7 +133,7 @@
 		add_homeland = cu:han
 	}
 
-	s:STATE_WEST_GUANGDONG = {
+	s:STATE_WESTERN_GUANGDONG = {
 		create_state = {
 			country = c:CHI
 			owned_provinces = { x260389 x3131E0 x477755 x4E581C x7131E0 x85E0D4 x9A21B1 xA9B6D4 xC77200 xF0B061 xFEBFD5 }
