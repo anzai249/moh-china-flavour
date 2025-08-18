@@ -1,5 +1,4 @@
 ﻿l_simp_chinese: 
-  STATE_XIAN: "陕西"
   STATE_GUANGDONG: "广府"
   STATE_SHAOZHOU: "粤东"
   # overhaul
@@ -17,3 +16,6 @@
   HUB_NAME_STATE_WESTERN_GUANGDONG_city: "肇庆"
   HUB_NAME_STATE_WESTERN_GUANGDONG_farm: "茂名"
   HUB_NAME_STATE_WESTERN_GUANGDONG_wood: "钦州"
+  HUB_NAME_STATE_JIREM_city: "长春"
+  HUB_NAME_STATE_JIREM_farm: "昌图"
+  HUB_NAME_STATE_JIREM_wood: "大赉"

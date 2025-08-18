@@ -1,7 +1,6 @@
 ﻿l_english:
-  STATE_XIAN: "Shaanxi"
-  STATE_GUANGDONG: "Pearl River Delta"
-  STATE_SHAOZHOU: "East Guangdong"
+  STATE_GUANGDONG: "Guangfu"
+  STATE_SHAOZHOU: "Eastern Guangdong"
   # overhaul
   STATE_HAINAN: "Hainan"
   STATE_WESTERN_GUANGDONG: "Western Guangdong"
@@ -17,3 +16,6 @@
   HUB_NAME_STATE_WESTERN_GUANGDONG_city: "Zhaoqing"
   HUB_NAME_STATE_WESTERN_GUANGDONG_farm: "Maoming"
   HUB_NAME_STATE_WESTERN_GUANGDONG_wood: "Qinzhou"
+  HUB_NAME_STATE_JIREM_city: "Changchun"
+  HUB_NAME_STATE_JIREM_farm: "Changtu"
+  HUB_NAME_STATE_JIREM_wood: "Dalai"

@@ -3,7 +3,11 @@
   je_warlord_china_special_tooltip_deplete: "The following conditions will #bold deplete#! the #bold Progress Bar#!:\n• Losing the #BOLD Opium Wars#!\n• Failing to stop the appearance of the #BOLD Heavenly Kingdom#!\n• Failing to retake the #BOLD Heavenly Kingdom#!\n• Failing the #BOLD Boxer Rebellion#!\n• Going into debt and taking any [concept_loans]\n• Having a [concept_civil_war]\n• Becoming a [concept_subject] under another country\n• Abolishing the [GetLawType('law_monarchy').GetName]\n• Losing control of #BOLD Taiwan#!\n• Attempting to restore [GetLawType('law_monarchy').GetName] after establishing a republic"
   je_warlord_china: "Generals and Ambans"
   HUB_NAME_STATE_GUANGDONG_city: "Canton"
+  STATE_XIAN: "Shaanxi"
 
   # States Overhaul
+  STATE_ALXA: "Western Hetao"
+  STATE_SUZHOU: "Songhu"
+
   HUB_NAME_STATE_GUANGDONG_farm: "Xinning"
   HUB_NAME_STATE_GUANGDONG_wood: "Nanhai"
