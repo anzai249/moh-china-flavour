@@ -18,6 +18,9 @@
   dyn_c_sichuan_clique: "川系"
   dyn_c_shandong_clique: "鲁系"
   dyn_c_yunnan_clique: "滇系"
+  STATE_XIAN: "陕西"
   #States Overhaul
+  STATE_ALXA: "西套"
+  STATE_SUZHOU: "松沪"
   HUB_NAME_STATE_GUANGDONG_farm: "新宁"
   HUB_NAME_STATE_GUANGDONG_wood: "南海"
