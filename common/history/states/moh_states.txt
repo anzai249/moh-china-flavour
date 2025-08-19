@@ -119,6 +119,7 @@
 			state_type = unincorporated
 		}
 		add_homeland = cu:mongol
+		add_homeland = cu:manchu
 	}
 
 	# split guangdong

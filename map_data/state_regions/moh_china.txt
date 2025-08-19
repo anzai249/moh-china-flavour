@@ -2,7 +2,7 @@
 STATE_GUANGDONG = {
     id = 497
     subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "x19FD82" "x2BDE7B" "x2C4C48" "x31B061" "x475968" "x489AB0" "x845B19" "x8C9358" "xB031E0" "xB0B061" "xEAB2D0" "xF98B04" }
+    provinces = { "x19FD82" "x2BDE7B" "x2C4C48" "x475968" "x489AB0" "x8C9358" "xB031E0" "xB0B061" "xF98B04" }
     traits = { "state_trait_pearl_river" "state_trait_natural_harbors" }
     city = "x2BDE7B" # Canton
     port = "xB031E0" # Macau
@@ -17,26 +17,6 @@ STATE_GUANGDONG = {
     naval_exit_id = 3056
 }
 
-
-STATE_SHAOZHOU = {
-    id = 483
-    subsistence_building = "building_subsistence_rice_paddies"
-    provinces = { "x07C8D6" "x12DF0F" "x12F28E" "x242A48" "x40D43A" "x4CF229" "x8D6A1E" "x9C3F91" "xA0C90D" "xA613C9" "xAADB15" "xACD8B5" "xB03161" "xCD4039" "xD2A4C7" "xDFB220" "xE6F815" "xEA597E" "xF070E0" "xF7C5ED" }
-    traits = { "state_trait_natural_harbors" }
-    city = "xA0C90D"
-    port = "xB03161"
-    farm = "x12F28E"
-    mine = "xACD8B5"
-    wood = "x242A48"
-    arable_land = 200
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
-    capped_resources = {
-        bg_iron_mining = 36
-        bg_logging = 11
-        bg_fishing = 10
-    }
-    naval_exit_id = 3056
-}
 # Hainan/Qiongzhou 瓊州
 STATE_HAINAN = {
     id = 900
@@ -79,17 +59,16 @@ STATE_HINGGAN = {
     id = 485
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x030522" "x0717B0" "x0B083B" "x0B290E" "x0C97C7" "x11D2B4" "x13148D" "x18F94F" "x1920B1" "x274966" "x2F4B70" "x356F29" "x3622E3" "x3DD007" "x3DE808" "x402AA1" "x47B534" "x495253" "x4ABE28" "x4BE93C" "x51049D" "x545458" "x56C873" "x57486F" "x577A97" "x58DF63" "x5D8002" "x6079C8" "x612E18" "x61E50B" "x6C1D10" "x6C3633" "x6D0C0D" "x6EB371" "x7DE432" "x7DF862" "x7FCC4E" "x804F17" "x821CB1" "x89BEED" "x950856" "x9A290F" "x9A7C60" "x9D4375" "x9F5DDB" "x9FB63F" "xA2F841" "xA6838A" "xA8F8B1" "xACE725" "xB2A065" "xB2F616" "xB4179D" "xB4B216" "xB4BD1B" "xB539EC" "xBB346C" "xBCEE88" "xC66162" "xC99C56" "xCAE219" "xCBDEAC" "xCEF000" "xCF6FC5" "xD287BA" "xD40A01" "xD58188" "xDC7606" "xE09080" "xE1254D" "xE579C7" "xE61212" "xE81DA5" "xE9A4AD" "xEF59B7" "xF17D94" "xF3C61B" "xF612D5" }
-    traits = { "state_trait_yellow_river" "state_trait_eastern_steppe" }
-    city = "xF700DB"
-    farm = "xE61212"
-    mine = "x7D03D7"
-    wood = "x356F29"
-    arable_land = 41
+    traits = { "state_trait_eastern_steppe" }
+    city = "x9F5DDB"
+    farm = "x7DF862" # Eren 伊林 (Erenhot)
+    mine = "x9A290F" # Dolonnuur 多倫諾爾
+    # wood = "x356F29"
+    arable_land = 35
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 6
         bg_lead_mining = 10
-        bg_logging = 4
     }
 }
 # Ulanqab 烏蘭察布
@@ -98,11 +77,11 @@ STATE_ULANQAB = {
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x084245" "x09BDB5" "x0E4A9E" "x0ED964" "x13D9CC" "x189764" "x20446F" "x212B44" "x21B375" "x29E1D9" "x3591DF" "x35F8B6" "x3925C6" "x43C3CE" "x48B165" "x499327" "x4C9D47" "x4D9365" "x4D9FBE" "x4DC0A9" "x4F0969" "x509BF7" "x52517A" "x52BBA8" "x54F824" "x56BACB" "x5DDC82" "x604C22" "x6265E6" "x686682" "x6885B9" "x6953F3" "x697F3F" "x6FCDE9" "x6FF702" "x72508B" "x74B481" "x765C76" "x789EBE" "x78E67B" "x7C0109" "x7D03D7" "x946285" "x9B3D7F" "x9B9AEF" "x9BB42F" "xA05101" "xA74D78" "xAAA387" "xAE752D" "xB018D2" "xB1199E" "xB28D24" "xB4B7CD" "xBF0E96" "xBF4F34" "xC3EFFD" "xC9FE6C" "xCCFC62" "xD5E9B3" "xD8D89F" "xDAFBB4" "xDD18DC" "xDD248C" "xDF1557" "xE6C4C4" "xEA991E" "xF700DB" "xF789D7" "xF7EA9D" "xF992BD" }
     traits = { "state_trait_yellow_river" }
-    city = "xF700DB" # Guihua City/Suiyuan City/Hohhot
-    farm = "xE61212" # Baotou
-    mine = "x7D03D7" # Ordos
-    wood = "x356F29" # Wuyuan/Bayannur 五原
-    arable_land = 35
+    city = "x74B481" # Guihua City/Suiyuan City/Hohhot
+    farm = "x56BACB" # Baotou
+    mine = "xF700DB" # Ordos
+    wood = "x7D03D7" # Wuyuan/Bayannur 五原
+    arable_land = 41
     arable_resources = { "bg_livestock_ranches" }
     capped_resources = {
         bg_iron_mining = 30
@@ -114,7 +93,7 @@ STATE_JIREM = {
     id = 903
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x123862" "x14B65A" "x1A9CDB" "x205BDC" "x24EFE1" "x2F0832" "x35B5D1" "x3650A5" "x367825" "x45139C" "x48CB19" "x4E8F6B" "x4F7D66" "x55F9B4" "x5DEC3D" "x601436" "x6018AE" "x62321E" "x666827" "x6BFF9D" "x6EA4B4" "x771A9C" "x879FAD" "x8B4B0F" "xA008AE" "xA02978" "xAD1C65" "xBE06BF" "xC2EAB6" "xCB1B7A" "xCE4FAC" "xCE9058" "xD9107C" "xDBA5F1" "xF5B726" "xF5F399" "xFD0842" "xFF1F93" }
-    traits = { "state_trait_yellow_river" "state_trait_eastern_steppe" }
+    traits = { "state_trait_eastern_steppe" }
     city = "x55F9B4" # Changchun?
     farm = "x4E8F6B" # Changtu 昌圖
     # mine = "x7D03D7" 
@@ -122,6 +101,25 @@ STATE_JIREM = {
     arable_land = 26
     arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
     capped_resources = {
-        bg_logging = 2
+        bg_logging = 6
     }
+}
+
+
+STATE_FORMOSA = {
+    id = 510
+    subsistence_building = "building_subsistence_rice_paddies"
+    provinces = { "x44797F" "x6645CF" "x6DAB21" "x7070E0" "x9A5066" "xAEA2D8" "xBB27F6" "xE73B31" }
+    city = "x6DAB21"
+    port = "xE73B31"
+    farm = "xAEA2D8"
+    mine = "xBB27F6"
+    wood = "x9A5066"
+    arable_land = 80
+    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    capped_resources = {
+        bg_logging = 7
+        bg_fishing = 13
+    }
+    naval_exit_id = 3056
 }

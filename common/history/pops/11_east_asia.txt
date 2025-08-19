@@ -290,25 +290,44 @@
 		region_state:CHI = {
 			create_pop = {
 				culture = mongol
-				size = 1123002
-			}
-			create_pop = {
-				culture = manchu
-				size = 4412
+				size = 374334
 			}
 			create_pop = {
 				culture = han
-				size = 797003
+				size = 100000
 			}
 			create_pop = {
 				culture = han
 				religion = mahayana
-				size = 100000
+				size = 50000
 			}
 			create_pop = {
 				culture = han
 				religion = taoism
-				size = 100000
+				size = 50000
+			}
+		}
+	}
+	# Overhaul
+	s:STATE_ULANQAB = {
+		region_state:CHI = {
+			create_pop = {
+				culture = mongol
+				size = 374334
+			}
+			create_pop = {
+				culture = han
+				size = 597003
+			}
+			create_pop = {
+				culture = han
+				religion = mahayana
+				size = 50000
+			}
+			create_pop = {
+				culture = han
+				religion = taoism
+				size = 50000
 			}
 			create_pop = {
 				culture = han				# hui
@@ -317,6 +336,23 @@
 			}
 		}
 	}
+	s:STATE_JIREM = {
+		region_state:CHI = {
+			create_pop = {
+				culture = mongol
+				size = 374334
+			}
+			create_pop = {
+				culture = han
+				size = 100000
+			}
+			create_pop = {
+				culture = manchu
+				size = 4412
+			}
+		}
+	}
+	### OVERHAUL END
 	s:STATE_GUANGXI = {
 		region_state:CHI = {
 			create_pop = {
