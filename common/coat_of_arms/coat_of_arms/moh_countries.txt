@@ -323,6 +323,23 @@ YUE = {
 	}	
 }
 
+YUE_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+	
+	colored_emblem = {
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.8 1.0 } position = { 0.35 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_guangdong_2.dds"
+		color1 = "black"
+		instance = { scale = { 0.8 0.8 } position = { 0.117 0.5 } }			
+	}
+}
+
 GUI = { 
 	pattern = "pattern_solid.tga"
 	color1 = "white"
@@ -339,7 +356,7 @@ SIH = {
 	color1 = "white"
 	
 	colored_emblem = {
-		texture = "ce_sichuan.png"
+		texture = "ce_sichuan_han.dds"
 		color1 = "black"
 		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
 	}
@@ -392,11 +409,11 @@ SHA = {
 
 AHU = {
 	pattern = "pattern_solid.tga"
-	color1 = "green"
+	color1 = "red"
 	
 	colored_emblem = {
-		texture = "ce_anhui.png"
-		color1 = "grey"
+		texture = "ce_ren.dds"
+		color1 = "yellow"
 		instance = { position = { 0.5 0.5 } scale = { 1.25 1.25 } }
 	}
 }
@@ -437,11 +454,17 @@ MCH_subject = {
 SHN_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
-
+	
 	colored_emblem = {
-		texture = "ce_shanxi.png"
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.8 1.0 } position = { 0.35 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_shanxi_2.dds"
 		color1 = "black"
-		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+		instance = { scale = { 0.8 0.8 } position = { 0.117 0.5 } }
 	}
 }
 
@@ -471,9 +494,16 @@ SHA_subject = {
 	color1 = "red"
 
 	colored_emblem = {
-		texture = "ce_shandong.png"
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.8 1.0 } position = { 0.35 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_shandong_2.dds"
 		color1 = "black"
-		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+		instance = { scale = { 0.8 0.8 } position = { 0.117 0.5 } }
 	}
 }
 
@@ -483,17 +513,6 @@ AHU_subject = {
 	
 	colored_emblem = {
 		texture = "ce_anhui.png"
-		color1 = "black"
-		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
-	}
-}
-
-YUE_subject = {
-	pattern = "pattern_solid.tga"
-	color1 = "red"
-	
-	colored_emblem = {
-		texture = "ce_guangdong.png"
 		color1 = "black"
 		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
 	}
@@ -535,11 +554,18 @@ GNG_subject = {
 SIH_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "red"
-	
+
 	colored_emblem = {
-		texture = "ce_sichuan.png"
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.8 1.0 } position = { 0.35 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_sichuan_2.dds"
 		color1 = "black"
-		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+		instance = { scale = { 0.8 0.8 } position = { 0.117 0.5 } }
 	}
 }
 
