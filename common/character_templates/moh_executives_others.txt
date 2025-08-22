@@ -1,0 +1,27 @@
+﻿mori_tokugawa_executive_template = {
+    first_name = Mori_anzai249
+    last_name = moh_author_Tokugawa
+    historical = yes
+    culture = cu:han
+    interest_group = ig_intelligentsia
+	age = 22
+    ideology = ideology_liberal_leader
+	dna = dna_mori_tokugawa_the_author
+    traits = {
+        engineer
+        erudite
+        direct
+		reserved
+    }
+    executive_usage = {
+        country_trigger = {
+			always = yes
+        }
+        company_trigger = {
+			is_company_type = company_type:company_vic3_mod_coop
+        }
+	    earliest_usage_date = 1836.1.1
+	    latest_usage_date = 1936.1.1
+        chance = 100
+    }
+}
