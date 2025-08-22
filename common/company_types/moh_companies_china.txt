@@ -38,6 +38,22 @@ company_peking_university = {
 	ai_weight = {
 		value = 3
 	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_BEIJING
+			is_incorporated = yes
+		}
+	}
+	ai_construction_targets = {
+		building_university = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BEIJING
+				is_incorporated = yes
+			}
+		}
+	}
 }
 
 # machine_weaving_bureau
@@ -82,6 +98,28 @@ company_machine_weaving_bureau = {
 	ai_weight = {
 		value = 3
 	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		OR = {
+			any_scope_state = {
+				state_region = s:STATE_SUZHOU
+				is_incorporated = yes
+			}
+			any_scope_state = {
+				state_region = s:STATE_SICHUAN
+				is_incorporated = yes
+			}
+		}
+	}
+	ai_construction_targets = {
+		building_textile_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SUZHOU
+				is_incorporated = yes
+			}
+		}
+	}
 }
 
 # state grid
@@ -125,6 +163,16 @@ company_state_grid = {
 	}
 	prosperity_modifier = {
 		building_power_plant_throughput_add = 0.1
+		country_authority_mult = 0.1
+	}
+	ai_construction_targets = {
+		building_power_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_BEIJING
+				is_incorporated = yes
+			}
+		}
 	}
 	ai_weight = {
 		value = 3
@@ -165,6 +213,22 @@ company_china_aviation = {
 	}
 	ai_weight = {
 		value = 3
+	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_SUZHOU
+			is_incorporated = yes
+		}
+	}
+	ai_construction_targets = {
+		building_power_plant = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SUZHOU
+				is_incorporated = yes
+			}
+		}
 	}
 }
 
@@ -211,6 +275,22 @@ company_sanxin = {
 	ai_weight = {
 		value = 3
 	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_SUZHOU
+			is_incorporated = yes
+		}
+	}
+	ai_construction_targets = {
+		building_opium_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SUZHOU
+				is_incorporated = yes
+			}
+		}
+	}
 }
 
 # changyu
@@ -250,6 +330,22 @@ company_changyu = {
 	}
 	ai_weight = {
 		value = 3
+	}
+	ai_construction_targets = {
+		building_vineyard_plantation = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SHANDONG
+				is_incorporated = yes
+			}
+		}
+	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_SHANDONG
+			is_incorporated = yes
+		}
 	}
 }
 
@@ -291,6 +387,22 @@ company_tongrentang = {
 	}
 	ai_weight = {
 		value = 3
+	}
+	ai_construction_targets = {
+		building_opium_plantation = {
+			level = 5
+			state_trigger = {
+				# state_region = s:STATE_BEIJING
+				is_incorporated = yes
+			}
+		}
+	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_BEIJING
+			is_incorporated = yes
+		}
 	}
 }
 
@@ -337,5 +449,21 @@ company_commercial_press = {
 	}
 	ai_weight = {
 		value = 3
+	}
+	ai_construction_targets = {
+		building_paper_mills = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SUZHOU
+				is_incorporated = yes
+			}
+		}
+	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_SUZHOU
+			is_incorporated = yes
+		}
 	}
 }
