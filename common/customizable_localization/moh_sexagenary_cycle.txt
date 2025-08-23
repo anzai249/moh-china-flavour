@@ -1,0 +1,146 @@
+﻿# I hate algorithms
+# Thanks Oriental Empires!
+sexagenary_cycle_stems = {
+	type = country
+	random_valid = yes
+
+	text = {
+		trigger = {
+			current_year_tiangan_mod = 4
+		}
+		localization_key = sc_Jia
+	}
+	text = {
+		localization_key = sc_Yi
+		trigger = {
+			current_year_tiangan_mod = 5
+		}
+	}
+	text = {
+		localization_key = sc_Bing
+		trigger = {
+			current_year_tiangan_mod = 6
+		}
+	}
+	text = {
+		localization_key = sc_Ding
+		trigger = {
+			current_year_tiangan_mod = 7
+		}
+	}
+	text = {
+		localization_key = sc_Wu_stem
+		trigger = {
+			current_year_tiangan_mod = 8
+		}
+	}
+	text = {
+		localization_key = sc_Ji
+		trigger = {
+			current_year_tiangan_mod = 9
+		}
+	}
+	text = {
+		localization_key = sc_Geng
+		trigger = {
+			current_year_tiangan_mod = 0
+		}
+	}
+	text = {
+		localization_key = sc_Xin
+		trigger = {
+			current_year_tiangan_mod = 1
+		}
+	}
+	text = {
+		localization_key = sc_Ren
+		trigger = {
+			current_year_tiangan_mod = 2
+		}
+	}
+	text = {
+		localization_key = sc_Gui
+		trigger = {
+			current_year_tiangan_mod = 3
+		}
+	}
+}
+
+sexagenary_cycle_branches = {
+	type = country
+	random_valid = yes
+
+	text = {
+		localization_key = sc_Zi
+		trigger = {
+			current_year_dizhi_mod = 4
+		}
+	}
+	text = {
+		localization_key = sc_Chou
+		trigger = {
+			current_year_dizhi_mod = 5
+		}
+	}
+	text = {
+		localization_key = sc_Yin
+		trigger = {
+			current_year_dizhi_mod = 6
+		}
+	}
+	text = {
+		localization_key = sc_Mao
+		trigger = {
+			current_year_dizhi_mod = 7
+		}
+	}
+	text = {
+		localization_key = sc_Chen
+		trigger = {
+			current_year_dizhi_mod = 8
+		}
+	}
+	text = {
+		localization_key = sc_Si
+		trigger = {
+			current_year_dizhi_mod = 9
+		}
+	}
+	text = {
+		localization_key = sc_Wu_branch
+		trigger = {
+			current_year_dizhi_mod = 10
+		}
+	}
+	text = {
+		localization_key = sc_Wei
+		trigger = {
+			current_year_dizhi_mod = 11
+		}
+	}
+	text = {
+		localization_key = sc_Shen
+		trigger = {
+			current_year_dizhi_mod = 0
+		}
+	}
+	text = {
+		localization_key = sc_You
+		trigger = {
+			current_year_dizhi_mod = 1
+		}
+	}
+	text = {
+		localization_key = sc_Xu
+		trigger = {
+			current_year_dizhi_mod = 2
+		}
+	}
+	text = {
+		localization_key = sc_Hai
+		trigger = {
+			current_year_dizhi_mod = 3
+		}
+	}
+
+}

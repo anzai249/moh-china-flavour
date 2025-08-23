@@ -1,2 +1,2 @@
 ﻿l_english:
- movement_wuxu: "Wuxu Reform Movement"
+  movement_wuxu: "[GetPlayer.GetCustom('sexagenary_cycle_stems')][GetPlayer.GetCustom('sexagenary_cycle_branches')] Reform Movement"

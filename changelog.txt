@@ -370,3 +370,14 @@ Changes:
 Fixes:
 
 - MOHB-0014
+
+Release 1.2.1-pre1 "Kangaroo"
+1.2.0 does not have a stable release.
+
+Changes:
+
+- Map overhaul.
+- New clique flags (align with Hearts of Iron IV).
+- Sexagenary cycle algorithm from Oriental Empires mod. Currently used for Wuxu Reform.
+
+Fixes:
