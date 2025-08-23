@@ -48,7 +48,7 @@
   moh_agitators.3.f: "[SCOPE.sCharacter('historic_agitator_scope').GetCustom('GetUniversalFullName')]，一名[GetIdeology('ideology_moh_revolutionary').GetName]领袖在某场起义中活了下来并逃跑，他现在正藏匿于我国的某个角落。\n\n我们刚刚才处理掉上一个[GetIdeology('ideology_moh_revolutionary').GetName]领袖，目前无力处理他，只能在暂时任由他宣传自己的思想。不过值得注意的是，他们到底有多少人才会在真么短的时间内出现这么多？"
   moh_agitators.3.a: "密切关注他"
   #戊戌变法
-  wuxu.1.t: "戊戌政变"
+  wuxu.1.t: "[GetPlayer.GetCustom('sexagenary_cycle_stems')][GetPlayer.GetCustom('sexagenary_cycle_branches')]政变"
   wuxu.1.d: "[GetIdeology('ideology_moh_reformer').GetName]在朝廷已完全失势，看来他们终究还是过于弱小。"
   wuxu.1.f: "“维新派的势力已经被完全削弱，他们的努力最终还是无法改变国家的命运。”\n\n[SCOPE.gsInterestGroup('wuxu_landowners_ig').GetLeader.GetFirstName]在[ROOT.GetCountry.GetCapital.GetName]宣布训政，维新变法运动落下帷幕。接下来需要处置的就是维新派头目。"
   wuxu.1.a: "让他们去日本冷静冷静"
