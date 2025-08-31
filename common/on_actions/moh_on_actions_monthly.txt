@@ -60,3 +60,17 @@ moh_savage_land = {
 		}
 	}
 }
+
+moh_rule_qing_explode_true = {
+	effect = {
+		if = {
+			limit = {
+                has_game_rule = qing_explode_true
+				NOT = {
+					has_global_variable = china_shatters
+				}
+			}
+            trigger_event = { id = warlord_china_events.100 }
+		}
+	}
+}
