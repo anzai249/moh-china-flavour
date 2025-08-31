@@ -379,5 +379,8 @@ Changes:
 - Map overhaul.
 - New clique flags (align with Hearts of Iron IV).
 - Sexagenary cycle algorithm from Oriental Empires mod. Currently used for Wuxu Reform.
+- Made Xianfeng progress bar more intuitive.
 
 Fixes:
+
+- MOHB-0015

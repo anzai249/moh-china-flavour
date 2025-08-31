@@ -81,21 +81,19 @@
 				value = 0.5
 			}
 		}
-	}
-	monthly_progress = {
 		if = {
 			limit = {
 				year >= 1860
 			}
 			add = {
 				desc = "xianfeng_progress_bar_monthly_desc"
-				value = -0.4
+				value = -0.1
 			}
 		}
 		else = {
 			add = {
 				desc = "xianfeng_progress_bar_monthly_desc"
-				value = -0.2
+				value = -0.05
 			}
 		}
 	}
