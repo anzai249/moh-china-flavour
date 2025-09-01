@@ -2633,3 +2633,32 @@ chi_wu_chongyao_character_template = {
         chance = 35
     }
 }
+
+chi_he_changling_character_template = {
+    # courtesy name Ougen
+    first_name = Changling
+    last_name = He
+    historical = yes
+    birth_date = 1785.3.18
+    culture = cu:han
+    ig_leader = yes
+    interest_group = ig_intelligentsia
+    ideology = ideology_moderate
+    traits = {
+        meticulous
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            NOT = {
+                cultural_acceptance_base = { target = cu:han value < acceptance_status_4 }
+            }
+            has_state_in_state_region = STATE_HUNAN
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_intelligentsia
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1848.1.1
+        chance = 90
+    }
+}

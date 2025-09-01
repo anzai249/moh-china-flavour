@@ -41,7 +41,7 @@
 			}
 			on_created = {
 				set_variable = is_linzexu
-				set_character_immortal = yes
+				# set_character_immortal = yes
 			}
 		}
 
@@ -65,17 +65,21 @@
 		}
 
 		create_character = {
-			# courtesy name Ougen
-			first_name = Changling
-			last_name = He
+			first_name = moh_Naiji
+			last_name = moh_Xu
 			historical = yes
-			birth_date = 1785.3.18
+			birth_date = 1777.1.1
 			culture = cu:han
 			ig_leader = yes
 			interest_group = ig_intelligentsia
 			ideology = ideology_moderate
 			traits = {
-				meticulous
+				erudite
+				master_bureaucrat
+			}
+			on_created = {
+				set_variable = is_xunaiji
+				# set_character_immortal = yes
 			}
 		}
 

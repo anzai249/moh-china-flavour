@@ -1,0 +1,2 @@
+﻿concept_shih_chin_pai = {}
+concept_yen_chin_pai = {}

@@ -34,6 +34,7 @@
 			value = 0
 		}
 		set_variable = old_summer_palace
+		set_variable = supporting_yen_chin_pai_var
 		add_journal_entry = {
 			type = je_warlord_china
 		}

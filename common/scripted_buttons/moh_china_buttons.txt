@@ -1,4 +1,64 @@
-﻿ban_opium_button = {
+﻿support_shih_chin_pai_button = {
+	name = "support_shih_chin_pai"
+	desc = "support_shih_chin_pai_desc"
+	visible = { 
+		OR = {
+			has_journal_entry = je_daoguang_reform_opium
+		}
+	}
+	possible = {
+		NOT = { 
+			has_variable = je_daoguang_reform_opium_cooldown
+			has_variable = supporting_shih_chin_pai_var
+		}
+	}
+	selected = {
+		has_variable = supporting_shih_chin_pai_var
+	}
+	effect = {
+		set_variable = supporting_shih_chin_pai_var
+		set_variable = {
+			name = je_daoguang_reform_opium_cooldown
+			months = 3
+		}
+		remove_variable = supporting_yen_chin_pai_var
+		custom_tooltip = {
+			text = supporting_shih_chin_pai_tt
+		}
+	}
+}
+support_yen_chin_pai_button = {
+	name = "support_yen_chin_pai"
+	desc = "support_yen_chin_pai_desc"
+	visible = { 
+		OR = {
+			has_journal_entry = je_daoguang_reform_opium
+		}
+	}
+	possible = {
+		NOT = { 
+			has_variable = je_daoguang_reform_opium_cooldown
+			has_variable = supporting_yen_chin_pai_var
+		}
+	}
+	selected = {
+		has_variable = supporting_yen_chin_pai_var
+	}
+	effect = {
+		set_variable = supporting_yen_chin_pai_var
+		set_variable = {
+			name = je_daoguang_reform_opium_cooldown
+			months = 3
+		}
+		remove_variable = supporting_shih_chin_pai_var
+		custom_tooltip = {
+			text = supporting_yen_chin_pai_tt
+		}
+	}
+}
+
+
+ban_opium_button = {
 	name = "ban_opium"
 	desc = "ban_opium_desc"
 
