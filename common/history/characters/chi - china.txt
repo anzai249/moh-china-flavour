@@ -80,7 +80,7 @@
 		}
 
 		create_character = {
-			first_name = moh_Yuan
+			first_name = moh_Yuan_2
 			last_name = Ruan
 			historical = yes
 			birth_date = 1764.1.1
