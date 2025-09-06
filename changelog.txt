@@ -386,3 +386,4 @@ Fixes:
 
 - MOHB-0015
 - Some localization issues.
+- MOHB-0017

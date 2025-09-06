@@ -1,2 +1,8 @@
-﻿concept_shih_chin_pai = {}
-concept_yen_chin_pai = {}
+﻿concept_shih_chin_pai = {
+	texture = "gfx/interface/icons/goods_icons/opium.dds"
+	is_loading_tip = yes
+}
+concept_yen_chin_pai = {
+	texture = "gfx/interface/icons/goods_icons/opium.dds"
+	is_loading_tip = yes
+}

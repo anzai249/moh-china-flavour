@@ -187,14 +187,14 @@ je_daoguang_reform_opium = {
 	}
 	fail = {
 		OR = {
-			custom_tooltip = {
-				text = je_daoguang_reform_main_fail_lin_tt
-				NOT = {
-					any_scope_character = {
-						has_variable = is_linzexu
-					}
-				}
-			}
+			# custom_tooltip = {
+			# 	text = je_daoguang_reform_main_fail_lin_tt
+			# 	NOT = {
+			# 		any_scope_character = {
+			# 			has_variable = is_linzexu
+			# 		}
+			# 	}
+			# }
 			custom_tooltip = {
 				text = je_daoguang_reform_main_fail_tt
 				OR = {
@@ -210,31 +210,32 @@ je_daoguang_reform_opium = {
 			}
 		}
 	}
-	on_fail = {
-		hidden_effect = {
-			random_scope_character = {
-				limit = {
-					has_variable = is_linzexu
-				}
-				set_character_immortal = no
-			}
-		}
-	}
-	on_yearly_pulse = {
-		effect = {
-			if = {
-				limit = {
-					year >= 1842
-				}
-				random_scope_character = {
-					limit = {
-						has_variable = is_linzexu
-					}
-					set_character_immortal = no
-				}
-			}
-		}
-	}
+	# on_fail = {
+	# 	hidden_effect = {
+	# 		random_scope_character = {
+	# 			limit = {
+	# 				has_variable = is_linzexu
+	# 			}
+	# 			set_character_immortal = no
+	# 		}
+	# 	}
+	# }
+	# on_yearly_pulse = {
+	# 	effect = {
+	# 		if = {
+	# 			limit = {
+	# 				year >= 1842
+	# 			}
+	# 			random_scope_character = {
+	# 				limit = {
+	# 					has_variable = is_linzexu
+	# 				}
+	# 				set_character_immortal = no
+	# 			}
+	# 		}
+	# 	}
+	# }
+	scripted_progress_bar = daoguang_opium_progress_bar
 	weight = 200
 	should_be_pinned_by_default = yes
 }

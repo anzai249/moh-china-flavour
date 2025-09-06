@@ -1,0 +1,33 @@
+﻿daoguang_opium_progress_bar = {
+	name = daoguang_opium_progress_bar
+	desc = "concept_yen_chin_pai"
+	second_desc = "concept_shih_chin_pai"
+	min_value = 0
+	max_value = 100
+	start_value = 70
+	double_sided_gold = yes
+	monthly_progress = {
+		if = {
+			limit = {
+				NOT = {
+					has_variable = supporting_shih_chin_pai_var
+				}
+			}
+			add = {
+				desc = "daoguang_opium_progress_bar_emperor_support"
+				value = 1
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_variable = supporting_yen_chin_pai_var
+				}
+			}
+			add = {
+				desc = "daoguang_opium_progress_bar_emperor_support"
+				value = -1
+			}
+		}
+	}
+}

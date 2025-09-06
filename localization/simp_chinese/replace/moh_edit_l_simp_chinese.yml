@@ -3,6 +3,8 @@
   je_warlord_china_special_tooltip_deplete: "以下条件会#bold 减少#!#bold 进度条#!：\n•输掉#BOLD 鸦片战争#!\n•未能阻止#BOLD 太平天国#!出现\n•未能重新占领#BOLD 太平天国#!\n•#BOLD 义和团运动#!失败\n•负债并借取[concept_loans]\n•爆发[concept_civil_war]\n•成为另一国家的[concept_subject]国\n•废除[GetLawType('law_monarchy').GetName]\n•未控制#BOLD 台湾#!\n•建立共和后尝试复辟[GetLawType('law_monarchy').GetName]"
   je_warlord_china: "将军与驻藏大臣"
 
+  CLOCK_TEXT: "#BOLD [TimeKeeper.GetCurrentDate.Format('y年 m月 d日')]#!（[GetPlayer.GetCustom('sexagenary_cycle_stems')][GetPlayer.GetCustom('sexagenary_cycle_branches')]年）"
+
   # country names
   dyn_c_fengtian_clique: "奉系"
   dyn_c_hunan_clique: "湘系"
