@@ -149,6 +149,11 @@
 	}
 	option = {
 		name = opium_wars.1.b
+		trigger = {
+			NOT = {
+				root = c:CHI
+			}
+		}
 		add_modifier = {
 			name = opium_wars_addiction_modifier
 			days = very_long_modifier_time

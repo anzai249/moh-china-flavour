@@ -4,7 +4,7 @@
 	second_desc = "concept_shih_chin_pai"
 	min_value = 0
 	max_value = 100
-	start_value = 70
+	start_value = 60
 	double_sided_gold = yes
 	monthly_progress = {
 		if = {
