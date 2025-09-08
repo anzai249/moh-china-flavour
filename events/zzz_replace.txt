@@ -151,7 +151,7 @@
 		name = opium_wars.1.b
 		trigger = {
 			NOT = {
-				root = c:CHI
+				this = c:CHI
 			}
 		}
 		add_modifier = {

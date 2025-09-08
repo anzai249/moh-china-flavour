@@ -1,4 +1,15 @@
-﻿FUJ = { # Fujian
+﻿CHI = {
+	color = { 252 185 61 }
+
+	country_type = unrecognized
+
+	tier = empire
+	# social_hierarchy = china_shinonggongshang_system
+	cultures = { manchu han }
+	capital = STATE_BEIJING
+}
+
+FUJ = { # Fujian
 	color = { 183  63  63 }
 	country_type = unrecognized
 	

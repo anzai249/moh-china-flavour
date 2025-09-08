@@ -1,0 +1,38 @@
+﻿upper_class_china = {
+	social_hierarchy = china_shinonggongshang_system
+	strata = upper
+
+	allowed_professions = {
+		aristocrats
+		academics
+		bureaucrats
+	}
+}
+
+middle_class_china = {
+	social_hierarchy = china_shinonggongshang_system
+	strata = middle
+
+	allowed_professions = {
+		capitalists
+		machinists
+		engineers
+		farmers
+		officers
+		clergymen
+	}
+}
+
+lower_class_china = {
+	social_hierarchy = china_shinonggongshang_system
+	strata = lower
+
+	allowed_professions = {
+		shopkeepers
+		clerks
+		laborers
+		peasants
+		slaves
+		soldiers
+	}
+}

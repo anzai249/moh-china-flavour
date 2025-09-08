@@ -1,0 +1,10 @@
+﻿l_english:
+  china_shinonggongshang_system: "Four Occupations System"
+  china_shinonggongshang_system_desc: "A social hierarchy in imperial China dividing society into four main classes: scholars, farmers, artisans, and merchants."
+  china_shinonggongshang_system_trigger_desc: "Chinese people under feudal dynastic rule"
+  upper_class_china: "Upper Class"
+  upper_class_china_desc: "The highest social class, typically including scholars and officials."
+  middle_class_china: "Middle Class"
+  middle_class_china_desc: "The middle social class, typically including farmers and artisans."
+  lower_class_china: "Lower Class"
+  lower_class_china_desc: "The lowest social class, typically including merchants and laborers."

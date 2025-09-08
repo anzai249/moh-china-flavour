@@ -1,0 +1,21 @@
+﻿default_social_hierarchy = {
+	is_default = yes
+}
+
+china_shinonggongshang_system = {
+	is_default = no
+	pop_criteria = {
+		custom_tooltip = {
+			text = china_shinonggongshang_system_trigger_desc
+			owner = {
+				has_law = law_type:law_monarchy
+			}
+			OR = {
+				culture = {
+					has_discrimination_trait = han_chinese
+				}
+				culture = cu:manchu
+			}
+		}
+	}
+}

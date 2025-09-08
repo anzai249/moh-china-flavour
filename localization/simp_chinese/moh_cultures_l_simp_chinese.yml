@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+  china_shinonggongshang_system: "士农工商"
+  china_shinonggongshang_system_desc: "在封建王朝统治下的中国社会分为四个主要阶层：士、农、工、商。"
+  china_shinonggongshang_system_trigger_desc: "在封建王朝统治下的中国人"
+  upper_class_china: "上等阶层"
+  upper_class_china_desc: "社会的最高阶层，通常包括学者和官员。"
+  middle_class_china: "中等阶层"
+  middle_class_china_desc: "社会的中间阶层，通常包括农民和工匠。"
+  lower_class_china: "下等阶层"
+  lower_class_china_desc: "社会的最低阶层，通常包括商人和劳动者。"
