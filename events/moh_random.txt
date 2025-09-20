@@ -92,6 +92,10 @@ moh_random.2 = {
 	duration = 3
 	dlc = dlc0moh
 
+	cooldown = {
+		days = 1825
+	}
+
 	event_image = {
 		video = "europenorthamerica_art_gallery"
 	}
@@ -144,6 +148,10 @@ moh_random.3 = {
 	flavor = moh_random.3.f
 	duration = 3
 	dlc = dlc0moh
+
+	cooldown = {
+		days = 1825
+	}
 
 	event_image = {
 		video = "europenorthamerica_art_gallery"

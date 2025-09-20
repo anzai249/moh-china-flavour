@@ -15,7 +15,7 @@
 			}
 			add = {
 				desc = "daoguang_opium_progress_bar_emperor_support"
-				value = 1
+				value = 2
 			}
 		}
 		if = {
@@ -26,7 +26,7 @@
 			}
 			add = {
 				desc = "daoguang_opium_progress_bar_emperor_support"
-				value = -1
+				value = -2
 			}
 		}
 	}

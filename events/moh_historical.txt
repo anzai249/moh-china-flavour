@@ -797,7 +797,7 @@ moh_historical.11 = {
 		NOT = {
 			country_has_state_religion = rel:sunni
 		}
-		scope:yunnan_state_scope = {
+		s:STATE_YUNNAN.region_state:CHI = {
 			any_scope_pop = {
 				religion = rel:sunni
 			}

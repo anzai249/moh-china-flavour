@@ -1,7 +1,7 @@
 ﻿support_shih_chin_pai_button = {
 	name = "support_shih_chin_pai"
 	desc = "support_shih_chin_pai_desc"
-	visible = { 
+	visible = {
 		OR = {
 			has_journal_entry = je_daoguang_reform_opium
 		}
@@ -35,10 +35,11 @@
 		}
 	}
 }
+
 support_yen_chin_pai_button = {
 	name = "support_yen_chin_pai"
 	desc = "support_yen_chin_pai_desc"
-	visible = { 
+	visible = {
 		OR = {
 			has_journal_entry = je_daoguang_reform_opium
 		}
@@ -73,34 +74,50 @@ support_yen_chin_pai_button = {
 	}
 }
 
-
 ban_opium_button = {
 	name = "ban_opium"
 	desc = "ban_opium_desc"
-
-	visible = { 
+	visible = {
 		OR = {
 			has_journal_entry = je_opium_obsession
 			has_journal_entry = je_opium_communism
 		}
 		exists = market
 		market.owner = root
-		NOT = { is_banning_goods = g:opium }
+		NOT = {
+			is_banning_goods = g:opium
+		}
 	}
-
 	possible = {
 		OR = {
 			has_journal_entry = je_opium_obsession
 			has_journal_entry = je_opium_communism
 		}
-		NOT = { has_law = law_type:law_free_trade }
+		NOT = {
+			has_law = law_type:law_free_trade
+		}
 		custom_tooltip = {
 			text = not_lost_opium_wars_tt
-			NOT = { has_variable = lost_opium_wars }
+			NOT = {
+				has_variable = lost_opium_wars
+			}
 		}
-		exists = market	
+		exists = market
+		OR = {
+			AND = {
+				c:CHI ?= this
+				has_variable = opium_yen_chin_pai_victory
+			}
+			AND = {
+				NOT = {
+					c:CHI ?= this
+				}
+				NOT = {
+					has_variable = opium_yen_chin_pai_victory
+				}
+			}
+		}
 	}
-
 	effect = {
 		add_banned_goods = g:opium
 		if = {
@@ -118,9 +135,8 @@ ban_opium_button = {
 			name = opium_ban_authority
 		}
 	}
-
 	ai_chance = {
-        value = 0
+		value = 0
 		if = {
 			limit = {
 				OR = {
@@ -131,14 +147,13 @@ ban_opium_button = {
 			}
 			add = 10
 		}
-    }
+	}
 }
 
 unban_opium_button = {
 	name = "remove_opium_ban"
 	desc = "remove_opium_ban_desc"
-
-	visible = { 
+	visible = {
 		OR = {
 			has_journal_entry = je_opium_obsession
 			has_journal_entry = je_opium_communism
@@ -147,23 +162,85 @@ unban_opium_button = {
 		exists = market
 		market.owner = root
 	}
-
 	possible = {
 		always = yes
 	}
-
 	effect = {
 		remove_banned_goods = g:opium
 		remove_modifier = opium_ban_authority
 	}
-
 	ai_chance = {
 		value = 0
-		  if = {
-			  limit = {
-				  has_strategy = ai_strategy_progressive_agenda
-			  }
-			  add = 10
-		  }
-	 }
+		if = {
+			limit = {
+				has_strategy = ai_strategy_progressive_agenda
+			}
+			add = 10
+		}
+	}
+}
+
+legalize_opium_button = {
+	name = "legalize_opium"
+	desc = "legalize_opium_desc"
+	visible = {
+		has_journal_entry = je_opium_obsession
+		exists = market
+		market.owner = root
+		NOT = {
+			is_banning_goods = g:opium
+		}
+	}
+	possible = {
+		has_journal_entry = je_opium_obsession
+		custom_tooltip = {
+			text = not_lost_opium_wars_tt
+			NOT = {
+				has_variable = lost_opium_wars
+			}
+		}
+		exists = market
+		OR = {
+			AND = {
+				c:CHI ?= this
+				has_variable = opium_shih_chin_pai_victory
+			}
+			AND = {
+				NOT = {
+					c:CHI ?= this
+				}
+				NOT = {
+					has_variable = opium_shih_chin_pai_victory
+				}
+			}
+		}
+	}
+	effect = {
+		hidden_effect = { remove_modifier = opium_wars_addiction_modifier }
+		set_variable = shih_chin_legalized_opium
+		set_import_tariff_level = {
+			goods = g:opium
+			level = max_tariffs
+		}
+		add_modifier = {
+			name = opium_wars_addiction_shih_chin_modifier
+			days = long_modifier_time
+		}
+		add_journal_entry = {
+			type = je_shih_chin_opium
+		}
+	}
+	ai_chance = {
+		value = 0
+		if = {
+			limit = {
+				OR = {
+					has_strategy = ai_strategy_conservative_agenda
+					has_strategy = ai_strategy_reactionary_agenda
+					has_strategy = ai_strategy_maintain_mandate_of_heaven
+				}
+			}
+			add = 10
+		}
+	}
 }

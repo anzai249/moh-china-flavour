@@ -185,6 +185,17 @@ je_daoguang_reform_opium = {
 				add = 1
 			}
 		}
+		if = {
+			limit = {
+				scope:journal_entry = {
+					"scripted_bar_progress(daoguang_opium_progress_bar)" >= 100
+				}
+			}
+			set_variable = opium_yen_chin_pai_victory
+		}
+		else = {
+			set_variable = opium_shih_chin_pai_victory
+		}
 		# hidden_effect = {
 		# 	random_scope_character = {
 		# 		limit = {

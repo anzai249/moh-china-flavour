@@ -2515,7 +2515,15 @@ ai_strategy_default = {
 				has_journal_entry = je_opium_wars
 				scope:target_country = {
 					has_variable = opium_wars_target
-					is_banning_goods = g:opium
+					OR = {
+						is_banning_goods = g:opium
+						g:opium = {
+							OR = {
+								import_tariff_level = high_tariffs
+								import_tariff_level = max_tariffs
+							}
+						}
+					}
 				}
 			}
 			add = 1
@@ -2524,7 +2532,15 @@ ai_strategy_default = {
 		if = {
 			limit = {
 				has_variable = opium_wars_target
-				is_banning_goods = g:opium
+				OR = {
+					is_banning_goods = g:opium
+					g:opium = {
+						OR = {
+							import_tariff_level = high_tariffs
+							import_tariff_level = max_tariffs
+						}
+					}
+				}
 				scope:target_country = {
 					has_journal_entry = je_opium_wars
 				}
@@ -2823,7 +2839,15 @@ ai_strategy_default = {
 				has_journal_entry = je_opium_wars
 				scope:target_country = {
 					has_variable = opium_wars_target
-					is_banning_goods = g:opium
+					OR = {
+						is_banning_goods = g:opium
+						g:opium = {
+							OR = {
+								import_tariff_level = high_tariffs
+								import_tariff_level = max_tariffs
+							}
+						}
+					}
 				}
 			}
 			add = 100
@@ -6701,15 +6725,15 @@ ai_strategy_default = {
 				}
 			}
 			
-			if = {
-				limit = {
-					has_journal_entry = je_opium_wars
-					scope:target_country = {
-						has_variable = opium_wars_target
-					}
-				}
-				add = 50
-			}	
+			# if = {
+			# 	limit = {
+			# 		has_journal_entry = je_opium_wars
+			# 		scope:target_country = {
+			# 			has_variable = opium_wars_target
+			# 		}
+			# 	}
+			# 	add = 50
+			# }	
 
 			if = {
 				limit = {

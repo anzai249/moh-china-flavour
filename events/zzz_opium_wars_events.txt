@@ -1,4 +1,6 @@
-﻿opium_wars.1 = {
+﻿namespace = opium_wars
+
+opium_wars.1 = {
 	type = country_event
 	placement = ROOT
 
@@ -7,6 +9,8 @@
 	flavor = opium_wars.1.f
 
 	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
 
 	event_image = {
 		video = "europenorthamerica_opium_smoker"
@@ -30,7 +34,7 @@
 		}
 		any_scope_state = {
 			any_scope_building = {
-				is_building_type = building_port
+				is_building_type = building_trade_center
 			}
 		}
 		is_subject = no
@@ -52,6 +56,7 @@
 						binds = ROOT
 						any_scope_article = {
 							has_type = foreign_investment_rights
+							source_country = root
 						}
 					}
 				}
@@ -88,6 +93,7 @@
 							binds = ROOT
 							any_scope_article = {
 								has_type = foreign_investment_rights
+								source_country = root
 							}
 						}
 					}
@@ -130,6 +136,7 @@
 							binds = ROOT
 							any_scope_article = {
 								has_type = foreign_investment_rights
+								source_country = root
 							}
 						}
 					}
@@ -151,7 +158,8 @@
 		name = opium_wars.1.b
 		trigger = {
 			NOT = {
-				this = c:CHI
+				# this = c:CHI
+				c:CHI ?= root
 			}
 		}
 		add_modifier = {
@@ -192,6 +200,8 @@ opium_wars.2 = {
 	flavor = opium_wars.2.f
 
 	duration = 3
+
+	cooldown = { days = stupidly_long_modifier_time }
 
 	event_image = {
 		video = "europenorthamerica_opium_smoker"
@@ -258,7 +268,7 @@ opium_wars.2 = {
 			}		
 		}
 		ai_chance = {
-			base = 99
+			base = 95
 		}
 	}
 	option = { # not interested
@@ -302,7 +312,7 @@ opium_wars.2 = {
 			}		
 		}		
 		ai_chance = {
-			base = 1
+			base = 5
 		}
 	}
 }

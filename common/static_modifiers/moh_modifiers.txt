@@ -333,3 +333,27 @@ focus_on_navy = {
 	country_prestige_from_navy_power_projection_mult = 0.15
 	unit_navy_defense_mult = 0.1
 }
+
+# shih chin opium addiction
+opium_wars_addiction_shih_chin_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_negative.dds
+	state_radicals_from_political_movements_mult = 0.20
+    state_loyalists_from_political_movements_mult = -0.20
+    state_lower_strata_standard_of_living_add = -1
+	state_peasants_mortality_mult = 0.01
+	state_laborers_mortality_mult = 0.01
+	state_shopkeepers_mortality_mult = 0.01
+	state_slaves_mortality_mult = 0.01
+	state_machinists_mortality_mult = 0.01
+	state_aristocrats_mortality_mult = 0.01
+	state_clergymen_mortality_mult = 0.01
+	state_clerks_mortality_mult = 0.01
+	state_capitalists_mortality_mult = 0.01
+	state_engineers_mortality_mult = 0.01
+	state_farmers_mortality_mult = 0.01
+	unit_offense_mult = -0.45
+	unit_defense_mult = -0.45
+	unit_morale_loss_mult = 0.75
+	country_prestige_from_army_power_projection_mult = -0.5
+	country_war_exhaustion_casualties_mult = 1.0
+}
