@@ -9,6 +9,9 @@ moh_random.1 = {
 	flavor = moh_random.1.f
 	duration = 3
 	dlc = dlc0moh
+	cooldown = {
+		days = 1825
+	}
 
 	event_image = {
 		video = "unspecific_devastation"
@@ -432,6 +435,10 @@ moh_random.201 = {
 			month = 1
 			month = 2
 		}
+	}
+
+	cooldown = {
+		days = 1825
 	}
 
 	immediate = {

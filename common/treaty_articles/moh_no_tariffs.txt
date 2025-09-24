@@ -231,25 +231,31 @@
 			value = 1
 			if = {
 				limit = {
-					scope:input = g:opium
+					"scope:article.input_market_goods(root)" ?= {
+						goods ?= {
+							g:opium ?= this
+						}
+					}
 				}
 
 				# opium war
 				if = {
 					limit = {
 						has_journal_entry = je_opium_wars
-					    is_diplomatic_play_enemy_of = scope:source_country
+					    # is_diplomatic_play_enemy_of = scope:source_country
 						scope:source_country = {
-							g:opium = {
-								OR = {
-									import_tariff_level = high_tariffs
-									import_tariff_level = max_tariffs
+							capital = {
+								sg:opium = {
+									OR = {
+										import_tariff_level = high_tariffs
+										import_tariff_level = max_tariffs
+									}
 								}
 							}
                             has_variable = opium_wars_target
 						}
 					}
-					add = 0.5
+					add = 75
 				}
 			}
 		}

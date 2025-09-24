@@ -1,7 +1,5 @@
 ﻿taoism = {
-	texture = "gfx/interface/icons/religion_icons/taoism.dds"
-	traits = {
-		eastern
-	}
+	icon = "gfx/interface/icons/religion_icons/taoism.dds"
+	heritage = heritage_taoic
 	color = { 1 0.8 0.8 }
 }

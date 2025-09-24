@@ -111,6 +111,69 @@
 
 je_shih_chin_opium = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
-
 	group = je_group_internal_affairs
+
+	immediate = {
+		set_variable = {
+			name = shih_chin_opium_completion_tracker
+			value = 0
+		}
+	}
+
+	complete = {
+		custom_tooltip = {
+			text = shih_chin_opium_complete_tt
+			scope:journal_entry = { is_goal_complete = yes }
+		}
+		is_at_war = no
+		market = {
+			mg:opium = {
+				market_goods_cheaper >= 0.05
+			}
+		}
+		g:opium = {
+			world_market_imports <= 0
+		}
+	}
+
+	on_complete = {
+		remove_variable = shih_chin_opium_completion_tracker
+		trigger_event = {
+			id = opium_wars.3
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					is_at_war = no
+					market = {
+						mg:opium = {
+							market_goods_cheaper >= 0.05
+						}
+					}
+					g:opium = {
+						world_market_imports <= 0
+					}
+				}
+				change_variable = {
+					name = shih_chin_opium_completion_tracker
+					add = 1
+				}
+			}
+		}
+	}
+
+	goal_add_value = {
+		add = 180
+	}
+
+	current_value = {
+		value = root.var:shih_chin_opium_completion_tracker
+	}
+	progressbar = yes
+	display_progressbar_as_months = yes
+	weight = 100
+	should_be_pinned_by_default = yes
 }

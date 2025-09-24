@@ -106,14 +106,20 @@ ban_opium_button = {
 		OR = {
 			AND = {
 				c:CHI ?= this
-				has_variable = opium_yen_chin_pai_victory
+				custom_tooltip = {
+					text = yen_chin_pai_victory_tt
+					has_variable = opium_yen_chin_pai_victory
+				}
 			}
 			AND = {
 				NOT = {
 					c:CHI ?= this
 				}
 				NOT = {
-					has_variable = opium_yen_chin_pai_victory
+					custom_tooltip = {
+						text = yen_chin_pai_victory_tt
+						has_variable = opium_yen_chin_pai_victory
+					}
 				}
 			}
 		}
@@ -203,14 +209,20 @@ legalize_opium_button = {
 		OR = {
 			AND = {
 				c:CHI ?= this
-				has_variable = opium_shih_chin_pai_victory
+				custom_tooltip = {
+					text = shih_chin_pai_victory_tt
+					has_variable = opium_shih_chin_pai_victory
+				}
 			}
 			AND = {
 				NOT = {
 					c:CHI ?= this
 				}
 				NOT = {
-					has_variable = opium_shih_chin_pai_victory
+					custom_tooltip = {
+						text = shih_chin_pai_victory_tt
+						has_variable = opium_shih_chin_pai_victory
+					}
 				}
 			}
 		}
@@ -228,6 +240,10 @@ legalize_opium_button = {
 		}
 		add_journal_entry = {
 			type = je_shih_chin_opium
+		}
+		change_relations = {
+			country = c:GBR
+			value = -30
 		}
 	}
 	ai_chance = {

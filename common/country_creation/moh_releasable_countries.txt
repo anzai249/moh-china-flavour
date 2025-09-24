@@ -39,6 +39,19 @@ SHANGHAI = {
 	ai_will_do = { always = no }
 }
 
+MCH = {
+	states = {
+		STATE_SOUTHERN_MANCHURIA
+		STATE_NORTHERN_MANCHURIA
+		STATE_OUTER_MANCHURIA
+		STATE_SHENGJING
+		STATE_AMUR
+		STATE_JIREM
+	}
+
+	ai_will_do = { always = no }
+}
+
 # YETTESHEHER = {
 # 	states = {
 # 		STATE_TIANSHAN

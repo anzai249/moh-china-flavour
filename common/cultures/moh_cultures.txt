@@ -1,7 +1,9 @@
 ﻿han={
 	color= rgb{ 190 80 48 }
 	religion = confucian
-	traits = { sinosphere han_chinese east_asian_heritage }
+	heritage = heritage_han
+	language = language_mandarin
+	traditions = { tradition_sinosphere }
 	obsessions = {
 		opium
 	}
@@ -119,7 +121,9 @@
 min={
 	color= hsv{ 0.71 0.54 0.78 }
 	religion = confucian
-	traits = { han_chinese east_asian_heritage }
+	heritage = heritage_han
+	language = language_min
+	traditions = { tradition_sinosphere }
 	male_common_first_names={
 		moh_Fu ecchi_E ecchi_Sanduo ecchi_Decheng ecchi_Shih_2 ecchi_Xun_2 ecchi_Shichang ecchi_Fuxiang ecchi_Xun_3
 		Chen
@@ -234,7 +238,9 @@ min={
 yue={
 	color= hsv{ 0.80 0.36 0.39 }
 	religion = confucian
-	traits = { han_chinese east_asian_heritage}
+	heritage = heritage_han
+	language = language_yue
+	traditions = { tradition_sinosphere }
 	male_common_first_names={
 		moh_Fu ecchi_E ecchi_Sanduo ecchi_Decheng ecchi_Shih_2 ecchi_Xun_2 ecchi_Shichang ecchi_Fuxiang ecchi_Xun_3
 		Chen
@@ -350,7 +356,9 @@ yue={
 hakka={
 	color= hsv{ 0.1 0.43 0.34 }
 	religion = confucian
-	traits = { han_chinese east_asian_heritage }
+	heritage = heritage_han
+	language = language_hakka
+	traditions = { tradition_sinosphere }
 	male_common_first_names={
 		moh_Fu ecchi_E ecchi_Sanduo ecchi_Decheng ecchi_Shih_2 ecchi_Xun_2 ecchi_Shichang ecchi_Fuxiang ecchi_Xun_3
 		Chen
@@ -465,7 +473,9 @@ hakka={
 manchu={
 	color= rgb{ 233 207 84 }
 	religion = confucian
-	traits = { sinosphere north_asian_heritage }
+	heritage = heritage_manchu
+	language = language_jurchenic
+	traditions = { tradition_sinosphere }
 	obsessions = {
 		porcelain
 	}

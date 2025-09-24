@@ -373,14 +373,16 @@ Fixes:
 
 Release 1.2.1-pre1 "Kangaroo"
 1.2.0 does not have a stable release.
+Please wait for Community Mod Framework to update to 1.10.
 
 Changes:
 
-- Map overhaul.
+- Map small remake.
 - New clique flags (align with Hearts of Iron IV).
-- Sexagenary cycle algorithm from Oriental Empires mod. Currently used for Wuxu Reform.
+- Sexagenary cycle algorithm from CK3 Oriental Empires mod. Currently used for Wuxu Reform.
 - Made Xianfeng progress bar more intuitive.
 - New character: Xu Naiji.
+- Opium Wars remake part 1. (Minor updates will continue)
 
 Fixes:
 

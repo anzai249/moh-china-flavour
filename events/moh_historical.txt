@@ -1378,6 +1378,9 @@ moh_historical.301 = { # Gong Zizhen retires
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/event_icons/qing_hat.dds"
 	duration = 3
+	cooldown = {
+		years = 5
+	}
 	trigger = {
 		any_scope_character = {
 			has_variable = is_gongzizhen
