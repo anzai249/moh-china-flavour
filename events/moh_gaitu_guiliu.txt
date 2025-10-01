@@ -7,6 +7,10 @@ gaitu_guiliu.1 = {
 		video = "asia_poor_people_moving"
 	}
 
+    cooldown = {
+        months = 6
+    }
+
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
@@ -75,6 +79,10 @@ gaitu_guiliu.2 = {
     placement = scope:gaitu_guiliu_scope
     event_image = {
         video = "southamerica_slaves_night"
+    }
+
+    cooldown = {
+        months = 6
     }
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -159,6 +167,9 @@ gaitu_guiliu.3 = {
     placement = scope:gaitu_guiliu_scope
     event_image = {
         video = "southamerica_slaves_night"
+    }
+    cooldown = {
+        months = 6
     }
 
     on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
