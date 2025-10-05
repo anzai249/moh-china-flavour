@@ -389,3 +389,16 @@ Fixes:
 - MOHB-0015
 - Some localization issues.
 - MOHB-0017
+
+
+Release 1.2.1 "Kangaroo"
+
+Changes:
+
+- Added a cooldown in gaitu guiliu event.
+- Adjusted plague pandemic journal entry.
+- Gave Warlord Era an infamy decay modifier.
+
+Fixes:
+
+- MOHB-0018

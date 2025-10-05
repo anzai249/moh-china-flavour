@@ -357,3 +357,12 @@ opium_wars_addiction_shih_chin_modifier = {
 	country_prestige_from_army_power_projection_mult = -0.5
 	country_war_exhaustion_casualties_mult = 1.0
 }
+
+
+modifier_chinese_warlord_era = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	interest_group_ig_armed_forces_pop_attraction_mult = 0.1
+	interest_group_ig_armed_forces_pol_str_mult = 0.3
+	country_officers_pol_str_mult = 0.75
+	country_infamy_decay_mult = 0.25
+}

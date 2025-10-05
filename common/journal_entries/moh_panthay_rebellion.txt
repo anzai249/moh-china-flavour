@@ -110,7 +110,19 @@ je_plague_pandemic = {
 				limit = {
 					institution_investment_level = {
 						institution = institution_health_system
-						value >= 4
+						value >= 2
+					}
+				}
+				change_variable = {
+					name = plague_pandemic
+					add = 0.5
+				}
+			}
+			if = {
+				limit = {
+					institution_investment_level = {
+						institution = institution_health_system
+						value >= 1
 					}
 				}
 				change_variable = {
