@@ -1,0 +1,6 @@
+﻿l_simp_chinese:
+  # MOH_MOD_DLC_BUTTON_TOOLTIP: "#T [Dlc.GetName]#!\n[Dlc.GetDesc]\n\n#low;emphasis @information !#blue;bold 天命#!已启用！#!"
+  dlc0moh: "Mandate of Heaven"
+  dlc0moh_desc: "长江黄河沿岸古老帝国的大门在这个美丽的时代中被西方悄然敲开，它能否抵御外敌，保持独立，还是会被外来势力吞噬？还是说，他将放弃传统，迎接新的时代？"
+  main_menu_image_moh: "Mandate of Heaven"
+  main_menu_image_moh_desc: "Mandate of Heaven mod包含的背景图"
