@@ -1,0 +1,6 @@
+﻿main_menu_image_moh = {
+	category = main_menu_image_theme
+	# dlc = "dlc0moh"
+
+	video = "gfx/interface/illustrations/frontend/menu_video_moh.bk2"
+}

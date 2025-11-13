@@ -90,12 +90,12 @@ je_plague_pandemic = {
 							}
 						}
 						random_list = {
-							75 = {
+							94 = {
 							}
-							15 = {
+							5 = {
 								trigger_event = moh_historical.14
 							}
-							10 = {
+							1 = {
 								trigger_event = moh_historical.15
 							}
 						}

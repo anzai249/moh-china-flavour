@@ -402,3 +402,11 @@ Changes:
 Fixes:
 
 - MOHB-0018
+
+Release 1.2.2 "Kangaroo"
+
+Fixes:
+
+- MOHB-0020
+- MOHB-0018, again.
+- Cannot change main menu image.
