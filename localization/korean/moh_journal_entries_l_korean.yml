@@ -121,7 +121,7 @@
  je_panthay_rebellion_complete_tt: "두문수의 난이 진압되다"
  je_panthay_rebellion_on_complete_tt: "이렇게 많은 사람들이 모이면 항상 예상치 못한 일이 발생하기 마련입니다..."
  je_plague_pandemic: "흑사병 유행"
- je_plague_pandemic_reason: "[ROOT.GetCountry.GetName]에서 흑사병이 발생했습니다. 우리는 전염병 확산을 막기 위한 조치를 신속히 취해야 합니다.\n\n[GetInstitutionType('institution_health_system').GetName|l]에 #variable 4#! 이상으로 자원을 투자하거나, #bold $antibiotics$#! 기술을 연구하여 진행도를 증가시킬 수 있습니다. 무작위로 발생하는 #bold 사건#!도 진행에 영향을 미칠 수 있습니다.\n\n전염병 확산을 최대한 막아야 합니다. 페스트가 [concept_treaty_port|l]에 퍼지면 #bold 흑사병 대유행#!을 초래할 수 있습니다."
+ je_plague_pandemic_reason: "[ROOT.GetCountry.GetName]에서 흑사병이 발생했습니다. 우리는 전염병 확산을 막기 위한 조치를 신속히 취해야 합니다.\n\n[GetInstitutionType('institution_health_system').GetName|l]에 #variable 2#! 이상으로 자원을 투자하거나, #bold $antibiotics$#! 기술을 연구하여 진행도를 증가시킬 수 있습니다. 무작위로 발생하는 #bold 사건#!도 진행에 영향을 미칠 수 있습니다.\n\n전염병 확산을 최대한 막아야 합니다. 페스트가 [concept_treaty_port|l]에 퍼지면 #bold 흑사병 대유행#!을 초래할 수 있습니다."
  je_plague_pandemic_on_complete_tt: "[ROOT.GetCountry.GetName]의 모든 지역에서 #bold 페스트#!가 사라집니다."
  je_plague_pandemic_complete_tt: "진행도가 #variable 100%#!에 도달했습니다."
  je_new_culture: "신문화 운동"

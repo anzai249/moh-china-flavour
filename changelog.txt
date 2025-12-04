@@ -410,3 +410,14 @@ Fixes:
 - MOHB-0020
 - MOHB-0018, again.
 - Cannot change main menu image.
+
+
+Release 1.3 "Pivot"
+
+Changes:
+
+- Opium Wars remake part 2.
+
+Fixes:
+
+- MOHB-0018, again.

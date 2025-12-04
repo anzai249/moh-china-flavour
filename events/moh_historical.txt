@@ -928,9 +928,9 @@ moh_historical.12 = {
 				state_region = s:STATE_YUNNAN
 			}
 			save_scope_as = yunnan_state_scope
-			state_region = {
-				start_harvest_condition = disease_outbreak
-			}
+			# state_region = {
+			# 	start_harvest_condition = disease_outbreak
+			# }
 			add_modifier = {
 				name = modifier_plague_pandemic
 				months = 24
@@ -950,9 +950,9 @@ moh_historical.12 = {
 					state_region = s:STATE_YUNNAN
 				}
 				save_scope_as = yunnan_state_scope
-				state_region = {
-					start_harvest_condition = disease_outbreak
-				}
+				# state_region = {
+				# 	start_harvest_condition = disease_outbreak
+				# }
 				add_modifier = {
 					name = modifier_plague_pandemic
 					months = 24
@@ -971,9 +971,9 @@ moh_historical.12 = {
 				limit = {
 					state_region = s:STATE_YUNNAN
 				}
-				state_region = {
-					start_harvest_condition = disease_outbreak
-				}
+				# state_region = {
+				# 	start_harvest_condition = disease_outbreak
+				# }
 				save_scope_as = yunnan_state_scope
 				add_modifier = {
 					name = modifier_plague_pandemic
@@ -1017,10 +1017,10 @@ moh_historical.13 = {
 				any_neighbouring_state = {
 					owner = root
 				}
-				# has_modifier = modifier_plague_pandemic
-				state_region = {
-					has_harvest_condition = disease_outbreak
-				}
+				has_modifier = modifier_plague_pandemic
+				# state_region = {
+				# 	has_harvest_condition = disease_outbreak
+				# }
 				NOT = {
 					has_variable = plague_pandemic_treaty_port
 				}
@@ -1053,33 +1053,34 @@ moh_historical.14 = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	duration = 3
 	trigger = {
-		# NOT = {
-		# 	has_modifier = modifier_plague_pandemic
-		# }
 		NOT = {
-			state_region = {
-				has_harvest_condition = disease_outbreak
-			}
+			has_modifier = modifier_plague_pandemic
 		}
+		# NOT = {
+		# 	state_region = {
+		# 		has_harvest_condition = disease_outbreak
+		# 	}
+		# }
 		NOT = {
 			has_modifier = modifier_plague_lockdown
 		}
 		any_neighbouring_state = {
-			state_region = {
-				has_harvest_condition = disease_outbreak
-			}
+			# state_region = {
+			# 	has_harvest_condition = disease_outbreak
+			# }
+			has_modifier = modifier_plague_pandemic
 		}
 	}
 	immediate = {
 		save_scope_as = target_state
-		# add_modifier = {
-		# 	name = modifier_plague_pandemic
-		# 	months = 6
-		# 	is_decaying = yes
-		# }
-		state_region = {
-			start_harvest_condition = disease_outbreak
+		add_modifier = {
+			name = modifier_plague_pandemic
+			months = 6
+			is_decaying = yes
 		}
+		# state_region = {
+		# 	start_harvest_condition = disease_outbreak
+		# }
 	}
 	option = {
 		name = moh_historical.14.a
@@ -1106,17 +1107,17 @@ moh_historical.15 = {
 	duration = 3
 	trigger = {
 		NOT = {
-			state_region = {
-				has_harvest_condition = disease_outbreak
-			}
-			# has_modifier = modifier_plague_pandemic
+			# state_region = {
+			# 	has_harvest_condition = disease_outbreak
+			# }
+			has_modifier = modifier_plague_pandemic
 			has_modifier = modifier_plague_lockdown
 		}
 		any_neighbouring_state = {
 			has_modifier = modifier_plague_pandemic
-			state_region = {
-				has_harvest_condition = disease_outbreak
-			}
+			# state_region = {
+			# 	has_harvest_condition = disease_outbreak
+			# }
 		}
 	}
 	immediate = {
@@ -1162,21 +1163,21 @@ moh_historical.16 = {
 	trigger = {
 		any_state = {
 			is_treaty_port = yes
-			# has_modifier = modifier_plague_pandemic
-			state_region = {
-				has_harvest_condition = disease_outbreak
-			}
+			has_modifier = modifier_plague_pandemic
+			# state_region = {
+			# 	has_harvest_condition = disease_outbreak
+			# }
 			any_neighbouring_state = {
 				owner = {
 					has_journal_entry = je_plague_pandemic
 				}
 			}
 		}
-		NOT = {
-			state_region = {
-				has_harvest_condition = disease_outbreak
-			}
-		}
+		# NOT = {
+		# 	state_region = {
+		# 		has_harvest_condition = disease_outbreak
+		# 	}
+		# }
 		NOT = {
 			has_modifier = modifier_plague_lockdown
 		}
@@ -1194,11 +1195,11 @@ moh_historical.16 = {
 		}
 		random_state = {
 			limit = {
-				NOT = {
-					state_region = {
-						has_harvest_condition = disease_outbreak
-					}
-				}
+				# NOT = {
+				# 	state_region = {
+				# 		has_harvest_condition = disease_outbreak
+				# 	}
+				# }
 				NOT = {
 					has_modifier = modifier_plague_lockdown
 				}
@@ -1208,14 +1209,14 @@ moh_historical.16 = {
 				is_sea_adjacent = yes
 			}
 			save_scope_as = target_state
-			# add_modifier = {
-			# 	name = modifier_plague_pandemic
-			# 	months = 6
-			# 	is_decaying = yes
-			# }
-			state_region = {
-				start_harvest_condition = disease_outbreak
+			add_modifier = {
+				name = modifier_plague_pandemic
+				months = 6
+				is_decaying = yes
 			}
+			# state_region = {
+			# 	start_harvest_condition = disease_outbreak
+			# }
 		}
 	}
 	option = {

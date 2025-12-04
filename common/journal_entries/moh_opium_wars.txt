@@ -120,6 +120,8 @@ je_shih_chin_opium = {
 		}
 	}
 
+	timeout = 4380
+
 	complete = {
 		custom_tooltip = {
 			text = shih_chin_opium_complete_tt
@@ -131,8 +133,17 @@ je_shih_chin_opium = {
 				market_goods_cheaper >= 0.05
 			}
 		}
-		g:opium = {
-			world_market_imports <= 0
+		NOT = {
+			any_market = {
+				hidden_effect = {
+					owner = {
+						country_rank >= rank_value:major_power
+					}
+				}
+				root.market = {
+					market_imports_reliance = { target = prev goods = opium value > 0.05 }
+				}
+			}
 		}
 	}
 
@@ -153,8 +164,20 @@ je_shih_chin_opium = {
 							market_goods_cheaper >= 0.05
 						}
 					}
-					g:opium = {
-						world_market_imports <= 0
+					# g:opium = {
+					# 	world_market_imports <= 0
+					# }
+					NOT = {
+						any_market = {
+							hidden_effect = {
+								owner = {
+									country_rank >= rank_value:major_power
+								}
+							}
+							root.market = {
+								market_imports_reliance = { target = prev goods = opium value > 0.05 }
+							}
+						}
 					}
 				}
 				change_variable = {

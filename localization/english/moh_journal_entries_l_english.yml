@@ -127,7 +127,7 @@
   je_panthay_rebellion_complete_tt: "The Panthay Rebellion has been suppressed"
   je_panthay_rebellion_on_complete_tt: "With so many people gathered together, unexpected things are bound to happen..."
   je_plague_pandemic: "Plague Pandemic"
-  je_plague_pandemic_reason: "The plague has broken out in [ROOT.GetCountry.GetName], and we must take measures quickly to prevent the outbreak from spreading.\n\nWe can increase investments in [GetInstitutionType('institution_health_system').GetName|l] to above #variable 4#! level, or develop #bold $antibiotics$#! technology to advance the progress bar. Randomly triggered #bold events#! may also impact the progress.\n\nPlease do everything possible to stop the outbreak; if the plague spreads to a [concept_treaty_port|l], it could lead to a #bold global plague pandemic#!."
+  je_plague_pandemic_reason: "The plague has broken out in [ROOT.GetCountry.GetName], and we must take measures quickly to prevent the outbreak from spreading.\n\nWe can increase investments in [GetInstitutionType('institution_health_system').GetName|l] to above #variable 2#! level, or develop #bold $antibiotics$#! technology to advance the progress bar. Randomly triggered #bold events#! may also impact the progress.\n\nPlease do everything possible to stop the outbreak; if the plague spreads to a [concept_treaty_port|l], it could lead to a #bold global plague pandemic#!."
   je_plague_pandemic_on_complete_tt: "All regions of [ROOT.GetCountry.GetName] will lose #bold the plague#!."
   je_plague_pandemic_complete_tt: "The progress bar has reached #variable 100%#!"
   je_new_culture: "New Culture Movement"
