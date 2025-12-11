@@ -1,0 +1,71 @@
+# Opiom Wars Random Eventss
+namespace = opium_wars_moh
+
+opium_wars_moh.1 = {
+	# 粤海关亏空案
+	type = country_event
+	placement = root
+	title = opium_wars_moh.1.t
+	desc = opium_wars_moh.1.d
+	flavor = opium_wars_moh.1.f
+	duration = 3
+	cooldown = { years = 50 }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	event_image = {
+		video = "europenorthamerica_opium_smoker"
+	}
+	trigger = {
+		c:CHI ?= this
+		has_journal_entry = je_daoguang_reform_opium
+		NOT = {
+			has_variable = lost_opium_wars
+		}
+		any_country = {
+			has_variable = opium_wars_aggressor
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = opium_wars_aggressor
+			}
+			save_scope_as = smuggler_country
+		}
+	}
+	option = {
+		name = opium_wars_moh.1.a # 追究责任
+		je:je_daoguang_reform_opium = {
+			add_progress = { value = 10 name = daoguang_opium_progress_bar }
+		}
+		add_loyalists = {
+			value = small_radicals
+		}
+	}
+	option = {
+		name = opium_wars_moh.1.b # 以补税平账，息事宁人
+		je:je_daoguang_reform_opium = {
+			add_progress = { value = -10 name = daoguang_opium_progress_bar }
+		}
+		add_modifier = {
+			name = modifier_yue_customs_taxes_addition
+			months = 6
+			multiplier = 2
+		}
+	}
+	option = {
+		name = opium_wars_moh.1.c # 置之不理
+		default_option = yes
+		add_modifier = {
+			name = modifier_yue_customs_taxes_addition
+			years = 5
+		}
+		add_radicals = {
+			value = medium_radicals
+		}
+		change_relations = {
+			country = scope:smuggler_country
+			value = 5
+		}
+	}
+}

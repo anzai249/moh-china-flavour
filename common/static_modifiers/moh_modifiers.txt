@@ -366,3 +366,9 @@ modifier_chinese_warlord_era = {
 	country_officers_pol_str_mult = 0.75
 	country_infamy_decay_mult = 0.25
 }
+
+modifier_yue_customs_taxes_addition = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	country_tax_income_add = 2000
+	interest_group_ig_petty_bourgeoisie_approval_add = -1
+}

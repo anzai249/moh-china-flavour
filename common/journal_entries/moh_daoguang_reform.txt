@@ -255,6 +255,12 @@ je_daoguang_reform_opium = {
 	# 		}
 	# 	}
 	# }
+	on_monthly_pulse = {
+		random_events = {
+			100 = 0
+			10 = opium_wars_moh.1
+		}
+	}
 	scripted_progress_bar = daoguang_opium_progress_bar
 	weight = 200
 	should_be_pinned_by_default = yes

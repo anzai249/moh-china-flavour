@@ -391,3 +391,10 @@
   moh_historical.500.f: "In [SCOPE.sState('sixty_four_villages_state_scope').GetName], dozens of villages were besieged, and thousands of people were killed or injured. \n\nThis gang of thugs committed violent crimes, burning and looting at will, sparing neither women, children, nor the elderly. Amidst the raging fires, the once peaceful land was turned into a living hell."
   moh_historical.500.a: "Barbaric!"
   moh_historical.500.b: "Outter Manchuria is ours!"
+  # Opium Wars Random Events
+  opium_wars_moh.1.t: "Corruption at the Canton Customs"
+  opium_wars_moh.1.d: "There has been a massive deficit in the accounts of the Canton Customs, and investigations have revealed bribery involving opium dealers."
+  opium_wars_moh.1.f: "Investigations have revealed that some officials accepted bribes from opium dealers in secret. These officials, seeking personal gain, allowed the flow of drugs, leading to a sharp decline in customs revenue and severely impacting the national treasury.\n\n“Alas, these corrupt officials are truly harmful, selling out the country's interests for a few taels of silver!”"
+  opium_wars_moh.1.a: "Hold those responsible accountable and punish the corrupt officials severely."
+  opium_wars_moh.1.b: "Make up the deficit with additional taxes, restore customs revenue, and suppress the matter."
+  opium_wars_moh.1.c: "Ignore it."
