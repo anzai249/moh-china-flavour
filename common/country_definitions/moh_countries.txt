@@ -161,7 +161,7 @@ RYU = { # Ryukyu
 	capital = STATE_RYUKYU_ISLANDS
 }
 
-YUZ = { # Yuanzhumin
+REPLACE:YUZ = { # Yuanzhumin
 	color = { 97 44 96 }
 	
 	country_type = decentralized

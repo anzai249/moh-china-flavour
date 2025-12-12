@@ -1621,20 +1621,9 @@ ecchi_chi_lin_huiyin_character_template = {
 
 
 
-chi_daoguang_template = {
+INJECT:chi_daoguang_template = {
     # The Daoguang Emperor
     first_name = moh_Minning
-    last_name = "Aisin_Gioro" # Not used by the emperor himself but there's got to be something here
-    historical = yes
-    ruler = yes
-    birth_date = 1782.9.16
-    dna = dna_daoguang_emperor
-    culture = cu:manchu
-    interest_group = ig_landowners
-    ideology = ideology_traditionalist
-    traits = {
-        cautious
-    }
     on_created = {
         set_variable = daoguang_character
         save_scope_as = daoguang_scope
@@ -2011,8 +2000,13 @@ chi_moh_sun_yat_sen_character_template = {
     }
 }
 
-chi_sun_character_template = {
+INJECT:chi_sun_character_template = {
     # p社是不是有问题，有俩孙中山
+    interest_group_leader_usage = {
+        country_trigger = {
+            always = no
+        }
+    }
 }
 
 chi_yang_du_character_template = {

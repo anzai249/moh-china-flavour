@@ -1,0 +1,13 @@
+geographic_region_begonia_leaf = {
+	short_key = "begonia_leaf"
+
+	strategic_regions = {
+		sr:region_south_china
+		sr:region_north_china
+	}
+	state_regions = {
+		STATE_NORTHERN_MANCHURIA
+		STATE_SOUTHERN_MANCHURIA
+		STATE_SHENGJING
+	}
+}

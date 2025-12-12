@@ -1,6 +1,6 @@
 ﻿je_daoguang_reform_main = {
 	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
-	group = je_group_historical_content
+	group = je_group_qing
 	is_shown_when_inactive = {
 		c:CHI ?= this
 		has_law = law_type:law_monarchy
@@ -68,7 +68,7 @@
 
 je_daoguang_reform_grain = {
 	icon = "gfx/interface/icons/goods_icons/grain.dds"
-	group = je_group_historical_content
+	group = je_group_qing
 	complete = {
 		capital = {
 			sg:grain = {
@@ -110,7 +110,7 @@ je_daoguang_reform_grain = {
 
 je_daoguang_reform_mine = {
 	icon = "gfx/interface/icons/goods_icons/iron.dds"
-	group = je_group_historical_content
+	group = je_group_qing
 	complete = {
 		any_scope_building = {
 			is_building_type = building_iron_mine
@@ -153,7 +153,7 @@ je_daoguang_reform_mine = {
 
 je_daoguang_reform_opium = {
 	icon = "gfx/interface/icons/goods_icons/opium.dds"
-	group = je_group_historical_content
+	group = je_group_qing
 	scripted_button = support_yen_chin_pai_button
 	scripted_button = support_shih_chin_pai_button
 	immediate = {
@@ -268,7 +268,7 @@ je_daoguang_reform_opium = {
 
 je_xianfeng = {
 	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
-	group = je_group_historical_content
+	group = je_group_qing
 	is_shown_when_inactive = {
 		c:CHI ?= this
 		has_law = law_type:law_monarchy

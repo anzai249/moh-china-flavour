@@ -1,8 +1,8 @@
 ﻿# This is a special strategy that sets the default values for different AI scores
 # All AIs always load data from this strategy, which can then be either added to or overridden by data from its other strategies
-# MOH 1.2.0
+# MOH 1.3
 
-ai_strategy_default = {
+REPLACE:ai_strategy_default = {
 	icon = "gfx/interface/icons/ai_strategy_icons/placate_population.dds" # Never shown
 
 	# If this trigger evaluates to true for any active strategy, the AI will try to form a power bloc

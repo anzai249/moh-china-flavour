@@ -46,7 +46,7 @@ gov_dalai_lama_regent = {
 	}
 }
 
-gov_dalai_lama = {
+REPLACE:gov_dalai_lama = {
 	transfer_of_power = dictatorial
 	
 	male_ruler = "RULER_TITLE_DALAI_LAMA"

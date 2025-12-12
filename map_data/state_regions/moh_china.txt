@@ -1,5 +1,5 @@
 ﻿# Pearl River Delta 珠三角/廣府/嶺南/南海
-STATE_GUANGDONG = {
+REPLACE:STATE_GUANGDONG = {
     id = 497
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x19FD82" "x2BDE7B" "x2C4C48" "x475968" "x489AB0" "x8C9358" "xB031E0" "xB0B061" "xF98B04" }
@@ -9,10 +9,10 @@ STATE_GUANGDONG = {
     farm = "x2C4C48" # Xinning
     wood = "x489AB0" # Nanhai
     arable_land = 175
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_silk_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_banana_plantation" }
     capped_resources = {
-        bg_logging = 5
-        bg_fishing = 2
+        building_logging_camp = 5
+        building_fishing_wharf = 2
     }
     naval_exit_id = 3056
 }
@@ -28,10 +28,10 @@ STATE_HAINAN = {
     farm = "xCB457A" # Wenchang
     wood = "x30B0E0" # Yazhou
     arable_land = 30
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_silk_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_banana_plantation" }
     capped_resources = {
-        bg_logging = 2
-        bg_fishing = 10
+        building_logging_camp = 2
+        building_fishing_wharf = 10
     }
     naval_exit_id = 3054
 }
@@ -47,15 +47,15 @@ STATE_WESTERN_GUANGDONG = {
     # mine = "x30B0E0"
     wood = "x477755" # Qinzhou
     arable_land = 125
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_silk_plantations" "bg_dye_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_silk_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_banana_plantation" }
     capped_resources = {
-        bg_logging = 8
-        bg_fishing = 2
+        building_logging_camp = 8
+        building_fishing_wharf = 2
     }
     naval_exit_id = 3056
 }
 # Xilingol 錫林郭勒
-STATE_HINGGAN = {
+REPLACE:STATE_HINGGAN = {
     id = 485
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x030522" "x0717B0" "x0B083B" "x0B290E" "x0C97C7" "x11D2B4" "x13148D" "x18F94F" "x1920B1" "x274966" "x2F4B70" "x356F29" "x3622E3" "x3DD007" "x3DE808" "x402AA1" "x47B534" "x495253" "x4ABE28" "x4BE93C" "x51049D" "x545458" "x56C873" "x57486F" "x577A97" "x58DF63" "x5D8002" "x6079C8" "x612E18" "x61E50B" "x6C1D10" "x6C3633" "x6D0C0D" "x6EB371" "x7DE432" "x7DF862" "x7FCC4E" "x804F17" "x821CB1" "x89BEED" "x950856" "x9A290F" "x9A7C60" "x9D4375" "x9F5DDB" "x9FB63F" "xA2F841" "xA6838A" "xA8F8B1" "xACE725" "xB2A065" "xB2F616" "xB4179D" "xB4B216" "xB4BD1B" "xB539EC" "xBB346C" "xBCEE88" "xC66162" "xC99C56" "xCAE219" "xCBDEAC" "xCEF000" "xCF6FC5" "xD287BA" "xD40A01" "xD58188" "xDC7606" "xE09080" "xE1254D" "xE579C7" "xE61212" "xE81DA5" "xE9A4AD" "xEF59B7" "xF17D94" "xF3C61B" "xF612D5" }
@@ -65,10 +65,10 @@ STATE_HINGGAN = {
     mine = "x9A290F" # Dolonnuur 多倫諾爾
     # wood = "x356F29"
     arable_land = 35
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_iron_mining = 6
-        bg_lead_mining = 10
+        building_iron_mine = 6
+        building_lead_mine = 10
     }
 }
 # Ulanqab 烏蘭察布
@@ -82,10 +82,10 @@ STATE_ULANQAB = {
     mine = "xF700DB" # Ordos
     wood = "x7D03D7" # Wuyuan/Bayannur 五原
     arable_land = 41
-    arable_resources = { "bg_livestock_ranches" }
+    arable_resources = { "building_livestock_ranch" }
     capped_resources = {
-        bg_iron_mining = 30
-        bg_lead_mining = 14
+        building_iron_mine = 30
+        building_lead_mine = 14
     }
 }
 # Jirem 哲里木
@@ -99,27 +99,16 @@ STATE_JIREM = {
     # mine = "x7D03D7" 
     wood = "x2F0832" # Dalai 大賚 not dalai lama
     arable_land = 26
-    arable_resources = { "bg_wheat_farms" "bg_livestock_ranches" }
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
     capped_resources = {
-        bg_logging = 6
+        building_logging_camp = 6
     }
 }
 
 
-STATE_FORMOSA = {
-    id = 510
-    subsistence_building = "building_subsistence_rice_paddies"
+INJECT:STATE_FORMOSA = {
     provinces = { "x44797F" "x6645CF" "x6DAB21" "x7070E0" "x9A5066" "xAEA2D8" "xBB27F6" "xE73B31" }
-    city = "x6DAB21"
     port = "xE73B31"
-    farm = "xAEA2D8"
     mine = "xBB27F6"
     wood = "x9A5066"
-    arable_land = 80
-    arable_resources = { "bg_rice_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_tea_plantations" "bg_tobacco_plantations" "bg_banana_plantations" }
-    capped_resources = {
-        bg_logging = 7
-        bg_fishing = 13
-    }
-    naval_exit_id = 3056
 }

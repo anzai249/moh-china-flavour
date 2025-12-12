@@ -17,6 +17,6 @@
 # If Ecchi Redux is active the Trigger here will take priority and it will result in a "yes".
 # If Ecchi Redux is not active your Trigger will be used and the Trigger will return "no".
 
-mandate_o_h_is_active = {
+REPLACE_OR_CREATE:mandate_o_h_is_active = {
 	always = yes
 }

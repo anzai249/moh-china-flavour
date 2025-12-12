@@ -1,6 +1,6 @@
 ﻿namespace = opium_wars
 
-opium_wars.1 = {
+REPLACE:opium_wars.1 = {
 	type = country_event
 	placement = ROOT
 
@@ -181,7 +181,7 @@ opium_wars.1 = {
 }
 
 
-historical_agitators.21 = {
+REPLACE:historical_agitators.21 = {
 	trigger = {
 		always = no
 	}
@@ -191,7 +191,7 @@ historical_agitators.21 = {
 }
 
 # Start event for opium importer
-opium_wars.2 = {
+REPLACE:opium_wars.2 = {
 	type = country_event
 	placement = ROOT
 
@@ -318,7 +318,7 @@ opium_wars.2 = {
 }
 
 # Obssessed country succeeds
-opium_wars.3 = {
+REPLACE:opium_wars.3 = {
 	type = country_event
 	placement = ROOT
 
@@ -423,7 +423,7 @@ opium_wars.3 = {
 }
 
 # Obsessed country fails
-opium_wars.4 = {
+REPLACE:opium_wars.4 = {
 	type = country_event
 	placement = ROOT
 
@@ -548,7 +548,7 @@ opium_wars.4 = {
 }
 
 # Importer country succeeds
-opium_wars.5 = {
+REPLACE:opium_wars.5 = {
 	type = country_event
 	placement = ROOT
 
@@ -650,7 +650,7 @@ opium_wars.5 = {
 }
 
 # Smugglers caught - triggered by embargo
-opium_wars.6 = {
+REPLACE:opium_wars.6 = {
 	type = country_event
 	placement = ROOT
 
@@ -717,7 +717,7 @@ opium_wars.6 = {
 }
 
 # Addiction recovery
-opium_wars.7 = {
+REPLACE:opium_wars.7 = {
 	type = country_event
 	placement = scope:recovry_state
 
@@ -805,7 +805,7 @@ opium_wars.7 = {
 }
 
 # Addiction Ravages State
-opium_wars.8 = {
+REPLACE:opium_wars.8 = {
 	type = country_event
 	placement = scope:opium_addiction_state
 

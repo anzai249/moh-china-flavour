@@ -1,130 +1,10 @@
-﻿ig_rural_folk = {
-	color = hsv{ 0.32 0.45 0.47 }
-	texture = "gfx/interface/icons/ig_icons/rural_folk.dds"
-	layer = "revolution_dynamic_rural_folk"
-	index = 6
-
-	ideologies = {
-		ideology_agrarian
-		ideology_particularist
-		ideology_isolationist
-	}
-
+﻿INJECT:ig_rural_folk = {
 	character_ideologies = {
-		ideology_moderate
-		ideology_pacifist
-		ideology_bonapartist
-		ideology_legitimist
 		ideology_moh_kmt
 	}
 
-	enable = {
-		always = yes
-	}
-
-	# Deprecated; use on_enable effect to assign traits instead
-	traits = {
-		ig_trait_farmers_markets
-		ig_trait_honest_work
-		ig_trait_old_ways
-	}
 
 	on_enable = {
-		ig:ig_rural_folk = {
-			if = {
-				limit = {
-					has_dlc_feature = rp1_content
-					owner = { c:BRZ ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_old_ways
-				set_ig_trait = ig_trait:ig_trait_plantation_work
-				set_ig_trait = ig_trait:ig_trait_nucleos_coloniais
-			}
-			else_if = {
-				limit = {
-					owner = { c:RUS ?= this }
-				}
-				set_ig_trait = ig_trait:ig_trait_old_ways
-				set_ig_trait = ig_trait:ig_trait_honest_work
-				set_ig_trait = ig_trait:ig_trait_obshchina
-			}
-			else_if = {
-				limit = {
-					owner = { c:EGY ?= this }
-				}
-				set_interest_group_name = ig_fellahin
-				set_ig_trait = ig_trait:ig_trait_old_ways
-				set_ig_trait = ig_trait:ig_trait_fellahin
-				set_ig_trait = ig_trait:ig_trait_farmers_markets
-			}
-			else_if = {
-				limit = {
-					owner = { 
-						OR = {
-							c:BIC ?= this
-							any_primary_culture = {
-								has_discrimination_trait = south_asian_heritage
-								NOT = {
-									has_discrimination_trait = himalayan
-								}
-							}
-						}
-					}
-				}
-				set_interest_group_name = ig_ryots
-				set_ig_trait = ig_trait:ig_trait_of_the_sovereign_alone
-				set_ig_trait = ig_trait:ig_trait_imandari
-				set_ig_trait = ig_trait:ig_trait_bazaar_bargains
-			}
-			else_if = {
-				limit = {
-					owner = { c:PAN ?= this }
-				}
-				set_interest_group_name = ig_jats
-				set_ig_trait = ig_trait:ig_trait_old_ways
-				set_ig_trait = ig_trait:ig_trait_honest_work
-				set_ig_trait = ig_trait:ig_trait_khalsa_panth
-			}
-			else = {
-				set_ig_trait = ig_trait:ig_trait_old_ways
-				set_ig_trait = ig_trait:ig_trait_honest_work
-				set_ig_trait = ig_trait:ig_trait_farmers_markets
-			}
-		}
-	
-		# Jeffersonian Ideology
-		if = {
-			limit = {
-				OR = {
-					country_has_primary_culture = cu:yankee
-					country_has_primary_culture = cu:dixie
-				}
-			}
-			ig:ig_rural_folk = {
-				remove_ideology = ideology_agrarian
-				add_ideology = ideology_agrarian_jeffersonian
-				set_interest_group_name = ig_yeoman_farmers
-			}
-		}
-
-		# Heimin
-		if = {
-			limit = {
-				country_has_primary_culture = cu:japanese
-			}
-			ig:ig_rural_folk = {
-				set_interest_group_name = ig_peasants
-			}
-		}
-		# Maka'āinana
-		if = {
-			limit = {
-				country_has_primary_culture = cu:hawaiian
-			}
-			ig:ig_rural_folk = {
-				set_interest_group_name = ig_maka_ainana
-			}
-		}
 		# Nongmin
 		if = {
 			limit = {
@@ -138,44 +18,6 @@
 			}
 			ig:ig_rural_folk = {
 				set_interest_group_name = ig_farmers
-			}
-		}
-		# Sikh Empire
-		if = {
-			limit = {
-				c:PAN ?= this
-			}
-			ig:ig_rural_folk = {
-				set_interest_group_name = ig_jats
-			}
-		}
-		# India
-		else_if = {
-			limit = {
-				OR = {
-					c:BIC ?= this
-					any_primary_culture = {
-						has_discrimination_trait = south_asian_heritage
-						NOT = {
-							has_discrimination_trait = himalayan
-						}
-					}
-				}
-			}
-			ig:ig_rural_folk = {
-				set_interest_group_name = ig_ryots
-			}
-		}
-		# Nepal
-		else_if = {
-			limit = {
-				any_primary_culture = {
-					has_discrimination_trait = south_asian_heritage
-					has_discrimination_trait = himalayan
-				}
-			}
-			ig:ig_rural_folk = {
-				set_interest_group_name = ig_kisanharu
 			}
 		}
 	}

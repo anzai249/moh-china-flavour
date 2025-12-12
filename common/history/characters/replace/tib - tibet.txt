@@ -1,4 +1,4 @@
-﻿CHARACTERS = {
+﻿REPLACE:CHARACTERS = {
 	c:TIB ?= {
 		create_character = {
 			# 10th Dalai Lama

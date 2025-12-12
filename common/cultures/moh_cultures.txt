@@ -1,12 +1,4 @@
-﻿han={
-	color= rgb{ 190 80 48 }
-	religion = confucian
-	heritage = heritage_han
-	language = language_mandarin
-	traditions = { tradition_sinosphere }
-	obsessions = {
-		opium
-	}
+﻿INJECT:han={
 	male_common_first_names={
 		moh_Fu ecchi_E ecchi_Sanduo ecchi_Decheng ecchi_Shih_2 ecchi_Xun_2 ecchi_Shichang ecchi_Fuxiang ecchi_Xun_3
 		Chen
@@ -112,18 +104,9 @@
 		ecchi_Zuo ecchi_Kang ecchi_Cai ecchi_Yan ecchi_Li_2 ecchi_Duan ecchi_Tang ecchi_Koo ecchi_Wang_2 ecchi_Lu_2 ecchi_Ku
 		Cui Nie An Qi Qin moh_Ouyang moh_Linghu moh_Huangfu moh_Shangguan moh_Situ moh_Zhuge moh_Sima moh_Ximen moh_Nangong Dong Fang Hu Jiang Jin Lu Ma Peng Qiu Shen Sun Tian Ting Wei Wu Ye Zhao Chen Cheng Deng Gao Hsia Huang Kong Kwong Liang Liao Liu Luo Mao Pan Tan Wang Xie Yang Yu Zhang Zhu Li moh_Zhou moh_Qian moh_Zheng moh_Feng moh_Chu moh_Chiang moh_Han moh_Kong Guan Fu moh_Song Qi moh_Weng moh_Wei moh_Zhu moh_Qin moh_You moh_Xu moh_He moh_Lyu moh_Shi moh_Li moh_Jin moh_Yang moh_Tao
 	}
-	ethnicities = {
-		1 = asian
-	}
-	graphics = east_asian
 }
 
-min={
-	color= hsv{ 0.71 0.54 0.78 }
-	religion = confucian
-	heritage = heritage_han
-	language = language_min
-	traditions = { tradition_sinosphere }
+INJECT:min={
 	male_common_first_names={
 		moh_Fu ecchi_E ecchi_Sanduo ecchi_Decheng ecchi_Shih_2 ecchi_Xun_2 ecchi_Shichang ecchi_Fuxiang ecchi_Xun_3
 		Chen
@@ -229,18 +212,9 @@ min={
 		ecchi_Zuo ecchi_Kang ecchi_Cai ecchi_Yan ecchi_Li_2 ecchi_Duan ecchi_Tang ecchi_Koo ecchi_Wang_2 ecchi_Lu_2 ecchi_Ku
 		Cui Nie An Qi Qin moh_Ouyang moh_Linghu moh_Huangfu moh_Shangguan moh_Situ moh_Zhuge moh_Sima moh_Ximen moh_Nangong Dong Fang Hu Jiang Jin Lu Ma Peng Qiu Shen Sun Tian Ting Wei Wu Ye Zhao Chen Cheng Deng Gao Hsia Huang Kong Kwong Liang Liao Liu Luo Mao Pan Tan Wang Xie Yang Yu Zhang Zhu Li moh_Zhou moh_Qian moh_Zheng moh_Feng moh_Chu moh_Chiang moh_Han moh_Kong Guan Fu moh_Song Qi moh_Weng moh_Wei moh_Zhu moh_Qin moh_You moh_Xu moh_He moh_Lyu moh_Shi moh_Li moh_Jin moh_Yang moh_Tao
 	}
-	ethnicities = {
-		1 = asian
-	}
-	graphics = east_asian
 }
 
-yue={
-	color= hsv{ 0.80 0.36 0.39 }
-	religion = confucian
-	heritage = heritage_han
-	language = language_yue
-	traditions = { tradition_sinosphere }
+INJECT:yue={
 	male_common_first_names={
 		moh_Fu ecchi_E ecchi_Sanduo ecchi_Decheng ecchi_Shih_2 ecchi_Xun_2 ecchi_Shichang ecchi_Fuxiang ecchi_Xun_3
 		Chen
@@ -346,19 +320,10 @@ yue={
 		ecchi_Zuo ecchi_Kang ecchi_Cai ecchi_Yan ecchi_Li_2 ecchi_Duan ecchi_Tang ecchi_Koo ecchi_Wang_2 ecchi_Lu_2 ecchi_Ku
 		Cui Nie An Qi Qin moh_Ouyang moh_Linghu moh_Huangfu moh_Shangguan moh_Situ moh_Zhuge moh_Sima moh_Ximen moh_Nangong Dong Fang Hu Jiang Jin Lu Ma Peng Qiu Shen Sun Tian Ting Wei Wu Ye Zhao Chen Cheng Deng Gao Hsia Huang Kong Kwong Liang Liao Liu Luo Mao Pan Tan Wang Xie Yang Yu Zhang Zhu Li moh_Zhou moh_Qian moh_Zheng moh_Feng moh_Chu moh_Chiang moh_Han moh_Kong Guan Fu moh_Song Qi moh_Weng moh_Wei moh_Zhu moh_Qin moh_You moh_Xu moh_He moh_Lyu moh_Shi moh_Li moh_Jin moh_Yang moh_Tao
 	}
-	ethnicities = {
-		1 = asian
-	}
-	graphics = east_asian
 }
 
 
-hakka={
-	color= hsv{ 0.1 0.43 0.34 }
-	religion = confucian
-	heritage = heritage_han
-	language = language_hakka
-	traditions = { tradition_sinosphere }
+INJECT:hakka={
 	male_common_first_names={
 		moh_Fu ecchi_E ecchi_Sanduo ecchi_Decheng ecchi_Shih_2 ecchi_Xun_2 ecchi_Shichang ecchi_Fuxiang ecchi_Xun_3
 		Chen
@@ -464,20 +429,17 @@ hakka={
 		ecchi_Zuo ecchi_Kang ecchi_Cai ecchi_Yan ecchi_Li_2 ecchi_Duan ecchi_Tang ecchi_Koo ecchi_Wang_2 ecchi_Lu_2 ecchi_Ku
 		Cui Nie An Qi Qin moh_Ouyang moh_Linghu moh_Huangfu moh_Shangguan moh_Situ moh_Zhuge moh_Sima moh_Ximen moh_Nangong Dong Fang Hu Jiang Jin Lu Ma Peng Qiu Shen Sun Tian Ting Wei Wu Ye Zhao Chen Cheng Deng Gao Hsia Huang Kong Kwong Liang Liao Liu Luo Mao Pan Tan Wang Xie Yang Yu Zhang Zhu Li moh_Zhou moh_Qian moh_Zheng moh_Feng moh_Chu moh_Chiang moh_Han moh_Kong Guan Fu moh_Song Qi moh_Weng moh_Wei moh_Zhu moh_Qin moh_You moh_Xu moh_He moh_Lyu moh_Shi moh_Li moh_Jin moh_Yang moh_Tao
 	}
-	ethnicities = {
-		1 = asian
-	}
-	graphics = east_asian
 }
 
-manchu={
+REPLACE:manchu={
 	color= rgb{ 233 207 84 }
 	religion = confucian
 	heritage = heritage_manchu
 	language = language_jurchenic
+	name_format = last_first
 	traditions = { tradition_sinosphere }
 	obsessions = {
-		porcelain
+		porcelain tea
 	}
 	male_common_first_names={
 		Changlin

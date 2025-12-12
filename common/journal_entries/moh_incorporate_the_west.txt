@@ -1,6 +1,6 @@
 ﻿je_incorporate_the_west = {
 	icon = "gfx/interface/icons/lens_toolbar_icons/incorporate_state.dds"
-	group = je_group_internal_affairs
+	group = je_group_qing
 	is_shown_when_inactive = {
 		exists = c:CHI
 		c:CHI = root
