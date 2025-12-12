@@ -418,6 +418,7 @@ Changes:
 
 - Opium Wars remake part 2.
 - Confucian Theocracy government types.
+- Added 2 new geographic regions: Han Region, Begonia Leaf.
 
 Fixes:
 
