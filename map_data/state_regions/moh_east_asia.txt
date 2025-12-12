@@ -1,5 +1,5 @@
 ﻿# Pearl River Delta 珠三角/廣府/嶺南/南海
-REPLACE:STATE_GUANGDONG = {
+STATE_GUANGDONG = {
     id = 497
     subsistence_building = "building_subsistence_rice_paddies"
     provinces = { "x19FD82" "x2BDE7B" "x2C4C48" "x475968" "x489AB0" "x8C9358" "xB031E0" "xB0B061" "xF98B04" }
@@ -55,7 +55,7 @@ STATE_WESTERN_GUANGDONG = {
     naval_exit_id = 3056
 }
 # Xilingol 錫林郭勒
-REPLACE:STATE_HINGGAN = {
+STATE_HINGGAN = {
     id = 485
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x030522" "x0717B0" "x0B083B" "x0B290E" "x0C97C7" "x11D2B4" "x13148D" "x18F94F" "x1920B1" "x274966" "x2F4B70" "x356F29" "x3622E3" "x3DD007" "x3DE808" "x402AA1" "x47B534" "x495253" "x4ABE28" "x4BE93C" "x51049D" "x545458" "x56C873" "x57486F" "x577A97" "x58DF63" "x5D8002" "x6079C8" "x612E18" "x61E50B" "x6C1D10" "x6C3633" "x6D0C0D" "x6EB371" "x7DE432" "x7DF862" "x7FCC4E" "x804F17" "x821CB1" "x89BEED" "x950856" "x9A290F" "x9A7C60" "x9D4375" "x9F5DDB" "x9FB63F" "xA2F841" "xA6838A" "xA8F8B1" "xACE725" "xB2A065" "xB2F616" "xB4179D" "xB4B216" "xB4BD1B" "xB539EC" "xBB346C" "xBCEE88" "xC66162" "xC99C56" "xCAE219" "xCBDEAC" "xCEF000" "xCF6FC5" "xD287BA" "xD40A01" "xD58188" "xDC7606" "xE09080" "xE1254D" "xE579C7" "xE61212" "xE81DA5" "xE9A4AD" "xEF59B7" "xF17D94" "xF3C61B" "xF612D5" }

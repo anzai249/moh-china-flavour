@@ -9,5 +9,32 @@ geographic_region_begonia_leaf = {
 		STATE_NORTHERN_MANCHURIA
 		STATE_SOUTHERN_MANCHURIA
 		STATE_SHENGJING
+		STATE_JIREM
+		STATE_QINGHAI
+		STATE_TIANSHAN
+		STATE_DZUNGARIA
+		STATE_LHASA
+		STATE_NGARI
+		STATE_TUVA
+	}
+}
+
+geographic_region_han_region = {
+	short_key = "han_region"
+
+	strategic_regions = {
+		sr:region_south_china
+	}
+	state_regions = {
+		STATE_BEIJING
+		STATE_ZHILI
+		STATE_SHANXI
+		STATE_SHANDONG
+		STATE_JIANGSU
+		STATE_NINGXIA
+		STATE_GANSU
+		STATE_XIAN
+		STATE_HENAN
+		STATE_NORTHERN_ANHUI
 	}
 }

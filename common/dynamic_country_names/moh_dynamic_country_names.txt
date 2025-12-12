@@ -1,4 +1,4 @@
-﻿MCH = {
+﻿REPLACE:MCH = {
 	# MANCHU
 	dynamic_country_name = {
 		name = dyn_c_dongbei_army
@@ -26,7 +26,7 @@
 	}
 }
 
-CHI = {
+REPLACE:CHI = {
 	# China
 	dynamic_country_name = {
 		name = dyn_c_great_qing
@@ -142,7 +142,7 @@ CHI = {
 	}
 }
 
-GNG = {
+REPLACE:GNG = {
 	dynamic_country_name = {
 		name = dyn_c_guangxi_clique
 		adjective = GNG_ADJ
@@ -169,7 +169,7 @@ GNG = {
 	}
 }
 
-MGL = {
+REPLACE:MGL = {
 	dynamic_country_name = {
 		name = dyn_c_mongol_region
 		adjective = MGL_ADJ
@@ -216,7 +216,7 @@ TIB = {
 	}
 }
 
-YUN = {
+REPLACE:YUN = {
 	dynamic_country_name = {
 		name = dyn_c_yun_sunni
 		adjective = dyn_c_yun_sunni_adj
@@ -284,7 +284,7 @@ DAI = {
 	}
 }
 
-AHU = {
+REPLACE:AHU = {
 	dynamic_country_name = {
 		name = dyn_c_ahu_nian
 		adjective = dyn_c_ahu_nian_adj

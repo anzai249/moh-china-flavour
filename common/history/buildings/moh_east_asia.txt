@@ -69,10 +69,10 @@
 				level = 1
 			}
 			create_building = {
-				building = "building_paper_mills"
+				building = "building_paper_mill"
 				add_ownership={
 					building={
-						type="building_paper_mills"
+						type="building_paper_mill"
 						country="c:CHI"
 						levels=1
 						region="STATE_WESTERN_GUANGDONG"

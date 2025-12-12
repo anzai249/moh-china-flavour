@@ -5,10 +5,10 @@ company_peking_university = {
 	flavored_company = yes
 	building_types = {
 		building_university
-		building_paper_mills
+		building_paper_mill
 	}
 	extension_building_types = {
-		building_paper_mills
+		building_paper_mill
 	}
 	preferred_headquarters = { STATE_BEIJING }
 	potential = {
@@ -63,7 +63,7 @@ company_machine_weaving_bureau = {
 	flavored_company = yes
 	building_types = {
 		building_cotton_plantation
-		building_textile_mills
+		building_textile_mill
 	}
 	extension_building_types = {
 		building_silk_plantation
@@ -87,7 +87,7 @@ company_machine_weaving_bureau = {
 			state_region = s:STATE_SUZHOU
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_textile_mills
+				is_building_type = building_textile_mill
 				level >= 3
 			}
 		}
@@ -112,7 +112,7 @@ company_machine_weaving_bureau = {
 		}
 	}
 	ai_construction_targets = {
-		building_textile_mills = {
+		building_textile_mill = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_SUZHOU
@@ -188,7 +188,7 @@ company_china_aviation = {
 		building_automotive_industry
 	}
 	extension_building_types = {
-		building_steel_mills
+		building_steel_mill
 		building_motor_industry
 	}
 	potential = {
@@ -299,7 +299,7 @@ company_changyu = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
 	flavored_company = yes
 	building_types = {
-		building_vineyard_plantation
+		building_vineyard
 	}
 	extension_building_types = {
 		building_food_industry
@@ -319,20 +319,20 @@ company_changyu = {
 		c:CHI ?= this
 		any_scope_state = {
 			any_scope_building = {
-				is_building_type = building_vineyard_plantation
+				is_building_type = building_vineyard
 				level >= 5
 			}
 		}
 	}
 	prosperity_modifier = {
-		building_vineyard_plantation_throughput_add = 0.1
+		building_vineyard_throughput_add = 0.1
 		country_prestige_add = 25
 	}
 	ai_weight = {
 		value = 3
 	}
 	ai_construction_targets = {
-		building_vineyard_plantation = {
+		building_vineyard = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_SHANDONG
@@ -411,8 +411,8 @@ company_commercial_press = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
 	flavored_company = yes
 	building_types = {
-		building_paper_mills
-		building_arts_academy
+		building_paper_mill
+		building_art_academy
 	}
 	extension_building_types = {
 		building_logging_camp
@@ -438,7 +438,7 @@ company_commercial_press = {
 			state_region = s:STATE_SUZHOU
 			is_incorporated = yes
 			any_scope_building = {
-				is_building_type = building_paper_mills
+				is_building_type = building_paper_mill
 				level >= 5
 			}
 		}
@@ -451,7 +451,7 @@ company_commercial_press = {
 		value = 3
 	}
 	ai_construction_targets = {
-		building_paper_mills = {
+		building_paper_mill = {
 			level = 5
 			state_trigger = {
 				state_region = s:STATE_SUZHOU

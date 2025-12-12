@@ -1,15 +1,4 @@
-﻿CHI = {
-	color = { 252 185 61 }
-
-	country_type = unrecognized
-
-	tier = empire
-	# social_hierarchy = china_shinonggongshang_system
-	cultures = { manchu han }
-	capital = STATE_BEIJING
-}
-
-FUJ = { # Fujian
+﻿FUJ = { # Fujian
 	color = { 183  63  63 }
 	country_type = unrecognized
 	
@@ -22,7 +11,7 @@ FUJ = { # Fujian
 }
 
 
-HNA = { #Hunan	
+REPLACE:HNA = { #Hunan	
 	color = { 126 164 224 }
 	country_type = unrecognized
 	tier = principality
@@ -30,7 +19,7 @@ HNA = { #Hunan
 	capital = STATE_HUNAN
 }
 
-AHU = { #Anhui
+REPLACE:AHU = { #Anhui
 	color = { 187 126 224 }
 	country_type = unrecognized
 	tier = principality
@@ -38,7 +27,7 @@ AHU = { #Anhui
 	capital = STATE_SOUTHERN_ANHUI
 }
 
-ZHI = { #Zhili
+REPLACE:ZHI = { #Zhili
 	color = { 207 64 88 }
 	country_type = unrecognized
 	tier = principality
@@ -46,7 +35,7 @@ ZHI = { #Zhili
 	capital = STATE_ZHILI
 }
 
-SHN = { #Shanxi
+REPLACE:SHN = { #Shanxi
 	color = { 94 209 94 }
 	country_type = unrecognized
 	tier = principality
@@ -54,7 +43,7 @@ SHN = { #Shanxi
 	capital = STATE_SHANXI
 }
 
-GUI = { #Guizhou
+REPLACE:GUI = { #Guizhou
 	color = { 37 102 37 }
 	country_type = unrecognized
 	tier = principality
@@ -62,7 +51,7 @@ GUI = { #Guizhou
 	capital = STATE_GUIZHOU
 }
 
-GNG = { #Guangxi
+REPLACE:GNG = { #Guangxi
 	color = { 133 56 8 }
 	country_type = unrecognized
 	tier = principality
@@ -70,7 +59,7 @@ GNG = { #Guangxi
 	capital = STATE_GUANGXI
 }
 
-SIH = { #Sichuan
+REPLACE:SIH = { #Sichuan
 	color = { 42 189 68 }
 	country_type = unrecognized
 	tier = principality
@@ -78,7 +67,7 @@ SIH = { #Sichuan
 	capital = STATE_SICHUAN
 }
 
-SHA = { #Shandong
+REPLACE:SHA = { #Shandong
 	color = { 189 113 42 }
 	country_type = unrecognized
 	tier = principality
@@ -86,7 +75,7 @@ SHA = { #Shandong
 	capital = STATE_SHANDONG
 }
 
-XIB = {
+REPLACE:XIB = {
 	color = { 68 144 212 }
 	country_type = unrecognized
 	tier = principality
@@ -139,7 +128,7 @@ LEP = { # League of Eight Provinces
 	capital = STATE_NANJING
 }
 
-HBE = { # Hubei
+REPLACE:HBE = { # Hubei
 	color = { 233 35 35 }
 	country_type = unrecognized
 	

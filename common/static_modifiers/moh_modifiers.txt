@@ -59,8 +59,8 @@ modifier_great_assembly = {
 # flood of pirates
 flood_of_pirates = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_weapons_negative.dds
-	tariff_import_add = -0.1
-	tariff_export_add = -0.1
+	country_tax_income_add = -500
+	state_infrastructure_mult = -0.05
 }
 
 # 8 flags
@@ -313,11 +313,7 @@ modifier_13_factories = {
 }
 
 # edit warlord era
-modifier_chinese_warlord_era = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	interest_group_ig_armed_forces_pop_attraction_mult = 0.1
-	interest_group_ig_armed_forces_pol_str_mult = 0.3
-	country_officers_pol_str_mult = 0.75
+INJECT:modifier_chinese_warlord_era = {
 	country_infamy_decay_mult = 0.25
 }
 
@@ -356,15 +352,6 @@ opium_wars_addiction_shih_chin_modifier = {
 	unit_morale_loss_mult = 0.75
 	country_prestige_from_army_power_projection_mult = -0.5
 	country_war_exhaustion_casualties_mult = 1.0
-}
-
-
-modifier_chinese_warlord_era = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	interest_group_ig_armed_forces_pop_attraction_mult = 0.1
-	interest_group_ig_armed_forces_pol_str_mult = 0.3
-	country_officers_pol_str_mult = 0.75
-	country_infamy_decay_mult = 0.25
 }
 
 modifier_yue_customs_taxes_addition = {
