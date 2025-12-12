@@ -42,7 +42,7 @@ je_urbanization_events_1 = {
 			has_law = law_type:law_land_based_taxation
 		}
 		ig:ig_industrialists = {
-			is_marginal = no
+			ig_counts_as_marginal = no
 		}
 	}
 	on_complete = {

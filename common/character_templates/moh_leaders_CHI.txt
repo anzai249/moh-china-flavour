@@ -23,7 +23,7 @@ ecchi_chi_li_hongzhang_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_intelligentsia
@@ -83,7 +83,7 @@ ecchi_chi_zhang_zhidong_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_armed_forces
@@ -116,7 +116,7 @@ ecchi_chi_ronglu_character_template = {
             country_has_primary_culture = cu:manchu
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_landowners
                 is_interest_group_type = ig_petty_bourgeoisie
@@ -502,7 +502,7 @@ ecchi_chi_chen_jiongming_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_landowners
@@ -616,7 +616,7 @@ ecchi_chi_chiang_kai_shek_character_template = {
             this = c:CHI
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_armed_forces
         }
         earliest_usage_date = 1924.1.1
@@ -684,7 +684,7 @@ ecchi_chi_zhang_zuolin_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_rural_folk
                 is_interest_group_type = ig_armed_forces
@@ -717,7 +717,7 @@ ecchi_chi_yan_xishan_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_armed_forces
         }
         earliest_usage_date = 1912.1.1
@@ -752,7 +752,7 @@ ecchi_chi_xu_shicang_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_rural_folk
                 is_interest_group_type = ig_petty_bourgeoisie
@@ -825,7 +825,7 @@ ecchi_chi_ma_fuxiang_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_armed_forces
                 is_interest_group_type = ig_intelligentsia
@@ -855,7 +855,7 @@ ecchi_chi_li_yuanhong_character_template = {
             this = c:CHI
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_armed_forces
                 is_interest_group_type = ig_petty_bourgeoisie
@@ -961,7 +961,7 @@ ecchi_chi_duan_qirui_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_armed_forces
                 is_interest_group_type = ig_landowners
@@ -1103,7 +1103,7 @@ ecchi_chi_li_dazhao_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_rural_folk
@@ -1142,7 +1142,7 @@ ecchi_chi_chen_duxiu_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_rural_folk
@@ -1209,7 +1209,7 @@ ecchi_chi_zhu_de_character_template = {
 #             this = c:TPG
 #         }
 #         interest_group_trigger = {
-#             is_marginal = no
+#             ig_counts_as_marginal = no
 #             OR = {
 #                 is_interest_group_type = ig_devout
 #                 is_interest_group_type = ig_rural_folk
@@ -1329,7 +1329,7 @@ ecchi_chi_wellington_koo_character_template = {
             this = c:CHI
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_petty_bourgeoisie
                 is_interest_group_type = ig_intelligentsia
@@ -1370,7 +1370,7 @@ ecchi_chi_wang_jingwei_character_template = {
             }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_petty_bourgeoisie
                 is_interest_group_type = ig_intelligentsia
@@ -1719,7 +1719,7 @@ chi_zaifeng_character_template = {
             has_state_in_state_region = STATE_BEIJING
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_landowners
         }
         earliest_usage_date = 1908.1.1
@@ -1917,7 +1917,7 @@ chi_gong_character_template = {
             c:CHI = { has_law = law_type:law_monarchy }
         }
         interest_group_trigger = {
-            is_marginal = no
+            ig_counts_as_marginal = no
             is_interest_group_type = ig_landowners
             NOR = {
                 has_variable = communist_ig_var

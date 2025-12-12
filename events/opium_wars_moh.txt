@@ -69,3 +69,86 @@ opium_wars_moh.1 = {
 		}
 	}
 }
+opium_wars_moh.2 = {
+	# 广东商行联名上书
+	type = country_event
+	placement = root
+	title = opium_wars_moh.2.t
+	desc = opium_wars_moh.2.d
+	flavor = opium_wars_moh.2.f
+	duration = 3
+	cooldown = { years = 50 }
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	event_image = {
+		video = "asia_union_leader"
+	}
+	trigger = {
+		c:CHI ?= this
+		has_journal_entry = je_daoguang_reform_opium
+		capital = {
+			sg:opium = {
+				OR = {
+					import_tariff_level = high_tariffs
+					import_tariff_level = max_tariffs
+				}
+			}
+		}
+		NOT = {
+			has_variable = lost_opium_wars
+		}
+		any_country = {
+			has_variable = opium_wars_aggressor
+		}
+	}
+	immediate = {
+		random_country = {
+			limit = {
+				has_variable = opium_wars_aggressor
+			}
+			save_scope_as = smuggler_country
+		}
+	}
+	option = {
+		name = opium_wars_moh.2.a # 批准部分口岸松禁
+		je:je_daoguang_reform_opium = {
+			add_progress = { value = -5 name = daoguang_opium_progress_bar }
+		}
+		if = {
+			limit ={
+				capital = {
+					sg:opium = {
+						import_tariff_level = max_tariffs
+					}
+				}
+			}
+			set_import_tariff_level = {
+				goods = g:opium
+				level = high_tariffs
+			}
+		}
+		else_if = {
+			limit ={
+				capital = {
+					sg:opium = {
+						import_tariff_level = high_tariffs
+					}
+				}
+			}
+			set_import_tariff_level = {
+				goods = g:opium
+				level = low_tariffs
+			}
+		}
+	}
+	option = {
+		name = opium_wars_moh.2.b # 严辞回绝，拘办行商
+		default_option = yes
+		je:je_daoguang_reform_opium = {
+			add_progress = { value = 5 name = daoguang_opium_progress_bar }
+		}
+		add_radicals = {
+			value = small_radicals
+		}
+	}
+}

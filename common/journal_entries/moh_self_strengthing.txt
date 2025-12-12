@@ -107,11 +107,11 @@ je_self_strengthing_military = {
                 naval_power_projection > root.naval_power_projection
                 count < 1
                 OR = {
-                    country_is_in_india = yes
-                    country_is_in_east_asia = yes
-                    country_is_in_southeast_asia = yes
-                    country_is_in_central_asia = yes
-                    country_is_in_middle_east = yes
+                    is_in_geographic_region = geographic_region_india
+                    is_in_geographic_region = geographic_region_east_asia
+                    is_in_geographic_region = geographic_region_south_east_asia
+                    is_in_geographic_region = geographic_region_central_asia
+                    is_in_geographic_region = geographic_region_middle_east
                 }
             }
         }

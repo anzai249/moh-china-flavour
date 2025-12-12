@@ -259,6 +259,7 @@ je_daoguang_reform_opium = {
 		random_events = {
 			100 = 0
 			10 = opium_wars_moh.1
+			10 = opium_wars_moh.2
 		}
 	}
 	scripted_progress_bar = daoguang_opium_progress_bar

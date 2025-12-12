@@ -184,7 +184,7 @@
 		# Monarch is not likely to adopt a marginal IG
 		if = {
 			limit = {
-				is_marginal = yes
+				ig_counts_as_marginal = yes
 			}
 			multiply = {
 				value = 0.1
@@ -230,7 +230,7 @@
 		if = {
 			limit = {
 				owner.ig:ig_rural_folk = {
-					is_marginal = yes
+					ig_counts_as_marginal = yes
 				}
 			}
 			multiply = {

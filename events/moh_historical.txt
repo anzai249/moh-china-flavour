@@ -1238,9 +1238,9 @@ moh_historical.201 = {
 	# 拦腰一棍 Communist China Opium
 	type = country_event
 	placement = root
-	title = opium_wars_moh.1.t
-	desc = opium_wars_moh.1.d
-	flavor = opium_wars_moh.1.f
+	title = moh_historical.201.t
+	desc = moh_historical.201.d
+	flavor = moh_historical.201.f
 	dlc = dlc0moh
 	event_image = {
 		video = "europenorthamerica_opium_smoker"
@@ -1253,7 +1253,7 @@ moh_historical.201 = {
 		has_journal_entry = je_opium_communism
 	}
 	option = {
-		name = opium_wars_moh.1.a
+		name = moh_historical.201.a
 		default_option = yes
 		change_variable = {
 			name = opium_communism_progress
@@ -1267,7 +1267,7 @@ moh_historical.201 = {
 		}
 	}
 	option = {
-		name = opium_wars_moh.1.b
+		name = moh_historical.201.b
 		change_variable = {
 			name = opium_communism_progress
 			add = -5
