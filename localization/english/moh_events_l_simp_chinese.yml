@@ -413,3 +413,7 @@
   opium_wars_moh.2.f: "近日，广东多家商行联名上书，请求政府放宽对口岸的监管，以便他们能够更方便地进行鸦片贸易。这些商行表示，如果政府能够满足他们的请求，他们愿意提供大量利诱，以换取更宽松的贸易环境。\n\n“各位大人，我们这些商行可是国家经济的重要支柱，放宽监管对大家都有好处啊！”"
   opium_wars_moh.2.a: "批准部分口岸松禁"
   opium_wars_moh.2.b: "严辞回绝，拘办行商"
+  add_shih_chin_10.tt: "鸦片问题进度将会向[concept_shih_chin_pai]倾斜#variable 10#!点"
+  add_shih_chin_5.tt: "鸦片问题进度将会向[concept_shih_chin_pai]倾斜#variable 5#!点"
+  add_yen_chin_10.tt: "鸦片问题进度将会向[concept_yen_chin_pai]倾斜#variable 10#!点"
+  add_yen_chin_5.tt: "鸦片问题进度将会向[concept_yen_chin_pai]倾斜#variable 5#!点"
