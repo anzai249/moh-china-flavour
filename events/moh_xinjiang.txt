@@ -66,6 +66,9 @@ moh_xinjiang.2 = { # Zuo Zongtang
 	left_icon = scope:zuo_zongtang_scope
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
     duration = 3
+    cooldown = {
+        years = 2
+    }
     trigger = {
         c:CHI ?= this
         any_scope_character = {

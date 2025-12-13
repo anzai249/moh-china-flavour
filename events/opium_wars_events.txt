@@ -1,6 +1,6 @@
 ﻿namespace = opium_wars
 
-REPLACE:opium_wars.1 = {
+opium_wars.1 = {
 	type = country_event
 	placement = ROOT
 
@@ -22,6 +22,10 @@ REPLACE:opium_wars.1 = {
 
 	trigger = {
 		NOT = { has_variable = opium_wars_start_var }
+		NOR = {
+			is_revolutionary = yes
+			is_secessionist = yes
+		}
 		any_primary_culture = {
 			has_cultural_obsession = opium
 		}
@@ -38,7 +42,7 @@ REPLACE:opium_wars.1 = {
 			}
 		}
 		is_subject = no
-		NOT = { has_law = law_type:law_free_trade }
+		NOT = { has_law_or_variant = law_type:law_free_trade }
 		any_market = {
             root.market = {
                 market_imports_reliance = { target = prev goods = opium value > 0.25 }
@@ -181,7 +185,7 @@ REPLACE:opium_wars.1 = {
 }
 
 
-REPLACE:historical_agitators.21 = {
+historical_agitators.21 = {
 	trigger = {
 		always = no
 	}
@@ -191,7 +195,7 @@ REPLACE:historical_agitators.21 = {
 }
 
 # Start event for opium importer
-REPLACE:opium_wars.2 = {
+opium_wars.2 = {
 	type = country_event
 	placement = ROOT
 
@@ -318,7 +322,7 @@ REPLACE:opium_wars.2 = {
 }
 
 # Obssessed country succeeds
-REPLACE:opium_wars.3 = {
+opium_wars.3 = {
 	type = country_event
 	placement = ROOT
 
@@ -423,7 +427,7 @@ REPLACE:opium_wars.3 = {
 }
 
 # Obsessed country fails
-REPLACE:opium_wars.4 = {
+opium_wars.4 = {
 	type = country_event
 	placement = ROOT
 
@@ -548,7 +552,7 @@ REPLACE:opium_wars.4 = {
 }
 
 # Importer country succeeds
-REPLACE:opium_wars.5 = {
+opium_wars.5 = {
 	type = country_event
 	placement = ROOT
 
@@ -650,7 +654,7 @@ REPLACE:opium_wars.5 = {
 }
 
 # Smugglers caught - triggered by embargo
-REPLACE:opium_wars.6 = {
+opium_wars.6 = {
 	type = country_event
 	placement = ROOT
 
@@ -717,7 +721,7 @@ REPLACE:opium_wars.6 = {
 }
 
 # Addiction recovery
-REPLACE:opium_wars.7 = {
+opium_wars.7 = {
 	type = country_event
 	placement = scope:recovry_state
 
@@ -805,7 +809,7 @@ REPLACE:opium_wars.7 = {
 }
 
 # Addiction Ravages State
-REPLACE:opium_wars.8 = {
+opium_wars.8 = {
 	type = country_event
 	placement = scope:opium_addiction_state
 

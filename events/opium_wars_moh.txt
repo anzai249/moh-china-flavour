@@ -1,4 +1,4 @@
-# Opiom Wars Random Eventss
+﻿# Opiom Wars Random Eventss
 namespace = opium_wars_moh
 
 opium_wars_moh.1 = {
@@ -35,18 +35,14 @@ opium_wars_moh.1 = {
 	}
 	option = {
 		name = opium_wars_moh.1.a # 追究责任
-		je:je_daoguang_reform_opium = {
-			add_progress = { value = 10 name = daoguang_opium_progress_bar }
-		}
+		add_yen_chin_10= yes
 		add_loyalists = {
 			value = small_radicals
 		}
 	}
 	option = {
 		name = opium_wars_moh.1.b # 以补税平账，息事宁人
-		je:je_daoguang_reform_opium = {
-			add_progress = { value = -10 name = daoguang_opium_progress_bar }
-		}
+		add_shih_chin_10= yes
 		add_modifier = {
 			name = modifier_yue_customs_taxes_addition
 			months = 6
@@ -111,9 +107,7 @@ opium_wars_moh.2 = {
 	}
 	option = {
 		name = opium_wars_moh.2.a # 批准部分口岸松禁
-		je:je_daoguang_reform_opium = {
-			add_progress = { value = -5 name = daoguang_opium_progress_bar }
-		}
+		add_shih_chin_5 = yes
 		if = {
 			limit ={
 				capital = {
@@ -144,9 +138,7 @@ opium_wars_moh.2 = {
 	option = {
 		name = opium_wars_moh.2.b # 严辞回绝，拘办行商
 		default_option = yes
-		je:je_daoguang_reform_opium = {
-			add_progress = { value = 5 name = daoguang_opium_progress_bar }
-		}
+		add_yen_chin_5 = yes
 		add_radicals = {
 			value = small_radicals
 		}

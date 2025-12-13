@@ -1562,3 +1562,45 @@ warlord_setup_countries_protection = {
         }
     }
 }
+
+## add 10 to shih chin
+add_shih_chin_10 = {
+    custom_tooltip = {
+        text = add_shih_chin_10.tt
+        je:je_daoguang_reform_opium = {
+            add_progress = { value = -10 name = daoguang_opium_progress_bar }
+        }
+    }
+}
+
+
+## add 10 to yen chin
+add_yen_chin_10 = {
+    custom_tooltip = {
+        text = add_yen_chin_10.tt
+        je:je_daoguang_reform_opium = {
+            add_progress = { value = 10 name = daoguang_opium_progress_bar }
+        }
+    }
+}
+
+## add 5 to shih chin
+add_shih_chin_5 = {
+    custom_tooltip = {
+        text = add_shih_chin_5.tt
+        je:je_daoguang_reform_opium = {
+            add_progress = { value = -5 name = daoguang_opium_progress_bar }
+        }
+    }
+}
+
+
+## add 5 to yen chin
+add_yen_chin_5 = {
+    custom_tooltip = {
+        text = add_yen_chin_5.tt
+        je:je_daoguang_reform_opium = {
+            add_progress = { value = 5 name = daoguang_opium_progress_bar }
+        }
+    }
+}

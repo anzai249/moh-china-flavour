@@ -416,6 +416,7 @@ Release 1.3 "Pivot"
 
 Changes:
 
+- Compatibility for game version 1.12.
 - Opium Wars remake part 2.
 - Confucian Theocracy government types.
 - Added 2 new geographic regions: Han Region, Begonia Leaf.
@@ -423,3 +424,4 @@ Changes:
 Fixes:
 
 - MOHB-0018, again.
+- MOHB-0021.
