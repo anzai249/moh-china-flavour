@@ -34,7 +34,7 @@
   je_wuxu.tt.1: "在[GetIdeology('ideology_moh_reformer').GetName]势力没有被压倒前完成："
   je_wuxu.tt.2: "[GetIdeology('ideology_moh_revolutionary').GetName]们的情绪得到了安抚"
   je_wuxu.tt.3: "保守派胜利"
-  je_wuxu.tt.4: "#variable 75%#!的$building_barracks$已启用$pm_advanced_tactics_training$"
+  je_wuxu.tt.4: "#variable 75%#!的$building_barrack$已启用$pm_advanced_tactics_training$"
   je_wuxu.tt.5: "你能听到耳边的枪炮声更响了……"
   je_wuxu.tt.6: "完成#bold 八旗#![concept_journal_entry]"
   print_reformer_newspaper: "资助出版《中外纪闻》报纸"
