@@ -33,7 +33,7 @@
  je_wuxu.tt.1: "[GetIdeology('ideology_moh_reformer').GetName] 세력이 압도되지 않기 전에 완료:"
  je_wuxu.tt.2: "[GetIdeology('ideology_moh_revolutionary').GetName]이 진정될 것입니다."
  je_wuxu.tt.3: "보수파 세력의 승리"
- je_wuxu.tt.4: "75%의 $building_barracks$가 $pm_advanced_tactics_training$을 활성화했습니다."
+ je_wuxu.tt.4: "75%의 $building_barrack$가 $pm_advanced_tactics_training$을 활성화했습니다."
  je_wuxu.tt.5: "귀에 들리는 포성과 총소리가 더욱 커졌습니다..."
  je_wuxu.tt.6: "#bold 팔기군#! [concept_journal_entry] 완료"
  print_reformer_newspaper: "개혁파 신문에 자금을 지원하라"

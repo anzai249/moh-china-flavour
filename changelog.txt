@@ -425,3 +425,12 @@ Fixes:
 
 - MOHB-0018, again.
 - MOHB-0021.
+
+Release 1.3.1 "Pivot"
+
+Fixes:
+
+- MOHB-0023.
+- MOHB-0024.
+- MOHB-0025.
+- Ban opium button visibility condition.

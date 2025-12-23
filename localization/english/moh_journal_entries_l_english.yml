@@ -33,7 +33,7 @@
   je_wuxu.tt.1: "Complete before the [GetIdeology('ideology_moh_reformer').GetName] Faction is overwhelmed:"
   je_wuxu.tt.2: "The [GetIdeology('ideology_moh_revolutionary').GetName] will be soothed"
   je_wuxu.tt.3: "Conservative Faction Victory"
-  je_wuxu.tt.4: "Over 75% $building_barracks$ activated $pm_advanced_tactics_training$"
+  je_wuxu.tt.4: "Over 75% $building_barrack$ activated $pm_advanced_tactics_training$"
   je_wuxu.tt.5: "The ear-splitting sound of gunfire begins to ring..."
   je_wuxu.tt.6: "Complete #bold Eight Banners#! [concept_journal_entry]"
   print_reformer_newspaper: "Fund the Reformer's Newspaper"

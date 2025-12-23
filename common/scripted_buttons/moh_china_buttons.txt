@@ -74,7 +74,7 @@ support_yen_chin_pai_button = {
 	}
 }
 
-ban_opium_button = {
+REPLACE:ban_opium_button = {
 	name = "ban_opium"
 	desc = "ban_opium_desc"
 	visible = {
@@ -106,9 +106,12 @@ ban_opium_button = {
 		OR = {
 			AND = {
 				c:CHI ?= this
-				custom_tooltip = {
-					text = yen_chin_pai_victory_tt
-					has_variable = opium_yen_chin_pai_victory
+				OR = {
+					custom_tooltip = {
+						text = yen_chin_pai_victory_tt
+						has_variable = opium_yen_chin_pai_victory
+					}
+					has_law = law_type:law_council_republic
 				}
 			}
 			AND = {
@@ -156,7 +159,7 @@ ban_opium_button = {
 	}
 }
 
-unban_opium_button = {
+REPLACE:unban_opium_button = {
 	name = "remove_opium_ban"
 	desc = "remove_opium_ban_desc"
 	visible = {

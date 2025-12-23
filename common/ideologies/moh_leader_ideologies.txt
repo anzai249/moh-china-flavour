@@ -1,4 +1,4 @@
-﻿ideology_moh_reformer = {
+﻿REPLACE_OR_CREATE:ideology_moh_reformer = {
 	# 维新派
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_moh_reformer.png"
 	character_ideology = yes
@@ -194,7 +194,7 @@
 	}
 }
 
-ideology_moh_revolutionary = {
+REPLACE_OR_CREATE:ideology_moh_revolutionary = {
 	# 革命派
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_moh_revolutionary.png"
 	character_ideology = yes
@@ -402,7 +402,7 @@ ideology_moh_revolutionary = {
 	}
 }
 
-ideology_moh_kmt = {
+REPLACE_OR_CREATE:ideology_moh_kmt = {
 	# 国民党人
 	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_moh_revolutionary_kmt.dds"
 	character_ideology = yes
