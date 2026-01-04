@@ -1633,6 +1633,20 @@ INJECT:chi_daoguang_template = {
                 value = scope:daoguang_scope
             }
         }
+		home_country = {
+			if = {
+				limit = {
+					has_journal_entry = je_daoguang_reform_main
+				}
+				je:je_daoguang_reform_main = {
+					clear_variable_list = com_journal_characters
+					add_to_variable_list = {
+						name = com_journal_characters
+						target = root
+					}
+				}
+			}
+		}
     }
 }
 
@@ -1994,7 +2008,25 @@ chi_moh_sun_yat_sen_character_template = {
                 value = scope:father_scope
             }
         }
+		set_variable = {
+			name = com_opinion
+			value = flag:father_now_at
+		}
         set_character_busy_and_immortal = yes
+		home_country = {
+			if = {
+				limit = {
+					has_journal_entry = je_father_of_the_republic
+				}
+				je:je_father_of_the_republic = {
+					clear_variable_list = com_journal_characters
+					add_to_variable_list = {
+						name = com_journal_characters
+						target = root
+					}
+				}
+			}
+		}
         # place_character_in_void = 10000
         # set_interest_group = PREV.ig:ig_armed_forces
     }

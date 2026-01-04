@@ -36,10 +36,18 @@
 			}
 			create_character = {
 				template = chi_moh_sun_yat_sen_character_template
+				age = 30
 			}
 			set_global_variable = {
 				name = sun_yatsen_in
 				value = c:BEI
+			}
+			je:je_father_of_the_republic ?= {
+				clear_variable_list = com_journal_characters
+				add_to_variable_list = {
+					name = com_journal_characters
+					target = global_var:sun_yatsen
+				}
 			}
 		}
 	}

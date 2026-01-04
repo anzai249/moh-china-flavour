@@ -1,7 +1,7 @@
 ﻿# Peking University
 company_peking_university = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/peking_university.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 	flavored_company = yes
 	building_types = {
 		building_university
@@ -59,7 +59,7 @@ company_peking_university = {
 # machine_weaving_bureau
 company_machine_weaving_bureau = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/machine_weaving_bureau.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 	flavored_company = yes
 	building_types = {
 		building_cotton_plantation
@@ -125,7 +125,7 @@ company_machine_weaving_bureau = {
 # state grid
 company_state_grid = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/state_grid.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	flavored_company = yes
 	building_types = {
 		building_power_plant
@@ -182,7 +182,7 @@ company_state_grid = {
 # china Aviation
 company_china_aviation = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/china_aviation.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_heavy.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
 	flavored_company = yes
 	building_types = {
 		building_automotive_industry
@@ -408,7 +408,7 @@ company_tongrentang = {
 
 company_commercial_press = {
 	icon = "gfx/interface/icons/company_icons/historical_company_icons/commercial_press.dds"
-	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufactering_light.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
 	flavored_company = yes
 	building_types = {
 		building_paper_mill

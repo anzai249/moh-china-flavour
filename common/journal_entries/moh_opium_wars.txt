@@ -120,7 +120,7 @@ je_shih_chin_opium = {
 		}
 	}
 
-	timeout = 4380
+	timeout = 7300
 
 	complete = {
 		custom_tooltip = {

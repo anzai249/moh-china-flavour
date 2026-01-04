@@ -54,6 +54,13 @@
 		add_journal_entry = {
 			type = je_daoguang_reform_mine
 		}
+		je:je_daoguang_reform_main ?= {
+			clear_variable_list = com_journal_characters
+			add_to_variable_list = {
+				name = com_journal_characters
+				target = root.var:daoguang
+			}
+		}
 	}
 	current_value = {
 		value = var:daoguang_reform_progress
