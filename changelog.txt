@@ -442,3 +442,9 @@ Fixes:
 - Shih-chin Opium cannot be completed because the 15-year requirement exceeds the 10-year time limit.
 - Companies background image typos.
 - Journal Entry GUI overwrite.
+
+Release 1.3.3 "Pivot"
+
+Fixes:
+
+- Xinhai Revolution JE UI not showing.
