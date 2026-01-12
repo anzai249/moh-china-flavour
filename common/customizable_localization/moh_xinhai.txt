@@ -1,0 +1,76 @@
+﻿xinhai_sun = {
+	type = country
+	random_valid = yes
+	
+	text = {
+		trigger = {
+			NOT = {
+				has_global_variable = sun_yatsen_dead
+			}
+		}
+		localization_key = je_xinhai_sunyatsen_tt
+	}
+	text = {
+		trigger = {
+			has_global_variable = sun_yatsen_dead
+		}
+		localization_key = je_xinhai_sunyatsen_d_tt
+	}
+}
+xinhai_huang = {
+	type = country
+	random_valid = yes
+	
+	text = {
+		trigger = {
+			NOT = {
+				has_global_variable = huangxing_dead
+			}
+		}
+		localization_key = je_xinhai_huangxing_tt
+	}
+	text = {
+		trigger = {
+			has_global_variable = huangxing_dead
+		}
+		localization_key = je_xinhai_huangxing_d_tt
+	}
+}
+xinhai_qiu = {
+	type = country
+	random_valid = yes
+	
+	text = {
+		trigger = {
+			NOT = {
+				has_global_variable = qiujin_dead
+			}
+		}
+		localization_key = je_xinhai_qiujin_tt
+	}
+	text = {
+		trigger = {
+			has_global_variable = qiujin_dead
+		}
+		localization_key = je_xinhai_qiujin_d_tt
+	}
+}
+xinhai_wang = {
+	type = country
+	random_valid = yes
+	
+	text = {
+		trigger = {
+			NOT = {
+				has_global_variable = wangjingwei_dead
+			}
+		}
+		localization_key = je_xinhai_wangjingwei_tt
+	}
+	text = {
+		trigger = {
+			has_global_variable = wangjingwei_dead
+		}
+		localization_key = je_xinhai_wangjingwei_d_tt
+	}
+}

@@ -1,0 +1,79 @@
+﻿# [empty] alive
+# d dead
+
+# Sun Yat-sen
+texticon = {
+	icon = xinhai_sun
+	iconsize = {
+		texture = "gfx/interface/icons/event_icons/xinhai_sunyatsen.dds"
+		size = { 70 70 }
+		offset = { 0 25 }
+		fontsize = 20
+	}
+}
+texticon = {
+	icon = xinhai_sun_d
+	iconsize = {
+		texture = "gfx/interface/icons/event_icons/xinhai_sunyatsen_d.dds"
+		size = { 70 70 }
+		offset = { 0 25 }
+		fontsize = 20
+	}
+}
+# Huang Xing
+texticon = {
+	icon = xinhai_huang
+	iconsize = {
+		texture = "gfx/interface/icons/event_icons/xinhai_huangxing.dds"
+		size = { 70 70 }
+		offset = { 0 25 }
+		fontsize = 20
+	}
+}
+texticon = {
+	icon = xinhai_huang_d
+	iconsize = {
+		texture = "gfx/interface/icons/event_icons/xinhai_huangxing_d.dds"
+		size = { 70 70 }
+		offset = { 0 25 }
+		fontsize = 20
+	}
+}
+# Qiu Jin
+texticon = {
+	icon = xinhai_qiu
+	iconsize = {
+		texture = "gfx/interface/icons/event_icons/xinhai_qiujin.dds"
+		size = { 70 70 }
+		offset = { 0 25 }
+		fontsize = 20
+	}
+}
+texticon = {
+	icon = xinhai_qiu_d
+	iconsize = {
+		texture = "gfx/interface/icons/event_icons/xinhai_qiujin_d.dds"
+		size = { 70 70 }
+		offset = { 0 25 }
+		fontsize = 20
+	}
+}
+# Wang Jingwei
+texticon = {
+	icon = xinhai_wang
+	iconsize = {
+		texture = "gfx/interface/icons/event_icons/xinhai_wangjingwei.dds"
+		size = { 70 70 }
+		offset = { 0 25 }
+		fontsize = 20
+	}
+}
+texticon = {
+	icon = xinhai_wang_d
+	iconsize = {
+		texture = "gfx/interface/icons/event_icons/xinhai_wangjingwei_d.dds"
+		size = { 70 70 }
+		offset = { 0 25 }
+		fontsize = 20
+	}
+}
