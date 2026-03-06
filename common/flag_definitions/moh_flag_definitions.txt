@@ -3,7 +3,7 @@
 @canton_scale_cross_x = @[ ( 333 / coa_width ) + 0.001 ]
 @canton_scale_cross_y = @[ ( 205 / coa_height ) + 0.001 ]
 
-CHI = {
+INJECT:CHI = {
     # China
     flag_definition = {
         coa = CHI_han_empire
@@ -375,7 +375,7 @@ FUJ = {
     }
 }
 
-DAI = {
+INJECT:DAI = {
     # Dai Viet
     flag_definition = {
         coa = DAI
@@ -386,7 +386,7 @@ DAI = {
     }
 }
 
-DEFAULT = {
+INJECT:DEFAULT = {
     flag_definition = {
         coa = CHI_guojun
         priority = 1000
@@ -403,7 +403,7 @@ DEFAULT = {
     }
 }
 
-MGL = {
+INJECT:MGL = {
     # Mongolia
     flag_definition = {
         coa = MGL_yuan

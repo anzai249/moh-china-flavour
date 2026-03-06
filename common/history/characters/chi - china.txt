@@ -142,5 +142,9 @@
 				expensive_tastes
 			}
 		}
+
+		create_character = { # 伍秉鉴
+			template = chi_wu_bingjian_executive_template
+		}
 	}
 }

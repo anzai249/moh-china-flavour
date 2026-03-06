@@ -1343,7 +1343,7 @@
 			create_pop = {
 				culture = han
 				size = 2500000
-				religion = mahayana
+				religion = taoism
 			}
 		}
 	}
@@ -1356,7 +1356,7 @@
 			create_pop = {
 				culture = han				# nanfaren
 				size = 3448002
-				religion = mahayana
+				religion = taoism
 			}
 			create_pop = {
 				culture = han				# nanfaren
@@ -1413,6 +1413,11 @@
 				culture = thai
 				size = 3992
 			}
+			create_pop = {
+				culture = champa
+				religion = sunni
+				size = 3947
+			}
 		}
 		region_state:CAM = {
 			create_pop = {
@@ -1424,11 +1429,6 @@
 				size = 23996
 			}
 			create_pop = {
-				culture = khmer
-				religion = animist
-				size = 12000
-			}
-			create_pop = {
 				culture = vietnamese
 				size = 13002
 			}
@@ -1437,6 +1437,28 @@
 				culture = khmer
 				size = 40204
 			}
+			create_pop = {
+				culture = champa
+				religion = sunni
+				size = 14008
+			}
+		}
+		region_state:KLO = {
+			create_pop = {
+				culture = khmer
+				religion = animist
+				size = 33000
+			}
+			create_pop = {
+				culture = lao
+				religion = animist
+				size = 7000
+			}
+			create_pop = {
+				culture = champa
+				religion = animist
+				size = 5000
+			}
 		}
 	}
 	s:STATE_BANGKOK = {
@@ -1444,10 +1466,6 @@
 			create_pop = {
 				culture = thai
 				size = 1534004
-			}
-			create_pop = {
-				culture = malay
-				size = 184400
 			}
 			create_pop = {
 				culture = yue
@@ -1492,6 +1510,22 @@
 				pop_type = slaves
 				culture = vietnamese
 				size = 20100
+			}
+			create_pop = {
+				culture = zhuang
+				size = 33000
+			}
+			create_pop = {
+				culture = zhuang
+				religion = mahayana
+				size = 11000
+			}
+		}
+		region_state:SCT = {
+			create_pop = {
+				culture = lao
+				religion = animist
+				size = 29000
 			}
 		}
 	}
@@ -1569,6 +1603,28 @@
 				culture = vietnamese
 				religion = animist
 				size = 10000
+			}
+			create_pop = {
+				culture = champa
+				religion = sunni
+				size = 82000
+			}
+			create_pop = {
+				culture = champa
+				religion = hindu
+				size = 8000
+			}
+		}
+		region_state:DGR = {
+			create_pop = {
+				culture = champa
+				religion = animist
+				size = 50000
+			}
+			create_pop = {
+				culture = khmer
+				religion = animist
+				size = 5000
 			}
 		}
 	}

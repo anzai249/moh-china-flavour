@@ -25,3 +25,28 @@
         chance = 100
     }
 }
+
+chi_wu_bingjian_executive_template = {
+    first_name = moh_Bingjian
+    last_name = moh_Wu
+    culture = cu:yue
+    historical = yes
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    birth_date = 1769.1.1
+    traits = {
+        expensive_tastes
+        ambitious
+    }
+    executive_usage = {
+        country_trigger = {
+            has_dlc_feature = mp1_content
+        }
+        company_trigger = {
+            is_company_type = company_type:company_ewo_hong
+        }
+        earliest_usage_date = 1836.1.1
+        latest_usage_date = 1842.9.4
+        chance = 100
+    }
+}

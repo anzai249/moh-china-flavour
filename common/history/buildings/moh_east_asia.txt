@@ -88,4 +88,20 @@
 			}
 		}
 	}
+	s:STATE_GUANGDONG = {
+		region_state:CHI={
+			create_building={
+				building="building_tea_plantation"
+				add_ownership={
+					company={
+						type=company_ewo_hong
+						country="c:CHI"
+						levels=5
+					}
+				}
+				reserves=1
+				activate_production_methods={ "default_building_tea_plantation" "pm_road_carts"  }
+			}
+		}
+	}
 }

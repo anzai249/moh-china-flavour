@@ -448,3 +448,16 @@ Release 1.3.3 "Pivot"
 Fixes:
 
 - Xinhai Revolution JE UI not showing.
+
+Release 1.4 "Horse"
+
+Changes:
+- New company: Ewo Hong.
+- New character: Howqua Wu.
+
+Fixes:
+
+- Flag definitions.
+- Taiping rebellion event misreplacement.
+- Communism in China event trigger.
+- Native population in south Vietnam.
