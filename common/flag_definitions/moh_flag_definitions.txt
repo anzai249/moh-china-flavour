@@ -3,7 +3,7 @@
 @canton_scale_cross_x = @[ ( 333 / coa_width ) + 0.001 ]
 @canton_scale_cross_y = @[ ( 205 / coa_height ) + 0.001 ]
 
-INJECT:CHI = {
+REPLACE:CHI = {
     # China
     flag_definition = {
         coa = CHI_han_empire
@@ -420,15 +420,15 @@ INJECT:MGL = {
     }
 }
 
-CCP = {
+REPLACE_OR_CREATE:CCP = {
     flag_definition = {
         coa = CHI_zhongsu
-        priority = 1
+        priority = 1000
         subject_canton = CHI_zhongsu
     }
     flag_definition = {
         coa = CHI_communist
-        priority = 2
+        priority = 2000
         subject_canton = sub_CHI_communist
         trigger = {
             scope:actor ?= {
