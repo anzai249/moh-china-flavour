@@ -540,7 +540,152 @@ REPLACE_OR_CREATE:ideology_moh_kmt = {
 	}
 }
 
-ideology_yang_du = {
-	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_yang_du.dds"
+
+REPLACE_OR_CREATE:ideology_moh_right_kmt = {
+	# 国民党右派
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_leader_right_kmt.dds"
 	character_ideology = yes
+	
+	lawgroup_governance_principles = {
+		law_theocracy = strongly_disapprove
+		law_monarchy = strongly_disapprove
+		law_presidential_republic = strongly_approve
+		law_parliamentary_republic = disapprove
+		law_council_republic = strongly_disapprove
+		law_corporate_state = approve
+	}
+	
+	lawgroup_rights_of_women = {
+		law_womens_suffrage = approve
+		law_women_in_the_workplace = approve
+		law_women_own_property = approve
+		law_no_womens_rights = strongly_disapprove
+	}
+	
+	lawgroup_welfare = {
+		law_poor_laws = approve
+		law_no_social_security = disapprove
+		law_wage_subsidies = approve
+		law_old_age_pension = disapprove
+	}
+	
+	lawgroup_land_reform = {
+		law_serfdom = strongly_disapprove
+		law_tenant_farmers = neutral
+		law_homesteading = neutral
+		law_collectivized_agriculture = strongly_disapprove
+		law_commercialized_agriculture = approve
+	}
+
+	lawgroup_distribution_of_power = {
+		law_single_party_state = strongly_approve
+		law_landed_voting = disapprove
+		law_autocracy = neutral
+		law_oligarchy = approve
+		law_wealth_voting = neutral
+		law_census_voting = approve
+		law_universal_suffrage = neutral
+		law_anarchy = strongly_disapprove
+		law_technocracy = neutral
+	}
+
+	lawgroup_internal_security = {
+		law_secret_police = approve
+		law_national_guard = neutral
+		law_no_home_affairs = disapprove
+		law_guaranteed_liberties = strongly_disapprove
+	}
+
+	lawgroup_free_speech = {
+		law_outlawed_dissent = neutral
+		law_censorship = approve
+		law_right_of_assembly = disapprove
+		law_protected_speech = disapprove
+	}
+
+	country_trigger = {
+		OR = {
+			AND = {
+				OR = {
+					country_has_primary_culture = cu:han
+					country_has_primary_culture = cu:yue
+					country_has_primary_culture = cu:min
+					country_has_primary_culture = cu:manchu
+					country_has_primary_culture = cu:hakka
+					civil_war_origin_country ?= c:CHI
+				}
+				has_technology_researched = egalitarianism
+				NOT = {
+					has_law = law_type:law_monarchy
+				}
+				has_variable = kmt_divided
+			}
+			AND = {
+				exists = c:CHI
+				is_subject_of = c:CHI
+				c:CHI = {
+					has_technology_researched = egalitarianism
+					NOT = {
+						has_law = law_type:law_monarchy
+					}
+					has_variable = kmt_divided
+				}
+			}
+		}
+	}
+	
+	interest_group_leader_trigger = {
+		ideology_moh_kmt_valid_trigger = yes
+	}
+
+	non_interest_group_leader_trigger = {
+		NOT = {
+			has_role = agitator
+		}
+		interest_group = {
+			ideology_moh_kmt_valid_trigger = yes
+		}
+	}
+
+	interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				owner = { has_variable = lost_opium_wars }
+			}
+			add = 20
+		}
+		
+		if = {
+			limit = {
+				owner = { has_law = law_type:law_presidential_republic }
+			}
+			multiply = 2
+		}
+
+		if = {
+			limit = {
+				owner = { has_law = law_type:law_autocracy }
+			}
+			multiply = 0.5
+		}
+	}
+
+	non_interest_group_leader_weight = {
+		value = 100
+		if = {
+			limit = {
+				interest_group = {
+					OR = {
+						has_variable = communist_ig_var
+						has_variable = chose_vanguardism
+						has_variable = chose_anarchism
+						has_variable = chose_communism
+						has_variable = chose_conservatism
+					}
+				}
+			}
+			multiply = 0.1
+		}
+	}
 }
