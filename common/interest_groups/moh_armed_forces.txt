@@ -3,6 +3,7 @@
 		ideology_moh_revolutionary
 		ideology_moh_reformer
 		ideology_moh_kmt
+		ideology_moh_right_kmt
 	}
 
 	on_enable = {

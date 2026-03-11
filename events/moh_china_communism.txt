@@ -32,6 +32,16 @@ china_communism.1 = {
 	cooldown = { days = very_long_modifier_time }
 
 	immediate = {
+		s:STATE_JIANGXI = {
+			random_scope_state = {
+				limit = {
+					NOT = {
+						owner = c:CCP
+					}
+				}
+				save_scope_as = jiangxi_scope
+			}
+		}
 		set_global_variable = ccp_rise_up_happened
 		set_variable = ccp_rise_up_happened_china
 		create_country = {
@@ -54,11 +64,6 @@ china_communism.1 = {
 					}
 				}
                 c:CCP = {
-				    s:STATE_JIANGXI = {
-                        random_scope_state = {
-                            set_state_name = STATE_JIANGXI_soviet
-                        }
-                    }
                     # if = {
                     #     limit = { exists = py:communist_party }
                     #     py:communist_party = {
@@ -240,15 +245,6 @@ china_communism.1 = {
 					}
 					activate_law = law_type:law_closed_borders
 				}
-				add_modifier = {
-					name = modifier_paris_commune_politics
-					days = normal_modifier_time
-					is_decaying = yes
-				}
-				add_modifier = {
-					name = modifier_paris_commune_not_dying_economy
-					days = normal_modifier_time
-				}
 			}
 		}
 		c:CCP = {
@@ -268,7 +264,7 @@ china_communism.1 = {
 					this = c:CCP
 				}
 			}
-			save_scope_as = paris_scope
+			save_scope_as = ccp_scope
 		}
 		# ruler = {
 		# 	save_scope_as = ruler_scope
@@ -279,38 +275,36 @@ china_communism.1 = {
 	}
 
 	option = {
-		name = paris_commune.1.a
+		name = china_communism.1.a
 		default_option = yes
 		add_journal_entry = {
-			type = je_the_paris_commune_france
+			type = je_encirclement_campaigns
 		}
 		c:CCP = {
 			hidden_effect = {
-				# add_journal_entry = {
-				# 	type = je_the_paris_commune_communards
-				# }
+				add_journal_entry = {
+					type = je_anti_encirclement
+				}
 				add_loyalists = {
 					value = 0.9
 				}
 				c:CHI = {
 					add_treasury = -100000
 				}
-				add_treasury = 100000	
+				add_treasury = 100000
 			}
 		}
-		custom_tooltip = commune_progress_start_at_40
-		set_variable = paris_commune_fra_perspective
 	}
 	option = {
-		name = paris_commune.1.b
+		name = china_communism.1.b
 		add_journal_entry = {
-			type = je_the_paris_commune_france
+			type = je_encirclement_campaigns
 		}
 		c:CCP = {
 			hidden_effect = {
-				# add_journal_entry = {
-				# 	type = je_the_paris_commune_communards
-				# }
+				add_journal_entry = {
+					type = je_anti_encirclement
+				}
 				add_loyalists = {
 					value = 0.9
 				}
@@ -320,13 +314,12 @@ china_communism.1 = {
 				add_treasury = 100000	
 			}
 		}
-		custom_tooltip = commune_progress_start_at_60
-		set_variable = paris_commune_prc_perspective
+		play_as = c:CCP
 	}
 }
 
 china_communism.2 = {
-	# 中山舰事件事件
+	# 中山舰事件
 	type = country_event
 	placement = scope:canton_scope
 	event_image = {
@@ -395,8 +388,8 @@ china_communism.2 = {
 		custom_tooltip = {
 			text = china_communism.2.a_tt
 			set_global_variable = canton_coup_anti_communist
+			divide_kmt = yes
 		}
-		divide_kmt = yes
 		c:CHI = {
 			add_loyalists = {
 				value = -0.2

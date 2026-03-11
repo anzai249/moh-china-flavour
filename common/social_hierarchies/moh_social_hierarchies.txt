@@ -1,8 +1,4 @@
-﻿default_social_hierarchy = {
-	is_default = yes
-}
-
-china_shinonggongshang_system = {
+﻿china_shinonggongshang_system = {
 	is_default = no
 	pop_criteria = {
 		custom_tooltip = {

@@ -295,10 +295,10 @@ divide_kmt = {
             has_ideology = ideology:ideology_moh_kmt
         }
         random_list = {
-            1 = {
+            4 = {
                 set_ideology = ideology:ideology_social_democrat
             }
-            1 = {
+            6 = {
                 set_ideology = ideology:ideology_moh_right_kmt
             }
         }

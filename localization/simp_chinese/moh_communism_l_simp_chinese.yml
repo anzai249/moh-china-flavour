@@ -1,5 +1,9 @@
 ﻿l_simp_chinese:
   china_communism.1.t: "共产主义者起义"
+  china_communism.1.d: "共产党人在[SCOPE.sState('jiangxi_scope').GetName]发动了起义"
+  china_communism.1.f: "共产党的激进分子在[SCOPE.sState('jiangxi_scope').GetName]揭竿而起。他们宣扬土地革命与工农政权，号召贫苦农民与失意士兵加入他们的队伍。地方秩序迅速动荡，红色旗帜在乡村与山林间飘扬。对于当局而言，这既是一场叛乱，也是一种新的政治威胁——是迅速出兵围剿，还是任其退入山林、化为难以扑灭的游击火种，成为摆在眼前的抉择。"
+  china_communism.1.a: "围剿共匪"
+  china_communism.1.b: "上山打游击"
   from_ccp_land_revolution_ig: "土地革命"
   china_communism.2.t: "中山舰事件"
   china_communism.2.d: "[SCOPE.sState('canton_scope').GetCityHubName]发生一起政治风波，局势紧张"

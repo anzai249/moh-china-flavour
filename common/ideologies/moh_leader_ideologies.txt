@@ -660,7 +660,7 @@ REPLACE_OR_CREATE:ideology_moh_right_kmt = {
 			limit = {
 				owner = { has_law = law_type:law_presidential_republic }
 			}
-			multiply = 2
+			multiply = 1.5
 		}
 
 		if = {
