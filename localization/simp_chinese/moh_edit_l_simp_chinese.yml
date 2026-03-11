@@ -20,6 +20,8 @@
   dyn_c_shandong_clique: "鲁系"
   dyn_c_yunnan_clique: "滇系"
   STATE_XIAN: "陕西"
+  XIN: "新疆"
+  XIN_ADJ: "新疆"
   #States Overhaul
   STATE_ALXA: "西套"
   STATE_SUZHOU: "松沪"
