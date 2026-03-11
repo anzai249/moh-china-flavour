@@ -83,6 +83,28 @@ REPLACE:XIB = {
 	capital = STATE_NINGXIA
 }
 
+REPLACE:XIN = {
+	color = { 255  234  174 }
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { han uighur }
+	capital = STATE_TIANSHAN
+}
+
+TURKISTAN = {
+	color = { 46 115 229 }
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { uighur }
+	
+	capital = STATE_DZUNGARIA
+}
+
 CCP = { # Communist China
 	color = { 237 41 57 }
 	

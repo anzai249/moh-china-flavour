@@ -475,31 +475,28 @@ HBE = {
 }
 
 
-XIN = { # Xinjiang
-    flag_definition = {
-        coa = XIN
-        allow_overlord_canton = yes
-        coa_with_overlord_canton = XIN_subject
-        subject_canton = XIN
-        priority = 1
-    }
-    flag_definition = {
-        coa = XIN_republic
-        subject_canton = XIN_republic
-        priority = 9
-        trigger = {
-            coa_def_republic_flag_trigger = yes
-        }
-    }
+REPLACE:XIN = { # Xinjiang
     flag_definition = {
         coa = XIN_warlord
         subject_canton = XIN_warlord
         priority = 10
+    }
+}
+
+TURKISTAN = {
+    flag_definition = {
+        coa = TURKISTAN
+        allow_overlord_canton = yes
+        coa_with_overlord_canton = XIN_subject
+        subject_canton = TURKISTAN
+        priority = 1
+    }
+    flag_definition = {
+        coa = TURKISTAN_republic
+        subject_canton = TURKISTAN_republic
+        priority = 9
         trigger = {
             coa_def_republic_flag_trigger = yes
-            scope:actor ?= {
-                has_government_type = gov_warlord_state
-            }
         }
     }
 }

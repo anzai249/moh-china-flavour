@@ -1,3 +1,6 @@
 ﻿l_english:
- HUB_NAME_STATE_SHAOZHOU_port_cn: "Xin'an"
- STATE_JIANGXI_soviet: "Central Soviet Area"
+  HUB_NAME_STATE_SHAOZHOU_port_cn: "Xin'an"
+  STATE_JIANGXI_soviet: "Central Soviet Area"
+  STATE_ALTAI_state_name_cn: "Altan Nuur"
+  STATE_TUVA_state_name_cn: "Tannu Uriankhai"
+  STATE_KIRGHIZIA_state_name_cn: "Rehai"

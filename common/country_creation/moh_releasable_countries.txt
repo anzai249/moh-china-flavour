@@ -45,6 +45,13 @@ INJECT:MCH = {
 	}
 }
 
+TURKISTAN = {
+	states = {
+		STATE_DZUNGARIA
+	}
+	ai_will_do = { always = no }
+}
+
 # YETTESHEHER = {
 # 	states = {
 # 		STATE_TIANSHAN

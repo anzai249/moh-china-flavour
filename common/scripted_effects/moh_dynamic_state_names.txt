@@ -7,9 +7,23 @@ INJECT:assign_state_hub_dynamic_names = {
         }
 		assign_state_name_region_south_china = yes
 	}
+	if = {
+        limit = {
+        	region = sr:region_west_siberia
+        }
+		assign_state_name_region_west_siberia = yes
+	}
+    if = {
+        limit = {
+            region = sr:region_central_asia
+        }
+        assign_state_name_region_central_asia = yes
+    }
 }
 
-assign_state_name_region_south_china = {
+## South China
+
+INJECT_OR_CREATE:assign_state_name_region_south_china = {
     if = {
         limit = {
             state_region = {
@@ -30,6 +44,91 @@ STATE_SHAOZHOU_state_name_assign = {
             }
         }
 		reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+## West Siberia
+
+INJECT_OR_CREATE:assign_state_name_region_west_siberia = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_ALTAI ?= this
+            }
+        }
+        STATE_ALTAI_state_name_assign = yes
+    }
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_TUVA ?= this
+            }
+        }
+        STATE_TUVA_state_name_assign = yes
+    }
+}
+
+STATE_ALTAI_state_name_assign = {
+    if = {
+        limit = {
+            owner = {
+                NOT = {
+                    country_has_primary_culture = cu:han
+                    country_has_primary_culture = cu:manchu
+                    country_has_primary_culture = cu:mongol
+                    country_has_primary_culture = cu:uighur
+                }
+            }
+        }
+		reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+STATE_TUVA_state_name_assign = {
+    if = {
+        limit = {
+            owner = {
+                NOT = {
+                    country_has_primary_culture = cu:han
+                    country_has_primary_culture = cu:manchu
+                    country_has_primary_culture = cu:mongol
+                    country_has_primary_culture = cu:uighur
+                }
+            }
+        }
+		reset_state_name = yes
+        reset_hub_names = yes
+    }
+}
+
+## Central Asia
+
+INJECT_OR_CREATE:assign_state_name_region_central_asia = {
+    if = {
+        limit = {
+            state_region = {
+                s:STATE_KIRGHIZIA ?= this
+            }
+        }
+        STATE_KIRGHIZIA_state_name_assign = yes
+    }
+}
+
+STATE_KIRGHIZIA_state_name_assign = {
+    if = {
+        limit = {
+            owner = {
+                NOT = {
+                    country_has_primary_culture = cu:han
+                    country_has_primary_culture = cu:manchu
+                    country_has_primary_culture = cu:mongol
+                    country_has_primary_culture = cu:uighur
+                }
+            }
+        }
+        reset_state_name = yes
         reset_hub_names = yes
     }
 }

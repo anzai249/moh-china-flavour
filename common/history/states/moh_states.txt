@@ -63,6 +63,9 @@
 		add_state_trait = state_trait_savage_land
 	}
 	s:STATE_ALTAI = {
+		random_scope_state = {
+			set_state_name = STATE_ALTAI_state_name_cn
+		}
 		add_state_trait = state_trait_savage_land
 	}
 	s:STATE_RYUKYU_ISLANDS = {
@@ -93,6 +96,21 @@
 		add_homeland = cu:min
 		add_homeland = cu:yuanzhumin
 		add_claim = c:CHI
+	}
+
+	s:STATE_TUVA = {
+		random_scope_state = {
+			set_state_name = STATE_TUVA_state_name_cn
+		}
+	}
+
+	s:STATE_KIRGHIZIA = {
+		random_scope_state = {
+			limit = {
+				owner = c:CHI
+			}
+			set_state_name = STATE_KIRGHIZIA_state_name_cn
+		}
 	}
 
 	# Overhaul

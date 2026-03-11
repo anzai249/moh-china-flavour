@@ -4,6 +4,8 @@
   je_warlord_china: "Generals and Ambans"
   HUB_NAME_STATE_GUANGDONG_city: "Canton"
   STATE_XIAN: "Shaanxi"
+  XIN: "Xinjiang"
+  XIN_ADJ: "Xinjiang"
 
   # States Overhaul
   STATE_ALXA: "Western Hetao"

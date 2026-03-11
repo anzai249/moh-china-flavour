@@ -452,12 +452,18 @@ Fixes:
 Release 1.4 "Horse"
 
 Changes:
+
 - New company: Ewo Hong.
 - New character: Howqua Wu.
+- Flag of Tuva.
+- Split Xinjiang into two releasable countries by cultures.
+- Altan Nuur, Tannu Uriankhai and Rehai as new dynamic state names.
+- New law for Heavenly Kingdom: Heavenly Land System.
+- New ideology: Right Kuomintang Nationalist.
 
 Fixes:
 
 - Flag definitions.
-- Taiping rebellion event misreplacement.
+- Heavenly Kingdom event misreplacement.
 - Communism in China event trigger.
 - Native population in south Vietnam.
