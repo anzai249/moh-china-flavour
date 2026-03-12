@@ -252,9 +252,11 @@ china_communism.1 = {
 			ig:ig_trade_unions = {
 				save_scope_as = communist_party_scope
 			}
-			create_bidirectional_truce = {
-				country = c:CHI
-				months = 24
+			create_diplomatic_play = {
+				target_state = c:CHI.capital
+				war = yes
+				annex_as_civil_war = yes
+				type = dp_revolution
 			}
 		}
 		# set_variable = { name = PRC_recognition_level value = 0 }
@@ -272,18 +274,19 @@ china_communism.1 = {
 		ROOT = {
 			save_scope_as = china_scope
 		}
+		add_contextless_journal_entry = je_anti_encirclement
 	}
 
 	option = {
 		name = china_communism.1.a
 		default_option = yes
-		add_journal_entry = {
-			type = je_encirclement_campaigns
+		show_as_tooltip = {
+			add_contextless_journal_entry = je_anti_encirclement
 		}
 		c:CCP = {
 			hidden_effect = {
-				add_journal_entry = {
-					type = je_anti_encirclement
+				show_as_tooltip = {
+					add_contextless_journal_entry = je_anti_encirclement
 				}
 				add_loyalists = {
 					value = 0.9
@@ -297,13 +300,13 @@ china_communism.1 = {
 	}
 	option = {
 		name = china_communism.1.b
-		add_journal_entry = {
-			type = je_encirclement_campaigns
+		show_as_tooltip = {
+			add_contextless_journal_entry = je_anti_encirclement
 		}
 		c:CCP = {
 			hidden_effect = {
-				add_journal_entry = {
-					type = je_anti_encirclement
+				show_as_tooltip = {
+					add_contextless_journal_entry = je_anti_encirclement
 				}
 				add_loyalists = {
 					value = 0.9

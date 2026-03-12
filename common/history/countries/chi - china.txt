@@ -64,7 +64,7 @@
 
 		add_company = company_type:company_ewo_hong
 		company:company_ewo_hong = {
-			set_company_establishment_date = 1783.1.1
+			set_company_establishment_date = 1836.1.1 # 1783.1.1 actually, but prevent disbandment
 			set_company_state_region = s:STATE_GUANGDONG
 		}
 	}

@@ -321,6 +321,18 @@ je_xianfeng = {
 				}
 				kill_character = yes
 			}
+			if = {
+				limit = {
+					NOT = {
+						any_character = {
+							has_template = chi_tongzhi_template
+						}
+					}
+				}
+				create_character = {
+					template = chi_yixuan_character_template
+				}
+			}
 		}
 		add_modifier = {
 			name = modifier_xianfeng_failed

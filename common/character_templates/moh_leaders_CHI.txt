@@ -2688,3 +2688,15 @@ chi_he_changling_character_template = {
         chance = 90
     }
 }
+
+chi_yixuan_character_template = {
+    first_name = moh_Yixuan
+    last_name = "Aisin_Gioro"
+    historical = yes
+    culture = cu:manchu
+    interest_group = ig_landowners
+    ideology = ideology_traditionalist
+    birth_date = 1840.10.16
+    traits = { honorable }
+    ruler = yes
+}

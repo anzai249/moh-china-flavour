@@ -6,7 +6,7 @@
 }
 
 # Qing Monarchy
-qing_monarchy_yearly_events = {
+qing_monarchy_half_yearly_events = {
 	random_events = { 
 		50 = 0
 		25 = qing_monarchy.1

@@ -530,3 +530,65 @@ company_ewo_hong = {
 		}
 	}
 }
+
+company_fou_foong_flour_mill = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/fou_foong_flour_mill.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_corn.dds"
+	flavored_company = yes
+	building_types = {
+		building_wheat_farm
+		building_rice_farm
+	}
+	extension_building_types = {
+		building_food_industry
+	}
+	preferred_headquarters = { STATE_SUZHOU }
+	possible_prestige_goods = {
+		prestige_bicycle_flour
+	}
+	potential = {
+		has_interest_marker_in_region = region_south_china
+	}
+	attainable = {
+		hidden_trigger = {
+			any_scope_state = {
+				state_region = s:STATE_SUZHOU
+				is_incorporated = yes
+			}
+		}
+	
+	}
+	possible = {
+		c:CHI ?= this
+		any_scope_state = {
+			state_region = s:STATE_SUZHOU
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_rice_farm
+				level >= 5
+			}
+		}
+	}
+	prosperity_modifier = {
+		state_food_security_add = 0.02
+	}
+	ai_weight = {
+		value = 3
+	}
+	ai_construction_targets = {
+		building_wheat_farm = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_SUZHOU
+				is_incorporated = yes
+			}
+		}
+	}
+	ai_will_do = {
+		has_technology_researched = corporate_charters
+		any_scope_state = {
+			state_region = s:STATE_SUZHOU
+			is_incorporated = yes
+		}
+	}
+}

@@ -19,9 +19,14 @@ on_monthly_pulse_country = {
 on_yearly_pulse_country = {
 	on_actions = {
 		# historical_agitators_yearly_events_moh
-		qing_monarchy_yearly_events
 		moh_random_yearly_events
 		moh_linzexu
+	}
+}
+
+on_half_yearly_pulse_country = {
+	on_actions = {
+		qing_monarchy_half_yearly_events
 	}
 }
 
@@ -140,11 +145,11 @@ moh_sunyatsen_je = {
 
 on_heir_born = {
 	on_actions = {
-		moh_qing_monarchy_yearly_events
+		moh_qing_monarchy_on_heir_born_events
 	}
 }
 
-moh_qing_monarchy_yearly_events = {
+moh_qing_monarchy_on_heir_born_events = {
 	effect = {
 		if = {
 			limit = {

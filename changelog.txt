@@ -453,13 +453,14 @@ Release 1.4 "Horse"
 
 Changes:
 
-- New company: Ewo Hong.
-- New character: Howqua Wu.
+- New companies: Ewo Hong, Fou Foong Flour Mill.
+- New characters: Howqua Wu, Yixuan.
 - Flag of Tuva.
 - Split Xinjiang into two releasable countries by cultures.
-- Altan Nuur, Tannu Uriankhai and Rehai as new dynamic state names.
+- Altan Nuur, Tannu Uriankhai and Temurtu Nor as new dynamic state names.
 - New law for Heavenly Kingdom: Heavenly Land System.
 - New ideology: Right Kuomintang Nationalist.
+- Qing monarchy events now triggers half yearly instead of yearly.
 
 Fixes:
 
@@ -467,3 +468,4 @@ Fixes:
 - Heavenly Kingdom event misreplacement.
 - Communism in China event trigger.
 - Native population in south Vietnam.
+- Create Yixuan if Zaichun not exists.

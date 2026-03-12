@@ -84,11 +84,11 @@ law_night_watchmen = {
 	}
 }
 
-# INJECT:law_canton_system = {
-# 	modifier = {
-# 		country_max_companies_add = 1
-# 	}
-# }
+INJECT:law_canton_system = {
+	modifier = {
+		country_max_companies_add = 1
+	}
+}
 
 law_heavenly_land_system = {
 	group = lawgroup_land_reform
