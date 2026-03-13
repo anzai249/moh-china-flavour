@@ -1101,6 +1101,7 @@ ecchi_chi_li_dazhao_character_template = {
                     this = c:ZHI
                 }
             }
+            has_variable = canton_coup_support_communist_china
         }
         interest_group_trigger = {
             ig_counts_as_marginal = no
@@ -1112,7 +1113,7 @@ ecchi_chi_li_dazhao_character_template = {
         }
         earliest_usage_date = 1920.1.1
         latest_usage_date = 1927.4.28
-        chance = 65
+        chance = 90
     }
 }
 

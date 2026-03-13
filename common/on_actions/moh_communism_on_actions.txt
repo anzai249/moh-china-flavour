@@ -28,3 +28,11 @@
 		}
 	}
 }
+
+moh_communism_monthly_events= {
+	random_events = {
+		50 = 0
+		25 = china_communism.1
+		25 = china_communism.2
+	}
+}

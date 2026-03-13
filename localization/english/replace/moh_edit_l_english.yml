@@ -6,6 +6,8 @@
   STATE_XIAN: "Shaanxi"
   XIN: "Xinjiang"
   XIN_ADJ: "Xinjiang"
+  QIA: "Miao"
+  QIA_ADJ: "Miao"
 
   # States Overhaul
   STATE_ALXA: "Western Hetao"

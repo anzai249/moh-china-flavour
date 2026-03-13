@@ -457,7 +457,7 @@ Changes:
 - New characters: Howqua Wu, Yixuan, Zhang Wentian, Bo Gu.
 - First Chinese civil war events and journal entries.
 - Flag of Tuva.
-- Split Xinjiang into two releasable countries by cultures.
+- Releasable countries location minor rework.
 - Altan Nuur, Tannu Uriankhai and Temurtu Nor as new dynamic state names.
 - New law for Heavenly Kingdom: Heavenly Land System.
 - New ideology: Right Kuomintang Nationalist.

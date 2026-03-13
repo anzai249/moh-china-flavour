@@ -26,7 +26,6 @@ china_communism.1 = {
 		NOT = {
 			has_global_variable = ccp_rise_up_happened
 		}
-		always = no
 	}
 
 	cooldown = { days = very_long_modifier_time }
@@ -70,8 +69,42 @@ china_communism.1 = {
                     #         set_ruling_party = yes
                     #         add_momentum = momentum_medium
                     #     }				
-                    # }	
+                    # }
+					create_military_formation = {
+						type = army
+						hq_region = sr:region_south_china
+						name = ig_red_army
+						combat_unit = {
+							type = unit_type:combat_unit_type_irregular_infantry
+							state_region = s:STATE_JIANGXI
+							count = 15
+						}
+						combat_unit = {
+							type = unit_type:combat_unit_type_hussars
+							state_region = s:STATE_JIANGXI
+							count = 5
+						}
+						combat_unit = {
+							type = unit_type:combat_unit_type_cannon_artillery
+							state_region = s:STATE_JIANGXI
+							count = 5
+						}
+					}
                 }
+				# s:STATE_JIANGXI = {
+				# 	region_state:CCP = {
+				# 		create_building={
+				# 			building = building_barrack
+				# 			add_ownership={
+				# 				country={
+				# 					country=c:CCP
+				# 					levels=5
+				# 				}
+				# 			}
+				# 			reserves=1
+				# 		}
+				# 	}
+				# }
 				change_relations = {
 					country = c:CHI
 					value = -50
@@ -247,7 +280,7 @@ china_communism.1 = {
 				}
 				add_modifier = {
 					name = modifier_communist_china_soviet_base_area
-					years = 5
+					years = 7
 					is_decaying = yes
 				}
 			}
@@ -256,32 +289,6 @@ china_communism.1 = {
 			save_scope_as = communist_china_scope
 			ig:ig_trade_unions = {
 				save_scope_as = communist_party_scope
-			}
-			create_military_formation = {
-				type = army
-				hq_region = sr:region_south_china
-				name = ig_red_army
-				combat_unit = {
-					type = unit_type:combat_unit_type_line_infantry
-					state_region = s:STATE_JIANGXI
-					count = 15
-				}
-				combat_unit = {
-					type = unit_type:combat_unit_type_hussars
-					state_region = s:STATE_JIANGXI
-					count = 5
-				}
-				combat_unit = {
-					type = unit_type:combat_unit_type_cannon_artillery
-					state_region = s:STATE_JIANGXI
-					count = 5
-				}
-			}
-			create_diplomatic_play = {
-				target_state = c:CHI.capital
-				war = no
-				annex_as_civil_war = yes
-				type = dp_revolution
 			}
 		}
 		# set_variable = { name = PRC_recognition_level value = 0 }
@@ -398,7 +405,6 @@ china_communism.2 = {
 			has_law = law_type:law_theocracy
 			has_law = law_type:law_council_republic
 		}
-		always = no
 	}
 
 	immediate = {
@@ -431,6 +437,7 @@ china_communism.2 = {
 		custom_tooltip = {
 			text = china_communism.2.b_tt
 			set_global_variable = canton_coup_support_communist
+			set_variable = canton_coup_support_communist_china
 		}
 		c:CHI = {
 			add_radicals = {
@@ -446,7 +453,7 @@ china_communism.3 = {
 	type = country_event
 	placement = root
 	event_image = {
-		video = "unspecific_military_retreat"
+		video = "ip3_angry_mob_raiding_minorities"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
@@ -455,6 +462,12 @@ china_communism.3 = {
 	flavor = china_communism.3.f
 	duration = 3
 	dlc = dlc0moh
+	trigger = {}
+	immediate = {}
+	option = {
+		name = china_communism.3.a
+		default_option = yes
+	}
 }
 
 china_communism.4 = {
@@ -462,7 +475,7 @@ china_communism.4 = {
 	type = country_event
 	placement = root
 	event_image = {
-		video = "unspecific_military_retreat"
+		video = "ip3_angry_mob_raiding_minorities"
 	}
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
@@ -471,4 +484,19 @@ china_communism.4 = {
 	flavor = china_communism.4.f
 	duration = 3
 	dlc = dlc0moh
+	trigger = {}
+	immediate = {
+		s:STATE_XIAN = {
+			random_scope_state = {
+				save_scope_as = shaanxi_scope
+			}
+		}
+	}
+	option = {
+		name = china_communism.4.a
+		default_option = yes
+		custom_tooltip = {
+			text = china_communism.4.a_tt
+		}
+	}
 }

@@ -59,6 +59,11 @@ REPLACE:GNG = { #Guangxi
 	capital = STATE_GUANGXI
 }
 
+INJECT:YUE = {
+	tier = principality
+	cultures = { han }
+}
+
 REPLACE:SIH = { #Sichuan
 	color = { 42 189 68 }
 	country_type = unrecognized
@@ -150,7 +155,7 @@ LEP = { # League of Eight Provinces
 	capital = STATE_NANJING
 }
 
-REPLACE:HBE = { # Hubei
+REPLACE_OR_CREATE:HBE = { # Hubei
 	color = { 233 35 35 }
 	country_type = unrecognized
 	
@@ -203,4 +208,8 @@ YETTESHEHER = {
 	cultures = { kirgiz tajik }
 	
 	capital = STATE_TIANSHAN
+}
+
+INJECT:YUN = {
+	cultures = { han }
 }

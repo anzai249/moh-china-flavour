@@ -1106,16 +1106,16 @@ warlord_setup_countries = {
     }
     if = {
         limit = {
-            exists = s:STATE_NINGXIA.region_state:CHI
+            exists = s:STATE_QINGHAI.region_state:CHI
         }
         create_country = {
             tag = XIB
             origin = this
-            state = s:STATE_NINGXIA.region_state:CHI
+            state = s:STATE_QINGHAI.region_state:CHI
             on_created = {
                 random_state = {
                     limit = {
-                        state_region = s:STATE_QINGHAI
+                        state_region = s:STATE_NINGXIA
                     }
                     set_state_owner = c:XIB
                     set_state_type = incorporated

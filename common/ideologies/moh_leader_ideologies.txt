@@ -689,3 +689,14 @@ REPLACE_OR_CREATE:ideology_moh_right_kmt = {
 		}
 	}
 }
+
+INJECT:ideology_communist = {
+	interest_group_leader_weight = {
+		if = {
+			limit = {
+				owner = { has_variable = canton_coup_support_communist_china }
+			}
+			add = 100
+		}
+	}
+}

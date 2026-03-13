@@ -84,6 +84,10 @@ je_anti_encirclement = {
 			name = moh_china_civil_war_score_ccp
 			value = 0
 		}
+		set_global_variable = {
+			name = moh_china_civil_war_cooldown_months
+			value = 12
+		}
 	}
     is_shown_in_lobby = {
 		has_global_variable = ccp_rise_up_happened
@@ -104,7 +108,44 @@ je_anti_encirclement = {
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
+				desc = je_anti_encirclement_status_countdown
+				trigger = {
+					global_var:moh_china_civil_war_cooldown_months > -1
+				}
+			}
+			triggered_desc = {
 				desc = je_anti_encirclement_status
+				trigger = {
+					global_var:moh_china_civil_war_cooldown_months <= -1
+				}
+			}
+		}
+	}
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					global_var:moh_china_civil_war_cooldown_months = 0
+				}
+				change_global_variable = {
+					name = moh_china_civil_war_cooldown_months
+					add = -1
+				}
+				c:CCP = {
+					create_diplomatic_play = {
+						target_state = c:CHI.capital
+						war = no
+						annex_as_civil_war = yes
+						type = dp_revolution
+					}
+					activate_law = law_type:law_single_party_state
+				}
+			}
+			else = {
+				change_global_variable = {
+					name = moh_china_civil_war_cooldown_months
+					add = -1
+				}
 			}
 		}
 	}
@@ -121,7 +162,7 @@ je_anti_encirclement = {
 			}
 		}
 	}
-	on_complete_all_involved = {
+	on_complete = {
 		random_diplomatic_play = {
 			limit = {
 				target_is = c:CHI
@@ -169,6 +210,26 @@ je_anti_encirclement = {
 				trigger_event = {
 					id = china_communism.4
 				}
+				create_military_formation = {
+					type = army
+					hq_region = sr:region_south_china
+					name = ig_red_army
+					combat_unit = {
+						type = unit_type:combat_unit_type_line_infantry
+						state_region = s:STATE_JIANGXI
+						count = 15
+					}
+					combat_unit = {
+						type = unit_type:combat_unit_type_hussars
+						state_region = s:STATE_NINGXIA
+						count = 5
+					}
+					combat_unit = {
+						type = unit_type:combat_unit_type_cannon_artillery
+						state_region = s:STATE_NINGXIA
+						count = 5
+					}
+				}
 			}
 		}
 		else_if = {
@@ -209,6 +270,14 @@ je_anti_encirclement = {
 				STATE = s:STATE_HAINAN
 				GIVER = c:CHI
 				TAKER = c:CCP
+			}
+			c:CCP = {
+				every_scope_state = {
+					limit = {
+						is_homeland = han
+					}
+					set_state_type = incorporated
+				}
 			}
 		}
 	}

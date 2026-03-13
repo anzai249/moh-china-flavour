@@ -59,3 +59,42 @@ TURKISTAN = {
 
 # 	ai_will_do = { always = no }
 # }
+
+HBE = {
+	states = {
+		STATE_EASTERN_HUBEI
+		STATE_WESTERN_HUBEI
+	}
+	ai_will_do = { always = no }
+}
+
+REPLACE:YUN = {
+	states = {
+		STATE_YUNNAN
+		STATE_GUIZHOU
+	}
+	ai_will_do = { always = no }
+}
+
+INJECT:SIH = {
+	states = {
+		STATE_CHONGQING
+	}
+}
+
+REPLACE:XIB = {
+	states = {
+		STATE_QINGHAI
+	}
+	ai_will_do = { always = no }
+}
+
+REPLACE:YUE = {
+	states = {
+		STATE_GUANGDONG
+		STATE_SHAOZHOU
+		STATE_HAINAN
+		STATE_WESTERN_GUANGDONG
+	}
+	ai_will_do = { always = no }
+}
