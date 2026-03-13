@@ -75,6 +75,16 @@ je_anti_encirclement = {
 	group = je_group_global_international_situations
 	weight = 100
 	should_be_pinned_by_default = yes
+	immediate = {
+		set_global_variable = {
+			name = moh_china_civil_war_score_kmt
+			value = 0
+		}
+		set_global_variable = {
+			name = moh_china_civil_war_score_ccp
+			value = 0
+		}
+	}
     is_shown_in_lobby = {
 		has_global_variable = ccp_rise_up_happened
         OR = {
@@ -89,12 +99,117 @@ je_anti_encirclement = {
 		always = no
 	}
 	modifiers_while_active = {
-		carlist_war_guerilla_warfare
+		modifier_moh_communist_china_guerilla_warfare
+	}
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_anti_encirclement_status
+			}
+		}
 	}
 	complete = {
-		NAND = {
-			exists = c:CHI
-			exists = c:CCP
+		custom_tooltip = {
+			text = je_anti_encirclement_complete_tt
+			OR = {
+				global_var:moh_china_civil_war_score_kmt >= 1
+				global_var:moh_china_civil_war_score_ccp >= 5
+				NAND = {
+					exists = c:CHI
+					exists = c:CCP
+				}
+			}
+		}
+	}
+	on_complete_all_involved = {
+		random_diplomatic_play = {
+			limit = {
+				target_is = c:CHI
+				initiator_is = c:CCP
+			}
+			end_play = yes
+		}
+		c:CHI = {
+			create_bidirectional_truce = {
+				country = c:CCP
+				months = 24
+			}
+		}
+		c:CCP = {
+			if = {
+				limit = {
+					has_modifier = modifier_communist_china_soviet_base_area
+				}
+				remove_modifier = modifier_communist_china_soviet_base_area
+			}
+		}
+		if = {
+			limit = {
+				global_var:moh_china_civil_war_score_kmt >= 1
+			}
+			s:STATE_XIAN = {
+				set_owner_of_provinces = {
+					country = c:CCP
+					provinces = { x1FCA38 x08880B x8A81C7 x6E8E64 xFE1D86 xA7D4E7
+					x32EDB3 xF40585 x434092 x5E3640 x3CE218 x826987 xCBACD2 x38D512 
+					x09BD45 x3A0F5D xADCF92 xD01080 x7ED6E0 x2B47B0 }
+				}
+			}
+			transfer_state = {
+				STATE = s:STATE_JIANGXI
+				GIVER = c:CCP
+				TAKER = c:CHI
+			}
+			c:CHI = {
+				trigger_event = {
+					id = china_communism.3
+				}
+			}
+			c:CCP = {
+				trigger_event = {
+					id = china_communism.4
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				global_var:moh_china_civil_war_score_ccp >= 5
+			}
+			transfer_state = {
+				STATE = s:STATE_JIANGXI
+				GIVER = c:CHI
+				TAKER = c:CCP
+			}
+			transfer_state = {
+				STATE = s:STATE_FUJIAN
+				GIVER = c:CHI
+				TAKER = c:CCP
+			}
+			transfer_state = {
+				STATE = s:STATE_HUNAN
+				GIVER = c:CHI
+				TAKER = c:CCP
+			}
+			transfer_state = {
+				STATE = s:STATE_SOUTHERN_ANHUI
+				GIVER = c:CHI
+				TAKER = c:CCP
+			}
+			transfer_state = {
+				STATE = s:STATE_EASTERN_HUBEI
+				GIVER = c:CHI
+				TAKER = c:CCP
+			}
+			transfer_state = {
+				STATE = s:STATE_ZHEJIANG
+				GIVER = c:CHI
+				TAKER = c:CCP
+			}
+			transfer_state = {
+				STATE = s:STATE_HAINAN
+				GIVER = c:CHI
+				TAKER = c:CCP
+			}
 		}
 	}
 }

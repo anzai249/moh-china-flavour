@@ -359,3 +359,19 @@ modifier_yue_customs_taxes_addition = {
 	country_tax_income_add = 2000
 	interest_group_ig_petty_bourgeoisie_approval_add = -1
 }
+
+
+modifier_moh_communist_china_guerilla_warfare = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	character_advancement_speed_mult = -0.9
+	battle_total_combat_width_mult = -0.5
+}
+
+modifier_communist_china_soviet_base_area = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	unit_offense_mult = 0.05
+	unit_defense_mult = 0.6
+	country_war_exhaustion_casualties_mult = -0.5
+	state_conscription_rate_add = 0.1
+	state_conscription_rate_mult = 0.5
+}

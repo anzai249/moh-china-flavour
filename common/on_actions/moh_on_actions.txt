@@ -288,3 +288,17 @@ moh_self_strengthening_character_creation = {
 		}
 	}
 }
+
+
+
+on_battle_won = {
+	on_actions = {
+		moh_communism_war_battle_score
+	}
+}
+
+on_empty_battle_won = {
+	on_actions = {
+		moh_communism_war_battle_score
+	}
+}

@@ -1,0 +1,30 @@
+﻿moh_communism_war_battle_score = {
+	trigger = {
+		is_involved_in_journal_entry = je_anti_encirclement
+		has_global_variable = ccp_rise_up_happened
+		scope:enemy_country ?= {
+			is_involved_in_journal_entry = je_anti_encirclement
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				c:CHI ?= this
+			}
+			change_global_variable = {
+				name = moh_china_civil_war_score_kmt
+				add = 1
+			}
+		}
+		else_if = {
+			limit = {
+				c:CCP ?= this
+			}
+			change_global_variable = {
+				name = moh_china_civil_war_score_ccp
+				add = 1
+			}
+		}
+	}
+}

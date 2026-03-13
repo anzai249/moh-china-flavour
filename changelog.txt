@@ -454,7 +454,8 @@ Release 1.4 "Horse"
 Changes:
 
 - New companies: Ewo Hong, Fou Foong Flour Mill.
-- New characters: Howqua Wu, Yixuan.
+- New characters: Howqua Wu, Yixuan, Zhang Wentian, Bo Gu.
+- First Chinese civil war events and journal entries.
 - Flag of Tuva.
 - Split Xinjiang into two releasable countries by cultures.
 - Altan Nuur, Tannu Uriankhai and Temurtu Nor as new dynamic state names.
@@ -467,7 +468,6 @@ Fixes:
 
 - Flag definitions.
 - Heavenly Kingdom event misreplacement.
-- Communism in China event trigger.
 - Native population in south Vietnam.
 - Create Yixuan if Zaichun not exists.
 - Wang Jingwei spawns even if he is dead during the Xinhai Revolution.
