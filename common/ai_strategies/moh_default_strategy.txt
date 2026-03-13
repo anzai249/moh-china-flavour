@@ -4843,6 +4843,18 @@ REPLACE:ai_strategy_default = {
 				add = 300
 			}
 		}
+		SHANGHAI = {
+			if = {
+				limit = {
+					# is great power
+					year >= 1850
+					country_rank = rank_value:great_power
+					navy_size >= 30
+					has_interest_marker_in_region = sr:region_south_china
+				}
+				add = 100
+			}
+		}
 	}
 
 	# How important is it that the AI maintains an interest in a specific strategic region (added on top of region value calculations set in defines)

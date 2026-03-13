@@ -626,7 +626,7 @@ ecchi_chi_chiang_kai_shek_character_template = {
     on_created = {
         if = {
             limit = {
-                has_variable = canton_coup_anti_communist
+                has_global_variable = canton_coup_anti_communist
             }
             set_ideology = ideology:ideology_moh_right_kmt
         }
@@ -1366,7 +1366,7 @@ ecchi_chi_wang_jingwei_character_template = {
                 }
             }
             NOT = {
-                has_variable = wangjingwei_dead
+                has_global_variable = wangjingwei_dead
             }
         }
         interest_group_trigger = {
@@ -1383,7 +1383,7 @@ ecchi_chi_wang_jingwei_character_template = {
     on_created = {
         if = {
             limit = {
-                has_variable = canton_coup_anti_communist
+                has_global_variable = canton_coup_anti_communist
             }
             set_ideology = ideology:ideology_social_democrat
         }
@@ -2279,7 +2279,7 @@ chi_soong_chingling_character_template = {
     on_created = {
         if = {
             limit = {
-                has_variable = canton_coup_anti_communist
+                has_global_variable = canton_coup_anti_communist
             }
             set_ideology = ideology:ideology_social_democrat
         }

@@ -461,6 +461,7 @@ Changes:
 - New law for Heavenly Kingdom: Heavenly Land System.
 - New ideology: Right Kuomintang Nationalist.
 - Qing monarchy events now triggers half yearly instead of yearly.
+- Some great powers will be more likely to liberate Shanghai International Settlement.
 
 Fixes:
 
@@ -469,3 +470,5 @@ Fixes:
 - Communism in China event trigger.
 - Native population in south Vietnam.
 - Create Yixuan if Zaichun not exists.
+- Wang Jingwei spawns even if he is dead during the Xinhai Revolution.
+- Ban Boxer Rebellion treaty article English localization.
