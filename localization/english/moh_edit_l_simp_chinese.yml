@@ -22,6 +22,8 @@
   STATE_XIAN: "陕西"
   XIN: "新疆"
   XIN_ADJ: "新疆"
+  QIA: "苗"
+  QIA_ADJ: "苗"
   #States Overhaul
   STATE_ALXA: "西套"
   STATE_SUZHOU: "松沪"
