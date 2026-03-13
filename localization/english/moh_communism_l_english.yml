@@ -10,7 +10,7 @@
   china_communism.2.f: "Some [GetIdeology('ideology_moh_kmt').GetName] believe that [ROOT.GetCountry.GetName] is at risk of being radicalized by communism. To address the potential rebellion, the leadership has decided to impose martial law on Guangzhou and dispatch loyal forces to control the naval vessels, arrest suspected conspirators, and surround political organizations linked to external forces.\n\nThis move quickly stabilized the situation, but also deepened internal divisions within the party, exposing the contradictions in the government's policy towards communism. Although the incident appears to be under control on the surface, underlying tensions remain."
   china_communism.2.a_tt: "This move will cause internal divisions within the [GetIdeology('ideology_moh_kmt').GetName], and communists may turn to violence..."
   china_communism.2.b_tt: "The country may be at risk of being radicalized by communism..."
-  je_anti_encirclement_complete_tt: "Nationalist forces win #variable 1%#! times in encirclement or Communist forces win #variable 5%#! times in anti-encirclement"
+  je_anti_encirclement_complete_tt: "Nationalist forces win #variable 1#! times in encirclement or Communist forces win #variable 5#! times in anti-encirclement"
   je_anti_encirclement_status: "#blue Nationalist#! victories: #variable [GetGlobalVariable('moh_china_civil_war_score_kmt').GetValue]#! times; #red Communist#! victories: #variable [GetGlobalVariable('moh_china_civil_war_score_ccp').GetValue]#! times"
   je_anti_encirclement_status_countdown: "The war will begin in #variable [GetGlobalVariable('moh_china_civil_war_cooldown_months').GetValue]#! months"
   china_communism.3.t: "Communist Retreats Westward"
