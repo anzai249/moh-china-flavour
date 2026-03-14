@@ -475,3 +475,4 @@ Fixes:
 - Create Yixuan if Zaichun not exists.
 - Wang Jingwei spawns even if he is dead during the Xinhai Revolution.
 - Ban Boxer Rebellion treaty article English localization.
+- Vietnamese flag with overlord canton.
