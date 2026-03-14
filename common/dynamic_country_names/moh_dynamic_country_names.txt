@@ -361,3 +361,54 @@ LEP = {
 		}
 	}
 }
+
+# Qinghai Ma
+XIB = {
+	dynamic_country_name = {
+		name = dyn_c_qinghai_ma
+		adjective = dyn_c_qinghai_ma_adj
+		is_main_tag_only = yes
+		priority = 2
+		trigger = {
+			OR = {
+				AND = {
+					has_global_variable = china_shatters
+					scope:actor ?= {
+						has_government_type = gov_warlord_state
+					}
+				}
+				AND = {
+					exists = c:CHI
+					scope:actor ?= {
+						is_subject_of = c:CHI
+					}
+				}
+			}
+		}
+	}
+}
+
+GANSU = {
+	dynamic_country_name = {
+		name = dyn_c_gansu_ma
+		adjective = dyn_c_gansu_ma_adj
+		is_main_tag_only = yes
+		priority = 2
+		trigger = {
+			OR = {
+				AND = {
+					has_global_variable = china_shatters
+					scope:actor ?= {
+						has_government_type = gov_warlord_state
+					}
+				}
+				AND = {
+					exists = c:CHI
+					scope:actor ?= {
+						is_subject_of = c:CHI
+					}
+				}
+			}
+		}
+	}
+}

@@ -84,8 +84,19 @@ REPLACE:XIB = {
 	color = { 68 144 212 }
 	country_type = unrecognized
 	tier = principality
-	cultures = { han tibetan }
+	cultures = { han }
 	capital = STATE_NINGXIA
+}
+
+GANSU = {
+	color = { 122 90 10 }
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { han }
+	
+	capital = STATE_GANSU
 }
 
 REPLACE:XIN = {

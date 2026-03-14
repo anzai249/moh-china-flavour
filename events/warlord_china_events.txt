@@ -597,29 +597,9 @@ REPLACE:warlord_china_events.100 = {
                 origin = this
                 state = s:STATE_QINGHAI.region_state:CHI
                 on_created = {
-                    if = {
-                        limit = {
-                            exists = s:STATE_NINGXIA.region_state:CHI
-                        }
-                        random_state = {
-                            limit = {
-                                state_region = s:STATE_NINGXIA
-                            }
-                            set_state_owner = c:XIB
-                            set_state_type = incorporated
-                        }
-                    }
-                    if = {
-                        limit = {
-                            exists = s:STATE_GANSU.region_state:CHI
-                        }
-                        random_state = {
-                            limit = {
-                                state_region = s:STATE_GANSU
-                            }
-                            set_state_owner = c:XIB
-                            set_state_type = incorporated
-                        }
+                    set_global_variable = {
+                        name = xib_country
+                        value = this
                     }
                     warlord_setup_effect_laws = yes
                     set_variable = warlord_state
@@ -641,6 +621,64 @@ REPLACE:warlord_china_events.100 = {
             c:XIB = {
                 save_scope_as = scope_XIB
 
+            }
+        }
+        if = {
+            limit = {
+                exists = s:STATE_GANSU.region_state:CHI
+            }
+            create_country = {
+                tag = GANSU
+                origin = this
+                state = s:STATE_GANSU.region_state:CHI
+                on_created = {
+                    set_global_variable = {
+                        name = gansu_country
+                        value = this
+                    }
+                    if = {
+                        limit = {
+                            exists = s:STATE_ALXA.region_state:CHI
+                        }
+                        random_state = {
+                            limit = {
+                                state_region = s:STATE_ALXA
+                            }
+                            set_state_owner = c:GANSU
+                            set_state_type = incorporated
+                        }
+                    }
+                    if = {
+                        limit = {
+                            exists = s:STATE_NINGXIA.region_state:CHI
+                        }
+                        random_state = {
+                            limit = {
+                                state_region = s:STATE_NINGXIA
+                            }
+                            set_state_owner = c:GANSU
+                            set_state_type = incorporated
+                        }
+                    }
+                    warlord_setup_effect_laws = yes
+                    set_variable = warlord_state
+                    random_list = {
+                        4 = {
+                        }
+                        1 = {
+                            set_strategy = ai_strategy_unify_china
+                        }
+                    }
+                    if = {
+                        limit = {
+                            country_has_primary_culture = cu:manchu
+                        }
+                        remove_primary_culture = cu:manchu
+                    }
+                }
+            }
+            c:GANSU = {
+                save_scope_as = scope_GANSU
             }
         }
         if = {
@@ -2364,36 +2402,16 @@ warlord_china_events.610 = {
         }
         if = {
             limit = {
-                exists = s:STATE_NINGXIA.region_state:CHI
+                exists = s:STATE_QINGHAI.region_state:CHI
             }
             create_country = {
                 tag = XIB
                 origin = this
-                state = s:STATE_NINGXIA.region_state:CHI
+                state = s:STATE_QINGHAI.region_state:CHI
                 on_created = {
-                    if = {
-                        limit = {
-                            exists = s:STATE_QINGHAI.region_state:CHI
-                        }
-                        random_state = {
-                            limit = {
-                                state_region = s:STATE_QINGHAI
-                            }
-                            set_state_owner = c:XIB
-                            set_state_type = incorporated
-                        }
-                    }
-                    if = {
-                        limit = {
-                            exists = s:STATE_GANSU.region_state:CHI
-                        }
-                        random_state = {
-                            limit = {
-                                state_region = s:STATE_GANSU
-                            }
-                            set_state_owner = c:XIB
-                            set_state_type = incorporated
-                        }
+                    set_global_variable = {
+                        name = xib_country
+                        value = this
                     }
                     warlord_setup_effect_laws = yes
                     set_variable = warlord_state
@@ -2415,6 +2433,64 @@ warlord_china_events.610 = {
             c:XIB = {
                 save_scope_as = scope_XIB
 
+            }
+        }
+        if = {
+            limit = {
+                exists = s:STATE_GANSU.region_state:CHI
+            }
+            create_country = {
+                tag = GANSU
+                origin = this
+                state = s:STATE_GANSU.region_state:CHI
+                on_created = {
+                    set_global_variable = {
+                        name = gansu_country
+                        value = this
+                    }
+                    if = {
+                        limit = {
+                            exists = s:STATE_ALXA.region_state:CHI
+                        }
+                        random_state = {
+                            limit = {
+                                state_region = s:STATE_ALXA
+                            }
+                            set_state_owner = c:GANSU
+                            set_state_type = incorporated
+                        }
+                    }
+                    if = {
+                        limit = {
+                            exists = s:STATE_NINGXIA.region_state:CHI
+                        }
+                        random_state = {
+                            limit = {
+                                state_region = s:STATE_NINGXIA
+                            }
+                            set_state_owner = c:GANSU
+                            set_state_type = incorporated
+                        }
+                    }
+                    warlord_setup_effect_laws = yes
+                    set_variable = warlord_state
+                    random_list = {
+                        4 = {
+                        }
+                        1 = {
+                            set_strategy = ai_strategy_unify_china
+                        }
+                    }
+                    if = {
+                        limit = {
+                            country_has_primary_culture = cu:manchu
+                        }
+                        remove_primary_culture = cu:manchu
+                    }
+                }
+            }
+            c:GANSU = {
+                save_scope_as = scope_GANSU
             }
         }
         if = {

@@ -465,6 +465,7 @@ Changes:
 - Qing monarchy events now triggers half yearly instead of yearly.
 - Some great powers will be more likely to liberate Shanghai International Settlement.
 - Can form United Provinces of China with Chen Jiongming.
+- Qinghai and Gansu will have dynamic country names based on their rulers' last names.
 
 Fixes:
 

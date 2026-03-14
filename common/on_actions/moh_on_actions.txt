@@ -303,3 +303,42 @@ on_empty_battle_won = {
 		moh_communism_war_battle_score
 	}
 }
+
+on_country_released_as_independent = {
+	on_actions = {
+		moh_handle_xib_released
+	}
+}
+
+on_country_released_as_own_subject = {
+	on_actions = {
+		moh_handle_xib_released
+	}
+}
+
+moh_handle_xib_released = {
+	effect = {
+		if = {
+			limit = {
+				c:XIB ?= scope:target
+			}
+			scope:target = {
+				set_global_variable = {
+					name = xib_country
+					value = this
+				}
+			}
+		}
+		if = {
+			limit = {
+				c:GANSU ?= scope:target
+			}
+			scope:target = {
+				set_global_variable = {
+					name = gansu_country
+					value = this
+				}
+			}
+		}
+	}
+}

@@ -254,7 +254,19 @@ XIB = {
         subject_canton = CHI_shibaxing
         allow_overlord_canton = yes
         coa_with_overlord_canton = XIB_subject
-        priority = 1
+        overlord_canton_offset = { 0.35 0.225 }
+        priority = 5
+    }
+}
+
+GANSU = {
+    flag_definition = {
+        coa = GANSU
+        subject_canton = CHI_shibaxing
+        allow_overlord_canton = yes
+        overlord_canton_offset = { 0.35 0.225 }
+        priority = 5
+        coa_with_overlord_canton = GANSU_subject
     }
 }
 
@@ -338,8 +350,21 @@ GUI = {
         coa = GUI
         subject_canton = CHI_shibaxing
         allow_overlord_canton = yes
-        coa_with_overlord_canton = GUI_subject
         priority = 1
+    }
+    flag_definition = {
+        coa = GUI
+        subject_canton = GUI
+        allow_overlord_canton = yes
+        coa_with_overlord_canton = GUI_subject
+        overlord_canton_offset = { 0.35 0.225 }
+        priority = 5
+        trigger = {
+            exists = c:CHI
+            scope:actor ?= {
+                is_subject_of = c:CHI
+            }
+        }
     }
 }
 
@@ -355,7 +380,8 @@ MCH = {
         subject_canton = MCH
         allow_overlord_canton = yes
         coa_with_overlord_canton = MCH_subject
-        priority = 2
+        overlord_canton_offset = { 0.35 0.225 }
+        priority = 5
         trigger = {
             exists = c:CHI
             scope:actor ?= {
