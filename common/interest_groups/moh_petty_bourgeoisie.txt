@@ -10,7 +10,7 @@
 		if = {
 			limit = {
 				any_primary_culture = {
-					has_discrimination_trait = han_chinese
+					has_discrimination_trait = heritage_han
 				}
 			}
 			ig:ig_petty_bourgeoisie = { 

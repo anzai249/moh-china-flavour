@@ -224,7 +224,7 @@ LAN_subject_GBR = {
 
 FRS = { # Taiwan
 	pattern = "pattern_solid.tga"
-	color1 = "blue_light"
+	color1 = "blue_steel"
 	
 	textured_emblem = {
 		texture = "te_coa_taiwan.png"
@@ -481,7 +481,7 @@ YUN_subject = {
 
 FRS_subject = {
 	pattern = "pattern_solid.tga"
-	color1 = "blue_light"
+	color1 = "blue_steel"
 	
 	textured_emblem = {
 		texture = "te_coa_taiwan.png"

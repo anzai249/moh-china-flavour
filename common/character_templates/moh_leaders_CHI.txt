@@ -484,7 +484,7 @@ ecchi_chi_chen_jiongming_character_template = {
     historical = yes
     culture = cu:hakka
     female = no
-    ideology = ideology_atheist
+    ideology = ideology_moh_zgp
     interest_group = ig_intelligentsia
     dna = ecchi_dna_chen_jiongming
     birth_date = 1878.1.18
@@ -498,11 +498,11 @@ ecchi_chi_chen_jiongming_character_template = {
                 OR = {
                     has_state_in_state_region = STATE_GUANGDONG
                     has_state_in_state_region = STATE_SHAOZHOU
+                    has_state_in_state_region = STATE_WESTERN_GUANGDONG
                 }
             }
         }
         interest_group_trigger = {
-            ig_counts_as_marginal = no
             OR = {
                 is_interest_group_type = ig_intelligentsia
                 is_interest_group_type = ig_landowners
@@ -510,7 +510,7 @@ ecchi_chi_chen_jiongming_character_template = {
         }
         earliest_usage_date = 1905.1.1
         latest_usage_date = 1933.9.22
-        chance = 65
+        chance = 85
     }
 }
 

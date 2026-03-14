@@ -88,16 +88,17 @@ REPLACE:CHI = {
     flag_definition = {
         coa = CHI_liansheng
         subject_canton = CHI_liansheng_jing
-        priority = 6
+        priority = 20
         trigger = {
-            moh_coa_def_nihilist_flag_trigger = yes
-            NOT = {
-                has_law = law_type:law_monarchy
+            exists = scope:actor
+            scope:actor ?= {
+                has_law = law_type:law_provincial_autonomy
             }
         }
     }
     flag_definition = {
         coa = CHI_zhongsu
+        subject_canton = CHI_zhongsu
         priority = 6
         trigger = {
             coa_def_communist_flag_trigger = yes

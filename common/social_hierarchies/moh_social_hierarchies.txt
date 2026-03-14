@@ -8,7 +8,7 @@
 			}
 			OR = {
 				culture = {
-					has_discrimination_trait = han_chinese
+					has_discrimination_trait = heritage_han
 				}
 				culture = cu:manchu
 			}

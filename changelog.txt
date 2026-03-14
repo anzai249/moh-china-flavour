@@ -455,6 +455,7 @@ Changes:
 
 - New companies: Ewo Hong, Fou Foong Flour Mill.
 - New characters: Howqua Wu, Yixuan, Zhang Wentian, Bo Gu.
+- New ideologies: Right Kuomintang Nationalist, Provincial Autonomist.
 - First Chinese civil war events and journal entries.
 - Flag of Tuva.
 - Releasable countries location minor rework.
@@ -463,6 +464,7 @@ Changes:
 - New ideology: Right Kuomintang Nationalist.
 - Qing monarchy events now triggers half yearly instead of yearly.
 - Some great powers will be more likely to liberate Shanghai International Settlement.
+- Can form United Provinces of China with Chen Jiongming.
 
 Fixes:
 

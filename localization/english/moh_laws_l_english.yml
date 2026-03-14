@@ -13,6 +13,8 @@
   ideology_yang_du: "Yang Du"
   ideology_yang_du_desc: "#lore This leader is a person with dissociative identity disorder.#!"
   law_five_races_republic: "Five Races Republic"
+  ideology_moh_zgp: "Provincial Autonomist"
+  ideology_moh_zgp_desc: "#lore This leader is a representative of the Provincial Autonomy Faction, advocating for provincial autonomy and opposing centralization.#!"
 
   law_imperial_examinations: "Imperial Examination System"
   law_imperial_examinations_desc: "Bureaucrats are selected through the imperial examination system, which is a rigorous and competitive process that tests candidates on their knowledge of Confucian classics, poetry, and essay writing."
@@ -20,3 +22,5 @@
   law_night_watchmen_desc: "Night Watchmen are the nighttime guardians of the city, patrolling the streets at night, announcing the hours, and ensuring the safety of the residents."
   law_heavenly_land_system: "Heavenly Land System"
   law_heavenly_land_system_desc: "Those who have fields farm them together; those who have food share it together; those who have clothes wear them together; those who have money spend it together. Nowhere is there inequality, and no one goes hungry or cold."
+  law_provincial_autonomy: "Provincial Autonomy"
+  law_provincial_autonomy_desc: "Provinces have high degrees of autonomy, able to independently formulate policies and manage affairs, with the power of the central government greatly weakened."

@@ -135,9 +135,12 @@ REPLACE:CHI = {
 		name = dyn_c_upc
 		adjective = dyn_c_roc_adj
 		is_main_tag_only = yes
-		priority = 1
+		priority = 20
 		trigger = {
-			moh_coa_def_nihilist_flag_trigger = yes
+            exists = scope:actor
+            scope:actor ?= {
+                has_law = law_type:law_provincial_autonomy
+            }
 		}
 	}
 }

@@ -700,3 +700,28 @@ INJECT:ideology_communist = {
 		}
 	}
 }
+
+ideology_moh_zgp = {
+	icon = "gfx/interface/icons/ideology_icons/ideology_leader/ideology_moh_zgp.dds"
+	character_ideology = yes
+
+	lawgroup_governance_principles = {
+		law_theocracy = strongly_disapprove
+		law_monarchy = strongly_disapprove
+		law_presidential_republic = strongly_approve
+		law_parliamentary_republic = disapprove
+		law_council_republic = disapprove
+		law_corporate_state = neutral
+	}
+	lawgroup_distribution_of_power = {
+		law_single_party_state = disapprove
+		law_landed_voting = disapprove
+		law_autocracy = strongly_disapprove
+		law_oligarchy = neutral
+		law_wealth_voting = neutral
+		law_census_voting = strongly_approve
+		law_universal_suffrage = approve
+		law_anarchy = neutral
+		law_technocracy = neutral
+	}
+}

@@ -12,6 +12,8 @@
   ideology_moh_kmt_desc: "#lore 三民主义，吾党所宗。以建民国，以进大同。#!"
   ideology_yang_du: "杨度"
   ideology_yang_du_desc: "#lore 这个领袖是一个人格分裂患者。#!"
+  ideology_moh_zgp: "联省派"
+  ideology_moh_zgp_desc: "#lore 这个领袖是联省派的代表，主张各省自治，反对中央集权。#!"
 
   law_five_races_republic: "五族共和"
   law_imperial_examinations: "科举制"
@@ -20,3 +22,5 @@
   law_night_watchmen_desc: "打更人是城市的夜间守卫，他们在夜间巡逻，整点报时，确保居民的安全。"
   law_heavenly_land_system: "天朝田亩制度"
   law_heavenly_land_system_desc: "有田同耕，有饭同食，有衣同穿，有钱同使，无处不均匀，无人不饱暖。"
+  law_provincial_autonomy: "联省自治"
+  law_provincial_autonomy_desc: "各省拥有高度自治权，能够独立制定政策和管理事务，中央政府的权力被大大削弱。"

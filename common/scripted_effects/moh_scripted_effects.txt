@@ -1043,6 +1043,20 @@ warlord_setup_countries = {
                     set_state_owner = c:YUE
                     set_state_type = incorporated
                 }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_HAINAN
+                    }
+                    set_state_owner = c:YUE
+                    set_state_type = incorporated
+                }
+                random_state = {
+                    limit = {
+                        state_region = s:STATE_WESTERN_GUANGDONG
+                    }
+                    set_state_owner = c:YUE
+                    set_state_type = incorporated
+                }
                 warlord_setup_effect_laws = yes
                 set_variable = warlord_state
                 random_list = {
