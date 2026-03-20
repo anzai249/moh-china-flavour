@@ -1,0 +1,71 @@
+﻿je_hui_rebellion = {
+	icon = "gfx/interface/icons/religion_icons/sunni.dds"
+	group = je_group_global_international_situations
+	weight = 1
+	should_be_pinned_by_default = yes
+	status_desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = je_hui_rebellion_status
+			}
+		}
+	}
+	immediate = {
+		set_global_variable = {
+			name = henan_turmoil
+			value = 0
+		}
+		set_global_variable = {
+			name = yunnan_turmoil
+			value = 0
+		}
+	}
+    is_shown_in_lobby = {
+        OR = {
+        	c:CHI ?= this
+			c:BEI ?= this
+			has_government_type = gov_warlord_state
+        }
+    }
+	should_be_involved = {
+		OR = {
+			has_state_in_state_region = STATE_YUNNAN
+			has_state_in_state_region = STATE_HENAN
+			has_state_in_state_region = STATE_GANSU
+			has_state_in_state_region = STATE_TIANSHAN
+			has_state_in_state_region = STATE_NORTHERN_ANHUI
+		}
+	}
+	complete = {
+		custom_tooltip = {
+			text = je_hui_rebellion_complete_tt
+			has_global_variable = nian_rebellion
+			has_global_variable = yunnan_rebellion_complete
+		}
+	}
+	on_monthly_pulse = {
+		effect = {
+			random_scope_state = {
+				limit = {
+					OR = {
+						state_region = s:STATE_HENAN
+						state_region = s:STATE_NORTHERN_ANHUI
+					}
+				}
+				set_global_variable = {
+					name = henan_turmoil
+					value = turmoil
+				}
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_YUNNAN
+				}
+				set_global_variable = {
+					name = yunnan_turmoil
+					value = turmoil
+				}
+			}
+		}
+	}
+}

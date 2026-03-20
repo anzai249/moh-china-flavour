@@ -1,4 +1,5 @@
 ﻿GLOBAL = {
+    add_contextless_journal_entry = je_hui_rebellion
     every_country = {
         limit = {
             is_player = yes

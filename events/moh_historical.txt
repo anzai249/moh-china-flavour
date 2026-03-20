@@ -791,7 +791,7 @@ moh_historical.11 = {
 	trigger = {
 		c:CHI ?= this
 		NOT = {
-			has_variable = yunnan_rebellion
+			has_global_variable = yunnan_rebellion
 		}
 		has_state_in_state_region = STATE_YUNNAN
 		NOT = {
@@ -806,7 +806,7 @@ moh_historical.11 = {
 		year > 1855
 	}
 	immediate = {
-		set_variable = yunnan_rebellion
+		set_global_variable = yunnan_rebellion
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_YUNNAN
@@ -915,11 +915,11 @@ moh_historical.12 = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	duration = 3
 	trigger = {
-		has_variable = yunnan_rebellion_complete
+		has_global_variable = yunnan_rebellion_complete
 		has_state_in_state_region = STATE_YUNNAN
 		NOT = {
 			has_journal_entry = je_plague_pandemic
-			has_variable = plague_pandemic_complete
+			has_global_variable = plague_pandemic_complete
 		}
 	}
 	immediate = {

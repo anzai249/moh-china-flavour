@@ -96,6 +96,7 @@
 		add_homeland = cu:min
 		add_homeland = cu:yuanzhumin
 		add_claim = c:CHI
+		add_claim = c:FRS
 	}
 
 	s:STATE_TUVA = {

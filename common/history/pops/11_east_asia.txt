@@ -1632,15 +1632,15 @@
 		region_state:LUA = {
 			create_pop = {
 				culture = lao
-				size = 240024
+				size = 216021
 			}
 			create_pop = {
 				culture = miao
-				size = 24832
+				size = 22348
 			}
 			create_pop = {
 				culture = khmu
-				size = 69000
+				size = 62100
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1656,7 +1656,7 @@
 		region_state:SIA = {
 			create_pop = {
 				culture = lao
-				size = 123996
+				size = 81837
 			}
 			create_pop = {
 				culture = shan
@@ -1664,7 +1664,7 @@
 			}
 			create_pop = {
 				culture = thai
-				size = 54560
+				size = 36009
 			}
 			create_pop = {
 				pop_type = slaves
@@ -1689,6 +1689,31 @@
 				pop_type = slaves
 				culture = lao
 				size = 5000
+			}
+		}
+		region_state:DAI = {
+			create_pop = {
+				culture = lao
+				size = 64918
+			}
+			create_pop = {
+				culture = khmu
+				size = 6900
+			}
+			create_pop = {
+				culture = thai
+				size = 18334
+			}
+			create_pop = {
+				culture = miao
+				size = 2400
+			}
+		}
+		region_state:SCT = {
+			create_pop = {
+				culture = lao
+				religion = animist
+				size = 11000
 			}
 		}
 	}
@@ -1776,6 +1801,10 @@
 			}
 		}
 		region_state:SIA = {
+			create_pop = {
+				culture = malay
+				size = 184400
+			}
 			create_pop = {
 				culture = burmese
 				size = 36000

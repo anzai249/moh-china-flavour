@@ -219,7 +219,7 @@ TIB = {
 	}
 }
 
-REPLACE:YUN = {
+INJECT:YUN = {
 	dynamic_country_name = {
 		name = dyn_c_yun_sunni
 		adjective = dyn_c_yun_sunni_adj
@@ -228,6 +228,36 @@ REPLACE:YUN = {
 		trigger = {
 			scope:actor ?= {
 				country_has_state_religion = rel:sunni
+			}
+		}
+	}
+}
+
+FUJ = {
+	dynamic_country_name = {
+		name = dyn_c_fujian_clique
+		adjective = FUJ_ADJ
+		is_main_tag_only = yes
+		priority = 1
+		trigger = {
+			has_global_variable = china_shatters
+			scope:actor ?= {
+				has_government_type = gov_warlord_state
+			}
+		}
+	}
+}
+
+HBE = {
+	dynamic_country_name = {
+		name = dyn_c_hubei_clique
+		adjective = HBE_ADJ
+		is_main_tag_only = yes
+		priority = 1
+		trigger = {
+			has_global_variable = china_shatters
+			scope:actor ?= {
+				has_government_type = gov_warlord_state
 			}
 		}
 	}

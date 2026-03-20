@@ -52,6 +52,8 @@
   dyn_c_ahu_nian_adj: "Nian"
   dyn_c_ning_clique: "Ning Clique"
   dyn_c_ning_clique_adj: "Ning Clique"
+  dyn_c_hubei_clique: "Hubei Clique"
+  dyn_c_fujian_clique: "Fujian Clique"
   dyn_c_an_nam: "An Nam"
   dyn_c_an_nam_adj: "An Namese"
   dyn_c_giao_chi: "Giao Chi"

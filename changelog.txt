@@ -476,3 +476,17 @@ Fixes:
 - Wang Jingwei spawns even if he is dead during the Xinhai Revolution.
 - Ban Boxer Rebellion treaty article English localization.
 - Vietnamese flag with overlord canton.
+
+Release 1.4.1 "Horse"
+
+Changes:
+
+- Potential Rebellion Journal Entry.
+
+Fixes:
+
+- Native population in north Vietnam.
+- MOHB-0027.
+- Chinese Soviet Republic will not be a separatist movement country.
+- Warlord names.
+- Taiwan now claims Formosa.

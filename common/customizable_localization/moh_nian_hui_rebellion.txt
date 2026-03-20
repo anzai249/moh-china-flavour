@@ -1,0 +1,120 @@
+﻿hui_rebellion_status_nian_sol = {
+	type = country
+	random_valid = yes
+	
+	text = {
+		trigger = {
+			any_state = {
+				OR = {
+					state_region = s:STATE_HENAN
+					state_region = s:STATE_NORTHERN_ANHUI
+				}
+				any_scope_pop = {
+					OR = {
+						AND = {
+							is_pop_type = peasants
+							standard_of_living < 10
+						}
+						AND = {
+							is_pop_type = farmers
+							standard_of_living < 10
+						}
+					}
+				}
+			}
+			NOT = {
+				has_global_variable = nian_rebellion
+			}
+		}
+		localization_key = je_hui_rebellion_status_nian_sol_0
+	}
+	text = {
+		trigger = {
+			any_state = {
+				OR = {
+					state_region = s:STATE_HENAN
+					state_region = s:STATE_NORTHERN_ANHUI
+				}
+				any_scope_pop = {
+					OR = {
+						is_pop_type = farmers
+						is_pop_type = peasants
+						AND = {
+							standard_of_living >= 10
+							standard_of_living < 12
+						}
+					}
+				}
+			}
+			NOT = {
+				has_global_variable = nian_rebellion
+			}
+		}
+		localization_key = je_hui_rebellion_status_nian_sol_1
+	}
+	text = {
+		trigger = {
+			any_state = {
+				OR = {
+					state_region = s:STATE_HENAN
+					state_region = s:STATE_NORTHERN_ANHUI
+				}
+				NOT = {
+					any_scope_pop = {
+						OR = {
+							is_pop_type = farmers
+							is_pop_type = peasants
+							AND = {
+								standard_of_living < 12
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				has_global_variable = nian_rebellion
+			}
+		}
+		localization_key = je_hui_rebellion_status_nian_sol_2
+	}
+}
+
+hui_rebellion_status_nian = {
+	type = country
+	random_valid = yes
+	
+	text = {
+		trigger = {
+			NOT = {
+				has_global_variable = nian_rebellion
+			}
+		}
+		localization_key = je_hui_rebellion_status_nian_turmoil
+	}
+	text = {
+		trigger = {
+			has_global_variable = nian_rebellion
+		}
+		localization_key = je_hui_rebellion_status_nian_success_tt
+	}
+}
+
+hui_rebellion_status_yunnan = {
+	type = country
+	random_valid = yes
+	
+	text = {
+		trigger = {
+			NOT = {
+				has_global_variable = yunnan_rebellion_complete
+			}
+		}
+		localization_key = je_hui_rebellion_status_yunnan
+	}
+	text = {
+		trigger = {
+			has_global_variable = yunnan_rebellion_complete
+		}
+		localization_key = je_hui_rebellion_status_yunnan_success_tt
+	}
+}
