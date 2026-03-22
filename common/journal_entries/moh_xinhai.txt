@@ -1,6 +1,9 @@
 ﻿je_xinhai = {
 	icon = "gfx/interface/icons/event_icons/1911_revolution.dds"
 	group = je_group_historical_content
+    is_shown_in_lobby = {
+        c:CHI ?= THIS
+    }
 	modifiers_while_active = {
 		modifier_chi_xinhai
 	}

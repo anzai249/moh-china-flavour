@@ -6,6 +6,9 @@
 	scripted_button = ban_opium_button
 	scripted_button = unban_opium_button
 	scripted_button = legalize_opium_button
+    is_shown_in_lobby = {
+        c:CHI ?= THIS
+    }
 
 	on_monthly_pulse = {
 		random_events = {

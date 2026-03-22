@@ -96,6 +96,9 @@ je_reconquest_of_the_west = {
 	group = je_group_internal_affairs
 	weight = 100
 	should_be_pinned_by_default = yes
+    is_shown_in_lobby = {
+        c:CHI ?= THIS
+    }
 	is_shown_when_inactive = {
 		exists = c:CHI
 		c:CHI = root

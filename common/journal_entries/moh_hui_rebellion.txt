@@ -10,6 +10,9 @@
 			}
 		}
 	}
+	should_show_when_not_involved = {
+		always = no
+	}
 	immediate = {
 		set_global_variable = {
 			name = henan_turmoil
@@ -20,13 +23,13 @@
 			value = 0
 		}
 	}
-    is_shown_in_lobby = {
-        OR = {
-        	c:CHI ?= this
-			c:BEI ?= this
-			has_government_type = gov_warlord_state
-        }
-    }
+    # is_shown_in_lobby = {
+    #     OR = {
+    #     	c:CHI ?= this
+	# 		c:BEI ?= this
+	# 		has_government_type = gov_warlord_state
+    #     }
+    # }
 	should_be_involved = {
 		OR = {
 			has_state_in_state_region = STATE_YUNNAN

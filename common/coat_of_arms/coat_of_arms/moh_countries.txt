@@ -181,13 +181,39 @@ sub_CHI_communist = {
 	}	
 }
 
+CHI_facist_subject_JAP = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_canton.dds"
+		color1 = "blue"
+		instance = { scale = { 1.0 1.0 } position = { 0.575 0.5 } }			
+	}		
+	colored_emblem = {
+		texture = "ce_whitesun.dds"
+		color1 = "white"
+		instance = { scale = { 0.60 0.60 } position = { 0.375 0.25 } }		
+	}
+	colored_emblem = {
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "yellow"
+		instance = { scale = { 0.5 1 } position = { 0.25 0.5 } }
+	}
+	colored_emblem = {
+		texture = "ce_reorganized_roc.dds"
+		color1 = "black"
+		instance = { scale = { 1 1 } position = { 0.085 0.5 } }
+	}
+}
+
 LAN = { # Lanfang
 	
 	pattern = "pattern_solid.tga"
 	color1 = "yellow"
 
 	colored_emblem = {
-		texture = "ce_lanfang_new.png"
+		texture = "ce_lanfang_2.dds"
 		color1 = "black"
 		color2 = "black"
         instance = { position = { 0.5 0.5 } scale = { 1 1 } }		
@@ -832,6 +858,24 @@ TIB_republic = {
 
 HKG = {
 	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	textured_emblem = {
+		texture = "te_coa_hongkong.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+HKG_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+		
+	textured_emblem = {
+		texture = "te_coa_hongkong.dds"
+        instance = { position = { 0.75 0.5 } scale = { 0.75 0.75 } }		
+	}
+}
+HKG_subject_CHI_communism = {
+	pattern = "pattern_solid.tga"
 	color1 = "red"
 
 	colored_emblem = {
@@ -842,6 +886,15 @@ HKG = {
 }
 
 MACAU = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue_light"
+
+	textured_emblem = {
+		texture = "te_coa_macau.dds"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }
+	}
+}
+MACAU_subject_CHI_communism = {
 	pattern = "pattern_solid.tga"
 	color1 = "green"
 

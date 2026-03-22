@@ -241,3 +241,8 @@
   je_hui_rebellion_status_yunnan: "Panthay Rebellion - [concept_turmoil] in Yunnan: [GetGlobalVariable('yunnan_turmoil').GetValue]/#variable 15%#!"
   je_hui_rebellion_status_nian_success_tt: "@green_checkmark! Successfully suppressed the Nian Rebellion"
   je_hui_rebellion_status_yunnan_success_tt: "@green_checkmark! Successfully suppressed the Panthay Rebellion"
+  je_father_of_the_republic_lobby: "Support from the Father of the Republic is crucial for unifying China. Gain his support by enacting laws he favors, winning wars he supports, and increasing his approval."
+  je_reconquest_of_the_west_lobby: "Reclaiming Xinjiang is essential for consolidating control over western territories, preventing interference from foreign powers, and enhancing the nation's overall strength and security."
+  je_new_dynasty_lobby: "Overthrow the old dynasty and establish a new one, or maintain the status quo? Different choices will have profound impacts on the country's future."
+  je_self_strengthing_lobby: "The Self-Strengthening Movement is a key stage in the modernization of China. By developing military, industry, education, and diplomacy, the nation can be strengthened. Completing its objectives will help resist foreign aggression and elevate international standing."
+  je_xinhai_lobby: "We have recently captured several individuals claiming to follow the ideology of [GetIdeology('ideology_moh_revolutionary').GetName]. Their goal is to overthrow the [GetLawType('law_monarchy').GetName] and establish a so-called republic."

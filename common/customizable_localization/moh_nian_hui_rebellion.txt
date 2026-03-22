@@ -35,13 +35,33 @@
 					state_region = s:STATE_HENAN
 					state_region = s:STATE_NORTHERN_ANHUI
 				}
+				NOT = {
+					any_scope_pop = {
+						OR = {
+							AND = {
+								is_pop_type = peasants
+								standard_of_living < 10
+							}
+							AND = {
+								is_pop_type = farmers
+								standard_of_living < 10
+							}
+						}
+					}
+				}
 				any_scope_pop = {
 					OR = {
-						is_pop_type = farmers
-						is_pop_type = peasants
 						AND = {
-							standard_of_living >= 10
-							standard_of_living < 12
+							is_pop_type = peasants
+							AND = {
+								standard_of_living < 12
+							}
+						}
+						AND = {
+							is_pop_type = farmers
+							AND = {
+								standard_of_living < 12
+							}
 						}
 					}
 				}
@@ -62,10 +82,17 @@
 				NOT = {
 					any_scope_pop = {
 						OR = {
-							is_pop_type = farmers
-							is_pop_type = peasants
 							AND = {
-								standard_of_living < 12
+								is_pop_type = peasants
+								AND = {
+									standard_of_living < 12
+								}
+							}
+							AND = {
+								is_pop_type = farmers
+								AND = {
+									standard_of_living < 12
+								}
 							}
 						}
 					}

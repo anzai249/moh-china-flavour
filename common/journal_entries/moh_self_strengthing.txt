@@ -4,6 +4,9 @@
     modifiers_while_active = {
         modifier_self_strengthing
     }
+    is_shown_in_lobby = {
+        c:CHI ?= THIS
+    }
     immediate = {
         set_variable = {
             name = self_strengthening_progress

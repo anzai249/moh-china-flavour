@@ -10,6 +10,7 @@
 		NOT = {
 			has_variable = new_culture
 		}
+		always = no
 	}
 	possible = {
 		exists = c:CHI

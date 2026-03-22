@@ -490,3 +490,15 @@ Fixes:
 - Chinese Soviet Republic will not be a separatist movement country.
 - Warlord names.
 - Taiwan now claims Formosa.
+
+Release 1.4.2 "Horse"
+
+Changes:
+
+- Flags adjustments.
+- Reduced the education access effect from Imperial Examination System law.
+- Hubei clique localization.
+
+Fixes:
+
+- Nian Rebellion tracker text trigger.

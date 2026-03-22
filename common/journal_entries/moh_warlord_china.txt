@@ -1,6 +1,9 @@
 ﻿REPLACE:je_warlord_china = {
 	icon = "gfx/interface/icons/event_icons/fragile_unity.dds"
 	group = je_group_historical_content
+    is_shown_in_lobby = {
+        c:CHI ?= THIS
+    }
 	immediate = {
 		random_law = {
 			limit = {
