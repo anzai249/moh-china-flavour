@@ -240,3 +240,8 @@
   je_hui_rebellion_status_yunnan: "云南回乱 - 云南的[concept_turmoil]：[GetGlobalVariable('yunnan_turmoil').GetValue]/#variable 15%#!"
   je_hui_rebellion_status_nian_success_tt: "@green_checkmark! 成功镇压捻匪"
   je_hui_rebellion_status_yunnan_success_tt: "@green_checkmark! 成功镇压云南回乱"
+  je_father_of_the_republic_lobby: "国父的支持对于统一中国至关重要。通过制定国父支持的法律、赢得国父支持的战争、提高国父的满意度等方式来获得国父的支持。"
+  je_reconquest_of_the_west_lobby: "重定新疆是为了巩固对西部领土的控制，防止外来势力的干预，同时也有助于提升国家的整体实力和安全。"
+  je_new_dynasty_lobby: "推翻旧王朝，建立新王朝，还是保持现状？选择不同的道路将会对国家的未来产生深远的影响。"
+  je_self_strengthing_lobby: "洋务运动是[ROOT.GetCountry.GetName]现代化进程中的重要阶段，通过发展军事、工业、教育和外交来提升国家实力。完成洋务运动的任务将有助于抵御外来侵略，提升国家的国际地位。"
+  je_xinhai_lobby: "朝廷近期抓到几个自称[GetIdeology('ideology_moh_revolutionary').GetName]的人，他们的目标居然是推翻[GetLawType('law_monarchy').GetName]，搞什么所谓的共和。"
