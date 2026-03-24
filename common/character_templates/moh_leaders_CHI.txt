@@ -2033,15 +2033,6 @@ chi_moh_sun_yat_sen_character_template = {
     }
 }
 
-INJECT:chi_sun_character_template = {
-    # p社是不是有问题，有俩孙中山
-    interest_group_leader_usage = {
-        country_trigger = {
-            always = no
-        }
-    }
-}
-
 chi_yang_du_character_template = {
     first_name = moh_Du
     last_name = moh_Yang

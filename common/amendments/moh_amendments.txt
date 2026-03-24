@@ -1,0 +1,43 @@
+﻿amendment_chinese_traditional_land_system = {
+
+	parent = law_monarchy
+
+	allowed_laws = {
+		law_tenant_farmers
+	}
+
+	modifier = {
+		building_subsistence_output_add = -0.5
+		building_peasants_standard_of_living_add = -0.5
+	}
+
+	possible = {
+		country_has_primary_culture = cu:han
+	}
+
+	would_sponsor = {
+		ROOT = {
+			is_interest_group_type = ig_landowners
+		}
+	}
+
+	on_activate = {
+		second_amendment_add_obsessions_effect = yes
+	}
+
+	on_deactivate = {
+		second_amendment_remove_obsessions_effect = yes
+	}
+
+	ai_will_revoke = {
+		NOT = {
+			has_law = law_type:law_monarchy
+		}
+	}
+
+	can_repeal = {
+		legitimacy >= legitimacy_to_repeal_amendment
+	}
+
+	amendment_activism_multiplier = 0.25
+}

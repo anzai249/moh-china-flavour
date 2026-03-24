@@ -346,7 +346,7 @@ REPLACE:AHU = {
 	}
 }
 
-XIN = {
+REPLACE:XIN = {
 	dynamic_country_name = {
 		name = dyn_c_xinjiang_clique
 		adjective = dyn_c_xinjiang_adj

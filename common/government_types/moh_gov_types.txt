@@ -8,7 +8,7 @@
 		has_law_or_variant = law_type:law_theocracy
 		exists = c:CHI
 		c:CHI = ROOT
-		has_state_religion = religion:confucian
+		country_has_state_religion = religion:confucian
 	}
 	on_government_type_change = {
 		change_to_dictatorial = yes
@@ -30,7 +30,7 @@ gov_china_feudal_empire = {
 	possible = {
 		has_law_or_variant = law_type:law_monarchy
 		country_has_voting_franchise = no
-		has_state_religion = religion:confucian
+		country_has_state_religion = religion:confucian
 		NOT = {
 			has_law_or_variant = law_type:law_technocracy
 		}
@@ -63,7 +63,7 @@ gov_china_feudal_kingdom = {
 	possible = {
 		has_law_or_variant = law_type:law_monarchy
 		country_has_voting_franchise = no
-		has_state_religion = religion:confucian
+		country_has_state_religion = religion:confucian
 		NOT = {
 			has_law_or_variant = law_type:law_technocracy
 		}

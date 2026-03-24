@@ -80,9 +80,9 @@ self_strengthening.2 = {
                 can_construct_building = building_coal_mine
                 can_construct_building = building_iron_mine
                 can_construct_building = building_sulfur_mine
-                can_construct_building = building_tooling_workshops
+                can_construct_building = building_tooling_workshop
                 can_construct_building = building_lead_mine
-                can_construct_building = building_military_shipyards
+                can_construct_building = building_military_shipyard
             }
         }
     }
@@ -105,9 +105,9 @@ self_strengthening.2 = {
                     can_construct_building = building_coal_mine
                     can_construct_building = building_iron_mine
                     can_construct_building = building_sulfur_mine
-                    can_construct_building = building_tooling_workshops
+                    can_construct_building = building_tooling_workshop
                     can_construct_building = building_lead_mine
-                    can_construct_building = building_military_shipyards
+                    can_construct_building = building_military_shipyard
                 }
             }
             save_scope_as = self_strengthening_donate_state
@@ -161,10 +161,10 @@ self_strengthening.2 = {
                 }
                 20 = {
                     trigger = {
-                        can_construct_building = building_tooling_workshops
+                        can_construct_building = building_tooling_workshop
                     }
                     create_building={
-                        building="building_tooling_workshops"
+                        building="building_tooling_workshop"
                         level=1
                         reserves=1
                     }
@@ -181,10 +181,10 @@ self_strengthening.2 = {
                 }
                 20 = {
                     trigger = {
-                        can_construct_building = building_military_shipyards
+                        can_construct_building = building_military_shipyard
                     }
                     create_building={
-                        building="building_military_shipyards"
+                        building="building_military_shipyard"
                         level=2
                         reserves=1
                     }
@@ -245,15 +245,19 @@ self_strengthening.3 = {
             is_incorporated = yes
             can_construct_building = building_naval_base
         }
+        # NOT = {
+        #     any_military_formation = {
+        #         is_fleet = yes
+        #         has_variable = beiyang_fleet
+        #     }
+        # }
         NOT = {
-            any_military_formation = {
-                is_fleet = yes
-                has_variable = beiyang_fleet
-            }
+            has_variable = beiyang_fleet
         }
         has_technology_researched = destroyer
     }
     immediate = {
+        set_variable = beiyang_fleet
         random_scope_character = {
             limit = {
                 has_variable = self_strengthening_character
@@ -292,9 +296,6 @@ self_strengthening.3 = {
                     state_region = s:STATE_SHANDONG
                     count = 5
                 }
-                on_created = {
-                    set_variable = beiyang_fleet
-                }
             }
         }
 		else = {
@@ -311,9 +312,6 @@ self_strengthening.3 = {
                     type = unit_type:combat_unit_type_man_o_war
                     state_region = s:STATE_SHANDONG
                     count = 5
-                }
-                on_created = {
-                    set_variable = beiyang_fleet
                 }
             }
 		}

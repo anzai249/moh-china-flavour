@@ -1,4 +1,4 @@
-namespace = gaitu_guiliu
+﻿namespace = gaitu_guiliu
 
 gaitu_guiliu.1 = {
     type = country_event

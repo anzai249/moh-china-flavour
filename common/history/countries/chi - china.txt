@@ -67,5 +67,12 @@
 			set_company_establishment_date = 1836.1.1 # 1783.1.1 actually, but prevent disbandment
 			set_company_state_region = s:STATE_GUANGDONG
 		}
+
+		active_law:lawgroup_land_reform ?= {
+			add_amendment = {
+				type = amendment_chinese_traditional_land_system
+				sponsor = PREV.ig:ig_landowners
+			}
+		}
 	}
 }

@@ -502,3 +502,12 @@ Changes:
 Fixes:
 
 - Nian Rebellion tracker text trigger.
+
+Release 1.4.3 "Horse"
+
+Changes:
+
+Fixes:
+
+- Some building id typos.
+- City graphics.
