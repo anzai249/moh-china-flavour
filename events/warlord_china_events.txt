@@ -822,6 +822,10 @@ warlord_china_events.100 = {
                             set_strategy = ai_strategy_unify_china
                         }
                     }
+                    s:STATE_FORMOSA = {
+                        add_claim = c:FRS
+                        remove_claim = c:CHI
+                    }
                 }
             }
             c:FRS = {
@@ -2632,6 +2636,10 @@ warlord_china_events.610 = {
                         1 = {
                             set_strategy = ai_strategy_unify_china
                         }
+                    }
+                    s:STATE_FORMOSA = {
+                        add_claim = c:FRS
+                        remove_claim = c:CHI
                     }
                 }
             }

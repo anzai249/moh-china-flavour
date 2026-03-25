@@ -9,6 +9,7 @@
 	modifier = {
 		building_subsistence_output_add = -0.5
 		building_peasants_standard_of_living_add = -0.5
+		state_minimum_incorporated_subsistence_arable_land_add = 0.25
 	}
 
 	possible = {
@@ -22,11 +23,9 @@
 	}
 
 	on_activate = {
-		second_amendment_add_obsessions_effect = yes
 	}
 
 	on_deactivate = {
-		second_amendment_remove_obsessions_effect = yes
 	}
 
 	ai_will_revoke = {
