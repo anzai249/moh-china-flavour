@@ -138,7 +138,7 @@ je_shih_chin_opium = {
 		}
 		NOT = {
 			any_market = {
-				hidden_effect = {
+				hidden_trigger = {
 					owner = {
 						country_rank >= rank_value:major_power
 					}
@@ -172,7 +172,7 @@ je_shih_chin_opium = {
 					# }
 					NOT = {
 						any_market = {
-							hidden_effect = {
+							hidden_trigger = {
 								owner = {
 									country_rank >= rank_value:major_power
 								}

@@ -511,3 +511,4 @@ Fixes:
 
 - Some building id typos.
 - City graphics.
+- Minor bugs.

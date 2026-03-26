@@ -479,6 +479,7 @@ REPLACE_OR_CREATE:CCP = {
         priority = 2000
         subject_canton = sub_CHI_communist
         trigger = {
+            exists = scope:actor
             scope:actor ?= {
                 has_variable = prc
             }
@@ -617,7 +618,7 @@ YETTESHEHER = {
         coa = YETTESHEHER
         subject_canton = YETTESHEHER
         # allow_overlord_canton = yes
-        coa_with_overlord_canton = YETTESHEHER_subject
+        # coa_with_overlord_canton = YETTESHEHER_subject
         priority = 1
     }
 }
