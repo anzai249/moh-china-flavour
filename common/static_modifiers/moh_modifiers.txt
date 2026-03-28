@@ -149,6 +149,8 @@ modifier_chi_xinhai = {
 	interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.5
 	interest_group_ig_petty_bourgeoisie_approval_add = -10
 	political_movement_radicalism_add = 0.2
+	state_pop_support_movement_radical_mult = 0.15
+	state_pop_support_movement_liberal_mult = 0.15
 }
 
 # 剧团

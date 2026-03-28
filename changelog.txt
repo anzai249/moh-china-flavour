@@ -507,8 +507,11 @@ Release 1.4.3 "Horse"
 
 Changes:
 
+- Flags adjustments.
+
 Fixes:
 
 - Some building id typos.
 - City graphics.
 - Minor bugs.
+- A bug of Xinhai Revolution warlord setup.

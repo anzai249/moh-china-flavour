@@ -73,6 +73,23 @@ CHI_fujian = {
 		instance = { scale = { 0.40 0.40 } position = { 0.50 0.50 } }		
 	}	
 }
+FUJ_subject = {
+	pattern = "pattern_solid.tga"
+	color1 = "red"
+
+	colored_emblem = {
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.8 1.0 } position = { 0.35 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_fujian_2.dds"
+		color1 = "black"
+		instance = { scale = { 0.8 0.8 } position = { 0.117 0.5 } }
+	}
+}
 CHI_guojun = {
 	# National Revolutionary Army
 	
@@ -142,7 +159,14 @@ CHI_anguo = {
 	textured_emblem = {
 		texture = "te_coa_dashuai.dds"
 		instance = { scale = { 0.6 0.6 } position = { 0.19 0.26 } }
-	}		
+	}
+	colored_emblem = {
+		texture = "ce_border_overlord.dds"
+		color1 = "yellow_light"
+		color2 = "yellow_dark"
+		color3 = "highlight"
+		instance = { scale = { 1 1 } position = { 0.5 0.5 } }			
+	}	
 }
 
 CHI_kmt = {
@@ -553,17 +577,6 @@ SHN_subject = {
 	}
 }
 
-YUN_subject = {
-	pattern = "pattern_solid.tga"
-	color1 = "red"
-
-	colored_emblem = {
-		texture = "ce_yunnan.png"
-		color1 = "black"
-		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
-	}
-}
-
 FRS_subject = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue_steel"
@@ -597,9 +610,16 @@ AHU_subject = {
 	color1 = "red"
 	
 	colored_emblem = {
-		texture = "ce_anhui.png"
+		texture = "ce_bicolor_left_third.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.8 1.0 } position = { 0.35 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_anhui_2.dds"
 		color1 = "black"
-		instance = { position = { 0.75 0.5 } scale = { 1 1 } }
+		instance = { scale = { 0.8 0.8 } position = { 0.117 0.5 } }
 	}
 }
 
@@ -639,23 +659,23 @@ HBE_subject = {
 	}
 }
 
-GNG_subject = {
-	pattern = "pattern_solid.tga"
-	color1 = "red"
+# GNG_subject = {
+# 	pattern = "pattern_solid.tga"
+# 	color1 = "red"
 
-	colored_emblem = {
-		texture = "ce_bicolor_left_third.dds"
-		color1 = "white"
-		color2 = "white"
-		instance = { scale = { 0.8 1.0 } position = { 0.35 0.5 } }
-	}
+# 	colored_emblem = {
+# 		texture = "ce_bicolor_left_third.dds"
+# 		color1 = "white"
+# 		color2 = "white"
+# 		instance = { scale = { 0.8 1.0 } position = { 0.35 0.5 } }
+# 	}
 
-	colored_emblem = {
-		texture = "ce_guangxi.dds"
-		color1 = "black"
-		instance = { scale = { 0.8 0.8 } position = { 0.117 0.5 } }
-	}
-}
+# 	colored_emblem = {
+# 		texture = "ce_guangxi.dds"
+# 		color1 = "black"
+# 		instance = { scale = { 0.8 0.8 } position = { 0.117 0.5 } }
+# 	}
+# }
 
 SIH_subject = {
 	pattern = "pattern_solid.tga"

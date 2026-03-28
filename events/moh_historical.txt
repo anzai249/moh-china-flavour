@@ -610,6 +610,14 @@ moh_historical.8 = {
 		}
 		# has_variable = arrow_war_target
 		OR = {
+			any_state = {
+        		state_region = s:STATE_BEIJING
+	        	controller = c:FRA
+			}
+			any_state = {
+        		state_region = s:STATE_BEIJING
+	        	controller = c:GBR
+			}
 			s:STATE_BEIJING.region_state:CHI.controller = c:FRA
 			s:STATE_BEIJING.region_state:CHI.controller = c:GBR
 		}

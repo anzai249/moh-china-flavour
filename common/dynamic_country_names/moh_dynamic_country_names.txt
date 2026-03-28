@@ -24,6 +24,21 @@
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = dyn_c_dongbei_army
+		adjective = dyn_c_dongbei_army_adj
+		is_main_tag_only = yes
+		priority = 100
+		trigger = {
+			# exists = c:CHI
+			scope:actor ?= {
+				OR = {
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
+				}
+			}
+		}
+	}
 }
 
 REPLACE:CHI = {
@@ -148,7 +163,7 @@ REPLACE:CHI = {
 REPLACE:GNG = {
 	dynamic_country_name = {
 		name = dyn_c_guangxi_clique
-		adjective = GNG_ADJ
+		adjective = dyn_c_guangxi_adj
 		is_main_tag_only = yes
 		priority = 1
 		trigger = {
@@ -159,14 +174,17 @@ REPLACE:GNG = {
 		}
 	}
 	dynamic_country_name = {
-		name = dyn_c_guangxi_clique
-		adjective = GNG_ADJ
+		name = dyn_c_guangxi
+		adjective = dyn_c_guangxi_adj
 		is_main_tag_only = yes
 		priority = 100
 		trigger = {
 			# exists = c:CHI
 			scope:actor ?= {
-				is_subject_type = subject_type_puppet
+				OR = {
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
+				}
 			}
 		}
 	}
@@ -437,6 +455,37 @@ GANSU = {
 					scope:actor ?= {
 						is_subject_of = c:CHI
 					}
+				}
+			}
+		}
+	}
+}
+REPLACE:YUE = {
+	dynamic_country_name = {
+		name = dyn_c_guangdong_clique
+		adjective = dyn_c_guangdong_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			has_global_variable = china_shatters
+			scope:actor ?= {
+				has_government_type = gov_warlord_state
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_c_guangdong
+		adjective = dyn_c_guangdong_adj
+		is_main_tag_only = yes
+		priority = 100
+		trigger = {
+			# exists = c:CHI
+			scope:actor ?= {
+				OR = {
+					is_subject_type = subject_type_puppet
+					is_subject_type = subject_type_vassal
 				}
 			}
 		}

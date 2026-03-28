@@ -64,3 +64,6 @@
   dyn_c_qinghai_ma_adj: "Qinghai"
   dyn_c_gansu_ma: "Gansu [GetGlobalVariable('gansu_country').GetCountry.GetRuler.GetLastNameNoFormatting]"
   dyn_c_gansu_ma_adj: "Gansu"
+  dyn_c_guangxi: "Guangxi"
+  dyn_c_guangxi_adj: "Guangxi"
+  dyn_c_guangdong: "Guangdong"

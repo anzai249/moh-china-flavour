@@ -64,3 +64,6 @@
   dyn_c_qinghai_ma_adj: "青海"
   dyn_c_gansu_ma: "甘肃[GetGlobalVariable('gansu_country').GetCountry.GetRuler.GetLastNameNoFormatting]家军"
   dyn_c_gansu_ma_adj: "甘肃"
+  dyn_c_guangxi: "广西"
+  dyn_c_guangxi_adj: "广西"
+  dyn_c_guangdong: "广东"

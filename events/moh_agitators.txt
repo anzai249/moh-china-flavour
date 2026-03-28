@@ -252,6 +252,7 @@ moh_agitators.3 = {
 		create_character = {
 			template = ecchi_chi_huang_xing_character_template
 			on_created = {
+				add_character_role = agitator
 				set_variable = huangxing_var
 			}
 		}
@@ -259,7 +260,6 @@ moh_agitators.3 = {
 			limit = {
 				has_variable = huangxing_var
 			}
-			add_character_role = agitator
 			save_scope_as = historic_agitator_scope
 		}
 	}
