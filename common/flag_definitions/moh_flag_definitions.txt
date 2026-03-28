@@ -38,7 +38,7 @@ REPLACE:CHI = {
     }
     flag_definition = {
         coa = CHI_republic
-        subject_canton = CHI_republic
+        subject_canton = CHI_anguo
         allow_overlord_canton = yes
         priority = 5
         trigger = {
@@ -129,14 +129,14 @@ REPLACE:CHI = {
             coa_def_republic_flag_trigger = yes
         }
     }
-    flag_definition = {
-        coa = CHI_anguo
-        subject_canton = CHI_anguo
-        priority = 5
-        trigger = {
-            coa_def_republic_flag_trigger = yes
-        }
-    }
+    # flag_definition = {
+    #     coa = CHI_anguo
+    #     subject_canton = CHI_anguo
+    #     priority = 5
+    #     trigger = {
+    #         coa_def_republic_flag_trigger = yes
+    #     }
+    # }
     flag_definition = {
         coa = CHI_ming
         subject_canton = CHI_ming
@@ -243,6 +243,7 @@ YUN = {
         subject_canton = CHI_shibaxing
         allow_overlord_canton = yes
         coa_with_overlord_canton = YUN_subject
+        overlord_canton_offset = { 0.35 0.225 }
         priority = 1
     }
     flag_definition = {
@@ -265,6 +266,7 @@ ZHI = {
         subject_canton = CHI_shibaxing
         allow_overlord_canton = yes
         coa_with_overlord_canton = ZHI_subject
+        overlord_canton_offset = { 0.35 0.225 }
         priority = 1
     }
 }
@@ -329,6 +331,7 @@ HNA = {
         subject_canton = CHI_shibaxing
         allow_overlord_canton = yes
         coa_with_overlord_canton = HNA_subject
+        overlord_canton_offset = { 0.35 0.225 }
         priority = 1
     }
 }
@@ -339,6 +342,7 @@ GNG = {
         subject_canton = CHI_shibaxing
         allow_overlord_canton = yes
         coa_with_overlord_canton = GNG_subject
+        overlord_canton_offset = { 0.35 0.225 }
         priority = 1
     }
     flag_definition = {
@@ -346,6 +350,7 @@ GNG = {
         subject_canton = GNG_warlord
         allow_overlord_canton = yes
         coa_with_overlord_canton = GNG_subject
+        overlord_canton_offset = { 0.35 0.225 }
         priority = 10
         trigger = {
             scope:actor ?= {
@@ -419,6 +424,7 @@ FUJ = {
         subject_canton = CHI_fujian
         allow_overlord_canton = yes
         coa_with_overlord_canton = CHI_fujian
+        overlord_canton_offset = { 0.35 0.225 }
         priority = 1
     }
 }
@@ -560,6 +566,7 @@ HBE = {
         subject_canton = HBE
         allow_overlord_canton = yes
         coa_with_overlord_canton = HBE_subject
+        overlord_canton_offset = { 0.35 0.225 }
         priority = 1
     }
 }
