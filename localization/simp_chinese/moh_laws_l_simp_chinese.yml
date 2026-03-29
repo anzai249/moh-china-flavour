@@ -14,6 +14,8 @@
   ideology_yang_du_desc: "#lore 这个领袖是一个人格分裂患者。#!"
   ideology_moh_zgp: "联省派"
   ideology_moh_zgp_desc: "#lore 这个领袖是联省派的代表，主张各省自治，反对中央集权。#!"
+  ideology_manchu_elitist: "满洲精英主义者"
+  ideology_manchu_elitist_desc: "#lore 这个集团大多是由满洲贵族组成的精英阶层。#!"
   law_five_races_republic: "五族共和"
   law_imperial_examinations: "科举制"
   law_imperial_examinations_desc: "官员通过科举制度选拔，这是一个严格而竞争激烈的过程，考察候选人对儒家经典、诗歌和作文的知识。"
