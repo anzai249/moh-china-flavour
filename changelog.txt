@@ -515,3 +515,14 @@ Fixes:
 - City graphics.
 - Minor bugs.
 - A bug of Xinhai Revolution warlord setup.
+
+Release 1.4.4 "Horse"
+
+Changes:
+
+- Added a new ig ideology Manchu Elitist to the armed forces (Eight Banners).
+- Modified the Eight Legged ideology to pro private schools.
+
+Fixes:
+
+- A bug causing the Old Summer Palace to be destroyed by default when Morgenrote is enabled.

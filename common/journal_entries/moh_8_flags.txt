@@ -43,6 +43,7 @@
 			ig:ig_armed_forces = {
 				set_interest_group_name = ig_new_armed_forces
 				add_ideology = ideology_republican
+				remove_ideology = ideology_manchu_elitist
 			}
 		}
 	}
@@ -59,10 +60,11 @@
 	on_fail = {
 		custom_tooltip = {
 			text = 8_flags_on_complete_tt_3
-			ig:ig_armed_forces = {
-				set_interest_group_name = ig_armed_forces
-				# add_ideology = ideology_republican
-			}
+		}
+		ig:ig_armed_forces = {
+			set_interest_group_name = ig_armed_forces
+			# add_ideology = ideology_republican
+			remove_ideology = ideology_manchu_elitist
 		}
 	}
 	weight = 50

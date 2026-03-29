@@ -15,6 +15,8 @@
   law_five_races_republic: "Five Races Republic"
   ideology_moh_zgp: "Provincial Autonomist"
   ideology_moh_zgp_desc: "#lore This leader is a representative of the Provincial Autonomy Faction, advocating for provincial autonomy and opposing centralization.#!"
+  ideology_manchu_elitist: "Manchu Elitist"
+  ideology_manchu_elitist_desc: "#lore This group is mostly composed of elites from the Manchu nobility.#!"
 
   law_imperial_examinations: "Imperial Examination System"
   law_imperial_examinations_desc: "Bureaucrats are selected through the imperial examination system, which is a rigorous and competitive process that tests candidates on their knowledge of Confucian classics, poetry, and essay writing."

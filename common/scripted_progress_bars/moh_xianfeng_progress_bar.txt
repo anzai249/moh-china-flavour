@@ -18,10 +18,13 @@
 		if = {
 			limit = {
 				OR = {
-					NOT = {
-						any_state = {
-							has_building = building_old_summer_palace
+					AND = {
+						NOT = {
+							any_state = {
+								has_building = building_old_summer_palace
+							}
 						}
+						morgenrote_is_active = no
 					}
 					# morgenrote
 					has_global_variable = gaudi_summer_palace_looted

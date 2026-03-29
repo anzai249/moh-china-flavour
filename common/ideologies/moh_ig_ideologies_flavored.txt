@@ -13,4 +13,29 @@
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
 	}
+
+	lawgroup_education_system = {
+		law_private_schools = approve
+		law_public_schools = disapprove
+		law_religious_schools = neutral
+		law_no_schools = neutral
+	}
+}
+
+ideology_manchu_elitist = {
+	icon = "gfx/interface/icons/ideology_icons/manchu_7.dds"
+	
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = neutral
+		law_appointed_bureaucrats = neutral
+		law_elected_bureaucrats = strongly_disapprove
+	}
+	lawgroup_citizenship = {
+		law_ethnostate = disapprove
+		law_subjecthood = strongly_approve
+		law_national_supremacy = disapprove
+		law_racial_segregation = disapprove
+		law_cultural_exclusion = disapprove
+		law_multicultural = disapprove
+	}
 }

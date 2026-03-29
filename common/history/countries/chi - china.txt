@@ -52,6 +52,9 @@
 			remove_ideology = ideology_republican
 			add_ideology = ideology_eight_legged
 		}
+		ig:ig_armed_forces = {
+			add_ideology = ideology_manchu_elitist
+		}
 		# add_journal_entry = { type = je_13_factories }
 		set_import_tariff_level = {
 			goods = g:opium
