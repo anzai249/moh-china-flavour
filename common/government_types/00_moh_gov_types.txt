@@ -1,20 +1,20 @@
 ﻿gov_confucian_theocracy = {
-	transfer_of_power = dictatorial
+	transfer_of_power = hereditary
 	male_ruler = "RULER_TITLE_SON_OF_HEAVEN"
 	female_ruler = "RULER_TITLE_DAUGHTER_OF_HEAVEN"
 	male_heir = "RULER_TITLE_GONGZI"
 	female_heir = "RULER_TITLE_GONGZI"
 	possible = {
-		has_law_or_variant = law_type:law_theocracy
+		has_law = law_type:law_zhou_ritual_system
 		exists = c:CHI
 		c:CHI = ROOT
 		country_has_state_religion = rel:confucian
 	}
 	on_government_type_change = {
-		change_to_dictatorial = yes
+		change_to_hereditary = yes
 	}
 	on_post_government_type_change = {
-		post_change_to_dictatorial = yes
+		post_change_to_hereditary = yes
 	}
 }
 

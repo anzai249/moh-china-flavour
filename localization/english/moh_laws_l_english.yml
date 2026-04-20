@@ -27,3 +27,5 @@
   law_provincial_autonomy: "Provincial Autonomy"
   law_provincial_autonomy_desc: "Provinces have high degrees of autonomy, able to independently formulate policies and manage affairs, with the power of the central government greatly weakened."
   amendment_chinese_traditional_land_system: "Chinese Traditional Land System"
+  law_zhou_ritual_system: "Zhou Ritual System"
+  law_zhou_ritual_system_desc: "A system centered on patriarchal and ritual norms, maintaining national operations through clear hierarchical orders and ceremonial regulations, governing the world through feudalism and blood relations.\n #lore Note: The Zhou Ritual System (feudalism) should not actually be a variant of theocracy, but since Paradox made the devout into Confucian scholars, the Zhou Ritual System is made a variant of theocracy here.#!"

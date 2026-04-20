@@ -526,3 +526,10 @@ Changes:
 Fixes:
 
 - A bug causing the Old Summer Palace to be destroyed by default when Morgenrote is enabled.
+
+Release 1.4.5 "Horse"
+
+Changes:
+
+- Zhou Ritual System law.
+- Modified the icon of Imperial Examination System.

@@ -49,7 +49,10 @@ REPLACE:CHI = {
 		is_main_tag_only = yes
 		priority = 0
 		trigger = {
-			coa_def_monarchy_flag_trigger = yes
+			OR = {
+				coa_def_monarchy_flag_trigger = yes
+				coa_def_theocracy_flag_trigger = yes
+			}
 			scope:actor ?= {
 				country_has_primary_culture = cu:manchu
 			}

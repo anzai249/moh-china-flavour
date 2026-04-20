@@ -127,6 +127,7 @@
 					}
 					NOT = {
 						has_law = law_type:law_monarchy
+						has_law = law_type:law_zhou_ritual_system
 					}
 				}
 				set_variable = china_abolished_monarchy
