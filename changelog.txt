@@ -532,4 +532,4 @@ Release 1.4.5 "Horse"
 Changes:
 
 - Zhou Ritual System law.
-- Modified the icon of Imperial Examination System.
+- Modified the icon of Imperial Examination System and Night Watchmen.
