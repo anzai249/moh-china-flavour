@@ -2,7 +2,7 @@
 	icon = "gfx/interface/icons/religion_icons/sunni.dds"
 	group = je_group_global_international_situations
 	weight = 1
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	status_desc = {
 		first_valid = {
 			triggered_desc = {

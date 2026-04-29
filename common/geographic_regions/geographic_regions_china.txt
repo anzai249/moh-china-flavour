@@ -1,4 +1,4 @@
-geographic_region_begonia_leaf = {
+﻿geographic_region_begonia_leaf = {
 	short_key = "begonia_leaf"
 
 	strategic_regions = {

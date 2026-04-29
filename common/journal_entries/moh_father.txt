@@ -1,49 +1,69 @@
 ﻿je_father_of_the_republic = {
 	icon = "gfx/interface/icons/event_icons/white_sun.dds"
-	group = je_group_historical_content
+	group = je_group_global_international_situations
+	widget = {
+		gui = "gui/journal_entry_widgets/moh_china_widgets.gui"
+		name = "widget_je_father_of_the_republic"
+		container = "custom_widget_container_je_icon"
+	}
 	is_shown_when_inactive = {
-		has_journal_entry = je_reunify_china
+		always = yes
 	}
     is_shown_in_lobby = {
         c:CHI ?= THIS
     }
+	should_be_involved = {
+		country_has_primary_culture = cu:han
+		country_is_in_east_asia = yes
+		# has_journal_entry = je_reunify_china
+	}
+	should_show_when_not_involved = {
+		country_has_primary_culture = cu:han
+	}
 	status_desc = {
 		first_valid = {
 			triggered_desc = {
 				desc = father_of_the_republic_status_1
 				trigger = {
-					global_var:sun_yatsen_in = {
-						NOT = {
-							has_journal_entry = je_reunify_china
+					any_character = {
+						has_variable = sun_yatsen_character
+						owner = {
+							NOT = {
+								country_has_primary_culture = cu:han
+							}
 						}
 					}
 				}
 			}
-			triggered_desc = {
-				desc = father_of_the_republic_status_2
-				trigger = {
-					global_var:sun_yatsen_in = {
-						has_journal_entry = je_reunify_china
-					}
-				}
-			}
+			# triggered_desc = {
+			# 	desc = father_of_the_republic_status_2
+			# 	trigger = {
+			# 		global_var:sun_yatsen_in = {
+			# 			has_journal_entry = je_reunify_china
+			# 		}
+			# 	}
+			# }
 		}
 	}
 	immediate = {
+		random_country = {
+			limit = {
+				has_state_in_state_region = STATE_HAWAIIAN_ISLANDS
+			}
+			create_character = {
+				template = chi_moh_sun_yat_sen_character_template
+			}
+			set_global_variable = {
+				name = sun_yatsen_in
+				value = this
+			}
+		}
 		if = {
 			limit = {
 				NOT = {
 					has_global_variable = sun_yatsen
 				}
 				c:BEI ?= this
-			}
-			create_character = {
-				template = chi_moh_sun_yat_sen_character_template
-				age = 30
-			}
-			set_global_variable = {
-				name = sun_yatsen_in
-				value = c:BEI
 			}
 			je:je_father_of_the_republic ?= {
 				clear_variable_list = com_journal_characters
@@ -55,8 +75,10 @@
 		}
 	}
 	possible = {
-		has_journal_entry = je_reunify_china
-		year > 1886
+		any_country = {
+			has_journal_entry = je_reunify_china
+		}
+		# year > 1886
 		NOT = {
 			has_global_variable = sun_yatsen_dead
 		}
@@ -64,28 +86,30 @@
 	complete = {
 		custom_tooltip = {
 			text = je_father_of_the_republic.tt.complete
-			NOT = {
-				has_journal_entry = je_reunify_china
-			}
+			exists = c:CHI
 		}
 	}
 	on_complete = {
 		custom_tooltip = {
 			text = je_father_of_the_republic.tt.on.complete
-			global_var:sun_yatsen = {
-				kill_character = yes
-			}
-			create_character = {
-				template = chi_moh_sun_yat_sen_character_template
-				ig_leader = yes
-				on_created = {
-					set_character_as_ruler = yes
-					set_character_immortal = no
-					set_character_busy_and_immortal = no
+			random_character = {
+				limit = {
+					has_variable = sun_yatsen_character
 				}
+				transfer_character = c:CHI
+				set_as_interest_group_leader = yes
+				add_character_role = character_role_ig_leader
+				set_character_as_ruler = yes
+				set_character_immortal = no
 			}
 		}
-		remove_modifier = modifier_father
+		
+		every_country = {
+			limit = {
+				has_modifier = modifier_father
+			}
+			remove_modifier = modifier_father
+		}
 	}
 	fail = {
 		custom_tooltip = {
@@ -94,7 +118,12 @@
 		}
 	}
 	on_fail = {
-		remove_modifier = modifier_father
+		every_country = {
+			limit = {
+				has_modifier = modifier_father
+			}
+			remove_modifier = modifier_father
+		}
 	}
 	on_weekly_pulse = {
 		effect = {
@@ -109,29 +138,39 @@
 						has_global_variable = sun_yatsen_dead
 					}
 				}
-				create_character = {
-					template = chi_moh_sun_yat_sen_character_template
+				random_country = {
+					limit = {
+						has_state_in_state_region = STATE_HAWAIIAN_ISLANDS
+					}
+					create_character = {
+						template = chi_moh_sun_yat_sen_character_template
+					}
+					set_global_variable = {
+						name = sun_yatsen_in
+						value = this
+					}
 				}
 			}
-			global_var:sun_yatsen_in = {
-				if = {
-					limit = {
-						NOT = {
-							has_modifier = modifier_father
-						}
-						has_journal_entry = je_reunify_china
+			random_country = {
+				limit = {
+					NOT = {
+						has_modifier = modifier_father
 					}
-					add_modifier = {
-						name = modifier_father
+					has_journal_entry = je_reunify_china
+					any_scope_character = {
+						has_variable = sun_yatsen_character
 					}
 				}
+				add_modifier = modifier_father
 			}
 			random_country = {
 				limit = {
 					has_modifier = modifier_father
 					has_journal_entry = je_reunify_china
 					NOT = {
-						this = global_var:sun_yatsen_in
+						any_scope_character = {
+							has_variable = sun_yatsen_character
+						}
 					}
 				}
 				remove_modifier = modifier_father
@@ -145,5 +184,6 @@
 		}
 	}
 	weight = 500
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_involved = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

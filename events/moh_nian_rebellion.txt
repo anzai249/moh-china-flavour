@@ -63,13 +63,13 @@ nian_rebellion.1 = {
 					if = {
 						limit = {
 							NOT = {
-								has_law = law_type:law_homesteading
+								has_law = law_type:law_peasant_proprietorship
 							}
 						}
-						activate_law = law_type:law_homesteading
+						activate_law = law_type:law_peasant_proprietorship
 					}
 					create_character = {
-                        template = chi_lexing_zhang_character_template
+                        template = CHI_lexing_zhang
                     }
 					create_character = {
 						first_name = moh_Zongyu

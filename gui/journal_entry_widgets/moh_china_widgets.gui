@@ -1,0 +1,216 @@
+types moh_china_types
+{
+	type moh_character_with_background_sun_yatsen = widget {
+
+		datacontext = "[GetGlobalVariable('sun_yatsen').GetCharacter]"
+
+		widget = {
+			visible = yes
+			size = { 100% 100% }
+			position = { 0 1 }
+			using = Animation_Character_Panel_Refresh
+
+			widget = {
+				size = { 100% 100% }
+				visible = yes
+
+				background = {
+					texture = "gfx/interface/character_panel/backgrounds/char_role_magnate.dds"
+					fittype = centercrop
+				}
+			}
+		}
+
+		character_portrait_base_no_mask = {
+			ignore_in_debug_draw = yes
+			size = { 217 261 } #+37 +21 (space for frame)
+
+			block "character_layout" {
+				position = { 50 10 }
+				size = { 250 400 }
+			}
+
+			blockoverride "portrait_size" {
+				block "character_portrait_size" {
+					size = { 575 575 }
+				}
+			}
+			blockoverride "portrait_texture" {
+				portrait_texture = "[Character.GetAnimatedPortrait('ruler_environment', 'camera_body', 'idle', GetPortraitRenderSize(PdxGuiWidget.Self))]"
+			}
+
+			blockoverride "portrait_icons" {}
+		}
+
+		icon = {
+			using = dark_area
+			parentanchor = bottom|hcenter
+			size = { 100% 40% }
+			alpha = 0.65
+			position = { 0 2 }
+
+			modify_texture = {
+				texture = "gfx/interface/masks/fade_vertical_top.dds"
+				spriteType = Corneredstretched
+				spriteborder = { 0 0 }
+				blend_mode = alphamultiply
+			}
+		}
+
+		widget = {
+			size = { 100% 100% }
+
+			background = {
+				texture = "gfx/interface/character_panel/char_bg_frame.dds"
+				margin_left = 18
+				margin_right = 10
+				margin_bottom = 10
+				spriteType = Corneredtiled
+
+				spriteborder_left = 200
+				spriteborder_right = 60
+				spriteborder_top = 170
+				spriteborder_bottom = 180
+
+				texture_density = 2
+			}
+		}
+
+		# character_interactions_button = {
+		# 	name = "tutorial_highlight_character_panel_interactions_button_1"
+		# }
+	}
+}
+
+flowcontainer = {
+	name = "widget_je_father_of_the_republic"
+	ignoreinvisible = yes
+
+	### RULER
+	flowcontainer = {
+		direction = vertical
+
+		moh_character_with_background_sun_yatsen = {
+			# state = {
+			# 	name = update
+			# 	trigger_on_create = yes
+			# 	on_finish = "[GetScriptedGui('je_meiji_restoration_japanese_emperor_sgui').Execute(GuiScope.SetRoot(JournalEntry.GetCountry.MakeScope).End)]"
+			# }
+
+			layoutpolicy_horizontal = expanding
+			layoutpolicy_vertical = expanding
+			minimumsize = { 520 280 }
+
+			blockoverride "character_layout" {
+				position = { 0 0 }
+				size = { 80% 100% }
+			}
+			blockoverride "character_portrait_size" {
+				size = { 100% 100% }
+			}
+
+			# ruler stats
+			flowcontainer = {
+				parentanchor = right|top
+				position = { -8 5 }
+				direction = vertical
+				spacing = 5
+
+				background = {
+					using = dark_area
+					alpha = 0.75
+
+					modify_texture = {
+						texture = "gfx/interface/masks/fade_horizontal_left_full.dds"
+						blend_mode = alphamultiply
+					}
+				}
+
+				### ROLE
+				ruler_stats_entry = {
+					tooltip = "CHARACTER_PRIMARY_ROLE_TOOLTIP"
+
+					blockoverride "ruler_icon" {
+						widget = {
+							size = { 35 35 }
+							icon = {
+								size = { 100% 100% }
+								texture = "gfx/interface/icons/character_role_icons/sun_yatsen.dds"
+							}
+						}
+					}
+					blockoverride "label" {
+						text = "[Character.GetPrimaryRoleTitle]"
+					}
+					blockoverride "text" {
+						text = "[Character.GetFullName]"
+					}
+				}
+
+				### IDEOLOGY
+				ruler_stats_entry = {
+					datacontext = "[Character.GetIdeology]"
+
+					tooltipwidget = {
+						FancyTooltip_Ideology = {}
+					}
+					blockoverride "icon_texture" {
+						texture = "[Ideology.GetTexture]"
+					}
+					blockoverride "label" {
+						text = "IDEOLOGY_CONCEPT"
+					}
+					blockoverride "text" {
+						text = "CHARACTER_IDEOLOGY"
+					}
+				}
+				#POPULARITY
+				ruler_stats_entry = {
+					tooltip = "PROMINENCE_BREAKDOWN"
+
+					blockoverride "icon_texture" {
+						texture = "gfx/interface/icons/generic_icons/prominence.dds"
+					}
+					blockoverride "label" {
+						text = "PROMINENCE"
+					}
+					blockoverride "text" {
+						text = "CHARACTER_PROMINENCE"
+					}
+				}
+				# COUNTRY
+				ruler_stats_entry = {
+					tooltip = "DATA_CHARACTER_NAME_TOOLTIP_LOCATION_COUNTRY"
+
+					blockoverride "icon_texture" {
+						texture = "gfx/interface/tooltip/tooltip_icon_frame.dds"
+						icon = {
+							parentanchor = vcenter
+							align = left|vcenter
+							size = { 35 35 }
+							texture = "gfx/interface/icons/dlc_icons/dynamic_countries.dds"
+						}
+					}
+					blockoverride "label" {
+						text = "father_now_at_je"
+					}
+					blockoverride "text" {
+						text = "[SelectLocalization(Character.IsInExilePool, 'DATA_CHARACTER_NAME_TOOLTIP_LOCATION_EXILE', Character.GetCountry.GetName)]"
+					}
+				}
+				### TRAITS
+				character_traits_no_label = {
+					parentanchor = right
+				}
+			}
+		}
+	}
+}
+
+je_meiji_restoration_japanese_emperor_sgui = {
+    scope = country
+
+    effect = {
+        je_meiji_restoration_update_japanese_emperor = yes
+    }
+}

@@ -82,7 +82,7 @@ self_strengthening.2 = {
                 can_construct_building = building_sulfur_mine
                 can_construct_building = building_tooling_workshop
                 can_construct_building = building_lead_mine
-                can_construct_building = building_military_shipyard
+                can_construct_building = building_shipyard
             }
         }
     }
@@ -107,7 +107,7 @@ self_strengthening.2 = {
                     can_construct_building = building_sulfur_mine
                     can_construct_building = building_tooling_workshop
                     can_construct_building = building_lead_mine
-                    can_construct_building = building_military_shipyard
+                    can_construct_building = building_shipyard
                 }
             }
             save_scope_as = self_strengthening_donate_state
@@ -181,10 +181,10 @@ self_strengthening.2 = {
                 }
                 20 = {
                     trigger = {
-                        can_construct_building = building_military_shipyard
+                        can_construct_building = building_shipyard
                     }
                     create_building={
-                        building="building_military_shipyard"
+                        building="building_shipyard"
                         level=2
                         reserves=1
                     }
@@ -243,7 +243,7 @@ self_strengthening.3 = {
         }
         scope:self_strengthening_donate_state = {
             is_incorporated = yes
-            can_construct_building = building_naval_base
+            can_construct_building = building_naval_administration
         }
         # NOT = {
         #     any_military_formation = {

@@ -120,7 +120,7 @@
 			limit = {
 				any_scope_character = {
 					has_template = chi_cixi_template
-					has_role = politician
+					has_role_of_type = politician
 				}
 			}
 			add = {

@@ -1,0 +1,13 @@
+﻿character_role_sun_yatsen = {
+	texture = "gfx/interface/icons/character_role_icons/sun_yatsen.dds"
+
+	priority = 50
+
+	title_format = from_name
+	title_preposition = PREP_OF
+
+	character_modifier = {
+		character_prominence_add = 50
+	}
+	career_length = { 75 100 }
+}

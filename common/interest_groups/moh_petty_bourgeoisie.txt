@@ -5,15 +5,14 @@
 		ideology_moh_kmt
 		ideology_moh_right_kmt
 	}
-
 	on_enable = {
-		if = {
-			limit = {
-				any_primary_culture = {
-					has_discrimination_trait = heritage_han
+		ig:ig_petty_bourgeoisie = {
+			if = {
+				limit = {
+					any_primary_culture = {
+						has_discrimination_trait = heritage_han
+					}
 				}
-			}
-			ig:ig_petty_bourgeoisie = { 
 				set_interest_group_name = ig_national_bourgeoisie
 				add_ideology = ideology_republican
 				remove_ideology = ideology_reactionary

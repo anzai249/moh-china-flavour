@@ -161,16 +161,16 @@
 # }
 
 sun_yatsen_goto = {
-    set_global_variable = {
-        name = sun_yatsen_in
-        value = this
-    }
-    # random_character = {
-    # 	limit = {
-    # 		has_variable = sun_yatsen_character
-    # 	}
-    # 	transfer_character = root
+    # set_global_variable = {
+    #     name = sun_yatsen_in
+    #     value = this
     # }
+    random_character = {
+    	limit = {
+    		has_variable = sun_yatsen_character
+    	}
+    	transfer_character = prev
+    }
 }
 
 moh_random_opera_name = {
@@ -366,14 +366,14 @@ warlord_setup_effect_ruler = {
             limit = {
                 c:CHI ?= owner
                 OR = {
-                    has_role = general
+                    has_role_of_type = general
                     AND = {
                         PREV = {
                             any_scope_state = {
-                                has_building = building_naval_base
+								has_building = building_naval_administration
                             }
                         }
-                        has_role = admiral
+                        has_role_of_type = admiral
                     }
                 }
             }
@@ -1127,6 +1127,7 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_QINGHAI.region_state:CHI
             on_created = {
+                set_state_religion = rel:sunni
                 set_global_variable = {
                     name = xib_country
                     value = this
@@ -1161,6 +1162,7 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_QINGHAI.region_state:CHI
             on_created = {
+                set_state_religion = rel:sunni
                 set_global_variable = {
                     name = gansu_country
                     value = this
@@ -1209,6 +1211,7 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_QINGHAI.region_state:BEI
             on_created = {
+                set_state_religion = rel:sunni
                 set_global_variable = {
                     name = xib_country
                     value = this
@@ -1244,6 +1247,7 @@ warlord_setup_countries = {
             origin = this
             state = s:STATE_QINGHAI.region_state:BEI
             on_created = {
+                set_state_religion = rel:sunni
                 set_global_variable = {
                     name = gansu_country
                     value = this
@@ -2269,6 +2273,7 @@ warlord_610_chi = {
             origin = this
             state = s:STATE_QINGHAI.region_state:CHI
             on_created = {
+                set_state_religion = rel:sunni
                 set_global_variable = {
                     name = xib_country
                     value = this
@@ -2304,6 +2309,7 @@ warlord_610_chi = {
             origin = this
             state = s:STATE_GANSU.region_state:CHI
             on_created = {
+                set_state_religion = rel:sunni
                 set_global_variable = {
                     name = gansu_country
                     value = this
@@ -3121,6 +3127,7 @@ warlord_610_bei = {
             origin = this
             state = s:STATE_QINGHAI.region_state:BEI
             on_created = {
+                set_state_religion = rel:sunni
                 set_global_variable = {
                     name = xib_country
                     value = this
@@ -3156,6 +3163,7 @@ warlord_610_bei = {
             origin = this
             state = s:STATE_GANSU.region_state:BEI
             on_created = {
+                set_state_religion = rel:sunni
                 set_global_variable = {
                     name = gansu_country
                     value = this

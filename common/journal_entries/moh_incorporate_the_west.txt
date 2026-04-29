@@ -44,7 +44,7 @@
 		}
 	}
 	weight = 100
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_gaitu_guiliu = {
@@ -87,7 +87,7 @@ je_gaitu_guiliu = {
 		}
 	}
 	weight = 100
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 # reconquest of the west
@@ -95,7 +95,7 @@ je_reconquest_of_the_west = {
 	icon = "gfx/interface/icons/map_mode_icons/strategic_regions.dds"
 	group = je_group_internal_affairs
 	weight = 100
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
     is_shown_in_lobby = {
         c:CHI ?= THIS
     }

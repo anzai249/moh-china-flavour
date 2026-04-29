@@ -6,6 +6,6 @@ INJECT:region_north_china = {
 	states = {  STATE_ULANQAB }
 }
 
-INJECT:region_manchuria = {
+INJECT:region_northeast_asia = {
 	states = { STATE_JIREM }
 }

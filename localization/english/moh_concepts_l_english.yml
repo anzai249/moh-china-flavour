@@ -6,3 +6,6 @@
   geographic_region_begonia_leaf: "Begonia Leaf"
   geographic_region_han_region: "Han Region"
   geographic_region_han_region_desc: "The 18 provinces that form the core of China, historically inhabited predominantly by the Han ethnic group."
+  character_role_sun_yatsen: "[concept_character_role_sun_yatsen]"
+  concept_character_role_sun_yatsen: "Premier"
+  concept_character_role_sun_yatsen_desc: "The Premier of the Kuomintang, the founder of the Republic of China."

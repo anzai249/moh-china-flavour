@@ -5,14 +5,13 @@
 		ideology_moh_kmt
 		ideology_moh_right_kmt
 	}
-
 	on_enable = {
-		if = {
-		# 8 Banners
-			limit = {
-				country_has_primary_culture = cu:manchu
-			}
-			ig:ig_armed_forces = {
+		ig:ig_armed_forces = {
+			if = {
+				# 8 Banners
+				limit = {
+					country_has_primary_culture = cu:manchu
+				}
 				set_interest_group_name = ig_eight_banners
 			}
 		}

@@ -109,7 +109,7 @@
 	display_progressbar_as_months = yes
 
 	weight = 10000
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_shih_chin_opium = {
@@ -201,5 +201,5 @@ je_shih_chin_opium = {
 	progressbar = yes
 	display_progressbar_as_months = yes
 	weight = 100
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }

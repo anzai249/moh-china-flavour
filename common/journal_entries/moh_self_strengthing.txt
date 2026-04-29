@@ -86,7 +86,7 @@
         set_variable = self_strengthening_end
     }
     weight = 100
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
     timeout = 14600
     on_timeout = {
         set_variable = self_strengthening_end
@@ -140,7 +140,7 @@ je_self_strengthing_military = {
         }
     }
     weight = 100
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_self_strengthing_industry = {
@@ -188,7 +188,7 @@ je_self_strengthing_industry = {
     }
     progressbar = yes
     weight = 100
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_self_strengthing_education = {
@@ -225,7 +225,7 @@ je_self_strengthing_education = {
         }
     }
     weight = 100
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_self_strengthing_diplomacy = {
@@ -258,5 +258,5 @@ je_self_strengthing_diplomacy = {
         }
     }
     weight = 100
-    should_be_pinned_by_default = yes
+    should_be_pinned_by_default_uninvolved_or_context = yes
 }

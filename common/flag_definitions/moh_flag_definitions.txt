@@ -614,15 +614,6 @@ TURKISTAN = {
     }
 }
 
-RYU = {
-    # Ryukyu
-    flag_definition = {
-        coa = RYU
-        subject_canton = RYU
-        priority = 1
-    }
-}
-
 SHANGHAI = {
     # Shanghai
     flag_definition = {

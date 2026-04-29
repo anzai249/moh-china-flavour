@@ -1251,7 +1251,7 @@ warlord_china_events.110 = {
     icon = "gfx/interface/icons/event_icons/event_skull.dds"
     trigger = {
         any_scope_character = {
-            is_ruler = yes
+            is_ruler_of_own_country = yes
             has_trait = cruel
         }
         has_government_type = gov_warlord_state
@@ -1259,7 +1259,7 @@ warlord_china_events.110 = {
     immediate = {
         random_scope_character = {
             limit = {
-                is_ruler = yes
+                is_ruler_of_own_country = yes
                 has_trait = cruel
             }
             save_scope_as = prisoner_killing_warlord

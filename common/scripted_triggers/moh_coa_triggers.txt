@@ -9,34 +9,34 @@ sun_yatsen_trigger_30 = {
 		amount = 30
 		5 = {
 			OR = {
-				has_law = law_type:law_presidential_republic
-				has_law = law_type:law_parliamentary_republic
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_parliamentary_republic
 			}
 		}
 		5 = {
-			has_law = law_type:law_homesteading
+			has_law_or_variant = law_type:law_peasant_proprietorship
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_wealth_voting
-				has_law = law_type:law_census_voting
-				has_law = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_womens_rights
+				has_law_or_variant = law_type:law_no_womens_rights
 			}
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_right_of_assembly
-				has_law = law_type:law_protected_speech
+				has_law_or_variant = law_type:law_right_of_assembly
+				has_law_or_variant = law_type:law_protected_speech
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_health_system
+				has_law_or_variant = law_type:law_no_health_system
 			}
 		}
 	}
@@ -48,34 +48,34 @@ sun_yatsen_trigger_25 = {
 		amount = 25
 		5 = {
 			OR = {
-				has_law = law_type:law_presidential_republic
-				has_law = law_type:law_parliamentary_republic
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_parliamentary_republic
 			}
 		}
 		5 = {
-			has_law = law_type:law_homesteading
+			has_law_or_variant = law_type:law_peasant_proprietorship
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_wealth_voting
-				has_law = law_type:law_census_voting
-				has_law = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_womens_rights
+				has_law_or_variant = law_type:law_no_womens_rights
 			}
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_right_of_assembly
-				has_law = law_type:law_protected_speech
+				has_law_or_variant = law_type:law_right_of_assembly
+				has_law_or_variant = law_type:law_protected_speech
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_health_system
+				has_law_or_variant = law_type:law_no_health_system
 			}
 		}
 	}
@@ -87,34 +87,34 @@ sun_yatsen_trigger_20 = {
 		amount = 20
 		5 = {
 			OR = {
-				has_law = law_type:law_presidential_republic
-				has_law = law_type:law_parliamentary_republic
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_parliamentary_republic
 			}
 		}
 		5 = {
-			has_law = law_type:law_homesteading
+			has_law_or_variant = law_type:law_peasant_proprietorship
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_wealth_voting
-				has_law = law_type:law_census_voting
-				has_law = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_womens_rights
+				has_law_or_variant = law_type:law_no_womens_rights
 			}
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_right_of_assembly
-				has_law = law_type:law_protected_speech
+				has_law_or_variant = law_type:law_right_of_assembly
+				has_law_or_variant = law_type:law_protected_speech
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_health_system
+				has_law_or_variant = law_type:law_no_health_system
 			}
 		}
 	}
@@ -126,34 +126,34 @@ sun_yatsen_trigger_15 = {
 		amount = 15
 		5 = {
 			OR = {
-				has_law = law_type:law_presidential_republic
-				has_law = law_type:law_parliamentary_republic
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_parliamentary_republic
 			}
 		}
 		5 = {
-			has_law = law_type:law_homesteading
+			has_law_or_variant = law_type:law_peasant_proprietorship
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_wealth_voting
-				has_law = law_type:law_census_voting
-				has_law = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_womens_rights
+				has_law_or_variant = law_type:law_no_womens_rights
 			}
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_right_of_assembly
-				has_law = law_type:law_protected_speech
+				has_law_or_variant = law_type:law_right_of_assembly
+				has_law_or_variant = law_type:law_protected_speech
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_health_system
+				has_law_or_variant = law_type:law_no_health_system
 			}
 		}
 	}
@@ -165,34 +165,34 @@ sun_yatsen_trigger_10 = {
 		amount = 10
 		5 = {
 			OR = {
-				has_law = law_type:law_presidential_republic
-				has_law = law_type:law_parliamentary_republic
+				has_law_or_variant = law_type:law_presidential_republic
+				has_law_or_variant = law_type:law_parliamentary_republic
 			}
 		}
 		5 = {
-			has_law = law_type:law_homesteading
+			has_law_or_variant = law_type:law_peasant_proprietorship
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_wealth_voting
-				has_law = law_type:law_census_voting
-				has_law = law_type:law_universal_suffrage
+				has_law_or_variant = law_type:law_wealth_voting
+				has_law_or_variant = law_type:law_census_voting
+				has_law_or_variant = law_type:law_universal_suffrage
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_womens_rights
+				has_law_or_variant = law_type:law_no_womens_rights
 			}
 		}
 		5 = {
 			OR = {
-				has_law = law_type:law_right_of_assembly
-				has_law = law_type:law_protected_speech
+				has_law_or_variant = law_type:law_right_of_assembly
+				has_law_or_variant = law_type:law_protected_speech
 			}
 		}
 		5 = {
 			NOT = {
-				has_law = law_type:law_no_health_system
+				has_law_or_variant = law_type:law_no_health_system
 			}
 		}
 	}

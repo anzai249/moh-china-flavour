@@ -263,11 +263,11 @@ moh_random.102 = {
 		random_scope_character = {
 			limit = {
 				OR = {
-					has_role = politician
-					has_role = agitator
-					has_role = executive
+					has_role_of_type = politician
+					has_role_of_type = agitator
+					has_role_of_type = executive
 				}
-				is_ruler = no
+				is_ruler_of_own_country = no
 				is_heir =  no
 			}
 			save_scope_as = cheat_character

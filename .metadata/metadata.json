@@ -1,8 +1,8 @@
 {
   "name" : "Mandate of Heaven",
 	"id" : "top.sleepingbed.moh",
-  "version" : "1.4.4",
-  "supported_game_version" : "1.12.*",
+  "version" : "1.4.5",
+  "supported_game_version" : "1.13.*",
   "short_description" : "",
   "tags" : ["Cultures and Religions", "Events", "Expansion", "Flags", "Historical", "Journal Entries"],
   "relationships" : [

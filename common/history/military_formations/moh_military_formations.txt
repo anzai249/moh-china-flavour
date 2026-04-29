@@ -1,0 +1,28 @@
+﻿MILITARY_FORMATIONS = {
+	c:CHI ?= {
+		create_military_formation = {
+			type = fleet
+			hq_region = sr:region_south_china
+			name = Fujian_Navy
+
+			ship = {
+				type = ship_type:ship_type_frigate
+				count = 1
+			}
+			ship = {
+				type = ship_type:ship_type_frigate
+				count = 1
+			}
+			save_scope_as = green_standard_navy
+		}
+
+		create_character = {
+			template = CHI_huacheng_chen
+			save_scope_as = green_standard_navy_admiral
+		}
+
+		scope:green_standard_navy_admiral = {
+			transfer_to_formation = scope:green_standard_navy
+		}
+	}
+}

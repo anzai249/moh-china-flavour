@@ -5,6 +5,7 @@
     culture = cu:han
     interest_group = ig_intelligentsia
 	age = 22
+    home_region = STATE_BEIJING
     ideology = ideology_liberal_leader
 	dna = dna_mori_tokugawa_the_author
     traits = {
@@ -30,9 +31,11 @@ chi_wu_bingjian_executive_template = {
     first_name = moh_Bingjian
     last_name = moh_Wu
     culture = cu:yue
+    home_region = STATE_GUANGDONG
     historical = yes
     interest_group = ig_landowners
     ideology = ideology_moderate
+	company = company:company_ewo_hong
     birth_date = 1769.1.1
     traits = {
         expensive_tastes

@@ -67,7 +67,7 @@ moh_linzexu = {
 	}
 }
 
-on_half_yearly_pulse_country = {
+on_half_yearly_pulse_character = {
 	on_actions = {
 		moh_sunyatsen_je
 	}
@@ -78,7 +78,6 @@ moh_sunyatsen_je = {
 		if = {
 			limit = {
 				has_global_variable = china_shatters
-				country_rank = 1
 			}
 			if = {
 				limit = {
@@ -284,6 +283,7 @@ moh_self_strengthing_war = {
 on_character_creation = {
 	on_actions = {
 		moh_self_strengthening_character_creation
+		moh_hui_character_creation
 	}
 }
 
@@ -300,6 +300,28 @@ moh_self_strengthening_character_creation = {
 				75 = {}
 				25 = {
 					set_variable = self_strengthening_character
+				}
+			}
+		}
+	}
+}
+
+moh_hui_character_creation = {
+	effect = {
+		if = {
+			limit = {
+				culture = cu:han
+				OR = {
+					religion = rel:sunni
+					religion = rel:shiite
+				}
+			}
+			random_list = {
+				75 = {
+					set_last_name = Ma
+				}
+				25 = {
+					
 				}
 			}
 		}

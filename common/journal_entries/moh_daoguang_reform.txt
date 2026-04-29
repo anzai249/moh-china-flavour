@@ -1,6 +1,11 @@
 ﻿je_daoguang_reform_main = {
 	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
 	group = je_group_qing
+    widget = {
+        gui = "gui/com_journal_injects/injects.gui"
+        name = "com_journal_entry_characters"
+        container = "custom_widget_container_1"
+    }
 	is_shown_when_inactive = {
 		c:CHI ?= this
 		has_law = law_type:law_monarchy
@@ -70,7 +75,7 @@
 	}
 	progressbar = yes
 	weight = 250
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_daoguang_reform_grain = {
@@ -112,7 +117,7 @@ je_daoguang_reform_grain = {
 		}
 	}
 	weight = 200
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_daoguang_reform_mine = {
@@ -155,7 +160,7 @@ je_daoguang_reform_mine = {
 		}
 	}
 	weight = 200
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_daoguang_reform_opium = {
@@ -271,7 +276,7 @@ je_daoguang_reform_opium = {
 	}
 	scripted_progress_bar = daoguang_opium_progress_bar
 	weight = 200
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
 je_xianfeng = {
@@ -341,6 +346,6 @@ je_xianfeng = {
 		}
 	}
 	scripted_progress_bar = xianfeng_progress_bar
-	should_be_pinned_by_default = yes
+	should_be_pinned_by_default_uninvolved_or_context = yes
 	weight = 250
 }

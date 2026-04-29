@@ -179,17 +179,6 @@ REPLACE_OR_CREATE:HBE = { # Hubei
 	capital = STATE_EASTERN_HUBEI
 }
 
-RYU = { # Ryukyu
-	color = { 255 255 255 }
-	country_type = unrecognized
-	
-	tier = kingdom
-	
-	cultures = { japanese }
-	
-	capital = STATE_RYUKYU_ISLANDS
-}
-
 REPLACE:YUZ = { # Yuanzhumin
 	color = { 97 44 96 }
 	

@@ -10,17 +10,16 @@
 
 
 	on_enable = {
-		
-		if = {
-		# Literati
-			limit = {
-				c:CHI ?= THIS
-			}
-			ig:ig_intelligentsia = { 
-				set_interest_group_name = ig_literati
-				remove_ideology = ideology_anti_clerical
-				remove_ideology = ideology_republican
-				add_ideology = ideology_eight_legged
+		ig:ig_intelligentsia ?= {
+			if = {
+			# Literati
+				limit = {
+					c:CHI ?= THIS
+				}
+					set_interest_group_name = ig_literati
+					remove_ideology = ideology_anti_clerical
+					remove_ideology = ideology_republican
+					add_ideology = ideology_eight_legged
 			}
 		}
 	}

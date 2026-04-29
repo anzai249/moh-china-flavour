@@ -87,7 +87,7 @@
 
 	non_interest_group_leader_trigger = {
 		NOT = {
-			has_role = agitator
+			has_role_of_type = agitator
 		}
 		interest_group = {
 			ideology_moh_reformer_valid_trigger = yes
@@ -233,7 +233,7 @@ REPLACE_OR_CREATE:ideology_moh_revolutionary = {
 	lawgroup_land_reform = {
 		law_serfdom = disapprove
 		law_tenant_farmers = disapprove
-		law_homesteading = neutral
+		law_peasant_proprietorship = neutral
 		law_collectivized_agriculture = strongly_disapprove
 		law_commercialized_agriculture = neutral
 	}
@@ -287,7 +287,7 @@ REPLACE_OR_CREATE:ideology_moh_revolutionary = {
 
 	non_interest_group_leader_trigger = {
 		NOT = {
-			has_role = agitator
+			has_role_of_type = agitator
 		}
 		interest_group = {
 			OR = {
@@ -441,7 +441,7 @@ REPLACE_OR_CREATE:ideology_moh_kmt = {
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = neutral
-		law_homesteading = approve
+		law_peasant_proprietorship = approve
 		law_collectivized_agriculture = strongly_disapprove
 		law_commercialized_agriculture = neutral
 	}
@@ -483,7 +483,7 @@ REPLACE_OR_CREATE:ideology_moh_kmt = {
 
 	non_interest_group_leader_trigger = {
 		NOT = {
-			has_role = agitator
+			has_role_of_type = agitator
 		}
 		interest_group = {
 			ideology_moh_kmt_valid_trigger = yes
@@ -572,7 +572,7 @@ REPLACE_OR_CREATE:ideology_moh_right_kmt = {
 	lawgroup_land_reform = {
 		law_serfdom = strongly_disapprove
 		law_tenant_farmers = neutral
-		law_homesteading = neutral
+		law_peasant_proprietorship = neutral
 		law_collectivized_agriculture = strongly_disapprove
 		law_commercialized_agriculture = approve
 	}
@@ -640,7 +640,7 @@ REPLACE_OR_CREATE:ideology_moh_right_kmt = {
 
 	non_interest_group_leader_trigger = {
 		NOT = {
-			has_role = agitator
+			has_role_of_type = agitator
 		}
 		interest_group = {
 			ideology_moh_kmt_valid_trigger = yes

@@ -8,6 +8,7 @@
 		can_be_enforced
 	}
 
+	maintenance_paid_by = source_country
 	usage_limit = once_per_side
 
 	visible = {
