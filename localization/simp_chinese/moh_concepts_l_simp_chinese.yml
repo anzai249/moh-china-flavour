@@ -6,3 +6,6 @@
   geographic_region_begonia_leaf: "秋海棠"
   geographic_region_han_region: "汉地"
   geographic_region_han_region_desc: "汉地十八省"
+  character_role_sun_yatsen: "[concept_character_role_sun_yatsen]"
+  concept_character_role_sun_yatsen: "总理"
+  concept_character_role_sun_yatsen_desc: "中国国民党总理，中华民国的缔造者。"
