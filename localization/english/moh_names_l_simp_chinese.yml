@@ -36,6 +36,7 @@
   moh_Wei_1: "魏"
   moh_Qiu: "秋"
   moh_Hou: "侯"
+  moh_Pan: "潘"
   #满姓
   moh_Tunggiya: "佟佳"
   moh_Magiya: "马佳"
@@ -47,6 +48,7 @@
   moh_Irgen_Gioro: "伊尔根觉罗"
   moh_Ula_Nara: "乌拉那拉"
   moh_Hada_Nara: "哈达那拉"
+  moh_Socoro: "索绰罗"
   #男名
   moh_Hao: "昊"
   moh_Jian: "健"
@@ -82,6 +84,9 @@
   moh_Kunyi: "坤一"
   moh_Debang: "德榜"
   moh_Hsueh_liang: "学良"
+  moh_Shien: "世恩"
+  moh_Lingyi: "令贻"
+  moh_Xiangke: "祥珂"
   moh_Zaifeng: "载沣"
   moh_Zaiyi: "载漪"
   moh_Jiaoren: "教仁"
@@ -112,6 +117,9 @@
   moh_Naiji: "乃济"
   moh_Bingjian: "秉鉴"
   moh_Yixuan: "奕𫍽"
+  moh_Yicong: "奕誴"
+  moh_Mianxing: "绵性"
+  moh_Yinghe: "英和"
   moh_Jebtsundamba: "哲布尊丹巴"
   moh_Luvsanchultimjigmed: "罗布藏楚都木济克默特" #5th
   moh_Luvsantuvdenchoyjijaltsan: "罗桑图旦却吉坚赞" #6th
