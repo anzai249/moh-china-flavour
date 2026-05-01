@@ -541,3 +541,14 @@ Fixes:
 
 - A bug causing 1.13 achievements to not display correctly.
 - Some missing English localization.
+
+Release 1.4.5.2 "Horse"
+
+Changes:
+
+- AI strategy adjustments for 1.13.3.
+
+Fixes:
+
+- A bug causing Great Britain to not initiate the Opium Wars.
+- Rebellion tracker trigger typo.
