@@ -534,3 +534,10 @@ Changes:
 - 1.13 compatibility.
 - Zhou Ritual System law.
 - Modified the icon of Imperial Examination System and Night Watchmen.
+
+Release 1.4.5.1 "Horse"
+
+Fixes:
+
+- A bug causing 1.13 achievements to not display correctly.
+- Some missing English localization.
