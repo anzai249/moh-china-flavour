@@ -10,3 +10,11 @@ concept_character_role_sun_yatsen = {
 	texture = "gfx/interface/icons/character_role_icons/sun_yatsen.dds"
 	is_loading_tip = yes
 }
+concept_character_role_duke_yansheng = {
+	texture = "gfx/interface/icons/character_role_icons/duke_yansheng.dds"
+	is_loading_tip = yes
+}
+concept_character_role_self_strengthening_leader = {
+	texture = "gfx/interface/icons/character_role_icons/self_strengthening_leader.dds"
+	is_loading_tip = yes
+}

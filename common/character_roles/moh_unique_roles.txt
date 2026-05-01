@@ -4,10 +4,40 @@
 	priority = 50
 
 	title_format = from_name
-	title_preposition = PREP_OF
+	title_preposition = PREP_IN
 
 	character_modifier = {
 		character_prominence_add = 50
+		character_popularity_add = 5
+	}
+	career_length = { 75 100 }
+}
+
+character_role_duke_yansheng = {
+	texture = "gfx/interface/icons/character_role_icons/duke_yansheng.dds"
+
+	priority = 50
+
+	title_format = from_name
+	title_preposition = PREP_OF
+
+	character_modifier = {
+		character_prominence_add = 15
+		character_popularity_add = 5
+	}
+	career_length = { 75 100 }
+}
+
+character_role_self_strengthening_leader = {
+	texture = "gfx/interface/icons/character_role_icons/self_strengthening_leader.dds"
+
+	priority = 50
+
+	title_format = from_name
+	title_preposition = PREP_OF
+
+	character_modifier = {
+		character_prominence_add = 15
 	}
 	career_length = { 75 100 }
 }

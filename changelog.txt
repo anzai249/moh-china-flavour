@@ -552,3 +552,10 @@ Fixes:
 
 - A bug causing Great Britain to not initiate the Opium Wars.
 - Rebellion tracker trigger typo.
+
+Release 1.4.6 "Horse"
+
+Changes:
+
+- New characters: Kong Yangke, Kong Lingyi, Kong Decheng, Mianxing, Yinghe, Yicong, Pan Shi'en.
+- New character roles: Duke Yansheng, Self-Strengthening Minister.

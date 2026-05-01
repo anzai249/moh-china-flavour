@@ -87,5 +87,27 @@
 		create_character = { # 伍秉鉴
 			template = chi_wu_bingjian_executive_template
 		}
+
+		create_character = {
+			template = chi_yicong_character_template
+		}
+
+		create_character = {
+			template = chi_mianxing_character_template
+		}
+
+		create_character = {
+			template = chi_shien_pan_character_template
+		}
+
+		create_character = {
+			template = chi_yinghe_character_template
+		}
+
+		create_character = {
+			template = CHI_changling_he
+		}
+		
+		moh_generate_duke_yansheng = yes
 	}
 }

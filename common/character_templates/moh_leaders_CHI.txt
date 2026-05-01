@@ -39,32 +39,6 @@ ecchi_chi_li_hongzhang_character_template = {
     }
 }
 
-ecchi_chi_yikuang_character_template = {
-    first_name = ecchi_Yikuang
-    last_name = Aisin_Gioro
-    historical = yes
-    culture = cu:manchu
-    home_region = STATE_BEIJING
-    noble = yes
-    female = no
-    ideology = ideology_moderate
-    interest_group = ig_landowners
-    birth_date = 1838.11.16
-    traits = { reserved grifter basic_political_operator }
-    dna = ecchi_dna_yikuang
-    interest_group_leader_usage = {
-        country_trigger = {
-            country_has_primary_culture = cu:manchu
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_landowners
-        }
-        earliest_usage_date = 1872.1.1
-        latest_usage_date = 1917.1.28
-        chance = 65
-    }
-}
-
 ecchi_chi_zhang_zhidong_character_template = {
     first_name = ecchi_Zhidong
     last_name = Zhang
@@ -159,36 +133,6 @@ ecchi_chi_zhang_jian_character_template = {
         earliest_usage_date = 1874.1.1
         latest_usage_date = 1926.8.21
         chance = 80
-    }
-}
-
-## Ilibu
-
-ecchi_chi_ilibu_character_template = {
-    first_name = ecchi_Ilibu
-    last_name = Aisin_Gioro
-    historical = yes
-    home_region = STATE_SOUTHERN_MANCHURIA
-    nobel = yes
-    culture = cu:manchu
-    female = no
-    ideology = ideology_traditionalist
-    interest_group = ig_armed_forces
-    ig_leader = yes
-    dna = ecchi_dna_ilibu
-    birth_date = 1772.1.1
-    traits = { experienced_defensive_strategist persistent pillager opium_addiction }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:CHI
-            this = c:CHI
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_armed_forces
-        }
-        earliest_usage_date = 1801.1.1
-        latest_usage_date = 1843.3.4
-        chance = 100
     }
 }
 
@@ -1670,138 +1614,6 @@ ecchi_chi_lin_huiyin_character_template = {
 }
 
 
-
-INJECT:chi_daoguang_template = {
-    # The Daoguang Emperor
-    first_name = moh_Minning
-    on_created = {
-        set_variable = daoguang_character
-        save_scope_as = daoguang_scope
-        owner = {
-            set_variable = {
-                name = daoguang
-                value = scope:daoguang_scope
-            }
-        }
-		home_country = {
-			if = {
-				limit = {
-					has_journal_entry = je_daoguang_reform_main
-				}
-				je:je_daoguang_reform_main = {
-					clear_variable_list = com_journal_characters
-					add_to_variable_list = {
-						name = com_journal_characters
-						target = root
-					}
-				}
-			}
-		}
-    }
-}
-
-chi_tongzhi_template = {
-    first_name = moh_zaichun
-    last_name = "Aisin_Gioro"
-    historical = yes
-    noble = yes
-    home_region = STATE_BEIJING
-    heir = yes
-    birth_date = 1856.4.27
-    # dna = dna_daoguang_emperor
-    culture = cu:manchu
-    interest_group = ig_landowners
-    ideology = ideology_traditionalist
-    traits = {
-        honorable
-        syphilis
-    }
-}
-
-chi_zaiyi_template = {
-    first_name = moh_Zaiyi
-    last_name = "Aisin_Gioro"
-    historical = yes
-    noble = yes
-    home_region = STATE_BEIJING
-    heir = yes
-    birth_date = 1856.8.26
-    culture = cu:manchu
-    interest_group = ig_landowners
-    ideology = ideology_traditionalist
-    traits = {
-        brave
-    }
-}
-
-chi_guangxu_template = {
-    first_name = moh_Zaitian
-    last_name = "Aisin_Gioro"
-    historical = yes
-    noble = yes
-    home_region = STATE_BEIJING
-    heir = yes
-    birth_date = 1871.8.14
-    # dna = dna_daoguang_emperor
-    culture = cu:manchu
-    interest_group = ig_landowners
-    ideology = ideology_moderate
-    traits = {
-        cautious
-        innovative
-        inept
-    }
-}
-
-chi_xuantong_template = {
-    first_name = moh_Puyi
-    last_name = "Aisin_Gioro"
-    historical = yes
-    noble = yes
-    home_region = STATE_BEIJING
-    heir = yes
-    birth_date = 1906.2.7
-    # dna = dna_daoguang_emperor
-    culture = cu:manchu
-    interest_group = ig_landowners
-    ideology = ideology_moderate
-    traits = {
-        cautious
-        meticulous
-        inept
-    }
-}
-
-# Zaifeng
-chi_zaifeng_character_template = {
-    first_name = moh_Zaifeng
-    last_name = Aisin_Gioro
-    noble = yes
-    home_region = STATE_BEIJING
-    historical = yes
-    culture = cu:manchu
-    ideology = ideology_moderate
-    interest_group = ig_landowners
-    # dna = ecchi_dna_li_hongzhang
-    birth_date = 1883.2.12
-    traits = { masterful_diplomat reserved }
-    interest_group_leader_usage = {
-        country_trigger = {
-            NOT = {
-                country_average_cultural_acceptance = { target = cu:manchu value < acceptance_status_4 }
-            }
-            has_state_in_state_region = STATE_BEIJING
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_landowners
-        }
-        earliest_usage_date = 1908.1.1
-        latest_usage_date = 1911.10.10
-        chance = 65
-    }
-}
-
 # Song Jiaoren
 
 chi_song_jiaoren_character_template = {
@@ -1830,37 +1642,6 @@ chi_song_jiaoren_character_template = {
     }
 }
 
-
-chi_pujie_template = {
-    first_name = moh_Pujie
-    last_name = "Aisin_Gioro"
-    historical = yes
-    noble = yes
-    home_region = STATE_BEIJING
-    heir = yes
-    birth_date = 1907.4.16
-    # dna =
-    culture = cu:manchu
-    interest_group = ig_landowners
-    ideology = ideology_moderate
-    traits = {
-        open_terrain_commander
-        meticulous
-    }
-    commander_rank = default
-    commander_usage = {
-        country_trigger = {
-            NOT = {
-                country_average_cultural_acceptance = { target = cu:manchu value < acceptance_status_4 }
-            }
-            has_state_in_state_region = STATE_SHENGJING
-        }
-        role = general
-        earliest_usage_date = 1928.1.1
-        latest_usage_date = 1945.8.15
-        chance = 65
-    }
-}
 
 # wengtonghe
 
@@ -1968,48 +1749,6 @@ chi_zhang_chaofa_template = {
         earliest_usage_date = 1836.1.1
         latest_usage_date = 1855.1.1
         chance = 80
-    }
-}
-
-
-REPLACE:chi_gong_character_template = {
-    first_name = Prince_Gong
-    last_name = Aisin_Gioro
-    historical = yes
-    culture = cu:manchu
-    female = no
-    dna = moh_dna_chi_yixin
-    ideology = ideology_royalist
-    interest_group = ig_landowners
-    birth_date = 1800.1.11
-    traits = {
-        experienced_diplomat
-        reserved
-    }
-    interest_group_leader_usage = {
-        country_trigger = {
-            exists = c:CHI
-            this = c:CHI
-            c:CHI = { has_law = law_type:law_monarchy }
-        }
-        interest_group_trigger = {
-            ig_counts_as_marginal = no
-            is_interest_group_type = ig_landowners
-            NOR = {
-                has_variable = communist_ig_var
-                has_variable = chose_vanguardism
-                has_variable = chose_fascism
-                has_variable = chose_conservatism
-                has_variable = chose_ethno_nationalism
-            }
-        }
-        earliest_usage_date = 1853.1.1
-        latest_usage_date = 1898.1.1
-        chance = 80
-    }
-    on_created = {
-        set_variable = self_strengthening_character
-        set_variable = is_gong
     }
 }
 
@@ -2451,33 +2190,6 @@ chi_sheng_xuanhuai_character_template = {
     }
 }
 
-chi_sushun_character_template = {
-    first_name = moh_Sushun
-    last_name = "Aisin_Gioro"
-    historical = yes
-    noble = yes
-    home_region = STATE_BEIJING
-    culture = cu:manchu
-    ideology = ideology_traditionalist
-    interest_group = ig_landowners
-    traits = { honorable direct }
-    birth_date = 1816.11.26
-    interest_group_leader_usage = {
-        country_trigger = {
-            NOT = {
-                country_average_cultural_acceptance = { target = cu:manchu value < acceptance_status_4 }
-            }
-            has_state_in_state_region = STATE_BEIJING
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_landowners
-        }
-        earliest_usage_date = 1850.1.1
-        latest_usage_date = 1861.11.8
-        chance = 50
-    }
-}
-
 chi_yizhen_character_template = {
     first_name = moh_Yizhen
     last_name = moh_Yanggiya
@@ -2530,75 +2242,24 @@ chi_lin_hongnian_character_template = {
     }
 }
 
-chi_shantao_character_template = {
-    first_name = moh_Shantao
-    last_name = "Aisin_Gioro"
-    historical = yes
-    noble = yes
-    home_region = STATE_BEIJING
-    culture = cu:manchu
-    interest_group = ig_intelligentsia
-    ideology = ideology_moderate
-    birth_date = 1817.10.9
-    traits = { erudite cautious }
-    interest_group_leader_usage = {
-        country_trigger = {
-            NOT = {
-                country_average_cultural_acceptance = { target = cu:manchu value < acceptance_status_4 }
-            }
-            has_state_in_state_region = STATE_BEIJING
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_intelligentsia
-        }
-        earliest_usage_date = 1832.1.1
-        latest_usage_date = 1861.2.14
-        chance = 75
-    }
-}
-
-chi_zaiyuan_character_template = {
-    first_name = moh_Zaiyuan
-    last_name = "Aisin_Gioro"
-    historical = yes
-    noble = yes
-    home_region = STATE_BEIJING
-    culture = cu:manchu
-    interest_group = ig_armed_forces
-    ideology = ideology_authoritarian
-    birth_date = 1816.10.16
-    traits = { arrogant ambitious ruthless }
-    interest_group_leader_usage = {
-        country_trigger = {
-            NOT = {
-                country_average_cultural_acceptance = { target = cu:manchu value < acceptance_status_4 }
-            }
-            has_state_in_state_region = STATE_BEIJING
-        }
-        interest_group_trigger = {
-            is_interest_group_type = ig_armed_forces
-        }
-        earliest_usage_date = 1832.1.1
-        latest_usage_date = 1861.11.8
-        chance = 75
-    }
-}
-
 chi_kong_fanhao_character_template = {
     first_name = moh_Fanhao
-    last_name = moh_Kong
+    last_name = Kong
     historical = yes
     culture = cu:han
+    home_region = STATE_SHANDONG
+    religion = rel:confucian
     interest_group = ig_devout
     ideology = ideology_theocrat
     birth_date = 1806.3.21
     traits = { honorable pious }
+    role = character_role_duke_yansheng
     interest_group_leader_usage = {
         country_trigger = {
             NOT = {
                 country_average_cultural_acceptance = { target = cu:han value < acceptance_status_4 }
             }
-            has_state_in_state_region = STATE_BEIJING
+            has_state_in_state_region = STATE_SHANDONG
         }
         interest_group_trigger = {
             is_interest_group_type = ig_devout
@@ -2607,6 +2268,48 @@ chi_kong_fanhao_character_template = {
         latest_usage_date = 1862.11.11
         chance = 65
     }
+}
+
+chi_kong_xiangke_character_template = {
+    first_name = moh_Xiangke
+    last_name = Kong
+    historical = yes
+    culture = cu:han
+    home_region = STATE_SHANDONG
+    interest_group = ig_devout
+    ideology = ideology_theocrat
+    religion = rel:confucian
+    birth_date = 1848.9.25
+    traits = { pious sickly }
+    role = character_role_duke_yansheng
+}
+
+chi_kong_lingyi_character_template = {
+    first_name = moh_Lingyi
+    last_name = Kong
+    historical = yes
+    culture = cu:han
+    home_region = STATE_SHANDONG
+    interest_group = ig_devout
+    religion = rel:confucian
+    ideology = ideology_theocrat
+    birth_date = 1872.11.29
+    traits = { pious }
+    role = character_role_duke_yansheng
+}
+
+chi_kong_decheng_character_template = {
+    first_name = moh_Decheng
+    last_name = Kong
+    historical = yes
+    culture = cu:han
+    home_region = STATE_SHANDONG
+    religion = rel:confucian
+    interest_group = ig_devout
+    ideology = ideology_moderate
+    birth_date = 1920.2.23
+    traits = { pious }
+    role = character_role_duke_yansheng
 }
 
 # YUZ - Cuqicuq Garuljigulj
@@ -2738,7 +2441,7 @@ REPLACE:CHI_changling_he = {
     home_region = STATE_HUNAN
     birth_date = 1785.3.18
     culture = cu:han
-    ig_leader = yes
+    # ig_leader = yes
     interest_group = ig_intelligentsia
     ideology = ideology_moderate
     traits = {
@@ -2754,20 +2457,34 @@ REPLACE:CHI_changling_he = {
         interest_group_trigger = {
             is_interest_group_type = ig_intelligentsia
         }
-        earliest_usage_date = 1836.1.1
+        earliest_usage_date = 1836.2.1
         latest_usage_date = 1848.1.1
         chance = 90
     }
 }
 
-chi_yixuan_character_template = {
-    first_name = moh_Yixuan
-    last_name = "Aisin_Gioro"
+chi_shien_pan_character_template = {
+    first_name = moh_Shien
+    last_name = moh_Pan
     historical = yes
-    culture = cu:manchu
-    interest_group = ig_landowners
+    culture = cu:han
+    ideology = ideology_moderate
+    interest_group = ig_intelligentsia
+    home_region = STATE_ZHILI
+    birth_date = 1769.1.1
+    traits = { erudite honorable }
+    trait_generation = { }
+}
+
+chi_yinghe_character_template = {
+    first_name = moh_Yinghe
+    last_name = moh_Socoro
+    historical = yes
+    culture = cu:han
     ideology = ideology_traditionalist
-    birth_date = 1840.10.16
-    traits = { honorable }
-    ruler = yes
+    interest_group = ig_landowners
+    home_region = STATE_BEIJING
+    birth_date = 1769.1.1
+    traits = { literary grifter }
+    trait_generation = { }
 }

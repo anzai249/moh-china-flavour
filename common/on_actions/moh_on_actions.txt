@@ -39,6 +39,15 @@ on_yearly_pulse_country = {
 		moh_random_yearly_events
 		moh_linzexu
 	}
+	effect = {
+		if = {
+			limit = {
+				country_has_state_religion = rel:confucian
+				c:CHI ?= this
+			}
+			moh_generate_duke_yansheng = yes
+		}
+	}
 }
 
 on_half_yearly_pulse_country = {

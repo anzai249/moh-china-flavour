@@ -3413,3 +3413,46 @@ warlord_610_bei = {
         set_variable = var_warlord_four
     }
 }
+
+moh_generate_duke_yansheng = {
+    if = {
+        limit = {
+            game_date >= 1806.3.21
+            NOT = { has_variable = yansheng_73_spawned }
+        }
+        set_variable = yansheng_73_spawned
+        create_character = {
+            template = chi_kong_fanhao_character_template
+        }
+    }
+    else_if = {
+        limit = {
+            game_date >= 1848.9.25
+            NOT = { has_variable = yansheng_74_spawned }
+        }
+        set_variable = yansheng_74_spawned
+        create_character = {
+            template = chi_kong_xiangke_character_template
+        }
+    }
+    else_if = {
+        limit = {
+            game_date >= 1872.11.29
+            NOT = { has_variable = yansheng_75_spawned }
+        }
+        set_variable = yansheng_75_spawned
+        create_character = {
+            template = chi_kong_lingyi_character_template
+        }
+    }
+    else_if = {
+        limit = {
+            game_date >= 1920.2.23
+            NOT = { has_variable = yansheng_76_spawned }
+        }
+        set_variable = yansheng_76_spawned
+        create_character = {
+            template = chi_kong_decheng_character_template
+        }
+    }
+}
