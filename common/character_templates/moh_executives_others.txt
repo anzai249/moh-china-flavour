@@ -42,6 +42,7 @@ chi_wu_bingjian_executive_template = {
     traits = {
         expensive_tastes
         ambitious
+        expert_entrepreneur
     }
     executive_usage = {
         country_trigger = {

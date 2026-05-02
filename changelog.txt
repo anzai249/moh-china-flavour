@@ -557,5 +557,5 @@ Release 1.4.6 "Horse"
 
 Changes:
 
-- New characters: Kong Yangke, Kong Lingyi, Kong Decheng, Mianxing, Yinghe, Yicong, Pan Shi'en.
+- New characters: Kong Yangke, Kong Lingyi, Kong Decheng, Mianxing, Yinghe, Yicong, Pan Shi'en, Zaitao.
 - New character roles: Duke Yansheng, Self-Strengthening Minister.

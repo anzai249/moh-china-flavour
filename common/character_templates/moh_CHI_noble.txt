@@ -3,6 +3,7 @@
     first_name = moh_Minning
     on_created = {
         set_variable = daoguang_character
+        set_variable = aisin_gioro_prince
         save_scope_as = daoguang_scope
         owner = {
             set_variable = {
@@ -43,6 +44,9 @@ chi_tongzhi_template = {
         honorable
         syphilis
     }
+    on_created = {
+        set_variable = aisin_gioro_prince
+    }
 }
 
 chi_zaiyi_template = {
@@ -58,6 +62,9 @@ chi_zaiyi_template = {
     ideology = ideology_traditionalist
     traits = {
         brave
+    }
+    on_created = {
+        set_variable = aisin_gioro_prince
     }
 }
 
@@ -78,6 +85,9 @@ chi_guangxu_template = {
         innovative
         inept
     }
+    on_created = {
+        set_variable = aisin_gioro_prince
+    }
 }
 
 chi_xuantong_template = {
@@ -97,6 +107,9 @@ chi_xuantong_template = {
         meticulous
         inept
     }
+    on_created = {
+        set_variable = aisin_gioro_prince
+    }
 }
 
 # Zaifeng
@@ -107,7 +120,7 @@ chi_zaifeng_character_template = {
     home_region = STATE_BEIJING
     historical = yes
     culture = cu:manchu
-    ideology = ideology_moderate
+    ideology = ideology_modernizer_leader
     interest_group = ig_landowners
     # dna = ecchi_dna_li_hongzhang
     birth_date = 1883.2.12
@@ -126,6 +139,9 @@ chi_zaifeng_character_template = {
         earliest_usage_date = 1908.1.1
         latest_usage_date = 1911.10.10
         chance = 65
+    }
+    on_created = {
+        set_variable = aisin_gioro_prince
     }
 }
 
@@ -157,6 +173,9 @@ chi_pujie_template = {
         earliest_usage_date = 1928.1.1
         latest_usage_date = 1945.8.15
         chance = 65
+    }
+    on_created = {
+        set_variable = aisin_gioro_prince
     }
 }
 
@@ -198,6 +217,7 @@ REPLACE:chi_gong_character_template = {
     on_created = {
         set_variable = self_strengthening_character
         set_variable = is_gong
+        set_variable = aisin_gioro_prince
     }
 }
 
@@ -280,6 +300,9 @@ chi_zaiyuan_character_template = {
         latest_usage_date = 1861.11.8
         chance = 75
     }
+    on_created = {
+        set_variable = aisin_gioro_prince
+    }
 }
 
 chi_yixuan_character_template = {
@@ -287,11 +310,16 @@ chi_yixuan_character_template = {
     last_name = "Aisin_Gioro"
     historical = yes
     culture = cu:manchu
+    home_region = STATE_BEIJING
+    noble = yes
     interest_group = ig_landowners
     ideology = ideology_traditionalist
     birth_date = 1840.10.16
     traits = { honorable }
-    ruler = yes
+    # ruler = yes
+    on_created = {
+        set_variable = aisin_gioro_prince
+    }
 }
 
 ecchi_chi_yikuang_character_template = {
@@ -317,6 +345,9 @@ ecchi_chi_yikuang_character_template = {
         earliest_usage_date = 1872.1.1
         latest_usage_date = 1917.1.28
         chance = 65
+    }
+    on_created = {
+        set_variable = aisin_gioro_prince
     }
 }
 
@@ -359,7 +390,9 @@ chi_yicong_character_template = {
 	interest_group = ig_landowners
 	birth_date = 1831.7.23
 	traits = { trait_child }
-	trait_generation = { }
+    on_created = {
+        set_variable = aisin_gioro_prince
+    }
 }
 
 chi_mianxing_character_template = {
@@ -375,9 +408,30 @@ chi_mianxing_character_template = {
     ideology = ideology_traditionalist
 	birth_date = 1814.1.1
 	traits = { arrogant }
-	trait_generation = { }
 }
 
 INJECT:CHI_qiying_aisin_gioro = {
 	noble = yes
+}
+
+chi_zaitao_character_template = {
+    first_name = moh_Zaitao
+    last_name = "Aisin_Gioro"
+    historical = yes
+    noble = yes
+    home_region = STATE_BEIJING
+    culture = cu:manchu
+    interest_group = ig_landowners
+    ideology = ideology_moderate
+    birth_date = 1887.6.23
+    traits = { imposing }
+    on_created = {
+        set_variable = aisin_gioro_prince
+        if = {
+            limit = {
+                year >= 1912
+            }
+            set_ideology = ideology:ideology_modernizer_leader
+        }
+    }
 }

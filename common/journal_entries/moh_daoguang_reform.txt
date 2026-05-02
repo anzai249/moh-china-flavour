@@ -336,6 +336,7 @@ je_xianfeng = {
 				}
 				create_character = {
 					template = chi_yixuan_character_template
+					ruler = yes
 				}
 			}
 		}

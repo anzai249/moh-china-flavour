@@ -81,6 +81,7 @@ qing_monarchy.2 = {
 	immediate = {
 		create_character = {
 			template = chi_tongzhi_template
+			heir = yes
 			on_created = {
 				set_variable = zaichun_var
 			}
@@ -137,6 +138,7 @@ qing_monarchy.3 = {
 		
 		create_character = {
 			template = chi_xuantong_template
+			heir = yes
 		}
 		ai_chance = {
 			base = 10
