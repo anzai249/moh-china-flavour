@@ -553,7 +553,7 @@ Fixes:
 - A bug causing Great Britain to not initiate the Opium Wars.
 - Rebellion tracker trigger typo.
 
-Release 1.4.6 "Horse"
+Release 1.4.6-pre1 "Horse"
 
 Changes:
 

@@ -93,8 +93,6 @@ jobs:
         run: |
           mkdir ../steam-release
           mv STEAM_PAGE.bbcode ../steam-release/STEAM_PAGE.bbcode
-          mv STEAM_PAGE_zh_cn.bbcode ../steam-release/STEAM_PAGE_zh_cn.bbcode
-          mv STEAM_PAGE_zh_cn.bbcode ../steam-release/STEAM_PAGE_zh_tw.bbcode
           mv script/create-release-vdf.sh ../steam-release/create-release-vdf.sh
           rm -rf .git/
           rm -rf .github/
@@ -102,6 +100,7 @@ jobs:
           rm -rf script/
           rm -f .gitattributes
           rm -f .gitignore
+          rm -f vic3-tiger.conf
           rm -f README.md
 
         # Package clean mod folder into a zip file
