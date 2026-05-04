@@ -927,10 +927,13 @@ moh_historical.12 = {
 		has_state_in_state_region = STATE_YUNNAN
 		NOT = {
 			has_journal_entry = je_plague_pandemic
-			has_global_variable = plague_pandemic_complete
+		}
+		NOT = {
+			has_global_variable = plague_pandemic_happened
 		}
 	}
 	immediate = {
+		set_global_variable = plague_pandemic_happened
 		random_scope_state = {
 			limit = {
 				state_region = s:STATE_YUNNAN

@@ -559,3 +559,9 @@ Changes:
 
 - New characters: Kong Yangke, Kong Lingyi, Kong Decheng, Mianxing, Yinghe, Yicong, Pan Shi'en, Zaitao.
 - New character roles: Duke Yansheng, Self-Strengthening Minister.
+
+Release 1.4.6-pre2 "Horse"
+
+Fixes:
+
+- A bug causing plague pandemic out of control.
