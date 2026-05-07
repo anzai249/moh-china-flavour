@@ -565,3 +565,9 @@ Release 1.4.6-pre2 "Horse"
 Fixes:
 
 - A bug causing plague pandemic out of control.
+
+Release 1.4.6-pre3 "Horse"
+
+Fixes:
+
+- Potential Rebellion localization value not showing.

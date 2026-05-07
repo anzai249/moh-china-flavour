@@ -56,8 +56,8 @@
 					}
 				}
 				set_global_variable = {
-					name = henan_turmoil
-					value = turmoil
+						name = henan_turmoil
+						value = turmoil
 				}
 			}
 			random_state = {
