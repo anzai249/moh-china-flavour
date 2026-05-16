@@ -77,5 +77,6 @@
 				sponsor = PREV.ig:ig_landowners
 			}
 		}
+		set_variable = ryukyu_rival_member
 	}
 }
