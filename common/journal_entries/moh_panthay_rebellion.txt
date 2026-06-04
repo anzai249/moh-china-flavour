@@ -7,6 +7,9 @@
 	}
 	possible = {
 		has_global_variable = yunnan_rebellion
+		NOT = {
+			has_global_variable = yunnan_rebellion_complete
+		}
 	}
 	complete = {
 		custom_tooltip = {
