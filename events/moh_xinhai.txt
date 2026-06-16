@@ -410,6 +410,9 @@ xinhai.5 = {
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 	duration = 3
 	trigger = {
+		NOT = {
+			has_global_variable = qiujin_dead
+		}
 		any_scope_character = {
 			has_template = chi_qiu_jin_character_template
 		}
