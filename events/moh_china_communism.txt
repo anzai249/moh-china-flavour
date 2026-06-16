@@ -22,7 +22,15 @@ china_communism.1 = {
 
 	trigger = {
 		c:CHI ?= this
+		NOR = {
+			has_law = law_type:law_monarchy
+			has_law = law_type:law_theocracy
+			has_law = law_type:law_council_republic
+		}
 		has_global_variable = canton_coup_happened
+		NOT = {
+			exists = c:CCP
+		}
 		NOT = {
 			has_global_variable = ccp_rise_up_happened
 		}
@@ -400,7 +408,7 @@ china_communism.2 = {
 		NOT = {
 			has_global_variable = canton_coup_happened
 		}
-		NOT = {
+		NOR = {
 			has_law = law_type:law_monarchy
 			has_law = law_type:law_theocracy
 			has_law = law_type:law_council_republic
