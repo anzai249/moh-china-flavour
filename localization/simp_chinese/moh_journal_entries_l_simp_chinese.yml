@@ -247,3 +247,8 @@
   je_new_dynasty_lobby: "推翻旧王朝，建立新王朝，还是保持现状？选择不同的道路将会对国家的未来产生深远的影响。"
   je_self_strengthing_lobby: "洋务运动是[ROOT.GetCountry.GetName]现代化进程中的重要阶段，通过发展军事、工业、教育和外交来提升国家实力。完成洋务运动的任务将有助于抵御外来侵略，提升国家的国际地位。"
   je_xinhai_lobby: "朝廷近期抓到几个自称[GetIdeology('ideology_moh_revolutionary').GetName]的人，他们的目标居然是推翻[GetLawType('law_monarchy').GetName]，搞什么所谓的共和。"
+  je_guofan: "过番"
+  je_guofan_reason: "早在乾隆四十二年，南洋便有一些自称[SCOPE.sCountry('lanfang_scope').GetName]的人向我们朝贡。这些定居在南洋的人可能是我们在南洋地区立足的跳板。"
+  je_guofan_on_complete: "事实证明，只要敢于尝试，[ROOT.GetCountry.GetName]不比西方差。"
+  je_guofan_button: "国有化[SCOPE.sCountry('lanfang_scope').GetName]"
+  je_guofan_button_desc: "将[SCOPE.sCountry('lanfang_scope').GetName]国有化。"

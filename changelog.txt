@@ -577,3 +577,9 @@ Release 1.4.6-pre4 "Horse"
 Fixes:
 
 - ryukyu_rival_member
+
+Release 1.4.7 "Horse"
+
+Changes:
+
+- Xia Nanyang Journal Entry.

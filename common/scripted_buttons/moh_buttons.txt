@@ -558,3 +558,57 @@ gaitu_guiliu_button_2 = {
         }
     }
 }
+
+je_guofan_button = {
+    name = "je_guofan_button"
+    desc = "je_guofan_button_desc"
+
+    visible = { always = yes }
+    possible = {
+        has_journal_entry = je_guofan
+        exists = c:LAN
+        c:LAN ?= {
+            is_subject_of = c:CHI
+            NOT = {
+                is_country_type = company
+            }
+            relations:root >= relations_threshold:amicable
+        }
+        # c:CHI ?= {
+        #     can_establish_company = yes
+        # }
+        is_country_type = recognized
+        has_company = company_type:company_lanfang_kongsi
+        
+    }
+    ai_chance = {
+        value = 1
+    }
+    effect = {
+		# add_company = company_type:company_lanfang_kongsi
+        create_diplomatic_pact = {
+			country = c:LAN
+			type = chartered_company
+		}
+        c:LAN ?= {
+            set_country_type = company
+            capital = {
+                create_building={
+                    building="building_gold_mine"
+                    add_ownership={
+                        company={
+                            type = company_lanfang_kongsi
+                            country="c:CHI"
+                            levels=1
+                        }
+                    }
+				    reserves=1
+				    activate_production_methods={ "pm_picks_and_shovels_building_gold_mine" "pm_no_explosives" "pm_no_steam_automation" "pm_road_carts"  }
+                }
+            }
+        }
+		company:company_lanfang_kongsi = {
+			add_owned_country = c:LAN
+		}
+    }
+}

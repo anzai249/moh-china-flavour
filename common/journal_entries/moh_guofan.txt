@@ -1,0 +1,63 @@
+je_guofan={
+	icon = "gfx/interface/icons/generic_icons/state.dds"
+	group = je_group_foreign_affairs
+	scripted_button = je_guofan_button
+	is_shown_when_inactive = {
+		c:CHI ?= this
+		custom_tooltip = {
+			text = not_lost_opium_wars_tt
+			NOT = { has_variable = lost_opium_wars }
+		}
+		exists = c:LAN
+	}
+	possible = {
+		c:CHI ?= this
+		exists = c:LAN
+		custom_tooltip = {
+			text = not_lost_opium_wars_tt
+			NOT = { has_variable = lost_opium_wars }
+		}
+        NOT = {
+            has_law = law_type:law_closed_borders
+        }
+		has_technology_researched = colonization
+	}
+	immediate = {
+		c:LAN ?= {
+			save_scope_as = lanfang_scope
+		}
+	}
+	complete = {  
+		has_strategic_region_interest_tier = {
+			strategic_region = sr:region_indonesia  
+			value >= 5
+		}
+		OR = {
+			has_strategic_region_interest_tier = {
+				strategic_region = sr:region_indochina
+				value >= 3
+			}
+			has_strategic_region_interest_tier = {
+				strategic_region = sr:region_oceania
+				value >= 3
+			}
+		}
+	}
+	on_complete = {
+		if = {
+			limit = { has_journal_entry = je_warlord_china }
+			chi_add_1_fragile_unity = yes
+		}
+		custom_tooltip = {
+			text = je_guofan_on_complete
+		}
+	}
+	fail = {
+		NOT = {
+			exists = c:LAN
+		}
+	}
+	
+    weight = 100
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

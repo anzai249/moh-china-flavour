@@ -246,3 +246,8 @@
   je_new_dynasty_lobby: "Overthrow the old dynasty and establish a new one, or maintain the status quo? Different choices will have profound impacts on the country's future."
   je_self_strengthing_lobby: "The Self-Strengthening Movement is a key stage in the modernization of China. By developing military, industry, education, and diplomacy, the nation can be strengthened. Completing its objectives will help resist foreign aggression and elevate international standing."
   je_xinhai_lobby: "We have recently captured several individuals claiming to follow the ideology of [GetIdeology('ideology_moh_revolutionary').GetName]. Their goal is to overthrow the [GetLawType('law_monarchy').GetName] and establish a so-called republic."
+  je_guofan: "Xia Nanyang"
+  je_guofan_reason: "As early as the 42nd year of the Qianlong reign, there were people in the South Oceans who called themselves [SCOPE.sCountry('lanfang_scope').GetName] and paid tribute to our court. These people settled in the South Oceans may serve as a springboard for us to establish a foothold in that region."
+  je_guofan_on_complete: "It has been proven that, as long as we dare to try, [ROOT.GetCountry.GetName]] is every bit as capable as the West."
+  je_guofan_button: "Nationalize [SCOPE.sCountry('lanfang_scope').GetName]"
+  je_guofan_button_desc: "Nationalize [SCOPE.sCountry('lanfang_scope').GetName]."

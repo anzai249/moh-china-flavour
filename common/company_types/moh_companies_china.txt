@@ -12,16 +12,19 @@ company_peking_university = {
 	}
 	preferred_headquarters = { STATE_BEIJING }
 	potential = {
+		always = no
 		has_interest_marker_in_region = region_north_china
 	}
 	attainable = {
 		hidden_trigger = {
+			always = no
 			any_scope_state = {
 				state_region = s:STATE_BEIJING
 			}
 		}
 	}
 	possible = {
+		always = no
 		any_scope_state = {
 			state_region = s:STATE_BEIJING
 			is_incorporated = yes
@@ -590,5 +593,106 @@ company_fou_foong_flour_mill = {
 			state_region = s:STATE_SUZHOU
 			is_incorporated = yes
 		}
+	}
+}
+
+
+REPLACE:company_lanfang_kongsi = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/company_lanfang_kongsi.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_mining.dds"
+
+	category = shopkeeper_owned
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_WEST_BORNEO STATE_EAST_BORNEO STATE_NORTH_BORNEO }
+
+	building_types = {
+		building_gold_mine
+		building_port
+	}
+
+	extension_building_types = {
+		building_rice_farm
+		building_iron_mine
+	}
+
+	potential = {
+		# has_dlc_feature = mp1_content
+		# has_interest_marker_in_region = sr:region_indonesia
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			# any_scope_state = {
+			# 	OR = {
+			# 		state_region = s:STATE_WEST_BORNEO
+			# 		state_region = s:STATE_EAST_BORNEO
+			# 		state_region = s:STATE_NORTH_BORNEO
+			# 	}
+			# }
+		}
+	}
+
+	possible = {
+		cultural_acceptance_base = {
+			target = cu:hakka
+			value >= acceptance_status_4
+		}
+		c:CHI ?= this
+		any_scope_state = {
+			# OR = {
+			# 	state_region = s:STATE_WEST_BORNEO
+			# 	state_region = s:STATE_EAST_BORNEO
+			# 	state_region = s:STATE_NORTH_BORNEO
+			# }
+			OR = {
+				any_scope_building = {
+					is_building_type = building_gold_mine
+					level >= 5
+				}
+				any_scope_building = {
+					is_building_type = building_port
+					level >= 5
+				}
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_agriculture_throughput_add = 0.05
+		battle_defense_owned_province_mult = 0.1
+
+	}
+
+	ai_will_do = {
+		cultural_acceptance_base = {
+			target = cu:hakka
+			value >= acceptance_status_4
+		}
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_WEST_BORNEO
+				state_region = s:STATE_EAST_BORNEO
+				state_region = s:STATE_NORTH_BORNEO
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_gold_mine = {
+			level = 5
+			state_trigger = {
+				OR = {
+					state_region = s:STATE_WEST_BORNEO
+					state_region = s:STATE_EAST_BORNEO
+					state_region = s:STATE_NORTH_BORNEO
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
 	}
 }
