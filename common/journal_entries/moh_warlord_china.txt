@@ -32,6 +32,20 @@
 				text = china_wuxu_tt
 				has_variable = wuxu_reform_complete_var
 			}
+			custom_tooltip = {
+				text = china_autocracy_tt
+				has_variable = je_autocracy_complete
+			}
+		}
+		OR = {
+			custom_tooltip = {
+				text = china_guofan_tt
+				has_variable = je_guofan_complete
+			}
+			custom_tooltip = {
+				text = china_self_strengthening_success_tt
+				has_variable = self_strengthening_success
+			}
 		}
 		OR = {
 			custom_tooltip = {
@@ -268,4 +282,10 @@ je_chinese_republic_monarchy = {
 		}
 	}
 	timeout = 3650
+}
+
+INJECT:je_autocracy = {
+	on_complete = {
+		set_variable = je_autocracy_complete
+	}
 }

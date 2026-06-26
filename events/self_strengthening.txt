@@ -40,7 +40,7 @@ self_strengthening.1 = {
             base = 50
         }
         add_journal_entry = {
-            type = je_self_strengthing
+            type = je_self_strengthening
         }
     }
     option = {
@@ -67,11 +67,11 @@ self_strengthening.2 = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     duration = 3
     trigger = {
-        has_journal_entry = je_self_strengthing
+        has_journal_entry = je_self_strengthening
         any_scope_character = {
             has_variable = self_strengthening_character
             NOT = {
-                has_modifier = modifier_self_strengthing_donate_character
+                has_modifier = modifier_self_strengthening_donate_character
             }
         }
         any_scope_state = {
@@ -93,7 +93,7 @@ self_strengthening.2 = {
             }
             save_scope_as = donate_character_scope
             add_modifier = {
-                name = modifier_self_strengthing_donate_character
+                name = modifier_self_strengthening_donate_character
                 years = 2
                 is_decaying = yes
             }
@@ -121,7 +121,7 @@ self_strengthening.2 = {
         show_as_tooltip = {
             scope:donate_character_scope = {
                 add_modifier = {
-                    name = modifier_self_strengthing_donate_character
+                    name = modifier_self_strengthening_donate_character
                     years = 2
                     is_decaying = yes
                 }
@@ -201,14 +201,14 @@ self_strengthening.2 = {
         show_as_tooltip = {
             scope:donate_character_scope = {
                 add_modifier = {
-                    name = modifier_self_strengthing_donate_character
+                    name = modifier_self_strengthening_donate_character
                     years = 2
                     is_decaying = yes
                 }
             }
         }
         add_modifier = {
-            name = modifier_self_strengthing_donate
+            name = modifier_self_strengthening_donate
             years = 1
             multiplier = money_amount_multiplier_small
         }
@@ -234,11 +234,11 @@ self_strengthening.3 = {
     icon = "gfx/interface/icons/event_icons/event_military.dds"
     duration = 3
     trigger = {
-        has_journal_entry = je_self_strengthing
+        has_journal_entry = je_self_strengthening
         any_scope_character = {
             has_variable = self_strengthening_character
             NOT = {
-                has_modifier = modifier_self_strengthing_donate_character
+                has_modifier = modifier_self_strengthening_donate_character
             }
         }
         scope:self_strengthening_donate_state = {
@@ -264,7 +264,7 @@ self_strengthening.3 = {
             }
             save_scope_as = donate_character_scope
             add_modifier = {
-                name = modifier_self_strengthing_donate_character
+                name = modifier_self_strengthening_donate_character
                 years = 2
                 is_decaying = yes
             }
@@ -319,7 +319,7 @@ self_strengthening.3 = {
         show_as_tooltip = {
             scope:donate_character_scope = {
                 add_modifier = {
-                    name = modifier_self_strengthing_donate_character
+                    name = modifier_self_strengthening_donate_character
                     years = 2
                     is_decaying = yes
                 }
@@ -335,14 +335,14 @@ self_strengthening.3 = {
         show_as_tooltip = {
             scope:donate_character_scope = {
                 add_modifier = {
-                    name = modifier_self_strengthing_donate_character
+                    name = modifier_self_strengthening_donate_character
                     years = 2
                     is_decaying = yes
                 }
             }
         }
         add_modifier = {
-            name = modifier_self_strengthing_donate
+            name = modifier_self_strengthening_donate
             years = 1
             multiplier = money_amount_multiplier_medium
         }

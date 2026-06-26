@@ -1,4 +1,10 @@
 ﻿on_game_started_after_lobby = {
+	on_actions = {
+		moh_qing_explode_rule
+	}
+}
+
+moh_qing_explode_rule = {
 	effect = {
 		if = {
 			limit = {
@@ -262,16 +268,16 @@ moh_on_revolution_start = {
 
 on_wargoal_enforced = {
 	on_actions = {
-		moh_self_strengthing_war
+		moh_self_strengthening_war
 	}
 }
 
-moh_self_strengthing_war = {
+moh_self_strengthening_war = {
 	effect = {
 		if = {
 			limit = {
 				scope:target = {
-					has_journal_entry = je_self_strengthing
+					has_journal_entry = je_self_strengthening
 				}
 			}
 			scope:target = {
@@ -301,7 +307,7 @@ moh_self_strengthening_character_creation = {
 		if = {
 			limit = {
 				owner = {
-					has_journal_entry = je_self_strengthing
+					has_journal_entry = je_self_strengthening
 				}
 				is_historical = no
 			}

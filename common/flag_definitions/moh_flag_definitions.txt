@@ -532,7 +532,10 @@ HKG = {
                             has_law = law_type:law_council_republic
                         }
                     }
-                    is_subject_of = c:CCP
+                    AND = {
+                        exists = c:CCP
+                        is_subject_of = c:CCP
+                    }
                 }
             }
         }
@@ -561,7 +564,10 @@ MACAU = {
                             has_law = law_type:law_council_republic
                         }
                     }
-                    is_subject_of = c:CCP
+                    AND = {
+                        exists = c:CCP
+                        is_subject_of = c:CCP
+                    }
                 }
             }
         }

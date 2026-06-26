@@ -583,3 +583,9 @@ Release 1.4.7 "Horse"
 Changes:
 
 - Xia Nanyang Journal Entry.
+- AI strategy adjustments for 1.13.9.
+- Changes the complete trigger of Generals and Ambans JE.
+
+Fixes:
+
+- A bug causing the GDP goal shown as 0 in Tenpo Crisis JE.

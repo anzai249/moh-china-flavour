@@ -92,8 +92,8 @@ modifier_official_corruption = {
 	country_tax_income_add = -2500
 }
 
-# self_strengthing
-modifier_self_strengthing = {
+# self_strengthening
+modifier_self_strengthening = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_military_tech_research_speed_mult = 0.05
 	country_ship_construction_add = 10
@@ -242,25 +242,25 @@ taoism_standard_of_living_modifier_negative = {
 	state_taoism_standard_of_living_add = 1
 }
 
-modifier_self_strengthing_success = {
+modifier_self_strengthening_success = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_tech_spread_mult = 0.1
 	country_prestige_add = 20
 }
 
-modifier_self_strengthing_success_company = {
+modifier_self_strengthening_success_company = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_capitalist_positive.dds
 	country_max_companies_add = 1
 }
 
 # 慷慨的捐赠
-modifier_self_strengthing_donate = {
+modifier_self_strengthening_donate = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	country_tax_income_add = 2
 }
 
 # 慷慨的捐赠 人物
-modifier_self_strengthing_donate_character = {
+modifier_self_strengthening_donate_character = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
 	character_popularity_add = 25
 }

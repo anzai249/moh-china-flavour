@@ -51,6 +51,7 @@ je_guofan={
 		custom_tooltip = {
 			text = je_guofan_on_complete
 		}
+		set_variable = je_guofan_complete
 	}
 	fail = {
 		NOT = {
