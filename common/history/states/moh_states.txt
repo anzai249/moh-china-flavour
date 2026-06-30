@@ -16,6 +16,16 @@
 	}
 	s:STATE_GANSU = {
 		add_state_trait = state_trait_great_wall
+		create_state = {
+			country = c:CHI
+			owned_provinces = {
+				xBD5671
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:CHI
+			provinces = { xBD5671 }
+		}
 	}
 	s:STATE_XIAN = {
 		add_state_trait = state_trait_great_wall

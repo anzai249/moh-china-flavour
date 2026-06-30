@@ -589,3 +589,8 @@ Changes:
 Fixes:
 
 - A bug causing the GDP goal shown as 0 in Tenpo Crisis JE.
+- A bug causing the province xBD5671 to be displayed as a lake (Vanilla bug).
+
+Known issues:
+
+- If you use Vulkan, the game may crash when you make Great Qing shatters. To solve this, please switch to DX11.
