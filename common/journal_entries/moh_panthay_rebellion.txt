@@ -11,18 +11,24 @@
 			has_global_variable = yunnan_rebellion_complete
 		}
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_panthay_rebellion_complete_tt
-			NOT = {
-				exists = c:YUN
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_panthay_rebellion_complete_tt
+				NOT = {
+					exists = c:YUN
+				}
 			}
 		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_panthay_rebellion_on_complete_tt
-			set_global_variable = yunnan_rebellion_complete
+		effect = {
+			custom_tooltip = {
+				text = je_panthay_rebellion_on_complete_tt
+				set_global_variable = yunnan_rebellion_complete
+			}
 		}
 	}
 	should_be_pinned_by_default_uninvolved_or_context = yes
@@ -41,22 +47,28 @@ je_plague_pandemic = {
 			value = 0
 		}
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_plague_pandemic_complete_tt
-			var:plague_pandemic >= 100
-		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_plague_pandemic_on_complete_tt
-			every_scope_state = {
-				remove_modifier = modifier_plague_pandemic
-				# state_region = {
-				# 	finish_harvest_condition = disease_outbreak
-				# }
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_plague_pandemic_complete_tt
+				var:plague_pandemic >= 100
 			}
-			set_variable = plague_pandemic_complete
+		}
+		effect = {
+			custom_tooltip = {
+				text = je_plague_pandemic_on_complete_tt
+				every_scope_state = {
+					remove_modifier = modifier_plague_pandemic
+					# state_region = {
+					# 	finish_harvest_condition = disease_outbreak
+					# }
+				}
+				set_variable = plague_pandemic_complete
+			}
 		}
 	}
 	on_weekly_pulse = {

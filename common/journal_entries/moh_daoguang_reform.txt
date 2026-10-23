@@ -10,39 +10,51 @@
 		c:CHI ?= this
 		has_law = law_type:law_monarchy
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_daoguang_reform_main_complete_tt
-			var:daoguang_reform_progress >= 3
-		}
-	}
-	on_complete = {
-		add_modifier = {
-			name = modifier_daoguang
-			years = 10
-			is_decaying = yes
-		}
-	}
-	fail = {
-		OR = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = moh_je_daoguang_reform_main_completed_desc
+		trigger = {
 			custom_tooltip = {
-				text = je_daoguang_reform_main_fail_tt
-				NOT = {
-					any_scope_character = {
-						has_template = chi_daoguang_template
+				text = je_daoguang_reform_main_complete_tt
+				var:daoguang_reform_progress >= 3
+			}
+		}
+		effect = {
+			add_modifier = {
+				name = modifier_daoguang
+				years = 10
+				is_decaying = yes
+			}
+		}
+	}
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = moh_je_daoguang_reform_main_failed_desc
+		trigger = {
+			OR = {
+				custom_tooltip = {
+					text = je_daoguang_reform_main_fail_tt
+					NOT = {
+						any_scope_character = {
+							has_template = chi_daoguang_template
+						}
 					}
 				}
-			}
-			NOT = {
-				has_law = law_type:law_monarchy
+				NOT = {
+					has_law = law_type:law_monarchy
+				}
 			}
 		}
-	}
-	on_fail = {
-		add_modifier = {
-			name = modifier_daoguang_failed
-			years = 10
-			is_decaying = yes
+		effect = {
+			add_modifier = {
+				name = modifier_daoguang_failed
+				years = 10
+				is_decaying = yes
+			}
 		}
 	}
 	immediate = {
@@ -81,37 +93,49 @@
 je_daoguang_reform_grain = {
 	icon = "gfx/interface/icons/goods_icons/grain.dds"
 	group = je_group_qing
-	complete = {
-		capital = {
-			sg:grain = {
-				state_goods_pricier < 0.05
-			}
-			any_scope_building = {
-				is_building_type = building_port
-				level >= 2
-			}
-		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_daoguang_reform_opium_on_complete_tt
-			change_variable = {
-				name = daoguang_reform_progress
-				add = 1
-			}
-		}
-	}
-	fail = {
-		custom_tooltip = {
-			text = je_daoguang_reform_main_fail_tt
-			OR = {
-				NOT = {
-					any_scope_character = {
-						has_template = chi_daoguang_template
-					}
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			capital = {
+				sg:grain = {
+					state_goods_pricier < 0.05
 				}
-				NOT = {
-					has_journal_entry = je_daoguang_reform_main
+				any_scope_building = {
+					is_building_type = building_port
+					level >= 2
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = {
+				text = je_daoguang_reform_opium_on_complete_tt
+				change_variable = {
+					name = daoguang_reform_progress
+					add = 1
+				}
+			}
+		}
+	}
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_daoguang_reform_main_fail_tt
+				OR = {
+					NOT = {
+						any_scope_character = {
+							has_template = chi_daoguang_template
+						}
+					}
+					NOT = {
+						has_journal_entry = je_daoguang_reform_main
+					}
 				}
 			}
 		}
@@ -123,38 +147,50 @@ je_daoguang_reform_grain = {
 je_daoguang_reform_mine = {
 	icon = "gfx/interface/icons/goods_icons/iron.dds"
 	group = je_group_qing
-	complete = {
-		any_scope_building = {
-			is_building_type = building_iron_mine
-			occupancy >= 0.9
-			level >= 15
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			any_scope_building = {
+				is_building_type = building_iron_mine
+				occupancy >= 0.9
+				level >= 15
+			}
+			any_scope_building = {
+				is_building_type = building_coal_mine
+				occupancy >= 0.9
+				level >= 15
+			}
 		}
-		any_scope_building = {
-			is_building_type = building_coal_mine
-			occupancy >= 0.9
-			level >= 15
-		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_daoguang_reform_opium_on_complete_tt
-			change_variable = {
-				name = daoguang_reform_progress
-				add = 1
+		effect = {
+			custom_tooltip = {
+				text = je_daoguang_reform_opium_on_complete_tt
+				change_variable = {
+					name = daoguang_reform_progress
+					add = 1
+				}
 			}
 		}
 	}
-	fail = {
-		custom_tooltip = {
-			text = je_daoguang_reform_main_fail_tt
-			OR = {
-				NOT = {
-					any_scope_character = {
-						has_template = chi_daoguang_template
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_daoguang_reform_main_fail_tt
+				OR = {
+					NOT = {
+						any_scope_character = {
+							has_template = chi_daoguang_template
+						}
 					}
-				}
-				NOT = {
-					has_journal_entry = je_daoguang_reform_main
+					NOT = {
+						has_journal_entry = je_daoguang_reform_main
+					}
 				}
 			}
 		}
@@ -173,70 +209,82 @@ je_daoguang_reform_opium = {
 			save_scope_as = petty_bourgeoisie_ig
 		}
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_daoguang_reform_opium_complete_tt_2
-			# has_variable = destruction_of_opium
-			OR = {
-				scope:journal_entry = {
-					"scripted_bar_progress(daoguang_opium_progress_bar)" >= 100
-				}
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_daoguang_reform_opium_complete_tt_2
+				# has_variable = destruction_of_opium
+				OR = {
+					scope:journal_entry = {
+						"scripted_bar_progress(daoguang_opium_progress_bar)" >= 100
+					}
 
-				scope:journal_entry = {
-					"scripted_bar_progress(daoguang_opium_progress_bar)" <= 0
+					scope:journal_entry = {
+						"scripted_bar_progress(daoguang_opium_progress_bar)" <= 0
+					}
 				}
 			}
+			has_consumption_tax = g:opium
 		}
-		has_consumption_tax = g:opium
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_daoguang_reform_opium_on_complete_tt
-			change_variable = {
-				name = daoguang_reform_progress
-				add = 1
-			}
-		}
-		if = {
-			limit = {
-				scope:journal_entry = {
-					"scripted_bar_progress(daoguang_opium_progress_bar)" >= 100
+		effect = {
+			custom_tooltip = {
+				text = je_daoguang_reform_opium_on_complete_tt
+				change_variable = {
+					name = daoguang_reform_progress
+					add = 1
 				}
 			}
-			set_variable = opium_yen_chin_pai_victory
-		}
-		else = {
-			set_variable = opium_shih_chin_pai_victory
-		}
-		# hidden_effect = {
-		# 	random_scope_character = {
-		# 		limit = {
-		# 			has_variable = is_linzexu
-		# 		}
-		# 		set_character_immortal = no
-		# 	}
-		# }
-	}
-	fail = {
-		OR = {
-			# custom_tooltip = {
-			# 	text = je_daoguang_reform_main_fail_lin_tt
-			# 	NOT = {
-			# 		any_scope_character = {
+			if = {
+				limit = {
+					scope:journal_entry = {
+						"scripted_bar_progress(daoguang_opium_progress_bar)" >= 100
+					}
+				}
+				set_variable = opium_yen_chin_pai_victory
+			}
+			else = {
+				set_variable = opium_shih_chin_pai_victory
+			}
+			# hidden_effect = {
+			# 	random_scope_character = {
+			# 		limit = {
 			# 			has_variable = is_linzexu
 			# 		}
+			# 		set_character_immortal = no
 			# 	}
 			# }
-			custom_tooltip = {
-				text = je_daoguang_reform_main_fail_tt
-				OR = {
-					NOT = {
-						any_scope_character = {
-							has_template = chi_daoguang_template
+		}
+	}
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				# custom_tooltip = {
+				# 	text = je_daoguang_reform_main_fail_lin_tt
+				# 	NOT = {
+				# 		any_scope_character = {
+				# 			has_variable = is_linzexu
+				# 		}
+				# 	}
+				# }
+				custom_tooltip = {
+					text = je_daoguang_reform_main_fail_tt
+					OR = {
+						NOT = {
+							any_scope_character = {
+								has_template = chi_daoguang_template
+							}
 						}
-					}
-					NOT = {
-						has_journal_entry = je_daoguang_reform_main
+						NOT = {
+							has_journal_entry = je_daoguang_reform_main
+						}
 					}
 				}
 			}
@@ -299,51 +347,63 @@ je_xianfeng = {
 	# 		value = 0
 	# 	}
 	# }
-	complete = {
-		custom_tooltip = {
-			text = je_xianfeng_complete_tt
-			NOT = {
-				any_scope_character = {
-					has_template = chi_xianfeng_template
-				}
-			}
-		}
-	}
-	fail = {
-		custom_tooltip = {
-			text = je_xianfeng_fail_tt
-			scope:journal_entry = {
-				"scripted_bar_progress(xianfeng_progress_bar)" <= 0
-			}
-		}
-	}
-	on_fail = {
-		custom_tooltip = {
-			text = je_xianfeng_on_fail_tt
-			random_scope_character = {
-				limit = {
-					has_template = chi_xianfeng_template
-				}
-				kill_character = yes
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_character = {
-							has_template = chi_tongzhi_template
-						}
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = moh_je_xianfeng_completed_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_xianfeng_complete_tt
+				NOT = {
+					any_scope_character = {
+						has_template = chi_xianfeng_template
 					}
 				}
-				create_character = {
-					template = chi_yixuan_character_template
-					ruler = yes
+			}
+		}
+	}
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = moh_je_xianfeng_failed_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_xianfeng_fail_tt
+				scope:journal_entry = {
+					"scripted_bar_progress(xianfeng_progress_bar)" <= 0
 				}
 			}
 		}
-		add_modifier = {
-			name = modifier_xianfeng_failed
-			years = 25
-			is_decaying = yes
+		effect = {
+			custom_tooltip = {
+				text = je_xianfeng_on_fail_tt
+				random_scope_character = {
+					limit = {
+						has_template = chi_xianfeng_template
+					}
+					kill_character = yes
+				}
+				if = {
+					limit = {
+						NOT = {
+							any_character = {
+								has_template = chi_tongzhi_template
+							}
+						}
+					}
+					create_character = {
+						template = chi_yixuan_character_template
+						ruler = yes
+					}
+				}
+			}
+			add_modifier = {
+				name = modifier_xianfeng_failed
+				years = 25
+				is_decaying = yes
+			}
 		}
 	}
 	scripted_progress_bar = xianfeng_progress_bar

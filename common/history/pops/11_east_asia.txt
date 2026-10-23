@@ -503,7 +503,7 @@
 				size = 2821200
 			}
 			create_pop = {
-				culture = siberian
+				culture = evenki
 				size = 32000
 			}
 			create_pop = {
@@ -2019,12 +2019,12 @@
 	s:STATE_SAKHALIN = {
 		region_state:SKH = {
 			create_pop = {
-				culture = siberian
+				culture = evenki
 				size = 1731
 			}
 			# Ahistorical pops for gameplay purposes (+x2)
 			create_pop = {
-				culture = siberian
+				culture = evenki
 				size = 3462
 			}			
 		}
@@ -2034,7 +2034,7 @@
 				size = 95
 			}
 			create_pop = {
-				culture = siberian
+				culture = evenki
 				size = 612
 			}
 			# Ahistorical pops for gameplay purposes (+x5)
@@ -2043,7 +2043,7 @@
 				size = 475
 		}
 			create_pop = {
-				culture = siberian
+				culture = evenki
 				size = 3060
 	}
 		}
@@ -2053,7 +2053,7 @@
 				size = 2184
 			}
 			create_pop = {
-				culture = siberian
+				culture = evenki
 				size = 243
 			}
 			# Ahistorical pops for gameplay purposes (+x2)
@@ -2062,7 +2062,7 @@
 				size = 4368
 			}
 			create_pop = {
-				culture = siberian
+				culture = evenki
 				size = 486
 			}
 		}
@@ -2086,7 +2086,7 @@
 				size = 126
 			}
 			create_pop = {
-				culture = siberian
+				culture = evenki
 				religion = orthodox
 				size = 101
 			}

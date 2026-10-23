@@ -6,13 +6,19 @@
 	modifiers_while_active = {
 		modifier_13_factories
 	}
-	fail = {
-		OR = {
-			has_law = law_type:law_free_trade
-			custom_tooltip = {
-                text = "opium_wars_lost"
-                has_variable = lost_opium_wars
-            }
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+					OR = {
+						has_law = law_type:law_free_trade
+						custom_tooltip = {
+			                text = "opium_wars_lost"
+			                has_variable = lost_opium_wars
+			            }
+					}
 		}
 	}
 	weight = 50

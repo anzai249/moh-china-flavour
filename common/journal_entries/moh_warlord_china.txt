@@ -18,16 +18,17 @@
 	modifiers_while_active = {
 		modifier_mandate_of_heaven
 	}
-	complete = {
-		custom_tooltip = {
-			text = china_recognized_tt
-			has_variable = china_warlord_explosion_recognized
-		}
-		OR = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = moh_je_warlord_china_completed_desc
+		trigger = {
 			custom_tooltip = {
-				text = china_abolished_monarchy_tt
-				has_variable = china_warlord_abolished_monarchy
+				text = china_recognized_tt
+				has_variable = china_warlord_explosion_recognized
 			}
+<<<<<<< HEAD
 			custom_tooltip = {
 				text = china_wuxu_tt
 				has_variable = wuxu_reform_complete_var
@@ -69,28 +70,69 @@
 					NOT = {
 						owner = ROOT
 					}
+=======
+			OR = {
+				custom_tooltip = {
+					text = china_abolished_monarchy_tt
+					has_variable = china_warlord_abolished_monarchy
+				}
+				custom_tooltip = {
+					text = china_wuxu_tt
+					has_variable = wuxu_reform_complete_var
+>>>>>>> 95ced93 (feat: 1.15)
 				}
 			}
-			custom_tooltip = {
-				text = won_boxer_tt
-				has_variable = won_boxer_rebellion
+			OR = {
+				custom_tooltip = {
+					text = china_treaty_ports_tt
+					# OR = {
+					# 	NOT = {
+					# 		any_scope_state = {
+					# 			any_neighbouring_state = {
+					# 				is_treaty_port = yes
+					# 			}
+					# 		}
+					# 	}
+					# }
+					any_state = {
+						percent = 0					# or percent = 0? they tooltip differently
+						filter = {
+							state_region = {
+								is_homeland = cu:han
+							}
+						}
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				custom_tooltip = {
+					text = won_boxer_tt
+					has_variable = won_boxer_rebellion
+				}
+			}
+		}
+		effect = {
+			trigger_event = {
+				id = warlord_china_events.200
 			}
 		}
 	}
-	fail = {
-		custom_tooltip = {
-			text = je_china_failure_tt
-			var:china_warlord_explosion <= 0
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = moh_je_warlord_china_failed_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_china_failure_tt
+				var:china_warlord_explosion <= 0
+			}
 		}
-	}
-	on_fail = {
-		trigger_event = {
-			id = warlord_china_events.400
-		}
-	}
-	on_complete = {
-		trigger_event = {
-			id = warlord_china_events.200
+		effect = {
+			trigger_event = {
+				id = warlord_china_events.400
+			}
 		}
 	}
 	current_value = {
@@ -198,66 +240,72 @@ je_great_yuan = {
 	modifiers_while_active = {
 		modifier_mongol_yuan
 	}
-	complete = {
-		owns_entire_state_region = STATE_HINGGAN
-		owns_entire_state_region = STATE_ALXA
-		owns_entire_state_region = STATE_BEIJING
-		has_law = law_type:law_monarchy
-		any_scope_state = {
-			percent = 1
-			filter = {
-				OR = {
-				state_region = s:STATE_HINGGAN
-				state_region = s:STATE_ALXA
-				state_region = s:STATE_BEIJING
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			owns_entire_state_region = STATE_HINGGAN
+			owns_entire_state_region = STATE_ALXA
+			owns_entire_state_region = STATE_BEIJING
+			has_law = law_type:law_monarchy
+			any_scope_state = {
+				percent = 1
+				filter = {
+					OR = {
+					state_region = s:STATE_HINGGAN
+					state_region = s:STATE_ALXA
+					state_region = s:STATE_BEIJING
+				}
+				}
+				is_incorporated = yes
 			}
-			}
-			is_incorporated = yes
 		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = mongol_yuan_tt
-			set_variable = mongol_yuan_empire
-		}
-		set_capital = STATE_BEIJING
-		every_state_region = {
-			limit = {
-				is_homeland = cu:han
-			}
-			add_claim = ROOT
-		}
-		custom_tooltip = {
-			text = je_great_yuan_complete_ruler_tt
-			if = {
-				limit = {
-					any_character = {
-						has_template = chi_general_sengge_rinchen
+		effect = {
+					custom_tooltip = {
+						text = mongol_yuan_tt
+						set_variable = mongol_yuan_empire
 					}
-				}
-				random_character = {
-					limit = {
-						has_template = chi_general_sengge_rinchen
+					set_capital = STATE_BEIJING
+					every_state_region = {
+						limit = {
+							is_homeland = cu:han
+						}
+						add_claim = ROOT
 					}
-					transfer_character = root
-                	set_character_as_ruler = yes
-				}
-			}
-			else_if = {
-				limit = {
-					year <= 1865
-				}
-				create_character = {
-					template = chi_general_sengge_rinchen
-					ruler = yes
-				}
-			}
-			else = {
-				create_character = {
-					last_name = Borjigin
-					ruler = yes
-				}
-			}
+					custom_tooltip = {
+						text = je_great_yuan_complete_ruler_tt
+						if = {
+							limit = {
+								any_character = {
+									has_template = chi_general_sengge_rinchen
+								}
+							}
+							random_character = {
+								limit = {
+									has_template = chi_general_sengge_rinchen
+								}
+								transfer_character = root
+					set_character_as_ruler = yes
+							}
+						}
+						else_if = {
+							limit = {
+								year <= 1865
+							}
+							create_character = {
+								template = chi_general_sengge_rinchen
+								ruler = yes
+							}
+						}
+						else = {
+							create_character = {
+								last_name = Borjigin
+								ruler = yes
+							}
+						}
+					}
 		}
 	}
 	# invalid = {
@@ -272,14 +320,26 @@ je_chinese_republic_monarchy = {
 	group = je_group_historical_content
 	weight = 100
 	should_be_pinned_by_default_uninvolved_or_context = yes
-	fail = {
-		is_enacting_law = law_type:law_monarchy
-	}
-	on_fail = {
-		trigger_event = {
-			# 护国战争
-			id = warlord_china_events.610 
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			is_enacting_law = law_type:law_monarchy
 		}
+		effect = {
+			trigger_event = {
+				# 护国战争
+				id = warlord_china_events.610
+			}
+		}
+	}
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
 	}
 	timeout = 3650
 }

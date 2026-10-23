@@ -1,0 +1,37 @@
+﻿l_simp_chinese:
+
+  moh_je_boxer_rebellion_completed_desc: "汉人故土已重归控制，义和团危机由此告一段落。"
+  moh_je_boxer_rebellion_failed_desc: "禁止义和团活动的条约已经生效，朝廷对义和团的支持就此终结。"
+
+  moh_je_daoguang_reform_main_completed_desc: "道光朝的改革已在漕粮海运、矿产开采与鸦片问题上取得成果。"
+  moh_je_daoguang_reform_main_failed_desc: "道光朝的改革在全部目标达成之前便已终结。"
+
+  moh_je_xianfeng_completed_desc: "咸丰皇帝的一生与统治已告终结。"
+  moh_je_xianfeng_failed_desc: "内忧外患耗尽了咸丰皇帝的心力，使其统治提前走向终结。"
+
+  moh_je_father_of_the_republic_completed_desc: "中国重归统一，国父成为国家的领导者。"
+  moh_je_father_of_the_republic_failed_desc: "国父未及见证统一中国的理想实现，便已与世长辞。"
+
+  moh_je_keju_failed_desc: "科举制度已经废除，延续千年的选官方式就此落幕。"
+
+  moh_je_new_dynasty_completed_desc: "起事者已在建立新朝与沿用旧国号之间作出选择。"
+  moh_je_new_dynasty_failed_desc: "建立新朝的政治条件已不复存在，国号之议未及定夺便告终结。"
+
+  moh_je_opium_obsession_completed_desc: "持续推行的禁烟政策取得成效，鸦片危机告一段落。"
+  moh_je_opium_obsession_failed_desc: "外部压力与贸易开放使维持禁烟政策的努力受挫。"
+
+  moh_je_self_strengthing_completed_desc: "至少三项改革取得成果，洋务运动的目标已经实现。"
+  moh_je_self_strengthing_failed_desc: "战败或地区影响力的丧失使洋务运动受挫，改革就此中断。"
+
+  moh_je_warlord_china_completed_desc: "改革、国际认可与主权的恢复，巩固了国家的统一。"
+  moh_je_warlord_china_failed_desc: "维系中国统一的纽带已经断裂，国家陷入新一轮权力争夺。"
+
+  moh_je_wuxu_completed_desc: "政治、军事与教育改革取得成果，维新派赢得了胜利。"
+  moh_je_wuxu_failed_desc: "保守势力挫败了维新派，变法就此终结。"
+
+  moh_je_xinhai_completed_desc: "政体变革或革命领袖的覆灭，使革命党对旧秩序的挑战告一段落。"
+  moh_je_xinhai_failed_desc: "朝廷与政治运动之间的冲突已演变为公开的内战。"
+
+  je_wuxu_concluded: "维新变法"
+  je_heavenly_land_system: "$law_heavenly_land_system$"
+  je_heavenly_land_system_reason: "$law_heavenly_land_system_desc$"

@@ -40,6 +40,10 @@ group = {
 		"achievement_golden_spirit"
 		"achievement_knock_knock"
 		"achievement_everyone_disliked_that"
+		"achievement_quiet_flows_the_yukon"
+		"achievement_trans_siberian_express"
+		"achievement_micromanager"
+		"achievement_crime_and_punishment"
 	}
 }
 
@@ -97,13 +101,13 @@ group = {
 		"achievement_the_real_movement"
 		"achievement_venice_vidi_vici"
 		"achievement_yes_we_have_bananas"
+		"achievement_exactly_100"
 		"achievement_wall_of_text"
 		"achievement_franchising"
 		"achievement_champagne_socialist"
 		"achievement_all_quiet_on_the_western_front"
 		"achievement_wuxu_reform"
 		"achievement_different_routes"
-		"achievement_sorbia_is_serbia"
 		"achievement_teamkiller"
 		"achievement_brotherhood_and_unity"
 		"achievement_usga"
@@ -115,6 +119,9 @@ group = {
 		"achievement_wealth_fame_power"
 		"achievement_thing_japan"
 		"achievement_son_of_varmland"
+		"achievement_the_could_have_been_king"
+		"achievement_lover_of_the_russian_queen"
+		"achievement_dont_trust_the_liberals"
 	}	
 }
 
@@ -147,6 +154,7 @@ group = {
 		"achievement_azadi"
 		"achievement_fordlandia"
 		"achievement_swiss_bank_account"
+		"achievement_sorbia_is_serbia"
 		"achievement_prussia_of_the_balkans"
 		"achievement_the_most_united_kingdom"
 		"achievement_regeneration"
@@ -154,6 +162,9 @@ group = {
 		"achievement_martin_anwards_pirates"
 		"achievement_kobu_gattai"
 		"achievement_three_mountains"
+		"achievement_not_those_reds"
+		"achievement_the_wide_dniepr_roars"
+		"achievement_imagine"
 		"achievement_white_sun"
 	}	
 }
@@ -170,6 +181,7 @@ group = {
 		"achievement_the_man_who_would_be_king"
 		"achievement_david_slays_goliath"
 		"achievement_deconquista"
+		"achievement_no_truce_with_the_furies"
 		"achievement_dream"
 	}	
 }

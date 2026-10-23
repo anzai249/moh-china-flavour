@@ -39,11 +39,17 @@
 			has_state_in_state_region = STATE_NORTHERN_ANHUI
 		}
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_hui_rebellion_complete_tt
-			has_global_variable = nian_rebellion
-			has_global_variable = yunnan_rebellion_complete
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_hui_rebellion_complete_tt
+				has_global_variable = nian_rebellion
+				has_global_variable = yunnan_rebellion_complete
+			}
 		}
 	}
 	on_monthly_pulse = {

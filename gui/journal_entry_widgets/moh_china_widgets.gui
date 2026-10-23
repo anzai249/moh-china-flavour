@@ -206,11 +206,3 @@ flowcontainer = {
 		}
 	}
 }
-
-je_meiji_restoration_japanese_emperor_sgui = {
-    scope = country
-
-    effect = {
-        je_meiji_restoration_update_japanese_emperor = yes
-    }
-}

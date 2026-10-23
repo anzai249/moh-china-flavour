@@ -594,3 +594,16 @@ Fixes:
 Known issues:
 
 - If you use Vulkan, the game may crash when you make Great Qing shatters. To solve this, please switch to DX11.
+
+Release 1.5 "Bangka"
+
+Changes:
+
+- Journal Entry outcomes updated for 1.15.
+- AI strategy adjustments for 1.15.
+- Removed legacy Korean localization files.
+
+Fixes:
+
+- Journal Entry localization.
+- Invalid culture, ideology and modifier references.

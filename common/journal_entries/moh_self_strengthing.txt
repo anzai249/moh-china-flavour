@@ -40,6 +40,7 @@
         add = 4
     }
     progressbar = yes
+<<<<<<< HEAD
     complete = {
         custom_tooltip = {
             text = je_self_strengthening_main_complete_tt
@@ -80,23 +81,83 @@
             custom_tooltip = {
                 text = je_self_strengthening_fail_tt
                 var:self_strengthening_lost_wars >= 2
+=======
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = moh_je_self_strengthing_completed_desc
+        trigger = {
+            custom_tooltip = {
+                text = je_self_strengthing_main_complete_tt
+                var:self_strengthening_progress >= 3
+>>>>>>> 95ced93 (feat: 1.15)
             }
         }
+        effect = {
+            custom_tooltip = {
+                text = je_self_strengthing_on_complete_tt
+                if = {
+                    limit = {
+                        has_journal_entry = je_earn_recognition
+                    }
+                    je:je_earn_recognition ?= {
+                        add_progress = { value = 20 name = earn_recognition_progress_bar }
+                    }
+                }
+            }
+            add_modifier = {
+                name = modifier_self_strengthing_success
+                years = 10
+                is_decaying = yes
+            }
+            add_modifier = {
+                name = modifier_self_strengthing_success_company
+            }
+            set_variable = self_strengthening_end
+        }
     }
-    on_fail = {
-        set_variable = self_strengthening_end
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = moh_je_self_strengthing_failed_desc
+        trigger = {
+            OR = {
+                NOT = {
+                    has_state_in_state_region = STATE_FORMOSA
+                    c:DAI = {
+                        is_subject_of = c:CHI
+                    }
+                }
+                custom_tooltip = {
+                    text = je_self_strengthing_fail_tt
+                    var:self_strengthening_lost_wars >= 2
+                }
+            }
+        }
+        effect = {
+            set_variable = self_strengthening_end
+        }
+    }
+    outcome = {
+        header = JOURNAL_ENTRY_TIMEOUT
+        effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+        flags = { timeout }
+        conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+        effect = {
+            set_variable = self_strengthening_end
+        }
     }
     weight = 100
     should_be_pinned_by_default_uninvolved_or_context = yes
     timeout = 14600
-    on_timeout = {
-        set_variable = self_strengthening_end
-    }
 }
 
 je_self_strengthening_military = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/invention_icons/battleship_tech.dds"
+<<<<<<< HEAD
     complete = {
         custom_tooltip = {
             text = je_self_strengthening.tt.complete.world
@@ -116,10 +177,47 @@ je_self_strengthening_military = {
                     is_in_geographic_region = geographic_region_south_east_asia
                     is_in_geographic_region = geographic_region_central_asia
                     is_in_geographic_region = geographic_region_middle_east
+=======
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            custom_tooltip = {
+                text = je_self_strengthing.tt.complete.world
+                any_country = {
+                    naval_power_projection > root.naval_power_projection
+                    count < 3
+                }
+            }
+            custom_tooltip = {
+                text = je_self_strengthing.tt.complete.asia
+                any_country = {
+                    naval_power_projection > root.naval_power_projection
+                    count < 1
+                    OR = {
+                        is_in_geographic_region = geographic_region_india
+                        is_in_geographic_region = geographic_region_east_asia
+                        is_in_geographic_region = geographic_region_south_east_asia
+                        is_in_geographic_region = geographic_region_central_asia
+                        is_in_geographic_region = geographic_region_middle_east
+                    }
+                }
+            }
+        }
+        effect = {
+            custom_tooltip = {
+                text = je_self_strengthing_complete_tt
+                change_variable = {
+                    name = self_strengthening_progress
+                    add = 1
+>>>>>>> 95ced93 (feat: 1.15)
                 }
             }
         }
     }
+<<<<<<< HEAD
     on_complete = {
         custom_tooltip = {
             text = je_self_strengthening_complete_tt
@@ -134,6 +232,19 @@ je_self_strengthening_military = {
             has_journal_entry = je_self_strengthening
         }
     }
+=======
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                has_journal_entry = je_self_strengthing
+            }
+        }
+    }
+>>>>>>> 95ced93 (feat: 1.15)
     on_yearly_pulse = {
         random_events = {
             10 = 0
@@ -147,13 +258,23 @@ je_self_strengthening_military = {
 je_self_strengthening_industry = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/invention_icons/railways.dds"
-    complete = {
-        NOT = {
-            any_scope_state = {
-                percent < 0.4
-                has_building = building_railway
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            NOT = {
+                any_scope_state = {
+                    percent < 0.4
+                    has_building = building_railway
+                }
+            }
+            scope:journal_entry = {
+                is_goal_complete = yes
             }
         }
+<<<<<<< HEAD
         scope:journal_entry = {
             is_goal_complete = yes
         }
@@ -170,6 +291,27 @@ je_self_strengthening_industry = {
     fail = {
         NOT = {
             has_journal_entry = je_self_strengthening
+=======
+        effect = {
+            custom_tooltip = {
+                text = je_self_strengthing_complete_tt
+                change_variable = {
+                    name = self_strengthening_progress
+                    add = 1
+                }
+            }
+        }
+    }
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                has_journal_entry = je_self_strengthing
+            }
+>>>>>>> 95ced93 (feat: 1.15)
         }
     }
     current_value = {
@@ -195,9 +337,30 @@ je_self_strengthening_industry = {
 je_self_strengthening_education = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/invention_icons/academia.dds"
-    complete = {
-        OR = {
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            OR = {
+                custom_tooltip = {
+                    text = je_self_strengthing_education_tt_complete
+                    has_variable = academia_je_done
+                }
+                any_scope_building = {
+                    is_building_type = building_university
+                    occupancy >= 0.9
+                    level >= 5
+                }
+            }
+            NOT = {
+                has_law = law_type:law_closed_borders
+            }
+        }
+        effect = {
             custom_tooltip = {
+<<<<<<< HEAD
                 text = je_self_strengthening_education_tt_complete
                 has_variable = academia_je_done
             }
@@ -223,6 +386,25 @@ je_self_strengthening_education = {
     fail = {
         NOT = {
             has_journal_entry = je_self_strengthening
+=======
+                text = je_self_strengthing_complete_tt
+                change_variable = {
+                    name = self_strengthening_progress
+                    add = 1
+                }
+            }
+        }
+    }
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                has_journal_entry = je_self_strengthing
+            }
+>>>>>>> 95ced93 (feat: 1.15)
         }
     }
     weight = 100
@@ -232,18 +414,34 @@ je_self_strengthening_education = {
 je_self_strengthening_diplomacy = {
     group = je_group_historical_content
     icon = "gfx/interface/icons/invention_icons/international_diplomacy.dds"
-    complete = {
-        any_country = {
-            filter = {
-                country_rank >= rank_value:great_power
-                NOT = {
-                    this = root
+    outcome = {
+        header = je_standard_completion_header
+        effect_header = je_standard_on_completion_header
+        color = "gold_positive"
+        conclusion_desc = je_standard_completion_conclusion_desc
+        trigger = {
+            any_country = {
+                filter = {
+                    country_rank >= rank_value:great_power
+                    NOT = {
+                        this = root
+                    }
+                }
+                percent >= 0.5
+                relations:root >= relations_threshold:cordial
+            }
+        }
+        effect = {
+            custom_tooltip = {
+                text = je_self_strengthing_complete_tt
+                change_variable = {
+                    name = self_strengthening_progress
+                    add = 1
                 }
             }
-            percent >= 0.5
-            relations:root >= relations_threshold:cordial
         }
     }
+<<<<<<< HEAD
     on_complete = {
         custom_tooltip = {
             text = je_self_strengthening_complete_tt
@@ -258,6 +456,19 @@ je_self_strengthening_diplomacy = {
             has_journal_entry = je_self_strengthening
         }
     }
+=======
+    outcome = {
+        header = je_standard_failure_header
+        effect_header = je_standard_on_failure_header
+        color = "blue_negative"
+        conclusion_desc = je_standard_failure_conclusion_desc
+        trigger = {
+            NOT = {
+                has_journal_entry = je_self_strengthing
+            }
+        }
+    }
+>>>>>>> 95ced93 (feat: 1.15)
     weight = 100
     should_be_pinned_by_default_uninvolved_or_context = yes
 }

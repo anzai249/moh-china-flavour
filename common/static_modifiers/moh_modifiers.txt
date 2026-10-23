@@ -19,7 +19,7 @@ modifier_chi_wuxu = {
 	icon = gfx/interface/icons/timed_modifier_icons/wuxu.png
 	country_tech_research_speed_mult = 0.15
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.05
-	country_law_enactment_time_mult = -0.15
+	country_law_enactment_speed_mult = 0.176471 # Previously -15% enactment time.
 	interest_group_ig_landowners_approval_add = -2
 }
 
@@ -28,7 +28,7 @@ modifier_chi_wuxu_stable = {
 	icon = gfx/interface/icons/timed_modifier_icons/wuxu.png
 	country_tech_research_speed_mult = 0.1
 	interest_group_ig_intelligentsia_pop_attraction_mult = 0.05
-	country_law_enactment_time_mult = -0.1
+	country_law_enactment_speed_mult = 0.111111 # Previously -10% enactment time.
 }
 
 # Book campaign
@@ -97,10 +97,10 @@ modifier_self_strengthening = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_military_tech_research_speed_mult = 0.05
 	country_ship_construction_add = 10
-	unit_navy_offense_mult = 0.1
-	unit_navy_defense_mult = 0.1
+	ship_hull_damage_mult = 0.1
+	ship_suffered_hull_damage_mult = -0.1
 	country_tax_income_add = -2500
-	country_law_enactment_time_mult = 0.05
+	country_law_enactment_speed_mult = -0.047619 # Previously 5% enactment time.
 	country_max_companies_add = 1
 }
 
@@ -110,7 +110,7 @@ modifier_father = {
 	unit_offense_mult = 0.05
 	unit_morale_loss_mult = -0.25
 	unit_morale_recovery_mult = 0.10
-	country_law_enactment_time_mult = -0.1
+	country_law_enactment_speed_mult = 0.111111 # Previously -10% enactment time.
 	country_authority_mult = 0.25
 	country_prestige_add = 50
 	country_infamy_decay_mult = 0.5
@@ -210,7 +210,7 @@ modifier_wuxu_authority = {
 # 保守主义抬头
 modifier_conservatism_grow = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
-	country_law_enactment_time_mult = 0.25
+	country_law_enactment_speed_mult = -0.2 # Previously 25% enactment time.
 }
 
 # 天朝上国
@@ -311,7 +311,7 @@ modifier_keju_cheat_person = {
 # 13 factories
 modifier_13_factories = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_globe_negative.dds
-	country_convoys_capacity_mult = -0.25
+	state_trade_capacity_mult = -0.25
 }
 
 # edit warlord era
@@ -329,7 +329,7 @@ modifier_south_great_wall_fixing = {
 focus_on_navy = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	country_prestige_from_navy_power_projection_mult = 0.15
-	unit_navy_defense_mult = 0.1
+	ship_suffered_hull_damage_mult = -0.1
 }
 
 # shih chin opium addiction
@@ -353,7 +353,7 @@ opium_wars_addiction_shih_chin_modifier = {
 	unit_defense_mult = -0.45
 	unit_morale_loss_mult = 0.75
 	country_prestige_from_army_power_projection_mult = -0.5
-	country_war_exhaustion_casualties_mult = 1.0
+	country_war_support_casualties_mult = 1.0
 }
 
 modifier_yue_customs_taxes_addition = {
@@ -373,7 +373,7 @@ modifier_communist_china_soviet_base_area = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	unit_offense_mult = 0.05
 	unit_defense_mult = 0.6
-	country_war_exhaustion_casualties_mult = -0.5
+	country_war_support_casualties_mult = -0.5
 	state_conscription_rate_add = 0.5
 	state_conscription_rate_mult = 0.5
 	country_military_goods_cost_mult = -0.1

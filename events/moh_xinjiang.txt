@@ -110,7 +110,7 @@ moh_xinjiang.2 = { # Zuo Zongtang
         name = moh_xinjiang.2.b
         default_option = yes
         add_modifier = {
-            name = moh_zuo_zongtang_modifier
+            name = focus_on_navy
             years = 2
         }
         ai_chance = {

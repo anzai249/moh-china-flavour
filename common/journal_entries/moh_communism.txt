@@ -28,21 +28,33 @@
 			value = 0
 		}
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_opium_communism_complete_tt
-			var:opium_communism_progress >= 100
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_opium_communism_complete_tt
+				var:opium_communism_progress >= 100
+			}
+		}
+		effect = {
+			every_primary_culture = {
+				remove_cultural_obsession = opium
+			}
+			add_modifier = {
+				name = modifier_ban_opium_communism
+				years = 10
+			}
+			remove_banned_goods = g:opium
 		}
 	}
-	on_complete = {
-		every_primary_culture = {
-			remove_cultural_obsession = opium
-		}
-		add_modifier = {
-			name = modifier_ban_opium_communism
-			years = 10
-		}
-		remove_banned_goods = g:opium
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
 	}
 	goal_add_value = {
 		add = 100
@@ -149,134 +161,140 @@ je_anti_encirclement = {
 			}
 		}
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_anti_encirclement_complete_tt
-			OR = {
-				global_var:moh_china_civil_war_score_kmt >= 1
-				global_var:moh_china_civil_war_score_ccp >= 5
-				NAND = {
-					exists = c:CHI
-					exists = c:CCP
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_anti_encirclement_complete_tt
+				OR = {
+					global_var:moh_china_civil_war_score_kmt >= 1
+					global_var:moh_china_civil_war_score_ccp >= 5
+					NAND = {
+						exists = c:CHI
+						exists = c:CCP
+					}
 				}
 			}
 		}
-	}
-	on_complete = {
-		random_diplomatic_play = {
-			limit = {
-				target_is = c:CHI
-				initiator_is = c:CCP
-			}
-			end_play = yes
-		}
-		c:CHI = {
-			create_bidirectional_truce = {
-				country = c:CCP
-				months = 24
-			}
-		}
-		c:CCP = {
-			if = {
+		effect = {
+			random_diplomatic_play = {
 				limit = {
-					has_modifier = modifier_communist_china_soviet_base_area
+					target_is = c:CHI
+					initiator_is = c:CCP
 				}
-				remove_modifier = modifier_communist_china_soviet_base_area
-			}
-		}
-		if = {
-			limit = {
-				global_var:moh_china_civil_war_score_kmt >= 1
-			}
-			s:STATE_XIAN = {
-				set_owner_of_provinces = {
-					country = c:CCP
-					provinces = { x1FCA38 x08880B x8A81C7 x6E8E64 xFE1D86 xA7D4E7
-					x32EDB3 xF40585 x434092 x5E3640 x3CE218 x826987 xCBACD2 x38D512 
-					x09BD45 x3A0F5D xADCF92 xD01080 x7ED6E0 x2B47B0 }
-				}
-			}
-			transfer_state = {
-				STATE = s:STATE_JIANGXI
-				GIVER = c:CCP
-				TAKER = c:CHI
+				end_play = yes
 			}
 			c:CHI = {
-				trigger_event = {
-					id = china_communism.3
+				create_bidirectional_truce = {
+					country = c:CCP
+					months = 24
 				}
 			}
 			c:CCP = {
-				trigger_event = {
-					id = china_communism.4
-				}
-				create_military_formation = {
-					type = army
-					hq_region = sr:region_south_china
-					name = ig_red_army
-					combat_unit = {
-						type = unit_type:combat_unit_type_line_infantry
-						state_region = s:STATE_JIANGXI
-						count = 15
-					}
-					combat_unit = {
-						type = unit_type:combat_unit_type_hussars
-						state_region = s:STATE_NINGXIA
-						count = 5
-					}
-					combat_unit = {
-						type = unit_type:combat_unit_type_cannon_artillery
-						state_region = s:STATE_NINGXIA
-						count = 5
-					}
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				global_var:moh_china_civil_war_score_ccp >= 5
-			}
-			transfer_state = {
-				STATE = s:STATE_JIANGXI
-				GIVER = c:CHI
-				TAKER = c:CCP
-			}
-			transfer_state = {
-				STATE = s:STATE_FUJIAN
-				GIVER = c:CHI
-				TAKER = c:CCP
-			}
-			transfer_state = {
-				STATE = s:STATE_HUNAN
-				GIVER = c:CHI
-				TAKER = c:CCP
-			}
-			transfer_state = {
-				STATE = s:STATE_SOUTHERN_ANHUI
-				GIVER = c:CHI
-				TAKER = c:CCP
-			}
-			transfer_state = {
-				STATE = s:STATE_EASTERN_HUBEI
-				GIVER = c:CHI
-				TAKER = c:CCP
-			}
-			transfer_state = {
-				STATE = s:STATE_ZHEJIANG
-				GIVER = c:CHI
-				TAKER = c:CCP
-			}
-			transfer_state = {
-				STATE = s:STATE_HAINAN
-				GIVER = c:CHI
-				TAKER = c:CCP
-			}
-			c:CCP = {
-				every_scope_state = {
+				if = {
 					limit = {
-						is_homeland = han
+						has_modifier = modifier_communist_china_soviet_base_area
 					}
-					set_state_type = incorporated
+					remove_modifier = modifier_communist_china_soviet_base_area
+				}
+			}
+			if = {
+				limit = {
+					global_var:moh_china_civil_war_score_kmt >= 1
+				}
+				s:STATE_XIAN = {
+					set_owner_of_provinces = {
+						country = c:CCP
+						provinces = { x1FCA38 x08880B x8A81C7 x6E8E64 xFE1D86 xA7D4E7
+						x32EDB3 xF40585 x434092 x5E3640 x3CE218 x826987 xCBACD2 x38D512
+						x09BD45 x3A0F5D xADCF92 xD01080 x7ED6E0 x2B47B0 }
+					}
+				}
+				transfer_state = {
+					STATE = s:STATE_JIANGXI
+					GIVER = c:CCP
+					TAKER = c:CHI
+				}
+				c:CHI = {
+					trigger_event = {
+						id = china_communism.3
+					}
+				}
+				c:CCP = {
+					trigger_event = {
+						id = china_communism.4
+					}
+					create_military_formation = {
+						type = army
+						hq_region = sr:region_south_china
+						name = ig_red_army
+						combat_unit = {
+							type = unit_type:combat_unit_type_line_infantry
+							state_region = s:STATE_JIANGXI
+							count = 15
+						}
+						combat_unit = {
+							type = unit_type:combat_unit_type_hussars
+							state_region = s:STATE_NINGXIA
+							count = 5
+						}
+						combat_unit = {
+							type = unit_type:combat_unit_type_cannon_artillery
+							state_region = s:STATE_NINGXIA
+							count = 5
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					global_var:moh_china_civil_war_score_ccp >= 5
+				}
+				transfer_state = {
+					STATE = s:STATE_JIANGXI
+					GIVER = c:CHI
+					TAKER = c:CCP
+				}
+				transfer_state = {
+					STATE = s:STATE_FUJIAN
+					GIVER = c:CHI
+					TAKER = c:CCP
+				}
+				transfer_state = {
+					STATE = s:STATE_HUNAN
+					GIVER = c:CHI
+					TAKER = c:CCP
+				}
+				transfer_state = {
+					STATE = s:STATE_SOUTHERN_ANHUI
+					GIVER = c:CHI
+					TAKER = c:CCP
+				}
+				transfer_state = {
+					STATE = s:STATE_EASTERN_HUBEI
+					GIVER = c:CHI
+					TAKER = c:CCP
+				}
+				transfer_state = {
+					STATE = s:STATE_ZHEJIANG
+					GIVER = c:CHI
+					TAKER = c:CCP
+				}
+				transfer_state = {
+					STATE = s:STATE_HAINAN
+					GIVER = c:CHI
+					TAKER = c:CCP
+				}
+				c:CCP = {
+					every_scope_state = {
+						limit = {
+							is_homeland = han
+						}
+						set_state_type = incorporated
+					}
 				}
 			}
 		}

@@ -1372,7 +1372,7 @@ ecchi_chi_wang_jingwei_character_template = {
             limit = {
                 has_global_variable = canton_coup_anti_communist
             }
-            set_ideology = ideology:ideology_social_democrat
+            set_ideology = ideology:ideology_state_socialist
         }
     }
 }
@@ -1384,7 +1384,7 @@ ecchi_chi_lu_xun_character_template = {
     home_region = STATE_ZHEJIANG
     culture = cu:han
     female = no
-    ideology = ideology_social_democrat
+    ideology = ideology_state_socialist
     interest_group = ig_intelligentsia
     dna = ecchi_dna_lu_xun
     birth_date = 1881.9.25
@@ -1842,7 +1842,7 @@ chi_yang_du_character_template = {
     historical = yes
     culture = cu:han
     religion = rel:mahayana
-    ideology = ideology_yang_du
+    ideology = ideology_moderate
     interest_group = ig_intelligentsia
     birth_date = 1875.1.15
     traits = { erudite romantic  }
@@ -2079,7 +2079,7 @@ chi_soong_chingling_character_template = {
             limit = {
                 has_global_variable = canton_coup_anti_communist
             }
-            set_ideology = ideology:ideology_social_democrat
+            set_ideology = ideology:ideology_state_socialist
         }
     }
 }

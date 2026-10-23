@@ -4,36 +4,48 @@
 	# modifiers_while_active = {
 	# 	modifier_chi_keju
 	# }
-	complete = {
-		institution_investment_level = {
-			institution = institution_schools
-			value >= 2
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			institution_investment_level = {
+				institution = institution_schools
+				value >= 2
+			}
+		}
+		effect = {
+			custom_tooltip = je_keju.tt.1
+			trigger_event = {
+				id = keju.2
+			}
+			ig:ig_intelligentsia = {
+				add_ideology = ideology_republican
+				remove_ideology = ideology_eight_legged
+			}
+			activate_law = law_type:law_appointed_bureaucrats
 		}
 	}
-	fail = {
-		NOT = {
-			has_law = law_type:law_imperial_examinations
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = moh_je_keju_failed_desc
+		trigger = {
+			NOT = {
+				has_law = law_type:law_imperial_examinations
+			}
 		}
-	}
-	on_complete = {
-		custom_tooltip = je_keju.tt.1
-		trigger_event = {
-			id = keju.2
-		}
-		ig:ig_intelligentsia = {
-			add_ideology = ideology_republican
-			remove_ideology = ideology_eight_legged
-		}
-		activate_law = law_type:law_appointed_bureaucrats
-	}
-	on_fail = {
-		custom_tooltip = je_keju.tt.2
-		trigger_event = {
-			id = keju.1
-		}
-		ig:ig_intelligentsia = {
-			add_ideology = ideology_republican
-			remove_ideology = ideology_eight_legged
+		effect = {
+			custom_tooltip = je_keju.tt.2
+			trigger_event = {
+				id = keju.1
+			}
+			ig:ig_intelligentsia = {
+				add_ideology = ideology_republican
+				remove_ideology = ideology_eight_legged
+			}
 		}
 	}
 	on_yearly_pulse = {

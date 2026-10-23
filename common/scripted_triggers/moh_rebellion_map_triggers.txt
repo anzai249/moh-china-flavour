@@ -1,0 +1,172 @@
+﻿# Presentation only. All triggers are evaluated in State scope.
+# Keep readiness checks aligned with nian_rebellion.1, moh_historical.11 and moh_xinjiang.1.
+moh_rebellion_map_nian_state = {
+	OR = {
+		state_region = s:STATE_HENAN
+		state_region = s:STATE_NORTHERN_ANHUI
+	}
+}
+
+moh_rebellion_map_west_state = {
+	OR = {
+		state_region = s:STATE_GANSU
+		state_region = s:STATE_TIANSHAN
+	}
+}
+
+moh_rebellion_map_tracked_state = {
+	OR = {
+		moh_rebellion_map_nian_state = yes
+		state_region = s:STATE_YUNNAN
+		moh_rebellion_map_west_state = yes
+	}
+}
+
+moh_rebellion_map_active = {
+	OR = {
+		AND = {
+			moh_rebellion_map_nian_state = yes
+			has_global_variable = nian_rebellion
+			c:AHU ?= { has_variable = nian_rebellion }
+		}
+		AND = {
+			state_region = s:STATE_YUNNAN
+			has_global_variable = yunnan_rebellion
+			NOT = { has_global_variable = yunnan_rebellion_complete }
+			exists = c:YUN
+		}
+		AND = {
+			moh_rebellion_map_west_state = yes
+			has_global_variable = gansu_hui_revolt_started
+			exists = c:YETTESHEHER
+		}
+	}
+}
+
+moh_rebellion_map_resolved = {
+	OR = {
+		AND = {
+			moh_rebellion_map_nian_state = yes
+			has_global_variable = nian_rebellion
+			NOT = { c:AHU ?= { has_variable = nian_rebellion } }
+		}
+		AND = {
+			state_region = s:STATE_YUNNAN
+			OR = {
+				has_global_variable = yunnan_rebellion_complete
+				AND = {
+					has_global_variable = yunnan_rebellion
+					NOT = { exists = c:YUN }
+				}
+			}
+		}
+		AND = {
+			moh_rebellion_map_west_state = yes
+			has_global_variable = gansu_hui_revolt_started
+			NOT = { exists = c:YETTESHEHER }
+		}
+	}
+}
+
+moh_rebellion_map_poor_farmers = {
+	any_scope_pop = {
+		OR = {
+			is_pop_type = peasants
+			is_pop_type = farmers
+		}
+		standard_of_living < 10
+	}
+}
+
+moh_rebellion_map_west_ready = {
+	NOT = { has_global_variable = gansu_hui_revolt_started }
+	game_date >= 1858.1.1
+	exists = c:KOK
+	owner ?= {
+		c:CHI ?= this
+		has_technology_researched = colonization
+		has_state_in_state_region = STATE_TIANSHAN
+	}
+}
+
+moh_rebellion_map_ready = {
+	owner ?= { c:CHI ?= this }
+	OR = {
+		AND = {
+			moh_rebellion_map_nian_state = yes
+			NOT = { has_global_variable = nian_rebellion }
+			year > 1845
+			turmoil > 0.25
+			moh_rebellion_map_poor_farmers = yes
+			owner = {
+				has_state_in_state_region = STATE_HENAN
+				OR = {
+					has_law = law_type:law_land_based_taxation
+					has_law = law_type:law_tenant_farmers
+					has_law = law_type:law_serfdom
+				}
+			}
+		}
+		AND = {
+			state_region = s:STATE_YUNNAN
+			NOT = { has_global_variable = yunnan_rebellion }
+			year > 1855
+			turmoil > 0.15
+			any_scope_pop = { religion = rel:sunni }
+			owner = { NOT = { country_has_state_religion = rel:sunni } }
+		}
+		AND = {
+			state_region = s:STATE_TIANSHAN
+			moh_rebellion_map_west_ready = yes
+		}
+	}
+}
+
+moh_rebellion_map_warning = {
+	owner ?= { c:CHI ?= this }
+	OR = {
+		AND = {
+			moh_rebellion_map_nian_state = yes
+			NOT = { has_global_variable = nian_rebellion }
+			OR = {
+				turmoil > 0.25
+				any_scope_pop = {
+					OR = {
+						is_pop_type = peasants
+						is_pop_type = farmers
+					}
+					standard_of_living < 12
+				}
+			}
+		}
+		AND = {
+			state_region = s:STATE_YUNNAN
+			NOT = { has_global_variable = yunnan_rebellion }
+			turmoil > 0.15
+		}
+		AND = {
+			state_region = s:STATE_GANSU
+			moh_rebellion_map_west_ready = yes
+		}
+	}
+}
+
+moh_rebellion_map_rebel_controlled = {
+	OR = {
+		AND = {
+			moh_rebellion_map_nian_state = yes
+			owner ?= {
+				c:AHU ?= this
+				has_variable = nian_rebellion
+			}
+		}
+		AND = {
+			state_region = s:STATE_YUNNAN
+			owner ?= { c:YUN ?= this }
+		}
+		AND = {
+			moh_rebellion_map_west_state = yes
+			owner ?= { c:YETTESHEHER ?= this }
+		}
+	}
+}

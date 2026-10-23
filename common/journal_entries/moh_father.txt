@@ -14,7 +14,7 @@
     }
 	should_be_involved = {
 		country_has_primary_culture = cu:han
-		country_is_in_east_asia = yes
+		is_in_geographic_region = geographic_region_east_asia
 		# has_journal_entry = je_reunify_china
 	}
 	should_show_when_not_involved = {
@@ -83,46 +83,58 @@
 			has_global_variable = sun_yatsen_dead
 		}
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_father_of_the_republic.tt.complete
-			exists = c:CHI
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = moh_je_father_of_the_republic_completed_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_father_of_the_republic.tt.complete
+				exists = c:CHI
+			}
 		}
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = je_father_of_the_republic.tt.on.complete
-			random_character = {
-				limit = {
-					has_variable = sun_yatsen_character
+		effect = {
+			custom_tooltip = {
+				text = je_father_of_the_republic.tt.on.complete
+				random_character = {
+					limit = {
+						has_variable = sun_yatsen_character
+					}
+					transfer_character = c:CHI
+					set_as_interest_group_leader = yes
+					add_character_role = character_role_ig_leader
+					set_character_as_ruler = yes
+					set_character_immortal = no
 				}
-				transfer_character = c:CHI
-				set_as_interest_group_leader = yes
-				add_character_role = character_role_ig_leader
-				set_character_as_ruler = yes
-				set_character_immortal = no
 			}
-		}
-		
-		every_country = {
-			limit = {
-				has_modifier = modifier_father
+
+			every_country = {
+				limit = {
+					has_modifier = modifier_father
+				}
+				remove_modifier = modifier_father
 			}
-			remove_modifier = modifier_father
 		}
 	}
-	fail = {
-		custom_tooltip = {
-			text = je_father_of_the_republic.tt.fail
-			has_global_variable = sun_yatsen_dead
-		}
-	}
-	on_fail = {
-		every_country = {
-			limit = {
-				has_modifier = modifier_father
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = moh_je_father_of_the_republic_failed_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_father_of_the_republic.tt.fail
+				has_global_variable = sun_yatsen_dead
 			}
-			remove_modifier = modifier_father
+		}
+		effect = {
+			every_country = {
+				limit = {
+					has_modifier = modifier_father
+				}
+				remove_modifier = modifier_father
+			}
 		}
 	}
 	on_weekly_pulse = {

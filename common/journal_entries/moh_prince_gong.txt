@@ -61,27 +61,39 @@
 		has_law = law_type:law_monarchy
 		always = no
 	}
-	complete = {
-		custom_tooltip = {
-			text = je_prince_gong_complete_tt
-			NOT = {
-				any_scope_character = {
-					has_variable = is_gong
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_prince_gong_complete_tt
+				NOT = {
+					any_scope_character = {
+						has_variable = is_gong
+					}
 				}
 			}
 		}
 	}
-	fail = {
-		custom_tooltip = {
-			text = je_prince_gong_fail_tt
-			OR = {
-				var:prince_gong_progress >= 100
-				var:prince_gong_progress <= 0
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_prince_gong_fail_tt
+				OR = {
+					var:prince_gong_progress >= 100
+					var:prince_gong_progress <= 0
+				}
 			}
 		}
-	}
-	on_fail = {
-		# TODO
+		effect = {
+			# TODO
+		}
 	}
 	# on_weekly_pulse = {
 	# 	effect = {

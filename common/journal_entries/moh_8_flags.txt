@@ -6,65 +6,77 @@
 	modifiers_while_active = {
 		modifier_8_flags
 	}
-	complete = {
-		has_law = law_type:law_professional_army
-		custom_tooltip = {
-			text = 8_flags_complete_tt_channel_force_into_valor
-			has_variable = channel_force_into_valor_complete
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			has_law = law_type:law_professional_army
+			custom_tooltip = {
+				text = 8_flags_complete_tt_channel_force_into_valor
+				has_variable = channel_force_into_valor_complete
+			}
+			# custom_tooltip = {
+			# 	text = 8_flags_complete_tt
+			# 	NOT = {
+			# 		any_military_formation = {
+			# 			is_army = yes
+			# 			NOT = {
+			# 				formation_army_unit_type_fraction = {
+			# 					target = unit_type:combat_unit_type_trench_infantry
+			# 					value >= 0.25
+			# 				}
+			# 			}
+			# 		}
+			# 	}
+			# }
+			any_military_formation = {
+				filter = {
+					is_army = yes
+				}
+				any_combat_unit = {
+					has_unit_type = unit_type:combat_unit_type_trench_infantry
+				}
+				percent >= 0.25
+			}
 		}
-		# custom_tooltip = {
-		# 	text = 8_flags_complete_tt
-		# 	NOT = {
-		# 		any_military_formation = {
-		# 			is_army = yes
-		# 			NOT = {
-		# 				formation_army_unit_type_fraction = {
-		# 					target = unit_type:combat_unit_type_trench_infantry
-		# 					value >= 0.25
-		# 				}
-		# 			}
-		# 		}
-		# 	}
-		# }
-		any_military_formation = {
-			filter = {
-				is_army = yes
+		effect = {
+			custom_tooltip = 8_flags_on_complete_tt_1
+			custom_tooltip = {
+				text = 8_flags_on_complete_tt_2
+				ig:ig_armed_forces = {
+					set_interest_group_name = ig_new_armed_forces
+					add_ideology = ideology_republican
+					remove_ideology = ideology_manchu_elitist
+				}
 			}
-			any_combat_unit = {
-				has_unit_type = unit_type:combat_unit_type_trench_infantry
-			}
-			percent >= 0.25
 		}
 	}
-	on_complete = {
-		custom_tooltip = 8_flags_on_complete_tt_1
-		custom_tooltip = {
-			text = 8_flags_on_complete_tt_2
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			OR = {
+				NOT = {
+					has_law = law_type:law_monarchy
+				}
+				NOT = {
+					country_has_primary_culture = cu:manchu
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = {
+				text = 8_flags_on_complete_tt_3
+			}
 			ig:ig_armed_forces = {
-				set_interest_group_name = ig_new_armed_forces
-				add_ideology = ideology_republican
+				set_interest_group_name = ig_armed_forces
+				# add_ideology = ideology_republican
 				remove_ideology = ideology_manchu_elitist
 			}
-		}
-	}
-	fail = {
-		OR = {
-			NOT = {
-				has_law = law_type:law_monarchy
-			}
-			NOT = {
-				country_has_primary_culture = cu:manchu
-			}
-		}
-	}
-	on_fail = {
-		custom_tooltip = {
-			text = 8_flags_on_complete_tt_3
-		}
-		ig:ig_armed_forces = {
-			set_interest_group_name = ig_armed_forces
-			# add_ideology = ideology_republican
-			remove_ideology = ideology_manchu_elitist
 		}
 	}
 	weight = 50
@@ -86,15 +98,21 @@ je_channel_force_into_valor = {
 			has_technology_researched = army_reserves
 		}
 	}
-	complete = {
-		has_law = law_type:law_professional_army
-		has_technology_researched = general_staff
-		military_wage_level > medium
-	}
-	on_complete = {
-		custom_tooltip = {
-			text = channel_force_into_valor_on_complete_tt
-			set_variable = channel_force_into_valor_complete
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			has_law = law_type:law_professional_army
+			has_technology_researched = general_staff
+			military_wage_level > medium
+		}
+		effect = {
+			custom_tooltip = {
+				text = channel_force_into_valor_on_complete_tt
+				set_variable = channel_force_into_valor_complete
+			}
 		}
 	}
 	weight = 50

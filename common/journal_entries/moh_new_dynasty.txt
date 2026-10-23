@@ -49,24 +49,36 @@
 	}
 	should_be_pinned_by_default_uninvolved_or_context = yes
 	weight = 200
-	complete = {
-		custom_tooltip = {
-			text = je_new_dynasty_complete_tt
-			OR = {
-				has_variable = china_ming
-				has_variable = china_shun
-				has_variable = china_later_jin
-				has_variable = china_han
-				has_variable = china_qing
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = moh_je_new_dynasty_completed_desc
+		trigger = {
+			custom_tooltip = {
+				text = je_new_dynasty_complete_tt
+				OR = {
+					has_variable = china_ming
+					has_variable = china_shun
+					has_variable = china_later_jin
+					has_variable = china_han
+					has_variable = china_qing
+				}
 			}
 		}
 	}
-	fail = {
-		OR = {
-			NOT = {
-				has_law = law_type:law_monarchy
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = moh_je_new_dynasty_failed_desc
+		trigger = {
+			OR = {
+				NOT = {
+					has_law = law_type:law_monarchy
+				}
+				is_revolutionary = no
 			}
-			is_revolutionary = no
 		}
 	}
 }

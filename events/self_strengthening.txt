@@ -286,14 +286,12 @@ self_strengthening.3 = {
                 type = fleet
                 hq_region = sr:region_north_china
                 name = Beiyang_Fleet
-                combat_unit = {
-                    type = unit_type:combat_unit_type_destroyer
-                    state_region = s:STATE_SHANDONG
+                ship = {
+                    type = ship_type:ship_type_destroyer
                     count = 5
                 }
-                combat_unit = {
-                    type = unit_type:combat_unit_type_ironclad
-                    state_region = s:STATE_SHANDONG
+                ship = {
+                    type = ship_type:ship_type_early_ironclad
                     count = 5
                 }
             }
@@ -303,14 +301,12 @@ self_strengthening.3 = {
                 type = fleet
                 hq_region = sr:region_north_china
                 name = Beiyang_Fleet
-                combat_unit = {
-                    type = unit_type:combat_unit_type_destroyer
-                    state_region = s:STATE_SHANDONG
+                ship = {
+                    type = ship_type:ship_type_destroyer
                     count = 5
                 }
-                combat_unit = {
-                    type = unit_type:combat_unit_type_man_o_war
-                    state_region = s:STATE_SHANDONG
+                ship = {
+                    type = ship_type:ship_type_ship_of_the_line
                     count = 5
                 }
             }

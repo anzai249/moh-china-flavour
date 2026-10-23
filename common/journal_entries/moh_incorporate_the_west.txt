@@ -12,37 +12,49 @@
 		c:CHI ?= this
 		has_technology_researched = colonization
 	}
-	complete = {
-		any_scope_state = {
-			percent = 1
-			filter = {
-				OR = {
-				state_region = s:STATE_ALXA
-				state_region = s:STATE_QINGHAI
-				state_region = s:STATE_DZUNGARIA
-				state_region = s:STATE_TIANSHAN
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			any_scope_state = {
+				percent = 1
+				filter = {
+					OR = {
+					state_region = s:STATE_ALXA
+					state_region = s:STATE_QINGHAI
+					state_region = s:STATE_DZUNGARIA
+					state_region = s:STATE_TIANSHAN
+				}
+				}
+				is_incorporated = yes
 			}
+		}
+		effect = {
+			add_modifier = {
+				name = modifier_western_incorporation
+				years = 5
+				is_decaying = yes
 			}
-			is_incorporated = yes
+			chi_add_1_fragile_unity = yes
+			set_variable = china_incorporated_west
 		}
 	}
-	on_complete = {
-		add_modifier = {
-			name = modifier_western_incorporation
-			years = 5
-			is_decaying = yes
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			add_modifier = {
+				name = modifier_western_incorporation_failed
+				years = 5
+				is_decaying = yes
+			}
 		}
-		chi_add_1_fragile_unity = yes
-		set_variable = china_incorporated_west
 	}
 	timeout = 10950
-	on_timeout = {
-		add_modifier = {
-			name = modifier_western_incorporation_failed
-			years = 5
-			is_decaying = yes
-		}
-	}
 	weight = 100
 	should_be_pinned_by_default_uninvolved_or_context = yes
 }
@@ -63,19 +75,25 @@ je_gaitu_guiliu = {
 		}
 		has_technology_researched = civilizing_mission
 	}
-	complete = {
-		NOT = {
-			any_scope_state = {
-				has_state_trait = state_trait_chieftains
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			NOT = {
+				any_scope_state = {
+					has_state_trait = state_trait_chieftains
+				}
 			}
 		}
-	}
-	on_complete = {
-		set_variable = china_gaitu_guiliu
-		add_modifier = {
-			name = modifier_gaitu_guiliu_success
-			years = 5
-			is_decaying = yes
+		effect = {
+			set_variable = china_gaitu_guiliu
+			add_modifier = {
+				name = modifier_gaitu_guiliu_success
+				years = 5
+				is_decaying = yes
+			}
 		}
 	}
 	on_monthly_pulse = {
@@ -117,58 +135,70 @@ je_reconquest_of_the_west = {
 			exists = c:YETTESHEHER
 		}
 	}
-	complete = {
-		# custom_tooltip = {
-		# 	text = je_reconquest_of_the_west_yettesheher_destroyed_tt
-		# 	NOT = {
-		# 		exists = c:YETTESHEHER
-		# 	}
-		# }
-		any_scope_state = {
-			percent = 1
-				filter = {
-					OR = {
-					state_region = s:STATE_ALXA
-					state_region = s:STATE_QINGHAI
-					state_region = s:STATE_DZUNGARIA
-					state_region = s:STATE_TIANSHAN
-				}
-			}
-			is_incorporated = yes
-		}
-	}
-	on_complete = {
-		add_modifier = {
-			name = modifier_western_incorporation
-			years = 5
-			is_decaying = yes
-		}
-		chi_add_1_fragile_unity = yes
-		set_variable = china_incorporated_west
-	}
-	timeout = 12775
-	on_timeout = {
-		add_modifier = {
-			name = modifier_western_incorporation_failed
-			years = 5
-			is_decaying = yes
-		}
-		if = {
-			limit = {
-				exists = c:YETTESHEHER
-			}
-			every_scope_state = {
-				limit = {
-					state_region = {
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			# custom_tooltip = {
+			# 	text = je_reconquest_of_the_west_yettesheher_destroyed_tt
+			# 	NOT = {
+			# 		exists = c:YETTESHEHER
+			# 	}
+			# }
+			any_scope_state = {
+				percent = 1
+					filter = {
 						OR = {
-							is_homeland = cu:uighur
-							is_homeland = cu:kirgiz
-							is_homeland = cu:uzbek
-						}
+						state_region = s:STATE_ALXA
+						state_region = s:STATE_QINGHAI
+						state_region = s:STATE_DZUNGARIA
+						state_region = s:STATE_TIANSHAN
 					}
 				}
-				set_state_owner = c:YETTESHEHER
+				is_incorporated = yes
+			}
+		}
+		effect = {
+			add_modifier = {
+				name = modifier_western_incorporation
+				years = 5
+				is_decaying = yes
+			}
+			chi_add_1_fragile_unity = yes
+			set_variable = china_incorporated_west
+		}
+	}
+	outcome = {
+		header = JOURNAL_ENTRY_TIMEOUT
+		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
+		flags = { timeout }
+		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			add_modifier = {
+				name = modifier_western_incorporation_failed
+				years = 5
+				is_decaying = yes
+			}
+			if = {
+				limit = {
+					exists = c:YETTESHEHER
+				}
+				every_scope_state = {
+					limit = {
+						state_region = {
+							OR = {
+								is_homeland = cu:uighur
+								is_homeland = cu:kirgiz
+								is_homeland = cu:uzbek
+							}
+						}
+					}
+					set_state_owner = c:YETTESHEHER
+				}
 			}
 		}
 	}
+	timeout = 12775
 }

@@ -40,7 +40,7 @@ STATE_HAINAN = {
         building_logging_camp = 2
         building_fishing_wharf = 10
     }
-    naval_exit_id = 3054
+    naval_exit_id = 3056
 }
 # west guangdong 粵西 (new)
 STATE_WESTERN_GUANGDONG = {

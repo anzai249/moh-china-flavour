@@ -2,7 +2,11 @@
 	name = "wuxu_progress_bar_name"
 	desc = "wuxu_progress_bar_reformers_desc"
 	second_desc = "wuxu_progress_bar_conservatives_desc"
-	double_sided_bad = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_default.dds"
+	background_texture = "gfx/interface/progressbar/progressbar_bad.dds"
+	glow_texture = "gfx/interface/progressbar/progressbar_default_glow.dds"
+	glow_line_texture = "gfx/interface/progressbar/progressbar_default_glow_line.dds"
+	marker = yes
 	weekly_progress = {
 		if = {
 			limit = {

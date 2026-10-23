@@ -5,7 +5,11 @@
 	min_value = 0
 	max_value = 100
 	start_value = 60
-	double_sided_gold = yes
+	progress_texture = "gfx/interface/progressbar/progressbar_gold.dds"
+	background_texture = "gfx/interface/progressbar/progressbar_default.dds"
+	glow_texture = "gfx/interface/progressbar/progressbar_gold_glow.dds"
+	glow_line_texture = "gfx/interface/progressbar/progressbar_gold_glow_line.dds"
+	marker = yes
 	monthly_progress = {
 		if = {
 			limit = {
