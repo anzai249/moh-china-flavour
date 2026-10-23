@@ -1,0 +1,16 @@
+﻿special_genes = {
+    accessory_genes = {
+        INJECT:outfits = {
+            inheritable = no
+            moh_dalai_lama_robe = {
+                index = 0
+                male = {
+                    1 = male_outfit_dalai_lama
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+        }
+    }
+}

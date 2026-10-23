@@ -1,0 +1,8 @@
+﻿male_outfit_dalai_lama = {
+    set_tags = "shrink_legs,shrink_chest,shrink_belly"
+    entity = {
+        required_tags = ""
+        shared_pose_entity = torso
+        entity = "male_outfit_dalai_lama_entity"
+    }
+}
