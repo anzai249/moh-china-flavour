@@ -241,7 +241,8 @@ self_strengthening.3 = {
                 has_modifier = modifier_self_strengthening_donate_character
             }
         }
-        scope:self_strengthening_donate_state = {
+        any_scope_state = {
+            state_region = s:STATE_SHANDONG
             is_incorporated = yes
             can_construct_building = building_naval_administration
         }
@@ -254,13 +255,16 @@ self_strengthening.3 = {
         NOT = {
             has_variable = beiyang_fleet
         }
-        has_technology_researched = destroyer
+        has_technology_researched = ironclad_tech
     }
     immediate = {
         set_variable = beiyang_fleet
         random_scope_character = {
             limit = {
                 has_variable = self_strengthening_character
+                NOT = {
+                    has_modifier = modifier_self_strengthing_donate_character
+                }
             }
             save_scope_as = donate_character_scope
             add_modifier = {
@@ -269,7 +273,12 @@ self_strengthening.3 = {
                 is_decaying = yes
             }
         }
-        s:STATE_SHANDONG.region_state:CHI = {
+        random_scope_state = {
+            limit = {
+                state_region = s:STATE_SHANDONG
+                is_incorporated = yes
+                can_construct_building = building_naval_administration
+            }
             save_scope_as = self_strengthening_donate_state
         }
     }
@@ -278,39 +287,19 @@ self_strengthening.3 = {
         ai_chance = {
             base = 5
         }
-        if = {
-            limit = {
-                has_technology_researched = ironclad_tech
+        create_military_formation = {
+            type = fleet
+            hq_region = sr:region_north_china
+            name = Beiyang_Fleet
+            ship = {
+                type = ship_type:ship_type_early_ironclad
+                count = 5
             }
-            create_military_formation = {
-                type = fleet
-                hq_region = sr:region_north_china
-                name = Beiyang_Fleet
-                ship = {
-                    type = ship_type:ship_type_destroyer
-                    count = 5
-                }
-                ship = {
-                    type = ship_type:ship_type_early_ironclad
-                    count = 5
-                }
+            ship = {
+                type = ship_type:ship_type_iron_frigate
+                count = 5
             }
         }
-		else = {
-			create_military_formation = {
-                type = fleet
-                hq_region = sr:region_north_china
-                name = Beiyang_Fleet
-                ship = {
-                    type = ship_type:ship_type_destroyer
-                    count = 5
-                }
-                ship = {
-                    type = ship_type:ship_type_ship_of_the_line
-                    count = 5
-                }
-            }
-		}
 
         show_as_tooltip = {
             scope:donate_character_scope = {

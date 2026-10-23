@@ -91,6 +91,7 @@ nian_rebellion.1 = {
 					}
 					random_state = {
                         limit = {
+                            owner = c:CHI
 							any_neighbouring_state = {
                                 state_region = s:STATE_HENAN
 							}
@@ -103,6 +104,7 @@ nian_rebellion.1 = {
 					}
 					random_state = {
                         limit = {
+                            owner = c:CHI
                             state_region = s:STATE_NORTHERN_ANHUI
                         }
                         set_state_owner = c:AHU

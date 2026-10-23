@@ -749,10 +749,29 @@ moh_historical.10 = {
 	duration = 3
 	trigger = {
 		has_global_variable = sun_yatsen
-		NOT = {
-			has_global_variable = sun_yatsen_dead
-		}
+		NOT = { has_global_variable = sun_yatsen_dead }
 		year >= 1924
+		global_var:sun_yatsen = { is_character_alive = yes }
+		OR = {
+			AND = {
+				country_has_primary_culture = cu:han
+				global_var:sun_yatsen = { owner = root }
+			}
+			AND = {
+				NOT = {
+					global_var:sun_yatsen = {
+						owner = { country_has_primary_culture = cu:han }
+					}
+				}
+				OR = {
+					c:CHI ?= this
+					AND = {
+						NOT = { exists = c:CHI }
+						c:BEI ?= this
+					}
+				}
+			}
+		}
 	}
 	immediate = {
 		global_var:sun_yatsen = {

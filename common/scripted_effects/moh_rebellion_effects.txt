@@ -1,0 +1,27 @@
+﻿# Contextless JE: monitor the territory used by the Qing outbreak event triggers.
+# Recompute from zero so lost territory and a missing Qing country cannot leave stale values.
+moh_refresh_rebellion_risk = {
+	set_global_variable = { name = henan_turmoil value = 0 }
+	set_global_variable = { name = yunnan_turmoil value = 0 }
+	c:CHI ?= {
+		every_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_HENAN
+					state_region = s:STATE_NORTHERN_ANHUI
+				}
+			}
+			if = {
+				limit = { turmoil > global_var:henan_turmoil }
+				set_global_variable = { name = henan_turmoil value = turmoil }
+			}
+		}
+		every_scope_state = {
+			limit = { state_region = s:STATE_YUNNAN }
+			if = {
+				limit = { turmoil > global_var:yunnan_turmoil }
+				set_global_variable = { name = yunnan_turmoil value = turmoil }
+			}
+		}
+	}
+}

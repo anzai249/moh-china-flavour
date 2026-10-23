@@ -37,7 +37,7 @@
         value = var:self_strengthening_progress
     }
     goal_add_value = {
-        add = 4
+        add = 3
     }
     progressbar = yes
 <<<<<<< HEAD

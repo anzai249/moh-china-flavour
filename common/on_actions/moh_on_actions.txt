@@ -206,6 +206,12 @@ on_character_death = {
 
 moh_on_character_death = {
 	effect = {
+        if = {
+            limit = { has_variable = sun_yatsen_character }
+            set_global_variable = sun_yatsen_dead
+            remove_global_variable = sun_yatsen
+        }
+
 		if = {
 			limit = {
 				has_template = chi_qiu_jin_character_template

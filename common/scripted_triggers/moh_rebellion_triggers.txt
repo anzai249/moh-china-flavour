@@ -1,0 +1,66 @@
+﻿# A country flag distinguishes the Nian rebels from a later Anhui warlord using the same tag.
+moh_nian_rebellion_active = {
+	any_country = { has_variable = nian_rebellion }
+}
+
+moh_nian_rebellion_resolved = {
+	has_global_variable = nian_rebellion
+	NOT = { moh_nian_rebellion_active = yes }
+}
+
+moh_nian_monitored_states_exist = {
+	exists = c:CHI
+	c:CHI ?= {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HENAN
+				state_region = s:STATE_NORTHERN_ANHUI
+			}
+		}
+	}
+}
+
+moh_nian_has_poor_farmers = {
+	exists = c:CHI
+	c:CHI ?= {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HENAN
+				state_region = s:STATE_NORTHERN_ANHUI
+			}
+			any_scope_pop = {
+				OR = {
+					is_pop_type = peasants
+					is_pop_type = farmers
+				}
+				standard_of_living < 10
+			}
+		}
+	}
+}
+
+moh_nian_has_struggling_farmers = {
+	exists = c:CHI
+	c:CHI ?= {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_HENAN
+				state_region = s:STATE_NORTHERN_ANHUI
+			}
+			any_scope_pop = {
+				OR = {
+					is_pop_type = peasants
+					is_pop_type = farmers
+				}
+				standard_of_living < 12
+			}
+		}
+	}
+}
+
+moh_yunnan_monitored_states_exist = {
+	exists = c:CHI
+	c:CHI ?= {
+		any_scope_state = { state_region = s:STATE_YUNNAN }
+	}
+}

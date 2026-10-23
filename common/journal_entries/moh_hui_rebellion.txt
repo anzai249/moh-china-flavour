@@ -14,14 +14,7 @@
 		always = no
 	}
 	immediate = {
-		set_global_variable = {
-			name = henan_turmoil
-			value = 0
-		}
-		set_global_variable = {
-			name = yunnan_turmoil
-			value = 0
-		}
+		moh_refresh_rebellion_risk = yes
 	}
     # is_shown_in_lobby = {
     #     OR = {
@@ -47,34 +40,14 @@
 		trigger = {
 			custom_tooltip = {
 				text = je_hui_rebellion_complete_tt
-				has_global_variable = nian_rebellion
+				moh_nian_rebellion_resolved = yes
 				has_global_variable = yunnan_rebellion_complete
 			}
 		}
 	}
 	on_monthly_pulse = {
 		effect = {
-			random_state = {
-				limit = {
-					OR = {
-						state_region = s:STATE_HENAN
-						state_region = s:STATE_NORTHERN_ANHUI
-					}
-				}
-				set_global_variable = {
-						name = henan_turmoil
-						value = turmoil
-				}
-			}
-			random_state = {
-				limit = {
-					state_region = s:STATE_YUNNAN
-				}
-				set_global_variable = {
-					name = yunnan_turmoil
-					value = turmoil
-				}
-			}
+			moh_refresh_rebellion_risk = yes
 		}
 	}
 }
