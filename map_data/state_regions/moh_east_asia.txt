@@ -19,6 +19,8 @@ STATE_GUANGDONG = {
         building_fishing_wharf = 2
     }
     naval_exit_id = 3056
+    min_cold_effect = 0.00
+    max_cold_effect = 0.02
 }
 # Hainan/Qiongzhou 瓊州
 STATE_HAINAN = {
@@ -41,6 +43,8 @@ STATE_HAINAN = {
         building_fishing_wharf = 10
     }
     naval_exit_id = 3056
+    min_cold_effect = 0.00
+    max_cold_effect = 0.01
 }
 # west guangdong 粵西 (new)
 STATE_WESTERN_GUANGDONG = {
@@ -64,6 +68,8 @@ STATE_WESTERN_GUANGDONG = {
         building_fishing_wharf = 2
     }
     naval_exit_id = 3056
+    min_cold_effect = 0.00
+    max_cold_effect = 0.02
 }
 # Xilingol 錫林郭勒
 STATE_HINGGAN = {
@@ -83,6 +89,8 @@ STATE_HINGGAN = {
         building_iron_mine = 6
         building_lead_mine = 10
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.47
 }
 # Ulanqab 烏蘭察布
 STATE_ULANQAB = {
@@ -104,6 +112,8 @@ STATE_ULANQAB = {
         building_iron_mine = 30
         building_lead_mine = 14
     }
+    min_cold_effect = 0.05
+    max_cold_effect = 0.47
 }
 # Jirem 哲里木
 STATE_JIREM = {
@@ -123,6 +133,8 @@ STATE_JIREM = {
     capped_resources = {
         building_logging_camp = 6
     }
+    min_cold_effect = 0.02
+    max_cold_effect = 0.45
 }
 
 # INJECT:STATE_FORMOSA = {
