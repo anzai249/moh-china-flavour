@@ -1,37 +1,57 @@
 ﻿moh_dalai_lama_appearance = {
-    usage = game
-    selection_behavior = weighted_random
-    fallback = moh_dalai_lama_no_override
-    moh_dalai_lama_no_override = {
-        dna_modifiers = {}
-        weight = {
-            base = 1
-        }
-    }
-    moh_dalai_lama_robes_and_shaved_head = {
-        dna_modifiers = {
-            accessory = {
-                mode = replace
-                gene = hairstyles
-                template = no_hairstyles
-                range = { 0 1 }
-            }
-            accessory = {
-                mode = replace
-                gene = outfits
-                template = moh_dalai_lama_robe
-                range = { 0 1 }
-            }
-        }
-        weight = {
-            base = 0
-            modifier = {
-                add = 100
-                exists = scope:character
-                scope:character = {
-                    has_variable = is_dalai_lama
-                }
-            }
-        }
-    }
+	usage = game
+	selection_behavior = weighted_random
+	fallback = moh_dalai_lama_no_override
+	moh_dalai_lama_no_override = {
+		dna_modifiers = {
+		}
+		weight = {
+			base = 1
+		}
+	}
+	moh_dalai_lama_robes_and_shaved_head = {
+		dna_modifiers = {
+			accessory = {
+				mode = replace
+				gene = hairstyles
+				template = no_hairstyles
+				range = {
+					0
+					1
+				}
+			}
+			accessory = {
+				mode = replace
+				gene = outfits
+				template = moh_dalai_lama_robe
+				range = {
+					0
+					1
+				}
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				OR = {
+					scope:pop ?= {
+						religion = rel:gelugpa
+						is_pop_type = aristocrats
+					}
+					scope:character ?= {
+						OR = {
+							has_variable = is_dalai_lama
+							AND = {
+								religion = rel:gelugpa
+								interest_group ?= {
+									is_interest_group_type = ig_devout
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

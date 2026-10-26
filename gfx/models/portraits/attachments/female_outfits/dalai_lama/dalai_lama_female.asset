@@ -1,0 +1,37 @@
+pdxmesh = {
+    name = "female_outfit_dalai_lama_mesh"
+    file = "dalai_lama_female.mesh"
+
+    blend_shape = { id = "dalai_lama_female_bs_fat" type = "dalai_lama_female_bs_fat.mesh" }
+    blend_shape = { id = "dalai_lama_female_bs_gaunt" type = "dalai_lama_female_bs_gaunt.mesh" }
+    blend_shape = { id = "dalai_lama_female_bs_old" type = "dalai_lama_female_bs_old.mesh" }
+    blend_shape = { id = "dalai_lama_female_bs_infant" type = "dalai_lama_female_bs_infant.mesh" }
+    blend_shape = { id = "dalai_lama_female_bs_thin" type = "dalai_lama_female_bs_thin.mesh" }
+    blend_shape = { id = "dalai_lama_female_bs_thick" type = "dalai_lama_female_bs_thick.mesh" }
+    blend_shape = { id = "dalai_lama_female_bs_bust_lift" type = "dalai_lama_female_bs_bust_lift.mesh" }
+    blend_shape = { id = "dalai_lama_female_bs_bust_size_min" type = "dalai_lama_female_bs_bust_size_min.mesh" }
+
+    meshsettings = {
+        name = "dalai_lama_femaleShape"
+        index = 0
+        texture_diffuse = "dalai_lama_diffuse.dds"
+        texture_normal = "dalai_lama_normal.dds"
+        texture_specular = "dalai_lama_properties.dds"
+        shader = "portrait_attachment"
+        shader_file = "gfx/FX/jomini/portrait.shader"
+    }
+}
+
+entity = {
+    name = "female_outfit_dalai_lama_entity"
+    pdxmesh = "female_outfit_dalai_lama_mesh"
+
+    attribute = { name = "body_bs_fat" blend_shape = "dalai_lama_female_bs_fat" }
+    attribute = { name = "body_bs_gaunt" blend_shape = "dalai_lama_female_bs_gaunt" }
+    attribute = { name = "body_bs_old" blend_shape = "dalai_lama_female_bs_old" }
+    attribute = { name = "body_bs_infant" blend_shape = "dalai_lama_female_bs_infant" }
+    attribute = { name = "body_bs_thin" blend_shape = "dalai_lama_female_bs_thin" }
+    attribute = { name = "body_bs_thick" blend_shape = "dalai_lama_female_bs_thick" }
+    attribute = { name = "body_bs_bust_lift" blend_shape = "dalai_lama_female_bs_bust_lift" }
+    attribute = { name = "body_bs_bust_size_min" blend_shape = "dalai_lama_female_bs_bust_size_min" }
+}

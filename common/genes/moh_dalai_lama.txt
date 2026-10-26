@@ -7,9 +7,11 @@
                 male = {
                     1 = male_outfit_dalai_lama
                 }
-                female = male
+                female = {
+                    1 = female_outfit_dalai_lama
+                }
                 boy = male
-                girl = male
+                girl = female
             }
         }
     }

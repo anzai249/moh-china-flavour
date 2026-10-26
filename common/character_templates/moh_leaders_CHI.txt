@@ -201,6 +201,36 @@ ecchi_chi_wenxiang_character_template = {
 
 # China - Qing generals
 
+## Frederick Townsend Ward
+moh_chi_frederick_townsend_ward_character_template = {
+    first_name = moh_Frederick_Townsend
+    last_name = moh_Ward
+    historical = yes
+    home_region = STATE_MASSACHUSETTS
+    culture = cu:yankee
+    religion = rel:protestant
+    female = no
+    birth_date = 1831.11.29
+    ideology = ideology_moderate
+    interest_group = ig_armed_forces
+    traits = { brave innovative basic_offensive_planner }
+    commander_rank = default
+    commander_usage = {
+        country_trigger = {
+            c:CHI ?= this
+            has_law = law_type:law_monarchy
+            country_has_primary_culture = cu:manchu
+            has_state_in_state_region = STATE_SUZHOU
+            exists = c:TPG
+            has_war_with = c:TPG
+        }
+        role = general
+        earliest_usage_date = 1860.1.1
+        latest_usage_date = 1862.9.22
+        chance = 100
+    }
+}
+
 ecchi_chi_zuo_zongtang_character_template = {
     first_name = ecchi_Zongtang
     last_name = ecchi_Zuo
