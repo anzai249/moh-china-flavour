@@ -23,3 +23,10 @@
   sc_You: "酉"
   sc_Xu: "戌"
   sc_Hai: "亥"
+  # 乘胜更张
+  je_moh_chengsheng_gengzhang_fiscal_done: "@green_checkmark! 整顿财赋"
+  je_moh_chengsheng_gengzhang_fiscal_pending: "@red_cross! 整顿财赋"
+  je_moh_chengsheng_gengzhang_education_done: "@green_checkmark! 兴学取士"
+  je_moh_chengsheng_gengzhang_education_pending: "@red_cross! 兴学取士"
+  je_moh_chengsheng_gengzhang_military_done: "@green_checkmark! 整饬营伍"
+  je_moh_chengsheng_gengzhang_military_pending: "\"@red_cross! 整饬营伍"
