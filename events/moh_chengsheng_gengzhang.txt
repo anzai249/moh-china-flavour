@@ -1,0 +1,244 @@
+﻿namespace = moh_chengsheng_gengzhang
+
+# 战后入场
+moh_chengsheng_gengzhang.1 = {
+	type = country_event
+	placement = root
+	title = moh_chengsheng_gengzhang.1.t
+	desc = moh_chengsheng_gengzhang.1.d
+	flavor = moh_chengsheng_gengzhang.1.f
+	duration = 3
+	dlc = dlc0moh
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	# TODO: Dedicated event art; use the vanilla political debate video for now.
+	event_image = { video = "unspecific_politicians_arguing" }
+	trigger = {
+		moh_chengsheng_gengzhang_can_offer = yes
+		has_variable = moh_chengsheng_gengzhang_war_victory
+	}
+	immediate = {
+		set_variable = moh_chengsheng_gengzhang_offered
+		remove_variable = moh_chengsheng_gengzhang_pending
+	}
+	option = {
+		name = moh_chengsheng_gengzhang.1.a
+		trigger = {
+			moh_chengsheng_gengzhang_eligible = yes
+			NOT = { has_variable = moh_chengsheng_gengzhang_started }
+			NOT = { has_variable = moh_chengsheng_gengzhang_outcome }
+			NOT = { has_journal_entry = je_moh_chengsheng_gengzhang }
+		}
+		custom_tooltip = {
+			text = moh_chengsheng_gengzhang_start_tt
+			set_variable = moh_chengsheng_gengzhang_available
+			add_journal_entry = { type = je_moh_chengsheng_gengzhang }
+		}
+		ai_chance = { base = 80 }
+	}
+	option = {
+		name = moh_chengsheng_gengzhang.1.b
+		default_option = yes
+		custom_tooltip = {
+			text = moh_chengsheng_gengzhang_defer_tt
+			set_variable = moh_chengsheng_gengzhang_deferred
+		}
+		add_modifier = { name = modifier_moh_chengsheng_gengzhang_deferred years = 2 }
+		ai_chance = { base = 20 }
+	}
+}
+
+# 祖制之争
+moh_chengsheng_gengzhang.2 = {
+	type = country_event
+	placement = root
+	title = moh_chengsheng_gengzhang.2.t
+	desc = moh_chengsheng_gengzhang.2.d
+	flavor = moh_chengsheng_gengzhang.2.f
+	duration = 3
+	dlc = dlc0moh
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	# TODO: Dedicated art for the dispute over ancestral institutions.
+	event_image = { video = "unspecific_politicians_arguing" }
+	trigger = {
+		has_journal_entry = je_moh_chengsheng_gengzhang
+		NOT = { has_variable = moh_chengsheng_gengzhang_outcome }
+		NOT = { has_variable = moh_chengsheng_gengzhang_dispute_presented }
+		NOT = { has_variable = moh_chengsheng_gengzhang_dispute_decided }
+	}
+	immediate = {
+		set_variable = moh_chengsheng_gengzhang_dispute_seen
+		set_variable = moh_chengsheng_gengzhang_dispute_presented
+		set_variable = moh_chengsheng_gengzhang_dispute_open
+	}
+	option = {
+		name = moh_chengsheng_gengzhang.2.a
+		remove_variable = moh_chengsheng_gengzhang_dispute_open
+		set_variable = moh_chengsheng_gengzhang_dispute_decided
+		add_modifier = { name = modifier_moh_chengsheng_gengzhang_force years = 3 }
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = moh_chengsheng_gengzhang.2.b
+		default_option = yes
+		remove_variable = moh_chengsheng_gengzhang_dispute_open
+		set_variable = moh_chengsheng_gengzhang_dispute_decided
+		add_modifier = { name = modifier_moh_chengsheng_gengzhang_compromise years = 3 }
+		add_modifier = {
+			name = modifier_moh_chengsheng_gengzhang_compensation
+			years = 3
+			multiplier = money_amount_multiplier_very_small
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				trigger = { ig:ig_landowners = { is_powerful = yes } }
+				add = 25
+			}
+		}
+	}
+}
+
+# 更张有成
+moh_chengsheng_gengzhang.4 = {
+	type = country_event
+	placement = root
+	title = moh_chengsheng_gengzhang.4.t
+	desc = moh_chengsheng_gengzhang.4.d
+	flavor = moh_chengsheng_gengzhang.4.f
+	duration = 3
+	dlc = dlc0moh
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	# TODO: Dedicated conclusion art.
+	event_image = { video = "asia_farmers_market" }
+	trigger = {
+		has_variable = moh_chengsheng_gengzhang_settled
+		NOT = { has_variable = moh_chengsheng_gengzhang_conclusion_seen }
+		var:moh_chengsheng_gengzhang_outcome = 1
+	}
+	immediate = { set_variable = moh_chengsheng_gengzhang_conclusion_seen }
+	option = {
+		name = moh_chengsheng_gengzhang.4.a
+		default_option = yes
+		show_as_tooltip = {
+			add_modifier = { name = modifier_moh_chengsheng_gengzhang_reformed years = 10 }
+		}
+	}
+}
+
+# 因势小补
+moh_chengsheng_gengzhang.5 = {
+	type = country_event
+	placement = root
+	title = moh_chengsheng_gengzhang.5.t
+	desc = moh_chengsheng_gengzhang.5.d
+	flavor = moh_chengsheng_gengzhang.5.f
+	duration = 3
+	dlc = dlc0moh
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	# TODO: Dedicated conclusion art.
+	event_image = { video = "asia_farmers_market" }
+	trigger = {
+		has_variable = moh_chengsheng_gengzhang_settled
+		NOT = { has_variable = moh_chengsheng_gengzhang_conclusion_seen }
+		var:moh_chengsheng_gengzhang_outcome = 2
+	}
+	immediate = { set_variable = moh_chengsheng_gengzhang_conclusion_seen }
+	option = {
+		name = moh_chengsheng_gengzhang.5.a
+		default_option = yes
+		show_as_tooltip = {
+			if = {
+				limit = { has_variable = moh_chengsheng_gengzhang_fiscal_completed }
+				add_modifier = { name = modifier_moh_chengsheng_gengzhang_fiscal years = 5 }
+			}
+			if = {
+				limit = { has_variable = moh_chengsheng_gengzhang_education_completed }
+				add_modifier = { name = modifier_moh_chengsheng_gengzhang_education years = 5 }
+			}
+			if = {
+				limit = { has_variable = moh_chengsheng_gengzhang_military_completed }
+				add_modifier = { name = modifier_moh_chengsheng_gengzhang_military years = 5 }
+			}
+		}
+	}
+}
+
+# 祖制如故
+moh_chengsheng_gengzhang.6 = {
+	type = country_event
+	placement = root
+	title = moh_chengsheng_gengzhang.6.t
+	desc = moh_chengsheng_gengzhang.6.d
+	flavor = moh_chengsheng_gengzhang.6.f
+	duration = 3
+	dlc = dlc0moh
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	# TODO: Dedicated conclusion art.
+	event_image = { video = "asia_farmers_market" }
+	trigger = {
+		has_variable = moh_chengsheng_gengzhang_settled
+		NOT = { has_variable = moh_chengsheng_gengzhang_conclusion_seen }
+		var:moh_chengsheng_gengzhang_outcome = 3
+	}
+	immediate = { set_variable = moh_chengsheng_gengzhang_conclusion_seen }
+	option = {
+		name = moh_chengsheng_gengzhang.6.a
+		default_option = yes
+		show_as_tooltip = {
+			add_modifier = { name = modifier_moh_chengsheng_gengzhang_unchanged years = 3 }
+		}
+	}
+}
+
+# 和平解决鸦片问题后的入场；选项与战后入场共用。
+moh_chengsheng_gengzhang.7 = {
+	type = country_event
+	placement = root
+	title = moh_chengsheng_gengzhang.7.t
+	desc = moh_chengsheng_gengzhang.7.d
+	flavor = moh_chengsheng_gengzhang.7.f
+	duration = 3
+	dlc = dlc0moh
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+	# TODO: Dedicated event art; use the vanilla political debate video for now.
+	event_image = { video = "unspecific_politicians_arguing" }
+	trigger = {
+		moh_chengsheng_gengzhang_can_offer = yes
+		NOT = { has_variable = moh_chengsheng_gengzhang_war_victory }
+	}
+	immediate = {
+		set_variable = moh_chengsheng_gengzhang_offered
+		remove_variable = moh_chengsheng_gengzhang_pending
+	}
+	option = {
+		name = moh_chengsheng_gengzhang.1.a
+		trigger = {
+			moh_chengsheng_gengzhang_eligible = yes
+			NOT = { has_variable = moh_chengsheng_gengzhang_started }
+			NOT = { has_variable = moh_chengsheng_gengzhang_outcome }
+			NOT = { has_journal_entry = je_moh_chengsheng_gengzhang }
+		}
+		custom_tooltip = {
+			text = moh_chengsheng_gengzhang_start_tt
+			set_variable = moh_chengsheng_gengzhang_available
+			add_journal_entry = { type = je_moh_chengsheng_gengzhang }
+		}
+		ai_chance = { base = 80 }
+	}
+	option = {
+		name = moh_chengsheng_gengzhang.1.b
+		default_option = yes
+		custom_tooltip = {
+			text = moh_chengsheng_gengzhang_defer_tt
+			set_variable = moh_chengsheng_gengzhang_deferred
+		}
+		add_modifier = { name = modifier_moh_chengsheng_gengzhang_deferred years = 2 }
+		ai_chance = { base = 20 }
+	}
+}

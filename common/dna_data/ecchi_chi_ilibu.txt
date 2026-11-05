@@ -1,8 +1,9 @@
 ﻿ecchi_dna_ilibu={
     portrait_info = {
 	genes={ 		
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 85 147 41 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 73 249 73 249 }
  		gene_cheek_fat={ "cheek_fat" 153 "cheek_fat" 153 }
  		gene_cheek_forward={ "cheek_forward" 224 "cheek_forward" 224 }

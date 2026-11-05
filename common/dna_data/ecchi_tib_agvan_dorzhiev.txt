@@ -1,8 +1,9 @@
 ﻿ecchi_dna_agvan_dorzhiev = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 56 255 56 255 }
- 		skin_color={ 76 127 76 127 }
+		skin_color={ 217 115 217 115 }
  		eye_color={ 87 249 87 249 }
  		gene_cheek_fat={ "cheek_fat" 189 "cheek_fat" 189 }
  		gene_cheek_forward={ "cheek_forward" 124 "cheek_forward" 124 }

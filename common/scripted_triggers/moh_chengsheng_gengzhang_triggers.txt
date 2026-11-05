@@ -1,0 +1,49 @@
+﻿# Country-scope objectives shared by the three mutually exclusive outcomes.
+# Existing reforms count immediately; no duplicate sub-journals are required.
+# Twenty-year baseline: General Staff is era 2 and builds on era-1 Line Infantry
+# and Army Reserves. Keep the existing volunteer-army reform rather than requiring
+# the much later trench-infantry reform of the Eight Banners.
+# TODO: Confirm pacing and costs in a full campaign; source checks are not playtesting.
+
+moh_chengsheng_gengzhang_eligible = {
+	c:CHI ?= this
+	has_law = law_type:law_monarchy
+	country_has_primary_culture = cu:manchu
+	is_subject = no
+	is_revolutionary = no
+}
+
+moh_chengsheng_gengzhang_can_offer = {
+	moh_chengsheng_gengzhang_eligible = yes
+	# Shared with the existing opium_wars.3 success event and vanilla AI.
+	has_variable = opium_wars_won
+	NOT = { has_variable = moh_chengsheng_gengzhang_offered }
+	NOT = { has_variable = moh_chengsheng_gengzhang_started }
+	NOT = { has_variable = moh_chengsheng_gengzhang_outcome }
+	NOT = { has_journal_entry = je_moh_chengsheng_gengzhang }
+}
+
+moh_chengsheng_gengzhang_fiscal_reform = {
+	OR = {
+		has_law_or_variant = law_type:law_per_capita_based_taxation
+		has_law_or_variant = law_type:law_proportional_taxation
+		has_law_or_variant = law_type:law_graduated_taxation
+	}
+	bureaucracy >= 0
+}
+
+moh_chengsheng_gengzhang_education_reform = {
+	institution_investment_level = {
+		institution = institution_schools
+		value >= 2
+	}
+	NOT = { has_law = law_type:law_imperial_examinations }
+}
+
+moh_chengsheng_gengzhang_military_reform = {
+	has_law_or_variant = law_type:law_professional_army
+	custom_tooltip = {
+		text = je_moh_chengsheng_gengzhang_valor_tt
+		has_variable = channel_force_into_valor_complete
+	}
+}

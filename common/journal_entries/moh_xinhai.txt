@@ -1,4 +1,8 @@
 ﻿je_xinhai = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/1911_revolution.dds"
 	group = je_group_historical_content
     is_shown_in_lobby = {

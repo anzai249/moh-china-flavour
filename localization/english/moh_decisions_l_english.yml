@@ -5,3 +5,7 @@
   moh_qing_shanhai_pass: "Open the Shanhai Pass"
   moh_qing_shanhai_pass_desc: "Since the establishment of our nation, we have kept the Shanhai Pass closed to avoid personnel from within to enter the 'Dragon Rise Land'. Given the increasingly severe situation, it is now time to reopen the Shanhai Pass."
   moh_qing_shanhai_pass_tooltip: "Open the Shanhai Pass"
+
+  # Reform in the Wake of Victory
+  moh_resume_chengsheng_gengzhang: "Reconsider the Reform Agenda"
+  moh_resume_chengsheng_gengzhang_desc: "The court previously postponed its reform agenda. It can now reconsider changes to taxation, official recruitment and military organization, and formally begin the reforms."

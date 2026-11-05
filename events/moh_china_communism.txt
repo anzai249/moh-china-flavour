@@ -56,6 +56,7 @@ china_communism.1 = {
 			origin = this
 			province = p:x8143A9
 			on_created = {
+                moh_setup_communist_china_laws = yes
                 set_variable = ccp_land_revolution
                 every_interest_group = {
                     owner = c:CCP
@@ -176,31 +177,6 @@ china_communism.1 = {
 				if = {
 					limit = {
 						NOT = {
-							has_law = law_type:law_council_republic
-						}
-					}
-					activate_law = law_type:law_council_republic
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_law = law_type:law_elected_bureaucrats
-						}
-					}
-					activate_law = law_type:law_elected_bureaucrats
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_law = law_type:law_universal_suffrage
-						}
-					}
-                    # law_single_party_state
-					activate_law = law_type:law_universal_suffrage
-				}
-				if = {
-					limit = {
-						NOT = {
 							has_law = law_type:law_women_in_the_workplace
 						}
 					}
@@ -221,14 +197,6 @@ china_communism.1 = {
 						}
 					}
 					activate_law = law_type:law_state_atheism
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_law = law_type:law_national_militia
-						}
-					}
-					activate_law = law_type:law_national_militia
 				}
 				if = {
 					limit = {
@@ -261,14 +229,6 @@ china_communism.1 = {
 						}
 					}
 					activate_law = law_type:law_regulatory_bodies
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_law = law_type:law_secret_police
-						}
-					}
-					activate_law = law_type:law_secret_police
 				}
 				if = {
 					limit = {

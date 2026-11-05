@@ -1,0 +1,283 @@
+﻿je_moh_chengsheng_gengzhang = {
+	group = je_group_qing
+	icon = "gfx/interface/icons/event_icons/knotting.dds"
+	activation_description = {
+		always = yes
+	}
+
+	is_shown_in_lobby = {
+		c:CHI ?= this
+	}
+	is_shown_when_inactive = {
+		c:CHI ?= this
+		has_law = law_type:law_monarchy
+		country_has_primary_culture = cu:manchu
+		NOT = { has_variable = moh_chengsheng_gengzhang_outcome }
+		NOT = { has_variable = moh_chengsheng_gengzhang_started }
+	}
+	possible = {
+		moh_chengsheng_gengzhang_eligible = yes
+		custom_tooltip = {
+			text = je_moh_chengsheng_gengzhang_available_tt
+			has_variable = moh_chengsheng_gengzhang_available
+		}
+	}
+
+	immediate = {
+		set_variable = moh_chengsheng_gengzhang_started
+		remove_variable = moh_chengsheng_gengzhang_deferred
+		remove_modifier = modifier_moh_chengsheng_gengzhang_deferred
+		set_variable = {
+			name = moh_chengsheng_gengzhang_months
+			value = 0
+		}
+		add_modifier = {
+			name = modifier_moh_chengsheng_gengzhang_momentum
+			years = 3
+		}
+	}
+
+	# A JE supports at most one native timeout outcome. Use a shared monthly
+	# deadline instead so all three conclusions have their own outcome and history text.
+	# Full reform can conclude early; the other outcomes wait until month 240.
+	# Each outcome directly records reforms, cleans up and grants its rewards.
+	outcome = {
+		header = je_moh_chengsheng_gengzhang_reformed_header
+		effect_header = je_moh_chengsheng_gengzhang_reformed_effect_header
+		color = "gold_positive"
+		conclusion_desc = je_moh_chengsheng_gengzhang_reformed_desc
+		trigger = {
+			custom_tooltip = {
+				text = moh_chengsheng_gengzhang_dispute_settled_tt
+				NOT = { has_variable = moh_chengsheng_gengzhang_dispute_open }
+			}
+			moh_chengsheng_gengzhang_fiscal_reform = yes
+			moh_chengsheng_gengzhang_education_reform = yes
+			moh_chengsheng_gengzhang_military_reform = yes
+		}
+		effect = {
+			hidden_effect = {
+				set_variable = {
+					name = moh_chengsheng_gengzhang_outcome
+					value = 1
+				}
+				# Record completed fields before rewards can change bureaucracy.
+				remove_variable = moh_chengsheng_gengzhang_fiscal_completed
+				remove_variable = moh_chengsheng_gengzhang_education_completed
+				remove_variable = moh_chengsheng_gengzhang_military_completed
+				if = {
+					limit = { moh_chengsheng_gengzhang_fiscal_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_fiscal_completed
+				}
+				if = {
+					limit = { moh_chengsheng_gengzhang_education_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_education_completed
+				}
+				if = {
+					limit = { moh_chengsheng_gengzhang_military_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_military_completed
+				}
+				set_variable = moh_chengsheng_gengzhang_settled
+				remove_variable = moh_chengsheng_gengzhang_available
+				remove_variable = moh_chengsheng_gengzhang_dispute_open
+				remove_modifier = modifier_moh_chengsheng_gengzhang_momentum
+				remove_modifier = modifier_moh_chengsheng_gengzhang_deferred
+				remove_modifier = modifier_moh_chengsheng_gengzhang_force
+				remove_modifier = modifier_moh_chengsheng_gengzhang_compromise
+				remove_modifier = modifier_moh_chengsheng_gengzhang_compensation
+			}
+			add_modifier = {
+				name = modifier_moh_chengsheng_gengzhang_reformed
+				years = 10
+			}
+			trigger_event = {
+				id = moh_chengsheng_gengzhang.4
+				popup = yes
+			}
+			# TODO: Connect to Great Qing resurgence and the existing unity journal.
+		}
+	}
+	outcome = {
+		header = je_moh_chengsheng_gengzhang_partial_header
+		effect_header = je_moh_chengsheng_gengzhang_partial_effect_header
+		color = "white"
+		conclusion_desc = je_moh_chengsheng_gengzhang_partial_desc
+		trigger = {
+			custom_tooltip = {
+				text = moh_chengsheng_gengzhang_dispute_settled_tt
+				NOT = { has_variable = moh_chengsheng_gengzhang_dispute_open }
+			}
+			var:moh_chengsheng_gengzhang_months >= 240
+			OR = {
+				moh_chengsheng_gengzhang_fiscal_reform = yes
+				moh_chengsheng_gengzhang_education_reform = yes
+				moh_chengsheng_gengzhang_military_reform = yes
+			}
+			NOT = {
+				AND = {
+					moh_chengsheng_gengzhang_fiscal_reform = yes
+					moh_chengsheng_gengzhang_education_reform = yes
+					moh_chengsheng_gengzhang_military_reform = yes
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				set_variable = {
+					name = moh_chengsheng_gengzhang_outcome
+					value = 2
+				}
+				# Record completed fields before rewards can change bureaucracy.
+				remove_variable = moh_chengsheng_gengzhang_fiscal_completed
+				remove_variable = moh_chengsheng_gengzhang_education_completed
+				remove_variable = moh_chengsheng_gengzhang_military_completed
+				if = {
+					limit = { moh_chengsheng_gengzhang_fiscal_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_fiscal_completed
+				}
+				if = {
+					limit = { moh_chengsheng_gengzhang_education_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_education_completed
+				}
+				if = {
+					limit = { moh_chengsheng_gengzhang_military_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_military_completed
+				}
+				set_variable = moh_chengsheng_gengzhang_settled
+				remove_variable = moh_chengsheng_gengzhang_available
+				remove_variable = moh_chengsheng_gengzhang_dispute_open
+				remove_modifier = modifier_moh_chengsheng_gengzhang_momentum
+				remove_modifier = modifier_moh_chengsheng_gengzhang_deferred
+				remove_modifier = modifier_moh_chengsheng_gengzhang_force
+				remove_modifier = modifier_moh_chengsheng_gengzhang_compromise
+				remove_modifier = modifier_moh_chengsheng_gengzhang_compensation
+			}
+			if = {
+				limit = { moh_chengsheng_gengzhang_fiscal_reform = yes }
+				add_modifier = {
+					name = modifier_moh_chengsheng_gengzhang_fiscal
+					years = 5
+				}
+			}
+			if = {
+				limit = { moh_chengsheng_gengzhang_education_reform = yes }
+				add_modifier = {
+					name = modifier_moh_chengsheng_gengzhang_education
+					years = 5
+				}
+			}
+			if = {
+				limit = { moh_chengsheng_gengzhang_military_reform = yes }
+				add_modifier = {
+					name = modifier_moh_chengsheng_gengzhang_military
+					years = 5
+				}
+			}
+			trigger_event = {
+				id = moh_chengsheng_gengzhang.5
+				popup = yes
+			}
+			# TODO: Allow later resurgence once the missing reforms are supplied.
+		}
+	}
+	outcome = {
+		header = je_moh_chengsheng_gengzhang_unchanged_header
+		effect_header = je_moh_chengsheng_gengzhang_unchanged_effect_header
+		color = "blue_negative"
+		conclusion_desc = je_moh_chengsheng_gengzhang_unchanged_desc
+		trigger = {
+			custom_tooltip = {
+				text = moh_chengsheng_gengzhang_dispute_settled_tt
+				NOT = { has_variable = moh_chengsheng_gengzhang_dispute_open }
+			}
+			var:moh_chengsheng_gengzhang_months >= 240
+			NOT = {
+				OR = {
+					moh_chengsheng_gengzhang_fiscal_reform = yes
+					moh_chengsheng_gengzhang_education_reform = yes
+					moh_chengsheng_gengzhang_military_reform = yes
+				}
+			}
+		}
+		effect = {
+			hidden_effect = {
+				set_variable = {
+					name = moh_chengsheng_gengzhang_outcome
+					value = 3
+				}
+				# Record completed fields before rewards can change bureaucracy.
+				remove_variable = moh_chengsheng_gengzhang_fiscal_completed
+				remove_variable = moh_chengsheng_gengzhang_education_completed
+				remove_variable = moh_chengsheng_gengzhang_military_completed
+				if = {
+					limit = { moh_chengsheng_gengzhang_fiscal_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_fiscal_completed
+				}
+				if = {
+					limit = { moh_chengsheng_gengzhang_education_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_education_completed
+				}
+				if = {
+					limit = { moh_chengsheng_gengzhang_military_reform = yes }
+					set_variable = moh_chengsheng_gengzhang_military_completed
+				}
+				set_variable = moh_chengsheng_gengzhang_settled
+				remove_variable = moh_chengsheng_gengzhang_available
+				remove_variable = moh_chengsheng_gengzhang_dispute_open
+				remove_modifier = modifier_moh_chengsheng_gengzhang_momentum
+				remove_modifier = modifier_moh_chengsheng_gengzhang_deferred
+				remove_modifier = modifier_moh_chengsheng_gengzhang_force
+				remove_modifier = modifier_moh_chengsheng_gengzhang_compromise
+				remove_modifier = modifier_moh_chengsheng_gengzhang_compensation
+			}
+			add_modifier = {
+				name = modifier_moh_chengsheng_gengzhang_unchanged
+				years = 3
+			}
+			trigger_event = {
+				id = moh_chengsheng_gengzhang.6
+				popup = yes
+			}
+			# TODO: Preserve later Self-Strengthening / reform opportunities.
+		}
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = { var:moh_chengsheng_gengzhang_months < 240 }
+				change_variable = { name = moh_chengsheng_gengzhang_months add = 1 }
+			}
+			if = {
+				limit = {
+					NOT = { has_variable = moh_chengsheng_gengzhang_dispute_seen }
+					OR = {
+						moh_chengsheng_gengzhang_fiscal_reform = yes
+						moh_chengsheng_gengzhang_education_reform = yes
+						moh_chengsheng_gengzhang_military_reform = yes
+					}
+					NOT = {
+						AND = {
+							moh_chengsheng_gengzhang_fiscal_reform = yes
+							moh_chengsheng_gengzhang_education_reform = yes
+							moh_chengsheng_gengzhang_military_reform = yes
+						}
+					}
+				}
+				# Mark before queueing; the event also marks itself when created directly.
+				set_variable = moh_chengsheng_gengzhang_dispute_seen
+				set_variable = moh_chengsheng_gengzhang_dispute_open
+				trigger_event = { id = moh_chengsheng_gengzhang.2 popup = yes }
+			}
+		}
+	}
+
+	current_value = { value = var:moh_chengsheng_gengzhang_months }
+	goal_add_value = { add = 240 }
+	progressbar = yes
+	# progress_desc = je_moh_chengsheng_gengzhang_progress
+	# No interruption outcome in this base version.
+	weight = 200
+	transferable = no
+	should_be_pinned_by_default_uninvolved_or_context = yes
+}

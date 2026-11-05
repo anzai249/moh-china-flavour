@@ -71,16 +71,16 @@
 			}
 		}
 
+		# A minor non-territorial demand, using the 1.15 country-value model.
+		infamy_severity = 0.01
+		infamy_min = define:NDiplomacy|WAR_GOAL_INFAMY_MINOR_DEMAND_MIN
+		infamy_max = define:NDiplomacy|WAR_GOAL_INFAMY_MINOR_DEMAND_MAX
+
 		infamy = {
-			value = 0.01
+			value = 0
 
 			scope:target_country = {
-				multiply = {
-					value = total_population
-					divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
-					multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
-                    max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_TOTAL
-				}
+				add = country_infamy_value
 			}
 		}
 	}

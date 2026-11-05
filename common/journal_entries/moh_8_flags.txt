@@ -1,4 +1,8 @@
 ﻿je_8_flags = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/8_flags.dds"
 	group = je_group_qing
 	immediate = {
@@ -84,6 +88,10 @@
 }
 
 je_channel_force_into_valor = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/valor.dds"
 	group = je_group_internal_affairs
 	is_shown_when_inactive = {

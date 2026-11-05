@@ -1,8 +1,9 @@
 ﻿ecchi_dna_li_dazhao = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 110 229 110 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 44 242 44 242 }
  		gene_cheek_fat={ "cheek_fat" 182 "cheek_fat" 160 }
  		gene_cheek_forward={ "cheek_forward" 100 "cheek_forward" 199 }

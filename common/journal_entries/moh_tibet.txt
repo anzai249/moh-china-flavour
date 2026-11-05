@@ -1,4 +1,8 @@
 ﻿je_moh_tibet_look_for_new_dalai_lama = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/ig_icons/devout.dds"
 	group = je_group_historical_content
 

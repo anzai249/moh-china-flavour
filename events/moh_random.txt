@@ -192,6 +192,92 @@ moh_random.3 = {
 	}
 }
 
+moh_random.4 = { # 银版留影
+	type = country_event
+	placement = root
+	title = moh_random.4.t
+	desc = moh_random.4.d
+	flavor = moh_random.4.f
+	duration = 3
+	dlc = dlc0moh
+	gui_window = event_window_1char_tabloid
+	left_icon = scope:photographed_politician
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/invention_icons/camera.dds"
+
+	trigger = {
+		c:CHI ?= this
+		has_law = law_type:law_monarchy
+		year > 1840
+		NOT = { has_technology_researched = camera }
+		NOT = { has_variable = moh_silver_plate_portrait_seen }
+		any_country = {
+			country_rank = rank_value:great_power
+			has_technology_researched = camera
+			# relations:root >= relations_threshold:friendly
+			NOT = { this = root }
+		}
+		any_scope_character = {
+			has_role_of_type = politician
+			is_ruler_of_own_country = no
+			is_heir_of_own_country = no
+		}
+	}
+
+	immediate = {
+		set_variable = moh_silver_plate_portrait_seen
+		random_country = {
+			limit = {
+				country_rank = rank_value:great_power
+				has_technology_researched = camera
+				# relations:root >= relations_threshold:friendly
+				NOT = { this = root }
+			}
+			save_scope_as = photography_country
+		}
+		random_scope_character = {
+			limit = {
+				has_role_of_type = politician
+				is_ruler_of_own_country = no
+				is_heir_of_own_country = no
+			}
+			save_scope_as = photographed_politician
+		}
+		scope:photographed_politician = {
+			set_temporary_event_immortality = { DURATION = 3 }
+		}
+	}
+
+	option = {
+		name = moh_random.4.a
+		default_option = yes
+		change_relations = {
+			country = scope:photography_country
+			value = 10
+		}
+		add_technology_progress = {
+			technology = camera
+			progress = 2500
+		}
+		scope:photographed_politician = {
+			add_modifier = {
+				name = modifier_moh_silver_plate_portrait
+				years = 1
+			}
+		}
+		ai_chance = { base = 70 }
+	}
+	option = {
+		name = moh_random.4.b
+		add_modifier = {
+			name = modifier_moh_dignified_portrait
+			years = 1
+		}
+		ai_chance = { base = 30 }
+	}
+}
+
 # 科举作弊 - 1
 moh_random.101 = {
 	type = country_event
@@ -268,7 +354,7 @@ moh_random.102 = {
 					has_role_of_type = executive
 				}
 				is_ruler_of_own_country = no
-				is_heir =  no
+				is_heir_of_own_country =  no
 			}
 			save_scope_as = cheat_character
 		}

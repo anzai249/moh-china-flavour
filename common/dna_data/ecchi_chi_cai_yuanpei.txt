@@ -1,8 +1,9 @@
 ﻿ecchi_dna_cai_yuanpei = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 58 229 58 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 20 247 20 247 }
  		gene_cheek_fat={ "cheek_fat" 187 "cheek_fat" 187 }
  		gene_cheek_forward={ "cheek_forward" 166 "cheek_forward" 166 }

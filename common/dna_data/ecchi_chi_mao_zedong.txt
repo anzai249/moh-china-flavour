@@ -1,8 +1,9 @@
 ﻿ecchi_dna_mao_zedong = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 117 229 117 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 72 252 72 252 }
  		gene_cheek_fat={ "cheek_fat" 183 "cheek_fat" 223 }
  		gene_cheek_forward={ "cheek_forward" 114 "cheek_forward" 131 }

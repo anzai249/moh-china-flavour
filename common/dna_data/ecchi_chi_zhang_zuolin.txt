@@ -1,8 +1,9 @@
 ﻿ecchi_dna_zhang_zuolin = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 122 229 122 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 73 243 73 243 }
  		gene_cheek_fat={ "cheek_fat" 253 "cheek_fat" 198 }
  		gene_cheek_forward={ "cheek_forward" 207 "cheek_forward" 207 }

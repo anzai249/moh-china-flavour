@@ -1,8 +1,9 @@
 ﻿ecchi_dna_shi_dakai={
     portrait_info = {
 	genes={ 		
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 112 229 112 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 88 242 88 242 }
  		gene_cheek_fat={ "cheek_fat" 166 "cheek_fat" 166 }
  		gene_cheek_forward={ "cheek_forward" 211 "cheek_forward" 211 }

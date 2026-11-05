@@ -1,4 +1,8 @@
 ﻿je_hui_rebellion = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/religion_icons/sunni.dds"
 	group = je_group_global_international_situations
 	weight = 1

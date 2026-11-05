@@ -1,8 +1,9 @@
 ﻿ecchi_dna_chen_jiongming = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 86 229 86 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 23 244 23 244 }
  		gene_cheek_fat={ "cheek_fat" 192 "cheek_fat" 192 }
  		gene_cheek_forward={ "cheek_forward" 205 "cheek_forward" 205 }

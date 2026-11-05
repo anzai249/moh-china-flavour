@@ -105,3 +105,67 @@ art_names = {
 		localization_key = moh_art_name_8
 	}
 }
+
+# Live progress while active; frozen settlement records in the conclusion event.
+moh_chengsheng_gengzhang_fiscal_status = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { has_variable = moh_chengsheng_gengzhang_settled }
+					moh_chengsheng_gengzhang_fiscal_reform = yes
+				}
+				AND = {
+					has_variable = moh_chengsheng_gengzhang_settled
+					has_variable = moh_chengsheng_gengzhang_fiscal_completed
+				}
+			}
+		}
+		localization_key = je_moh_chengsheng_gengzhang_fiscal_done
+	}
+	text = { localization_key = je_moh_chengsheng_gengzhang_fiscal_pending }
+}
+
+moh_chengsheng_gengzhang_education_status = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { has_variable = moh_chengsheng_gengzhang_settled }
+					moh_chengsheng_gengzhang_education_reform = yes
+				}
+				AND = {
+					has_variable = moh_chengsheng_gengzhang_settled
+					has_variable = moh_chengsheng_gengzhang_education_completed
+				}
+			}
+		}
+		localization_key = je_moh_chengsheng_gengzhang_education_done
+	}
+	text = { localization_key = je_moh_chengsheng_gengzhang_education_pending }
+}
+
+moh_chengsheng_gengzhang_military_status = {
+	type = country
+	random_valid = no
+	text = {
+		trigger = {
+			OR = {
+				AND = {
+					NOT = { has_variable = moh_chengsheng_gengzhang_settled }
+					moh_chengsheng_gengzhang_military_reform = yes
+				}
+				AND = {
+					has_variable = moh_chengsheng_gengzhang_settled
+					has_variable = moh_chengsheng_gengzhang_military_completed
+				}
+			}
+		}
+		localization_key = je_moh_chengsheng_gengzhang_military_done
+	}
+	text = { localization_key = je_moh_chengsheng_gengzhang_military_pending }
+}

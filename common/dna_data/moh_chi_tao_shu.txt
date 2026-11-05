@@ -1,7 +1,9 @@
 ﻿moh_dna_chi_tao_shu={
     portrait_info = {
-	genes={ 		hair_color={ 30 229 30 229 }
- 		skin_color={ 51 76 51 76 }
+	genes={
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
+		hair_color={ 30 229 30 229 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 88 242 88 242 }
  		gene_cheek_fat={ "cheek_fat" 172 "cheek_fat" 172 }
  		gene_cheek_forward={ "cheek_forward" 181 "cheek_forward" 181 }

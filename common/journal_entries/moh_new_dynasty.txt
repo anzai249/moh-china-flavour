@@ -1,4 +1,8 @@
 ﻿je_new_dynasty = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/ming.dds"
 	group = je_group_historical_content
 	scripted_button = china_ming_button

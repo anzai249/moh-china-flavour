@@ -1,8 +1,9 @@
 ﻿ecchi_dna_feng_yuxiang = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 82 229 82 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 55 252 55 252 }
  		gene_cheek_fat={ "cheek_fat" 162 "cheek_fat" 162 }
  		gene_cheek_forward={ "cheek_forward" 149 "cheek_forward" 149 }

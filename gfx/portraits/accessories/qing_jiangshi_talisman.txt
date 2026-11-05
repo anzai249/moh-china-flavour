@@ -1,0 +1,8 @@
+# Head prop: same props gene / shared head pose as props_glasses_02_dracula.
+qing_jiangshi_talisman_accessory = {
+    entity = {
+        required_tags = ""
+        shared_pose_entity = head
+        entity = "qing_jiangshi_talisman_entity"
+    }
+}

@@ -1,0 +1,91 @@
+﻿# Tag the actual Opium War play before the aggressor's journal cleans up its flags.
+# opium_wars_won is the shared success state, also set by opium_wars.3.
+# The extra war-victory flag selects event text only; it is not a second entry gate.
+on_diplomatic_play_started = {
+	on_actions = { moh_chengsheng_gengzhang_track_opium_play }
+}
+
+moh_chengsheng_gengzhang_track_opium_play = {
+	effect = {
+		if = {
+			limit = {
+				scope:initiator ?= { has_journal_entry = je_opium_wars }
+				scope:target ?= {
+					moh_chengsheng_gengzhang_eligible = yes
+					OR = {
+						has_journal_entry = je_opium_obsession
+						has_journal_entry = je_shih_chin_opium
+						has_variable = opium_wars_target
+					}
+				}
+			}
+			set_variable = moh_chengsheng_gengzhang_opium_play
+		}
+	}
+}
+
+# Beta on_won_war supplies scope:diplomatic_play and the enforced-goal flags.
+# White peace and backing down do not pass through this victory hook.
+on_won_war = {
+	on_actions = { moh_chengsheng_gengzhang_after_opium_war }
+}
+
+moh_chengsheng_gengzhang_after_opium_war = {
+	effect = {
+		if = {
+			limit = {
+				moh_chengsheng_gengzhang_eligible = yes
+				scope:diplomatic_play ?= { has_variable = moh_chengsheng_gengzhang_opium_play }
+				NOT = { exists = scope:victim_of_wargoal }
+			}
+			# Record the same success state as the existing ban/legalization routes.
+			# Do not trigger opium_wars.3 here: its addiction removal and rewards
+			# still belong to completion of the original opium journal.
+			set_variable = opium_wars_won
+			remove_variable = opium_wars_unresolved
+			set_variable = moh_chengsheng_gengzhang_war_victory
+			if = {
+				limit = {
+					moh_chengsheng_gengzhang_can_offer = yes
+					NOT = { has_variable = moh_chengsheng_gengzhang_pending }
+				}
+				set_variable = { name = moh_chengsheng_gengzhang_pending days = 7 }
+				trigger_event = { id = moh_chengsheng_gengzhang.1 days = 1 popup = yes }
+			}
+		}
+	}
+}
+
+# Also supports peaceful completion and saves that already resolved the opium question.
+# The permanent offered/started/outcome guards prevent a repeated monthly popup.
+on_monthly_pulse_country = {
+	on_actions = { moh_chengsheng_gengzhang_monthly_offer }
+}
+
+moh_chengsheng_gengzhang_monthly_offer = {
+	effect = {
+		# Compatibility with saves from the earlier P0 implementation, whose
+		# military-victory path only recorded the presentation flag.
+		if = {
+			limit = {
+				has_variable = moh_chengsheng_gengzhang_war_victory
+				NOT = { has_variable = opium_wars_won }
+			}
+			set_variable = opium_wars_won
+		}
+		if = {
+			limit = {
+				moh_chengsheng_gengzhang_can_offer = yes
+				NOT = { has_variable = moh_chengsheng_gengzhang_pending }
+			}
+			set_variable = { name = moh_chengsheng_gengzhang_pending days = 7 }
+			if = {
+				limit = { has_variable = moh_chengsheng_gengzhang_war_victory }
+				trigger_event = { id = moh_chengsheng_gengzhang.1 days = 1 popup = yes }
+			}
+			else = {
+				trigger_event = { id = moh_chengsheng_gengzhang.7 days = 1 popup = yes }
+			}
+		}
+	}
+}

@@ -1,4 +1,8 @@
 ﻿je_incorporate_the_west = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/lens_toolbar_icons/incorporate_state.dds"
 	group = je_group_qing
 	is_shown_when_inactive = {
@@ -60,6 +64,10 @@
 }
 
 je_gaitu_guiliu = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/qing_hat.dds"
 	group = je_group_internal_affairs
 	scripted_button = gaitu_guiliu_button_1
@@ -110,6 +118,10 @@ je_gaitu_guiliu = {
 
 # reconquest of the west
 je_reconquest_of_the_west = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/map_mode_icons/strategic_regions.dds"
 	group = je_group_internal_affairs
 	weight = 100

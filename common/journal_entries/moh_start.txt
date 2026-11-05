@@ -1,4 +1,8 @@
 ﻿je_moh_start = {
+	activation_description = {
+		always = yes
+	}
+
 	group = je_group_historical_content
 	outcome = {
 		header = je_standard_completion_header

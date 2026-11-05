@@ -1,10 +1,11 @@
 ﻿on_game_started_after_lobby = {
 	on_actions = {
-		moh_qing_explode_rule
+		moh_track_opening_ladakh_war
+		moh_opening_explode
 	}
 }
 
-moh_qing_explode_rule = {
+moh_opening_explode = {
 	effect = {
 		if = {
 			limit = {
@@ -16,6 +17,22 @@ moh_qing_explode_rule = {
 			}
 			c:CHI = {
             	trigger_event = { id = warlord_china_events.100 popup = yes }
+			}
+		}
+	}
+}
+
+# Track the opening Jammu-Ladakh war, not later conflicts.
+moh_track_opening_ladakh_war = {
+	effect = {
+		c:KAS ?= {
+			every_diplomatic_play = {
+				limit = {
+					is_war = yes
+					initiator = c:KAS
+					target = c:LAD
+				}
+				set_variable = moh_opening_ladakh_war
 			}
 		}
 	}
@@ -272,31 +289,23 @@ moh_on_revolution_start = {
 	}
 }
 
-on_wargoal_enforced = {
+# Count a lost war once, rather than counting each enforced war goal.
+on_lost_war = {
 	on_actions = {
 		moh_self_strengthening_war
 	}
 }
 
-moh_self_strengthening_war = {
+moh_self_strengthing_war = {
+	trigger = {
+		has_journal_entry = je_self_strengthing
+		has_variable = self_strengthening_lost_wars
+	}
+
 	effect = {
-		if = {
-			limit = {
-				scope:target = {
-					has_journal_entry = je_self_strengthening
-				}
-			}
-			scope:target = {
-				if = {
-					limit = {
-						has_variable = self_strengthening_lost_wars
-					}
-					change_variable = {
-						name = self_strengthening_lost_wars
-						add = 1
-					}
-				}
-			}
+		change_variable = {
+			name = self_strengthening_lost_wars
+			add = 1
 		}
 	}
 }
@@ -360,6 +369,43 @@ on_battle_won = {
 on_empty_battle_won = {
 	on_actions = {
 		moh_communism_war_battle_score
+	}
+}
+
+on_wargoal_enforced = {
+	on_actions = {
+		moh_ladakh_defeat_report
+	}
+}
+
+# Fire only when Jammu's demands are irreversibly enforced, not on occupation.
+moh_ladakh_defeat_report = {
+	effect = {
+		if = {
+			limit = {
+				scope:actor ?= c:KAS
+				# scope:target ?= c:LAD
+				scope:diplomatic_play ?= {
+					has_variable = moh_opening_ladakh_war
+				}
+			}
+			scope:diplomatic_play = {
+				remove_variable = moh_opening_ladakh_war
+			}
+			if = {
+				limit = {
+					exists = c:CHI
+					exists = c:TIB
+					c:TIB = { is_subject_of = c:CHI }
+					c:CHI = {
+						NOT = { has_variable = moh_ladakh_defeat_reported }
+					}
+				}
+				c:CHI = {
+					trigger_event = { id = dalai.3 days = 1 popup = yes }
+				}
+			}
+		}
 	}
 }
 

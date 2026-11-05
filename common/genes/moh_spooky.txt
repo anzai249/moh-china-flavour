@@ -1,0 +1,16 @@
+﻿special_genes = {
+    accessory_genes = {
+        INJECT:props = {
+            inheritable = no
+            qing_jiangshi_talisman = {
+                index = 36
+                male = { 
+                    1 = qing_jiangshi_talisman_accessory 
+                }
+                female = male
+                boy = male
+                girl = male
+            }
+        }
+    }
+}

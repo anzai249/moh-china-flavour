@@ -1,4 +1,8 @@
 ﻿je_father_of_the_republic = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/white_sun.dds"
 	group = je_group_global_international_situations
 	widget = {

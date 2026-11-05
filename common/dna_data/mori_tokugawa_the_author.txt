@@ -1,8 +1,10 @@
 ﻿# not look much like
 dna_mori_tokugawa_the_author={
 	portrait_info = {
-	genes={ 		hair_color={ 255 193 86 229 }
- 		skin_color={ 51 76 51 76 }
+	genes={
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
+		hair_color={ 255 193 86 229 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 82 243 82 243 }
  		gene_cheek_fat={ "cheek_fat" 237 "cheek_fat" 228 }
  		gene_cheek_forward={ "cheek_forward" 224 "cheek_forward" 224 }

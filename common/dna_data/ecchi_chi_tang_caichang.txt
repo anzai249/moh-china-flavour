@@ -1,8 +1,9 @@
 ﻿ecchi_dna_tang_caichang = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 122 229 122 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 38 245 38 245 }
  		gene_cheek_fat={ "cheek_fat" 251 "cheek_fat" 157 }
  		gene_cheek_forward={ "cheek_forward" 217 "cheek_forward" 217 }

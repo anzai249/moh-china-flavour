@@ -159,3 +159,71 @@ dalai.2 = {
 		}
 	}
 }
+
+dalai.3 = { # 拉达克战败
+	type = country_event
+	title = dalai.3.t
+	desc = dalai.3.d
+	placement = root
+	flavor = dalai.3.f
+	dlc = dlc0moh
+
+	event_image = {
+		video = "ep1_ca_mountain_pass_military"
+	}
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	icon = "gfx/interface/icons/event_icons/qing_hat.dds"
+	duration = 3
+	trigger = {
+		c:CHI ?= this
+		exists = c:TIB
+		exists = c:KAS
+		c:TIB = {
+			is_subject_of = c:CHI
+		}
+		NOT = {
+			has_variable = moh_ladakh_defeat_reported
+		}
+	}
+	immediate = {
+		set_variable = moh_ladakh_defeat_reported
+	}
+	option = {
+		name = dalai.3.a
+		default_option = yes
+		if = {
+			limit = {
+				exists = c:TIB
+				c:TIB = { is_subject_of = c:CHI }
+			}
+			s:STATE_KASHMIR = {
+				add_claim = c:TIB
+			}
+			c:TIB = {
+				if = {
+					limit = { exists = c:KAS }
+					change_relations = {
+						country = c:KAS
+						value = -5
+					}
+				}
+			}
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+	option = {
+		name = dalai.3.b
+		if = {
+			limit = { exists = c:KAS }
+			change_relations = {
+				country = c:KAS
+				value = 5
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}

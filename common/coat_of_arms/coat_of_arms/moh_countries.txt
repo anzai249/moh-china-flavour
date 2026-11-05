@@ -939,6 +939,22 @@ TIB_republic = {
 	}
 }
 
+KOR_independence = {
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	colored_emblem = {
+		texture = "ce_korea_taegeuk.dds"
+		color1 = "red"
+		color2 = "blue"
+		instance = { position = { 0.5 0.5 } scale = { 1.0 1.0 } }
+	}
+	colored_emblem = {
+		texture = "ce_korea_junggeun.dds"
+		color1 = "black"
+		instance = { scale = { 1.0 1.0 } position = { 0.5 0.5 } }
+	}
+}
+
 HKG = {
 	pattern = "pattern_solid.tga"
 	color1 = "blue"

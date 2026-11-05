@@ -1,0 +1,23 @@
+﻿# Repair saves whose Opium War resolution predates the unresolved-flag cleanup.
+# Legalization alone is not a resolution: its replacement journal can still
+# provoke a war through high opium tariffs.
+on_monthly_pulse_country = {
+	on_actions = { moh_reconcile_opium_wars_resolution }
+}
+
+moh_reconcile_opium_wars_resolution = {
+	trigger = {
+		c:CHI ?= this
+		has_variable = opium_wars_unresolved
+		OR = {
+			has_variable = opium_wars_won
+			has_variable = lost_opium_wars
+			has_variable = opium_wars_gave_in
+			has_variable = moh_chengsheng_gengzhang_war_victory
+		}
+	}
+
+	effect = {
+		remove_variable = opium_wars_unresolved
+	}
+}

@@ -35,3 +35,8 @@
   je_wuxu_concluded: "Constitutional Reform"
   je_heavenly_land_system: "$law_heavenly_land_system$"
   je_heavenly_land_system_reason: "$law_heavenly_land_system_desc$"
+
+  # Reform in the Wake of Victory
+  je_moh_chengsheng_gengzhang_reformed_desc: "The court has turned the prestige earned by overcoming the opium crisis into a force for reform. Changes to taxation, official recruitment and the military have carried the Great Qing past the first threshold of renewal."
+  je_moh_chengsheng_gengzhang_partial_desc: "The reform agenda has drawn to a close. New institutions have taken root, but the old order still governs much of the country. Limited improvements endure, leaving the unfinished work to those who follow."
+  je_moh_chengsheng_gengzhang_unchanged_desc: "Discussion of reform has faded, leaving taxation, official recruitment and military organization without the intended changes. Victory has vindicated ancestral institutions, or so the court prefers to believe."

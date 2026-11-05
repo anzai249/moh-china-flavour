@@ -35,3 +35,8 @@
   je_wuxu_concluded: "维新变法"
   je_heavenly_land_system: "$law_heavenly_land_system$"
   je_heavenly_land_system_reason: "$law_heavenly_land_system_desc$"
+
+  # 乘胜更张
+  je_moh_chengsheng_gengzhang_reformed_desc: "朝廷把渡过鸦片危机的威望转化成了改革的力量。财赋、取士与营伍的整顿已有成果，大清迈过了更张的第一道门槛。"
+  je_moh_chengsheng_gengzhang_partial_desc: "更张议程终告收束。新事已经开始，旧章却仍然支配着国家的大部分运转。局部的改良留下了成果，未竟的事业则有待后来者继续。"
+  je_moh_chengsheng_gengzhang_unchanged_desc: "更张之议逐渐沉寂，财赋、取士与营伍未能完成预期的整顿。胜利证明了祖制的正确，至少朝堂上的人愿意如此相信。"

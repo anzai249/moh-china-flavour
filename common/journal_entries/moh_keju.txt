@@ -1,4 +1,8 @@
 ﻿je_keju = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/pops_icons/bureaucrats.dds"
 	group = je_group_historical_content
 	# modifiers_while_active = {

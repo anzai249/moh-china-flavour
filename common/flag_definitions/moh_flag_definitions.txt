@@ -213,6 +213,17 @@ REPLACE:CHI = {
     }
 }
 
+INJECT:KOR = {
+    flag_definition = {
+        coa = KOR_independence
+        allow_overlord_canton = no
+        priority = 2000
+        trigger = {
+            coa_def_secessionist_or_revolutionary_trigger = yes
+        }
+    }
+}
+
 INJECT:BEI = {
     flag_definition = {
         coa = CHI_republic

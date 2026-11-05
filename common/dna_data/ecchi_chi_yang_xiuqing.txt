@@ -1,8 +1,9 @@
 ﻿ecchi_dna_yang_xiuqing={
     portrait_info = {
 	genes={ 		
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 85 229 85 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 50 251 50 251 }
  		gene_cheek_fat={ "cheek_fat" 178 "cheek_fat" 178 }
  		gene_cheek_forward={ "cheek_forward" 220 "cheek_forward" 220 }

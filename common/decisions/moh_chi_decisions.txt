@@ -1,4 +1,24 @@
-﻿moh_qing_shanhai_pass = {
+﻿moh_resume_chengsheng_gengzhang = {
+	is_shown = {
+		c:CHI ?= this
+		has_variable = moh_chengsheng_gengzhang_deferred
+		NOT = { has_variable = moh_chengsheng_gengzhang_started }
+		NOT = { has_variable = moh_chengsheng_gengzhang_outcome }
+		NOT = { has_journal_entry = je_moh_chengsheng_gengzhang }
+	}
+	possible = { moh_chengsheng_gengzhang_eligible = yes }
+	when_taken = {
+		custom_tooltip = {
+			text = moh_chengsheng_gengzhang_start_tt
+			set_variable = moh_chengsheng_gengzhang_available
+			remove_variable = moh_chengsheng_gengzhang_deferred
+			add_journal_entry = { type = je_moh_chengsheng_gengzhang }
+		}
+	}
+	ai_chance = { value = 10 }
+}
+
+moh_qing_shanhai_pass = {
 	is_shown = {
 		exists = c:CHI
 		c:CHI = ROOT

@@ -12,6 +12,7 @@
 		law_hereditary_bureaucrats = strongly_disapprove
 		law_appointed_bureaucrats = approve
 		law_elected_bureaucrats = disapprove
+		law_communal_administration = strongly_disapprove
 	}
 
 	lawgroup_education_system = {
@@ -29,6 +30,7 @@ ideology_manchu_elitist = {
 		law_hereditary_bureaucrats = neutral
 		law_appointed_bureaucrats = neutral
 		law_elected_bureaucrats = strongly_disapprove
+		law_communal_administration = strongly_disapprove
 	}
 	lawgroup_citizenship = {
 		law_ethnostate = disapprove

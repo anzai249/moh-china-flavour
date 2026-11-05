@@ -1,4 +1,8 @@
 ﻿REPLACE:je_opium_obsession = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
 	group = je_group_internal_affairs
@@ -91,6 +95,8 @@
 		trigger = {
 			has_variable = shih_chin_legalized_opium
 		}
+		# Legalization switches to je_shih_chin_opium; high tariffs can still
+		# provoke an Opium War, so the unresolved flag remains until resolution.
 	}
 	outcome = {
 		header = JOURNAL_ENTRY_TIMEOUT
@@ -98,7 +104,10 @@
 		flags = { timeout }
 		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
 		effect = {
-			hidden_effect = { remove_modifier = opium_wars_addiction_modifier }
+			hidden_effect = {
+				remove_modifier = opium_wars_addiction_modifier
+				remove_variable = opium_wars_unresolved
+			}
 			add_modifier = {
 				name = opium_wars_addiction_modifier
 				days = long_modifier_time
@@ -131,6 +140,10 @@
 }
 
 je_shih_chin_opium = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 	group = je_group_internal_affairs
 
@@ -184,6 +197,9 @@ je_shih_chin_opium = {
 		effect_header = JOURNAL_ENTRY_ON_TIMEOUT
 		flags = { timeout }
 		conclusion_desc = JOURNAL_ENTRY_TIMEOUT_CONCLUSION_DESC
+		effect = {
+			remove_variable = opium_wars_unresolved
+		}
 	}
 
 	on_monthly_pulse = {

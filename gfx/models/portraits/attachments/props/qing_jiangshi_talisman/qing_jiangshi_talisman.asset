@@ -1,0 +1,17 @@
+pdxmesh = {
+    name = "qing_jiangshi_talisman_mesh"
+    file = "qing_jiangshi_talisman.mesh"
+    meshsettings = {
+        name = "Qing_Jiangshi_TalismanShape"
+        index = 0
+        texture_diffuse = "jiangshi_talisman_diffuse.dds"
+        texture_normal = "jiangshi_talisman_normal.dds"
+        texture_specular = "jiangshi_talisman_properties.dds"
+        shader = "portrait_attachment_alpha_to_coverage"
+        shader_file = "gfx/FX/jomini/portrait.shader"
+    }
+}
+entity = {
+    name = "qing_jiangshi_talisman_entity"
+    pdxmesh = "qing_jiangshi_talisman_mesh"
+}

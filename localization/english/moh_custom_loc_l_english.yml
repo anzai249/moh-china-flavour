@@ -23,3 +23,11 @@
   sc_You: "you"
   sc_Xu: "xu"
   sc_Hai: "hai"
+
+  # Reform in the Wake of Victory
+  je_moh_chengsheng_gengzhang_fiscal_done: "@green_checkmark! Fiscal reform"
+  je_moh_chengsheng_gengzhang_fiscal_pending: "@red_cross! Fiscal reform"
+  je_moh_chengsheng_gengzhang_education_done: "@green_checkmark! Education"
+  je_moh_chengsheng_gengzhang_education_pending: "@red_cross! Education"
+  je_moh_chengsheng_gengzhang_military_done: "@green_checkmark! Military organization"
+  je_moh_chengsheng_gengzhang_military_pending: "@red_cross! Military organization"

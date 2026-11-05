@@ -1,4 +1,8 @@
 ﻿je_13_factories = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/13_factories.dds"
 	group = je_group_historical_content
 	immediate = {

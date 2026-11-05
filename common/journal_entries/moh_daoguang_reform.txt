@@ -1,4 +1,8 @@
 ﻿je_daoguang_reform_main = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
 	group = je_group_qing
     widget = {
@@ -91,6 +95,10 @@
 }
 
 je_daoguang_reform_grain = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/goods_icons/grain.dds"
 	group = je_group_qing
 	outcome = {
@@ -145,6 +153,10 @@ je_daoguang_reform_grain = {
 }
 
 je_daoguang_reform_mine = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/goods_icons/iron.dds"
 	group = je_group_qing
 	outcome = {
@@ -200,6 +212,10 @@ je_daoguang_reform_mine = {
 }
 
 je_daoguang_reform_opium = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/goods_icons/opium.dds"
 	group = je_group_qing
 	scripted_button = support_yen_chin_pai_button
@@ -328,6 +344,10 @@ je_daoguang_reform_opium = {
 }
 
 je_xianfeng = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/goods_icons/luxury_furniture.dds"
 	group = je_group_qing
 	is_shown_when_inactive = {

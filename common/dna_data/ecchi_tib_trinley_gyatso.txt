@@ -1,8 +1,9 @@
 ﻿ecchi_dna_trinley_gyatso = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 103 229 103 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 46 243 46 243 }
  		gene_cheek_fat={ "cheek_fat" 179 "cheek_fat" 136 }
  		gene_cheek_forward={ "cheek_forward" 131 "cheek_forward" 131 }

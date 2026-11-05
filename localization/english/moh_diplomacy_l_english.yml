@@ -2,4 +2,4 @@
   ban_boxer_rebellion: "Ban Boxer Rebellion"
   ban_boxer_rebellion_desc: ""
   ban_boxer_rebellion_article_short_desc: "Ban Boxer Rebellion"
-  ban_boxer_rebellion_effects_desc: "• An agreement between two [Concept('concept_country', '$concept_countries$')], with one $concept_country$ agreeing to ban Boxer activities."
+  ban_boxer_rebellion_effects_desc: "• An agreement between two [Concept('concept_country', '$concept_countries|q$')], with one $concept_country$ agreeing to ban Boxer activities."

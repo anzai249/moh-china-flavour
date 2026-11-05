@@ -1,0 +1,10 @@
+﻿# Establish the revolutionary institutions before creating historical characters
+# and formations: Revolutionary Guard can retire existing commanders on activation.
+moh_setup_communist_china_laws = {
+	activate_law = law_type:law_factory_councils
+	activate_law = law_type:law_council_republic
+	activate_law = law_type:law_labour_suffrage
+	activate_law = law_type:law_communal_administration
+	activate_law = law_type:law_revolutionary_guard
+	activate_law = law_type:law_extraordinary_commission
+}

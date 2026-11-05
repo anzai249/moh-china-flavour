@@ -1,8 +1,9 @@
 ﻿ecchi_dna_huang_xing = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 112 229 112 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 18 250 18 250 }
  		gene_cheek_fat={ "cheek_fat" 229 "cheek_fat" 229 }
  		gene_cheek_forward={ "cheek_forward" 160 "cheek_forward" 160 }

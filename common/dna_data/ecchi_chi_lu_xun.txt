@@ -1,8 +1,9 @@
 ﻿ecchi_dna_lu_xun = {
     portrait_info = {
     genes={      
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 5 229 5 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 79 244 79 244 }
  		gene_cheek_fat={ "cheek_fat" 156 "cheek_fat" 156 }
  		gene_cheek_forward={ "cheek_forward" 152 "cheek_forward" 152 }

@@ -1,8 +1,9 @@
 ﻿ecchi_dna_wenxiang={
     portrait_info = {
 	genes={ 		
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
 		hair_color={ 19 229 19 229 }
- 		skin_color={ 51 76 51 76 }
+		skin_color={ 217 89 217 89 }
  		eye_color={ 19 246 19 246 }
  		gene_cheek_fat={ "cheek_fat" 199 "cheek_fat" 199 }
  		gene_cheek_forward={ "cheek_forward" 146 "cheek_forward" 146 }

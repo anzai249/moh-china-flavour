@@ -50,3 +50,18 @@
   modifier_yue_customs_taxes_addition: "Canton Customs Embezzlement Case"
   modifier_moh_communist_china_guerilla_warfare: "Guerrilla Warfare"
   modifier_communist_china_soviet_base_area: "Soviet Base Area"
+
+  # Reform in the Wake of Victory
+  modifier_moh_chengsheng_gengzhang_momentum: "Momentum for Reform"
+  modifier_moh_chengsheng_gengzhang_deferred: "Following Established Practice"
+  modifier_moh_chengsheng_gengzhang_force: "Reform Despite Opposition"
+  modifier_moh_chengsheng_gengzhang_compromise: "Accommodating the Old Guard"
+  modifier_moh_chengsheng_gengzhang_compensation: "Resettlement Stipends"
+  modifier_moh_chengsheng_gengzhang_reformed: "Reform Accomplished"
+  modifier_moh_chengsheng_gengzhang_fiscal: "Fiscal Improvements"
+  modifier_moh_chengsheng_gengzhang_education: "New Learning Established"
+  modifier_moh_chengsheng_gengzhang_military: "Military Reorganization"
+  modifier_moh_chengsheng_gengzhang_unchanged: "Ancestral Institutions Unchanged"
+
+  modifier_moh_silver_plate_portrait: "A Portrait in Silver"
+  modifier_moh_dignified_portrait: "The Dignity of Portraiture"

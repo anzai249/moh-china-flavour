@@ -1,28 +1,28 @@
-﻿# All dynamic names should be applied on a strategic region level for ease of use and to avoid overlapping script
+﻿# Extend vanilla routing using the geographic regions that preserve the old boundaries.
 INJECT:assign_state_hub_dynamic_names = {
-	### Mandate of Heaven
 	if = {
-        limit = {
-        	region = sr:region_south_china
-        }
-		assign_state_name_region_south_china = yes
+		limit = {
+			is_in_geographic_region = geographic_region_west_siberia_old
+		}
+		assign_state_name_region_west_siberia = yes
 	}
 	if = {
-        limit = {
-        	region = sr:region_west_siberia
-        }
-		assign_state_name_region_west_siberia = yes
+		limit = {
+			is_in_geographic_region = geographic_region_central_asia_old
+		}
+		assign_state_name_region_central_asia = yes
 	}
     if = {
         limit = {
-            region = sr:region_central_asia
+            is_in_geographic_region = geographic_region_south_china_old
         }
-        assign_state_name_region_central_asia = yes
+        assign_state_name_region_south_china = yes
     }
 }
 
 ## South China
 
+# Vanilla already dispatches South China; append the mod rule to that effect.
 INJECT_OR_CREATE:assign_state_name_region_south_china = {
     if = {
         limit = {

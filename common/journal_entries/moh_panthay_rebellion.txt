@@ -1,4 +1,8 @@
 ﻿je_panthay_rebellion = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/religion_icons/sunni.dds"
 	group = je_group_historical_content
 	is_shown_when_inactive = {
@@ -36,6 +40,10 @@
 }
 
 je_plague_pandemic = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 	group = je_group_historical_content
 	# possible = {

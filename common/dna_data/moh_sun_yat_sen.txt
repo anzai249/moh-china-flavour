@@ -1,7 +1,9 @@
 ﻿dna_sun_yat_sen = {
 	portrait_info = {
-	genes={ 		hair_color={ 30 229 30 229 }
- 		skin_color={ 223 87 51 76 }
+	genes={
+		gene_asian_east = { "asian_east" 242 "asian_east" 242 }
+		hair_color={ 30 229 30 229 }
+		skin_color={ 223 87 217 89 }
  		eye_color={ 72 243 72 243 }
  		gene_cheek_fat={ "cheek_fat" 232 "cheek_fat" 210 }
  		gene_cheek_forward={ "cheek_forward" 127 "cheek_forward" 127 }

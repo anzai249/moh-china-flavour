@@ -601,9 +601,15 @@ Changes:
 
 - Journal Entry outcomes updated for 1.15.
 - AI strategy adjustments for 1.15.
+- Communist China's starting institutions and custom ideology law stances updated for 1.15.
 - Removed legacy Korean localization files.
+- Dalai Lama outfit.
+- Some random events.
 
 Fixes:
 
 - Journal Entry localization.
 - Invalid culture, ideology and modifier references.
+- Boxer Rebellion treaty infamy now uses the 1.15 country-value calculation.
+- Self-Strengthening now counts lost wars instead of individual enforced war goals.
+- Resolved Opium War routes now clear Qing's country-release restriction.
