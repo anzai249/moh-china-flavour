@@ -32,58 +32,24 @@
 				text = china_recognized_tt
 				has_variable = china_warlord_explosion_recognized
 			}
-<<<<<<< HEAD
-			custom_tooltip = {
-				text = china_wuxu_tt
-				has_variable = wuxu_reform_complete_var
-			}
-			custom_tooltip = {
-				text = china_autocracy_tt
-				has_variable = je_autocracy_complete
-			}
-		}
-		OR = {
-			custom_tooltip = {
-				text = china_guofan_tt
-				has_variable = je_guofan_complete
-			}
-			custom_tooltip = {
-				text = china_self_strengthening_success_tt
-				has_variable = self_strengthening_success
-			}
-		}
-		OR = {
-			custom_tooltip = {
-				text = china_treaty_ports_tt
-				# OR = {
-				# 	NOT = {
-				# 		any_scope_state = {
-				# 			any_neighbouring_state = {
-				# 				is_treaty_port = yes
-				# 			}
-				# 		}
-				# 	}
-				# }
-				any_state = {
-					percent = 0					# or percent = 0? they tooltip differently
-					filter = {
-						state_region = {
-							is_homeland = cu:han
-						}
-					}
-					NOT = {
-						owner = ROOT
-					}
-=======
 			OR = {
+				custom_tooltip = {
+					text = china_wuxu_tt
+					has_variable = wuxu_reform_complete_var
+				}
 				custom_tooltip = {
 					text = china_abolished_monarchy_tt
 					has_variable = china_warlord_abolished_monarchy
 				}
+			}
+			OR = {
 				custom_tooltip = {
-					text = china_wuxu_tt
-					has_variable = wuxu_reform_complete_var
->>>>>>> 95ced93 (feat: 1.15)
+					text = china_guofan_tt
+					has_variable = je_guofan_complete
+				}
+				custom_tooltip = {
+					text = china_self_strengthening_success_tt
+					has_variable = self_strengthening_success
 				}
 			}
 			OR = {

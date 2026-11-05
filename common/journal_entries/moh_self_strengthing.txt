@@ -1,4 +1,4 @@
-﻿je_self_strengthing = {
+﻿je_self_strengthening = {
 	activation_description = {
 		always = yes
 	}
@@ -48,16 +48,16 @@
         header = je_standard_completion_header
         effect_header = je_standard_on_completion_header
         color = "gold_positive"
-        conclusion_desc = moh_je_self_strengthing_completed_desc
+        conclusion_desc = moh_je_self_strengthening_completed_desc
         trigger = {
             custom_tooltip = {
-                text = je_self_strengthing_main_complete_tt
+                text = je_self_strengthening_main_complete_tt
                 var:self_strengthening_progress >= 3
             }
         }
         effect = {
             custom_tooltip = {
-                text = je_self_strengthing_on_complete_tt
+                text = je_self_strengthening_on_complete_tt
                 if = {
                     limit = {
                         has_journal_entry = je_earn_recognition
@@ -68,12 +68,12 @@
                 }
             }
             add_modifier = {
-                name = modifier_self_strengthing_success
+                name = modifier_self_strengthening_success
                 years = 10
                 is_decaying = yes
             }
             add_modifier = {
-                name = modifier_self_strengthing_success_company
+                name = modifier_self_strengthening_success_company
             }
             set_variable = self_strengthening_end
         }
@@ -82,7 +82,7 @@
         header = je_standard_failure_header
         effect_header = je_standard_on_failure_header
         color = "blue_negative"
-        conclusion_desc = moh_je_self_strengthing_failed_desc
+        conclusion_desc = moh_je_self_strengthening_failed_desc
         trigger = {
             OR = {
                 NOT = {
@@ -92,7 +92,7 @@
                     }
                 }
                 custom_tooltip = {
-                    text = je_self_strengthing_fail_tt
+                    text = je_self_strengthening_fail_tt
                     var:self_strengthening_lost_wars >= 2
                 }
             }
@@ -115,7 +115,7 @@
     timeout = 14600
 }
 
-je_self_strengthing_military = {
+je_self_strengthening_military = {
 	activation_description = {
 		always = yes
 	}
@@ -129,14 +129,14 @@ je_self_strengthing_military = {
         conclusion_desc = je_standard_completion_conclusion_desc
         trigger = {
             custom_tooltip = {
-                text = je_self_strengthing.tt.complete.world
+                text = je_self_strengthening.tt.complete.world
                 any_country = {
                     naval_power_projection > root.naval_power_projection
                     count < 3
                 }
             }
             custom_tooltip = {
-                text = je_self_strengthing.tt.complete.asia
+                text = je_self_strengthening.tt.complete.asia
                 any_country = {
                     naval_power_projection > root.naval_power_projection
                     count < 1
@@ -152,7 +152,7 @@ je_self_strengthing_military = {
         }
         effect = {
             custom_tooltip = {
-                text = je_self_strengthing_complete_tt
+                text = je_self_strengthening_complete_tt
                 change_variable = {
                     name = self_strengthening_progress
                     add = 1
@@ -167,7 +167,7 @@ je_self_strengthing_military = {
         conclusion_desc = je_standard_failure_conclusion_desc
         trigger = {
             NOT = {
-                has_journal_entry = je_self_strengthing
+                has_journal_entry = je_self_strengthening
             }
         }
     }
@@ -181,7 +181,7 @@ je_self_strengthing_military = {
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
-je_self_strengthing_industry = {
+je_self_strengthening_industry = {
 	activation_description = {
 		always = yes
 	}
@@ -206,7 +206,7 @@ je_self_strengthing_industry = {
         }
         effect = {
             custom_tooltip = {
-                text = je_self_strengthing_complete_tt
+                text = je_self_strengthening_complete_tt
                 change_variable = {
                     name = self_strengthening_progress
                     add = 1
@@ -221,7 +221,7 @@ je_self_strengthing_industry = {
         conclusion_desc = je_standard_failure_conclusion_desc
         trigger = {
             NOT = {
-                has_journal_entry = je_self_strengthing
+                has_journal_entry = je_self_strengthening
             }
         }
     }
@@ -245,7 +245,7 @@ je_self_strengthing_industry = {
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
-je_self_strengthing_education = {
+je_self_strengthening_education = {
 	activation_description = {
 		always = yes
 	}
@@ -260,7 +260,7 @@ je_self_strengthing_education = {
         trigger = {
             OR = {
                 custom_tooltip = {
-                    text = je_self_strengthing_education_tt_complete
+                    text = je_self_strengthening_education_tt_complete
                     has_variable = academia_je_done
                 }
                 any_scope_building = {
@@ -275,7 +275,7 @@ je_self_strengthing_education = {
         }
         effect = {
             custom_tooltip = {
-                text = je_self_strengthing_complete_tt
+                text = je_self_strengthening_complete_tt
                 change_variable = {
                     name = self_strengthening_progress
                     add = 1
@@ -290,7 +290,7 @@ je_self_strengthing_education = {
         conclusion_desc = je_standard_failure_conclusion_desc
         trigger = {
             NOT = {
-                has_journal_entry = je_self_strengthing
+                has_journal_entry = je_self_strengthening
             }
         }
     }
@@ -298,7 +298,7 @@ je_self_strengthing_education = {
     should_be_pinned_by_default_uninvolved_or_context = yes
 }
 
-je_self_strengthing_diplomacy = {
+je_self_strengthening_diplomacy = {
 	activation_description = {
 		always = yes
 	}
@@ -324,7 +324,7 @@ je_self_strengthing_diplomacy = {
         }
         effect = {
             custom_tooltip = {
-                text = je_self_strengthing_complete_tt
+                text = je_self_strengthening_complete_tt
                 change_variable = {
                     name = self_strengthening_progress
                     add = 1
@@ -339,7 +339,7 @@ je_self_strengthing_diplomacy = {
         conclusion_desc = je_standard_failure_conclusion_desc
         trigger = {
             NOT = {
-                has_journal_entry = je_self_strengthing
+                has_journal_entry = je_self_strengthening
             }
         }
     }

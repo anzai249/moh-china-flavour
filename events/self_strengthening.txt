@@ -263,7 +263,7 @@ self_strengthening.3 = {
             limit = {
                 has_variable = self_strengthening_character
                 NOT = {
-                    has_modifier = modifier_self_strengthing_donate_character
+                    has_modifier = modifier_self_strengthening_donate_character
                 }
             }
             save_scope_as = donate_character_scope

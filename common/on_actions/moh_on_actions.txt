@@ -296,9 +296,9 @@ on_lost_war = {
 	}
 }
 
-moh_self_strengthing_war = {
+moh_self_strengthening_war = {
 	trigger = {
-		has_journal_entry = je_self_strengthing
+		has_journal_entry = je_self_strengthening
 		has_variable = self_strengthening_lost_wars
 	}
 

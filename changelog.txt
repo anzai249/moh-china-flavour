@@ -613,3 +613,10 @@ Fixes:
 - Boxer Rebellion treaty infamy now uses the 1.15 country-value calculation.
 - Self-Strengthening now counts lost wars instead of individual enforced war goals.
 - Resolved Opium War routes now clear Qing's country-release restriction.
+
+Release 1.5.1 "Bangka"
+
+Fixes:
+
+- A bug causing Generals and Ambans JE to not showing properly.
+- Guofan JE localization.
