@@ -620,3 +620,10 @@ Fixes:
 
 - A bug causing Generals and Ambans JE to not showing properly.
 - Guofan JE localization.
+
+Release 1.5.2 "Bangka"
+
+Fixes:
+
+- A bug causing Guofan JE to not complete.
+- Self-Strengthening trigger and variable fix.

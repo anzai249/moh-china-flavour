@@ -1,4 +1,8 @@
-je_guofan={
+﻿je_guofan = {
+	activation_description = {
+		always = yes
+	}
+
 	icon = "gfx/interface/icons/generic_icons/state.dds"
 	group = je_group_foreign_affairs
 	scripted_button = je_guofan_button
@@ -27,35 +31,47 @@ je_guofan={
 			save_scope_as = lanfang_scope
 		}
 	}
-	complete = {  
-		has_strategic_region_interest_tier = {
-			strategic_region = sr:region_indonesia  
-			value >= 5
+	outcome = {
+		header = je_standard_completion_header
+		effect_header = je_standard_on_completion_header
+		color = "gold_positive"
+		conclusion_desc = je_standard_completion_conclusion_desc
+		trigger = {
+			has_strategic_region_interest_tier = {
+				strategic_region = sr:region_indonesia
+				value >= 5
+			}
+			OR = {
+				has_strategic_region_interest_tier = {
+					strategic_region = sr:region_indochina
+					value >= 3
+				}
+				has_strategic_region_interest_tier = {
+					strategic_region = sr:region_oceania
+					value >= 3
+				}
+			}
 		}
-		OR = {
-			has_strategic_region_interest_tier = {
-				strategic_region = sr:region_indochina
-				value >= 3
+		effect = {
+			if = {
+				limit = { has_journal_entry = je_warlord_china }
+				chi_add_1_fragile_unity = yes
 			}
-			has_strategic_region_interest_tier = {
-				strategic_region = sr:region_oceania
-				value >= 3
+			custom_tooltip = {
+				text = je_guofan_on_complete
 			}
+			set_variable = je_guofan_complete
 		}
 	}
-	on_complete = {
-		if = {
-			limit = { has_journal_entry = je_warlord_china }
-			chi_add_1_fragile_unity = yes
-		}
-		custom_tooltip = {
-			text = je_guofan_on_complete
-		}
-		set_variable = je_guofan_complete
-	}
-	fail = {
-		NOT = {
-			exists = c:LAN
+	outcome = {
+		header = je_standard_failure_header
+		effect_header = je_standard_on_failure_header
+		color = "blue_negative"
+		conclusion_desc = je_standard_failure_conclusion_desc
+		trigger = {
+			NOT = {
+				exists = c:LAN
+			}
 		}
 	}
 	

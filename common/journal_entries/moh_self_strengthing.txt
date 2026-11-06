@@ -75,6 +75,7 @@
             add_modifier = {
                 name = modifier_self_strengthening_success_company
             }
+            set_variable = self_strengthening_success
             set_variable = self_strengthening_end
         }
     }

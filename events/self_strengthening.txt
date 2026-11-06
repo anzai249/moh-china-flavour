@@ -21,8 +21,36 @@ self_strengthening.1 = {
         NOT = {
             has_variable = self_strengthening_end
         }
+        OR = {
+            game_date >= 1855.1.1
+            has_technology_researched = railways
+        }
         any_scope_character = {
             has_variable = self_strengthening_character
+            is_adult = yes
+            is_ruler_of_own_country = no
+            exists = interest_group
+            OR = {
+                AND = {
+                    is_interest_group_leader = yes
+                    interest_group ?= {
+                        is_in_government = yes
+                        ig_counts_as_marginal = no
+                    }
+                }
+                AND = {
+                    root = { game_date >= 1860.1.1 }
+                    OR = {
+                        has_role_of_type = general
+                        has_role_of_type = admiral
+                    }
+                    commander_rank >= 3
+                    interest_group ?= {
+                        is_in_government = yes
+                        is_powerful = yes
+                    }
+                }
+            }
         }
     }
     immediate = {
@@ -30,6 +58,30 @@ self_strengthening.1 = {
         random_scope_character = {
             limit = {
                 has_variable = self_strengthening_character
+                is_adult = yes
+                is_ruler_of_own_country = no
+                exists = interest_group
+                OR = {
+                    AND = {
+                        is_interest_group_leader = yes
+                        interest_group ?= {
+                            is_in_government = yes
+                            ig_counts_as_marginal = no
+                        }
+                    }
+                    AND = {
+                        root = { game_date >= 1860.1.1 }
+                        OR = {
+                            has_role_of_type = general
+                            has_role_of_type = admiral
+                        }
+                        commander_rank >= 3
+                        interest_group ?= {
+                            is_in_government = yes
+                            is_powerful = yes
+                        }
+                    }
+                }
             }
             save_scope_as = self_strengthening_character
         }
